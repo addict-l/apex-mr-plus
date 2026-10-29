@@ -1,0 +1,23 @@
+{
+  "scene": "D:\\APEX_MR_Plus\\APEX_MR_Plus.ttt",
+  "pid": 22436,
+  "presets": [
+    {
+      "stage": "environment_preview",
+      "preset": 1,
+      "planner_connected": false
+    },
+    {
+      "stage": "environment_preview",
+      "preset": 2,
+      "planner_connected": false
+    },
+    {
+      "stage": "environment_preview",
+      "preset": 0,
+      "planner_connected": false
+    }
+  ],
+  "play_stop_smoke_s": 0.3,
+  "stopped": true
+}

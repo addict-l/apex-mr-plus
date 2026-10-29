@@ -1,0 +1,137 @@
+{
+  "kind": "nominal_geometric_rollout_verification",
+  "step_s": 0.06,
+  "nominal_makespan_s": 130.72837180408297,
+  "planned_samples": 2344,
+  "tested_samples": 2344,
+  "batch_calls": 19,
+  "coverage_complete": true,
+  "batch_statistics": [
+    {
+      "start_s": 0.0,
+      "end_s": 6.8999999999999995,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 6.96,
+      "end_s": 13.773496767354318,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 13.799999999999999,
+      "end_s": 20.64,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 20.7,
+      "end_s": 27.54,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 27.599999999999998,
+      "end_s": 34.44,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 34.5,
+      "end_s": 41.22,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 41.28,
+      "end_s": 48.54,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 48.6,
+      "end_s": 55.8,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 55.86,
+      "end_s": 62.699999999999996,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 62.76,
+      "end_s": 70.02,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 70.08,
+      "end_s": 77.22,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 77.28,
+      "end_s": 84.47999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 84.53999999999999,
+      "end_s": 91.74,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 91.8,
+      "end_s": 99.06,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 99.11999999999999,
+      "end_s": 106.5,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 106.56,
+      "end_s": 113.88,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 113.94,
+      "end_s": 121.14,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 121.19999999999999,
+      "end_s": 128.46,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 128.51999999999998,
+      "end_s": 130.72837180408297,
+      "samples": 40,
+      "invalid_samples": 0
+    }
+  ],
+  "first_violation": null,
+  "no_sampled_collision": true,
+  "nominal_world_state_reconstructed": true,
+  "world_state_gaps": [],
+  "missing_source_poses": [],
+  "stationary_waiting_poses_included": true,
+  "valid": true,
+  "continuous_collision_guarantee": false,
+  "dynamics_or_force_verified": false,
+  "world_state_basis": "cfg source poses + declared pick payload transforms + completed place goal poses",
+  "trajectory_timing_basis": "motion_segments quintic timing when supplied; otherwise reference-polyline arclength",
+  "wall_s": 19.96082859998569
+}

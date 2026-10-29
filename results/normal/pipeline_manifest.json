@@ -1,0 +1,42 @@
+{
+  "scene_signature": "d3bf58f1fa07ee9a75fd9efa7013670f9531fa168ad6d10858a8ff2417acbf38",
+  "source_scene": "10_Normal_Assembly.ttt",
+  "reference_signature": "af8fd94fed75e6c32ca01542955c834ba2e245ac7124ac703b7030cb59641563",
+  "source_scene_sha256": "09c98af29f44315074e60ffba65f0d7edd8b89b47a1d022e02e493e83215b59b",
+  "controller_sha256": "26c36814f866a9a6a313744de2502d92967e6d462a193c315611ba52e1cc58ad",
+  "planned_scene": "11_Normal_APEX_MR_Planned.ttt",
+  "stages": [
+    "HiGHS ILP",
+    "sequential skill graph",
+    "simOMPL RRTConnect",
+    "multimodal TPG",
+    "central completion-driven dynamic dispatcher"
+  ],
+  "physics": {
+    "grasp": "dynamic rigid force-sensor constraint, not frictional finger simulation",
+    "motor": "native UR5 dynamic position servo; no runtime setJointPosition",
+    "tool_force_chain": "last dynamic UR5 link -> ToolForceSensor -> dynamic Palm; native empty connection sensor is bypassed",
+    "base_mount": "UR5 model-root shape is static and anchored to the worktable",
+    "engine": "Bullet 2.83",
+    "substep": 0.002,
+    "assembly_sequence_input": [
+      "L1",
+      "R1",
+      "L2",
+      "R2",
+      "L3",
+      "beam",
+      "cap"
+    ],
+    "connection": "idealized rigid snap constraint after measured placement; not LEGO deformation",
+    "gravity": [
+      0,
+      0,
+      -9.81
+    ],
+    "studs": "visual only; cuboid contact geometry",
+    "dt": 0.02
+  },
+  "grasp_and_snap_idealized": true,
+  "autonomous_failure_recovery": false
+}

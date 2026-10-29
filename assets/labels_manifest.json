@@ -1,0 +1,104 @@
+[
+  {
+    "file": "title.png",
+    "size": [
+      2048,
+      384
+    ],
+    "text": [
+      "APEX MR PLUS",
+      "双臂积木协作 · 能力变化与恢复"
+    ]
+  },
+  {
+    "file": "label_A.png",
+    "size": [
+      1024,
+      256
+    ],
+    "text": [
+      "A 臂 · 供料 / 安装"
+    ]
+  },
+  {
+    "file": "label_B.png",
+    "size": [
+      1024,
+      256
+    ],
+    "text": [
+      "B 臂 · 安装 / 支撑"
+    ]
+  },
+  {
+    "file": "label_buffer.png",
+    "size": [
+      1024,
+      256
+    ],
+    "text": [
+      "共享暂存区"
+    ]
+  },
+  {
+    "file": "label_supply_A.png",
+    "size": [
+      1024,
+      256
+    ],
+    "text": [
+      "A 侧料盘"
+    ]
+  },
+  {
+    "file": "label_supply_B.png",
+    "size": [
+      1024,
+      256
+    ],
+    "text": [
+      "B 侧料盘"
+    ]
+  },
+  {
+    "file": "label_prop.png",
+    "size": [
+      1024,
+      256
+    ],
+    "text": [
+      "临时桥墩"
+    ]
+  },
+  {
+    "file": "label_goal.png",
+    "size": [
+      1024,
+      256
+    ],
+    "text": [
+      "目标结构 · 城堡连桥"
+    ]
+  },
+  {
+    "file": "label_fault.png",
+    "size": [
+      1024,
+      256
+    ],
+    "text": [
+      "A 臂能力受限"
+    ]
+  },
+  {
+    "file": "legend.png",
+    "size": [
+      2048,
+      384
+    ],
+    "text": [
+      "橙色 A 臂 ｜ 蓝色 B 臂 ｜ 黄色临时桥墩",
+      "环境预览：尚未接入自主恢复规划算法"
+    ]
+  }
+]

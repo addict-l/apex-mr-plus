@@ -1,0 +1,80 @@
+[
+  {
+    "preset": 0,
+    "collisions": {
+      "A_table": {
+        "collision": false,
+        "pair": []
+      },
+      "B_table": {
+        "collision": false,
+        "pair": []
+      },
+      "A_B": {
+        "collision": false,
+        "pair": []
+      },
+      "A_castle": {
+        "collision": false,
+        "pair": []
+      },
+      "B_castle": {
+        "collision": false,
+        "pair": []
+      }
+    },
+    "A_current_joint_state_legal": true
+  },
+  {
+    "preset": 1,
+    "collisions": {
+      "A_table": {
+        "collision": false,
+        "pair": []
+      },
+      "B_table": {
+        "collision": false,
+        "pair": []
+      },
+      "A_B": {
+        "collision": false,
+        "pair": []
+      },
+      "A_castle": {
+        "collision": false,
+        "pair": []
+      },
+      "B_castle": {
+        "collision": false,
+        "pair": []
+      }
+    },
+    "A_current_joint_state_legal": true
+  },
+  {
+    "preset": 2,
+    "collisions": {
+      "A_table": {
+        "collision": false,
+        "pair": []
+      },
+      "B_table": {
+        "collision": false,
+        "pair": []
+      },
+      "A_B": {
+        "collision": false,
+        "pair": []
+      },
+      "A_castle": {
+        "collision": false,
+        "pair": []
+      },
+      "B_castle": {
+        "collision": false,
+        "pair": []
+      }
+    },
+    "A_current_joint_state_legal": true
+  }
+]

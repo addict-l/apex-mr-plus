@@ -1,0 +1,102 @@
+{
+  "prop_park": [
+    -0.2,
+    -0.115,
+    0.76
+  ],
+  "connector_buffer": [
+    -0.055,
+    -0.35,
+    0.808
+  ],
+  "arm_joint_aliases": {
+    "B": [
+      "B_joint_1",
+      "B_joint_2",
+      "B_joint_3",
+      "B_joint_4",
+      "B_joint_5",
+      "B_joint_6"
+    ],
+    "A": [
+      "A_joint_1",
+      "A_joint_2",
+      "A_joint_3",
+      "A_joint_4",
+      "A_joint_5",
+      "A_joint_6"
+    ]
+  },
+  "table_z": 0.76,
+  "stage": "environment_preview",
+  "preset": 0,
+  "version": 1,
+  "bridge_bottom": 1.032,
+  "ik_residual_m": {
+    "B_home": 0.00020325737674714047,
+    "A_home": 2.5591267225657617e-05,
+    "A_hold": 0.00010383566889458842,
+    "B_support": 0.00024292917838966517,
+    "B_install": 0.00030149666794950777
+  },
+  "connector_initial": [
+    -0.35,
+    -0.18,
+    0.79
+  ],
+  "limitations": [
+    "Kinematic environment preview, not autonomous repair planning.",
+    "Static reference bridge/towers; no LEGO snap contact or support-force dynamics.",
+    "Range-limit preset preserves current configuration; full task infeasibility is not certified.",
+    "IK endpoints checked; collision-free connecting trajectories are not yet planned."
+  ],
+  "poses": {
+    "B_home": [
+      -1.4281870176429852,
+      1.2092184047516683,
+      -1.5557007505994767,
+      1.9172619824545232,
+      -1.5707863304501555,
+      0.1426032614715583
+    ],
+    "A_home": [
+      -2.3077585775222693,
+      -0.2667790003434469,
+      1.5550659105286808,
+      0.28250357485355615,
+      -1.5707951471138253,
+      -0.7369631708003683
+    ],
+    "A_hold": [
+      -2.342054936110625,
+      -0.015877609861858096,
+      1.7940090922433238,
+      -0.20736892384134264,
+      -1.5707938198954117,
+      -0.7712593673826615
+    ],
+    "B_support": [
+      -1.5135529624407085,
+      0.670621873465479,
+      1.0746415834223215,
+      1.4264809238359166,
+      -3.084380181879187,
+      -1.5406553743879008
+    ],
+    "B_install": [
+      -1.9691495455721766,
+      0.017446149622727686,
+      1.4725974093735565,
+      0.08073532652811645,
+      -1.5710058142819798,
+      -0.39832685593882416
+    ]
+  },
+  "prop_support": [
+    0.08,
+    0.22,
+    0.76
+  ],
+  "scene": "D:\\APEX_MR_Plus\\APEX_MR_Plus.ttt",
+  "simulator_version": 41000
+}

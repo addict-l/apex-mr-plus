@@ -1,0 +1,488 @@
+{
+  "solver": "scipy.optimize.milp / HiGHS",
+  "scipy_version": "1.17.1",
+  "model": "binary assembly modes with a continuous peak-workload auxiliary",
+  "cost_unit": "estimated_joint_travel_seconds",
+  "load_balance_weight": 0.15,
+  "objective_definition": "sum(mode_cost * x) + load_balance_weight * peak_arm_workload",
+  "objective_is_makespan": false,
+  "support_criterion": {
+    "formula": "(mass_kg * gravity_m_s2 + insertion_force_N) * lever_arm_m > connection_moment_limit_Nm",
+    "scope": "quasi-static load screening at the supplied connection/load point",
+    "assumption": "each feasible support candidate supplies the needed counter-support; caller must certify its geometry and capacity",
+    "per_part": [
+      {
+        "part": "L1",
+        "mass_kg": 0.16,
+        "gravity_m_s2": 9.81,
+        "insertion_force_N": 0.0,
+        "lever_arm_m": 0.0,
+        "required_moment_Nm": 0.0,
+        "connection_moment_limit_Nm": 1.2,
+        "support_required": false
+      },
+      {
+        "part": "R1",
+        "mass_kg": 0.16,
+        "gravity_m_s2": 9.81,
+        "insertion_force_N": 0.0,
+        "lever_arm_m": 0.0,
+        "required_moment_Nm": 0.0,
+        "connection_moment_limit_Nm": 1.2,
+        "support_required": false
+      },
+      {
+        "part": "L2",
+        "mass_kg": 0.16,
+        "gravity_m_s2": 9.81,
+        "insertion_force_N": 0.0,
+        "lever_arm_m": 0.0,
+        "required_moment_Nm": 0.0,
+        "connection_moment_limit_Nm": 1.2,
+        "support_required": false
+      },
+      {
+        "part": "R2",
+        "mass_kg": 0.16,
+        "gravity_m_s2": 9.81,
+        "insertion_force_N": 0.0,
+        "lever_arm_m": 0.0,
+        "required_moment_Nm": 0.0,
+        "connection_moment_limit_Nm": 1.2,
+        "support_required": false
+      },
+      {
+        "part": "L3",
+        "mass_kg": 0.16,
+        "gravity_m_s2": 9.81,
+        "insertion_force_N": 0.0,
+        "lever_arm_m": 0.0,
+        "required_moment_Nm": 0.0,
+        "connection_moment_limit_Nm": 1.2,
+        "support_required": false
+      },
+      {
+        "part": "beam",
+        "mass_kg": 0.22,
+        "gravity_m_s2": 9.81,
+        "insertion_force_N": 0.0,
+        "lever_arm_m": 0.2,
+        "required_moment_Nm": 0.4316400000000001,
+        "connection_moment_limit_Nm": 1.2,
+        "support_required": false
+      },
+      {
+        "part": "cap",
+        "mass_kg": 0.06,
+        "gravity_m_s2": 9.81,
+        "insertion_force_N": 8.0,
+        "lever_arm_m": 0.33,
+        "required_moment_Nm": 2.834238,
+        "connection_moment_limit_Nm": 1.2,
+        "support_required": true
+      }
+    ]
+  },
+  "constraints_summary": {
+    "exactly_one_mode_per_part": 7,
+    "arm_peak_workload_inequalities": 2,
+    "installer_support_same_arm_forbidden": true,
+    "unsupported_over_limit_mode_forbidden": true,
+    "binary_mode_count": 17,
+    "continuous_auxiliary_count": 1,
+    "assembly_sequence": "provided externally; not optimized by this model"
+  },
+  "rejected_candidates": [
+    {
+      "candidate_index": 2,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 3,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 4,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 5,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 10,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 11,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 12,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 13,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 18,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 19,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 24,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 25,
+      "reason": "installer/grasp candidate is geometrically infeasible"
+    },
+    {
+      "candidate_index": 26,
+      "reason": "unsupported mode violates the specified load-moment limit"
+    },
+    {
+      "candidate_index": 26,
+      "reason": "support candidate is geometrically infeasible",
+      "support_candidate_index": 0
+    },
+    {
+      "candidate_index": 26,
+      "reason": "support candidate is geometrically infeasible",
+      "support_candidate_index": 1
+    },
+    {
+      "candidate_index": 26,
+      "reason": "support candidate is geometrically infeasible",
+      "support_candidate_index": 2
+    },
+    {
+      "candidate_index": 27,
+      "reason": "unsupported mode violates the specified load-moment limit"
+    },
+    {
+      "candidate_index": 27,
+      "reason": "support candidate is geometrically infeasible",
+      "support_candidate_index": 1
+    }
+  ],
+  "solver_called": true,
+  "solver_status": 0,
+  "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "mip_gap": 0.0,
+  "elapsed_s": 0.022990999976173043,
+  "status": "optimal",
+  "solved": true,
+  "optimal": true,
+  "objective": 99.95714386126733,
+  "solver_objective": 99.95714386126734,
+  "choices": [
+    {
+      "mode_id": "m0000",
+      "candidate_index": 0,
+      "support_candidate_index": null,
+      "part": "L1",
+      "arm": "A",
+      "grasp": "top_x",
+      "support_arm": null,
+      "support_required": false,
+      "support_tcp_position": null,
+      "support_quaternion": null,
+      "main_cost": 11.84662092984272,
+      "support_cost": 0.0,
+      "mode_cost": 11.84662092984272,
+      "arm_workload": {
+        "A": 11.84662092984272,
+        "B": 0.0
+      }
+    },
+    {
+      "mode_id": "m0002",
+      "candidate_index": 6,
+      "support_candidate_index": null,
+      "part": "R1",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": null,
+      "support_required": false,
+      "support_tcp_position": null,
+      "support_quaternion": null,
+      "main_cost": 11.103152927060355,
+      "support_cost": 0.0,
+      "mode_cost": 11.103152927060355,
+      "arm_workload": {
+        "A": 0.0,
+        "B": 11.103152927060355
+      }
+    },
+    {
+      "mode_id": "m0004",
+      "candidate_index": 8,
+      "support_candidate_index": null,
+      "part": "L2",
+      "arm": "A",
+      "grasp": "top_x",
+      "support_arm": null,
+      "support_required": false,
+      "support_tcp_position": null,
+      "support_quaternion": null,
+      "main_cost": 10.260827188037029,
+      "support_cost": 0.0,
+      "mode_cost": 10.260827188037029,
+      "arm_workload": {
+        "A": 10.260827188037029,
+        "B": 0.0
+      }
+    },
+    {
+      "mode_id": "m0006",
+      "candidate_index": 14,
+      "support_candidate_index": null,
+      "part": "R2",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": null,
+      "support_required": false,
+      "support_tcp_position": null,
+      "support_quaternion": null,
+      "main_cost": 11.797040645067648,
+      "support_cost": 0.0,
+      "mode_cost": 11.797040645067648,
+      "arm_workload": {
+        "A": 0.0,
+        "B": 11.797040645067648
+      }
+    },
+    {
+      "mode_id": "m0008",
+      "candidate_index": 16,
+      "support_candidate_index": null,
+      "part": "L3",
+      "arm": "A",
+      "grasp": "top_x",
+      "support_arm": null,
+      "support_required": false,
+      "support_tcp_position": null,
+      "support_quaternion": null,
+      "main_cost": 11.733142486689994,
+      "support_cost": 0.0,
+      "mode_cost": 11.733142486689994,
+      "arm_workload": {
+        "A": 11.733142486689994,
+        "B": 0.0
+      }
+    },
+    {
+      "mode_id": "m0012",
+      "candidate_index": 22,
+      "support_candidate_index": null,
+      "part": "beam",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": null,
+      "support_required": false,
+      "support_tcp_position": null,
+      "support_quaternion": null,
+      "main_cost": 9.247069751751075,
+      "support_cost": 0.0,
+      "mode_cost": 9.247069751751075,
+      "arm_workload": {
+        "A": 0.0,
+        "B": 9.247069751751075
+      }
+    },
+    {
+      "mode_id": "m0014",
+      "candidate_index": 26,
+      "support_candidate_index": 3,
+      "part": "cap",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": "A",
+      "support_required": true,
+      "support_tcp_position": [
+        0.03,
+        0.16,
+        1.0194999999999999
+      ],
+      "support_quaternion": [
+        0.0,
+        0.0,
+        0.7071067811865475,
+        0.7071067811865476
+      ],
+      "main_cost": 10.697922158861228,
+      "support_cost": 15.82198189849724,
+      "mode_cost": 26.519904057358467,
+      "arm_workload": {
+        "A": 15.82198189849724,
+        "B": 10.697922158861228
+      }
+    }
+  ],
+  "arm_workloads": {
+    "A": 49.66257250306698,
+    "B": 42.845185482740305
+  },
+  "peak_arm_workload": 49.66257250306698,
+  "peak_auxiliary_value": 49.66257250306698,
+  "variables": [
+    {
+      "mode_id": "m0000",
+      "part": "L1",
+      "arm": "A",
+      "grasp": "top_x",
+      "support_arm": null,
+      "value": 1.0,
+      "mode_cost": 11.84662092984272
+    },
+    {
+      "mode_id": "m0001",
+      "part": "L1",
+      "arm": "A",
+      "grasp": "top_y",
+      "support_arm": null,
+      "value": 0.0,
+      "mode_cost": 13.82794770155374
+    },
+    {
+      "mode_id": "m0002",
+      "part": "R1",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": null,
+      "value": 1.0,
+      "mode_cost": 11.103152927060355
+    },
+    {
+      "mode_id": "m0003",
+      "part": "R1",
+      "arm": "B",
+      "grasp": "top_y",
+      "support_arm": null,
+      "value": 0.0,
+      "mode_cost": 12.9408140083582
+    },
+    {
+      "mode_id": "m0004",
+      "part": "L2",
+      "arm": "A",
+      "grasp": "top_x",
+      "support_arm": null,
+      "value": 1.0,
+      "mode_cost": 10.260827188037029
+    },
+    {
+      "mode_id": "m0005",
+      "part": "L2",
+      "arm": "A",
+      "grasp": "top_y",
+      "support_arm": null,
+      "value": 0.0,
+      "mode_cost": 12.167281095561327
+    },
+    {
+      "mode_id": "m0006",
+      "part": "R2",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": null,
+      "value": 1.0,
+      "mode_cost": 11.797040645067648
+    },
+    {
+      "mode_id": "m0007",
+      "part": "R2",
+      "arm": "B",
+      "grasp": "top_y",
+      "support_arm": null,
+      "value": 0.0,
+      "mode_cost": 13.36186303524202
+    },
+    {
+      "mode_id": "m0008",
+      "part": "L3",
+      "arm": "A",
+      "grasp": "top_x",
+      "support_arm": null,
+      "value": 1.0,
+      "mode_cost": 11.733142486689994
+    },
+    {
+      "mode_id": "m0009",
+      "part": "L3",
+      "arm": "A",
+      "grasp": "top_y",
+      "support_arm": null,
+      "value": 0.0,
+      "mode_cost": 13.628586938193756
+    },
+    {
+      "mode_id": "m0010",
+      "part": "beam",
+      "arm": "A",
+      "grasp": "top_x",
+      "support_arm": null,
+      "value": 0.0,
+      "mode_cost": 9.441850578764923
+    },
+    {
+      "mode_id": "m0011",
+      "part": "beam",
+      "arm": "A",
+      "grasp": "top_y",
+      "support_arm": null,
+      "value": 0.0,
+      "mode_cost": 10.62243408507358
+    },
+    {
+      "mode_id": "m0012",
+      "part": "beam",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": null,
+      "value": 1.0,
+      "mode_cost": 9.247069751751075
+    },
+    {
+      "mode_id": "m0013",
+      "part": "beam",
+      "arm": "B",
+      "grasp": "top_y",
+      "support_arm": null,
+      "value": 0.0,
+      "mode_cost": 11.948598369269416
+    },
+    {
+      "mode_id": "m0014",
+      "part": "cap",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": "A",
+      "value": 1.0,
+      "mode_cost": 26.519904057358467
+    },
+    {
+      "mode_id": "m0015",
+      "part": "cap",
+      "arm": "B",
+      "grasp": "top_y",
+      "support_arm": "A",
+      "value": 0.0,
+      "mode_cost": 26.88718774079399
+    },
+    {
+      "mode_id": "m0016",
+      "part": "cap",
+      "arm": "B",
+      "grasp": "top_y",
+      "support_arm": "A",
+      "value": 0.0,
+      "mode_cost": 28.656827946753616
+    }
+  ]
+}

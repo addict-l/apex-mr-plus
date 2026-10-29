@@ -1,0 +1,5222 @@
+{
+  "scene": "D:\\APEX_MR_Plus\\scenes\\10_Normal_Assembly.ttt",
+  "input_sha256": "7f355eb223450bc81094c263631dde73551095284fd3ddb0733729900a4388b2",
+  "fixes": [
+    {
+      "arm": "A",
+      "base_static_before": true,
+      "base_static_after": true,
+      "old_tool_parent": "link",
+      "new_tool_parent": "link",
+      "tool_world_translation_change_m": 0.0,
+      "tool_ancestors": [
+        {
+          "alias": "A_ToolForceSensor",
+          "type": 12
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 0.699999988079071,
+          "respondable": false
+        },
+        {
+          "alias": "A_joint_6",
+          "type": 1
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 2.5,
+          "respondable": true
+        },
+        {
+          "alias": "A_joint_5",
+          "type": 1
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 2.5,
+          "respondable": true
+        },
+        {
+          "alias": "A_joint_4",
+          "type": 1
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 3.9000000953674316,
+          "respondable": true
+        },
+        {
+          "alias": "A_joint_3",
+          "type": 1
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 5.699999809265137,
+          "respondable": true
+        },
+        {
+          "alias": "A_joint_2",
+          "type": 1
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 2.5,
+          "respondable": true
+        },
+        {
+          "alias": "A_joint_1",
+          "type": 1
+        },
+        {
+          "alias": "A_UR5",
+          "type": 0,
+          "static": true,
+          "mass_kg": 1.0,
+          "respondable": true
+        },
+        {
+          "alias": "APEX_MR_Plus",
+          "type": 4
+        }
+      ]
+    },
+    {
+      "arm": "B",
+      "base_static_before": true,
+      "base_static_after": true,
+      "old_tool_parent": "link",
+      "new_tool_parent": "link",
+      "tool_world_translation_change_m": 0.0,
+      "tool_ancestors": [
+        {
+          "alias": "B_ToolForceSensor",
+          "type": 12
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 0.699999988079071,
+          "respondable": false
+        },
+        {
+          "alias": "B_joint_6",
+          "type": 1
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 2.5,
+          "respondable": true
+        },
+        {
+          "alias": "B_joint_5",
+          "type": 1
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 2.5,
+          "respondable": true
+        },
+        {
+          "alias": "B_joint_4",
+          "type": 1
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 3.9000000953674316,
+          "respondable": true
+        },
+        {
+          "alias": "B_joint_3",
+          "type": 1
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 5.699999809265137,
+          "respondable": true
+        },
+        {
+          "alias": "B_joint_2",
+          "type": 1
+        },
+        {
+          "alias": "link",
+          "type": 0,
+          "static": false,
+          "mass_kg": 2.5,
+          "respondable": true
+        },
+        {
+          "alias": "B_joint_1",
+          "type": 1
+        },
+        {
+          "alias": "B_UR5",
+          "type": 0,
+          "static": true,
+          "mass_kg": 1.0,
+          "respondable": true
+        },
+        {
+          "alias": "APEX_MR_Plus",
+          "type": 4
+        }
+      ]
+    }
+  ],
+  "scene_saved": true,
+  "source_positions_preserved": {
+    "L1": [
+      -0.56,
+      -0.4,
+      0.811
+    ],
+    "R1": [
+      0.4,
+      -0.4,
+      0.811
+    ],
+    "L2": [
+      -0.39,
+      -0.4,
+      0.811
+    ],
+    "R2": [
+      0.57,
+      -0.4,
+      0.811
+    ],
+    "L3": [
+      -0.56,
+      -0.23,
+      0.811
+    ],
+    "beam": [
+      0,
+      -0.35,
+      0.807
+    ],
+    "cap": [
+      0.45,
+      -0.23,
+      0.787
+    ]
+  },
+  "removed_legacy_objects": [
+    {
+      "alias": "LeftTower_Layer1",
+      "path": "/LeftTower_Layer1",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Body",
+      "path": "/LeftTower_Layer1_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_0_0",
+      "path": "/LeftTower_Layer1_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_0_1",
+      "path": "/LeftTower_Layer1_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_0_2",
+      "path": "/LeftTower_Layer1_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_0_3",
+      "path": "/LeftTower_Layer1_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_0_4",
+      "path": "/LeftTower_Layer1_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_1_0",
+      "path": "/LeftTower_Layer1_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_1_1",
+      "path": "/LeftTower_Layer1_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_1_2",
+      "path": "/LeftTower_Layer1_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_1_3",
+      "path": "/LeftTower_Layer1_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_1_4",
+      "path": "/LeftTower_Layer1_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_2_0",
+      "path": "/LeftTower_Layer1_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_2_1",
+      "path": "/LeftTower_Layer1_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_2_2",
+      "path": "/LeftTower_Layer1_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_2_3",
+      "path": "/LeftTower_Layer1_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_2_4",
+      "path": "/LeftTower_Layer1_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_3_0",
+      "path": "/LeftTower_Layer1_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_3_1",
+      "path": "/LeftTower_Layer1_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_3_2",
+      "path": "/LeftTower_Layer1_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_3_3",
+      "path": "/LeftTower_Layer1_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_3_4",
+      "path": "/LeftTower_Layer1_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_4_0",
+      "path": "/LeftTower_Layer1_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_4_1",
+      "path": "/LeftTower_Layer1_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_4_2",
+      "path": "/LeftTower_Layer1_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_4_3",
+      "path": "/LeftTower_Layer1_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer1_Stud_4_4",
+      "path": "/LeftTower_Layer1_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2",
+      "path": "/LeftTower_Layer2",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Body",
+      "path": "/LeftTower_Layer2_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_0_0",
+      "path": "/LeftTower_Layer2_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_0_1",
+      "path": "/LeftTower_Layer2_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_0_2",
+      "path": "/LeftTower_Layer2_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_0_3",
+      "path": "/LeftTower_Layer2_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_0_4",
+      "path": "/LeftTower_Layer2_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_1_0",
+      "path": "/LeftTower_Layer2_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_1_1",
+      "path": "/LeftTower_Layer2_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_1_2",
+      "path": "/LeftTower_Layer2_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_1_3",
+      "path": "/LeftTower_Layer2_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_1_4",
+      "path": "/LeftTower_Layer2_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_2_0",
+      "path": "/LeftTower_Layer2_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_2_1",
+      "path": "/LeftTower_Layer2_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_2_2",
+      "path": "/LeftTower_Layer2_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_2_3",
+      "path": "/LeftTower_Layer2_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_2_4",
+      "path": "/LeftTower_Layer2_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_3_0",
+      "path": "/LeftTower_Layer2_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_3_1",
+      "path": "/LeftTower_Layer2_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_3_2",
+      "path": "/LeftTower_Layer2_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_3_3",
+      "path": "/LeftTower_Layer2_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_3_4",
+      "path": "/LeftTower_Layer2_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_4_0",
+      "path": "/LeftTower_Layer2_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_4_1",
+      "path": "/LeftTower_Layer2_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_4_2",
+      "path": "/LeftTower_Layer2_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_4_3",
+      "path": "/LeftTower_Layer2_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer2_Stud_4_4",
+      "path": "/LeftTower_Layer2_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3",
+      "path": "/LeftTower_Layer3",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Body",
+      "path": "/LeftTower_Layer3_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_0_0",
+      "path": "/LeftTower_Layer3_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_0_1",
+      "path": "/LeftTower_Layer3_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_0_2",
+      "path": "/LeftTower_Layer3_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_0_3",
+      "path": "/LeftTower_Layer3_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_0_4",
+      "path": "/LeftTower_Layer3_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_1_0",
+      "path": "/LeftTower_Layer3_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_1_1",
+      "path": "/LeftTower_Layer3_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_1_2",
+      "path": "/LeftTower_Layer3_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_1_3",
+      "path": "/LeftTower_Layer3_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_1_4",
+      "path": "/LeftTower_Layer3_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_2_0",
+      "path": "/LeftTower_Layer3_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_2_1",
+      "path": "/LeftTower_Layer3_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_2_2",
+      "path": "/LeftTower_Layer3_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_2_3",
+      "path": "/LeftTower_Layer3_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_2_4",
+      "path": "/LeftTower_Layer3_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_3_0",
+      "path": "/LeftTower_Layer3_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_3_1",
+      "path": "/LeftTower_Layer3_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_3_2",
+      "path": "/LeftTower_Layer3_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_3_3",
+      "path": "/LeftTower_Layer3_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_3_4",
+      "path": "/LeftTower_Layer3_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_4_0",
+      "path": "/LeftTower_Layer3_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_4_1",
+      "path": "/LeftTower_Layer3_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_4_2",
+      "path": "/LeftTower_Layer3_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_4_3",
+      "path": "/LeftTower_Layer3_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer3_Stud_4_4",
+      "path": "/LeftTower_Layer3_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4",
+      "path": "/LeftTower_Layer4",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Body",
+      "path": "/LeftTower_Layer4_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_0_0",
+      "path": "/LeftTower_Layer4_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_0_1",
+      "path": "/LeftTower_Layer4_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_0_2",
+      "path": "/LeftTower_Layer4_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_0_3",
+      "path": "/LeftTower_Layer4_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_0_4",
+      "path": "/LeftTower_Layer4_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_1_0",
+      "path": "/LeftTower_Layer4_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_1_1",
+      "path": "/LeftTower_Layer4_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_1_2",
+      "path": "/LeftTower_Layer4_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_1_3",
+      "path": "/LeftTower_Layer4_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_1_4",
+      "path": "/LeftTower_Layer4_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_2_0",
+      "path": "/LeftTower_Layer4_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_2_1",
+      "path": "/LeftTower_Layer4_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_2_2",
+      "path": "/LeftTower_Layer4_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_2_3",
+      "path": "/LeftTower_Layer4_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_2_4",
+      "path": "/LeftTower_Layer4_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_3_0",
+      "path": "/LeftTower_Layer4_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_3_1",
+      "path": "/LeftTower_Layer4_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_3_2",
+      "path": "/LeftTower_Layer4_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_3_3",
+      "path": "/LeftTower_Layer4_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_3_4",
+      "path": "/LeftTower_Layer4_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_4_0",
+      "path": "/LeftTower_Layer4_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_4_1",
+      "path": "/LeftTower_Layer4_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_4_2",
+      "path": "/LeftTower_Layer4_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_4_3",
+      "path": "/LeftTower_Layer4_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer4_Stud_4_4",
+      "path": "/LeftTower_Layer4_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5",
+      "path": "/LeftTower_Layer5",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Body",
+      "path": "/LeftTower_Layer5_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_0_0",
+      "path": "/LeftTower_Layer5_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_0_1",
+      "path": "/LeftTower_Layer5_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_0_2",
+      "path": "/LeftTower_Layer5_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_0_3",
+      "path": "/LeftTower_Layer5_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_0_4",
+      "path": "/LeftTower_Layer5_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_1_0",
+      "path": "/LeftTower_Layer5_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_1_1",
+      "path": "/LeftTower_Layer5_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_1_2",
+      "path": "/LeftTower_Layer5_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_1_3",
+      "path": "/LeftTower_Layer5_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_1_4",
+      "path": "/LeftTower_Layer5_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_2_0",
+      "path": "/LeftTower_Layer5_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_2_1",
+      "path": "/LeftTower_Layer5_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_2_2",
+      "path": "/LeftTower_Layer5_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_2_3",
+      "path": "/LeftTower_Layer5_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_2_4",
+      "path": "/LeftTower_Layer5_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_3_0",
+      "path": "/LeftTower_Layer5_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_3_1",
+      "path": "/LeftTower_Layer5_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_3_2",
+      "path": "/LeftTower_Layer5_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_3_3",
+      "path": "/LeftTower_Layer5_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_3_4",
+      "path": "/LeftTower_Layer5_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_4_0",
+      "path": "/LeftTower_Layer5_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_4_1",
+      "path": "/LeftTower_Layer5_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_4_2",
+      "path": "/LeftTower_Layer5_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_4_3",
+      "path": "/LeftTower_Layer5_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer5_Stud_4_4",
+      "path": "/LeftTower_Layer5_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6",
+      "path": "/LeftTower_Layer6",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Body",
+      "path": "/LeftTower_Layer6_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_0_0",
+      "path": "/LeftTower_Layer6_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_0_1",
+      "path": "/LeftTower_Layer6_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_0_2",
+      "path": "/LeftTower_Layer6_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_0_3",
+      "path": "/LeftTower_Layer6_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_0_4",
+      "path": "/LeftTower_Layer6_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_1_0",
+      "path": "/LeftTower_Layer6_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_1_1",
+      "path": "/LeftTower_Layer6_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_1_2",
+      "path": "/LeftTower_Layer6_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_1_3",
+      "path": "/LeftTower_Layer6_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_1_4",
+      "path": "/LeftTower_Layer6_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_2_0",
+      "path": "/LeftTower_Layer6_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_2_1",
+      "path": "/LeftTower_Layer6_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_2_2",
+      "path": "/LeftTower_Layer6_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_2_3",
+      "path": "/LeftTower_Layer6_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_2_4",
+      "path": "/LeftTower_Layer6_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_3_0",
+      "path": "/LeftTower_Layer6_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_3_1",
+      "path": "/LeftTower_Layer6_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_3_2",
+      "path": "/LeftTower_Layer6_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_3_3",
+      "path": "/LeftTower_Layer6_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_3_4",
+      "path": "/LeftTower_Layer6_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_4_0",
+      "path": "/LeftTower_Layer6_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_4_1",
+      "path": "/LeftTower_Layer6_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_4_2",
+      "path": "/LeftTower_Layer6_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_4_3",
+      "path": "/LeftTower_Layer6_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer6_Stud_4_4",
+      "path": "/LeftTower_Layer6_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7",
+      "path": "/LeftTower_Layer7",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Body",
+      "path": "/LeftTower_Layer7_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_0_0",
+      "path": "/LeftTower_Layer7_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_0_1",
+      "path": "/LeftTower_Layer7_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_0_2",
+      "path": "/LeftTower_Layer7_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_0_3",
+      "path": "/LeftTower_Layer7_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_0_4",
+      "path": "/LeftTower_Layer7_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_1_0",
+      "path": "/LeftTower_Layer7_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_1_1",
+      "path": "/LeftTower_Layer7_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_1_2",
+      "path": "/LeftTower_Layer7_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_1_3",
+      "path": "/LeftTower_Layer7_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_1_4",
+      "path": "/LeftTower_Layer7_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_2_0",
+      "path": "/LeftTower_Layer7_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_2_1",
+      "path": "/LeftTower_Layer7_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_2_2",
+      "path": "/LeftTower_Layer7_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_2_3",
+      "path": "/LeftTower_Layer7_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_2_4",
+      "path": "/LeftTower_Layer7_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_3_0",
+      "path": "/LeftTower_Layer7_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_3_1",
+      "path": "/LeftTower_Layer7_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_3_2",
+      "path": "/LeftTower_Layer7_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_3_3",
+      "path": "/LeftTower_Layer7_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_3_4",
+      "path": "/LeftTower_Layer7_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_4_0",
+      "path": "/LeftTower_Layer7_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_4_1",
+      "path": "/LeftTower_Layer7_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_4_2",
+      "path": "/LeftTower_Layer7_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_4_3",
+      "path": "/LeftTower_Layer7_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer7_Stud_4_4",
+      "path": "/LeftTower_Layer7_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8",
+      "path": "/LeftTower_Layer8",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Body",
+      "path": "/LeftTower_Layer8_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_0_0",
+      "path": "/LeftTower_Layer8_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_0_1",
+      "path": "/LeftTower_Layer8_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_0_2",
+      "path": "/LeftTower_Layer8_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_0_3",
+      "path": "/LeftTower_Layer8_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_0_4",
+      "path": "/LeftTower_Layer8_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_1_0",
+      "path": "/LeftTower_Layer8_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_1_1",
+      "path": "/LeftTower_Layer8_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_1_2",
+      "path": "/LeftTower_Layer8_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_1_3",
+      "path": "/LeftTower_Layer8_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_1_4",
+      "path": "/LeftTower_Layer8_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_2_0",
+      "path": "/LeftTower_Layer8_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_2_1",
+      "path": "/LeftTower_Layer8_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_2_2",
+      "path": "/LeftTower_Layer8_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_2_3",
+      "path": "/LeftTower_Layer8_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_2_4",
+      "path": "/LeftTower_Layer8_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_3_0",
+      "path": "/LeftTower_Layer8_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_3_1",
+      "path": "/LeftTower_Layer8_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_3_2",
+      "path": "/LeftTower_Layer8_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_3_3",
+      "path": "/LeftTower_Layer8_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_3_4",
+      "path": "/LeftTower_Layer8_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_4_0",
+      "path": "/LeftTower_Layer8_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_4_1",
+      "path": "/LeftTower_Layer8_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_4_2",
+      "path": "/LeftTower_Layer8_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_4_3",
+      "path": "/LeftTower_Layer8_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "LeftTower_Layer8_Stud_4_4",
+      "path": "/LeftTower_Layer8_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_WindowInset",
+      "path": "/Left_WindowInset",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel",
+      "path": "/Left_Crenel[0]",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel_Body",
+      "path": "/Left_Crenel_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel_Stud_0_0",
+      "path": "/Left_Crenel_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel",
+      "path": "/Left_Crenel[1]",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel_Body",
+      "path": "/Left_Crenel[1]/Left_Crenel_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel_Stud_0_0",
+      "path": "/Left_Crenel[1]/Left_Crenel_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel",
+      "path": "/Left_Crenel[2]",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel_Body",
+      "path": "/Left_Crenel[2]/Left_Crenel_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel_Stud_0_0",
+      "path": "/Left_Crenel[2]/Left_Crenel_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel",
+      "path": "/Left_Crenel[3]",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel_Body",
+      "path": "/Left_Crenel[3]/Left_Crenel_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Left_Crenel_Stud_0_0",
+      "path": "/Left_Crenel[3]/Left_Crenel_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1",
+      "path": "/RightTower_Layer1",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Body",
+      "path": "/RightTower_Layer1_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_0_0",
+      "path": "/RightTower_Layer1_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_0_1",
+      "path": "/RightTower_Layer1_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_0_2",
+      "path": "/RightTower_Layer1_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_0_3",
+      "path": "/RightTower_Layer1_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_0_4",
+      "path": "/RightTower_Layer1_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_1_0",
+      "path": "/RightTower_Layer1_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_1_1",
+      "path": "/RightTower_Layer1_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_1_2",
+      "path": "/RightTower_Layer1_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_1_3",
+      "path": "/RightTower_Layer1_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_1_4",
+      "path": "/RightTower_Layer1_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_2_0",
+      "path": "/RightTower_Layer1_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_2_1",
+      "path": "/RightTower_Layer1_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_2_2",
+      "path": "/RightTower_Layer1_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_2_3",
+      "path": "/RightTower_Layer1_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_2_4",
+      "path": "/RightTower_Layer1_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_3_0",
+      "path": "/RightTower_Layer1_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_3_1",
+      "path": "/RightTower_Layer1_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_3_2",
+      "path": "/RightTower_Layer1_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_3_3",
+      "path": "/RightTower_Layer1_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_3_4",
+      "path": "/RightTower_Layer1_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_4_0",
+      "path": "/RightTower_Layer1_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_4_1",
+      "path": "/RightTower_Layer1_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_4_2",
+      "path": "/RightTower_Layer1_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_4_3",
+      "path": "/RightTower_Layer1_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer1_Stud_4_4",
+      "path": "/RightTower_Layer1_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2",
+      "path": "/RightTower_Layer2",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Body",
+      "path": "/RightTower_Layer2_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_0_0",
+      "path": "/RightTower_Layer2_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_0_1",
+      "path": "/RightTower_Layer2_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_0_2",
+      "path": "/RightTower_Layer2_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_0_3",
+      "path": "/RightTower_Layer2_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_0_4",
+      "path": "/RightTower_Layer2_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_1_0",
+      "path": "/RightTower_Layer2_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_1_1",
+      "path": "/RightTower_Layer2_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_1_2",
+      "path": "/RightTower_Layer2_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_1_3",
+      "path": "/RightTower_Layer2_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_1_4",
+      "path": "/RightTower_Layer2_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_2_0",
+      "path": "/RightTower_Layer2_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_2_1",
+      "path": "/RightTower_Layer2_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_2_2",
+      "path": "/RightTower_Layer2_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_2_3",
+      "path": "/RightTower_Layer2_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_2_4",
+      "path": "/RightTower_Layer2_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_3_0",
+      "path": "/RightTower_Layer2_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_3_1",
+      "path": "/RightTower_Layer2_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_3_2",
+      "path": "/RightTower_Layer2_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_3_3",
+      "path": "/RightTower_Layer2_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_3_4",
+      "path": "/RightTower_Layer2_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_4_0",
+      "path": "/RightTower_Layer2_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_4_1",
+      "path": "/RightTower_Layer2_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_4_2",
+      "path": "/RightTower_Layer2_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_4_3",
+      "path": "/RightTower_Layer2_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer2_Stud_4_4",
+      "path": "/RightTower_Layer2_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3",
+      "path": "/RightTower_Layer3",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Body",
+      "path": "/RightTower_Layer3_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_0_0",
+      "path": "/RightTower_Layer3_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_0_1",
+      "path": "/RightTower_Layer3_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_0_2",
+      "path": "/RightTower_Layer3_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_0_3",
+      "path": "/RightTower_Layer3_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_0_4",
+      "path": "/RightTower_Layer3_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_1_0",
+      "path": "/RightTower_Layer3_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_1_1",
+      "path": "/RightTower_Layer3_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_1_2",
+      "path": "/RightTower_Layer3_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_1_3",
+      "path": "/RightTower_Layer3_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_1_4",
+      "path": "/RightTower_Layer3_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_2_0",
+      "path": "/RightTower_Layer3_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_2_1",
+      "path": "/RightTower_Layer3_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_2_2",
+      "path": "/RightTower_Layer3_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_2_3",
+      "path": "/RightTower_Layer3_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_2_4",
+      "path": "/RightTower_Layer3_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_3_0",
+      "path": "/RightTower_Layer3_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_3_1",
+      "path": "/RightTower_Layer3_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_3_2",
+      "path": "/RightTower_Layer3_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_3_3",
+      "path": "/RightTower_Layer3_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_3_4",
+      "path": "/RightTower_Layer3_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_4_0",
+      "path": "/RightTower_Layer3_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_4_1",
+      "path": "/RightTower_Layer3_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_4_2",
+      "path": "/RightTower_Layer3_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_4_3",
+      "path": "/RightTower_Layer3_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer3_Stud_4_4",
+      "path": "/RightTower_Layer3_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4",
+      "path": "/RightTower_Layer4",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Body",
+      "path": "/RightTower_Layer4_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_0_0",
+      "path": "/RightTower_Layer4_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_0_1",
+      "path": "/RightTower_Layer4_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_0_2",
+      "path": "/RightTower_Layer4_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_0_3",
+      "path": "/RightTower_Layer4_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_0_4",
+      "path": "/RightTower_Layer4_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_1_0",
+      "path": "/RightTower_Layer4_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_1_1",
+      "path": "/RightTower_Layer4_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_1_2",
+      "path": "/RightTower_Layer4_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_1_3",
+      "path": "/RightTower_Layer4_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_1_4",
+      "path": "/RightTower_Layer4_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_2_0",
+      "path": "/RightTower_Layer4_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_2_1",
+      "path": "/RightTower_Layer4_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_2_2",
+      "path": "/RightTower_Layer4_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_2_3",
+      "path": "/RightTower_Layer4_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_2_4",
+      "path": "/RightTower_Layer4_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_3_0",
+      "path": "/RightTower_Layer4_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_3_1",
+      "path": "/RightTower_Layer4_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_3_2",
+      "path": "/RightTower_Layer4_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_3_3",
+      "path": "/RightTower_Layer4_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_3_4",
+      "path": "/RightTower_Layer4_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_4_0",
+      "path": "/RightTower_Layer4_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_4_1",
+      "path": "/RightTower_Layer4_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_4_2",
+      "path": "/RightTower_Layer4_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_4_3",
+      "path": "/RightTower_Layer4_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer4_Stud_4_4",
+      "path": "/RightTower_Layer4_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5",
+      "path": "/RightTower_Layer5",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Body",
+      "path": "/RightTower_Layer5_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_0_0",
+      "path": "/RightTower_Layer5_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_0_1",
+      "path": "/RightTower_Layer5_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_0_2",
+      "path": "/RightTower_Layer5_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_0_3",
+      "path": "/RightTower_Layer5_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_0_4",
+      "path": "/RightTower_Layer5_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_1_0",
+      "path": "/RightTower_Layer5_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_1_1",
+      "path": "/RightTower_Layer5_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_1_2",
+      "path": "/RightTower_Layer5_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_1_3",
+      "path": "/RightTower_Layer5_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_1_4",
+      "path": "/RightTower_Layer5_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_2_0",
+      "path": "/RightTower_Layer5_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_2_1",
+      "path": "/RightTower_Layer5_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_2_2",
+      "path": "/RightTower_Layer5_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_2_3",
+      "path": "/RightTower_Layer5_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_2_4",
+      "path": "/RightTower_Layer5_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_3_0",
+      "path": "/RightTower_Layer5_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_3_1",
+      "path": "/RightTower_Layer5_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_3_2",
+      "path": "/RightTower_Layer5_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_3_3",
+      "path": "/RightTower_Layer5_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_3_4",
+      "path": "/RightTower_Layer5_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_4_0",
+      "path": "/RightTower_Layer5_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_4_1",
+      "path": "/RightTower_Layer5_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_4_2",
+      "path": "/RightTower_Layer5_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_4_3",
+      "path": "/RightTower_Layer5_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer5_Stud_4_4",
+      "path": "/RightTower_Layer5_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6",
+      "path": "/RightTower_Layer6",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Body",
+      "path": "/RightTower_Layer6_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_0_0",
+      "path": "/RightTower_Layer6_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_0_1",
+      "path": "/RightTower_Layer6_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_0_2",
+      "path": "/RightTower_Layer6_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_0_3",
+      "path": "/RightTower_Layer6_Stud_0_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_0_4",
+      "path": "/RightTower_Layer6_Stud_0_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_1_0",
+      "path": "/RightTower_Layer6_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_1_1",
+      "path": "/RightTower_Layer6_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_1_2",
+      "path": "/RightTower_Layer6_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_1_3",
+      "path": "/RightTower_Layer6_Stud_1_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_1_4",
+      "path": "/RightTower_Layer6_Stud_1_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_2_0",
+      "path": "/RightTower_Layer6_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_2_1",
+      "path": "/RightTower_Layer6_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_2_2",
+      "path": "/RightTower_Layer6_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_2_3",
+      "path": "/RightTower_Layer6_Stud_2_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_2_4",
+      "path": "/RightTower_Layer6_Stud_2_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_3_0",
+      "path": "/RightTower_Layer6_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_3_1",
+      "path": "/RightTower_Layer6_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_3_2",
+      "path": "/RightTower_Layer6_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_3_3",
+      "path": "/RightTower_Layer6_Stud_3_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_3_4",
+      "path": "/RightTower_Layer6_Stud_3_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_4_0",
+      "path": "/RightTower_Layer6_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_4_1",
+      "path": "/RightTower_Layer6_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_4_2",
+      "path": "/RightTower_Layer6_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_4_3",
+      "path": "/RightTower_Layer6_Stud_4_3",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RightTower_Layer6_Stud_4_4",
+      "path": "/RightTower_Layer6_Stud_4_4",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_WindowInset",
+      "path": "/Right_WindowInset",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel",
+      "path": "/Right_Crenel[0]",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel_Body",
+      "path": "/Right_Crenel_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel_Stud_0_0",
+      "path": "/Right_Crenel_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel",
+      "path": "/Right_Crenel[1]",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel_Body",
+      "path": "/Right_Crenel[1]/Right_Crenel_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel_Stud_0_0",
+      "path": "/Right_Crenel[1]/Right_Crenel_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel",
+      "path": "/Right_Crenel[2]",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel_Body",
+      "path": "/Right_Crenel[2]/Right_Crenel_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel_Stud_0_0",
+      "path": "/Right_Crenel[2]/Right_Crenel_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel",
+      "path": "/Right_Crenel[3]",
+      "type": 4,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel_Body",
+      "path": "/Right_Crenel[3]/Right_Crenel_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "Right_Crenel_Stud_0_0",
+      "path": "/Right_Crenel[3]/Right_Crenel_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Body",
+      "path": "/BridgeModule_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_0_0",
+      "path": "/BridgeModule_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_0_1",
+      "path": "/BridgeModule_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_0_2",
+      "path": "/BridgeModule_Stud_0_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_1_0",
+      "path": "/BridgeModule_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_1_1",
+      "path": "/BridgeModule_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_1_2",
+      "path": "/BridgeModule_Stud_1_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_2_0",
+      "path": "/BridgeModule_Stud_2_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_2_1",
+      "path": "/BridgeModule_Stud_2_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_2_2",
+      "path": "/BridgeModule_Stud_2_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_3_0",
+      "path": "/BridgeModule_Stud_3_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_3_1",
+      "path": "/BridgeModule_Stud_3_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_3_2",
+      "path": "/BridgeModule_Stud_3_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_4_0",
+      "path": "/BridgeModule_Stud_4_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_4_1",
+      "path": "/BridgeModule_Stud_4_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_4_2",
+      "path": "/BridgeModule_Stud_4_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_5_0",
+      "path": "/BridgeModule_Stud_5_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_5_1",
+      "path": "/BridgeModule_Stud_5_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_5_2",
+      "path": "/BridgeModule_Stud_5_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_6_0",
+      "path": "/BridgeModule_Stud_6_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_6_1",
+      "path": "/BridgeModule_Stud_6_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_6_2",
+      "path": "/BridgeModule_Stud_6_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_7_0",
+      "path": "/BridgeModule_Stud_7_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_7_1",
+      "path": "/BridgeModule_Stud_7_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_7_2",
+      "path": "/BridgeModule_Stud_7_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_8_0",
+      "path": "/BridgeModule_Stud_8_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_8_1",
+      "path": "/BridgeModule_Stud_8_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_8_2",
+      "path": "/BridgeModule_Stud_8_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_9_0",
+      "path": "/BridgeModule_Stud_9_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_9_1",
+      "path": "/BridgeModule_Stud_9_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_9_2",
+      "path": "/BridgeModule_Stud_9_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_10_0",
+      "path": "/BridgeModule_Stud_10_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_10_1",
+      "path": "/BridgeModule_Stud_10_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_10_2",
+      "path": "/BridgeModule_Stud_10_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_11_0",
+      "path": "/BridgeModule_Stud_11_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_11_1",
+      "path": "/BridgeModule_Stud_11_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_11_2",
+      "path": "/BridgeModule_Stud_11_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_12_0",
+      "path": "/BridgeModule_Stud_12_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_12_1",
+      "path": "/BridgeModule_Stud_12_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_12_2",
+      "path": "/BridgeModule_Stud_12_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_13_0",
+      "path": "/BridgeModule_Stud_13_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_13_1",
+      "path": "/BridgeModule_Stud_13_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_13_2",
+      "path": "/BridgeModule_Stud_13_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_14_0",
+      "path": "/BridgeModule_Stud_14_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_14_1",
+      "path": "/BridgeModule_Stud_14_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_14_2",
+      "path": "/BridgeModule_Stud_14_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_15_0",
+      "path": "/BridgeModule_Stud_15_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_15_1",
+      "path": "/BridgeModule_Stud_15_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "BridgeModule_Stud_15_2",
+      "path": "/BridgeModule_Stud_15_2",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RedConnector_Body",
+      "path": "/RedConnector_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RedConnector_Stud_0_0",
+      "path": "/RedConnector_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RedConnector_Stud_0_1",
+      "path": "/RedConnector_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RedConnector_Stud_1_0",
+      "path": "/RedConnector_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "RedConnector_Stud_1_1",
+      "path": "/RedConnector_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "PierBase",
+      "path": "/PierBase",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "PierStem",
+      "path": "/PierStem",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "PierTopContact",
+      "path": "/PierTopContact",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_joint_1",
+      "path": "/A_joint_1",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link2_visible",
+      "path": "/link2_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "A_joint_2",
+      "path": "/A_joint_2",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/A_joint_2/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link3_visible",
+      "path": "/link3_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "A_joint_3",
+      "path": "/A_joint_3",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/A_joint_3/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link4_visible",
+      "path": "/link4_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "A_joint_4",
+      "path": "/A_joint_4",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/A_joint_4/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link5_visible",
+      "path": "/link5_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "A_joint_5",
+      "path": "/A_joint_5",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/A_joint_5/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "A_joint_6",
+      "path": "/A_joint_6",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link6_visible",
+      "path": "/link6_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/A_joint_6/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link7_visible",
+      "path": "/link7_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "connection",
+      "path": "/connection",
+      "type": 12,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "A_GripperPalm",
+      "path": "/A_GripperPalm",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "A_Finger__1",
+      "path": "/A_Finger__1",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "A_Finger_1",
+      "path": "/A_Finger_1",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "A_TCP",
+      "path": "/A_TCP",
+      "type": 4,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_joint_1",
+      "path": "/B_joint_1",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/B_joint_1/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link2_visible",
+      "path": "/B_joint_1/link2_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_joint_2",
+      "path": "/B_joint_2",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/B_joint_2/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link3_visible",
+      "path": "/B_joint_1/link3_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_joint_3",
+      "path": "/B_joint_3",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/B_joint_3/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link4_visible",
+      "path": "/B_joint_1/link4_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_joint_4",
+      "path": "/B_joint_4",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/B_joint_4/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link5_visible",
+      "path": "/B_joint_1/link5_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_joint_5",
+      "path": "/B_joint_5",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/B_joint_5/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_joint_6",
+      "path": "/B_joint_6",
+      "type": 1,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link6_visible",
+      "path": "/B_joint_1/link6_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link",
+      "path": "/B_joint_6/link",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "link7_visible",
+      "path": "/B_joint_1/link7_visible",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "connection",
+      "path": "/B_joint_1/connection",
+      "type": 12,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_GripperPalm",
+      "path": "/B_GripperPalm",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_Finger__1",
+      "path": "/B_Finger__1",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_Finger_1",
+      "path": "/B_Finger_1",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_TCP",
+      "path": "/B_TCP",
+      "type": 4,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "B_SupportShoe",
+      "path": "/B_SupportShoe",
+      "type": 0,
+      "reason": "obsolete_robot_tree_outside_current_cfg"
+    },
+    {
+      "alias": "CastleBaseplate",
+      "path": "/CastleBaseplate[1]",
+      "type": 0,
+      "reason": "duplicate_baseplate_not_used_by_cfg"
+    },
+    {
+      "alias": "A_SupplyTray_Floor",
+      "path": "/A_SupplyTray_Floor",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyTray_Side",
+      "path": "/A_SupplyTray_Side[0]",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyTray_Side",
+      "path": "/A_SupplyTray_Side[1]",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyTray_Edge",
+      "path": "/A_SupplyTray_Edge[0]",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyTray_Edge",
+      "path": "/A_SupplyTray_Edge[1]",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_0_0_Body",
+      "path": "/A_SupplyBrick_0_0_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_0_0_Stud_0_0",
+      "path": "/A_SupplyBrick_0_0_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_0_0_Stud_0_1",
+      "path": "/A_SupplyBrick_0_0_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_0_0_Stud_1_0",
+      "path": "/A_SupplyBrick_0_0_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_0_0_Stud_1_1",
+      "path": "/A_SupplyBrick_0_0_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_0_1_Body",
+      "path": "/A_SupplyBrick_0_1_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_0_1_Stud_0_0",
+      "path": "/A_SupplyBrick_0_1_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_0_1_Stud_0_1",
+      "path": "/A_SupplyBrick_0_1_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_0_1_Stud_1_0",
+      "path": "/A_SupplyBrick_0_1_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_0_1_Stud_1_1",
+      "path": "/A_SupplyBrick_0_1_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_1_0_Body",
+      "path": "/A_SupplyBrick_1_0_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_1_0_Stud_0_0",
+      "path": "/A_SupplyBrick_1_0_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_1_0_Stud_0_1",
+      "path": "/A_SupplyBrick_1_0_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_1_0_Stud_1_0",
+      "path": "/A_SupplyBrick_1_0_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_1_0_Stud_1_1",
+      "path": "/A_SupplyBrick_1_0_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_1_1_Body",
+      "path": "/A_SupplyBrick_1_1_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_1_1_Stud_0_0",
+      "path": "/A_SupplyBrick_1_1_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_1_1_Stud_0_1",
+      "path": "/A_SupplyBrick_1_1_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_1_1_Stud_1_0",
+      "path": "/A_SupplyBrick_1_1_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_1_1_Stud_1_1",
+      "path": "/A_SupplyBrick_1_1_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_2_0_Body",
+      "path": "/A_SupplyBrick_2_0_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_2_0_Stud_0_0",
+      "path": "/A_SupplyBrick_2_0_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_2_0_Stud_0_1",
+      "path": "/A_SupplyBrick_2_0_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_2_0_Stud_1_0",
+      "path": "/A_SupplyBrick_2_0_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_2_0_Stud_1_1",
+      "path": "/A_SupplyBrick_2_0_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_2_1_Body",
+      "path": "/A_SupplyBrick_2_1_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_2_1_Stud_0_0",
+      "path": "/A_SupplyBrick_2_1_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_2_1_Stud_0_1",
+      "path": "/A_SupplyBrick_2_1_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_2_1_Stud_1_0",
+      "path": "/A_SupplyBrick_2_1_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "A_SupplyBrick_2_1_Stud_1_1",
+      "path": "/A_SupplyBrick_2_1_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyTray_Floor",
+      "path": "/B_SupplyTray_Floor",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyTray_Side",
+      "path": "/B_SupplyTray_Side[0]",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyTray_Side",
+      "path": "/B_SupplyTray_Side[1]",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyTray_Edge",
+      "path": "/B_SupplyTray_Edge[0]",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyTray_Edge",
+      "path": "/B_SupplyTray_Edge[1]",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_0_0_Body",
+      "path": "/B_SupplyBrick_0_0_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_0_0_Stud_0_0",
+      "path": "/B_SupplyBrick_0_0_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_0_0_Stud_0_1",
+      "path": "/B_SupplyBrick_0_0_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_0_0_Stud_1_0",
+      "path": "/B_SupplyBrick_0_0_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_0_0_Stud_1_1",
+      "path": "/B_SupplyBrick_0_0_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_0_1_Body",
+      "path": "/B_SupplyBrick_0_1_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_0_1_Stud_0_0",
+      "path": "/B_SupplyBrick_0_1_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_0_1_Stud_0_1",
+      "path": "/B_SupplyBrick_0_1_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_0_1_Stud_1_0",
+      "path": "/B_SupplyBrick_0_1_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_0_1_Stud_1_1",
+      "path": "/B_SupplyBrick_0_1_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_1_0_Body",
+      "path": "/B_SupplyBrick_1_0_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_1_0_Stud_0_0",
+      "path": "/B_SupplyBrick_1_0_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_1_0_Stud_0_1",
+      "path": "/B_SupplyBrick_1_0_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_1_0_Stud_1_0",
+      "path": "/B_SupplyBrick_1_0_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_1_0_Stud_1_1",
+      "path": "/B_SupplyBrick_1_0_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_1_1_Body",
+      "path": "/B_SupplyBrick_1_1_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_1_1_Stud_0_0",
+      "path": "/B_SupplyBrick_1_1_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_1_1_Stud_0_1",
+      "path": "/B_SupplyBrick_1_1_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_1_1_Stud_1_0",
+      "path": "/B_SupplyBrick_1_1_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_1_1_Stud_1_1",
+      "path": "/B_SupplyBrick_1_1_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_2_0_Body",
+      "path": "/B_SupplyBrick_2_0_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_2_0_Stud_0_0",
+      "path": "/B_SupplyBrick_2_0_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_2_0_Stud_0_1",
+      "path": "/B_SupplyBrick_2_0_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_2_0_Stud_1_0",
+      "path": "/B_SupplyBrick_2_0_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_2_0_Stud_1_1",
+      "path": "/B_SupplyBrick_2_0_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_2_1_Body",
+      "path": "/B_SupplyBrick_2_1_Body",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_2_1_Stud_0_0",
+      "path": "/B_SupplyBrick_2_1_Stud_0_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_2_1_Stud_0_1",
+      "path": "/B_SupplyBrick_2_1_Stud_0_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_2_1_Stud_1_0",
+      "path": "/B_SupplyBrick_2_1_Stud_1_0",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    },
+    {
+      "alias": "B_SupplyBrick_2_1_Stud_1_1",
+      "path": "/B_SupplyBrick_2_1_Stud_1_1",
+      "type": 0,
+      "reason": "legacy_preview_geometry"
+    }
+  ],
+  "home_proposal": {
+    "B": [
+      -1.3738719102154375,
+      -0.16343179321798829,
+      1.2285144993968269,
+      0.5057148595239096,
+      -1.5707972156137024,
+      0.19692396786097197
+    ],
+    "A": [
+      -2.3476776673888686,
+      -0.16346279367623634,
+      1.2285742426818818,
+      0.5056829784387179,
+      -1.5707960790058992,
+      -0.7768815300336275
+    ]
+  },
+  "initial_static_collisions": [],
+  "samples": [
+    {
+      "time_s": 0.02,
+      "arms": {
+        "A": {
+          "joint_dynamic": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "q_rad": [
+            -2.347677667388869,
+            -0.16344458819507615,
+            1.2285742426818256,
+            0.5056840874688863,
+            -1.5707963595453476,
+            -0.776881585042392
+          ],
+          "target_q_rad": [
+            -2.3476776673888686,
+            -0.16346279367623634,
+            1.2285742426818818,
+            0.5056829784387179,
+            -1.5707960790058992,
+            -0.7768815300336275
+          ],
+          "error_to_target_rad": [
+            -4.440892098500626e-16,
+            1.8205481160188386e-05,
+            -5.617728504603292e-14,
+            1.1090301683669421e-06,
+            -2.805394483385015e-07,
+            -5.500876454345161e-08
+          ],
+          "max_error_to_target_rad": 1.8205481160188386e-05,
+          "max_error_to_home_rad": 1.8205481160188386e-05,
+          "motor_torque_Nm": [
+            0.01446591975635796,
+            20.118727735351577,
+            28.818625179382064,
+            2.7577698718976213,
+            0.0003677304900985425,
+            2.604281587559934e-05
+          ],
+          "palm_dynamic": true,
+          "tool_sensor_dynamic": true,
+          "tool_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              -0.0023539338327069523,
+              -0.0017352768310957187,
+              1.4692359116152434
+            ],
+            "torque_local_Nm": [
+              4.1446102378335474e-05,
+              -6.902329888852509e-05,
+              8.750576329204475e-07
+            ]
+          },
+          "tcp_world_pose": [
+            -0.35999436970552856,
+            -0.05000170254944496,
+            1.2799854775651025,
+            0.9999999999873063,
+            1.7342541777098928e-06,
+            -1.7994037639912342e-06,
+            -4.375154009944591e-06
+          ],
+          "base_world_pose": [
+            -0.7,
+            0.13,
+            0.783,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "base_static_flag": true,
+          "pad_sensor_present": true,
+          "pad_present": true,
+          "pad_sensor_dynamic": true,
+          "pad_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              -0.0004369659231060574,
+              -0.0003062070037961282,
+              0.29384718767148976
+            ],
+            "torque_local_Nm": [
+              -2.328927259610557e-07,
+              1.4389579125935004e-07,
+              3.818549447406057e-08
+            ]
+          },
+          "pad_dynamic": true,
+          "pad_world_pose": [
+            -0.3599943551164395,
+            -0.05000173766281258,
+            1.2839854775646782,
+            0.9999999999873063,
+            1.7342541777098928e-06,
+            -1.7994037639912361e-06,
+            -4.375154009944592e-06
+          ],
+          "pad_respondable": false
+        },
+        "B": {
+          "joint_dynamic": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "q_rad": [
+            -1.3738719102154373,
+            -0.16341359070872175,
+            1.2285153525061143,
+            0.5057148595238812,
+            -1.570797478222634,
+            0.19692390251762007
+          ],
+          "target_q_rad": [
+            -1.3738719102154375,
+            -0.16343179321798829,
+            1.2285144993968269,
+            0.5057148595239096,
+            -1.5707972156137024,
+            0.19692396786097197
+          ],
+          "error_to_target_rad": [
+            2.220446049250313e-16,
+            1.8202509266540545e-05,
+            8.531092874353164e-07,
+            -2.842170943040401e-14,
+            -2.6260893148943865e-07,
+            -6.53433518960078e-08
+          ],
+          "max_error_to_target_rad": 1.8202509266540545e-05,
+          "max_error_to_home_rad": 1.8202509266540545e-05,
+          "motor_torque_Nm": [
+            0.014654276448087093,
+            20.117071244451893,
+            28.816050078068503,
+            2.757789594061177,
+            0.0003868482613936839,
+            2.610733386591094e-05
+          ],
+          "palm_dynamic": true,
+          "tool_sensor_dynamic": true,
+          "tool_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              -0.002822400538537425,
+              0.0009113964818629819,
+              1.4691753115852997
+            ],
+            "torque_local_Nm": [
+              -2.2407780929287054e-05,
+              -8.215849480707003e-05,
+              8.771379041748684e-07
+            ]
+          },
+          "tcp_world_pose": [
+            0.3599900812566338,
+            -0.05000604328805827,
+            1.2799971441674844,
+            -1.8551064708549612e-06,
+            0.9999999999397893,
+            5.041813237738334e-06,
+            9.568711189761325e-06
+          ],
+          "base_world_pose": [
+            0.7,
+            0.13,
+            0.783,
+            0.0,
+            0.0,
+            1.0,
+            6.123031769111886e-17
+          ],
+          "base_static_flag": true,
+          "pad_sensor_present": true,
+          "pad_present": true,
+          "pad_sensor_dynamic": true,
+          "pad_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              -0.0005188015545120412,
+              0.0001640973016606296,
+              0.2938335158416861
+            ],
+            "torque_local_Nm": [
+              1.0997495697062448e-07,
+              1.8960413838625248e-07,
+              3.859913873975318e-08
+            ]
+          },
+          "pad_dynamic": true,
+          "pad_world_pose": [
+            0.35998911865683714,
+            -0.05000615797295611,
+            1.2839970610542712,
+            -1.869721446973172e-06,
+            0.9999999999791375,
+            4.9490077422553735e-06,
+            3.7063099720402457e-06
+          ],
+          "pad_respondable": false
+        }
+      },
+      "parts": {
+        "L1": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.56,
+            -0.4,
+            0.8099495931226695
+          ],
+          "initial_m": [
+            -0.56,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.0010504068773306008
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "R1": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.4,
+            -0.4,
+            0.8099495931226697
+          ],
+          "initial_m": [
+            0.4,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.0010504068773303787
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "L2": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.39,
+            -0.4,
+            0.8099495931226695
+          ],
+          "initial_m": [
+            -0.39,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.0010504068773306008
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "R2": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.57,
+            -0.4,
+            0.8099495931226695
+          ],
+          "initial_m": [
+            0.57,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.0010504068773306008
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "L3": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.56,
+            -0.23000000000000004,
+            0.8099495931226697
+          ],
+          "initial_m": [
+            -0.56,
+            -0.23,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            -2.7755575615628914e-17,
+            -0.0010504068773303787
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "beam": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.0,
+            -0.35,
+            0.805287782803435
+          ],
+          "initial_m": [
+            0,
+            -0.35,
+            0.807
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.0017122171965650024
+          ],
+          "mass_kg": 0.22,
+          "expected_mass_kg": 0.22
+        },
+        "cap": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.45,
+            -0.23000000000000004,
+            0.7859495931226694
+          ],
+          "initial_m": [
+            0.45,
+            -0.23,
+            0.787
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            -2.7755575615628914e-17,
+            -0.0010504068773306008
+          ],
+          "mass_kg": 0.06,
+          "expected_mass_kg": 0.06
+        }
+      }
+    },
+    {
+      "time_s": 0.19999999999999998,
+      "arms": {
+        "A": {
+          "joint_dynamic": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "q_rad": [
+            -2.3476776673888695,
+            -0.16340902204789093,
+            1.2285742426818276,
+            0.5056862571065663,
+            -1.5707969097540913,
+            -0.7768817245259119
+          ],
+          "target_q_rad": [
+            -2.3476776673888686,
+            -0.16346279367623634,
+            1.2285742426818818,
+            0.5056829784387179,
+            -1.5707960790058992,
+            -0.7768815300336275
+          ],
+          "error_to_target_rad": [
+            -8.881784197001252e-16,
+            5.377162834541149e-05,
+            -5.417888360170764e-14,
+            3.2786678484386655e-06,
+            -8.307481920155624e-07,
+            -1.9449228438883637e-07
+          ],
+          "max_error_to_target_rad": 5.377162834541149e-05,
+          "max_error_to_home_rad": 5.377162834541149e-05,
+          "motor_torque_Nm": [
+            -0.0002757028186503182,
+            20.33630180620942,
+            28.912594312838348,
+            2.770039522952497,
+            5.022990167630659e-05,
+            8.750609948792018e-07
+          ],
+          "palm_dynamic": true,
+          "tool_sensor_dynamic": true,
+          "tool_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              8.910119466129139e-05,
+              7.49047296147277e-05,
+              1.4715281209100968
+            ],
+            "torque_local_Nm": [
+              -2.096223197975399e-06,
+              2.0240131904950126e-06,
+              2.942056703523053e-08
+            ]
+          },
+          "tcp_world_pose": [
+            -0.3599835077196164,
+            -0.05001190008261114,
+            1.2799720516286561,
+            0.9999999997385475,
+            1.975980903567987e-06,
+            -1.492290439802924e-05,
+            -1.7213593520637456e-05
+          ],
+          "base_world_pose": [
+            -0.7,
+            0.13,
+            0.783,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "base_static_flag": true,
+          "pad_sensor_present": true,
+          "pad_present": true,
+          "pad_sensor_dynamic": true,
+          "pad_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              1.3015171472015177e-05,
+              1.4300154920361154e-05,
+              0.29430562440910124
+            ],
+            "torque_local_Nm": [
+              3.5347562179466197e-09,
+              -2.5286664501152873e-09,
+              1.2824885443545996e-09
+            ]
+          },
+          "pad_dynamic": true,
+          "pad_world_pose": [
+            -0.35998338811475716,
+            -0.0500120379172881,
+            1.2839720516244915,
+            0.9999999997385475,
+            1.975980903567987e-06,
+            -1.492290439802924e-05,
+            -1.7213593520637456e-05
+          ],
+          "pad_respondable": false
+        },
+        "B": {
+          "joint_dynamic": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "q_rad": [
+            -1.3738719102154375,
+            -0.1633780232332211,
+            1.228516999757592,
+            0.5057148595238847,
+            -1.5707979819625335,
+            0.19692375985611146
+          ],
+          "target_q_rad": [
+            -1.3738719102154375,
+            -0.16343179321798829,
+            1.2285144993968269,
+            0.5057148595239096,
+            -1.5707972156137024,
+            0.19692396786097197
+          ],
+          "error_to_target_rad": [
+            0.0,
+            5.3769984767193524e-05,
+            2.500360765100851e-06,
+            -2.4868995751603507e-14,
+            -7.663488310605261e-07,
+            -2.0800486050243094e-07
+          ],
+          "max_error_to_target_rad": 5.3769984767193524e-05,
+          "max_error_to_home_rad": 5.3769984767193524e-05,
+          "motor_torque_Nm": [
+            -0.0002727832707221509,
+            20.337685741468096,
+            28.91238989871487,
+            2.77006178267489,
+            6.623101263649696e-05,
+            -4.582687622460644e-09
+          ],
+          "palm_dynamic": true,
+          "tool_sensor_dynamic": true,
+          "tool_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              0.00011497477790384532,
+              -3.609964543625687e-05,
+              1.4715345910230397
+            ],
+            "torque_local_Nm": [
+              1.0732748043410896e-06,
+              3.122338637915874e-06,
+              -1.5980636850957923e-10
+            ]
+          },
+          "tcp_world_pose": [
+            0.35997520234312996,
+            -0.05000924103558775,
+            1.279983230594831,
+            -2.09714865731514e-06,
+            0.9999999995706812,
+            9.209310616292711e-06,
+            2.7738570510527083e-05
+          ],
+          "base_world_pose": [
+            0.7,
+            0.13,
+            0.783,
+            0.0,
+            0.0,
+            1.0,
+            6.123031769111886e-17
+          ],
+          "base_static_flag": true,
+          "pad_sensor_present": true,
+          "pad_present": true,
+          "pad_sensor_dynamic": true,
+          "pad_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              2.1985221498913792e-05,
+              -7.22018393258897e-06,
+              0.2943069164936202
+            ],
+            "torque_local_Nm": [
+              4.073531828090015e-12,
+              -4.015124784851797e-09,
+              -6.879539970219795e-12
+            ]
+          },
+          "pad_dynamic": true,
+          "pad_world_pose": [
+            0.3599739866643537,
+            -0.050009397393910936,
+            1.2839831375227262,
+            -2.113293988109666e-06,
+            0.9999999997323601,
+            9.106237152639586e-06,
+            2.1163423465753183e-05
+          ],
+          "pad_respondable": false
+        }
+      },
+      "parts": {
+        "L1": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.56,
+            -0.4,
+            0.8099999999999046
+          ],
+          "initial_m": [
+            -0.56,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.00100000000009548
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "R1": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.4,
+            -0.4,
+            0.8099999999999046
+          ],
+          "initial_m": [
+            0.4,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.00100000000009548
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "L2": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.39,
+            -0.4,
+            0.8099999999999046
+          ],
+          "initial_m": [
+            -0.39,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.00100000000009548
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "R2": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.57,
+            -0.4,
+            0.8099999999999046
+          ],
+          "initial_m": [
+            0.57,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.00100000000009548
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "L3": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.56,
+            -0.23000000000000004,
+            0.8099999999999044
+          ],
+          "initial_m": [
+            -0.56,
+            -0.23,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            -2.7755575615628914e-17,
+            -0.0010000000000957021
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "beam": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.0,
+            -0.35,
+            0.8054999999995974
+          ],
+          "initial_m": [
+            0,
+            -0.35,
+            0.807
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.0015000000004026237
+          ],
+          "mass_kg": 0.22,
+          "expected_mass_kg": 0.22
+        },
+        "cap": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.45,
+            -0.23000000000000004,
+            0.7859999999999043
+          ],
+          "initial_m": [
+            0.45,
+            -0.23,
+            0.787
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            -2.7755575615628914e-17,
+            -0.0010000000000957021
+          ],
+          "mass_kg": 0.06,
+          "expected_mass_kg": 0.06
+        }
+      }
+    },
+    {
+      "time_s": 0.5000000000000001,
+      "arms": {
+        "A": {
+          "joint_dynamic": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "q_rad": [
+            -2.347677667388866,
+            -0.16340812156626092,
+            1.228574242681826,
+            0.5056863137566341,
+            -1.5707969067218532,
+            -0.776881722900771
+          ],
+          "target_q_rad": [
+            -2.3476776673888686,
+            -0.16346279367623634,
+            1.2285742426818818,
+            0.5056829784387179,
+            -1.5707960790058992,
+            -0.7768815300336275
+          ],
+          "error_to_target_rad": [
+            2.6645352591003757e-15,
+            5.467210997542327e-05,
+            -5.573319583618286e-14,
+            3.3353179161865758e-06,
+            -8.277159539993305e-07,
+            -1.9286714347810377e-07
+          ],
+          "max_error_to_target_rad": 5.467210997542327e-05,
+          "max_error_to_home_rad": 5.467210997542327e-05,
+          "motor_torque_Nm": [
+            2.176993950149939e-07,
+            20.333693132582074,
+            28.9114259541673,
+            2.769864417000053,
+            5.0099522097788365e-05,
+            -8.762150916071924e-07
+          ],
+          "palm_dynamic": true,
+          "tool_sensor_dynamic": true,
+          "tool_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              6.651382804348925e-05,
+              5.268452253646214e-05,
+              1.4714992782075358
+            ],
+            "torque_local_Nm": [
+              -1.6085718689813262e-06,
+              1.3928560285995418e-06,
+              -2.9414603750335277e-08
+            ]
+          },
+          "tcp_world_pose": [
+            -0.35998324388675973,
+            -0.05001215880567245,
+            1.2799717143927736,
+            0.999999999727555,
+            1.9751977977100488e-06,
+            -1.526360846404451e-05,
+            -1.7550242886826828e-05
+          ],
+          "base_world_pose": [
+            -0.7,
+            0.13,
+            0.783,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "base_static_flag": true,
+          "pad_sensor_present": true,
+          "pad_present": true,
+          "pad_sensor_dynamic": true,
+          "pad_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              9.192361885560514e-06,
+              1.0535047459414826e-05,
+              0.2942998558026367
+            ],
+            "torque_local_Nm": [
+              -3.327075996492473e-10,
+              2.3853945306120893e-10,
+              -1.2844887609193412e-09
+            ]
+          },
+          "pad_dynamic": true,
+          "pad_world_pose": [
+            -0.35998312155622647,
+            -0.05001229933351906,
+            1.2839717143884344,
+            0.999999999727555,
+            1.975197797710049e-06,
+            -1.5263608464044512e-05,
+            -1.7550242886826835e-05
+          ],
+          "pad_respondable": false
+        },
+        "B": {
+          "joint_dynamic": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "q_rad": [
+            -1.3738719102154384,
+            -0.1633771282110148,
+            1.2285169973417498,
+            0.505714859523886,
+            -1.5707979824720202,
+            0.19692375504758797
+          ],
+          "target_q_rad": [
+            -1.3738719102154375,
+            -0.16343179321798829,
+            1.2285144993968269,
+            0.5057148595239096,
+            -1.5707972156137024,
+            0.19692396786097197
+          ],
+          "error_to_target_rad": [
+            -8.881784197001252e-16,
+            5.466500697348664e-05,
+            2.497944922907891e-06,
+            -2.3647750424515834e-14,
+            -7.66858317735597e-07,
+            -2.1281338399847805e-07
+          ],
+          "max_error_to_target_rad": 5.466500697348664e-05,
+          "max_error_to_home_rad": 5.466500697348664e-05,
+          "motor_torque_Nm": [
+            2.7054796288081257e-06,
+            20.33493762890087,
+            28.911061441466728,
+            2.7698764261524547,
+            6.611788651708083e-05,
+            -1.1691993512751285e-09
+          ],
+          "palm_dynamic": true,
+          "tool_sensor_dynamic": true,
+          "tool_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              8.247691586826637e-05,
+              -2.9641992216555963e-05,
+              1.4715000063175203
+            ],
+            "torque_local_Nm": [
+              9.287312585353706e-07,
+              2.211867117185496e-06,
+              -4.404504295751883e-11
+            ]
+          },
+          "tcp_world_pose": [
+            0.3599748317605072,
+            -0.050009314873550106,
+            1.2799829017626954,
+            -2.0995858801275964e-06,
+            0.9999999995576319,
+            9.296787971596608e-06,
+            2.8176189709572246e-05
+          ],
+          "base_world_pose": [
+            0.7,
+            0.13,
+            0.783,
+            0.0,
+            0.0,
+            1.0,
+            6.123031769111886e-17
+          ],
+          "base_static_flag": true,
+          "pad_sensor_present": true,
+          "pad_present": true,
+          "pad_sensor_dynamic": true,
+          "pad_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              1.645780555771134e-05,
+              -6.116180512815238e-06,
+              0.2943000012777303
+            ],
+            "torque_local_Nm": [
+              1.0695098183528067e-09,
+              -1.498231542734616e-10,
+              -1.7202352846837025e-12
+            ]
+          },
+          "pad_dynamic": true,
+          "pad_world_pose": [
+            0.3599736127033411,
+            -0.0500094719289169,
+            1.2839828086989629,
+            -2.1157323983056484e-06,
+            0.9999999997221797,
+            9.193716740713011e-06,
+            2.160185380767344e-05
+          ],
+          "pad_respondable": false
+        }
+      },
+      "parts": {
+        "L1": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.56,
+            -0.4,
+            0.8099999999999998
+          ],
+          "initial_m": [
+            -0.56,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "R1": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.4,
+            -0.4,
+            0.8099999999999998
+          ],
+          "initial_m": [
+            0.4,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "L2": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.39,
+            -0.4,
+            0.8099999999999998
+          ],
+          "initial_m": [
+            -0.39,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "R2": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.57,
+            -0.4,
+            0.8099999999999998
+          ],
+          "initial_m": [
+            0.57,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "L3": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.56,
+            -0.23000000000000004,
+            0.8099999999999998
+          ],
+          "initial_m": [
+            -0.56,
+            -0.23,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            -2.7755575615628914e-17,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "beam": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.0,
+            -0.35,
+            0.8054999999999997
+          ],
+          "initial_m": [
+            0,
+            -0.35,
+            0.807
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.00150000000000039
+          ],
+          "mass_kg": 0.22,
+          "expected_mass_kg": 0.22
+        },
+        "cap": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.45,
+            -0.23000000000000004,
+            0.7859999999999998
+          ],
+          "initial_m": [
+            0.45,
+            -0.23,
+            0.787
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            -2.7755575615628914e-17,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.06,
+          "expected_mass_kg": 0.06
+        }
+      }
+    },
+    {
+      "time_s": 1.0000000000000004,
+      "arms": {
+        "A": {
+          "joint_dynamic": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "q_rad": [
+            -2.3476776673888637,
+            -0.16340811709448455,
+            1.2285742426818178,
+            0.5056863124742932,
+            -1.5707969095644316,
+            -0.7768817235725938
+          ],
+          "target_q_rad": [
+            -2.3476776673888686,
+            -0.16346279367623634,
+            1.2285742426818818,
+            0.5056829784387179,
+            -1.5707960790058992,
+            -0.7768815300336275
+          ],
+          "error_to_target_rad": [
+            4.884981308350689e-15,
+            5.467658175178913e-05,
+            -6.394884621840902e-14,
+            3.3340355752864426e-06,
+            -8.305585323942211e-07,
+            -1.9353896629770162e-07
+          ],
+          "max_error_to_target_rad": 5.467658175178913e-05,
+          "max_error_to_home_rad": 5.467658175178913e-05,
+          "motor_torque_Nm": [
+            -9.089466698797264e-08,
+            20.333708354915814,
+            28.911443566854235,
+            2.7698776939472536,
+            5.010411305798181e-05,
+            5.507576195932005e-11
+          ],
+          "palm_dynamic": true,
+          "tool_sensor_dynamic": true,
+          "tool_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              6.579684372440368e-05,
+              5.196792495034585e-05,
+              1.4715000142142212
+            ],
+            "torque_local_Nm": [
+              -1.5705738375256247e-06,
+              1.3662897364497817e-06,
+              2.0271506314658783e-11
+            ]
+          },
+          "tcp_world_pose": [
+            -0.3599832427397126,
+            -0.0500121606794748,
+            1.2799717128646884,
+            0.99999999972752,
+            1.9755324829340277e-06,
+            -1.5265736894781723e-05,
+            -1.755034735717587e-05
+          ],
+          "base_world_pose": [
+            -0.7,
+            0.13,
+            0.783,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "base_static_flag": true,
+          "pad_sensor_present": true,
+          "pad_present": true,
+          "pad_sensor_dynamic": true,
+          "pad_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              8.989224478982613e-06,
+              1.0333127112082298e-05,
+              0.29430000300184894
+            ],
+            "torque_local_Nm": [
+              1.1125809595020117e-12,
+              3.986150050635982e-13,
+              -7.439673862443465e-14
+            ]
+          },
+          "pad_dynamic": true,
+          "pad_world_pose": [
+            -0.35998312039215313,
+            -0.05001230120815723,
+            1.283971712860348,
+            0.99999999972752,
+            1.975532482934028e-06,
+            -1.5265736894781723e-05,
+            -1.7550347357175866e-05
+          ],
+          "pad_respondable": false
+        },
+        "B": {
+          "joint_dynamic": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "q_rad": [
+            -1.3738719102154389,
+            -0.16337712800656443,
+            1.228516996498666,
+            0.5057148595238908,
+            -1.5707979816788142,
+            0.19692375501303916
+          ],
+          "target_q_rad": [
+            -1.3738719102154375,
+            -0.16343179321798829,
+            1.2285144993968269,
+            0.5057148595239096,
+            -1.5707972156137024,
+            0.19692396786097197
+          ],
+          "error_to_target_rad": [
+            -1.3322676295501878e-15,
+            5.466521142385994e-05,
+            2.4971018390829154e-06,
+            -1.8762769116165146e-14,
+            -7.660651117902262e-07,
+            -2.1284793280673675e-07
+          ],
+          "max_error_to_target_rad": 5.466521142385994e-05,
+          "max_error_to_home_rad": 5.466521142385994e-05,
+          "motor_torque_Nm": [
+            2.5941219701354894e-06,
+            20.33493704508044,
+            28.91106117034613,
+            2.769876391606149,
+            6.612314382024742e-05,
+            -5.669346930454027e-10
+          ],
+          "palm_dynamic": true,
+          "tool_sensor_dynamic": true,
+          "tool_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              8.246994152980512e-05,
+              -2.9632516924004808e-05,
+              1.4714999988391013
+            ],
+            "torque_local_Nm": [
+              9.284844642217157e-07,
+              2.211655521848961e-06,
+              -2.380694494714531e-11
+            ]
+          },
+          "tcp_world_pose": [
+            0.35997483170831246,
+            -0.05000931503480048,
+            1.2799829020569389,
+            -2.0996030822562077e-06,
+            0.9999999995576428,
+            9.296335829411811e-06,
+            2.817595416024222e-05
+          ],
+          "base_world_pose": [
+            0.7,
+            0.13,
+            0.783,
+            0.0,
+            0.0,
+            1.0,
+            6.123031769111886e-17
+          ],
+          "base_static_flag": true,
+          "pad_sensor_present": true,
+          "pad_present": true,
+          "pad_sensor_dynamic": true,
+          "pad_sensor": {
+            "status": 1,
+            "valid": true,
+            "force_local_N": [
+              1.645639520459476e-05,
+              -6.114415955183869e-06,
+              0.2942999997655954
+            ],
+            "torque_local_Nm": [
+              1.0703700041615205e-09,
+              -1.4981818952090336e-10,
+              -8.310711407487521e-13
+            ]
+          },
+          "pad_dynamic": true,
+          "pad_world_pose": [
+            0.35997361265369227,
+            -0.05000947208652848,
+            1.283982808993259,
+            -2.1157495992685242e-06,
+            0.9999999997221888,
+            9.19326461981673e-06,
+            2.1601622638089964e-05
+          ],
+          "pad_respondable": false
+        }
+      },
+      "parts": {
+        "L1": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.56,
+            -0.4,
+            0.8099999999999998
+          ],
+          "initial_m": [
+            -0.56,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "R1": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.4,
+            -0.4,
+            0.8099999999999998
+          ],
+          "initial_m": [
+            0.4,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "L2": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.39,
+            -0.4,
+            0.8099999999999998
+          ],
+          "initial_m": [
+            -0.39,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "R2": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.57,
+            -0.4,
+            0.8099999999999998
+          ],
+          "initial_m": [
+            0.57,
+            -0.4,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "L3": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            -0.56,
+            -0.23000000000000004,
+            0.8099999999999998
+          ],
+          "initial_m": [
+            -0.56,
+            -0.23,
+            0.811
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            -2.7755575615628914e-17,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.16,
+          "expected_mass_kg": 0.16
+        },
+        "beam": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.0,
+            -0.35,
+            0.8054999999999997
+          ],
+          "initial_m": [
+            0,
+            -0.35,
+            0.807
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            0.0,
+            -0.00150000000000039
+          ],
+          "mass_kg": 0.22,
+          "expected_mass_kg": 0.22
+        },
+        "cap": {
+          "dynamic": true,
+          "static_flag": false,
+          "position_m": [
+            0.45,
+            -0.23000000000000004,
+            0.7859999999999998
+          ],
+          "initial_m": [
+            0.45,
+            -0.23,
+            0.787
+          ],
+          "delta_from_initial_m": [
+            0.0,
+            -2.7755575615628914e-17,
+            -0.001000000000000223
+          ],
+          "mass_kg": 0.06,
+          "expected_mass_kg": 0.06
+        }
+      }
+    }
+  ],
+  "summary": {
+    "all_12_joints_dynamic": true,
+    "all_tool_sensors_dynamic": true,
+    "all_pad_sensors_dynamic": true,
+    "all_pads_dynamic": true,
+    "all_parts_dynamic": true,
+    "all_force_data_valid": true,
+    "base_translation_drift_m": {
+      "A": 0.0,
+      "B": 0.0
+    },
+    "tcp_translation_drift_m": {
+      "A": 3.327558090671581e-05,
+      "B": 3.331108427423665e-05
+    },
+    "max_joint_target_error_rad": 5.467658175178913e-05,
+    "max_source_part_displacement_m": 0.00150000000000039,
+    "initial_static_collision_count": 0,
+    "removed_legacy_object_count": 579
+  },
+  "output_sha256": "09c98af29f44315074e60ffba65f0d7edd8b89b47a1d022e02e493e83215b59b",
+  "status": "passed",
+  "obstacle_paths": [
+    "/CastleBaseplate",
+    "/A_SupplyTray",
+    "/B_SupplyTray"
+  ]
+}

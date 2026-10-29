@@ -1,0 +1,8 @@
+numpy
+scipy
+Pillow
+pyzmq
+cbor2
+matplotlib
+opencv-python
+# The CoppeliaSim 4.10 installation supplies its matching ZeroMQ client.

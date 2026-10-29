@@ -1,0 +1,178 @@
+[
+  {
+    "attempt": 1,
+    "choice": {
+      "mode_id": "m0014",
+      "candidate_index": 26,
+      "support_candidate_index": 0,
+      "part": "cap",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": "A",
+      "support_required": true,
+      "support_tcp_position": [
+        0.03,
+        0.155,
+        1.0194999999999999
+      ],
+      "support_quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "main_cost": 10.697922158861228,
+      "support_cost": 13.668651861959185,
+      "mode_cost": 24.366574020820416,
+      "arm_workload": {
+        "A": 13.668651861959185,
+        "B": 10.697922158861228
+      }
+    },
+    "reason": "cap A: No exact collision-free solution within budget",
+    "evidence": {
+      "ok": false,
+      "problem": {
+        "reason": "block_robot_collision:L2:A",
+        "pair": [
+          "/A_UR5/A_joint_3/link",
+          "/L2"
+        ]
+      },
+      "error": "No exact collision-free solution within budget",
+      "stats": {
+        "planner_reused": false,
+        "planner_after": {
+          "vertices": 5.0,
+          "edges": 3.0
+        },
+        "joint_bounds": [
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ],
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ],
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ],
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ],
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ],
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ]
+        ],
+        "planner_before": {
+          "vertices": 0.0,
+          "edges": 0.0
+        },
+        "collision_checks": 1284,
+        "solve_budget_s": 4.0,
+        "algorithm": "RRTConnect",
+        "backend": "simOMPL",
+        "wall_time_s": 5.372999999999934,
+        "roadmap_reused": false,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      },
+      "algorithm": "RRTConnect"
+    }
+  },
+  {
+    "attempt": 2,
+    "choice": {
+      "mode_id": "m0015",
+      "candidate_index": 26,
+      "support_candidate_index": 2,
+      "part": "cap",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": "A",
+      "support_required": true,
+      "support_tcp_position": [
+        0.03,
+        0.155,
+        1.0194999999999999
+      ],
+      "support_quaternion": [
+        0.0,
+        0.0,
+        1.0,
+        6.123031769111886e-17
+      ],
+      "main_cost": 10.697922158861228,
+      "support_cost": 15.438293847134512,
+      "mode_cost": 26.136216005995742,
+      "arm_workload": {
+        "A": 15.438293847134512,
+        "B": 10.697922158861228
+      }
+    },
+    "reason": "cap A: No exact collision-free solution within budget",
+    "evidence": {
+      "ok": false,
+      "problem": {
+        "reason": "block_robot_collision:L3:A",
+        "pair": [
+          "/A_UR5/A_joint_3/link",
+          "/L3"
+        ]
+      },
+      "error": "No exact collision-free solution within budget",
+      "stats": {
+        "planner_reused": false,
+        "planner_after": {
+          "vertices": 5.0,
+          "edges": 3.0
+        },
+        "joint_bounds": [
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ],
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ],
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ],
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ],
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ],
+          [
+            -6.283185307179586,
+            6.283185307179586
+          ]
+        ],
+        "planner_before": {
+          "vertices": 0.0,
+          "edges": 0.0
+        },
+        "collision_checks": 1368,
+        "solve_budget_s": 4.0,
+        "algorithm": "RRTConnect",
+        "backend": "simOMPL",
+        "wall_time_s": 5.34699999999998,
+        "roadmap_reused": false,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      },
+      "algorithm": "RRTConnect"
+    }
+  }
+]

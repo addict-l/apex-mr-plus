@@ -1,0 +1,366 @@
+{
+  "changed_task_ids": [
+    "cap_A_support_start_047",
+    "cap_A_support_end_051"
+  ],
+  "unchanged_task_count": 51,
+  "max_velocity_rad_s": 0.025,
+  "max_acceleration_rad_s2": 0.12,
+  "rrt_stages": [
+    {
+      "name": "outside_lower",
+      "contact_allowed": false,
+      "stats": {
+        "solve_budget_s": 0.6,
+        "raw_states": 3,
+        "joint_bound_margin": 0.06,
+        "shortcut_collision_checks": 28,
+        "planner_reused": false,
+        "collision_check_step_rad": 0.0002987706243153073,
+        "joint_bounds": [
+          [
+            -1.8093908376912144,
+            -1.6893907535025667
+          ],
+          [
+            0.8886026526230308,
+            1.0144396059828997
+          ],
+          [
+            1.330794138285358,
+            1.4513665382619356
+          ],
+          [
+            -0.8344373940696257,
+            -0.7091728351443591
+          ],
+          [
+            1.5107963162108877,
+            1.6307963173294815
+          ],
+          [
+            1.6893907865619342,
+            1.809390841938031
+          ]
+        ],
+        "backend": "simOMPL",
+        "raw_cost": 0.13027644272691596,
+        "collision_checks": 903,
+        "validated_states": 28,
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "execution_states": 2,
+        "algorithm": "RRTConnect",
+        "planner_after": {
+          "vertices": 4.0,
+          "edges": 3.0
+        },
+        "solve_collision_checks": 845,
+        "roadmap_reused": false,
+        "planner_before": {
+          "vertices": 0.0,
+          "edges": 0.0
+        },
+        "wall_time_s": 4.463999999999999,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "name": "under_beam_translate",
+      "contact_allowed": false,
+      "stats": {
+        "solve_budget_s": 0.6,
+        "raw_states": 3,
+        "joint_bound_margin": 0.16,
+        "shortcut_collision_checks": 116,
+        "planner_reused": false,
+        "collision_check_step_rad": 0.0008445212513153406,
+        "joint_bounds": [
+          [
+            -1.9093907535025667,
+            -1.5208561782090861
+          ],
+          [
+            0.7944396059828998,
+            1.1150315896719374
+          ],
+          [
+            1.2294697098598542,
+            1.550794138285358
+          ],
+          [
+            -0.9344373940696258,
+            -0.6137049486535856
+          ],
+          [
+            1.4107963161940744,
+            1.7307963162108877
+          ],
+          [
+            1.520856209126694,
+            1.9093907865619342
+          ]
+        ],
+        "backend": "simOMPL",
+        "raw_cost": 0.3532252998925945,
+        "collision_checks": 984,
+        "validated_states": 116,
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "execution_states": 8,
+        "algorithm": "RRTConnect",
+        "planner_after": {
+          "vertices": 4.0,
+          "edges": 3.0
+        },
+        "solve_collision_checks": 750,
+        "roadmap_reused": false,
+        "planner_before": {
+          "vertices": 0.0,
+          "edges": 0.0
+        },
+        "wall_time_s": 4.645999999999997,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "name": "vertical_engage",
+      "contact_allowed": true,
+      "stats": {
+        "solve_budget_s": 0.6,
+        "raw_states": 3,
+        "joint_bound_margin": 0.06,
+        "shortcut_collision_checks": 28,
+        "planner_reused": false,
+        "collision_check_step_rad": 0.00029876756244322916,
+        "joint_bounds": [
+          [
+            -1.740856266331344,
+            -1.620856178209086
+          ],
+          [
+            0.8891983022251004,
+            1.0150315896719375
+          ],
+          [
+            1.329469709859854,
+            1.450040998490595
+          ],
+          [
+            -0.8337049486535857,
+            -0.7084429739076596
+          ],
+          [
+            1.5107963129700999,
+            1.6307963161940744
+          ],
+          [
+            1.6208562091266938,
+            1.7408562935273326
+          ]
+        ],
+        "backend": "simOMPL",
+        "raw_cost": 0.13489818059027492,
+        "collision_checks": 715,
+        "validated_states": 28,
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "execution_states": 2,
+        "algorithm": "RRTConnect",
+        "planner_after": {
+          "vertices": 4.0,
+          "edges": 3.0
+        },
+        "solve_collision_checks": 657,
+        "roadmap_reused": false,
+        "planner_before": {
+          "vertices": 0.0,
+          "edges": 0.0
+        },
+        "wall_time_s": 4.010999999999999,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      },
+      "max_xy_axis_deviation_m": 2.3371947099325973e-06
+    },
+    {
+      "name": "vertical_disengage",
+      "contact_allowed": true,
+      "stats": {
+        "solve_budget_s": 0.6,
+        "raw_states": 4,
+        "joint_bound_margin": 0.06,
+        "shortcut_collision_checks": 28,
+        "planner_reused": false,
+        "collision_check_step_rad": 0.00029876756244322916,
+        "joint_bounds": [
+          [
+            -1.740856266331344,
+            -1.620856178209086
+          ],
+          [
+            0.8891983022251004,
+            1.0150315896719375
+          ],
+          [
+            1.329469709859854,
+            1.450040998490595
+          ],
+          [
+            -0.8337049486535857,
+            -0.7084429739076596
+          ],
+          [
+            1.5107963129700999,
+            1.6307963161940744
+          ],
+          [
+            1.6208562091266938,
+            1.7408562935273326
+          ]
+        ],
+        "backend": "simOMPL",
+        "raw_cost": 0.12578108384759584,
+        "collision_checks": 613,
+        "validated_states": 28,
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "execution_states": 2,
+        "algorithm": "RRTConnect",
+        "planner_after": {
+          "vertices": 5.0,
+          "edges": 4.0
+        },
+        "solve_collision_checks": 555,
+        "roadmap_reused": false,
+        "planner_before": {
+          "vertices": 0.0,
+          "edges": 0.0
+        },
+        "wall_time_s": 2.632999999999999,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      },
+      "max_xy_axis_deviation_m": 2.3371947099325973e-06
+    },
+    {
+      "name": "outside_translate",
+      "contact_allowed": false,
+      "stats": {
+        "solve_budget_s": 0.6,
+        "raw_states": 4,
+        "joint_bound_margin": 0.16,
+        "shortcut_collision_checks": 116,
+        "planner_reused": false,
+        "collision_check_step_rad": 0.0008445212513153406,
+        "joint_bounds": [
+          [
+            -1.9093907535025667,
+            -1.5208561782090861
+          ],
+          [
+            0.7944396059828998,
+            1.1150315896719374
+          ],
+          [
+            1.2294697098598542,
+            1.550794138285358
+          ],
+          [
+            -0.9344373940696258,
+            -0.6137049486535856
+          ],
+          [
+            1.4107963161940744,
+            1.7307963162108877
+          ],
+          [
+            1.520856209126694,
+            1.9093907865619342
+          ]
+        ],
+        "backend": "simOMPL",
+        "raw_cost": 0.4013451201680631,
+        "collision_checks": 1026,
+        "validated_states": 116,
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "execution_states": 8,
+        "algorithm": "RRTConnect",
+        "planner_after": {
+          "vertices": 5.0,
+          "edges": 4.0
+        },
+        "solve_collision_checks": 792,
+        "roadmap_reused": false,
+        "planner_before": {
+          "vertices": 0.0,
+          "edges": 0.0
+        },
+        "wall_time_s": 4.930999999999997,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "name": "outside_raise",
+      "contact_allowed": false,
+      "stats": {
+        "solve_budget_s": 0.6,
+        "raw_states": 3,
+        "joint_bound_margin": 0.06,
+        "shortcut_collision_checks": 28,
+        "planner_reused": false,
+        "collision_check_step_rad": 0.0002987706243153073,
+        "joint_bounds": [
+          [
+            -1.8093908376912144,
+            -1.6893907535025667
+          ],
+          [
+            0.8886026526230308,
+            1.0144396059828997
+          ],
+          [
+            1.330794138285358,
+            1.4513665382619356
+          ],
+          [
+            -0.8344373940696257,
+            -0.7091728351443591
+          ],
+          [
+            1.5107963162108877,
+            1.6307963173294815
+          ],
+          [
+            1.6893907865619342,
+            1.809390841938031
+          ]
+        ],
+        "backend": "simOMPL",
+        "raw_cost": 0.127951284450495,
+        "collision_checks": 712,
+        "validated_states": 28,
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "execution_states": 2,
+        "algorithm": "RRTConnect",
+        "planner_after": {
+          "vertices": 4.0,
+          "edges": 3.0
+        },
+        "solve_collision_checks": 654,
+        "roadmap_reused": false,
+        "planner_before": {
+          "vertices": 0.0,
+          "edges": 0.0
+        },
+        "wall_time_s": 2.987000000000002,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    }
+  ],
+  "clearance_m": 0.003,
+  "outside_low": [
+    0.03,
+    0.11,
+    1.016
+  ],
+  "inside_low": [
+    0.03,
+    0.16,
+    1.016
+  ]
+}

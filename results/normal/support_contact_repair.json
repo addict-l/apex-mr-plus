@@ -1,0 +1,482 @@
+{
+  "repair": "positive XY support contact patch",
+  "immutable_prefix_tasks": 46,
+  "prefix_sha256": "fb8c19920091a4983494ea560c758801190e8b181a35f1760649412c5c0433aa",
+  "old_support": {
+    "arm": "A",
+    "feasible": true,
+    "cost": 15.831577527984178,
+    "tcp_position": [
+      0.03,
+      0.155,
+      1.0194999999999999
+    ],
+    "quaternion": [
+      0.0,
+      0.0,
+      0.7071067811865475,
+      0.7071067811865476
+    ],
+    "precontact_position": [
+      0.03,
+      0.11,
+      1.0194999999999999
+    ],
+    "q_contact": [
+      -1.6877350850830826,
+      0.9488703366037763,
+      1.3907706905889243,
+      -0.7688446714226008,
+      1.5707963190340892,
+      1.687735086828061
+    ],
+    "q_precontact": [
+      -1.7493908376912144,
+      0.9486026526230308,
+      1.3913665382619356,
+      -0.7691728351443592,
+      1.5707963173294814,
+      1.7493908419380308
+    ],
+    "support_part": "beam",
+    "contact_exclusions": [
+      [
+        "/A_UR5/A_SupportShoe",
+        "beam"
+      ]
+    ]
+  },
+  "motion_calls": [
+    {
+      "task": "cap_A_transit_046",
+      "stats": {
+        "reused_original_RRT_path": true,
+        "validated_states": 890
+      }
+    },
+    {
+      "task": "cap_A_support_start_047",
+      "stats": {
+        "planner_reused": false,
+        "joint_bound_margin": 0.18,
+        "validated_states": 104,
+        "algorithm": "RRTConnect",
+        "joint_bounds": [
+          [
+            -1.9293908376912143,
+            -1.500856266331344
+          ],
+          [
+            0.768602652623031,
+            1.1291983022251004
+          ],
+          [
+            1.210040998490595,
+            1.5713665382619355
+          ],
+          [
+            -0.9491728351443591,
+            -0.5884429739076595
+          ],
+          [
+            1.3907963129701,
+            1.7507963173294814
+          ],
+          [
+            1.5008562935273326,
+            1.9293908419380308
+          ]
+        ],
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "shortcut_collision_checks": 104,
+        "wall_time_s": 3.4540000000000006,
+        "raw_cost": 0.32406674249895007,
+        "collision_check_step_rad": 0.000942122678933981,
+        "backend": "simOMPL",
+        "raw_states": 3,
+        "collision_checks": 750,
+        "solve_collision_checks": 540,
+        "planner_after": {
+          "edges": 3.0,
+          "vertices": 4.0
+        },
+        "roadmap_reused": false,
+        "planner_before": {
+          "edges": 0.0,
+          "vertices": 0.0
+        },
+        "execution_states": 4,
+        "solve_budget_s": 0.8,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "task": "cap_B_place_048",
+      "stats": {
+        "planner_reused": false,
+        "joint_bound_margin": 0.18,
+        "validated_states": 342,
+        "algorithm": "RRTConnect",
+        "joint_bounds": [
+          [
+            -2.0847496188895676,
+            -1.724747341498295
+          ],
+          [
+            0.06910219675341414,
+            0.4577223997084994
+          ],
+          [
+            0.8668525901460677,
+            1.5210218943730052
+          ],
+          [
+            -0.19932788570781534,
+            0.42621882623646545
+          ],
+          [
+            -1.7507963089963192,
+            -1.3907960708776024
+          ],
+          [
+            -0.5139534772857277,
+            -0.15395103419592
+          ]
+        ],
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "shortcut_collision_checks": 342,
+        "wall_time_s": 7.761999999999997,
+        "raw_cost": 0.49094643114703485,
+        "collision_check_step_rad": 0.001165793892489137,
+        "backend": "simOMPL",
+        "raw_states": 3,
+        "collision_checks": 1325,
+        "solve_collision_checks": 639,
+        "planner_after": {
+          "edges": 3.0,
+          "vertices": 4.0
+        },
+        "roadmap_reused": false,
+        "planner_before": {
+          "edges": 0.0,
+          "vertices": 0.0
+        },
+        "execution_states": 13,
+        "solve_budget_s": 0.8,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "task": "cap_B_transit_049",
+      "stats": {
+        "planner_reused": false,
+        "joint_bound_margin": 0.18,
+        "validated_states": 342,
+        "algorithm": "RRTConnect",
+        "joint_bounds": [
+          [
+            -2.0847496188895676,
+            -1.724747341498295
+          ],
+          [
+            0.06910219675341414,
+            0.4577223997084994
+          ],
+          [
+            0.8668525901460677,
+            1.5210218943730052
+          ],
+          [
+            -0.19932788570781534,
+            0.42621882623646545
+          ],
+          [
+            -1.7507963089963192,
+            -1.3907960708776024
+          ],
+          [
+            -0.5139534772857278,
+            -0.15395103419592
+          ]
+        ],
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "shortcut_collision_checks": 342,
+        "wall_time_s": 12.023999999999997,
+        "raw_cost": 0.4398144798963115,
+        "collision_check_step_rad": 0.0011657938924891373,
+        "backend": "simOMPL",
+        "raw_states": 3,
+        "collision_checks": 1199,
+        "solve_collision_checks": 513,
+        "planner_after": {
+          "edges": 3.0,
+          "vertices": 4.0
+        },
+        "roadmap_reused": false,
+        "planner_before": {
+          "edges": 0.0,
+          "vertices": 0.0
+        },
+        "execution_states": 13,
+        "solve_budget_s": 0.8,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "task": "cap_B_transit_050",
+      "stats": {
+        "planner_reused": false,
+        "joint_bound_margin": 0.55,
+        "validated_states": 265,
+        "algorithm": "RRTConnect",
+        "joint_bounds": [
+          [
+            -2.4547496188895677,
+            -0.8238719102154375
+          ],
+          [
+            -0.7134317932179883,
+            0.8277223997084995
+          ],
+          [
+            0.49685259014606764,
+            1.778514499396827
+          ],
+          [
+            -0.3037811737635346,
+            1.0557148595239096
+          ],
+          [
+            -2.1207972156137025,
+            -1.0207960708776023
+          ],
+          [
+            -0.8839534772857278,
+            0.746923967860972
+          ]
+        ],
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "shortcut_collision_checks": 265,
+        "wall_time_s": 5.274999999999999,
+        "raw_cost": 1.1272743015364155,
+        "collision_check_step_rad": 0.0035207341309281834,
+        "backend": "simOMPL",
+        "raw_states": 3,
+        "collision_checks": 993,
+        "solve_collision_checks": 461,
+        "planner_after": {
+          "edges": 3.0,
+          "vertices": 4.0
+        },
+        "roadmap_reused": false,
+        "planner_before": {
+          "edges": 0.0,
+          "vertices": 0.0
+        },
+        "execution_states": 28,
+        "solve_budget_s": 0.8,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "task": "cap_A_support_end_051",
+      "stats": {
+        "planner_reused": false,
+        "joint_bound_margin": 0.18,
+        "validated_states": 104,
+        "algorithm": "RRTConnect",
+        "joint_bounds": [
+          [
+            -1.9293908376912143,
+            -1.500856266331344
+          ],
+          [
+            0.7686026526230307,
+            1.1291983022251004
+          ],
+          [
+            1.210040998490595,
+            1.5713665382619355
+          ],
+          [
+            -0.9491728351443591,
+            -0.5884429739076595
+          ],
+          [
+            1.3907963129701,
+            1.7507963173294814
+          ],
+          [
+            1.5008562935273326,
+            1.9293908419380308
+          ]
+        ],
+        "postprocess": "bounded_collision_checked_joint_shortcut",
+        "shortcut_collision_checks": 104,
+        "wall_time_s": 2.6850000000000023,
+        "raw_cost": 0.3578272659910081,
+        "collision_check_step_rad": 0.0009421226789339811,
+        "backend": "simOMPL",
+        "raw_states": 3,
+        "collision_checks": 731,
+        "solve_collision_checks": 521,
+        "planner_after": {
+          "edges": 3.0,
+          "vertices": 4.0
+        },
+        "roadmap_reused": false,
+        "planner_before": {
+          "edges": 0.0,
+          "vertices": 0.0
+        },
+        "execution_states": 4,
+        "solve_budget_s": 0.8,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "task": "cap_A_transit_052",
+      "stats": {
+        "reused_original_RRT_path": true,
+        "validated_states": 890
+      }
+    }
+  ],
+  "old_contact_geometry": {
+    "qualified": false,
+    "projected_overlap_m": [
+      0.0,
+      0.0
+    ],
+    "overlap_area_m2": 0.0,
+    "vertical_gap_m": -0.0004999999999999449,
+    "pad_normal": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "minimum_overlap_m": 0.002,
+    "polygon_xy": []
+  },
+  "fixture": {
+    "actual_tcp_pose": [
+      0.03000010293241952,
+      0.15999994243421695,
+      1.0195000014616764,
+      -4.3162364134208264e-09,
+      5.399203341360792e-09,
+      0.7071067908017814,
+      0.7071067715713136
+    ],
+    "geometric_pad_beam_contact": true,
+    "pair": [
+      148,
+      104
+    ]
+  },
+  "new_choice": {
+    "mode_id": "m0006",
+    "candidate_index": 26,
+    "support_candidate_index": 3,
+    "part": "cap",
+    "arm": "B",
+    "grasp": "top_x",
+    "support_arm": "A",
+    "support_required": true,
+    "support_tcp_position": [
+      0.03,
+      0.16,
+      1.0194999999999999
+    ],
+    "support_quaternion": [
+      0.0,
+      0.0,
+      0.7071067811865475,
+      0.7071067811865476
+    ],
+    "main_cost": 10.697922158861228,
+    "support_cost": 15.82198189849724,
+    "mode_cost": 26.519904057358467,
+    "arm_workload": {
+      "A": 15.82198189849724,
+      "B": 10.697922158861228
+    }
+  },
+  "new_support": {
+    "arm": "A",
+    "feasible": true,
+    "cost": 15.82198189849724,
+    "tcp_position": [
+      0.03,
+      0.16,
+      1.0194999999999999
+    ],
+    "quaternion": [
+      0.0,
+      0.0,
+      0.7071067811865475,
+      0.7071067811865476
+    ],
+    "precontact_position": [
+      0.03,
+      0.11,
+      1.0194999999999999
+    ],
+    "q_contact": [
+      -1.680856266331344,
+      0.9491983022251005,
+      1.390040998490595,
+      -0.7684429739076596,
+      1.5707963129701,
+      1.6808562935273326
+    ],
+    "q_precontact": [
+      -1.7493908376912144,
+      0.9486026526230308,
+      1.3913665382619356,
+      -0.7691728351443592,
+      1.5707963173294814,
+      1.7493908419380308
+    ],
+    "support_part": "beam",
+    "contact_exclusions": [
+      [
+        "/A_UR5/A_SupportShoe",
+        "beam"
+      ]
+    ],
+    "contact_geometry": {
+      "qualified": true,
+      "projected_overlap_m": [
+        0.06000000010878239,
+        0.003999943250096588
+      ],
+      "overlap_area_m2": 0.00023999654605301804,
+      "vertical_gap_m": -0.0005000014616765025,
+      "pad_normal": [
+        1.5315463302617743e-09,
+        1.3739706686456863e-08,
+        1.0000000000000002
+      ],
+      "minimum_overlap_m": 0.002,
+      "polygon_xy": [
+        [
+          0.06000010236130221,
+          0.181
+        ],
+        [
+          0.0600001022525198,
+          0.18499994325009658
+        ],
+        [
+          1.022525198193791e-07,
+          0.1849999416183373
+        ],
+        [
+          1.0236130218514397e-07,
+          0.181
+        ]
+      ]
+    }
+  }
+}

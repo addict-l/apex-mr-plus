@@ -1,0 +1,69 @@
+{
+  "success": true,
+  "parts": 7,
+  "allocation": [
+    {
+      "part": "L1",
+      "arm": "A",
+      "grasp": "top_x",
+      "support_arm": null
+    },
+    {
+      "part": "R1",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": null
+    },
+    {
+      "part": "L2",
+      "arm": "A",
+      "grasp": "top_x",
+      "support_arm": null
+    },
+    {
+      "part": "R2",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": null
+    },
+    {
+      "part": "L3",
+      "arm": "A",
+      "grasp": "top_x",
+      "support_arm": null
+    },
+    {
+      "part": "beam",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": null
+    },
+    {
+      "part": "cap",
+      "arm": "B",
+      "grasp": "top_x",
+      "support_arm": "A"
+    }
+  ],
+  "rrt_reference_paths": 53,
+  "rrt_planning_requests": 147,
+  "tpg": {
+    "nodes": 165,
+    "pose_nodes": 149,
+    "skill_nodes": 16,
+    "type1_edges": 168,
+    "task_type2_edges": 5,
+    "motion_type2_edges": 3,
+    "cross_arm_pairs": 6776,
+    "oracle_queries": 2596,
+    "already_ordered_pairs_skipped": 4180,
+    "pairs_without_geometry": 0
+  },
+  "actual_makespan_s": 143.79999999999976,
+  "max_goal_error_m": 0.001599904195650889,
+  "peak_tracking_rad": 0.030667344465945767,
+  "peak_support_normal_N": 13.837649573540357,
+  "failure": null,
+  "max_goal_orientation_error_rad": 0.0015330946087679664,
+  "actual_TPG_edges_verified": true
+}

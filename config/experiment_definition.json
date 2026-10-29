@@ -1,0 +1,78 @@
+{
+  "project": "APEX_MR_Plus",
+  "version": "environment-preview-0.1",
+  "simulator": "CoppeliaSim Edu 4.10",
+  "research_goal": "单臂运动能力变化后，从当前持物、已建立连接和持续支撑状态出发，自动生成可执行的剩余装配及必要恢复动作，并与有效的原计划衔接。",
+  "goal_conditions": [
+    "目标城堡连桥的指定连接均已建立",
+    "最终结构在允许接触模型下稳定",
+    "临时支撑已撤除且机械臂可安全离开"
+  ],
+  "primitive_actions": [
+    {
+      "name": "pick",
+      "parameters": ["robot", "object", "grasp"],
+      "preconditions": ["机器人手空闲", "对象允许取走", "抓取与接近运动经验证可行"],
+      "effects": ["机器人以指定抓取持有对象"]
+    },
+    {
+      "name": "place",
+      "parameters": ["robot", "object", "pose"],
+      "preconditions": ["机器人持有对象", "放置运动经验证可行", "落点稳定且可释放对象"],
+      "effects": ["对象位于指定落点", "机器人手空闲"]
+    },
+    {
+      "name": "install",
+      "parameters": ["robot", "object", "connection", "grasp"],
+      "preconditions": ["机器人持有对象", "装配前提满足", "必要支撑持续有效", "接近运动和装配技能经验证可行"],
+      "effects": ["指定装配连接建立"]
+    },
+    {
+      "name": "acquire_support",
+      "parameters": ["support_provider", "supported_object", "contact"],
+      "preconditions": ["接触建立过程可行", "支撑提供者的资源条件满足", "接触和承载能力已验证"],
+      "effects": ["指定支撑关系有效"]
+    },
+    {
+      "name": "release_support",
+      "parameters": ["support_provider", "supported_object", "contact"],
+      "preconditions": ["指定支撑关系有效", "撤除后结构仍稳定", "撤离运动经验证可行"],
+      "effects": ["指定支撑关系解除"]
+    },
+    {
+      "name": "handover",
+      "parameters": ["giver", "receiver", "object", "giver_grasp", "receiver_grasp", "pose"],
+      "preconditions": ["交出臂持有对象", "接收臂具备接物资源", "交接接触与两臂运动经验证可行", "全过程对象被有效保持"],
+      "effects": ["对象由接收臂以指定抓取持有", "交出臂解除原抓取"]
+    }
+  ],
+  "future_observations": [
+    "两臂关节配置、速度及更新后的允许范围",
+    "各积木与支撑物的位姿",
+    "持物者、抓取方式和夹持确认",
+    "已建立连接与未完成的目标连接",
+    "当前支撑接触与承载确认",
+    "正在执行的技能及其进度",
+    "旧 TPG 的完成状态与有效运动证据"
+  ],
+  "future_validators": [
+    "更新运动约束下的逆运动学和技能资格",
+    "含持物几何的全路径碰撞检查",
+    "支撑建立、接替与撤除过程的稳定性和载荷条件",
+    "抓取、交接及装配连接有效性",
+    "旧运动证据的依赖失效检查",
+    "修复后 TPG 的任务依赖、无环性和新旧执行边界一致性"
+  ],
+  "not_implemented": [
+    "自主恢复动作搜索和任务重新分配",
+    "能力退化下任务整体不可行性的认证",
+    "端点之间的碰撞自由连续运动规划",
+    "真实 LEGO 尺寸、卡扣与摩擦连接模型",
+    "接触力控制及支撑承载动力学",
+    "从预设状态自动产生后续恢复计划",
+    "故障检测与状态估计"
+  ],
+  "preset_semantics": "三个预设是人工构造的环境快照，不是动作序列、规划输出或动力学验证结果。",
+  "geometry_semantics": "模块化积木演示尺度，非真实 LEGO 尺寸。",
+  "runtime_semantics": "运动学与静态结构预览；预设切换直接设置端点配置。"
+}

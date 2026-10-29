@@ -1,0 +1,7 @@
+# Preserve exact bytes so the recorded scene/controller hashes survive cloning.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.ttt binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary

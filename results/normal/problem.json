@@ -1,0 +1,527 @@
+{
+  "arms": [
+    "A",
+    "B"
+  ],
+  "parts": [
+    {
+      "lever_arm": 0.0,
+      "size": [
+        0.13,
+        0.13,
+        0.08
+      ],
+      "goal": [
+        -0.225,
+        0.22,
+        0.813
+      ],
+      "mass": 0.16,
+      "dependencies": {},
+      "connection_moment_limit": 1.2,
+      "grasps": [
+        {
+          "quaternion_by_arm": {
+            "B": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "A": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "id": "top_x",
+          "tcp_offset": [
+            0,
+            0,
+            0.03
+          ]
+        },
+        {
+          "quaternion_by_arm": {
+            "B": [
+              -0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ],
+            "A": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ]
+          },
+          "id": "top_y",
+          "tcp_offset": [
+            0,
+            0,
+            0.03
+          ]
+        }
+      ],
+      "source": [
+        -0.56,
+        -0.4,
+        0.811
+      ],
+      "id": "L1",
+      "insertion_force": 0.0
+    },
+    {
+      "lever_arm": 0.0,
+      "size": [
+        0.13,
+        0.13,
+        0.08
+      ],
+      "goal": [
+        0.225,
+        0.22,
+        0.813
+      ],
+      "mass": 0.16,
+      "dependencies": {},
+      "connection_moment_limit": 1.2,
+      "grasps": [
+        {
+          "quaternion_by_arm": {
+            "B": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "A": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "id": "top_x",
+          "tcp_offset": [
+            0,
+            0,
+            0.03
+          ]
+        },
+        {
+          "quaternion_by_arm": {
+            "B": [
+              -0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ],
+            "A": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ]
+          },
+          "id": "top_y",
+          "tcp_offset": [
+            0,
+            0,
+            0.03
+          ]
+        }
+      ],
+      "source": [
+        0.4,
+        -0.4,
+        0.811
+      ],
+      "id": "R1",
+      "insertion_force": 0.0
+    },
+    {
+      "lever_arm": 0.0,
+      "size": [
+        0.13,
+        0.13,
+        0.08
+      ],
+      "goal": [
+        -0.225,
+        0.22,
+        0.895
+      ],
+      "mass": 0.16,
+      "dependencies": [
+        "L1"
+      ],
+      "connection_moment_limit": 1.2,
+      "grasps": [
+        {
+          "quaternion_by_arm": {
+            "B": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "A": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "id": "top_x",
+          "tcp_offset": [
+            0,
+            0,
+            0.03
+          ]
+        },
+        {
+          "quaternion_by_arm": {
+            "B": [
+              -0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ],
+            "A": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ]
+          },
+          "id": "top_y",
+          "tcp_offset": [
+            0,
+            0,
+            0.03
+          ]
+        }
+      ],
+      "source": [
+        -0.39,
+        -0.4,
+        0.811
+      ],
+      "id": "L2",
+      "insertion_force": 0.0
+    },
+    {
+      "lever_arm": 0.0,
+      "size": [
+        0.13,
+        0.13,
+        0.08
+      ],
+      "goal": [
+        0.225,
+        0.22,
+        0.895
+      ],
+      "mass": 0.16,
+      "dependencies": [
+        "R1"
+      ],
+      "connection_moment_limit": 1.2,
+      "grasps": [
+        {
+          "quaternion_by_arm": {
+            "B": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "A": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "id": "top_x",
+          "tcp_offset": [
+            0,
+            0,
+            0.03
+          ]
+        },
+        {
+          "quaternion_by_arm": {
+            "B": [
+              -0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ],
+            "A": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ]
+          },
+          "id": "top_y",
+          "tcp_offset": [
+            0,
+            0,
+            0.03
+          ]
+        }
+      ],
+      "source": [
+        0.57,
+        -0.4,
+        0.811
+      ],
+      "id": "R2",
+      "insertion_force": 0.0
+    },
+    {
+      "lever_arm": 0.0,
+      "size": [
+        0.13,
+        0.13,
+        0.08
+      ],
+      "goal": [
+        -0.225,
+        0.22,
+        0.977
+      ],
+      "mass": 0.16,
+      "dependencies": [
+        "L2"
+      ],
+      "connection_moment_limit": 1.2,
+      "grasps": [
+        {
+          "quaternion_by_arm": {
+            "B": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "A": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "id": "top_x",
+          "tcp_offset": [
+            0,
+            0,
+            0.03
+          ]
+        },
+        {
+          "quaternion_by_arm": {
+            "B": [
+              -0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ],
+            "A": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ]
+          },
+          "id": "top_y",
+          "tcp_offset": [
+            0,
+            0,
+            0.03
+          ]
+        }
+      ],
+      "source": [
+        -0.56,
+        -0.23,
+        0.811
+      ],
+      "id": "L3",
+      "insertion_force": 0.0
+    },
+    {
+      "lever_arm": 0.2,
+      "size": [
+        0.416,
+        0.078,
+        0.032
+      ],
+      "goal": [
+        -0.025,
+        0.22,
+        1.035
+      ],
+      "mass": 0.22,
+      "dependencies": [
+        "L3",
+        "R2"
+      ],
+      "connection_moment_limit": 1.2,
+      "grasps": [
+        {
+          "quaternion_by_arm": {
+            "B": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "A": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "id": "top_x",
+          "tcp_offset": [
+            0,
+            0,
+            0.006
+          ]
+        },
+        {
+          "quaternion_by_arm": {
+            "B": [
+              -0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ],
+            "A": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ]
+          },
+          "id": "top_y",
+          "tcp_offset": [
+            0,
+            0,
+            0.006
+          ]
+        }
+      ],
+      "source": [
+        0,
+        -0.35,
+        0.807
+      ],
+      "id": "beam",
+      "insertion_force": 0.0
+    },
+    {
+      "lever_arm": 0.33,
+      "size": [
+        0.052,
+        0.052,
+        0.032
+      ],
+      "goal": [
+        0.105,
+        0.22,
+        1.069
+      ],
+      "mass": 0.06,
+      "dependencies": [
+        "beam"
+      ],
+      "connection_moment_limit": 1.2,
+      "grasps": [
+        {
+          "quaternion_by_arm": {
+            "B": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "A": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "id": "top_x",
+          "tcp_offset": [
+            0,
+            0,
+            0.006
+          ]
+        },
+        {
+          "quaternion_by_arm": {
+            "B": [
+              -0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ],
+            "A": [
+              0.7071067811865476,
+              0.7071067811865476,
+              0,
+              0
+            ]
+          },
+          "id": "top_y",
+          "tcp_offset": [
+            0,
+            0,
+            0.006
+          ]
+        }
+      ],
+      "source": [
+        0.45,
+        -0.23,
+        0.787
+      ],
+      "id": "cap",
+      "insertion_force": 8.0
+    }
+  ],
+  "physics": {
+    "grasp": "dynamic rigid force-sensor constraint, not frictional finger simulation",
+    "motor": "native UR5 dynamic position servo; no runtime setJointPosition",
+    "tool_force_chain": "last dynamic UR5 link -> ToolForceSensor -> dynamic Palm; native empty connection sensor is bypassed",
+    "base_mount": "UR5 model-root shape is static and anchored to the worktable",
+    "engine": "Bullet 2.83",
+    "substep": 0.002,
+    "assembly_sequence_input": [
+      "L1",
+      "R1",
+      "L2",
+      "R2",
+      "L3",
+      "beam",
+      "cap"
+    ],
+    "connection": "idealized rigid snap constraint after measured placement; not LEGO deformation",
+    "gravity": [
+      0,
+      0,
+      -9.81
+    ],
+    "studs": "visual only; cuboid contact geometry",
+    "dt": 0.02
+  }
+}
