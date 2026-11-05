@@ -1,0 +1,1747 @@
+{
+  "schema_version": 2,
+  "run_id": "20261104T163855Z-0804c434",
+  "audited_at_utc": "2026-11-04T16:53:29.179223+00:00",
+  "success": true,
+  "checks": {
+    "run_identity_matches_all_evidence": true,
+    "manifest_complete_and_promoted": true,
+    "all_actual_nodes_start_and_complete_once": true,
+    "all_new_graph_edges_observed_in_actual_order": true,
+    "completion_time_matches_raw_events": true,
+    "actual_validator_reaudit_passed": true,
+    "dedicated_8N_actual_callback_continuous_proof_passed": true,
+    "all_12_arm_joints_dynamic": true,
+    "all_4_connections_dynamic_and_final_force_telemetry_valid": true,
+    "support_sensor_and_lift_dynamic": true,
+    "all_frozen_input_file_hashes_match": true,
+    "input_dictionary_hash_matches_declared_fingerprint": true,
+    "full_resolved_source_signature_matches_all_run_artifacts": true,
+    "resolved_source_signature_uses_same_inputs_settings_environment": true,
+    "reference_signature_matches_actual_chosen_tasks": true,
+    "physical_scene_hash_unchanged": true,
+    "configuration_hashes_unchanged": true,
+    "all_6_curved_macros_have_geometry_and_corridor_evidence": true,
+    "all_curved_profiles_geometry_validated": true,
+    "curved_profile_command_derivative_bounds_within_declared_limits": true,
+    "full_new_geometry_rollout_complete_and_valid": true,
+    "all_phase_conflicts_rebuilt_for_new_geometry": true,
+    "semantic_guard_comparison_passed": true,
+    "delivery_main_planned_and_manifest_hashes_match": true
+  },
+  "raw_event_timing": {
+    "first_node_started_s": 0.6000000000000002,
+    "last_node_completed_s": 317.0800000000016,
+    "assembly_completed_s": 317.0800000000016,
+    "reported_actual_makespan_s": 317.0800000000016,
+    "final_get_result_snapshot_time_s": 317.8000000000009,
+    "last_trace_time_s": 317.78000000000094,
+    "time_basis": "Elapsed simulation time from 0 to actual assembly_completed; includes initial 0.6 s settling. Later polling/trace samples are not makespan.",
+    "expected_nodes": 390,
+    "started_events": 390,
+    "completed_events": 390,
+    "actual_edges_checked": 753,
+    "edge_violations": []
+  },
+  "raw_semantic_events": [
+    {
+      "kind": "initial_arm_support_verified",
+      "details": {
+        "force_N": 6.741267029923711,
+        "fixture_tare_world_z_N": -0.784730617819643
+      },
+      "time": 0.6000000000000002
+    },
+    {
+      "kind": "execution_ready",
+      "details": {
+        "dynamic_enablement": {
+          "support_lift": true,
+          "support_sensor": true,
+          "A": {
+            "tool_sensor": true,
+            "pad_sensor": true,
+            "pad": true,
+            "joints": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "objects": {
+            "Gate": true,
+            "Bridge": true,
+            "TemporarySupport": true,
+            "K2": true,
+            "K1": true
+          },
+          "B": {
+            "tool_sensor": true,
+            "pad_sensor": true,
+            "pad": true,
+            "joints": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "assembly_contact_limits": {
+          "basis": "experiment limits; not robot ratings",
+          "force_N": 40.0,
+          "torque_Nm": 8.0
+        }
+      },
+      "time": 0.6000000000000002
+    },
+    {
+      "arm": "B",
+      "kind": "support_placed",
+      "time": 61.62000000000403,
+      "task_id": "place_support",
+      "details": {
+        "position_error_m": 1.0935661389541822e-05,
+        "table_contact_model": "dynamic gravity contact; no fixed constraint"
+      },
+      "node": "place_support::skill"
+    },
+    {
+      "arm": "B",
+      "kind": "support_load_verified",
+      "time": 62.0400000000041,
+      "task_id": "verify_support",
+      "details": {
+        "force_N": 1.959455763393148,
+        "tare_world_z_N": -0.784730617819643,
+        "valid": true
+      },
+      "node": "verify_support::skill"
+    },
+    {
+      "arm": "A",
+      "kind": "arm_support_released",
+      "time": 62.36000000000415,
+      "task_id": "release_A",
+      "details": {
+        "pad_remains_respondable": true,
+        "support_force_N": 1.961711858305701
+      },
+      "node": "release_A::skill"
+    },
+    {
+      "arm": "A",
+      "kind": "pad_deactivated",
+      "time": 63.92000000000439,
+      "task_id": "A_deactivate_pad",
+      "details": {
+        "measured_vertical_clearance_m": 0.03305322164554059,
+        "respondable": false,
+        "support_force_N": 2.4226950424529843,
+        "mass_and_planning_geometry_retained": true,
+        "arm": "A"
+      },
+      "node": "A_deactivate_pad::skill"
+    },
+    {
+      "arm": "B",
+      "kind": "part_installed",
+      "time": 147.18000000000148,
+      "task_id": "install_K1",
+      "details": {
+        "model": "ideal rigid constraint at measured pose",
+        "orientation_error_rad": 0.00018381343327501933,
+        "dynamic": true,
+        "part": "K1",
+        "position_error_m": 1.627230230703593e-05
+      },
+      "node": "install_K1::skill"
+    },
+    {
+      "arm": "B",
+      "kind": "part_installed",
+      "time": 199.32000000002816,
+      "task_id": "install_K2",
+      "details": {
+        "model": "ideal rigid constraint at measured pose",
+        "orientation_error_rad": 5.975584878950712e-05,
+        "dynamic": true,
+        "part": "K2",
+        "position_error_m": 5.795859012927128e-05
+      },
+      "node": "install_K2::skill"
+    },
+    {
+      "arm": "B",
+      "kind": "permanent_proof_test_started",
+      "time": 205.98000000003157,
+      "task_id": "verify_permanent",
+      "details": {
+        "load_N": 8.0,
+        "bridge_pose_before": [
+          0.040145318324850715,
+          0.2000009717381946,
+          1.0300133838772363,
+          -2.4509441088449435e-05,
+          0.0038246735939764798,
+          1.33693339901585e-07,
+          0.9999926856088344
+        ],
+        "target_retraction_m": 0.01
+      },
+      "node": "verify_permanent::skill"
+    },
+    {
+      "arm": "B",
+      "kind": "permanent_structure_verified",
+      "time": 206.88000000003203,
+      "task_id": "verify_permanent",
+      "details": {
+        "shoe_position_m": -1.5011189868907593e-07,
+        "valid": true,
+        "proof_load_N": 8.0,
+        "temporary_support_force_N": 0.0003766671302136704,
+        "force_N": 13.954688774638226,
+        "orientation_error_rad": 0.007476034661756757,
+        "independent_load_test": true,
+        "position_error_m": 0.0020290341435190715
+      },
+      "node": "verify_permanent::skill"
+    },
+    {
+      "arm": "B",
+      "kind": "support_unloaded",
+      "time": 207.18000000003218,
+      "task_id": "unload_support",
+      "details": {
+        "retraction_m": 0.010000149983906295,
+        "force_N": 0.00017045301367479837,
+        "permanent_verified": true
+      },
+      "node": "unload_support::skill"
+    },
+    {
+      "arm": "B",
+      "kind": "support_extracted",
+      "time": 224.72000000004115,
+      "task_id": "extract_support",
+      "details": {
+        "displacement_m": 0.15126043233032144,
+        "pose": [
+          0.07960113343841668,
+          -0.20124245275248934,
+          0.7748217997283185,
+          1.6973353583360495e-05,
+          -0.0005140350894972328,
+          -2.2111802037700474e-05,
+          0.9999998674954415
+        ]
+      },
+      "node": "extract_support::skill"
+    },
+    {
+      "arm": "B",
+      "kind": "support_returned",
+      "time": 245.1400000000516,
+      "task_id": "return_support",
+      "details": {
+        "position_error_m": 0.0013205553809991829
+      },
+      "node": "return_support::skill"
+    },
+    {
+      "arm": "B",
+      "kind": "part_installed",
+      "time": 295.68000000002104,
+      "task_id": "close_gate",
+      "details": {
+        "model": "ideal rigid constraint at measured pose",
+        "orientation_error_rad": 0.0007932387635184565,
+        "dynamic": true,
+        "part": "Gate",
+        "position_error_m": 5.559674561841685e-05
+      },
+      "node": "close_gate::skill"
+    },
+    {
+      "arm": "B",
+      "kind": "gate_closed",
+      "time": 295.68000000002104,
+      "task_id": "close_gate",
+      "details": {
+        "position_error_m": 5.559674561841685e-05
+      },
+      "node": "close_gate::skill"
+    },
+    {
+      "kind": "assembly_completed",
+      "details": {},
+      "time": 317.0800000000016
+    }
+  ],
+  "raw_qualified_permanent_proof": {
+    "passed": true,
+    "dedicated_sensor": "PermanentBridgeFT",
+    "total_proof_active_samples": 9,
+    "final_contiguous_qualified_samples": 6,
+    "qualified_observed_duration_s": 0.5000000000002558,
+    "qualified_start_s": 206.28000000003172,
+    "qualified_end_s": 206.78000000003198,
+    "sample_max_gap_s": 0.10000000000005116,
+    "qualified_samples": [
+      {
+        "time": 206.28000000003172,
+        "bearing_sensor": "PermanentBridgeFT",
+        "permanent_verification_active": true,
+        "permanent_sensor_valid": true,
+        "permanent_support_valid": true,
+        "applied_load_N": 8.0,
+        "applied_load_substeps": 10,
+        "insertion_load_N": 8.0,
+        "permanent_force_N": 13.613919452182838,
+        "support_force_N": 0.0007392172040924239,
+        "support_lift_position_m": 1.4385674323103004e-05,
+        "bridge_position_error_m": 0.0020207786127368187,
+        "bridge_orientation_error_rad": 0.007515957606539701
+      },
+      {
+        "time": 206.38000000003177,
+        "bearing_sensor": "PermanentBridgeFT",
+        "permanent_verification_active": true,
+        "permanent_sensor_valid": true,
+        "permanent_support_valid": true,
+        "applied_load_N": 8.0,
+        "applied_load_substeps": 10,
+        "insertion_load_N": 8.0,
+        "permanent_force_N": 13.742948320752209,
+        "support_force_N": 0.00026903515073672946,
+        "support_lift_position_m": 1.71169540685856e-06,
+        "bridge_position_error_m": 0.002024616943258065,
+        "bridge_orientation_error_rad": 0.007497289018406173
+      },
+      {
+        "time": 206.48000000003182,
+        "bearing_sensor": "PermanentBridgeFT",
+        "permanent_verification_active": true,
+        "permanent_sensor_valid": true,
+        "permanent_support_valid": true,
+        "applied_load_N": 8.0,
+        "applied_load_substeps": 10,
+        "insertion_load_N": 8.0,
+        "permanent_force_N": 13.823542559990928,
+        "support_force_N": 4.263015330074893e-06,
+        "support_lift_position_m": 6.554177600648359e-08,
+        "bridge_position_error_m": 0.0020265908109562227,
+        "bridge_orientation_error_rad": 0.007487723108045059
+      },
+      {
+        "time": 206.58000000003187,
+        "bearing_sensor": "PermanentBridgeFT",
+        "permanent_verification_active": true,
+        "permanent_sensor_valid": true,
+        "permanent_support_valid": true,
+        "applied_load_N": 8.0,
+        "applied_load_substeps": 10,
+        "insertion_load_N": 8.0,
+        "permanent_force_N": 13.949140944934847,
+        "support_force_N": 0.0002509344231625965,
+        "support_lift_position_m": -1.312674049458451e-07,
+        "bridge_position_error_m": 0.0020277529211401393,
+        "bridge_orientation_error_rad": 0.007482368329334883
+      },
+      {
+        "time": 206.68000000003192,
+        "bearing_sensor": "PermanentBridgeFT",
+        "permanent_verification_active": true,
+        "permanent_sensor_valid": true,
+        "permanent_support_valid": true,
+        "applied_load_N": 8.0,
+        "applied_load_substeps": 10,
+        "insertion_load_N": 8.0,
+        "permanent_force_N": 13.97448331104585,
+        "support_force_N": 8.943165512220741e-05,
+        "support_lift_position_m": -1.483839502380846e-07,
+        "bridge_position_error_m": 0.0020285669612300434,
+        "bridge_orientation_error_rad": 0.007478648203323126
+      },
+      {
+        "time": 206.78000000003198,
+        "bearing_sensor": "PermanentBridgeFT",
+        "permanent_verification_active": true,
+        "permanent_sensor_valid": true,
+        "permanent_support_valid": true,
+        "applied_load_N": 8.0,
+        "applied_load_substeps": 10,
+        "insertion_load_N": 8.0,
+        "permanent_force_N": 13.941015979195974,
+        "support_force_N": 0.00025926591148717204,
+        "support_lift_position_m": -1.4979933116165967e-07,
+        "bridge_position_error_m": 0.002029184364555357,
+        "bridge_orientation_error_rad": 0.007475242261061801
+      }
+    ],
+    "verified_event": {
+      "arm": "B",
+      "kind": "permanent_structure_verified",
+      "time": 206.88000000003203,
+      "task_id": "verify_permanent",
+      "details": {
+        "shoe_position_m": -1.5011189868907593e-07,
+        "valid": true,
+        "proof_load_N": 8.0,
+        "temporary_support_force_N": 0.0003766671302136704,
+        "force_N": 13.954688774638226,
+        "orientation_error_rad": 0.007476034661756757,
+        "independent_load_test": true,
+        "position_error_m": 0.0020290341435190715
+      },
+      "node": "verify_permanent::skill"
+    }
+  },
+  "dynamic_enablement": {
+    "support_lift": true,
+    "support_sensor": true,
+    "A": {
+      "tool_sensor": true,
+      "pad_sensor": true,
+      "pad": true,
+      "joints": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "objects": {
+      "Gate": true,
+      "Bridge": true,
+      "TemporarySupport": true,
+      "K2": true,
+      "K1": true
+    },
+    "B": {
+      "tool_sensor": true,
+      "pad_sensor": true,
+      "pad": true,
+      "joints": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "snap_dynamic": {
+    "Gate": true,
+    "Bridge": true,
+    "K2": true,
+    "K1": true
+  },
+  "final_snap_telemetry": {
+    "Gate": {
+      "torque_norm_Nm": 0.013034508509551047,
+      "force_N": [
+        3.530775732945155e-05,
+        0.00042252167706964837,
+        -1.0276429513656962
+      ],
+      "valid": true,
+      "torque_Nm": [
+        0.0008883009915844281,
+        -0.013004162158952701,
+        -3.3165909777905055e-05
+      ]
+    },
+    "Bridge": {
+      "torque_norm_Nm": 0.7285215165844566,
+      "force_N": [
+        3.6912226272813045,
+        0.0010502744545867763,
+        -5.458625108354372
+      ],
+      "valid": true,
+      "torque_Nm": [
+        0.004592867081920297,
+        -0.7283090008310705,
+        -0.016985435141092534
+      ]
+    },
+    "K2": {
+      "torque_norm_Nm": 0.00020943972153766134,
+      "force_N": [
+        0.005318325573722762,
+        -4.496016680943659e-05,
+        -1.37360937280582
+      ],
+      "valid": true,
+      "torque_Nm": [
+        -2.7247275567737578e-06,
+        0.00020923873930395634,
+        -8.759154754054091e-06
+      ]
+    },
+    "K1": {
+      "torque_norm_Nm": 0.421873209695229,
+      "force_N": [
+        3.7064524165438413,
+        0.04770099426086481,
+        -6.759745377823914
+      ],
+      "valid": true,
+      "torque_Nm": [
+        0.009734274976329484,
+        -0.4212668576975721,
+        -0.02040792872521354
+      ]
+    }
+  },
+  "final_state": {
+    "support_returned": true,
+    "support_unloaded": true,
+    "gate_closed": true,
+    "permanent_verified": true,
+    "held": {
+      "A": null,
+      "B": null
+    },
+    "installed": {
+      "Gate": true,
+      "K2": true,
+      "K1": true
+    }
+  },
+  "actual_validator_reaudit": {
+    "success": true,
+    "scope": "actual TPG event, semantic guard, measured support and final pose audit; idealized contact/connection and sampled collision models remain limitations",
+    "violations": [],
+    "expected_nodes": 390,
+    "actual_node_intervals": 390,
+    "graph_edges_checked": 753,
+    "support_trace_samples_checked": 3683,
+    "permanent_load_test_samples_checked": 6,
+    "permanent_load_test_observed_duration_s": 0.5000000000002558,
+    "assembly_contact_audit": {
+      "enabled": true,
+      "intervals": [
+        {
+          "arm": "B",
+          "start": 122.91999999999268,
+          "end": 161.58000000000885,
+          "sample_count": 1934
+        },
+        {
+          "arm": "B",
+          "start": 188.8200000000228,
+          "end": 205.98000000003157,
+          "sample_count": 859
+        },
+        {
+          "arm": "B",
+          "start": 277.4800000000376,
+          "end": 299.8800000000172,
+          "sample_count": 1121
+        }
+      ],
+      "samples_checked": {
+        "A": 0,
+        "B": 3914
+      },
+      "max_force_N": {
+        "A": null,
+        "B": 10.010394289132316
+      },
+      "max_torque_Nm": {
+        "A": null,
+        "B": 0.9405658000543979
+      }
+    },
+    "goal_position_errors_m": {
+      "K1": 1.993097405373351e-05,
+      "K2": 6.332907680682352e-05,
+      "Gate": 5.5830766908151675e-05,
+      "Bridge": 0.002028204598592008,
+      "TemporarySupport": 0.001322588721856954
+    },
+    "goal_orientation_errors_rad": {
+      "K1": 0.0001715178571151903,
+      "K2": 0.00012480674271690112,
+      "Gate": 0.0007927079756321979,
+      "Bridge": 0.007480002761534646,
+      "TemporarySupport": 0.00010558201124730073
+    },
+    "max_goal_position_error_m": 0.002028204598592008,
+    "max_goal_orientation_error_rad": 0.007480002761534646,
+    "requirements": {
+      "goal_position_tolerance_m": 0.009,
+      "goal_orientation_tolerance_rad": 0.04,
+      "support_force_min_N": 1.0,
+      "continuity_force_min_N": 0.15,
+      "min_retraction_m": 0.01,
+      "retraction_tolerance_m": 0.0001,
+      "min_support_trace_samples": 2,
+      "support_trace_max_gap_s": 0.25,
+      "permanent_force_min_N": 1.0,
+      "required_validation_load_N": 8.0,
+      "require_actual_applied_load": true,
+      "permanent_proof_duration_s": 0.5,
+      "permanent_proof_max_gap_s": 0.15,
+      "unload_force_max_N": 0.8,
+      "lift_tolerance_m": 0.0001,
+      "support_retracted_position_m": 0.0,
+      "required_dynamic_fields": [
+        "support_sensor",
+        "support_lift"
+      ],
+      "required_dynamic_connections": [
+        "K1",
+        "K2",
+        "Gate",
+        "Bridge"
+      ],
+      "assembly_trace_max_gap_s": 0.15,
+      "timestamp_tolerance_s": 1e-07,
+      "required_installed_parts": [
+        "K1",
+        "K2"
+      ],
+      "support_part_id": "TemporarySupport",
+      "require_dynamic_joints": true,
+      "require_final_empty_hands": true,
+      "gate_blocks_extraction": false,
+      "goal_poses": {
+        "K1": [
+          0.24,
+          0.2,
+          0.97,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "K2": [
+          0.24,
+          0.2,
+          1.096,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "Gate": [
+          0.06,
+          0.105,
+          0.857,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "Bridge": [
+          0.04,
+          0.2,
+          1.032,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "TemporarySupport": [
+          0.48,
+          0.43,
+          0.76,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "required_dynamic_objects": [
+        "K1",
+        "K2",
+        "Gate",
+        "Bridge",
+        "TemporarySupport"
+      ],
+      "assembly_tool_force_limit_N": 40.0,
+      "assembly_tool_torque_limit_Nm": 8.0
+    }
+  },
+  "baseline_comparison": {
+    "baseline_run_id": "20261103T121253Z-d0d0c68e",
+    "legacy_accepted": false,
+    "legacy_failed_checks": [
+      "all_original_dependencies_retained"
+    ],
+    "legacy_why": "Old node-ID reachability retains 37 conservative failures after changed geometry/repartition. All task semantics, new graph dependencies and new geometry certificates pass separately; legacy result was not overwritten.",
+    "semantic_accepted": true,
+    "actual_makespan_reduction_s": 138.51999999987402,
+    "actual_makespan_reduction_fraction": 0.30403863037733064,
+    "all_pose_boundaries": [
+      {
+        "eligible": 355,
+        "observed": 355,
+        "near_zero": 318,
+        "near_zero_fraction": 0.895774647887324,
+        "coverage_fraction": 1.0,
+        "threshold_rad_s": 0.01,
+        "sample_window_s": 0.06,
+        "definition": "All consecutive same-arm pose-to-pose boundaries; includes slow motion, assembly guards and dependency waits; excludes skills."
+      },
+      {
+        "eligible": 326,
+        "observed": 326,
+        "near_zero": 41,
+        "near_zero_fraction": 0.12576687116564417,
+        "coverage_fraction": 1.0,
+        "threshold_rad_s": 0.01,
+        "sample_window_s": 0.06,
+        "definition": "All consecutive same-arm pose-to-pose boundaries; includes slow motion, assembly guards and dependency waits; excludes skills."
+      }
+    ],
+    "ordinary_high_speed_boundaries": [
+      {
+        "eligible": 238,
+        "observed": 238,
+        "near_zero": 205,
+        "near_zero_fraction": 0.8613445378151261,
+        "coverage_fraction": 1.0,
+        "threshold_rad_s": 0.01,
+        "sample_window_s": 0.06,
+        "definition": "Adjacent same-arm poses; global v/a on both; no assembly-force guard; no actual predecessor wait."
+      },
+      {
+        "eligible": 210,
+        "observed": 210,
+        "near_zero": 19,
+        "near_zero_fraction": 0.09047619047619047,
+        "coverage_fraction": 1.0,
+        "threshold_rad_s": 0.01,
+        "sample_window_s": 0.06,
+        "definition": "Adjacent same-arm poses; global v/a on both; no assembly-force guard; no actual predecessor wait."
+      }
+    ],
+    "metrics": {
+      "before": {
+        "actual_makespan_s": 455.5999999998756,
+        "arms": {
+          "A": {
+            "node_count": 78,
+            "active_union_s": 96.90000000004093,
+            "service_sum_s": 96.90000000004093,
+            "nominal_service_s": 91.23445694205849,
+            "overlap_s": 0.0,
+            "node_idle_s": 358.69999999983463,
+            "active_fraction": 0.21268656716432702,
+            "idle_scope": "No active graph node; initial physical support holding is not free idle time."
+          },
+          "B": {
+            "node_count": 341,
+            "active_union_s": 405.99999999986414,
+            "service_sum_s": 405.99999999986414,
+            "nominal_service_s": 380.47236408731897,
+            "overlap_s": 0.0,
+            "node_idle_s": 49.60000000001145,
+            "active_fraction": 0.891132572431903,
+            "idle_scope": "No active graph node; initial physical support holding is not free idle time."
+          }
+        },
+        "skills": {
+          "grasp": {
+            "count": 7,
+            "actual_service_s": 4.919999999999064,
+            "nominal_service_s": 2.6599999999999997
+          },
+          "wait": {
+            "count": 13,
+            "actual_service_s": 1.759999999999721,
+            "nominal_service_s": 1.3
+          },
+          "release_support": {
+            "count": 1,
+            "actual_service_s": 0.7199999999998568,
+            "nominal_service_s": 0.38
+          },
+          "verify_support": {
+            "count": 1,
+            "actual_service_s": 0.7199999999998568,
+            "nominal_service_s": 0.38
+          },
+          "release_arm_support": {
+            "count": 1,
+            "actual_service_s": 0.7199999999998568,
+            "nominal_service_s": 0.38
+          },
+          "deactivate_arm_pad": {
+            "count": 1,
+            "actual_service_s": 0.7199999999998568,
+            "nominal_service_s": 0.38
+          },
+          "release_buffer": {
+            "count": 2,
+            "actual_service_s": 1.3600000000006958,
+            "nominal_service_s": 0.76
+          },
+          "install": {
+            "count": 2,
+            "actual_service_s": 1.399999999999693,
+            "nominal_service_s": 0.76
+          },
+          "verify_permanent": {
+            "count": 1,
+            "actual_service_s": 1.059999999999036,
+            "nominal_service_s": 0.38
+          },
+          "unload_support": {
+            "count": 1,
+            "actual_service_s": 0.7199999999993452,
+            "nominal_service_s": 0.38
+          },
+          "extract_support": {
+            "count": 1,
+            "actual_service_s": 0.7199999999993452,
+            "nominal_service_s": 0.38
+          },
+          "return_support": {
+            "count": 1,
+            "actual_service_s": 0.7199999999993452,
+            "nominal_service_s": 0.38
+          },
+          "close_gate": {
+            "count": 1,
+            "actual_service_s": 0.7199999999993452,
+            "nominal_service_s": 0.38
+          }
+        },
+        "kinematics": {
+          "A": {
+            "valid_samples": 8538,
+            "invalid_samples": 0,
+            "nonincreasing_time_count": 0,
+            "sample_intervals_s": {
+              "count": 8537,
+              "sum": 455.5999999998528,
+              "minimum": 0.01999999999998181,
+              "median": 0.020000000000010232,
+              "maximum": 0.10000000000005116
+            },
+            "difference_gap_limit_s": 0.15,
+            "excluded_long_gap_count": 0,
+            "max_abs_velocity_rad_s": 0.3372753647417926,
+            "estimated_max_abs_acceleration_rad_s2": 0.9570029116942397,
+            "estimated_max_abs_jerk_rad_s3": 13.871438985430654,
+            "acceleration_estimate_count": 8537,
+            "jerk_estimate_count": 8536,
+            "derivative_scope": "Interval averages from measured velocity, nonuniform actual timestamps; no continuous extrema or jerk certification."
+          },
+          "B": {
+            "valid_samples": 8538,
+            "invalid_samples": 0,
+            "nonincreasing_time_count": 0,
+            "sample_intervals_s": {
+              "count": 8537,
+              "sum": 455.5999999998528,
+              "minimum": 0.01999999999998181,
+              "median": 0.020000000000010232,
+              "maximum": 0.10000000000005116
+            },
+            "difference_gap_limit_s": 0.15,
+            "excluded_long_gap_count": 0,
+            "max_abs_velocity_rad_s": 0.3466978172495817,
+            "estimated_max_abs_acceleration_rad_s2": 1.128931208076414,
+            "estimated_max_abs_jerk_rad_s3": 11.445309317332997,
+            "acceleration_estimate_count": 8537,
+            "jerk_estimate_count": 8536,
+            "derivative_scope": "Interval averages from measured velocity, nonuniform actual timestamps; no continuous extrema or jerk certification."
+          }
+        },
+        "path_total_joint_L2_rad": 107.8526150811411,
+        "assembly_contact": {
+          "A": {
+            "observed_samples": 0,
+            "valid_samples": 0,
+            "max_force_N": null,
+            "max_torque_Nm": null
+          },
+          "B": {
+            "observed_samples": 4978,
+            "valid_samples": 4978,
+            "max_force_N": 9.890173043913776,
+            "max_torque_Nm": 0.9518990944015351
+          }
+        },
+        "goal_errors": {
+          "K1": {
+            "position_error_m": 1.917236970863908e-05,
+            "orientation_error_rad": 0.00016887027032417632
+          },
+          "K2": {
+            "position_error_m": 7.626201720483505e-05,
+            "orientation_error_rad": 0.00015620244130835423
+          },
+          "Gate": {
+            "position_error_m": 4.434058441416025e-05,
+            "orientation_error_rad": 0.0007643646427417706
+          },
+          "Bridge": {
+            "position_error_m": 0.002028991626116519,
+            "orientation_error_rad": 0.007478999326659251
+          },
+          "TemporarySupport": {
+            "position_error_m": 0.001558828010542342,
+            "orientation_error_rad": 1.852228122621995e-05
+          }
+        }
+      },
+      "after": {
+        "actual_makespan_s": 317.0800000000016,
+        "arms": {
+          "A": {
+            "node_count": 78,
+            "active_union_s": 75.68000000000205,
+            "service_sum_s": 75.68000000000205,
+            "nominal_service_s": 74.43065368287954,
+            "overlap_s": 0.0,
+            "node_idle_s": 241.39999999999952,
+            "active_fraction": 0.238677936167534,
+            "idle_scope": "No active graph node; initial physical support holding is not free idle time."
+          },
+          "B": {
+            "node_count": 312,
+            "active_union_s": 277.56000000000256,
+            "service_sum_s": 277.56000000000256,
+            "nominal_service_s": 273.7529397298128,
+            "overlap_s": 0.0,
+            "node_idle_s": 39.519999999999015,
+            "active_fraction": 0.8753626844960299,
+            "idle_scope": "No active graph node; initial physical support holding is not free idle time."
+          }
+        },
+        "skills": {
+          "grasp": {
+            "count": 7,
+            "actual_service_s": 2.1800000000000352,
+            "nominal_service_s": 2.1
+          },
+          "wait": {
+            "count": 13,
+            "actual_service_s": 1.179999999999982,
+            "nominal_service_s": 1.0399999999999998
+          },
+          "release_support": {
+            "count": 1,
+            "actual_service_s": 0.3000000000000469,
+            "nominal_service_s": 0.3
+          },
+          "verify_support": {
+            "count": 1,
+            "actual_service_s": 0.42000000000006565,
+            "nominal_service_s": 0.3
+          },
+          "release_arm_support": {
+            "count": 1,
+            "actual_service_s": 0.3000000000000469,
+            "nominal_service_s": 0.3
+          },
+          "deactivate_arm_pad": {
+            "count": 1,
+            "actual_service_s": 0.3000000000000469,
+            "nominal_service_s": 0.3
+          },
+          "release_buffer": {
+            "count": 2,
+            "actual_service_s": 0.6200000000000898,
+            "nominal_service_s": 0.6
+          },
+          "install": {
+            "count": 2,
+            "actual_service_s": 0.600000000000307,
+            "nominal_service_s": 0.6
+          },
+          "verify_permanent": {
+            "count": 1,
+            "actual_service_s": 0.9000000000004604,
+            "nominal_service_s": 0.65
+          },
+          "unload_support": {
+            "count": 1,
+            "actual_service_s": 0.3000000000001535,
+            "nominal_service_s": 0.3
+          },
+          "extract_support": {
+            "count": 1,
+            "actual_service_s": 0.3000000000001535,
+            "nominal_service_s": 0.3
+          },
+          "return_support": {
+            "count": 1,
+            "actual_service_s": 0.3000000000001535,
+            "nominal_service_s": 0.3
+          },
+          "close_gate": {
+            "count": 1,
+            "actual_service_s": 0.31999999999970896,
+            "nominal_service_s": 0.3
+          }
+        },
+        "kinematics": {
+          "A": {
+            "valid_samples": 6308,
+            "invalid_samples": 0,
+            "nonincreasing_time_count": 0,
+            "sample_intervals_s": {
+              "count": 6307,
+              "sum": 317.69999999997765,
+              "minimum": 0.01999999999998181,
+              "median": 0.020000000000010232,
+              "maximum": 0.10000000000005116
+            },
+            "difference_gap_limit_s": 0.15,
+            "excluded_long_gap_count": 0,
+            "max_abs_velocity_rad_s": 0.504610841465964,
+            "estimated_max_abs_acceleration_rad_s2": 0.8914720712494892,
+            "estimated_max_abs_jerk_rad_s3": 13.301319540936873,
+            "acceleration_estimate_count": 6307,
+            "jerk_estimate_count": 6306,
+            "derivative_scope": "Interval averages from measured velocity, nonuniform actual timestamps; no continuous extrema or jerk certification."
+          },
+          "B": {
+            "valid_samples": 6308,
+            "invalid_samples": 0,
+            "nonincreasing_time_count": 0,
+            "sample_intervals_s": {
+              "count": 6307,
+              "sum": 317.69999999997765,
+              "minimum": 0.01999999999998181,
+              "median": 0.020000000000010232,
+              "maximum": 0.10000000000005116
+            },
+            "difference_gap_limit_s": 0.15,
+            "excluded_long_gap_count": 0,
+            "max_abs_velocity_rad_s": 0.5178579661803462,
+            "estimated_max_abs_acceleration_rad_s2": 0.9482198008728429,
+            "estimated_max_abs_jerk_rad_s3": 11.455709062373236,
+            "acceleration_estimate_count": 6307,
+            "jerk_estimate_count": 6306,
+            "derivative_scope": "Interval averages from measured velocity, nonuniform actual timestamps; no continuous extrema or jerk certification."
+          }
+        },
+        "path_total_joint_L2_rad": 98.01659046044311,
+        "assembly_contact": {
+          "A": {
+            "observed_samples": 0,
+            "valid_samples": 0,
+            "max_force_N": null,
+            "max_torque_Nm": null
+          },
+          "B": {
+            "observed_samples": 3914,
+            "valid_samples": 3914,
+            "max_force_N": 10.010394289132316,
+            "max_torque_Nm": 0.9405658000543978
+          }
+        },
+        "goal_errors": {
+          "K1": {
+            "position_error_m": 1.993097405373351e-05,
+            "orientation_error_rad": 0.0001715178571151903
+          },
+          "K2": {
+            "position_error_m": 6.332907680682352e-05,
+            "orientation_error_rad": 0.00012480674271690112
+          },
+          "Gate": {
+            "position_error_m": 5.5830766908151675e-05,
+            "orientation_error_rad": 0.0007927079756321979
+          },
+          "Bridge": {
+            "position_error_m": 0.002028204598592008,
+            "orientation_error_rad": 0.007480002761534646
+          },
+          "TemporarySupport": {
+            "position_error_m": 0.001322588721856954,
+            "orientation_error_rad": 0.00010558201124730073
+          }
+        }
+      }
+    }
+  },
+  "curve_geometry_checks": [
+    {
+      "macro": "support_slide_in",
+      "passed": true,
+      "samples": 185,
+      "max_tcp_deviation_m": 5.433840376396285e-05,
+      "max_orientation_error_rad": 4.2146848510894035e-08,
+      "max_sample_joint_gap_rad": 0.0029698500147222213,
+      "thresholds": {
+        "step_rad": 0.003,
+        "max_tcp_deviation_m": 0.0005,
+        "max_orientation_error_rad": 0.005,
+        "progress_tolerance_m": 1e-06
+      }
+    },
+    {
+      "macro": "A_exit_from_support",
+      "passed": true,
+      "samples": 273,
+      "max_tcp_deviation_m": 4.6433102839557685e-05,
+      "max_orientation_error_rad": 0.0,
+      "max_sample_joint_gap_rad": 0.002982794430272157,
+      "thresholds": {
+        "step_rad": 0.003,
+        "max_tcp_deviation_m": 0.0005,
+        "max_orientation_error_rad": 0.005,
+        "progress_tolerance_m": 1e-06
+      }
+    },
+    {
+      "macro": "install_K1_slide",
+      "passed": true,
+      "samples": 450,
+      "max_tcp_deviation_m": 5.8768409569382584e-05,
+      "max_orientation_error_rad": 4.2146848510894035e-08,
+      "max_sample_joint_gap_rad": 0.0029924459498195228,
+      "thresholds": {
+        "step_rad": 0.003,
+        "max_tcp_deviation_m": 0.0005,
+        "max_orientation_error_rad": 0.005,
+        "progress_tolerance_m": 1e-06
+      }
+    },
+    {
+      "macro": "extract_support_motion",
+      "passed": true,
+      "samples": 185,
+      "max_tcp_deviation_m": 5.433834550001817e-05,
+      "max_orientation_error_rad": 0.0,
+      "max_sample_joint_gap_rad": 0.0029698438360914567,
+      "thresholds": {
+        "step_rad": 0.003,
+        "max_tcp_deviation_m": 0.0005,
+        "max_orientation_error_rad": 0.005,
+        "progress_tolerance_m": 1e-06
+      }
+    },
+    {
+      "macro": "close_gate_slide",
+      "passed": true,
+      "samples": 112,
+      "max_tcp_deviation_m": 3.952450302952245e-05,
+      "max_orientation_error_rad": 1.9082797281243954e-07,
+      "max_sample_joint_gap_rad": 0.0029869442858981273,
+      "thresholds": {
+        "step_rad": 0.003,
+        "max_tcp_deviation_m": 0.0005,
+        "max_orientation_error_rad": 0.005,
+        "progress_tolerance_m": 1e-06
+      }
+    },
+    {
+      "macro": "close_gate_retreat",
+      "passed": true,
+      "samples": 112,
+      "max_tcp_deviation_m": 3.956843888767073e-05,
+      "max_orientation_error_rad": 0.0,
+      "max_sample_joint_gap_rad": 0.0029870088654795094,
+      "thresholds": {
+        "step_rad": 0.003,
+        "max_tcp_deviation_m": 0.0005,
+        "max_orientation_error_rad": 0.005,
+        "progress_tolerance_m": 1e-06
+      }
+    }
+  ],
+  "curved_profile_command_bounds": [
+    {
+      "run": "support_slide_in_01::p0000",
+      "collision_validated": true,
+      "limits": {
+        "velocity": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "acceleration": [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "jerk": [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "global_derivative_bounds": {
+        "velocity": 0.11999999999987997,
+        "acceleration": 0.09752107398433209,
+        "jerk": 1.0252332025572468
+      }
+    },
+    {
+      "run": "A_exit_from_support_01::p0000",
+      "collision_validated": true,
+      "limits": {
+        "velocity": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "acceleration": [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "jerk": [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "global_derivative_bounds": {
+        "velocity": 0.11999999999987998,
+        "acceleration": 0.06343838766089989,
+        "jerk": 0.5799359664252999
+      }
+    },
+    {
+      "run": "install_K1_slide_01::p0000",
+      "collision_validated": true,
+      "limits": {
+        "velocity": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "acceleration": [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "jerk": [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "global_derivative_bounds": {
+        "velocity": 0.11999999999988,
+        "acceleration": 0.06896853622206062,
+        "jerk": 0.8595248843457969
+      }
+    },
+    {
+      "run": "extract_support_motion_01::p0000",
+      "collision_validated": true,
+      "limits": {
+        "velocity": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "acceleration": [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "jerk": [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "global_derivative_bounds": {
+        "velocity": 0.11999999999987997,
+        "acceleration": 0.09752306820015158,
+        "jerk": 1.0252272961702538
+      }
+    },
+    {
+      "run": "close_gate_slide_01::p0000",
+      "collision_validated": true,
+      "limits": {
+        "velocity": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "acceleration": [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "jerk": [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "global_derivative_bounds": {
+        "velocity": 0.11999999999987998,
+        "acceleration": 0.09555201588575186,
+        "jerk": 0.991647321744946
+      }
+    },
+    {
+      "run": "close_gate_retreat_01::p0000",
+      "collision_validated": true,
+      "limits": {
+        "velocity": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "acceleration": [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "jerk": [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ]
+      },
+      "global_derivative_bounds": {
+        "velocity": 0.11999999999988,
+        "acceleration": 0.09557302864079228,
+        "jerk": 0.9920110598913237
+      }
+    }
+  ],
+  "new_geometry_certificate": {
+    "dag": true,
+    "geometric_reference_paths_unchanged": false,
+    "conflicts_rebuilt_for_current_node_geometry": true,
+    "node_geometry_preserved_by_rebuild": true,
+    "timing_preserved_by_rebuild": true,
+    "motion_overlap_pairs_checked": true,
+    "collision_oracle_supplied": true,
+    "all_nodes_have_geometry": true,
+    "waiting_endpoints_verified": true,
+    "nominal_world_state_verified": true,
+    "persistent_support_requires_executor_feedback": true,
+    "continuous_collision_guarantee": false,
+    "scope": "Current supplied node paths: sampled all-phase moving conflicts; refreshed scheduling, continuous-run gates and full world/waiting-state verification remain required."
+  },
+  "nominal_geometry_rollout": {
+    "kind": "nominal_geometric_rollout_verification",
+    "step_s": 0.06,
+    "nominal_makespan_s": 311.91364408961545,
+    "planned_samples": 5589,
+    "tested_samples": 5589,
+    "batch_calls": 44,
+    "coverage_complete": true,
+    "first_violation": null,
+    "no_sampled_collision": true,
+    "nominal_world_state_reconstructed": true,
+    "world_state_gaps": [],
+    "missing_source_poses": [],
+    "stationary_waiting_poses_included": true,
+    "valid": true,
+    "continuous_collision_guarantee": false,
+    "dynamics_or_force_verified": false,
+    "world_state_basis": "cfg source poses + declared pick payload transforms + completed place goal poses",
+    "trajectory_timing_basis": "motion_segments quintic timing when supplied; otherwise reference-polyline arclength",
+    "wall_s": 24.06578000000445
+  },
+  "input_integrity": {
+    "count": 47,
+    "dictionary_sha256": "4e9e593827678065d9aebd1456e5e07ed68dabead141c5bd94c731cb4cfaf981",
+    "files": [
+      {
+        "path": "apex/__init__.py",
+        "expected_sha256": "c6fad83e333c3351b9c044711f62a14785810c3dce779d77e97f061dc35588bf",
+        "actual_sha256": "c6fad83e333c3351b9c044711f62a14785810c3dce779d77e97f061dc35588bf",
+        "matches": true
+      },
+      {
+        "path": "apex/allocation.py",
+        "expected_sha256": "7f1733a7a74a1d0fdd768990cb3dd338f299647f09b3176c96dd242f3f81a86a",
+        "actual_sha256": "7f1733a7a74a1d0fdd768990cb3dd338f299647f09b3176c96dd242f3f81a86a",
+        "matches": true
+      },
+      {
+        "path": "apex/blend_validation.py",
+        "expected_sha256": "5713802b6c30decc3f6295b5bef58db53540b252c1887217112a46b6c6aa831f",
+        "actual_sha256": "5713802b6c30decc3f6295b5bef58db53540b252c1887217112a46b6c6aa831f",
+        "matches": true
+      },
+      {
+        "path": "apex/compile.py",
+        "expected_sha256": "2722faca82e0efe0d04ada47ba1dea860018568a957c86d0b1bc4908ad9dcae9",
+        "actual_sha256": "2722faca82e0efe0d04ada47ba1dea860018568a957c86d0b1bc4908ad9dcae9",
+        "matches": true
+      },
+      {
+        "path": "apex/controller.lua",
+        "expected_sha256": "9a30d885056c1d975280e6156b6b4075a49e12f3c42b161d50eca22c8d93f4fc",
+        "actual_sha256": "9a30d885056c1d975280e6156b6b4075a49e12f3c42b161d50eca22c8d93f4fc",
+        "matches": true
+      },
+      {
+        "path": "apex/curve.py",
+        "expected_sha256": "ed669126e5c9948065d26693ec2bf60526d1304eeb0504284dec3ca0f202d69e",
+        "actual_sha256": "ed669126e5c9948065d26693ec2bf60526d1304eeb0504284dec3ca0f202d69e",
+        "matches": true
+      },
+      {
+        "path": "apex/fast_interarm.lua",
+        "expected_sha256": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563",
+        "actual_sha256": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563",
+        "matches": true
+      },
+      {
+        "path": "apex/fast_interarm.py",
+        "expected_sha256": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03",
+        "actual_sha256": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03",
+        "matches": true
+      },
+      {
+        "path": "apex/geometry.py",
+        "expected_sha256": "7901cc625f376cb56a652ac2c099a849ca43985789160d4c84ff4cfd3acb71c4",
+        "actual_sha256": "7901cc625f376cb56a652ac2c099a849ca43985789160d4c84ff4cfd3acb71c4",
+        "matches": true
+      },
+      {
+        "path": "apex/motion.py",
+        "expected_sha256": "541539b308ebd5f4bd0714523ffdda7887a8dd48ebabe2e1c9d5a97e9c8af362",
+        "actual_sha256": "541539b308ebd5f4bd0714523ffdda7887a8dd48ebabe2e1c9d5a97e9c8af362",
+        "matches": true
+      },
+      {
+        "path": "apex/motion_backend.lua",
+        "expected_sha256": "d215ec7a054804875619aa2af18ccace404feb07ee386c68a34080c7c65065f6",
+        "actual_sha256": "d215ec7a054804875619aa2af18ccace404feb07ee386c68a34080c7c65065f6",
+        "matches": true
+      },
+      {
+        "path": "apex/performance.py",
+        "expected_sha256": "3b3f1dd76d3c69bb6954bd7b593dc11adcdb658a720ef727fc7d474472cbd7c7",
+        "actual_sha256": "3b3f1dd76d3c69bb6954bd7b593dc11adcdb658a720ef727fc7d474472cbd7c7",
+        "matches": true
+      },
+      {
+        "path": "apex/pipeline.py",
+        "expected_sha256": "91133db88396a00c9c6ad56496608e2b1fda69159824ef2ed0c883c2a4821eff",
+        "actual_sha256": "91133db88396a00c9c6ad56496608e2b1fda69159824ef2ed0c883c2a4821eff",
+        "matches": true
+      },
+      {
+        "path": "apex/plots.py",
+        "expected_sha256": "21fa7c8b4d3f7fe29ae5c4fdb1db2cbdc8ff2408f43774d0f18e2ac834ef9033",
+        "actual_sha256": "21fa7c8b4d3f7fe29ae5c4fdb1db2cbdc8ff2408f43774d0f18e2ac834ef9033",
+        "matches": true
+      },
+      {
+        "path": "apex/program.py",
+        "expected_sha256": "61264d84aecf98bfa5dbee0dedcdb9ee1aa8aa1dfb7f212ca3b845e40165cfb3",
+        "actual_sha256": "61264d84aecf98bfa5dbee0dedcdb9ee1aa8aa1dfb7f212ca3b845e40165cfb3",
+        "matches": true
+      },
+      {
+        "path": "apex/runtime.py",
+        "expected_sha256": "82d6035749a80bf8b3c208b73fc27763e99a62331651a62ddf479b7e6fb68709",
+        "actual_sha256": "82d6035749a80bf8b3c208b73fc27763e99a62331651a62ddf479b7e6fb68709",
+        "matches": true
+      },
+      {
+        "path": "apex/scene.py",
+        "expected_sha256": "a859f5c5ff1a501bcd4cb4e27ebfd05675f8f26aa7693f8b193f44cbf05316b5",
+        "actual_sha256": "a859f5c5ff1a501bcd4cb4e27ebfd05675f8f26aa7693f8b193f44cbf05316b5",
+        "matches": true
+      },
+      {
+        "path": "apex/smoothing.py",
+        "expected_sha256": "b7e589373ed5da362c6725f124b881bf7f1bd76592b971fbd91e70323dd0ac31",
+        "actual_sha256": "b7e589373ed5da362c6725f124b881bf7f1bd76592b971fbd91e70323dd0ac31",
+        "matches": true
+      },
+      {
+        "path": "apex/tpg.py",
+        "expected_sha256": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd",
+        "actual_sha256": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd",
+        "matches": true
+      },
+      {
+        "path": "apex/validation.py",
+        "expected_sha256": "0881b1bd00472dad6e5456126048913ca6aab9b579d7e1cfbacf3b3ee90cfef2",
+        "actual_sha256": "0881b1bd00472dad6e5456126048913ca6aab9b579d7e1cfbacf3b3ee90cfef2",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/baseline_manifest.json",
+        "expected_sha256": "0966b4341991ad5b3fc010824c88a662a52d28f19efd5d53b74ed09fbc2adf82",
+        "actual_sha256": "0966b4341991ad5b3fc010824c88a662a52d28f19efd5d53b74ed09fbc2adf82",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/config/apex_runtime.json",
+        "expected_sha256": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+        "actual_sha256": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/config/dynamic_homes.json",
+        "expected_sha256": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+        "actual_sha256": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/config/experiment_definition.json",
+        "expected_sha256": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+        "actual_sha256": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/config/scene_manifest.json",
+        "expected_sha256": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+        "actual_sha256": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/results/apex/alloc_and_reference.json",
+        "expected_sha256": "032ed30ed34715359e05f27124465f90ebf9cc1b90fa5d0c87a056239ccc4528",
+        "actual_sha256": "032ed30ed34715359e05f27124465f90ebf9cc1b90fa5d0c87a056239ccc4528",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/results/apex/execution_validation.json",
+        "expected_sha256": "d5c5bbd5a77dbb7c0a6bdc88af3e459aed14d4b17bd92893ffe72dd6e8980ae4",
+        "actual_sha256": "d5c5bbd5a77dbb7c0a6bdc88af3e459aed14d4b17bd92893ffe72dd6e8980ae4",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/results/apex/independent_final_audit.json",
+        "expected_sha256": "25c49f1881cfea8d1540e8cd71c42c4d5f4a4c14f3c9f4b137ee079c2fafd0ab",
+        "actual_sha256": "25c49f1881cfea8d1540e8cd71c42c4d5f4a4c14f3c9f4b137ee079c2fafd0ab",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/results/apex/pipeline_manifest.json",
+        "expected_sha256": "44292631e7f11fd3a88a412eec25b60e05685b3ee75f477002453fa6bf2e4cf9",
+        "actual_sha256": "44292631e7f11fd3a88a412eec25b60e05685b3ee75f477002453fa6bf2e4cf9",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/results/apex/reference_tasks.json",
+        "expected_sha256": "f59ba34c9d9082374ddb1432a2239cb479838aec3668d862c2f5de564bd90b3d",
+        "actual_sha256": "f59ba34c9d9082374ddb1432a2239cb479838aec3668d862c2f5de564bd90b3d",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/results/apex/source_signature.json",
+        "expected_sha256": "fae19dd8b3f1643863d791f15867b13aaff0a2715deb093b8728b06ab8d64aa6",
+        "actual_sha256": "fae19dd8b3f1643863d791f15867b13aaff0a2715deb093b8728b06ab8d64aa6",
+        "matches": true
+      },
+      {
+        "path": "backups/smooth_motion_baseline_20261104_01/results/apex/summary.json",
+        "expected_sha256": "e27a18c78062733c62037e14787ab2f288d98551601ec57ac6537a53eecf88f1",
+        "actual_sha256": "e27a18c78062733c62037e14787ab2f288d98551601ec57ac6537a53eecf88f1",
+        "matches": true
+      },
+      {
+        "path": "config/apex_runtime.json",
+        "expected_sha256": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+        "actual_sha256": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+        "matches": true
+      },
+      {
+        "path": "config/dynamic_homes.json",
+        "expected_sha256": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+        "actual_sha256": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+        "matches": true
+      },
+      {
+        "path": "config/experiment_definition.json",
+        "expected_sha256": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+        "actual_sha256": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+        "matches": true
+      },
+      {
+        "path": "config/scene_manifest.json",
+        "expected_sha256": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+        "actual_sha256": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+        "matches": true
+      },
+      {
+        "path": "requirements.txt",
+        "expected_sha256": "cd7a2158bbface0a0a9cd8dda26ac5311a52bf06d1bb897944a44d4e6eee6d80",
+        "actual_sha256": "cd7a2158bbface0a0a9cd8dda26ac5311a52bf06d1bb897944a44d4e6eee6d80",
+        "matches": true
+      },
+      {
+        "path": "scenes/10_Scene3_Dynamic.ttt",
+        "expected_sha256": "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04",
+        "actual_sha256": "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04",
+        "matches": true
+      },
+      {
+        "path": "src/build_scene.py",
+        "expected_sha256": "3e55e9a4767b5f39ddaf6554ae4e7cd67ac994e39411c361b7080d805897e974",
+        "actual_sha256": "3e55e9a4767b5f39ddaf6554ae4e7cd67ac994e39411c361b7080d805897e974",
+        "matches": true
+      },
+      {
+        "path": "src/label_mesh.py",
+        "expected_sha256": "42a32b740f939bf29c28537075ba66efbae1b1284899d2cf0af2b4d6f61b2ad2",
+        "actual_sha256": "42a32b740f939bf29c28537075ba66efbae1b1284899d2cf0af2b4d6f61b2ad2",
+        "matches": true
+      },
+      {
+        "path": "src/lifecycle.py",
+        "expected_sha256": "3a6f947b1282e59a54a2a5e4092b90c75cadcb032fd37dda116e0834b845004f",
+        "actual_sha256": "3a6f947b1282e59a54a2a5e4092b90c75cadcb032fd37dda116e0834b845004f",
+        "matches": true
+      },
+      {
+        "path": "src/open_scene.py",
+        "expected_sha256": "49ad3053a7345864cf7d2b1e52056b79ea62ef0c7e9019656de57533a2a0cf44",
+        "actual_sha256": "49ad3053a7345864cf7d2b1e52056b79ea62ef0c7e9019656de57533a2a0cf44",
+        "matches": true
+      },
+      {
+        "path": "src/probe_scene3_execution.py",
+        "expected_sha256": "01fbab9be5d2b0ee9d8605c049a7ec55dd955e5df304b030c14dcb81ac4c414f",
+        "actual_sha256": "01fbab9be5d2b0ee9d8605c049a7ec55dd955e5df304b030c14dcb81ac4c414f",
+        "matches": true
+      },
+      {
+        "path": "src/probe_support_physics.py",
+        "expected_sha256": "96d7a8d9cf7ed3e023d3d91075522212d6568a22270f5a13896874c906a61bd3",
+        "actual_sha256": "96d7a8d9cf7ed3e023d3d91075522212d6568a22270f5a13896874c906a61bd3",
+        "matches": true
+      },
+      {
+        "path": "src/scene_ui.lua",
+        "expected_sha256": "439dd1d6830f17aacbd7d1d0590d0ec3fda70e7874f90749fc35ce8aa65470e9",
+        "actual_sha256": "439dd1d6830f17aacbd7d1d0590d0ec3fda70e7874f90749fc35ce8aa65470e9",
+        "matches": true
+      },
+      {
+        "path": "src/sim_connection.py",
+        "expected_sha256": "1116bef2f65e21235b6935198e89b3d9cd0e805fce505ac50a70e5609b6f796b",
+        "actual_sha256": "1116bef2f65e21235b6935198e89b3d9cd0e805fce505ac50a70e5609b6f796b",
+        "matches": true
+      },
+      {
+        "path": "src/verify_scene.py",
+        "expected_sha256": "d22d78d70a38240408f1bb93c385763fac66854fc377ba594657756319b37eb0",
+        "actual_sha256": "d22d78d70a38240408f1bb93c385763fac66854fc377ba594657756319b37eb0",
+        "matches": true
+      }
+    ],
+    "same_configs": {
+      "config/apex_runtime.json": {
+        "before": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+        "after": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+        "same": true
+      },
+      "config/dynamic_homes.json": {
+        "before": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+        "after": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+        "same": true
+      },
+      "config/experiment_definition.json": {
+        "before": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+        "after": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+        "same": true
+      },
+      "config/scene_manifest.json": {
+        "before": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+        "after": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+        "same": true
+      }
+    }
+  },
+  "delivery": {
+    "main_scene": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex_mr_scene3.ttt",
+    "actual_main_sha256": "dd15a73951dae319dbd638b3ac72c3faeab22f504de959ac41aec12e5c423199",
+    "actual_planned_sha256": "dd15a73951dae319dbd638b3ac72c3faeab22f504de959ac41aec12e5c423199",
+    "original_physical_scene_sha256": "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04"
+  },
+  "artifact_hashes": {
+    "execution.json": "a53e522639746b99e12648c3150fbc8aecddba8bae92dc47e0887e9be9ef9611",
+    "tpg.json": "f10f8504015c39fae780f6dcb24f1e3de2179120b9c049942a48fbea6d736662",
+    "summary.json": "231e3aac5eb57c44ca4ce09501be70fa45d81553b164d0d7318388f9f186d4d0",
+    "pipeline_manifest.json": "743a74dc2fc02953e0c4eb2eaa95e95a4aa420d350585cab8cf4055324ebba09",
+    "delivery.json": "b9c701d2347fc335d081f08345fb3ca4fba42c91eb921b44c2da9c41294b7b74",
+    "curve_smoothing_validation.json": "44d2e47750be3c6997eb27abbf4ec5432356816fd9af584991f0ee45ca7cd712",
+    "nominal_geometry_validation.json": "6d9c2ff1c52dcbf26399571a2f1d70c640a1ee10e2236de30071a89ee24fcfb1",
+    "execution_validation.json": "af90d928a25aea3ce364251c6809921441111403123aeca55f29e7468b605493",
+    "alloc_and_reference.json": "3a3191448085cb960fffd342853d74f643e3d7360790c218cd73d289ab362ca2",
+    "source_signature.json": "5a93b219fff9d07e8aa9eebc4fbd49cdcb7aeed640784c1b89c1dff25c9ee9ed"
+  },
+  "limitations": [
+    "Two simulation runs, no repeated robustness study and no real-hardware validation.",
+    "Actual velocity differentiation uses unequal 0.02–0.10 s intervals; acceleration and jerk are interval estimates, not continuous extrema.",
+    "The new commanded profile jerk limit is 8 rad/s^3. Actual sampled jerk estimates exceed 8 (A about 13.30, B about 11.46); no claim that measured physical jerk is bounded by that command limit.",
+    "Changed path geometry, C2 curves, continuous execution and skill timing all contribute; the total speedup is not isolated smoothing causality.",
+    "All collision evidence is sampled; ideal rigid grasp and snap constraints remain simulation assumptions.",
+    "ILP objective values use normalization/proxy costs and are not an execution-time improvement metric."
+  ]
+}

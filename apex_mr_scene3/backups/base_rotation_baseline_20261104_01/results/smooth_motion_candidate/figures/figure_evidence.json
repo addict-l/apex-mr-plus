@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "before_run_id": "20261103T121253Z-d0d0c68e",
+  "after_run_id": "20261104T163855Z-0804c434",
+  "all_pose_boundary_statistics": [
+    {
+      "eligible": 355,
+      "observed": 355,
+      "near_zero": 318,
+      "near_zero_fraction": 0.895774647887324,
+      "coverage_fraction": 1.0,
+      "threshold_rad_s": 0.01,
+      "sample_window_s": 0.06,
+      "definition": "All consecutive same-arm pose-to-pose boundaries; includes slow motion, assembly guards and dependency waits; excludes skills."
+    },
+    {
+      "eligible": 326,
+      "observed": 326,
+      "near_zero": 41,
+      "near_zero_fraction": 0.12576687116564417,
+      "coverage_fraction": 1.0,
+      "threshold_rad_s": 0.01,
+      "sample_window_s": 0.06,
+      "definition": "All consecutive same-arm pose-to-pose boundaries; includes slow motion, assembly guards and dependency waits; excludes skills."
+    }
+  ],
+  "ordinary_boundary_statistics": [
+    {
+      "eligible": 238,
+      "observed": 238,
+      "near_zero": 205,
+      "near_zero_fraction": 0.8613445378151261,
+      "coverage_fraction": 1.0,
+      "threshold_rad_s": 0.01,
+      "sample_window_s": 0.06,
+      "definition": "Adjacent same-arm poses; global v/a on both; no assembly-force guard; no actual predecessor wait."
+    },
+    {
+      "eligible": 210,
+      "observed": 210,
+      "near_zero": 19,
+      "near_zero_fraction": 0.09047619047619047,
+      "coverage_fraction": 1.0,
+      "threshold_rad_s": 0.01,
+      "sample_window_s": 0.06,
+      "definition": "Adjacent same-arm poses; global v/a on both; no assembly-force guard; no actual predecessor wait."
+    }
+  ],
+  "source_scene_sha256": [
+    "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04",
+    "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04"
+  ],
+  "actual_makespan_s": [
+    455.5999999998756,
+    317.0800000000016
+  ],
+  "legacy_node_comparison_accepted": false,
+  "semantic_guard_comparison_accepted": true,
+  "comparison_conditions": {
+    "same_physical_source_scene": true,
+    "same_environment": true,
+    "same_global_and_task_motion_limits": true,
+    "before_actual_audit_passed": true,
+    "after_actual_audit_passed": true,
+    "complete_actual_event_coverage": true,
+    "before_graph_matches_actual_signature": true,
+    "after_graph_matches_actual_signature": true,
+    "A_velocity_sampling_comparable": true,
+    "B_velocity_sampling_comparable": true,
+    "observed_velocity_within_global_limit": true,
+    "same_numeric_and_evidence_acceptance_requirements": true,
+    "material_support_buffer_and_selected_gate_guards": true,
+    "fresh_geometry_certificates_and_complete_rollouts": true,
+    "same_configuration_file_hashes": true,
+    "completed_manifest_matches_actual_runs": true,
+    "sampling_resolution_not_relaxed": true,
+    "new_pipeline_geometry_and_actual_stages_passed": true
+  },
+  "configured_jerk_limits_rad_s3": {
+    "before": null,
+    "after": 8.0
+  },
+  "velocity_panels": {
+    "pick_support_approach": [
+      {
+        "task_prefix": "pick_support_approach",
+        "arm": "B",
+        "actual_start_s": 0.6000000000000002,
+        "actual_end_s": 21.739999999999625,
+        "actual_elapsed_s": 21.139999999999624,
+        "measured_sample_count": 211,
+        "missing_velocity_samples": 0,
+        "maximum_observed_sample_gap_s": 0.10000000000000009,
+        "source_field": "B_joint_velocity_rad_s",
+        "no_interpolation_or_smoothing": true
+      },
+      {
+        "task_prefix": "pick_support_approach",
+        "arm": "B",
+        "actual_start_s": 0.6000000000000002,
+        "actual_end_s": 13.619999999999798,
+        "actual_elapsed_s": 13.019999999999799,
+        "measured_sample_count": 130,
+        "missing_velocity_samples": 0,
+        "maximum_observed_sample_gap_s": 0.10000000000000009,
+        "source_field": "B_joint_velocity_rad_s",
+        "no_interpolation_or_smoothing": true
+      }
+    ],
+    "A_exit_from_support": [
+      {
+        "task_prefix": "A_exit_from_support",
+        "arm": "A",
+        "actual_start_s": 118.67999999999353,
+        "actual_end_s": 131.11999999999327,
+        "actual_elapsed_s": 12.439999999999742,
+        "measured_sample_count": 125,
+        "missing_velocity_samples": 0,
+        "maximum_observed_sample_gap_s": 0.10000000000005116,
+        "source_field": "A_joint_velocity_rad_s",
+        "no_interpolation_or_smoothing": true
+      },
+      {
+        "task_prefix": "A_exit_from_support",
+        "arm": "A",
+        "actual_start_s": 63.92000000000439,
+        "actual_end_s": 72.78000000000266,
+        "actual_elapsed_s": 8.859999999998266,
+        "measured_sample_count": 89,
+        "missing_velocity_samples": 0,
+        "maximum_observed_sample_gap_s": 0.09999999999998721,
+        "source_field": "A_joint_velocity_rad_s",
+        "no_interpolation_or_smoothing": true
+      }
+    ]
+  },
+  "figures": [
+    {
+      "path": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_candidate\\figures\\01_actual_time_and_boundary_stops.png",
+      "sha256": "2fb96bae4ba7032402ce189596c7e43a395dc448d7a4e00f363a85fb21244b27"
+    },
+    {
+      "path": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_candidate\\figures\\01_actual_time_and_boundary_stops.svg",
+      "sha256": "27a4a0a117b84487048979bbf49ad987e0240aab9d37dd3af48a832636b690c8"
+    },
+    {
+      "path": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_candidate\\figures\\02_measured_joint_velocity.png",
+      "sha256": "bff942d93283acc7968d9281a785b978029c8c6cc3efdef848d8511188869107"
+    },
+    {
+      "path": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_candidate\\figures\\02_measured_joint_velocity.svg",
+      "sha256": "52aa14fd7367d7e448a9d37669fe8664a7a942c8ef3839ab4fe34bf3c14979f5"
+    },
+    {
+      "path": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_candidate\\figures\\03_loads_errors_and_conditions.png",
+      "sha256": "434c13c4b0bdbde301447a67c0ea5080285bc50d6ae642594b8082210a04f845"
+    },
+    {
+      "path": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_candidate\\figures\\03_loads_errors_and_conditions.svg",
+      "sha256": "ada841174cadbd40734abbd1e08203077be15b00fd8c023c6b4426794a55b5e3"
+    }
+  ],
+  "input_artifact_hashes": {
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\backups\\smooth_motion_baseline_20261104_01\\results\\apex\\tpg.json": "d981f1c901ed66763841068b67ebad6e20895c48aa53a3026812b17389fe0b06",
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\backups\\smooth_motion_baseline_20261104_01\\results\\apex\\execution.json": "314e6e0c5a1575f5db0bd9f228226f4ebda72b6efb7e24d7031dc2212d11cf3e",
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\backups\\smooth_motion_baseline_20261104_01\\results\\apex\\pipeline_manifest.json": "44292631e7f11fd3a88a412eec25b60e05685b3ee75f477002453fa6bf2e4cf9",
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\backups\\smooth_motion_baseline_20261104_01\\results\\apex\\allocation.json": "43f73ea0ec62908f897985ca3894b8635f64399c46506e47d6a8051217166c42",
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\backups\\smooth_motion_baseline_20261104_01\\results\\apex\\nominal_geometry_validation.json": "4c56460781a2c2ed14cb051d04df6d9754bb909981f9ffbd5e764acac62ef215",
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\apex\\tpg.json": "f10f8504015c39fae780f6dcb24f1e3de2179120b9c049942a48fbea6d736662",
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\apex\\execution.json": "a53e522639746b99e12648c3150fbc8aecddba8bae92dc47e0887e9be9ef9611",
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\apex\\pipeline_manifest.json": "743a74dc2fc02953e0c4eb2eaa95e95a4aa420d350585cab8cf4055324ebba09",
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\apex\\allocation.json": "3b77dd5f6bbf6057a2b5ce8d5dc0801632d4c8335bacb1609c076f29622cbef7",
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\apex\\nominal_geometry_validation.json": "6d9c2ff1c52dcbf26399571a2f1d70c640a1ee10e2236de30071a89ee24fcfb1"
+  },
+  "notes": [
+    "Raw sampled velocities only; no target-as-measurement substitution.",
+    "Different node counts imply different stopping denominators; counts are not isolated causal effects.",
+    "Full source scene hash and run IDs printed; source evidence artifacts are not overwritten."
+  ]
+}

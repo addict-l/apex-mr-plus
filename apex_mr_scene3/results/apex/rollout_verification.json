@@ -1,0 +1,281 @@
+{
+  "kind": "nominal_geometric_rollout_verification",
+  "step_s": 0.06,
+  "nominal_makespan_s": 302.9424911288946,
+  "planned_samples": 5403,
+  "tested_samples": 5403,
+  "batch_calls": 43,
+  "coverage_complete": true,
+  "batch_statistics": [
+    {
+      "start_s": 0.0,
+      "end_s": 7.199999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 7.26,
+      "end_s": 14.34,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 14.399999999999999,
+      "end_s": 21.779999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 21.84,
+      "end_s": 28.919999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 28.98,
+      "end_s": 36.0,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 36.059999999999995,
+      "end_s": 43.379999999999995,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 43.44,
+      "end_s": 50.534072990757586,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 50.58,
+      "end_s": 57.48,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 57.501423765775954,
+      "end_s": 64.53423529882673,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 64.56,
+      "end_s": 71.28,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 71.34,
+      "end_s": 77.94,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 78.0,
+      "end_s": 85.38,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 85.44,
+      "end_s": 92.75999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 92.82,
+      "end_s": 99.66,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 99.72,
+      "end_s": 106.74,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 106.8,
+      "end_s": 113.75999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 113.82,
+      "end_s": 120.47999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 120.53999999999999,
+      "end_s": 127.61999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 127.67999999999999,
+      "end_s": 134.82,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 134.88,
+      "end_s": 142.26,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 142.32,
+      "end_s": 149.7,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 149.76,
+      "end_s": 157.15542112334734,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 157.2,
+      "end_s": 163.98,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 164.00134531207846,
+      "end_s": 171.29999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 171.35999999999999,
+      "end_s": 178.44,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 178.5,
+      "end_s": 185.88,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 185.94,
+      "end_s": 193.38,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 193.44,
+      "end_s": 200.38579097387162,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 200.4,
+      "end_s": 207.48,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 207.54,
+      "end_s": 214.5,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 214.56,
+      "end_s": 221.88,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 221.94,
+      "end_s": 229.14,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 229.2,
+      "end_s": 236.45999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 236.51999999999998,
+      "end_s": 244.01999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 244.07999999999998,
+      "end_s": 251.57999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 251.64,
+      "end_s": 258.65999999999997,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 258.71999999999997,
+      "end_s": 265.92,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 265.98,
+      "end_s": 273.12,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 273.15233199876246,
+      "end_s": 280.2,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 280.2013949181962,
+      "end_s": 287.15999999999997,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 287.21999999999997,
+      "end_s": 294.36,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 294.42,
+      "end_s": 301.5,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 301.56,
+      "end_s": 302.9424911288946,
+      "samples": 27,
+      "invalid_samples": 0
+    }
+  ],
+  "first_violation": null,
+  "no_sampled_collision": true,
+  "nominal_world_state_reconstructed": true,
+  "world_state_gaps": [],
+  "missing_source_poses": [],
+  "stationary_waiting_poses_included": true,
+  "valid": true,
+  "continuous_collision_guarantee": false,
+  "dynamics_or_force_verified": false,
+  "world_state_basis": "cfg source poses + declared pick payload transforms + completed place goal poses",
+  "trajectory_timing_basis": "motion_segments quintic timing when supplied; otherwise reference-polyline arclength",
+  "wall_s": 27.319938300002832
+}

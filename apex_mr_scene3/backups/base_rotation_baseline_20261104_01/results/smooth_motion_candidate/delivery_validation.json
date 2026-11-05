@@ -1,0 +1,26 @@
+{
+  "run_id": "20261104T163855Z-0804c434",
+  "success": true,
+  "checks": {
+    "main_matches_planned": true,
+    "frozen_inputs_match": true,
+    "simulation_time_zero": true,
+    "scheduler_present": true,
+    "complete_program": true,
+    "shared_profiles_present": true,
+    "six_validated_C2_macros": true,
+    "unchanged_contact_limits": true,
+    "actual_load_proof_required": true,
+    "initial_object_positions": true
+  },
+  "main_scene_sha256": "dd15a73951dae319dbd638b3ac72c3faeab22f504de959ac41aec12e5c423199",
+  "source_scene_sha256": "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04",
+  "initial_position_errors_m": {
+    "K2": 0.0,
+    "K1": 0.0,
+    "Gate": 0.0,
+    "TemporarySupport": 0.0,
+    "Bridge": 2.0014830212433605e-16
+  },
+  "scope": "Cold initial-state load; no additional execution claimed"
+}

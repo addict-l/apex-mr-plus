@@ -1,0 +1,5 @@
+{
+  "support_extension_m": 0.010,
+  "assembly_tool_force_limit_N": 40.0,
+  "assembly_tool_torque_limit_Nm": 8.0
+}

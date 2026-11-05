@@ -1,0 +1,589 @@
+{
+  "schema_version": 1,
+  "stage": "symbolic_design_only",
+  "evidence_scope": "Finite action-DAG search and symbolic event replay; not motion TPG or dynamics.",
+  "assumptions": {
+    "initial_state": "Beam held by A; B empty; support parked; K1/K2 in A-only supply.",
+    "assembly": "K1 then K2 establish permanent support; gate is a later non-load-bearing closure.",
+    "A_exclusive_supply": "Declared access constraint; not an IK reachability certificate.",
+    "buffer_capacity": 1,
+    "duration_source": "Illustrative nominal seconds; not robot measurements.",
+    "required_reaction_N": 17.242035714285713,
+    "reaction_safety_factor": 1.5,
+    "design_reaction_N": 25.86305357142857,
+    "reaction_model": "(.45*9.81*.26 + 8*.46)/.28; vertical moment balance only.",
+    "minimum_contact_overlap_m": 0.01,
+    "candidate_contact_and_load": "Declared design inputs, not measured or geometrically certified.",
+    "unload": "Permanent structure verified before 8 mm jack lowering and extraction.",
+    "objective": "nominal makespan + .25*A support occupancy + .10*action count",
+    "search_scope": "12 candidate/order/supply combinations with deterministic list scheduling; no global TAMP optimality claim.",
+    "gate_trap": "Declared inner-pocket extraction guard; no swept-volume or robot collision proof."
+  },
+  "candidate_decisions": [
+    {
+      "candidate": "outer_front",
+      "removal_order": "after_gate",
+      "supply_order": [
+        "K1",
+        "K2"
+      ],
+      "feasible": true,
+      "makespan_s": 37.0,
+      "A_support_occupancy_s": 9.0,
+      "action_count": 16,
+      "objective": 40.85
+    },
+    {
+      "candidate": "outer_front",
+      "removal_order": "after_gate",
+      "supply_order": [
+        "K2",
+        "K1"
+      ],
+      "feasible": false,
+      "reason": "dependency_cycle_or_buffer_deadlock"
+    },
+    {
+      "candidate": "outer_front",
+      "removal_order": "before_gate",
+      "supply_order": [
+        "K1",
+        "K2"
+      ],
+      "feasible": true,
+      "makespan_s": 37.0,
+      "A_support_occupancy_s": 9.0,
+      "action_count": 16,
+      "objective": 40.85
+    },
+    {
+      "candidate": "outer_front",
+      "removal_order": "before_gate",
+      "supply_order": [
+        "K2",
+        "K1"
+      ],
+      "feasible": false,
+      "reason": "dependency_cycle_or_buffer_deadlock"
+    },
+    {
+      "candidate": "inner_pocket",
+      "removal_order": "after_gate",
+      "supply_order": [
+        "K1",
+        "K2"
+      ],
+      "feasible": false,
+      "reason": "support_trapped_by_closed_gate"
+    },
+    {
+      "candidate": "inner_pocket",
+      "removal_order": "after_gate",
+      "supply_order": [
+        "K2",
+        "K1"
+      ],
+      "feasible": false,
+      "reason": "dependency_cycle_or_buffer_deadlock"
+    },
+    {
+      "candidate": "inner_pocket",
+      "removal_order": "before_gate",
+      "supply_order": [
+        "K1",
+        "K2"
+      ],
+      "feasible": true,
+      "makespan_s": 41.0,
+      "A_support_occupancy_s": 7.0,
+      "action_count": 16,
+      "objective": 44.35
+    },
+    {
+      "candidate": "inner_pocket",
+      "removal_order": "before_gate",
+      "supply_order": [
+        "K2",
+        "K1"
+      ],
+      "feasible": false,
+      "reason": "dependency_cycle_or_buffer_deadlock"
+    },
+    {
+      "candidate": "weak_narrow",
+      "removal_order": "after_gate",
+      "supply_order": [
+        "K1",
+        "K2"
+      ],
+      "feasible": false,
+      "reason": "insufficient_declared_contact_overlap"
+    },
+    {
+      "candidate": "weak_narrow",
+      "removal_order": "after_gate",
+      "supply_order": [
+        "K2",
+        "K1"
+      ],
+      "feasible": false,
+      "reason": "insufficient_declared_contact_overlap"
+    },
+    {
+      "candidate": "weak_narrow",
+      "removal_order": "before_gate",
+      "supply_order": [
+        "K1",
+        "K2"
+      ],
+      "feasible": false,
+      "reason": "insufficient_declared_contact_overlap"
+    },
+    {
+      "candidate": "weak_narrow",
+      "removal_order": "before_gate",
+      "supply_order": [
+        "K2",
+        "K1"
+      ],
+      "feasible": false,
+      "reason": "insufficient_declared_contact_overlap"
+    }
+  ],
+  "selected_plan": {
+    "candidate": {
+      "id": "outer_front",
+      "rated_load_N": 40.0,
+      "contact_overlap_m": 0.04,
+      "place_duration_s": 6.0,
+      "extract_duration_s": 4.0,
+      "blocked_after_gate": false
+    },
+    "removal_order": "after_gate",
+    "supply_order": [
+      "K1",
+      "K2"
+    ],
+    "actions": [
+      {
+        "id": "place_support",
+        "arm": "B",
+        "nominal_duration_s": 6.0,
+        "predecessors": [],
+        "part": null,
+        "start_s": 0.0,
+        "end_s": 6.0
+      },
+      {
+        "id": "verify_support_load",
+        "arm": "B",
+        "nominal_duration_s": 2.0,
+        "predecessors": [
+          "place_support"
+        ],
+        "part": null,
+        "start_s": 6.0,
+        "end_s": 8.0
+      },
+      {
+        "id": "release_A",
+        "arm": "A",
+        "nominal_duration_s": 1.0,
+        "predecessors": [
+          "verify_support_load"
+        ],
+        "part": null,
+        "start_s": 8.0,
+        "end_s": 9.0
+      },
+      {
+        "id": "fetch_K1",
+        "arm": "A",
+        "nominal_duration_s": 4.0,
+        "predecessors": [
+          "release_A"
+        ],
+        "part": "K1",
+        "start_s": 9.0,
+        "end_s": 13.0
+      },
+      {
+        "id": "deposit_K1",
+        "arm": "A",
+        "nominal_duration_s": 1.0,
+        "predecessors": [
+          "fetch_K1"
+        ],
+        "part": "K1",
+        "start_s": 13.0,
+        "end_s": 14.0
+      },
+      {
+        "id": "fetch_K2",
+        "arm": "A",
+        "nominal_duration_s": 4.0,
+        "predecessors": [
+          "deposit_K1"
+        ],
+        "part": "K2",
+        "start_s": 14.0,
+        "end_s": 18.0
+      },
+      {
+        "id": "pick_K1",
+        "arm": "B",
+        "nominal_duration_s": 1.0,
+        "predecessors": [
+          "deposit_K1"
+        ],
+        "part": "K1",
+        "start_s": 14.0,
+        "end_s": 15.0
+      },
+      {
+        "id": "install_K1",
+        "arm": "B",
+        "nominal_duration_s": 4.0,
+        "predecessors": [
+          "pick_K1"
+        ],
+        "part": "K1",
+        "start_s": 15.0,
+        "end_s": 19.0
+      },
+      {
+        "id": "deposit_K2",
+        "arm": "A",
+        "nominal_duration_s": 1.0,
+        "predecessors": [
+          "fetch_K2",
+          "pick_K1"
+        ],
+        "part": "K2",
+        "start_s": 18.0,
+        "end_s": 19.0
+      },
+      {
+        "id": "pick_K2",
+        "arm": "B",
+        "nominal_duration_s": 1.0,
+        "predecessors": [
+          "deposit_K2",
+          "install_K1"
+        ],
+        "part": "K2",
+        "start_s": 19.0,
+        "end_s": 20.0
+      },
+      {
+        "id": "install_K2",
+        "arm": "B",
+        "nominal_duration_s": 4.0,
+        "predecessors": [
+          "pick_K2"
+        ],
+        "part": "K2",
+        "start_s": 20.0,
+        "end_s": 24.0
+      },
+      {
+        "id": "verify_permanent_structure",
+        "arm": "B",
+        "nominal_duration_s": 2.0,
+        "predecessors": [
+          "install_K2"
+        ],
+        "part": null,
+        "start_s": 24.0,
+        "end_s": 26.0
+      },
+      {
+        "id": "close_gate",
+        "arm": "B",
+        "nominal_duration_s": 4.0,
+        "predecessors": [
+          "verify_permanent_structure"
+        ],
+        "part": null,
+        "start_s": 26.0,
+        "end_s": 30.0
+      },
+      {
+        "id": "unload_support",
+        "arm": "B",
+        "nominal_duration_s": 1.0,
+        "predecessors": [
+          "verify_permanent_structure",
+          "close_gate"
+        ],
+        "part": null,
+        "start_s": 30.0,
+        "end_s": 31.0
+      },
+      {
+        "id": "extract_support",
+        "arm": "B",
+        "nominal_duration_s": 4.0,
+        "predecessors": [
+          "unload_support"
+        ],
+        "part": null,
+        "start_s": 31.0,
+        "end_s": 35.0
+      },
+      {
+        "id": "return_support",
+        "arm": "B",
+        "nominal_duration_s": 2.0,
+        "predecessors": [
+          "extract_support"
+        ],
+        "part": null,
+        "start_s": 35.0,
+        "end_s": 37.0
+      }
+    ],
+    "validation": {
+      "valid_symbolic_plan": true,
+      "checked": [
+        "acyclic_dependencies",
+        "predecessor_completion",
+        "single_arm_capacity",
+        "buffer_capacity_one",
+        "load_handoff_before_release",
+        "A_exclusive_supply",
+        "permanent_before_unload",
+        "gate_extraction_guard",
+        "support_returned"
+      ],
+      "final_state": {
+        "holding_initial_beam": false,
+        "support": "parked",
+        "load_verified": false,
+        "permanent_verified": true,
+        "gate_closed": true,
+        "held_A": null,
+        "held_B": null,
+        "buffer": null,
+        "installed": [
+          "K1",
+          "K2"
+        ],
+        "supply": []
+      }
+    },
+    "edges": [
+      {
+        "from": "place_support",
+        "to": "verify_support_load"
+      },
+      {
+        "from": "verify_support_load",
+        "to": "release_A"
+      },
+      {
+        "from": "release_A",
+        "to": "fetch_K1"
+      },
+      {
+        "from": "fetch_K1",
+        "to": "deposit_K1"
+      },
+      {
+        "from": "deposit_K1",
+        "to": "fetch_K2"
+      },
+      {
+        "from": "deposit_K1",
+        "to": "pick_K1"
+      },
+      {
+        "from": "pick_K1",
+        "to": "install_K1"
+      },
+      {
+        "from": "fetch_K2",
+        "to": "deposit_K2"
+      },
+      {
+        "from": "pick_K1",
+        "to": "deposit_K2"
+      },
+      {
+        "from": "deposit_K2",
+        "to": "pick_K2"
+      },
+      {
+        "from": "install_K1",
+        "to": "pick_K2"
+      },
+      {
+        "from": "pick_K2",
+        "to": "install_K2"
+      },
+      {
+        "from": "install_K2",
+        "to": "verify_permanent_structure"
+      },
+      {
+        "from": "verify_permanent_structure",
+        "to": "close_gate"
+      },
+      {
+        "from": "verify_permanent_structure",
+        "to": "unload_support"
+      },
+      {
+        "from": "close_gate",
+        "to": "unload_support"
+      },
+      {
+        "from": "unload_support",
+        "to": "extract_support"
+      },
+      {
+        "from": "extract_support",
+        "to": "return_support"
+      }
+    ],
+    "resource_occupancy": [
+      {
+        "resource": "A",
+        "owner": "initial_beam_hold",
+        "start_s": 0.0,
+        "end_s": 8.0
+      },
+      {
+        "resource": "A",
+        "owner": "release_A",
+        "start_s": 8.0,
+        "end_s": 9.0
+      },
+      {
+        "resource": "A",
+        "owner": "fetch_K1",
+        "start_s": 9.0,
+        "end_s": 13.0
+      },
+      {
+        "resource": "A",
+        "owner": "deposit_K1",
+        "start_s": 13.0,
+        "end_s": 14.0
+      },
+      {
+        "resource": "A",
+        "owner": "fetch_K2",
+        "start_s": 14.0,
+        "end_s": 18.0
+      },
+      {
+        "resource": "A",
+        "owner": "deposit_K2",
+        "start_s": 18.0,
+        "end_s": 19.0
+      },
+      {
+        "resource": "B",
+        "owner": "place_support",
+        "start_s": 0.0,
+        "end_s": 6.0
+      },
+      {
+        "resource": "B",
+        "owner": "verify_support_load",
+        "start_s": 6.0,
+        "end_s": 8.0
+      },
+      {
+        "resource": "B",
+        "owner": "pick_K1",
+        "start_s": 14.0,
+        "end_s": 15.0
+      },
+      {
+        "resource": "B",
+        "owner": "install_K1",
+        "start_s": 15.0,
+        "end_s": 19.0
+      },
+      {
+        "resource": "B",
+        "owner": "pick_K2",
+        "start_s": 19.0,
+        "end_s": 20.0
+      },
+      {
+        "resource": "B",
+        "owner": "install_K2",
+        "start_s": 20.0,
+        "end_s": 24.0
+      },
+      {
+        "resource": "B",
+        "owner": "verify_permanent_structure",
+        "start_s": 24.0,
+        "end_s": 26.0
+      },
+      {
+        "resource": "B",
+        "owner": "close_gate",
+        "start_s": 26.0,
+        "end_s": 30.0
+      },
+      {
+        "resource": "B",
+        "owner": "unload_support",
+        "start_s": 30.0,
+        "end_s": 31.0
+      },
+      {
+        "resource": "B",
+        "owner": "extract_support",
+        "start_s": 31.0,
+        "end_s": 35.0
+      },
+      {
+        "resource": "B",
+        "owner": "return_support",
+        "start_s": 35.0,
+        "end_s": 37.0
+      },
+      {
+        "resource": "shared_buffer",
+        "owner": "K1",
+        "start_s": 13.0,
+        "end_s": 15.0
+      },
+      {
+        "resource": "shared_buffer",
+        "owner": "K2",
+        "start_s": 18.0,
+        "end_s": 20.0
+      },
+      {
+        "resource": "support_fixture",
+        "owner": "temporary_support",
+        "start_s": 0.0,
+        "end_s": 37.0
+      }
+    ],
+    "nominal_metrics": {
+      "makespan_s": 37.0,
+      "A_support_occupancy_s": 9.0,
+      "action_count": 16,
+      "objective": 40.85
+    }
+  },
+  "counts": {
+    "evaluated": 12,
+    "feasible": 3,
+    "rejected": 9
+  },
+  "remaining_validation": [
+    "UR5 IK and collision-free approach/withdrawal paths",
+    "Support and connector force/moment/stability model",
+    "Measured load handoff and permanent support acceptance",
+    "Dynamic execution and repeatability"
+  ]
+}

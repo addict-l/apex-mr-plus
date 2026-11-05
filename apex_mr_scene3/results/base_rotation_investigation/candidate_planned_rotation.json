@@ -1,0 +1,5654 @@
+{
+  "schema_version": 1,
+  "run_id": null,
+  "scope": "planned_candidate_only",
+  "joint": "UR5 joint 1 (base), q[0]",
+  "limit_deg": 180.0,
+  "task_count": 134,
+  "actual_makespan_s": null,
+  "allocation": null,
+  "focus_tasks": [
+    {
+      "task": "pick_support_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 0,
+      "q_start": [
+        -1.3742187234102956,
+        1.2389301902143843,
+        -1.572353406970473,
+        1.9041820476107,
+        -1.5706878338204409,
+        0.19654087532175812
+      ],
+      "q_end": [
+        -3.891136449890836,
+        0.08110057710191665,
+        2.290396881803299,
+        0.7700953945608913,
+        -0.7495437493247992,
+        3.141592648167607
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -78.73693297926576,
+        "end_deg": -222.94569608826325,
+        "minimum_deg": -222.94569608826325,
+        "maximum_deg": -78.73693297926576,
+        "range_deg": 144.2087631089975,
+        "net_change_deg": -144.2087631089975,
+        "total_variation_deg": 144.2087631089975,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 144.2087631089975,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_route_front",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 5,
+      "q_start": [
+        -3.5135144494283246,
+        -0.2215567814146187,
+        2.1100752054719,
+        1.2530741687417626,
+        -0.371921788381667,
+        3.1415927083865163
+      ],
+      "q_end": [
+        -0.570489204718964,
+        -0.12243884055078302,
+        2.003472917745535,
+        1.2605585257638785,
+        2.5711034943990683,
+        3.1415926509739545
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -201.3095492104741,
+        "end_deg": -32.686623688171444,
+        "minimum_deg": -201.30956078155106,
+        "maximum_deg": -32.686623688171444,
+        "range_deg": 168.6229370933796,
+        "net_change_deg": 168.6229255223027,
+        "total_variation_deg": 168.6229486644561,
+        "backtracking_deg": 2.3142153404874967e-05,
+        "shortest_endpoint_circular_arc_deg": 168.6229255223027,
+        "variation_excess_over_endpoint_arc_deg": 2.3142153404874967e-05
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "return_support_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 105,
+      "q_start": [
+        -1.0956956741161292,
+        0.3445584187015806,
+        1.6074960994563636,
+        1.1895381166092058,
+        2.0458969672368155,
+        -3.1415926626764588
+      ],
+      "q_end": [
+        -3.5135144479732583,
+        -0.20267385257916887,
+        2.1500194635557124,
+        1.1942469772519617,
+        -0.37192179271654036,
+        -3.141592590794255
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.77873775759584,
+        "end_deg": -201.30954912710496,
+        "minimum_deg": -201.30956078155106,
+        "maximum_deg": -62.77873775759584,
+        "range_deg": 138.5308230239552,
+        "net_change_deg": -138.5308113695091,
+        "total_variation_deg": 162.63386012580696,
+        "backtracking_deg": 24.10304875629783,
+        "shortest_endpoint_circular_arc_deg": 138.5308113695091,
+        "variation_excess_over_endpoint_arc_deg": 24.10304875629783
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_gate_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 110,
+      "q_start": [
+        -3.56,
+        0.03627473511554027,
+        1.943369318263559,
+        0.8602239426940349,
+        -0.7251999543181373,
+        -3.0874693017087322
+      ],
+      "q_end": [
+        -0.4719658538341749,
+        0.8288899475209361,
+        0.918877817047171,
+        1.3938248330421894,
+        -2.0427622032534294,
+        -1.570796310658519
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -203.97297506657307,
+        "end_deg": -27.041651498986525,
+        "minimum_deg": -203.97297506657307,
+        "maximum_deg": -27.041651498986525,
+        "range_deg": 176.93132356758656,
+        "net_change_deg": 176.93132356758656,
+        "total_variation_deg": 176.93132356758608,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 176.93132356758656,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_gate_lift",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 113,
+      "q_start": [
+        -0.4719659154799585,
+        0.9380865344616014,
+        1.0618665904524882,
+        1.1416396523576293,
+        -2.042761981226386,
+        -1.5707962209645447
+      ],
+      "q_end": [
+        -0.47196583894223704,
+        0.8469699065695545,
+        0.964115342542041,
+        1.330506846824825,
+        -2.0427623713620138,
+        -1.5707960773666814
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -27.041655031029748,
+        "end_deg": -27.041650645741335,
+        "minimum_deg": -27.041655031029748,
+        "maximum_deg": -27.04165061605375,
+        "range_deg": 4.4149759987985255e-06,
+        "net_change_deg": 4.3852884119712696e-06,
+        "total_variation_deg": 4.444663585625782e-06,
+        "backtracking_deg": 5.937517365451296e-08,
+        "shortest_endpoint_circular_arc_deg": 4.385288411971269e-06,
+        "variation_excess_over_endpoint_arc_deg": 5.9375173654513713e-08
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 115,
+      "q_start": [
+        -0.47196583894223704,
+        0.8469699065695545,
+        0.964115342542041,
+        1.330506846824825,
+        -2.0427623713620138,
+        -1.5707960773666814
+      ],
+      "q_end": [
+        -1.4059935944568993,
+        0.7365835202777677,
+        1.0676162671941873,
+        1.3373753717954044,
+        -2.9767899211830926,
+        -1.5708137753873876
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -27.041650645741335,
+        "end_deg": -80.55749898480859,
+        "minimum_deg": -80.55749898480859,
+        "maximum_deg": -21.27289408145069,
+        "range_deg": 59.284604903357895,
+        "net_change_deg": -53.515848339067254,
+        "total_variation_deg": 65.05336146764854,
+        "backtracking_deg": 11.537513128581285,
+        "shortest_endpoint_circular_arc_deg": 53.515848339067254,
+        "variation_excess_over_endpoint_arc_deg": 11.537513128581285
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    }
+  ],
+  "red_tasks": [],
+  "statuses": {
+    "OK": 134
+  },
+  "all_tasks": [
+    {
+      "task": "pick_support_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 0,
+      "q_start": [
+        -1.3742187234102956,
+        1.2389301902143843,
+        -1.572353406970473,
+        1.9041820476107,
+        -1.5706878338204409,
+        0.19654087532175812
+      ],
+      "q_end": [
+        -3.891136449890836,
+        0.08110057710191665,
+        2.290396881803299,
+        0.7700953945608913,
+        -0.7495437493247992,
+        3.141592648167607
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -78.73693297926576,
+        "end_deg": -222.94569608826325,
+        "minimum_deg": -222.94569608826325,
+        "maximum_deg": -78.73693297926576,
+        "range_deg": 144.2087631089975,
+        "net_change_deg": -144.2087631089975,
+        "total_variation_deg": 144.2087631089975,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 144.2087631089975,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_support_contact",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 1,
+      "q_start": [
+        -3.891136449890836,
+        0.08110057710191666,
+        2.290396881803299,
+        0.7700953945608913,
+        -0.7495437493247992,
+        3.141592648167607
+      ],
+      "q_end": [
+        -3.513514452547445,
+        0.01757599180233327,
+        2.358811130019725,
+        0.765205976188663,
+        -0.37192176169340607,
+        3.1415923792349125
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -222.94569608826325,
+        "end_deg": -201.30954938918657,
+        "minimum_deg": -222.94569608826325,
+        "maximum_deg": -201.30954938918657,
+        "range_deg": 21.636146699076686,
+        "net_change_deg": 21.636146699076686,
+        "total_variation_deg": 21.636146699076686,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 21.63614669907669,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_support",
+      "arm": "B",
+      "kind": "grasp",
+      "part": "TemporarySupport",
+      "reference_index": 2,
+      "q_start": [
+        -3.513514452547445,
+        0.01757599180233327,
+        2.358811130019725,
+        0.765205976188663,
+        -0.37192176169340607,
+        3.1415923792349125
+      ],
+      "q_end": [
+        -3.513514452547445,
+        0.01757599180233327,
+        2.358811130019725,
+        0.765205976188663,
+        -0.37192176169340607,
+        3.1415923792349125
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -201.30954938918657,
+        "end_deg": -201.30954938918657,
+        "minimum_deg": -201.30954938918657,
+        "maximum_deg": -201.30954938918657,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_support_lift",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 3,
+      "q_start": [
+        -3.513514452547445,
+        0.01757599180233327,
+        2.358811130019725,
+        0.765205976188663,
+        -0.37192176169340607,
+        3.1415923792349125
+      ],
+      "q_end": [
+        -3.5135144494283246,
+        -0.2215567814146187,
+        2.1100752054719,
+        1.2530741687417626,
+        -0.371921788381667,
+        3.1415927083865163
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -201.30954938918657,
+        "end_deg": -201.3095492104741,
+        "minimum_deg": -201.30954938918657,
+        "maximum_deg": -201.3095492104741,
+        "range_deg": 1.7871244144112807e-07,
+        "net_change_deg": 1.7871244144112807e-07,
+        "total_variation_deg": 1.7871244144112807e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.7871244144112807e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_support_lift_contact_clear",
+      "arm": "B",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 4,
+      "q_start": [
+        -3.5135144494283246,
+        -0.2215567814146187,
+        2.1100752054719,
+        1.2530741687417626,
+        -0.371921788381667,
+        3.1415927083865163
+      ],
+      "q_end": [
+        -3.5135144494283246,
+        -0.2215567814146187,
+        2.1100752054719,
+        1.2530741687417626,
+        -0.371921788381667,
+        3.1415927083865163
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -201.3095492104741,
+        "end_deg": -201.3095492104741,
+        "minimum_deg": -201.3095492104741,
+        "maximum_deg": -201.3095492104741,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_route_front",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 5,
+      "q_start": [
+        -3.5135144494283246,
+        -0.2215567814146187,
+        2.1100752054719,
+        1.2530741687417626,
+        -0.371921788381667,
+        3.1415927083865163
+      ],
+      "q_end": [
+        -0.570489204718964,
+        -0.12243884055078302,
+        2.003472917745535,
+        1.2605585257638785,
+        2.5711034943990683,
+        3.1415926509739545
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -201.3095492104741,
+        "end_deg": -32.686623688171444,
+        "minimum_deg": -201.30956078155106,
+        "maximum_deg": -32.686623688171444,
+        "range_deg": 168.6229370933796,
+        "net_change_deg": 168.6229255223027,
+        "total_variation_deg": 168.6229486644561,
+        "backtracking_deg": 2.3142153404874967e-05,
+        "shortest_endpoint_circular_arc_deg": 168.6229255223027,
+        "variation_excess_over_endpoint_arc_deg": 2.3142153404874967e-05
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_high_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 6,
+      "q_start": [
+        -0.5704892047189642,
+        -0.12243884055078302,
+        2.003472917745535,
+        1.2605585257638785,
+        2.571103494399068,
+        3.1415926509739545
+      ],
+      "q_end": [
+        -1.0956956819298986,
+        0.34455840882338173,
+        1.6074961217119377,
+        1.1895380837401746,
+        2.0458969406863234,
+        3.141592635993021
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -32.68662368817146,
+        "end_deg": -62.77873820529185,
+        "minimum_deg": -62.77873820529185,
+        "maximum_deg": -32.68662368817146,
+        "range_deg": 30.092114517120393,
+        "net_change_deg": -30.092114517120393,
+        "total_variation_deg": 30.092114517120393,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 30.092114517120393,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_lower_outside",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 7,
+      "q_start": [
+        -1.0956956819298986,
+        0.34455840882338173,
+        1.6074961217119377,
+        1.1895380837401746,
+        2.0458969406863234,
+        3.141592635993021
+      ],
+      "q_end": [
+        -1.0956956915451965,
+        0.453718759512043,
+        1.727823655367485,
+        0.9600502028967177,
+        2.0458968965679505,
+        3.1415929706641035
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.77873820529185,
+        "end_deg": -62.77873875620784,
+        "minimum_deg": -62.77873875620784,
+        "maximum_deg": -62.77873820529185,
+        "range_deg": 5.509159879285228e-07,
+        "net_change_deg": -5.509159879285228e-07,
+        "total_variation_deg": 5.509159879285228e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 5.509159879285228e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_slide_in_01",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 8,
+      "q_start": [
+        -1.0956956915451965,
+        0.453718759512043,
+        1.727823655367485,
+        0.9600502028967177,
+        2.0458968965679505,
+        3.1415929706641035
+      ],
+      "q_end": [
+        -1.129220174713721,
+        0.4303709417267677,
+        1.764449671109769,
+        0.9467720287818588,
+        2.01237247564963,
+        3.141592647719854
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.77873875620784,
+        "end_deg": -64.69955015212166,
+        "minimum_deg": -64.69955015212166,
+        "maximum_deg": -62.77873875620784,
+        "range_deg": 1.920811395913814,
+        "net_change_deg": -1.920811395913814,
+        "total_variation_deg": 1.920811395913814,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.920811395913814,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_slide_in_02",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 9,
+      "q_start": [
+        -1.129220174713721,
+        0.4303709417267677,
+        1.764449671109769,
+        0.9467720287818588,
+        2.01237247564963,
+        3.141592647719854
+      ],
+      "q_end": [
+        -1.16410962409252,
+        0.4079099877054568,
+        1.7991752045897067,
+        0.9345074233139329,
+        1.9774829785652213,
+        3.141592898180592
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -64.69955015212166,
+        "end_deg": -66.69856835106216,
+        "minimum_deg": -66.69856835106216,
+        "maximum_deg": -64.69955015212166,
+        "range_deg": 1.9990181989405151,
+        "net_change_deg": -1.9990181989405151,
+        "total_variation_deg": 1.9990181989405151,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.9990181989405151,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_slide_in_03",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 10,
+      "q_start": [
+        -1.16410962409252,
+        0.4079099877054568,
+        1.7991752045897067,
+        0.9345074233139329,
+        1.9774829785652213,
+        3.141592898180592
+      ],
+      "q_end": [
+        -1.2003759363813473,
+        0.3863641248360422,
+        1.8319998244318159,
+        0.9232285535242934,
+        1.9412168287624134,
+        3.14159324161261
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -66.69856835106216,
+        "end_deg": -68.7764749837154,
+        "minimum_deg": -68.7764749837154,
+        "maximum_deg": -66.69856835106216,
+        "range_deg": 2.077906632653241,
+        "net_change_deg": -2.077906632653241,
+        "total_variation_deg": 2.077906632653241,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.077906632653241,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_slide_in_04",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 11,
+      "q_start": [
+        -1.2003759363813473,
+        0.3863641248360422,
+        1.8319998244318159,
+        0.9232285535242934,
+        1.9412168287624134,
+        3.14159324161261
+      ],
+      "q_end": [
+        -1.238019615213697,
+        0.36577146177588565,
+        1.862912200199433,
+        0.9129089574457419,
+        1.9035730317696524,
+        3.1415926411683044
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -68.7764749837154,
+        "end_deg": -70.933298906155,
+        "minimum_deg": -70.933298906155,
+        "maximum_deg": -68.7764749837154,
+        "range_deg": 2.156823922439596,
+        "net_change_deg": -2.156823922439596,
+        "total_variation_deg": 2.156823922439596,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.156823922439596,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_slide_in_05",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 12,
+      "q_start": [
+        -1.238019615213697,
+        0.36577146177588565,
+        1.862912200199433,
+        0.9129089574457419,
+        1.9035730317696524,
+        3.1415926411683044
+      ],
+      "q_end": [
+        -1.277026958937875,
+        0.34617994607303754,
+        1.8918914312259953,
+        0.9035212460238792,
+        1.8645657327806615,
+        3.1415928501171226
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -70.933298906155,
+        "end_deg": -73.16825507156652,
+        "minimum_deg": -73.16825507156652,
+        "maximum_deg": -70.933298906155,
+        "range_deg": 2.2349561654115195,
+        "net_change_deg": -2.2349561654115195,
+        "total_variation_deg": 2.2349561654115195,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.234956165411519,
+        "variation_excess_over_endpoint_arc_deg": 3.975693351829396e-16
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_slide_in_06",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 13,
+      "q_start": [
+        -1.277026958937875,
+        0.34617994607303754,
+        1.8918914312259953,
+        0.9035212460238792,
+        1.8645657327806615,
+        3.1415928501171226
+      ],
+      "q_end": [
+        -1.3173684476935967,
+        0.327646337223557,
+        1.9189084366715126,
+        0.8950378472893517,
+        1.8242242258443315,
+        3.1415927917798103
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -73.16825507156652,
+        "end_deg": -75.47965211654385,
+        "minimum_deg": -75.47965211654385,
+        "maximum_deg": -73.16825507156652,
+        "range_deg": 2.3113970449773165,
+        "net_change_deg": -2.3113970449773165,
+        "total_variation_deg": 2.3113970449773165,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.3113970449773165,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_slide_in_07",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 14,
+      "q_start": [
+        -1.3173684476935967,
+        0.327646337223557,
+        1.9189084366715126,
+        0.8950378472893517,
+        1.8242242258443315,
+        3.1415927917798103
+      ],
+      "q_end": [
+        -1.3589962695110471,
+        0.3102356243163192,
+        1.9439272746868617,
+        0.8874297465187987,
+        1.7825963647137277,
+        3.1415926516965307
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -75.47965211654385,
+        "end_deg": -77.86475061700635,
+        "minimum_deg": -77.86475061700635,
+        "maximum_deg": -75.47965211654385,
+        "range_deg": 2.3850985004625156,
+        "net_change_deg": -2.3850985004625156,
+        "total_variation_deg": 2.3850985004625156,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.3850985004625156,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_slide_in_08",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 15,
+      "q_start": [
+        -1.3589962695110471,
+        0.3102356243163192,
+        1.9439272746868617,
+        0.8874297465187987,
+        1.7825963647137277,
+        3.1415926516965307
+      ],
+      "q_end": [
+        -1.4018424757687629,
+        0.2940199086669433,
+        1.9669066318694663,
+        0.8806660801001278,
+        1.7397502432503342,
+        3.1415929339512934
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -77.86475061700635,
+        "end_deg": -80.31965740372048,
+        "minimum_deg": -80.31965740372048,
+        "maximum_deg": -77.86475061700635,
+        "range_deg": 2.4549067867141288,
+        "net_change_deg": -2.4549067867141288,
+        "total_variation_deg": 2.4549067867141288,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.4549067867141288,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "support_set_down",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 16,
+      "q_start": [
+        -1.4018424757687629,
+        0.2940199086669433,
+        1.9669066318694663,
+        0.8806660801001278,
+        1.7397502432503342,
+        3.1415929339512934
+      ],
+      "q_end": [
+        -1.4018425115070414,
+        0.29891632579950617,
+        1.9699457305248664,
+        0.8727305935398232,
+        1.7397501250027885,
+        3.1415926528262443
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.31965740372048,
+        "end_deg": -80.31965945137301,
+        "minimum_deg": -80.31965945137301,
+        "maximum_deg": -80.31965740372048,
+        "range_deg": 2.047652528478628e-06,
+        "net_change_deg": -2.047652528478628e-06,
+        "total_variation_deg": 2.047652528478628e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.047652528478628e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "place_support",
+      "arm": "B",
+      "kind": "release_support",
+      "part": "TemporarySupport",
+      "reference_index": 17,
+      "q_start": [
+        -1.4018425115070414,
+        0.29891632579950617,
+        1.9699457305248664,
+        0.8727305935398232,
+        1.7397501250027885,
+        3.1415926528262443
+      ],
+      "q_end": [
+        -1.4018425115070414,
+        0.29891632579950617,
+        1.9699457305248664,
+        0.8727305935398232,
+        1.7397501250027885,
+        3.1415926528262443
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.31965945137301,
+        "end_deg": -80.31965945137301,
+        "minimum_deg": -80.31965945137301,
+        "maximum_deg": -80.31965945137301,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "verify_support",
+      "arm": "B",
+      "kind": "verify_support",
+      "part": "TemporarySupport",
+      "reference_index": 18,
+      "q_start": [
+        -1.4018425115070414,
+        0.29891632579950617,
+        1.9699457305248664,
+        0.8727305935398232,
+        1.7397501250027885,
+        3.1415926528262443
+      ],
+      "q_end": [
+        -1.4018425115070414,
+        0.29891632579950617,
+        1.9699457305248664,
+        0.8727305935398232,
+        1.7397501250027885,
+        3.1415926528262443
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.31965945137301,
+        "end_deg": -80.31965945137301,
+        "minimum_deg": -80.31965945137301,
+        "maximum_deg": -80.31965945137301,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "release_A",
+      "arm": "A",
+      "kind": "release_arm_support",
+      "part": null,
+      "reference_index": 19,
+      "q_start": [
+        -2.0202543124966823,
+        0.646671244000393,
+        1.1821610976426105,
+        1.3127602609233984,
+        -0.44945800781232836,
+        -1.570796275996565
+      ],
+      "q_end": [
+        -2.0202543124966823,
+        0.646671244000393,
+        1.1821610976426105,
+        1.3127602609233984,
+        -0.44945800781232836,
+        -1.570796275996565
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -115.75204564916362,
+        "end_deg": -115.75204564916362,
+        "minimum_deg": -115.75204564916362,
+        "maximum_deg": -115.75204564916362,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_lower_from_support",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 20,
+      "q_start": [
+        -2.0202543124966823,
+        0.646671244000393,
+        1.1821610976426105,
+        1.3127602609233984,
+        -0.44945800781232836,
+        -1.570796275996565
+      ],
+      "q_end": [
+        -2.0202543069258283,
+        0.6723514146221078,
+        1.2319712693146287,
+        1.2372706055753184,
+        -0.4494580171884839,
+        -1.5707966347392668
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -115.75204564916362,
+        "end_deg": -115.75204532997721,
+        "minimum_deg": -115.75204564916362,
+        "maximum_deg": -115.75204532997721,
+        "range_deg": 3.191864225022052e-07,
+        "net_change_deg": 3.191864225022052e-07,
+        "total_variation_deg": 3.191864225022052e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 3.191864225022052e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_deactivate_pad",
+      "arm": "A",
+      "kind": "deactivate_arm_pad",
+      "part": null,
+      "reference_index": 21,
+      "q_start": [
+        -2.0202543069258283,
+        0.6723514146221078,
+        1.2319712693146287,
+        1.2372706055753184,
+        -0.4494580171884839,
+        -1.5707966347392668
+      ],
+      "q_end": [
+        -2.0202543069258283,
+        0.6723514146221078,
+        1.2319712693146287,
+        1.2372706055753184,
+        -0.4494580171884839,
+        -1.5707966347392668
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -115.75204532997721,
+        "end_deg": -115.75204532997721,
+        "minimum_deg": -115.75204532997721,
+        "maximum_deg": -115.75204532997721,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_01",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 22,
+      "q_start": [
+        -2.0202543069258283,
+        0.6723514146221078,
+        1.2319712693146287,
+        1.2372706055753184,
+        -0.4494580171884839,
+        -1.5707966347392668
+      ],
+      "q_end": [
+        -2.0461528340465733,
+        0.6851182457358909,
+        1.2100234645028463,
+        1.246450639247934,
+        -0.47535649219873216,
+        -1.570795929719308
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -115.75204532997721,
+        "end_deg": -117.235921629601,
+        "minimum_deg": -117.235921629601,
+        "maximum_deg": -115.75204532997721,
+        "range_deg": 1.48387629962379,
+        "net_change_deg": -1.48387629962379,
+        "total_variation_deg": 1.48387629962379,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.4838762996237898,
+        "variation_excess_over_endpoint_arc_deg": 1.987846675914698e-16
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_02",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 23,
+      "q_start": [
+        -2.0461528340465733,
+        0.6851182457358909,
+        1.2100234645028463,
+        1.246450639247934,
+        -0.47535649219873216,
+        -1.570795929719308
+      ],
+      "q_end": [
+        -2.071488640232657,
+        0.6991968084729349,
+        1.1856868440612256,
+        1.2567087248525268,
+        -0.5006922910154288,
+        -1.5707959633554058
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -117.235921629601,
+        "end_deg": -118.68755639462503,
+        "minimum_deg": -118.68755639462503,
+        "maximum_deg": -117.235921629601,
+        "range_deg": 1.451634765024043,
+        "net_change_deg": -1.451634765024043,
+        "total_variation_deg": 1.451634765024043,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.4516347650240429,
+        "variation_excess_over_endpoint_arc_deg": 1.987846675914698e-16
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_03",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 24,
+      "q_start": [
+        -2.071488640232657,
+        0.6991968084729349,
+        1.1856868440612256,
+        1.2567087248525268,
+        -0.5006922910154288,
+        -1.5707959633554058
+      ],
+      "q_end": [
+        -2.0962448350461216,
+        0.714614117673653,
+        1.1588775256345385,
+        1.2681008617631058,
+        -0.5254485100246453,
+        -1.5707960820433613
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -118.68755639462503,
+        "end_deg": -120.1059818742402,
+        "minimum_deg": -120.1059818742402,
+        "maximum_deg": -118.68755639462503,
+        "range_deg": 1.4184254796151725,
+        "net_change_deg": -1.4184254796151725,
+        "total_variation_deg": 1.4184254796151725,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.4184254796151725,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_04",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 25,
+      "q_start": [
+        -2.0962448350461216,
+        0.714614117673653,
+        1.1588775256345385,
+        1.2681008617631058,
+        -0.5254485100246453,
+        -1.5707960820433613
+      ],
+      "q_end": [
+        -2.1204082504897848,
+        0.7314072729564401,
+        1.1294905535807296,
+        1.2806946002007904,
+        -0.5496119023804712,
+        -1.5707960255310094
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -120.1059818742402,
+        "end_deg": -121.49044359778334,
+        "minimum_deg": -121.49044359778334,
+        "maximum_deg": -120.1059818742402,
+        "range_deg": 1.384461723543134,
+        "net_change_deg": -1.384461723543134,
+        "total_variation_deg": 1.384461723543134,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.3844617235431342,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_05",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 26,
+      "q_start": [
+        -2.1204082504897848,
+        0.7314072729564401,
+        1.1294905535807296,
+        1.2806946002007904,
+        -0.5496119023804712,
+        -1.5707960255310094
+      ],
+      "q_end": [
+        -2.143969214846369,
+        0.7496265930331768,
+        1.097393825147556,
+        1.2945720037886204,
+        -0.5731728592139888,
+        -1.5707960199801614
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -121.49044359778334,
+        "end_deg": -122.84038741667378,
+        "minimum_deg": -122.84038741667378,
+        "maximum_deg": -121.49044359778334,
+        "range_deg": 1.349943818890438,
+        "net_change_deg": -1.349943818890438,
+        "total_variation_deg": 1.349943818890438,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.3499438188904378,
+        "variation_excess_over_endpoint_arc_deg": 1.987846675914698e-16
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_06",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 27,
+      "q_start": [
+        -2.143969214846369,
+        0.7496265930331768,
+        1.097393825147556,
+        1.2945720037886204,
+        -0.5731728592139888,
+        -1.5707960199801614
+      ],
+      "q_end": [
+        -2.1669213925978896,
+        0.7693388482567057,
+        1.0624212652820195,
+        1.3098322849402342,
+        -0.5961250213074631,
+        -1.5707959768151605
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -122.84038741667378,
+        "end_deg": -124.15545033246998,
+        "minimum_deg": -124.15545033246998,
+        "maximum_deg": -122.84038741667378,
+        "range_deg": 1.3150629157962035,
+        "net_change_deg": -1.3150629157962035,
+        "total_variation_deg": 1.3150629157962035,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.3150629157962035,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_07",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 28,
+      "q_start": [
+        -2.1669213925978896,
+        0.7693388482567057,
+        1.0624212652820195,
+        1.3098322849402342,
+        -0.5961250213074631,
+        -1.5707959768151605
+      ],
+      "q_end": [
+        -2.1892615108236178,
+        0.7906328183935404,
+        1.0243617895268358,
+        1.3265978566363539,
+        -0.618465155412257,
+        -1.5707960708287785
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -124.15545033246998,
+        "end_deg": -125.4354448206275,
+        "minimum_deg": -125.4354448206275,
+        "maximum_deg": -124.15545033246998,
+        "range_deg": 1.2799944881575105,
+        "net_change_deg": -1.2799944881575105,
+        "total_variation_deg": 1.2799944881575105,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.2799944881575105,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_08",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 29,
+      "q_start": [
+        -2.1892615108236178,
+        0.7906328183935404,
+        1.0243617895268358,
+        1.3265978566363539,
+        -0.618465155412257,
+        -1.5707960708287785
+      ],
+      "q_end": [
+        -2.210989137286266,
+        0.8136263104796264,
+        0.9829447218452381,
+        1.3450214187650622,
+        -0.6401927703626096,
+        -1.570796041306034
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -125.4354448206275,
+        "end_deg": -126.680346115774,
+        "minimum_deg": -126.680346115774,
+        "maximum_deg": -125.4354448206275,
+        "range_deg": 1.244901295146507,
+        "net_change_deg": -1.244901295146507,
+        "total_variation_deg": 1.244901295146507,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.244901295146507,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_09",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 30,
+      "q_start": [
+        -2.210989137286266,
+        0.8136263104796264,
+        0.9829447218452381,
+        1.3450214187650622,
+        -0.6401927703626096,
+        -1.570796041306034
+      ],
+      "q_end": [
+        -2.232106373782463,
+        0.8384772517234093,
+        0.9378171595495728,
+        1.365298056614259,
+        -0.6613100109254096,
+        -1.5707960734730213
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -126.680346115774,
+        "end_deg": -127.89027464198573,
+        "minimum_deg": -127.89027464198573,
+        "maximum_deg": -126.680346115774,
+        "range_deg": 1.2099285262117254,
+        "net_change_deg": -1.2099285262117254,
+        "total_variation_deg": 1.2099285262117254,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.2099285262117254,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_10",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 31,
+      "q_start": [
+        -2.232106373782463,
+        0.8384772517234093,
+        0.9378171595495728,
+        1.365298056614259,
+        -0.6613100109254096,
+        -1.5707960734730213
+      ],
+      "q_end": [
+        -2.252617623374823,
+        0.8653997228248518,
+        0.888510562368534,
+        1.3876821809903122,
+        -0.6818212534322801,
+        -1.5707960619997798
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -127.89027464198573,
+        "end_deg": -129.0654826761674,
+        "minimum_deg": -129.0654826761674,
+        "maximum_deg": -127.89027464198573,
+        "range_deg": 1.1752080341816615,
+        "net_change_deg": -1.1752080341816615,
+        "total_variation_deg": 1.1752080341816615,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.1752080341816615,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_11",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 32,
+      "q_start": [
+        -2.252617623374823,
+        0.8653997228248518,
+        0.888510562368534,
+        1.3876821809903122,
+        -0.6818212534322801,
+        -1.5707960619997798
+      ],
+      "q_end": [
+        -2.272529310059244,
+        0.8946902334102544,
+        0.8343862677359469,
+        1.4125159121428463,
+        -0.7017329020870976,
+        -1.5707959782717789
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -129.0654826761674,
+        "end_deg": -130.20633828617153,
+        "minimum_deg": -130.20633828617153,
+        "maximum_deg": -129.0654826761674,
+        "range_deg": 1.1408556100041567,
+        "net_change_deg": -1.1408556100041567,
+        "total_variation_deg": 1.1408556100041567,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.1408556100041567,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_12",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 33,
+      "q_start": [
+        -2.272529310059244,
+        0.8946902334102544,
+        0.8343862677359469,
+        1.4125159121428463,
+        -0.7017329020870976,
+        -1.5707959782717789
+      ],
+      "q_end": [
+        -2.2918495997376143,
+        0.9267723704805776,
+        0.7745427174551428,
+        1.440277356471024,
+        -0.7210531982176871,
+        -1.5707960265483076
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -130.20633828617153,
+        "end_deg": -131.31330934371232,
+        "minimum_deg": -131.31330934371232,
+        "maximum_deg": -130.20633828617153,
+        "range_deg": 1.1069710575407783,
+        "net_change_deg": -1.1069710575407783,
+        "total_variation_deg": 1.1069710575407783,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.1069710575407783,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_exit_from_support_13",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 34,
+      "q_start": [
+        -2.2918495997376143,
+        0.9267723704805776,
+        0.7745427174551428,
+        1.440277356471024,
+        -0.7210531982176871,
+        -1.5707960265483076
+      ],
+      "q_end": [
+        -2.3105882063935033,
+        0.962277851481537,
+        0.7076465738495317,
+        1.4716680220551432,
+        -0.7397917972415052,
+        -1.5707960253221516
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -131.31330934371232,
+        "end_deg": -132.38695241905052,
+        "minimum_deg": -132.38695241905052,
+        "maximum_deg": -131.31330934371232,
+        "range_deg": 1.0736430753381931,
+        "net_change_deg": -1.0736430753381931,
+        "total_variation_deg": 1.0736430753381931,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.0736430753381931,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_free_home",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 35,
+      "q_start": [
+        -2.3105882063935033,
+        0.962277851481537,
+        0.7076465738495317,
+        1.4716680220551432,
+        -0.7397917972415052,
+        -1.5707960253221516
+      ],
+      "q_end": [
+        -2.3476570437805973,
+        -0.25173329543603173,
+        1.5707352561423822,
+        0.2517970743592173,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.38695241905052,
+        "end_deg": -134.51084035278777,
+        "minimum_deg": -134.51084035278777,
+        "maximum_deg": -132.38695241905052,
+        "range_deg": 2.12388793373724,
+        "net_change_deg": -2.12388793373724,
+        "total_variation_deg": 2.12388793373724,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.12388793373724,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "B_clear_fixture",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 36,
+      "q_start": [
+        -1.4018425115070414,
+        0.29891632579950617,
+        1.9699457305248664,
+        0.8727305935398232,
+        1.7397501250027885,
+        3.1415926528262443
+      ],
+      "q_end": [
+        -1.3742187234102956,
+        1.2389301902143843,
+        -1.572353406970473,
+        1.9041820476107,
+        -1.5706878338204409,
+        0.19654087532175812
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.31965945137301,
+        "end_deg": -78.73693297926576,
+        "minimum_deg": -80.31965945137301,
+        "maximum_deg": -71.85164536595187,
+        "range_deg": 8.46801408542114,
+        "net_change_deg": 1.5827264721072563,
+        "total_variation_deg": 15.353301698735025,
+        "backtracking_deg": 13.77057522662777,
+        "shortest_endpoint_circular_arc_deg": 1.5827264721072565,
+        "variation_excess_over_endpoint_arc_deg": 13.77057522662777
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "B_clear_fixture_contact_clear",
+      "arm": "B",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 37,
+      "q_start": [
+        -1.3742187234102956,
+        1.2389301902143843,
+        -1.572353406970473,
+        1.9041820476107,
+        -1.5706878338204409,
+        0.19654087532175812
+      ],
+      "q_end": [
+        -1.3742187234102956,
+        1.2389301902143843,
+        -1.572353406970473,
+        1.9041820476107,
+        -1.5706878338204409,
+        0.19654087532175812
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -78.73693297926576,
+        "end_deg": -78.73693297926576,
+        "minimum_deg": -78.73693297926576,
+        "maximum_deg": -78.73693297926576,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supply_K1_approach",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 38,
+      "q_start": [
+        -2.3476570437805973,
+        -0.25173329543603173,
+        1.5707352561423822,
+        0.2517970743592173,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "q_end": [
+        -3.021359191150205,
+        0.0989487724689147,
+        1.8087209635008512,
+        -0.336873379978061,
+        -1.5707963178375264,
+        -1.450562875771072
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -134.51084035278777,
+        "end_deg": -173.1111300459669,
+        "minimum_deg": -173.1111300459669,
+        "maximum_deg": -134.51084035278777,
+        "range_deg": 38.600289693179135,
+        "net_change_deg": -38.600289693179135,
+        "total_variation_deg": 38.600289693179135,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 38.600289693179135,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supply_K1_contact",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 39,
+      "q_start": [
+        -3.021359191150205,
+        0.0989487724689147,
+        1.8087209635008512,
+        -0.336873379978061,
+        -1.5707963178375264,
+        -1.450562875771072
+      ],
+      "q_end": [
+        -3.0213591839496736,
+        0.257130114396015,
+        1.9974199980554446,
+        -0.683753784669113,
+        -1.570796326657636,
+        -1.4505628561830484
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -173.1111300459669,
+        "end_deg": -173.11112963340685,
+        "minimum_deg": -173.1111300459669,
+        "maximum_deg": -173.11112963340685,
+        "range_deg": 4.125600527298007e-07,
+        "net_change_deg": 4.125600527298007e-07,
+        "total_variation_deg": 4.125600527298007e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 4.125600527298007e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supply_K1",
+      "arm": "A",
+      "kind": "grasp",
+      "part": "K1",
+      "reference_index": 40,
+      "q_start": [
+        -3.0213591839496736,
+        0.257130114396015,
+        1.9974199980554446,
+        -0.683753784669113,
+        -1.570796326657636,
+        -1.4505628561830484
+      ],
+      "q_end": [
+        -3.0213591839496736,
+        0.257130114396015,
+        1.9974199980554446,
+        -0.683753784669113,
+        -1.570796326657636,
+        -1.4505628561830484
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -173.11112963340685,
+        "end_deg": -173.11112963340685,
+        "minimum_deg": -173.11112963340685,
+        "maximum_deg": -173.11112963340685,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supply_K1_lift",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 41,
+      "q_start": [
+        -3.0213591839496736,
+        0.257130114396015,
+        1.9974199980554446,
+        -0.683753784669113,
+        -1.570796326657636,
+        -1.4505628561830484
+      ],
+      "q_end": [
+        -3.021359191997487,
+        0.08420498049508318,
+        1.771425800822966,
+        -0.2848344985824594,
+        -1.5707963188177132,
+        -1.4505628701709756
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -173.11112963340685,
+        "end_deg": -173.1111300945126,
+        "minimum_deg": -173.1111300945126,
+        "maximum_deg": -173.11112963340685,
+        "range_deg": 4.611057493882892e-07,
+        "net_change_deg": -4.611057493882892e-07,
+        "total_variation_deg": 4.611057493882892e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 4.611057493882892e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supply_K1_lift_contact_clear",
+      "arm": "A",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 42,
+      "q_start": [
+        -3.021359191997487,
+        0.08420498049508318,
+        1.771425800822966,
+        -0.2848344985824594,
+        -1.5707963188177132,
+        -1.4505628701709756
+      ],
+      "q_end": [
+        -3.021359191997487,
+        0.08420498049508318,
+        1.771425800822966,
+        -0.2848344985824594,
+        -1.5707963188177132,
+        -1.4505628701709756
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -173.1111300945126,
+        "end_deg": -173.1111300945126,
+        "minimum_deg": -173.1111300945126,
+        "maximum_deg": -173.1111300945126,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "deposit_K1_approach",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 43,
+      "q_start": [
+        -3.021359191997487,
+        0.08420498049508318,
+        1.771425800822966,
+        -0.2848344985824594,
+        -1.5707963188177132,
+        -1.4505628701709756
+      ],
+      "q_end": [
+        -2.3106173241335988,
+        1.0560951413349056,
+        0.29325081404960773,
+        0.22144945626770868,
+        -1.570796230897113,
+        -0.7398202822561573
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -173.1111300945126,
+        "end_deg": -132.38862074266694,
+        "minimum_deg": -173.1111300945126,
+        "maximum_deg": -132.38862074266694,
+        "range_deg": 40.72250935184564,
+        "net_change_deg": 40.72250935184564,
+        "total_variation_deg": 40.72250935184564,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 40.72250935184564,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "deposit_K1_contact",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 44,
+      "q_start": [
+        -2.3106173241335988,
+        1.0560951413349056,
+        0.29325081404960773,
+        0.22144945626770868,
+        -1.570796230897113,
+        -0.7398202822561573
+      ],
+      "q_end": [
+        -2.3106171817430834,
+        1.028776538765798,
+        0.6798910339287985,
+        -0.13787153601299434,
+        -1.5707962967166345,
+        -0.7398195086227868
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.38862074266694,
+        "end_deg": -132.38861258429137,
+        "minimum_deg": -132.38862074266694,
+        "maximum_deg": -132.38861258429137,
+        "range_deg": 8.15837557388444e-06,
+        "net_change_deg": 8.15837557388444e-06,
+        "total_variation_deg": 8.15837557388444e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 8.15837557388444e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "deposit_K1",
+      "arm": "A",
+      "kind": "release_buffer",
+      "part": "K1",
+      "reference_index": 45,
+      "q_start": [
+        -2.3106171817430834,
+        1.028776538765798,
+        0.6798910339287985,
+        -0.13787153601299434,
+        -1.5707962967166345,
+        -0.7398195086227868
+      ],
+      "q_end": [
+        -2.3106171817430834,
+        1.028776538765798,
+        0.6798910339287985,
+        -0.13787153601299434,
+        -1.5707962967166345,
+        -0.7398195086227868
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.38861258429137,
+        "end_deg": -132.38861258429137,
+        "minimum_deg": -132.38861258429137,
+        "maximum_deg": -132.38861258429137,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "deposit_K1_retreat",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 46,
+      "q_start": [
+        -2.3106171817430834,
+        1.028776538765798,
+        0.6798910339287985,
+        -0.13787153601299434,
+        -1.5707962967166345,
+        -0.7398195086227868
+      ],
+      "q_end": [
+        -2.310617314679314,
+        1.0560956805006836,
+        0.2932496896590997,
+        0.2214500992818385,
+        -1.5707962369521842,
+        -0.7398203168616424
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.38861258429137,
+        "end_deg": -132.38862020097633,
+        "minimum_deg": -132.38862020097633,
+        "maximum_deg": -132.38861258429137,
+        "range_deg": 7.616684950198346e-06,
+        "net_change_deg": -7.616684950198346e-06,
+        "total_variation_deg": 7.616684950198346e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 7.616684950198346e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "deposit_K1_retreat_contact_clear",
+      "arm": "A",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 47,
+      "q_start": [
+        -2.310617314679314,
+        1.0560956805006836,
+        0.2932496896590997,
+        0.2214500992818385,
+        -1.5707962369521842,
+        -0.7398203168616424
+      ],
+      "q_end": [
+        -2.310617314679314,
+        1.0560956805006836,
+        0.2932496896590997,
+        0.2214500992818385,
+        -1.5707962369521842,
+        -0.7398203168616424
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.38862020097633,
+        "end_deg": -132.38862020097633,
+        "minimum_deg": -132.38862020097633,
+        "maximum_deg": -132.38862020097633,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supplier_clear_K1",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 48,
+      "q_start": [
+        -2.310617314679314,
+        1.0560956805006836,
+        0.2932496896590997,
+        0.2214500992818385,
+        -1.5707962369521842,
+        -0.7398203168616424
+      ],
+      "q_end": [
+        -2.3476570437805973,
+        -0.25173329543603185,
+        1.5707352561423822,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.38862020097633,
+        "end_deg": -134.51084035278777,
+        "minimum_deg": -134.51084035278777,
+        "maximum_deg": -132.38862020097633,
+        "range_deg": 2.122220151811432,
+        "net_change_deg": -2.122220151811432,
+        "total_variation_deg": 2.122220151811432,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.1222201518114323,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_K1_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 49,
+      "q_start": [
+        -1.3742187234102956,
+        1.2389301902143843,
+        -1.572353406970473,
+        1.9041820476107,
+        -1.5706878338204409,
+        0.19654087532175812
+      ],
+      "q_end": [
+        -0.9136797499981781,
+        0.7564718875945784,
+        1.168376781708389,
+        1.2167438812368792,
+        2.2279128494549605,
+        -1.5707959272071872
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -78.73693297926576,
+        "end_deg": -52.34999350146379,
+        "minimum_deg": -78.73693297926576,
+        "maximum_deg": -52.34999350146379,
+        "range_deg": 26.386939477801963,
+        "net_change_deg": 26.386939477801963,
+        "total_variation_deg": 26.386939477801963,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 26.386939477801963,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_K1_contact",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 50,
+      "q_start": [
+        -0.9136797499981781,
+        0.7564718875945784,
+        1.168376781708389,
+        1.2167438812368792,
+        2.2279128494549605,
+        -1.5707959272071872
+      ],
+      "q_end": [
+        -0.9136797341215923,
+        0.9054987295682959,
+        1.2584751737752184,
+        0.9776187529560679,
+        2.227912936077224,
+        -1.5707963226927346
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -52.34999350146379,
+        "end_deg": -52.34999259180243,
+        "minimum_deg": -52.34999350146379,
+        "maximum_deg": -52.34999259180243,
+        "range_deg": 9.096613607812102e-07,
+        "net_change_deg": 9.096613607812102e-07,
+        "total_variation_deg": 9.096613607812102e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 9.096613607812102e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_K1",
+      "arm": "B",
+      "kind": "grasp",
+      "part": "K1",
+      "reference_index": 51,
+      "q_start": [
+        -0.9136797341215923,
+        0.9054987295682959,
+        1.2584751737752184,
+        0.9776187529560679,
+        2.227912936077224,
+        -1.5707963226927346
+      ],
+      "q_end": [
+        -0.9136797341215923,
+        0.9054987295682959,
+        1.2584751737752184,
+        0.9776187529560679,
+        2.227912936077224,
+        -1.5707963226927346
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -52.34999259180243,
+        "end_deg": -52.34999259180243,
+        "minimum_deg": -52.34999259180243,
+        "maximum_deg": -52.34999259180243,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_K1_lift",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 52,
+      "q_start": [
+        -0.9136797341215923,
+        0.9054987295682959,
+        1.2584751737752184,
+        0.9776187529560679,
+        2.227912936077224,
+        -1.5707963226927346
+      ],
+      "q_end": [
+        -0.9136797585530164,
+        0.7396398187064768,
+        1.144364434146405,
+        1.2575882541922292,
+        2.2279128176397403,
+        -1.570796282512066
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -52.34999259180243,
+        "end_deg": -52.34999399161992,
+        "minimum_deg": -52.34999399161992,
+        "maximum_deg": -52.34999259180243,
+        "range_deg": 1.399817488769098e-06,
+        "net_change_deg": -1.399817488769098e-06,
+        "total_variation_deg": 1.399817488769098e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.399817488769098e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_K1_lift_contact_clear",
+      "arm": "B",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 53,
+      "q_start": [
+        -0.9136797585530164,
+        0.7396398187064768,
+        1.144364434146405,
+        1.2575882541922292,
+        2.2279128176397403,
+        -1.570796282512066
+      ],
+      "q_end": [
+        -0.9136797585530164,
+        0.7396398187064768,
+        1.144364434146405,
+        1.2575882541922292,
+        2.2279128176397403,
+        -1.570796282512066
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -52.34999399161992,
+        "end_deg": -52.34999399161992,
+        "minimum_deg": -52.34999399161992,
+        "maximum_deg": -52.34999399161992,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 54,
+      "q_start": [
+        -0.9136797585530164,
+        0.7396398187064768,
+        1.144364434146405,
+        1.2575882541922292,
+        2.2279128176397403,
+        -1.570796282512066
+      ],
+      "q_end": [
+        -1.4801514145122778,
+        -0.26154765755391124,
+        2.3747962800308793,
+        1.028344012339777,
+        1.6614413302163495,
+        -1.5707962503567292
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -52.34999399161992,
+        "end_deg": -84.80642909187239,
+        "minimum_deg": -84.80642909187239,
+        "maximum_deg": -36.594569141566446,
+        "range_deg": 48.21185995030594,
+        "net_change_deg": -32.45643510025247,
+        "total_variation_deg": 63.967284800359415,
+        "backtracking_deg": 31.510849700106945,
+        "shortest_endpoint_circular_arc_deg": 32.45643510025247,
+        "variation_excess_over_endpoint_arc_deg": 31.510849700106945
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_slide_01",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 55,
+      "q_start": [
+        -1.4801514145122778,
+        -0.2615476575539112,
+        2.3747962800308793,
+        1.028344012339777,
+        1.6614413302163495,
+        -1.5707962503567292
+      ],
+      "q_end": [
+        -1.570795535848455,
+        -0.29361123310268455,
+        2.395776071168937,
+        1.0394277793218663,
+        1.5707971396350566,
+        -1.570796224951085
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -84.80642909187239,
+        "end_deg": -89.99995468210709,
+        "minimum_deg": -89.99995468210709,
+        "maximum_deg": -84.80642909187239,
+        "range_deg": 5.193525590234694,
+        "net_change_deg": -5.193525590234694,
+        "total_variation_deg": 5.193525590234694,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 5.193525590234694,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_slide_02",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 56,
+      "q_start": [
+        -1.570795535848455,
+        -0.29361123310268455,
+        2.395776071168937,
+        1.0394277793218663,
+        1.5707971396350566,
+        -1.570796224951085
+      ],
+      "q_end": [
+        -1.6658285920188671,
+        -0.32240626939647976,
+        2.4136299187023584,
+        1.0503689470762305,
+        1.4757641172325324,
+        -1.570796145006753
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -89.99995468210709,
+        "end_deg": -95.44494771490137,
+        "minimum_deg": -95.44494771490137,
+        "maximum_deg": -89.99995468210709,
+        "range_deg": 5.444993032794295,
+        "net_change_deg": -5.444993032794295,
+        "total_variation_deg": 5.444993032794295,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 5.444993032794295,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_slide_03",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 57,
+      "q_start": [
+        -1.6658285920188671,
+        -0.32240626939647976,
+        2.4136299187023584,
+        1.0503689470762305,
+        1.4757641172325324,
+        -1.570796145006753
+      ],
+      "q_end": [
+        -1.7640598891649315,
+        -0.34702711486405685,
+        2.4281744779430587,
+        1.0604452481229738,
+        1.377532811424158,
+        -1.5707961744896017
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -95.44494771490137,
+        "end_deg": -101.07318645746635,
+        "minimum_deg": -101.07318645746635,
+        "maximum_deg": -95.44494771490137,
+        "range_deg": 5.628238742564977,
+        "net_change_deg": -5.628238742564977,
+        "total_variation_deg": 5.628238742564977,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 5.628238742564977,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_slide_04",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 58,
+      "q_start": [
+        -1.7640598891649315,
+        -0.34702711486405685,
+        2.4281744779430587,
+        1.0604452481229738,
+        1.377532811424158,
+        -1.5707961744896017
+      ],
+      "q_end": [
+        -1.8638947811054625,
+        -0.36654799805991234,
+        2.4392451871366863,
+        1.0688954612710655,
+        1.277697953554188,
+        -1.5707961379927422
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -101.07318645746635,
+        "end_deg": -106.79330441380341,
+        "minimum_deg": -106.79330441380341,
+        "maximum_deg": -101.07318645746635,
+        "range_deg": 5.720117956337062,
+        "net_change_deg": -5.720117956337062,
+        "total_variation_deg": 5.720117956337062,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 5.720117956337062,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_slide_05",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 59,
+      "q_start": [
+        -1.8638947811054625,
+        -0.36654799805991234,
+        2.4392451871366863,
+        1.0688954612710655,
+        1.277697953554188,
+        -1.5707961379927422
+      ],
+      "q_end": [
+        -1.9634284445243402,
+        -0.38012023210783086,
+        2.4467067669782088,
+        1.0750061214332862,
+        1.1781642757105997,
+        -1.5707961841093627
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -106.79330441380341,
+        "end_deg": -112.49616324718079,
+        "minimum_deg": -112.49616324718079,
+        "maximum_deg": -106.79330441380341,
+        "range_deg": 5.702858833377364,
+        "net_change_deg": -5.702858833377364,
+        "total_variation_deg": 5.702858833377364,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 5.7028588333773635,
+        "variation_excess_over_endpoint_arc_deg": 7.951386703658792e-16
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_slide_06",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 60,
+      "q_start": [
+        -1.9634284445243402,
+        -0.38012023210783086,
+        2.4467067669782088,
+        1.0750061214332862,
+        1.1781642757105997,
+        -1.5707961841093627
+      ],
+      "q_end": [
+        -2.0606262123576613,
+        -0.3870866194337283,
+        2.450462708468891,
+        1.0782165596419064,
+        1.0809665234692751,
+        -1.5707961382326279
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -112.49616324718079,
+        "end_deg": -118.06518512212251,
+        "minimum_deg": -118.06518512212251,
+        "maximum_deg": -112.49616324718079,
+        "range_deg": 5.569021874941733,
+        "net_change_deg": -5.569021874941733,
+        "total_variation_deg": 5.569021874941733,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 5.569021874941733,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_slide_07",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 61,
+      "q_start": [
+        -2.0606262123576613,
+        -0.3870866194337283,
+        2.450462708468891,
+        1.0782165596419064,
+        1.0809665234692751,
+        -1.5707961382326279
+      ],
+      "q_end": [
+        -2.153560881205421,
+        -0.38708665262408626,
+        2.4504627229122886,
+        1.0782165872626652,
+        0.9880319172960822,
+        -1.5707961885407322
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -118.06518512212251,
+        "end_deg": -123.38994941754508,
+        "minimum_deg": -123.38994941754508,
+        "maximum_deg": -118.06518512212251,
+        "range_deg": 5.324764295422573,
+        "net_change_deg": -5.324764295422573,
+        "total_variation_deg": 5.324764295422573,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 5.324764295422574,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_slide_08",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 62,
+      "q_start": [
+        -2.153560881205421,
+        -0.38708665262408626,
+        2.4504627229122886,
+        1.0782165872626652,
+        0.9880319172960822,
+        -1.5707961885407322
+      ],
+      "q_end": [
+        -2.240644701750726,
+        -0.3801203958768122,
+        2.4467068046847777,
+        1.0750063314955511,
+        0.9009479897991092,
+        -1.5707963132750107
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -123.38994941754508,
+        "end_deg": -128.37948479866571,
+        "minimum_deg": -128.37948479866571,
+        "maximum_deg": -123.38994941754508,
+        "range_deg": 4.989535381120614,
+        "net_change_deg": -4.989535381120614,
+        "total_variation_deg": 4.989535381120614,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 4.989535381120614,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_slide_09",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 63,
+      "q_start": [
+        -2.240644701750726,
+        -0.3801203958768122,
+        2.4467068046847777,
+        1.0750063314955511,
+        0.9009479897991092,
+        -1.5707963132750107
+      ],
+      "q_end": [
+        -2.3207861474278393,
+        -0.3665482441907419,
+        2.4392453192406514,
+        1.068895586665906,
+        0.8208065563514423,
+        -1.5707962141087335
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -128.37948479866571,
+        "end_deg": -132.97125140004124,
+        "minimum_deg": -132.97125140004124,
+        "maximum_deg": -128.37948479866571,
+        "range_deg": 4.591766601375544,
+        "net_change_deg": -4.591766601375544,
+        "total_variation_deg": 4.591766601375544,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 4.591766601375544,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_slide_10",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 64,
+      "q_start": [
+        -2.3207861474278393,
+        -0.3665482441907419,
+        2.4392453192406514,
+        1.068895586665906,
+        0.8208065563514423,
+        -1.5707962141087335
+      ],
+      "q_end": [
+        -2.3934391807949167,
+        -0.3470274403702792,
+        2.4281746574632437,
+        1.060445397962079,
+        0.7481535241771435,
+        -1.5707961713359395
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.97125140004124,
+        "end_deg": -137.13396358079794,
+        "minimum_deg": -137.13396358079794,
+        "maximum_deg": -132.97125140004124,
+        "range_deg": 4.16271218075668,
+        "net_change_deg": -4.16271218075668,
+        "total_variation_deg": 4.16271218075668,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 4.16271218075668,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_seat",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 65,
+      "q_start": [
+        -2.3934391807949167,
+        -0.3470274403702792,
+        2.4281746574632437,
+        1.060445397962079,
+        0.7481535241771435,
+        -1.5707961713359395
+      ],
+      "q_end": [
+        -2.393439401592227,
+        -0.3452638332077757,
+        2.430080557080733,
+        1.0567759980693383,
+        0.748153121866822,
+        -1.570796244851101
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -137.13396358079794,
+        "end_deg": -137.13397623155194,
+        "minimum_deg": -137.13397623155194,
+        "maximum_deg": -137.13396358079794,
+        "range_deg": 1.2650754003049827e-05,
+        "net_change_deg": -1.2650754003049827e-05,
+        "total_variation_deg": 1.2650754003049827e-05,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.2650754003049827e-05,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1",
+      "arm": "B",
+      "kind": "install",
+      "part": "K1",
+      "reference_index": 66,
+      "q_start": [
+        -2.393439401592227,
+        -0.3452638332077757,
+        2.430080557080733,
+        1.0567759980693383,
+        0.748153121866822,
+        -1.570796244851101
+      ],
+      "q_end": [
+        -2.393439401592227,
+        -0.3452638332077757,
+        2.430080557080733,
+        1.0567759980693383,
+        0.748153121866822,
+        -1.570796244851101
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -137.13397623155194,
+        "end_deg": -137.13397623155194,
+        "minimum_deg": -137.13397623155194,
+        "maximum_deg": -137.13397623155194,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_retreat",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 67,
+      "q_start": [
+        -2.393439401592227,
+        -0.3452638332077757,
+        2.430080557080733,
+        1.0567759980693383,
+        0.748153121866822,
+        -1.570796244851101
+      ],
+      "q_end": [
+        -1.480151577220019,
+        -0.2615477034074508,
+        2.374796312048259,
+        1.0283440274601545,
+        1.6614410164565778,
+        -1.5707962040101222
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -137.13397623155194,
+        "end_deg": -84.80643841433925,
+        "minimum_deg": -137.13397623155194,
+        "maximum_deg": -84.80643841433925,
+        "range_deg": 52.32753781721267,
+        "net_change_deg": 52.32753781721267,
+        "total_variation_deg": 52.32753781721267,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 52.32753781721267,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K1_retreat_contact_clear",
+      "arm": "B",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 68,
+      "q_start": [
+        -1.480151577220019,
+        -0.2615477034074508,
+        2.374796312048259,
+        1.0283440274601545,
+        1.6614410164565778,
+        -1.5707962040101222
+      ],
+      "q_end": [
+        -1.480151577220019,
+        -0.2615477034074508,
+        2.374796312048259,
+        1.0283440274601545,
+        1.6614410164565778,
+        -1.5707962040101222
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -84.80643841433925,
+        "end_deg": -84.80643841433925,
+        "minimum_deg": -84.80643841433925,
+        "maximum_deg": -84.80643841433925,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supply_K2_approach",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 69,
+      "q_start": [
+        -2.3476570437805973,
+        -0.25173329543603185,
+        1.5707352561423822,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "q_end": [
+        -2.7521520898211067,
+        0.2509725884966456,
+        1.6211418594963607,
+        -0.30131812028452326,
+        -1.5707963274839327,
+        -1.1813557601438875
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -134.51084035278777,
+        "end_deg": -157.68669932485886,
+        "minimum_deg": -157.68669932485886,
+        "maximum_deg": -134.51084035278777,
+        "range_deg": 23.17585897207111,
+        "net_change_deg": -23.17585897207111,
+        "total_variation_deg": 23.17585897207111,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 23.175858972071108,
+        "variation_excess_over_endpoint_arc_deg": 3.1805546814635168e-15
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supply_K2_contact",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 70,
+      "q_start": [
+        -2.7521520898211067,
+        0.2509725884966456,
+        1.6211418594963607,
+        -0.30131812028452326,
+        -1.5707963274839327,
+        -1.1813557601438875
+      ],
+      "q_end": [
+        -2.7521520930333705,
+        0.3884671745455117,
+        1.8028710727522756,
+        -0.6205419093323068,
+        -1.570796332579482,
+        -1.1813557548353075
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -157.68669932485886,
+        "end_deg": -157.68669950890802,
+        "minimum_deg": -157.68669950890802,
+        "maximum_deg": -157.68669932485886,
+        "range_deg": 1.8404915775224932e-07,
+        "net_change_deg": -1.8404915775224932e-07,
+        "total_variation_deg": 1.8404915775224932e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.8404915775224932e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supply_K2",
+      "arm": "A",
+      "kind": "grasp",
+      "part": "K2",
+      "reference_index": 71,
+      "q_start": [
+        -2.7521520930333705,
+        0.3884671745455117,
+        1.8028710727522756,
+        -0.6205419093323068,
+        -1.570796332579482,
+        -1.1813557548353075
+      ],
+      "q_end": [
+        -2.7521520930333705,
+        0.3884671745455117,
+        1.8028710727522756,
+        -0.6205419093323068,
+        -1.570796332579482,
+        -1.1813557548353075
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -157.68669950890802,
+        "end_deg": -157.68669950890802,
+        "minimum_deg": -157.68669950890802,
+        "maximum_deg": -157.68669950890802,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supply_K2_lift",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 72,
+      "q_start": [
+        -2.7521520930333705,
+        0.3884671745455117,
+        1.8028710727522756,
+        -0.6205419093323068,
+        -1.570796332579482,
+        -1.1813557548353075
+      ],
+      "q_end": [
+        -2.7521521008395666,
+        0.23811952918798995,
+        1.5844810491127297,
+        -0.25180430199028025,
+        -1.570796312474452,
+        -1.1813557516832125
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -157.68669950890802,
+        "end_deg": -157.68669995617012,
+        "minimum_deg": -157.68669995617012,
+        "maximum_deg": -157.68669950890802,
+        "range_deg": 4.4726209252618853e-07,
+        "net_change_deg": -4.4726209252618853e-07,
+        "total_variation_deg": 4.4726209252618853e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 4.4726209252618853e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supply_K2_lift_contact_clear",
+      "arm": "A",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 73,
+      "q_start": [
+        -2.7521521008395666,
+        0.23811952918798995,
+        1.5844810491127297,
+        -0.25180430199028025,
+        -1.570796312474452,
+        -1.1813557516832125
+      ],
+      "q_end": [
+        -2.7521521008395666,
+        0.23811952918798995,
+        1.5844810491127297,
+        -0.25180430199028025,
+        -1.570796312474452,
+        -1.1813557516832125
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -157.68669995617012,
+        "end_deg": -157.68669995617012,
+        "minimum_deg": -157.68669995617012,
+        "maximum_deg": -157.68669995617012,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "deposit_K2_approach",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 74,
+      "q_start": [
+        -2.7521521008395666,
+        0.23811952918798995,
+        1.5844810491127297,
+        -0.25180430199028025,
+        -1.570796312474452,
+        -1.1813557516832125
+      ],
+      "q_end": [
+        -2.3106173303200106,
+        1.0598173481120878,
+        0.2806881055350665,
+        0.2302899603377378,
+        -1.5707962309181862,
+        -0.7398202996105745
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -157.68669995617012,
+        "end_deg": -132.38862109712224,
+        "minimum_deg": -157.68669995617012,
+        "maximum_deg": -132.38862109712224,
+        "range_deg": 25.298078859047884,
+        "net_change_deg": 25.298078859047884,
+        "total_variation_deg": 25.298078859047884,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 25.298078859047884,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "deposit_K2_contact",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 75,
+      "q_start": [
+        -2.3106173303200106,
+        1.0598173481120878,
+        0.2806881055350665,
+        0.2302899603377378,
+        -1.5707962309181862,
+        -0.7398202996105745
+      ],
+      "q_end": [
+        -2.3106171809976956,
+        1.0277616552079216,
+        0.6767093808199743,
+        -0.13367497063842876,
+        -1.5707962997013376,
+        -0.7398196331271446
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.38862109712224,
+        "end_deg": -132.3886125415838,
+        "minimum_deg": -132.38862109712224,
+        "maximum_deg": -132.3886125415838,
+        "range_deg": 8.555538434179089e-06,
+        "net_change_deg": 8.555538434179089e-06,
+        "total_variation_deg": 8.555538434179089e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 8.555538434179089e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "deposit_K2",
+      "arm": "A",
+      "kind": "release_buffer",
+      "part": "K2",
+      "reference_index": 76,
+      "q_start": [
+        -2.3106171809976956,
+        1.0277616552079216,
+        0.6767093808199743,
+        -0.13367497063842876,
+        -1.5707962997013376,
+        -0.7398196331271446
+      ],
+      "q_end": [
+        -2.3106171809976956,
+        1.0277616552079216,
+        0.6767093808199743,
+        -0.13367497063842876,
+        -1.5707962997013376,
+        -0.7398196331271446
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.3886125415838,
+        "end_deg": -132.3886125415838,
+        "minimum_deg": -132.3886125415838,
+        "maximum_deg": -132.3886125415838,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "deposit_K2_retreat",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 77,
+      "q_start": [
+        -2.3106171809976956,
+        1.0277616552079216,
+        0.6767093808199743,
+        -0.13367497063842876,
+        -1.5707962997013376,
+        -0.7398196331271446
+      ],
+      "q_end": [
+        -2.310617343066799,
+        1.0598165896968914,
+        0.28068968690873286,
+        0.23028906329470683,
+        -1.5707962231372115,
+        -0.7398202545168799
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.3886125415838,
+        "end_deg": -132.38862182745942,
+        "minimum_deg": -132.38862182745942,
+        "maximum_deg": -132.3886125415838,
+        "range_deg": 9.285875618353957e-06,
+        "net_change_deg": -9.285875618353957e-06,
+        "total_variation_deg": 9.285875618353957e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 9.285875618353957e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "deposit_K2_retreat_contact_clear",
+      "arm": "A",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 78,
+      "q_start": [
+        -2.310617343066799,
+        1.0598165896968914,
+        0.28068968690873286,
+        0.23028906329470683,
+        -1.5707962231372115,
+        -0.7398202545168799
+      ],
+      "q_end": [
+        -2.310617343066799,
+        1.0598165896968914,
+        0.28068968690873286,
+        0.23028906329470683,
+        -1.5707962231372115,
+        -0.7398202545168799
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.38862182745942,
+        "end_deg": -132.38862182745942,
+        "minimum_deg": -132.38862182745942,
+        "maximum_deg": -132.38862182745942,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "supplier_clear_K2",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 79,
+      "q_start": [
+        -2.310617343066799,
+        1.0598165896968914,
+        0.28068968690873286,
+        0.23028906329470683,
+        -1.5707962231372115,
+        -0.7398202545168799
+      ],
+      "q_end": [
+        -2.3476570437805973,
+        -0.25173329543603185,
+        1.570735256142382,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -132.38862182745942,
+        "end_deg": -134.51084035278777,
+        "minimum_deg": -134.51084035278777,
+        "maximum_deg": -132.38862182745942,
+        "range_deg": 2.122218525328336,
+        "net_change_deg": -2.122218525328336,
+        "total_variation_deg": 2.122218525328336,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.122218525328336,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_K2_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 80,
+      "q_start": [
+        -1.480151577220019,
+        -0.2615477034074508,
+        2.374796312048259,
+        1.0283440274601545,
+        1.6614410164565778,
+        -1.5707962040101222
+      ],
+      "q_end": [
+        -1.089165184425945,
+        1.0598159221184331,
+        0.28069100483564613,
+        0.23028841093937502,
+        -1.5707962229046886,
+        0.48163191400193206
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -84.80643841433925,
+        "end_deg": -62.40456826019459,
+        "minimum_deg": -84.80643841433925,
+        "maximum_deg": -62.40456826019459,
+        "range_deg": 22.401870154144675,
+        "net_change_deg": 22.401870154144675,
+        "total_variation_deg": 22.401870154144675,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 22.401870154144675,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_K2_contact",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 81,
+      "q_start": [
+        -1.089165184425945,
+        1.0598159221184331,
+        0.28069100483564613,
+        0.23028841093937502,
+        -1.5707962229046886,
+        0.48163191400193206
+      ],
+      "q_end": [
+        -1.089165024430835,
+        1.0277613035495003,
+        0.6767100834508851,
+        -0.13367541032477326,
+        -1.5707962904397594,
+        0.48163299915486996
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.40456826019459,
+        "end_deg": -62.40455909315005,
+        "minimum_deg": -62.40456826019459,
+        "maximum_deg": -62.40455909315005,
+        "range_deg": 9.167044535844897e-06,
+        "net_change_deg": 9.167044535844897e-06,
+        "total_variation_deg": 9.167044535844897e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 9.167044535844897e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_K2",
+      "arm": "B",
+      "kind": "grasp",
+      "part": "K2",
+      "reference_index": 82,
+      "q_start": [
+        -1.089165024430835,
+        1.0277613035495003,
+        0.6767100834508851,
+        -0.13367541032477326,
+        -1.5707962904397594,
+        0.48163299915486996
+      ],
+      "q_end": [
+        -1.089165024430835,
+        1.0277613035495003,
+        0.6767100834508851,
+        -0.13367541032477326,
+        -1.5707962904397594,
+        0.48163299915486996
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.40455909315005,
+        "end_deg": -62.40455909315005,
+        "minimum_deg": -62.40455909315005,
+        "maximum_deg": -62.40455909315005,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_K2_lift",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 83,
+      "q_start": [
+        -1.089165024430835,
+        1.0277613035495003,
+        0.6767100834508851,
+        -0.13367541032477326,
+        -1.5707962904397594,
+        0.48163299915486996
+      ],
+      "q_end": [
+        -1.0891661922265805,
+        1.139210902663134,
+        0.06769046666296086,
+        0.3638933036430233,
+        -1.5707961439249718,
+        0.48163013493041684
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.40455909315005,
+        "end_deg": -62.404626002917595,
+        "minimum_deg": -62.404626002917595,
+        "maximum_deg": -62.40455909315005,
+        "range_deg": 6.690976754693854e-05,
+        "net_change_deg": -6.690976754693854e-05,
+        "total_variation_deg": 6.690976754693854e-05,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 6.690976754693856e-05,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_K2_lift_contact_clear",
+      "arm": "B",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 84,
+      "q_start": [
+        -1.0891661922265805,
+        1.139210902663134,
+        0.06769046666296086,
+        0.3638933036430233,
+        -1.5707961439249718,
+        0.48163013493041684
+      ],
+      "q_end": [
+        -1.0891661922265805,
+        1.139210902663134,
+        0.06769046666296086,
+        0.3638933036430233,
+        -1.5707961439249718,
+        0.48163013493041684
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.404626002917595,
+        "end_deg": -62.404626002917595,
+        "minimum_deg": -62.404626002917595,
+        "maximum_deg": -62.404626002917595,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K2_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 85,
+      "q_start": [
+        -1.0891661922265805,
+        1.139210902663134,
+        0.06769046666296086,
+        0.3638933036430233,
+        -1.5707961439249718,
+        0.48163013493041684
+      ],
+      "q_end": [
+        -1.9604801575760493,
+        -0.001257121352691959,
+        1.1509438193085044,
+        0.42110968655485426,
+        -1.5707963316444307,
+        -0.3896836880272039
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.404626002917595,
+        "end_deg": -112.3272388482502,
+        "minimum_deg": -112.3272388482502,
+        "maximum_deg": -62.404626002917595,
+        "range_deg": 49.922612845332615,
+        "net_change_deg": -49.922612845332615,
+        "total_variation_deg": 49.922612845332615,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 49.922612845332615,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K2_contact",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 86,
+      "q_start": [
+        -1.9604801575760493,
+        -0.001257121352691959,
+        1.1509438193085044,
+        0.42110968655485426,
+        -1.5707963316444307,
+        -0.3896836880272039
+      ],
+      "q_end": [
+        -1.9604801705724055,
+        -0.07892702115483433,
+        1.568994143104696,
+        0.08072938824812026,
+        -1.5707963036324428,
+        -0.3896831161473853
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -112.3272388482502,
+        "end_deg": -112.32723959288657,
+        "minimum_deg": -112.32723959288657,
+        "maximum_deg": -112.3272388482502,
+        "range_deg": 7.44636360078448e-07,
+        "net_change_deg": -7.44636360078448e-07,
+        "total_variation_deg": 7.44636360078448e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 7.44636360078448e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K2",
+      "arm": "B",
+      "kind": "install",
+      "part": "K2",
+      "reference_index": 87,
+      "q_start": [
+        -1.9604801705724055,
+        -0.07892702115483433,
+        1.568994143104696,
+        0.08072938824812026,
+        -1.5707963036324428,
+        -0.3896831161473853
+      ],
+      "q_end": [
+        -1.9604801705724055,
+        -0.07892702115483433,
+        1.568994143104696,
+        0.08072938824812026,
+        -1.5707963036324428,
+        -0.3896831161473853
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -112.32723959288657,
+        "end_deg": -112.32723959288657,
+        "minimum_deg": -112.32723959288657,
+        "maximum_deg": -112.32723959288657,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K2_retreat",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 88,
+      "q_start": [
+        -1.9604801705724055,
+        -0.07892702115483433,
+        1.568994143104696,
+        0.08072938824812026,
+        -1.5707963036324428,
+        -0.3896831161473853
+      ],
+      "q_end": [
+        -1.9604801669414942,
+        -0.0012572134561563836,
+        1.1509439621496413,
+        0.42110950197720254,
+        -1.5707963163816239,
+        -0.3896837816237715
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -112.32723959288657,
+        "end_deg": -112.32723938485067,
+        "minimum_deg": -112.32723959288657,
+        "maximum_deg": -112.32723938485067,
+        "range_deg": 2.0803589610456782e-07,
+        "net_change_deg": 2.0803589610456782e-07,
+        "total_variation_deg": 2.0803589610456782e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.0803589610456782e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "install_K2_retreat_contact_clear",
+      "arm": "B",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 89,
+      "q_start": [
+        -1.9604801669414942,
+        -0.0012572134561563836,
+        1.1509439621496413,
+        0.42110950197720254,
+        -1.5707963163816239,
+        -0.3896837816237715
+      ],
+      "q_end": [
+        -1.9604801669414942,
+        -0.0012572134561563836,
+        1.1509439621496413,
+        0.42110950197720254,
+        -1.5707963163816239,
+        -0.3896837816237715
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -112.32723938485067,
+        "end_deg": -112.32723938485067,
+        "minimum_deg": -112.32723938485067,
+        "maximum_deg": -112.32723938485067,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "verify_permanent",
+      "arm": "B",
+      "kind": "verify_permanent",
+      "part": "Bridge",
+      "reference_index": 90,
+      "q_start": [
+        -1.9604801669414942,
+        -0.0012572134561563836,
+        1.1509439621496413,
+        0.42110950197720254,
+        -1.5707963163816239,
+        -0.3896837816237715
+      ],
+      "q_end": [
+        -1.9604801669414942,
+        -0.0012572134561563836,
+        1.1509439621496413,
+        0.42110950197720254,
+        -1.5707963163816239,
+        -0.3896837816237715
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -112.32723938485067,
+        "end_deg": -112.32723938485067,
+        "minimum_deg": -112.32723938485067,
+        "maximum_deg": -112.32723938485067,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "unload_support",
+      "arm": "B",
+      "kind": "unload_support",
+      "part": "TemporarySupport",
+      "reference_index": 91,
+      "q_start": [
+        -1.9604801669414942,
+        -0.0012572134561563836,
+        1.1509439621496413,
+        0.42110950197720254,
+        -1.5707963163816239,
+        -0.3896837816237715
+      ],
+      "q_end": [
+        -1.9604801669414942,
+        -0.0012572134561563836,
+        1.1509439621496413,
+        0.42110950197720254,
+        -1.5707963163816239,
+        -0.3896837816237715
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -112.32723938485067,
+        "end_deg": -112.32723938485067,
+        "minimum_deg": -112.32723938485067,
+        "maximum_deg": -112.32723938485067,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "remove_support_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 92,
+      "q_start": [
+        -1.9604801669414942,
+        -0.0012572134561563836,
+        1.1509439621496413,
+        0.42110950197720254,
+        -1.5707963163816239,
+        -0.3896837816237715
+      ],
+      "q_end": [
+        -1.4018425355712338,
+        0.2989163063592056,
+        1.9699457013062536,
+        0.8727307347673497,
+        1.7397500453339385,
+        -3.141591982164824
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -112.32723938485067,
+        "end_deg": -80.31966083014967,
+        "minimum_deg": -112.32723938485067,
+        "maximum_deg": -62.81629584454061,
+        "range_deg": 49.51094354031006,
+        "net_change_deg": 32.007578554701,
+        "total_variation_deg": 67.01430852591912,
+        "backtracking_deg": 35.00672997121812,
+        "shortest_endpoint_circular_arc_deg": 32.007578554701,
+        "variation_excess_over_endpoint_arc_deg": 35.00672997121812
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "regrasp_support",
+      "arm": "B",
+      "kind": "grasp",
+      "part": "TemporarySupport",
+      "reference_index": 93,
+      "q_start": [
+        -1.4018425355712338,
+        0.29891630635920563,
+        1.9699457013062536,
+        0.8727307347673497,
+        1.7397500453339385,
+        -3.141591982164824
+      ],
+      "q_end": [
+        -1.4018425355712338,
+        0.29891630635920563,
+        1.9699457013062536,
+        0.8727307347673497,
+        1.7397500453339385,
+        -3.141591982164824
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.31966083014967,
+        "end_deg": -80.31966083014967,
+        "minimum_deg": -80.31966083014967,
+        "maximum_deg": -80.31966083014967,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "raise_unloaded_support",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 94,
+      "q_start": [
+        -1.4018425355712338,
+        0.29891630635920563,
+        1.9699457013062536,
+        0.8727307347673497,
+        1.7397500453339385,
+        -3.141591982164824
+      ],
+      "q_end": [
+        -1.4018425026203016,
+        0.29401989778945836,
+        1.9669066406164302,
+        0.880666092967328,
+        1.7397501544125904,
+        -3.141592657290096
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.31966083014967,
+        "end_deg": -80.31965894220033,
+        "minimum_deg": -80.31966083014967,
+        "maximum_deg": -80.31965894220033,
+        "range_deg": 1.887949346368859e-06,
+        "net_change_deg": 1.887949346368859e-06,
+        "total_variation_deg": 1.887949346368859e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.887949346368859e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "extract_support_motion_01",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 95,
+      "q_start": [
+        -1.4018425026203016,
+        0.29401989778945836,
+        1.9669066406164302,
+        0.880666092967328,
+        1.7397501544125904,
+        -3.141592657290096
+      ],
+      "q_end": [
+        -1.3589962622115035,
+        0.31023562663068616,
+        1.9439272680993727,
+        0.8874297563793216,
+        1.782596389475325,
+        -3.1415926529833054
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.31965894220033,
+        "end_deg": -77.86475019877331,
+        "minimum_deg": -80.31965894220033,
+        "maximum_deg": -77.86475019877331,
+        "range_deg": 2.4549087434270165,
+        "net_change_deg": 2.4549087434270165,
+        "total_variation_deg": 2.4549087434270165,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.4549087434270165,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "extract_support_motion_02",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 96,
+      "q_start": [
+        -1.3589962622115035,
+        0.31023562663068616,
+        1.9439272680993727,
+        0.8874297563793216,
+        1.782596389475325,
+        -3.1415926529833054
+      ],
+      "q_end": [
+        -1.3173684585778542,
+        0.3276463315554099,
+        1.9189084395791265,
+        0.8950378589592363,
+        1.8242241883665509,
+        -3.1415926594005636
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -77.86475019877331,
+        "end_deg": -75.47965274016586,
+        "minimum_deg": -77.86475019877331,
+        "maximum_deg": -75.47965274016586,
+        "range_deg": 2.385097458607455,
+        "net_change_deg": 2.385097458607455,
+        "total_variation_deg": 2.385097458607455,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.385097458607455,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "extract_support_motion_03",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 97,
+      "q_start": [
+        -1.3173684585778542,
+        0.3276463315554099,
+        1.9189084395791265,
+        0.8950378589592363,
+        1.8242241883665509,
+        -3.1415926594005636
+      ],
+      "q_end": [
+        -1.2770269748858238,
+        0.3461799358699324,
+        1.8918914300883753,
+        0.9035212852368523,
+        1.8645656766500935,
+        -3.141592653631344
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -75.47965274016586,
+        "end_deg": -73.16825598531668,
+        "minimum_deg": -75.47965274016586,
+        "maximum_deg": -73.16825598531668,
+        "range_deg": 2.3113967548491794,
+        "net_change_deg": 2.3113967548491794,
+        "total_variation_deg": 2.3113967548491794,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.3113967548491794,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "extract_support_motion_04",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 98,
+      "q_start": [
+        -1.2770269748858238,
+        0.3461799358699324,
+        1.8918914300883753,
+        0.9035212852368523,
+        1.8645656766500935,
+        -3.141592653631344
+      ],
+      "q_end": [
+        -1.2380196236110803,
+        0.36577145546665063,
+        1.8629121961027386,
+        0.9129089915333607,
+        1.9035730014258405,
+        -3.1415926270795773
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -73.16825598531668,
+        "end_deg": -70.93329938728962,
+        "minimum_deg": -73.16825598531668,
+        "maximum_deg": -70.93329938728962,
+        "range_deg": 2.234956598027056,
+        "net_change_deg": 2.234956598027056,
+        "total_variation_deg": 2.234956598027056,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.2349565980270563,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "extract_support_motion_05",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 99,
+      "q_start": [
+        -1.2380196236110803,
+        0.36577145546665063,
+        1.8629121961027386,
+        0.9129089915333607,
+        1.9035730014258405,
+        -3.1415926270795773
+      ],
+      "q_end": [
+        -1.2003759811248935,
+        0.3863640895850145,
+        1.831999802411396,
+        0.9232287459666395,
+        1.9412166626127747,
+        -3.141592659595131
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -70.93329938728962,
+        "end_deg": -68.77647754733177,
+        "minimum_deg": -70.93329938728962,
+        "maximum_deg": -68.77647754733177,
+        "range_deg": 2.1568218399578565,
+        "net_change_deg": 2.1568218399578565,
+        "total_variation_deg": 2.1568218399578565,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.1568218399578565,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "extract_support_motion_06",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 100,
+      "q_start": [
+        -1.2003759811248935,
+        0.3863640895850145,
+        1.831999802411396,
+        0.9232287459666395,
+        1.9412166626127747,
+        -3.141592659595131
+      ],
+      "q_end": [
+        -1.1641096099192425,
+        0.4079099952488482,
+        1.7991751823939635,
+        0.9345074574500185,
+        1.9774830327208195,
+        -3.141592661320895
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -68.77647754733177,
+        "end_deg": -66.69856753899319,
+        "minimum_deg": -68.77647754733177,
+        "maximum_deg": -66.69856753899319,
+        "range_deg": 2.077910008338578,
+        "net_change_deg": 2.077910008338578,
+        "total_variation_deg": 2.077910008338578,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.077910008338578,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "extract_support_motion_07",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 101,
+      "q_start": [
+        -1.1641096099192425,
+        0.4079099952488482,
+        1.7991751823939635,
+        0.9345074574500185,
+        1.9774830327208195,
+        -3.141592661320895
+      ],
+      "q_end": [
+        -1.129220177814116,
+        0.4303709401202638,
+        1.7644496784777206,
+        0.9467720138329664,
+        2.012372463487426,
+        -3.1415926631212927
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -66.69856753899319,
+        "end_deg": -64.69955032976121,
+        "minimum_deg": -66.69856753899319,
+        "maximum_deg": -64.69955032976121,
+        "range_deg": 1.9990172092319844,
+        "net_change_deg": 1.9990172092319844,
+        "total_variation_deg": 1.9990172092319844,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.9990172092319844,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "extract_support_motion_08",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 102,
+      "q_start": [
+        -1.129220177814116,
+        0.4303709401202638,
+        1.7644496784777206,
+        0.9467720138329664,
+        2.012372463487426,
+        -3.1415926631212927
+      ],
+      "q_end": [
+        -1.0956956747112376,
+        0.4537187712221354,
+        1.7278236311653798,
+        0.9600502263801268,
+        2.045896964833098,
+        -3.1415926655204767
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -64.69955032976121,
+        "end_deg": -62.77873779169304,
+        "minimum_deg": -64.69955032976121,
+        "maximum_deg": -62.77873779169304,
+        "range_deg": 1.9208125380681624,
+        "net_change_deg": 1.9208125380681624,
+        "total_variation_deg": 1.9208125380681624,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.9208125380681624,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "extract_support",
+      "arm": "B",
+      "kind": "extract_support",
+      "part": "TemporarySupport",
+      "reference_index": 103,
+      "q_start": [
+        -1.0956956747112376,
+        0.4537187712221354,
+        1.7278236311653798,
+        0.9600502263801268,
+        2.045896964833098,
+        -3.1415926655204767
+      ],
+      "q_end": [
+        -1.0956956747112376,
+        0.4537187712221354,
+        1.7278236311653798,
+        0.9600502263801268,
+        2.045896964833098,
+        -3.1415926655204767
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.77873779169304,
+        "end_deg": -62.77873779169304,
+        "minimum_deg": -62.77873779169304,
+        "maximum_deg": -62.77873779169304,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "lift_extracted_support",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 104,
+      "q_start": [
+        -1.0956956747112376,
+        0.4537187712221354,
+        1.7278236311653798,
+        0.9600502263801268,
+        2.045896964833098,
+        -3.1415926655204767
+      ],
+      "q_end": [
+        -1.0956956741161292,
+        0.3445584187015806,
+        1.6074960994563636,
+        1.1895381166092058,
+        2.0458969672368155,
+        -3.1415926626764588
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.77873779169304,
+        "end_deg": -62.77873775759584,
+        "minimum_deg": -62.77873779169304,
+        "maximum_deg": -62.77873775759584,
+        "range_deg": 3.409720007372326e-08,
+        "net_change_deg": 3.409720007372326e-08,
+        "total_variation_deg": 3.409720007372326e-08,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 3.409720007372326e-08,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "return_support_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 105,
+      "q_start": [
+        -1.0956956741161292,
+        0.3445584187015806,
+        1.6074960994563636,
+        1.1895381166092058,
+        2.0458969672368155,
+        -3.1415926626764588
+      ],
+      "q_end": [
+        -3.5135144479732583,
+        -0.20267385257916887,
+        2.1500194635557124,
+        1.1942469772519617,
+        -0.37192179271654036,
+        -3.141592590794255
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -62.77873775759584,
+        "end_deg": -201.30954912710496,
+        "minimum_deg": -201.30956078155106,
+        "maximum_deg": -62.77873775759584,
+        "range_deg": 138.5308230239552,
+        "net_change_deg": -138.5308113695091,
+        "total_variation_deg": 162.63386012580696,
+        "backtracking_deg": 24.10304875629783,
+        "shortest_endpoint_circular_arc_deg": 138.5308113695091,
+        "variation_excess_over_endpoint_arc_deg": 24.10304875629783
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "return_support_contact",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 106,
+      "q_start": [
+        -3.5135144479732583,
+        -0.20267385257916887,
+        2.1500194635557124,
+        1.1942469772519615,
+        -0.37192179271654036,
+        -3.141592590794255
+      ],
+      "q_end": [
+        -3.5135144457733563,
+        0.017575831677069387,
+        2.3588111854405414,
+        0.765205601987371,
+        -0.37192179918442403,
+        -3.1415926161393326
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -201.30954912710496,
+        "end_deg": -201.30954900105985,
+        "minimum_deg": -201.30954912710496,
+        "maximum_deg": -201.30954900105985,
+        "range_deg": 1.260451021375872e-07,
+        "net_change_deg": 1.260451021375872e-07,
+        "total_variation_deg": 1.260451021375872e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.260451021375872e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "return_support",
+      "arm": "B",
+      "kind": "return_support",
+      "part": "TemporarySupport",
+      "reference_index": 107,
+      "q_start": [
+        -3.5135144457733563,
+        0.017575831677069387,
+        2.3588111854405414,
+        0.765205601987371,
+        -0.37192179918442403,
+        -3.1415926161393326
+      ],
+      "q_end": [
+        -3.5135144457733563,
+        0.017575831677069387,
+        2.3588111854405414,
+        0.765205601987371,
+        -0.37192179918442403,
+        -3.1415926161393326
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -201.30954900105985,
+        "end_deg": -201.30954900105985,
+        "minimum_deg": -201.30954900105985,
+        "maximum_deg": -201.30954900105985,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "return_support_retreat",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 108,
+      "q_start": [
+        -3.5135144457733563,
+        0.017575831677069387,
+        2.3588111854405414,
+        0.765205601987371,
+        -0.37192179918442403,
+        -3.1415926161393326
+      ],
+      "q_end": [
+        -3.56,
+        0.03627473511554027,
+        1.943369318263559,
+        0.8602239426940349,
+        -0.7251999543181373,
+        -3.0874693017087322
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -201.30954900105985,
+        "end_deg": -203.97297506657307,
+        "minimum_deg": -222.94569608826325,
+        "maximum_deg": -201.30954900105985,
+        "range_deg": 21.636147087203387,
+        "net_change_deg": -2.663426065513215,
+        "total_variation_deg": 40.60886810889356,
+        "backtracking_deg": 37.945442043380346,
+        "shortest_endpoint_circular_arc_deg": 2.663426065513215,
+        "variation_excess_over_endpoint_arc_deg": 37.945442043380346
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "return_support_retreat_contact_clear",
+      "arm": "B",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 109,
+      "q_start": [
+        -3.56,
+        0.03627473511554027,
+        1.943369318263559,
+        0.8602239426940349,
+        -0.7251999543181373,
+        -3.0874693017087322
+      ],
+      "q_end": [
+        -3.56,
+        0.03627473511554027,
+        1.943369318263559,
+        0.8602239426940349,
+        -0.7251999543181373,
+        -3.0874693017087322
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -203.97297506657307,
+        "end_deg": -203.97297506657307,
+        "minimum_deg": -203.97297506657307,
+        "maximum_deg": -203.97297506657307,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_gate_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 110,
+      "q_start": [
+        -3.56,
+        0.03627473511554027,
+        1.943369318263559,
+        0.8602239426940349,
+        -0.7251999543181373,
+        -3.0874693017087322
+      ],
+      "q_end": [
+        -0.4719658538341749,
+        0.8288899475209361,
+        0.918877817047171,
+        1.3938248330421894,
+        -2.0427622032534294,
+        -1.570796310658519
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -203.97297506657307,
+        "end_deg": -27.041651498986525,
+        "minimum_deg": -203.97297506657307,
+        "maximum_deg": -27.041651498986525,
+        "range_deg": 176.93132356758656,
+        "net_change_deg": 176.93132356758656,
+        "total_variation_deg": 176.93132356758608,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 176.93132356758656,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_gate_contact",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 111,
+      "q_start": [
+        -0.4719658538341749,
+        0.8288899475209361,
+        0.918877817047171,
+        1.3938248330421894,
+        -2.0427622032534294,
+        -1.570796310658519
+      ],
+      "q_end": [
+        -0.4719659154799585,
+        0.9380865344616014,
+        1.0618665904524882,
+        1.1416396523576293,
+        -2.042761981226386,
+        -1.5707962209645447
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -27.041651498986525,
+        "end_deg": -27.041655031029748,
+        "minimum_deg": -27.041655031029748,
+        "maximum_deg": -27.041651498986525,
+        "range_deg": 3.5320432244216648e-06,
+        "net_change_deg": -3.5320432244216648e-06,
+        "total_variation_deg": 3.5320432244216648e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 3.5320432244216648e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_gate",
+      "arm": "B",
+      "kind": "grasp",
+      "part": "Gate",
+      "reference_index": 112,
+      "q_start": [
+        -0.4719659154799585,
+        0.9380865344616014,
+        1.0618665904524882,
+        1.1416396523576293,
+        -2.042761981226386,
+        -1.5707962209645447
+      ],
+      "q_end": [
+        -0.4719659154799585,
+        0.9380865344616014,
+        1.0618665904524882,
+        1.1416396523576293,
+        -2.042761981226386,
+        -1.5707962209645447
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -27.041655031029748,
+        "end_deg": -27.041655031029748,
+        "minimum_deg": -27.041655031029748,
+        "maximum_deg": -27.041655031029748,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_gate_lift",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 113,
+      "q_start": [
+        -0.4719659154799585,
+        0.9380865344616014,
+        1.0618665904524882,
+        1.1416396523576293,
+        -2.042761981226386,
+        -1.5707962209645447
+      ],
+      "q_end": [
+        -0.47196583894223704,
+        0.8469699065695545,
+        0.964115342542041,
+        1.330506846824825,
+        -2.0427623713620138,
+        -1.5707960773666814
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -27.041655031029748,
+        "end_deg": -27.041650645741335,
+        "minimum_deg": -27.041655031029748,
+        "maximum_deg": -27.04165061605375,
+        "range_deg": 4.4149759987985255e-06,
+        "net_change_deg": 4.3852884119712696e-06,
+        "total_variation_deg": 4.444663585625782e-06,
+        "backtracking_deg": 5.937517365451296e-08,
+        "shortest_endpoint_circular_arc_deg": 4.385288411971269e-06,
+        "variation_excess_over_endpoint_arc_deg": 5.9375173654513713e-08
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "pick_gate_lift_contact_clear",
+      "arm": "B",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 114,
+      "q_start": [
+        -0.47196583894223704,
+        0.8469699065695545,
+        0.964115342542041,
+        1.330506846824825,
+        -2.0427623713620138,
+        -1.5707960773666814
+      ],
+      "q_end": [
+        -0.47196583894223704,
+        0.8469699065695545,
+        0.964115342542041,
+        1.330506846824825,
+        -2.0427623713620138,
+        -1.5707960773666814
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -27.041650645741335,
+        "end_deg": -27.041650645741335,
+        "minimum_deg": -27.041650645741335,
+        "maximum_deg": -27.041650645741335,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_approach",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 115,
+      "q_start": [
+        -0.47196583894223704,
+        0.8469699065695545,
+        0.964115342542041,
+        1.330506846824825,
+        -2.0427623713620138,
+        -1.5707960773666814
+      ],
+      "q_end": [
+        -1.4059935944568993,
+        0.7365835202777677,
+        1.0676162671941873,
+        1.3373753717954044,
+        -2.9767899211830926,
+        -1.5708137753873876
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -27.041650645741335,
+        "end_deg": -80.55749898480859,
+        "minimum_deg": -80.55749898480859,
+        "maximum_deg": -21.27289408145069,
+        "range_deg": 59.284604903357895,
+        "net_change_deg": -53.515848339067254,
+        "total_variation_deg": 65.05336146764854,
+        "backtracking_deg": 11.537513128581285,
+        "shortest_endpoint_circular_arc_deg": 53.515848339067254,
+        "variation_excess_over_endpoint_arc_deg": 11.537513128581285
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_slide_01",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 116,
+      "q_start": [
+        -1.4059935944568993,
+        0.7365835202777677,
+        1.0676162671941873,
+        1.3373753717954044,
+        -2.9767899211830926,
+        -1.5708137753873876
+      ],
+      "q_end": [
+        -1.40599328438277,
+        0.7489897674528486,
+        1.0947344721998362,
+        1.2978695865738927,
+        -2.97678960731663,
+        -1.570795158968738
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55749898480859,
+        "end_deg": -80.55748121886964,
+        "minimum_deg": -80.55749898480859,
+        "maximum_deg": -80.55748121886964,
+        "range_deg": 1.7765938942886512e-05,
+        "net_change_deg": 1.7765938942886512e-05,
+        "total_variation_deg": 1.7765938942886512e-05,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.7765938942886512e-05,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_slide_02",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 117,
+      "q_start": [
+        -1.40599328438277,
+        0.7489897674528486,
+        1.0947344721998362,
+        1.2978695865738927,
+        -2.97678960731663,
+        -1.570795158968738
+      ],
+      "q_end": [
+        -1.4059932844136893,
+        0.7630607666306466,
+        1.1191925871559747,
+        1.259340476106688,
+        -2.9767896074823,
+        -1.5707951553098334
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748121886964,
+        "end_deg": -80.5574812206412,
+        "minimum_deg": -80.5574812206412,
+        "maximum_deg": -80.55748121886964,
+        "range_deg": 1.771543513137727e-09,
+        "net_change_deg": -1.771543513137727e-09,
+        "total_variation_deg": 1.771543513137727e-09,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.771543513137727e-09,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_slide_03",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 118,
+      "q_start": [
+        -1.4059932844136893,
+        0.7630607666306466,
+        1.1191925871559747,
+        1.259340476106688,
+        -2.9767896074823,
+        -1.5707951553098334
+      ],
+      "q_end": [
+        -1.405993283552393,
+        0.7787234806605989,
+        1.1410891685200044,
+        1.221781243751146,
+        -2.976789606621409,
+        -1.570795092511885
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.5574812206412,
+        "end_deg": -80.55748117129254,
+        "minimum_deg": -80.5574812206412,
+        "maximum_deg": -80.55748117129254,
+        "range_deg": 4.934864677115202e-08,
+        "net_change_deg": 4.934864677115202e-08,
+        "total_variation_deg": 4.934864677115202e-08,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 4.934864677115202e-08,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_slide_04",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 119,
+      "q_start": [
+        -1.405993283552393,
+        0.7787234806605989,
+        1.1410891685200044,
+        1.221781243751146,
+        -2.976789606621409,
+        -1.570795092511885
+      ],
+      "q_end": [
+        -1.4059932806821815,
+        0.7959057762882508,
+        1.1605129895834152,
+        1.1851753235226998,
+        -2.9767896035386068,
+        -1.5707948967849077
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748117129254,
+        "end_deg": -80.55748100684154,
+        "minimum_deg": -80.55748117129254,
+        "maximum_deg": -80.55748100684154,
+        "range_deg": 1.6445099963828908e-07,
+        "net_change_deg": 1.6445099963828908e-07,
+        "total_variation_deg": 1.6445099963828908e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.6445099963828908e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_slide_05",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 120,
+      "q_start": [
+        -1.4059932806821815,
+        0.7959057762882508,
+        1.1605129895834152,
+        1.1851753235226998,
+        -2.9767896035386068,
+        -1.5707948967849077
+      ],
+      "q_end": [
+        -1.4059933161909683,
+        0.8145409271715154,
+        1.1775360749500559,
+        1.1495160794502164,
+        -2.976789650597894,
+        -1.5707958984915154
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748100684154,
+        "end_deg": -80.55748304134517,
+        "minimum_deg": -80.55748304134517,
+        "maximum_deg": -80.55748100684154,
+        "range_deg": 2.0345036192589272e-06,
+        "net_change_deg": -2.0345036192589272e-06,
+        "total_variation_deg": 2.0345036192589272e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.0345036192589272e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_slide_06",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 121,
+      "q_start": [
+        -1.4059933161909683,
+        0.8145409271715154,
+        1.1775360749500559,
+        1.1495160794502164,
+        -2.976789650597894,
+        -1.5707958984915154
+      ],
+      "q_end": [
+        -1.4059932846591612,
+        0.8345686359677592,
+        1.1922127279319255,
+        1.1148125212633597,
+        -2.9767896084235477,
+        -1.57079510016358
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748304134517,
+        "end_deg": -80.55748123470569,
+        "minimum_deg": -80.55748304134517,
+        "maximum_deg": -80.55748123470569,
+        "range_deg": 1.8066394709925236e-06,
+        "net_change_deg": 1.8066394709925236e-06,
+        "total_variation_deg": 1.8066394709925236e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.8066394709925236e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_slide_07",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 122,
+      "q_start": [
+        -1.4059932846591612,
+        0.8345686359677592,
+        1.1922127279319255,
+        1.1148125212633597,
+        -2.9767896084235477,
+        -1.57079510016358
+      ],
+      "q_end": [
+        -1.4059932957085493,
+        0.8559294217582448,
+        1.2045901230213518,
+        1.0810740665920318,
+        -2.9767896240669343,
+        -1.5707953718006893
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748123470569,
+        "end_deg": -80.557481867789,
+        "minimum_deg": -80.557481867789,
+        "maximum_deg": -80.55748123470569,
+        "range_deg": 6.330833026803246e-07,
+        "net_change_deg": -6.330833026803246e-07,
+        "total_variation_deg": 6.330833026803246e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 6.330833026803246e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate",
+      "arm": "B",
+      "kind": "close_gate",
+      "part": "Gate",
+      "reference_index": 123,
+      "q_start": [
+        -1.4059932957085493,
+        0.8559294217582448,
+        1.2045901230213518,
+        1.0810740665920318,
+        -2.9767896240669343,
+        -1.5707953718006893
+      ],
+      "q_end": [
+        -1.4059932957085493,
+        0.8559294217582448,
+        1.2045901230213518,
+        1.0810740665920318,
+        -2.9767896240669343,
+        -1.5707953718006893
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.557481867789,
+        "end_deg": -80.557481867789,
+        "minimum_deg": -80.557481867789,
+        "maximum_deg": -80.557481867789,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_retreat_01",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 124,
+      "q_start": [
+        -1.4059932957085493,
+        0.8559294217582448,
+        1.2045901230213518,
+        1.0810740665920318,
+        -2.9767896240669343,
+        -1.5707953718006893
+      ],
+      "q_end": [
+        -1.405993323191632,
+        0.8345677676802118,
+        1.192214302114616,
+        1.114809489282693,
+        -2.9767896529346034,
+        -1.5707974168570127
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.557481867789,
+        "end_deg": -80.55748344245364,
+        "minimum_deg": -80.55748344245364,
+        "maximum_deg": -80.557481867789,
+        "range_deg": 1.574664646633609e-06,
+        "net_change_deg": -1.574664646633609e-06,
+        "total_variation_deg": 1.574664646633609e-06,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.574664646633609e-06,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_retreat_02",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 125,
+      "q_start": [
+        -1.405993323191632,
+        0.8345677676802118,
+        1.192214302114616,
+        1.114809489282693,
+        -2.9767896529346034,
+        -1.5707974168570127
+      ],
+      "q_end": [
+        -1.405993323234711,
+        0.8145404094673874,
+        1.177537026355595,
+        1.1495141197678638,
+        -2.9767896530049427,
+        -1.5707974203555115
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748344245364,
+        "end_deg": -80.55748344492189,
+        "minimum_deg": -80.55748344492189,
+        "maximum_deg": -80.55748344245364,
+        "range_deg": 2.4682503772216733e-09,
+        "net_change_deg": -2.4682503772216733e-09,
+        "total_variation_deg": 2.4682503772216733e-09,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.4682503772216733e-09,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_retreat_03",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 126,
+      "q_start": [
+        -1.405993323234711,
+        0.8145404094673874,
+        1.177537026355595,
+        1.1495141197678638,
+        -2.9767896530049427,
+        -1.5707974203555115
+      ],
+      "q_end": [
+        -1.4059933199763814,
+        0.7959049096023447,
+        1.1605145332144657,
+        1.185172441496443,
+        -2.9767896501856717,
+        -1.5707970926168688
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748344492189,
+        "end_deg": -80.55748325823336,
+        "minimum_deg": -80.55748344492189,
+        "maximum_deg": -80.55748325823336,
+        "range_deg": 1.8668853469355247e-07,
+        "net_change_deg": 1.8668853469355247e-07,
+        "total_variation_deg": 1.8668853469355247e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.8668853469355247e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_retreat_04",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 127,
+      "q_start": [
+        -1.4059933199763814,
+        0.7959049096023447,
+        1.1605145332144657,
+        1.185172441496443,
+        -2.9767896501856717,
+        -1.5707970926168688
+      ],
+      "q_end": [
+        -1.4059933211616025,
+        0.7787226142091818,
+        1.1410907034465219,
+        1.22177840134904,
+        -2.976789650970333,
+        -1.5707972575171318
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748325823336,
+        "end_deg": -80.55748332614152,
+        "minimum_deg": -80.55748332614152,
+        "maximum_deg": -80.55748325823336,
+        "range_deg": 6.790816294833353e-08,
+        "net_change_deg": -6.790816294833353e-08,
+        "total_variation_deg": 6.790816294833353e-08,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 6.790816294833353e-08,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_retreat_05",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 128,
+      "q_start": [
+        -1.4059933211616025,
+        0.7787226142091818,
+        1.1410907034465219,
+        1.22177840134904,
+        -2.976789650970333,
+        -1.5707972575171318
+      ],
+      "q_end": [
+        -1.405993324887466,
+        0.7630598554029037,
+        1.1191941918104782,
+        1.259337570801721,
+        -2.97678965613443,
+        -1.5707973578205978
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748332614152,
+        "end_deg": -80.55748353961778,
+        "minimum_deg": -80.55748353961778,
+        "maximum_deg": -80.55748332614152,
+        "range_deg": 2.1347626033164862e-07,
+        "net_change_deg": -2.1347626033164862e-07,
+        "total_variation_deg": 2.1347626033164862e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 2.1347626033164862e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_retreat_06",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 129,
+      "q_start": [
+        -1.405993324887466,
+        0.7630598554029037,
+        1.1191941918104782,
+        1.259337570801721,
+        -2.97678965613443,
+        -1.5707973578205978
+      ],
+      "q_end": [
+        -1.4059933239310622,
+        0.7489888319446734,
+        1.09473611447087,
+        1.2978666501055665,
+        -2.976789654650796,
+        -1.5707973794109844
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748353961778,
+        "end_deg": -80.55748348481987,
+        "minimum_deg": -80.55748353961778,
+        "maximum_deg": -80.55748348481987,
+        "range_deg": 5.479790382912219e-08,
+        "net_change_deg": 5.479790382912219e-08,
+        "total_variation_deg": 5.479790382912219e-08,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 5.479790382912219e-08,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_retreat_07",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 130,
+      "q_start": [
+        -1.4059933239310622,
+        0.7489888319446734,
+        1.09473611447087,
+        1.2978666501055665,
+        -2.976789654650796,
+        -1.5707973794109844
+      ],
+      "q_end": [
+        -1.4059933274189944,
+        0.7365896481037554,
+        1.0676055340729513,
+        1.3373962579722312,
+        -2.9767896592792438,
+        -1.5707975350024121
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748348481987,
+        "end_deg": -80.55748368466367,
+        "minimum_deg": -80.55748368466367,
+        "maximum_deg": -80.55748348481987,
+        "range_deg": 1.9984379230039715e-07,
+        "net_change_deg": -1.9984379230039715e-07,
+        "total_variation_deg": 1.9984379230039715e-07,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 1.9984379230039715e-07,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "close_gate_retreat_contact_clear",
+      "arm": "B",
+      "kind": "wait",
+      "part": null,
+      "reference_index": 131,
+      "q_start": [
+        -1.4059933274189944,
+        0.7365896481037554,
+        1.0676055340729513,
+        1.3373962579722312,
+        -2.9767896592792438,
+        -1.5707975350024121
+      ],
+      "q_end": [
+        -1.4059933274189944,
+        0.7365896481037554,
+        1.0676055340729513,
+        1.3373962579722312,
+        -2.9767896592792438,
+        -1.5707975350024121
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748368466367,
+        "end_deg": -80.55748368466367,
+        "minimum_deg": -80.55748368466367,
+        "maximum_deg": -80.55748368466367,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "A_final_home",
+      "arm": "A",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 132,
+      "q_start": [
+        -2.3476570437805973,
+        -0.25173329543603185,
+        1.570735256142382,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "q_end": [
+        -2.3476570437805973,
+        -0.2517332954360318,
+        1.5707352561423822,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -134.51084035278777,
+        "end_deg": -134.51084035278777,
+        "minimum_deg": -134.51084035278777,
+        "maximum_deg": -134.51084035278777,
+        "range_deg": 0.0,
+        "net_change_deg": 0.0,
+        "total_variation_deg": 0.0,
+        "backtracking_deg": 0.0,
+        "shortest_endpoint_circular_arc_deg": 0.0,
+        "variation_excess_over_endpoint_arc_deg": 0.0
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    },
+    {
+      "task": "B_final_home",
+      "arm": "B",
+      "kind": "transit",
+      "part": null,
+      "reference_index": 133,
+      "q_start": [
+        -1.4059933274189944,
+        0.7365896481037554,
+        1.0676055340729513,
+        1.3373962579722312,
+        -2.9767896592792438,
+        -1.5707975350024121
+      ],
+      "q_end": [
+        -1.3742187234102956,
+        1.2389301902143843,
+        -1.572353406970473,
+        1.9041820476107,
+        -1.5706878338204409,
+        0.19654087532175812
+      ],
+      "node_ids": [],
+      "planned_reference": {
+        "start_deg": -80.55748368466367,
+        "end_deg": -78.73693297926576,
+        "minimum_deg": -108.76683651015294,
+        "maximum_deg": -71.30607349832383,
+        "range_deg": 37.460763011829115,
+        "net_change_deg": 1.8205507053979084,
+        "total_variation_deg": 76.74207672905615,
+        "backtracking_deg": 74.92152602365823,
+        "shortest_endpoint_circular_arc_deg": 1.8205507053979084,
+        "variation_excess_over_endpoint_arc_deg": 74.92152602365823
+      },
+      "planned_tpg": null,
+      "red_reasons": [],
+      "status": "OK"
+    }
+  ],
+  "semantic_groups": {
+    "pick_support": {
+      "arm": "B",
+      "task_ids": [
+        "pick_support_approach",
+        "pick_support_contact",
+        "pick_support",
+        "pick_support_lift",
+        "pick_support_lift_contact_clear"
+      ],
+      "planned_reference_total_variation_deg": 165.8449099867866
+    },
+    "return_support": {
+      "arm": "B",
+      "task_ids": [
+        "return_support_approach",
+        "return_support_contact",
+        "return_support",
+        "return_support_retreat",
+        "return_support_retreat_contact_clear"
+      ],
+      "planned_reference_total_variation_deg": 203.24272836074562
+    },
+    "final_gate_pick_and_install": {
+      "arm": "B",
+      "task_ids": [
+        "pick_gate_approach",
+        "pick_gate_contact",
+        "pick_gate",
+        "pick_gate_lift",
+        "pick_gate_lift_contact_clear",
+        "close_gate_approach",
+        "close_gate_slide_01",
+        "close_gate_slide_02",
+        "close_gate_slide_03",
+        "close_gate_slide_04",
+        "close_gate_slide_05",
+        "close_gate_slide_06",
+        "close_gate_slide_07",
+        "close_gate",
+        "close_gate_retreat_01",
+        "close_gate_retreat_02",
+        "close_gate_retreat_03",
+        "close_gate_retreat_04",
+        "close_gate_retreat_05",
+        "close_gate_retreat_06",
+        "close_gate_retreat_07",
+        "close_gate_retreat_contact_clear"
+      ],
+      "planned_reference_total_variation_deg": 241.98471776752547
+    }
+  },
+  "non_relocation_windows": {
+    "pick_support": {
+      "arm": "B",
+      "task_ids": [
+        "pick_support_approach",
+        "pick_support_contact",
+        "pick_support",
+        "pick_support_lift",
+        "pick_support_lift_contact_clear",
+        "support_route_front"
+      ],
+      "first_task": "pick_support_approach",
+      "last_task": "support_route_front",
+      "planned_total_variation_deg": 334.4678586512427,
+      "max_planned_transit_variation_deg": 168.6229486644561,
+      "scope": "Named semantic stage plus preceding/following same-arm transit; windows can overlap and must not be summed"
+    },
+    "return_support": {
+      "arm": "B",
+      "task_ids": [
+        "lift_extracted_support",
+        "return_support_approach",
+        "return_support_contact",
+        "return_support",
+        "return_support_retreat",
+        "return_support_retreat_contact_clear",
+        "pick_gate_approach"
+      ],
+      "first_task": "lift_extracted_support",
+      "last_task": "pick_gate_approach",
+      "planned_total_variation_deg": 380.17405196242896,
+      "max_planned_transit_variation_deg": 176.93132356758608,
+      "scope": "Named semantic stage plus preceding/following same-arm transit; windows can overlap and must not be summed"
+    },
+    "final_gate_pick_and_install": {
+      "arm": "B",
+      "task_ids": [
+        "return_support_retreat",
+        "return_support_retreat_contact_clear",
+        "pick_gate_approach",
+        "pick_gate_contact",
+        "pick_gate",
+        "pick_gate_lift",
+        "pick_gate_lift_contact_clear",
+        "close_gate_approach",
+        "close_gate_slide_01",
+        "close_gate_slide_02",
+        "close_gate_slide_03",
+        "close_gate_slide_04",
+        "close_gate_slide_05",
+        "close_gate_slide_06",
+        "close_gate_slide_07",
+        "close_gate",
+        "close_gate_retreat_01",
+        "close_gate_retreat_02",
+        "close_gate_retreat_03",
+        "close_gate_retreat_04",
+        "close_gate_retreat_05",
+        "close_gate_retreat_06",
+        "close_gate_retreat_07",
+        "close_gate_retreat_contact_clear",
+        "B_final_home"
+      ],
+      "first_task": "return_support_retreat",
+      "last_task": "B_final_home",
+      "planned_total_variation_deg": 359.33566260547514,
+      "max_planned_transit_variation_deg": 176.93132356758608,
+      "scope": "Named semantic stage plus preceding/following same-arm transit; windows can overlap and must not be summed"
+    }
+  },
+  "limitations": [
+    "RED means observed/planned angular excursion or accumulated angular travel exceeds the specified review threshold, not a collision failure.",
+    "Planned q_path winding is preserved. Actual wrapped sensor positions are unwrapped only between densely sampled states. Measured-velocity integration disagreement is reported separately and must not be hidden.",
+    "Shortest endpoint circular arc is a lower bound; it does not certify IK branch compatibility, joint limits, tool clearance or a collision-free shortcut.",
+    "Actual windows use recorded samples inside node events, so small endpoint sampling gaps are explicitly reported. No simulation is run."
+  ],
+  "input_files": {
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\base_rotation_investigation\\reference_tasks_candidate.json": "8d8fedd3a4e601cb55dd488ea811640bd9d919da7cb4ce224457dcbeeab3a348"
+  },
+  "window_non_relocation_check": {
+    "passed": true,
+    "scope": "planned q_path versus planned q_path only",
+    "windows": [
+      {
+        "window": "pick_support",
+        "same_boundary_tasks": true,
+        "position_sampling_continuous": true,
+        "before_total_deg": 522.1911945224531,
+        "after_total_deg": 334.4678586512427,
+        "total_angle_reduced": true,
+        "maximum_candidate_transit_deg": 168.6229486644561,
+        "all_candidate_transits_within_limit": true,
+        "passed": true
+      },
+      {
+        "window": "return_support",
+        "same_boundary_tasks": true,
+        "position_sampling_continuous": true,
+        "before_total_deg": 407.2012923720141,
+        "after_total_deg": 380.17405196242896,
+        "total_angle_reduced": true,
+        "maximum_candidate_transit_deg": 176.93132356758608,
+        "all_candidate_transits_within_limit": true,
+        "passed": true
+      },
+      {
+        "window": "final_gate_pick_and_install",
+        "same_boundary_tasks": true,
+        "position_sampling_continuous": true,
+        "before_total_deg": 711.742503784917,
+        "after_total_deg": 359.33566260547514,
+        "total_angle_reduced": true,
+        "maximum_candidate_transit_deg": 176.93132356758608,
+        "all_candidate_transits_within_limit": true,
+        "passed": true
+      }
+    ],
+    "limit_deg": 180.0,
+    "focus_only_comparison": false
+  },
+  "baseline_comparison_source": {
+    "path": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\base_rotation_investigation\\baseline_317s.json",
+    "sha256": "3a289cf3fe84101db7aa678df30e7e7278c5bd8d398886fe57e8f2adc71363b1"
+  }
+}

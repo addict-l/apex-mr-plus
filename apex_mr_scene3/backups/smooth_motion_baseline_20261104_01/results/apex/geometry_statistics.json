@@ -1,0 +1,14 @@
+{
+  "oracle_calls": 1616,
+  "conflicting_calls": 195,
+  "mode_conflicts": 171,
+  "mesh_state_queries": 28264,
+  "cache_hits": 4879,
+  "states_considered": 33157,
+  "batch_calls": 456,
+  "wall_s": 92.70103459985694,
+  "joint_sample_step_rad": 0.07,
+  "batch_size": 128,
+  "continuous_collision_guarantee": false,
+  "broadphase_disjoint_calls": 1015
+}

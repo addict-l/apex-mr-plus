@@ -1,0 +1,1 @@
+import * as React from 'react'; import {createRoot} from 'react-dom/client'; import App from "C:/Users/t1507/.cursor/projects/c-Users-t1507/canvases/Scene3-ILP-TPG.canvas.tsx"; createRoot(document.getElementById('root')!).render(<App/>);

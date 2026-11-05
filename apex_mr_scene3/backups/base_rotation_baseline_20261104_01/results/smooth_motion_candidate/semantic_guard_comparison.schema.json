@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "legacy_node_comparison": "Unmodified apex.performance.compare_runs result, including its original rejection.",
+  "semantic_guard_comparison": {
+    "accepted": "All separately documented comparison checks passed.",
+    "validated_replanned_speedup": "accepted AND after actual makespan is shorter.",
+    "checks": "Named true/false/unknown comparison conditions.",
+    "task_guard_report": "Task-ID reachability, actual task timing, skill identity, selected support order, buffer events.",
+    "geometry_reports": "New graph sampled-oracle certificate plus independently stored full rollout reports."
+  },
+  "scope": "Two observed full runs. New route geometry and support order may differ; no isolated causal attribution to smoothing."
+}

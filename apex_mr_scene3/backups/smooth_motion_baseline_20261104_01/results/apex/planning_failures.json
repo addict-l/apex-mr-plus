@@ -1,0 +1,2468 @@
+[
+  {
+    "attempt": 0,
+    "stage": "close_gate_goal_branch",
+    "evidence": {
+      "ok": false,
+      "stats": {
+        "wall_time_s": 1.677000000000021,
+        "candidates": 347,
+        "required_orientation_error_rad": 0.0002,
+        "rejections": [
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/TemporarySupport"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "block_robot_collision:K2:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/K2"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "self_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_3/link",
+              "/B_UR5/B_joint_6/link"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          },
+          {
+            "reason": "table_collision:B",
+            "pair": [
+              "/B_UR5/B_joint_2/link",
+              "/Workbench"
+            ]
+          }
+        ],
+        "ik_calls": 348,
+        "required_position_error_m": 5e-05,
+        "accepted_pose_errors": {},
+        "collision_checks": 347,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      },
+      "problem": {
+        "reason": "table_collision:B",
+        "pair": [
+          "/B_UR5/B_joint_2/link",
+          "/Workbench"
+        ]
+      },
+      "solutions": {}
+    },
+    "selected_modes": [
+      "outer_front:after_gate:B",
+      "supply_K1:A",
+      "install_K1:B",
+      "supply_K2:A",
+      "install_K2:B",
+      "close_gate:B",
+      "handoff_K1",
+      "handoff_K2"
+    ]
+  }
+]

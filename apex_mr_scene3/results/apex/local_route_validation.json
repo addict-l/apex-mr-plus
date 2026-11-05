@@ -1,0 +1,162 @@
+{
+  "source": "frozen_local_candidates_with_fresh_native_revalidation",
+  "candidate_asset_sha256": "c902c15042f00b62d2be456d4a2f64828dd677df75a8df19f7a76ab833221ccc",
+  "structural_windows": [
+    {
+      "scope": "structural candidate checks only; native geometry and dynamics pending",
+      "arm": "B",
+      "first_task": "pick_support_approach",
+      "last_task": "support_high_approach",
+      "replaced_transits": [
+        "pick_support_approach",
+        "pick_support_contact",
+        "pick_support_lift",
+        "support_route_front",
+        "support_high_approach"
+      ],
+      "shifted_skill_postures": [
+        "pick_support",
+        "pick_support_lift_contact_clear"
+      ],
+      "before_base_travel_deg": 552.2833090395736,
+      "after_base_travel_deg": 364.55997316836306
+    },
+    {
+      "scope": "structural candidate checks only; native geometry and dynamics pending",
+      "arm": "B",
+      "first_task": "return_support_approach",
+      "last_task": "pick_gate_approach",
+      "replaced_transits": [
+        "return_support_approach",
+        "return_support_contact",
+        "return_support_retreat",
+        "pick_gate_approach"
+      ],
+      "shifted_skill_postures": [
+        "return_support",
+        "return_support_retreat_contact_clear"
+      ],
+      "before_base_travel_deg": 407.2012923379169,
+      "after_base_travel_deg": 380.17405192833166
+    },
+    {
+      "scope": "structural candidate checks only; native geometry and dynamics pending",
+      "arm": "B",
+      "first_task": "pick_gate_lift",
+      "last_task": "close_gate_approach",
+      "replaced_transits": [
+        "pick_gate_lift",
+        "close_gate_approach"
+      ],
+      "shifted_skill_postures": [
+        "pick_gate_lift_contact_clear"
+      ],
+      "before_base_travel_deg": 449.26829518685236,
+      "after_base_travel_deg": 65.05336591231212
+    }
+  ],
+  "changed_task_checks": [
+    {
+      "task_id": "pick_support_approach",
+      "native_geometry_valid": true,
+      "samples": 2137,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "pick_support_contact",
+      "native_geometry_valid": true,
+      "samples": 185,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "pick_support",
+      "native_geometry_valid": true,
+      "samples": 2,
+      "step_rad": 0.003,
+      "skill_position_error_m": 5.578801654593729e-16,
+      "skill_orientation_error_rad": 0.0
+    },
+    {
+      "task_id": "pick_support_lift",
+      "native_geometry_valid": true,
+      "samples": 217,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "pick_support_lift_contact_clear",
+      "native_geometry_valid": true,
+      "samples": 2,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "support_route_front",
+      "native_geometry_valid": true,
+      "samples": 1789,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "return_support_approach",
+      "native_geometry_valid": true,
+      "samples": 1893,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "return_support_contact",
+      "native_geometry_valid": true,
+      "samples": 177,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "return_support",
+      "native_geometry_valid": true,
+      "samples": 2,
+      "step_rad": 0.003,
+      "skill_position_error_m": 5.768888059150692e-16,
+      "skill_orientation_error_rad": 0.0
+    },
+    {
+      "task_id": "return_support_retreat",
+      "native_geometry_valid": true,
+      "samples": 351,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "return_support_retreat_contact_clear",
+      "native_geometry_valid": true,
+      "samples": 2,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "pick_gate_approach",
+      "native_geometry_valid": true,
+      "samples": 1524,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "pick_gate_lift",
+      "native_geometry_valid": true,
+      "samples": 87,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "pick_gate_lift_contact_clear",
+      "native_geometry_valid": true,
+      "samples": 2,
+      "step_rad": 0.003
+    },
+    {
+      "task_id": "close_gate_approach",
+      "native_geometry_valid": true,
+      "samples": 949,
+      "step_rad": 0.003
+    }
+  ],
+  "samples": 9319,
+  "continuous_collision_guarantee": false,
+  "remaining_checks": [
+    "curved_geometry",
+    "all_phase_TPG_conflicts",
+    "nominal_rollout",
+    "actual_dynamics"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "run_id": "20261103T121253Z-d0d0c68e",
+  "inputs": {
+    "summary.json": "e27a18c78062733c62037e14787ab2f288d98551601ec57ac6537a53eecf88f1",
+    "allocation.json": "43f73ea0ec62908f897985ca3894b8635f64399c46506e47d6a8051217166c42",
+    "tpg.json": "d981f1c901ed66763841068b67ebad6e20895c48aa53a3026812b17389fe0b06",
+    "execution.json": "314e6e0c5a1575f5db0bd9f228226f4ebda72b6efb7e24d7031dc2212d11cf3e",
+    "execution_validation.json": "d5c5bbd5a77dbb7c0a6bdc88af3e459aed14d4b17bd92893ffe72dd6e8980ae4"
+  },
+  "scope": "ILP assignments, exact TPG counts, four bundles of seven task Type-2 edges, actual node-event Gantt; no nominal/actual speedup claim",
+  "source_node_count": 419,
+  "task_type2_bundles": {
+    "release": 1,
+    "K1": 2,
+    "capacity": 2,
+    "K2": 2
+  },
+  "outputs": [
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\visualizations\\scene3_ilp_tpg_overview.png",
+    "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\visualizations\\scene3_ilp_tpg_overview.svg"
+  ],
+  "chinese_font": "C:\\Windows\\Fonts\\msyh.ttc"
+}

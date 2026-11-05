@@ -1,0 +1,287 @@
+{
+  "kind": "nominal_geometric_rollout_verification",
+  "step_s": 0.06,
+  "nominal_makespan_s": 311.91364408961545,
+  "planned_samples": 5589,
+  "tested_samples": 5589,
+  "batch_calls": 44,
+  "coverage_complete": true,
+  "batch_statistics": [
+    {
+      "start_s": 0.0,
+      "end_s": 7.02,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 7.04415991614636,
+      "end_s": 14.16,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 14.219999999999999,
+      "end_s": 21.49437482663401,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 21.54,
+      "end_s": 28.513148681966392,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 28.56,
+      "end_s": 35.699999999999996,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 35.76,
+      "end_s": 43.019999999999996,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 43.08,
+      "end_s": 50.22,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 50.28,
+      "end_s": 57.48,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 57.54,
+      "end_s": 64.5,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 64.56,
+      "end_s": 71.52,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 71.58,
+      "end_s": 78.17999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 78.24,
+      "end_s": 85.08,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 85.14,
+      "end_s": 92.16,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 92.22,
+      "end_s": 99.66,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 99.72,
+      "end_s": 106.67999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 106.74,
+      "end_s": 113.58,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 113.64,
+      "end_s": 120.72,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 120.78,
+      "end_s": 127.56,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 127.61999999999999,
+      "end_s": 134.57999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 134.64,
+      "end_s": 141.66,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 141.72,
+      "end_s": 149.14413356381237,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 149.16,
+      "end_s": 156.6,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 156.66,
+      "end_s": 164.1,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 164.16,
+      "end_s": 171.0,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 171.06,
+      "end_s": 178.07999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 178.14,
+      "end_s": 185.3938155293876,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 185.4,
+      "end_s": 192.66,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 192.72,
+      "end_s": 200.16,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 200.22,
+      "end_s": 207.23999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 207.29999999999998,
+      "end_s": 214.44,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 214.5,
+      "end_s": 221.4,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 221.45999999999998,
+      "end_s": 228.48,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 228.50780311924373,
+      "end_s": 235.67999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 235.73999999999998,
+      "end_s": 243.17999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 243.23999999999998,
+      "end_s": 250.5834246562649,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 250.62,
+      "end_s": 257.58,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 257.64,
+      "end_s": 264.9,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 264.96,
+      "end_s": 271.8,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 271.86,
+      "end_s": 278.94,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 279.0,
+      "end_s": 285.96,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 286.02,
+      "end_s": 292.92,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 292.97999999999996,
+      "end_s": 299.94,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 300.0,
+      "end_s": 307.14,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 307.2,
+      "end_s": 311.91364408961545,
+      "samples": 85,
+      "invalid_samples": 0
+    }
+  ],
+  "first_violation": null,
+  "no_sampled_collision": true,
+  "nominal_world_state_reconstructed": true,
+  "world_state_gaps": [],
+  "missing_source_poses": [],
+  "stationary_waiting_poses_included": true,
+  "valid": true,
+  "continuous_collision_guarantee": false,
+  "dynamics_or_force_verified": false,
+  "world_state_basis": "cfg source poses + declared pick payload transforms + completed place goal poses",
+  "trajectory_timing_basis": "motion_segments quintic timing when supplied; otherwise reference-polyline arclength",
+  "wall_s": 24.06578000000445
+}

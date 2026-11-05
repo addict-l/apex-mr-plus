@@ -1,0 +1,371 @@
+{
+  "kind": "nominal_geometric_rollout_verification",
+  "step_s": 0.06,
+  "nominal_makespan_s": 419.22675228176456,
+  "planned_samples": 7407,
+  "tested_samples": 7407,
+  "batch_calls": 58,
+  "coverage_complete": true,
+  "batch_statistics": [
+    {
+      "start_s": 0.0,
+      "end_s": 7.199999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 7.26,
+      "end_s": 14.459999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 14.52,
+      "end_s": 21.84,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 21.9,
+      "end_s": 29.16,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 29.19895509047888,
+      "end_s": 36.42,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 36.48,
+      "end_s": 43.68,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 43.739999999999995,
+      "end_s": 50.94,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 51.0,
+      "end_s": 58.199999999999996,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 58.26,
+      "end_s": 65.52,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 65.58,
+      "end_s": 72.78,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 72.84,
+      "end_s": 80.03999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 80.1,
+      "end_s": 87.3,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 87.36,
+      "end_s": 94.56,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 94.61999999999999,
+      "end_s": 101.94,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 102.0,
+      "end_s": 108.89999999999999,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 108.96,
+      "end_s": 116.1,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 116.16,
+      "end_s": 123.24,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 123.3,
+      "end_s": 130.2,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 130.26,
+      "end_s": 137.04,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 137.1,
+      "end_s": 144.29999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 144.35999999999999,
+      "end_s": 151.79999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 151.85999999999999,
+      "end_s": 159.00813759853983,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 159.06,
+      "end_s": 166.07999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 166.14,
+      "end_s": 173.34,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 173.3901006892111,
+      "end_s": 180.42,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 180.48,
+      "end_s": 187.5,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 187.52969668766482,
+      "end_s": 194.34,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 194.4,
+      "end_s": 201.6,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 201.66,
+      "end_s": 208.92,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 208.98,
+      "end_s": 216.48,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 216.4995910354624,
+      "end_s": 223.92,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 223.98,
+      "end_s": 231.06,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 231.12,
+      "end_s": 238.14,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 238.2,
+      "end_s": 245.51999999999998,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 245.57999999999998,
+      "end_s": 252.78,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 252.84,
+      "end_s": 260.15999999999997,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 260.21999999999997,
+      "end_s": 267.65999999999997,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 267.71999999999997,
+      "end_s": 274.86055909185075,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 274.92,
+      "end_s": 282.18,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 282.24,
+      "end_s": 289.38,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 289.44,
+      "end_s": 296.58,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 296.64,
+      "end_s": 303.78,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 303.84,
+      "end_s": 311.03999999999996,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 311.09999999999997,
+      "end_s": 318.42,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 318.47999999999996,
+      "end_s": 325.92,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 325.97999999999996,
+      "end_s": 333.24,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 333.3,
+      "end_s": 340.5,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 340.56,
+      "end_s": 347.94,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 347.9896647170558,
+      "end_s": 355.08,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 355.14,
+      "end_s": 362.34,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 362.4,
+      "end_s": 369.53999999999996,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 369.59999999999997,
+      "end_s": 376.8,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 376.86,
+      "end_s": 384.06,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 384.12,
+      "end_s": 391.2397849199694,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 391.26,
+      "end_s": 398.34,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 398.4,
+      "end_s": 405.65999999999997,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 405.71999999999997,
+      "end_s": 412.91999999999996,
+      "samples": 128,
+      "invalid_samples": 0
+    },
+    {
+      "start_s": 412.97999999999996,
+      "end_s": 419.22675228176456,
+      "samples": 111,
+      "invalid_samples": 0
+    }
+  ],
+  "first_violation": null,
+  "no_sampled_collision": true,
+  "nominal_world_state_reconstructed": true,
+  "world_state_gaps": [],
+  "missing_source_poses": [],
+  "stationary_waiting_poses_included": true,
+  "valid": true,
+  "continuous_collision_guarantee": false,
+  "dynamics_or_force_verified": false,
+  "world_state_basis": "cfg source poses + declared pick payload transforms + completed place goal poses",
+  "trajectory_timing_basis": "motion_segments quintic timing when supplied; otherwise reference-polyline arclength",
+  "wall_s": 51.72595849999925
+}

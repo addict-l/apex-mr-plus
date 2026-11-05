@@ -1,0 +1,196 @@
+{
+  "candidate_file": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\base_rotation_investigation\\support_pick_approach_candidates.json",
+  "candidate_sha256": "2056ab45d95edd98cdf99c07aea2347e2aa89d2badef7fedc257d1c8201c365f",
+  "source_run_id": "20261104T163855Z-0804c434",
+  "scope": "isolated window production parameterization, excludes servo settling and asynchronous schedule",
+  "actual_pending": true,
+  "full_TPG_certificate_pending": true,
+  "candidates": [
+    {
+      "label": "limited_0.4",
+      "task_ids": [
+        "pick_support_approach",
+        "pick_support_contact",
+        "pick_support",
+        "pick_support_lift",
+        "pick_support_lift_contact_clear",
+        "support_route_front",
+        "support_high_approach"
+      ],
+      "candidate_duration_by_task_s": {
+        "pick_support_approach": 26.51360405099243,
+        "pick_support_contact": 6.703772132245394,
+        "pick_support": 0.3,
+        "pick_support_lift": 1.5409477839400605,
+        "pick_support_lift_contact_clear": 0.08,
+        "support_route_front": 13.237869515463025,
+        "support_high_approach": 4.742636128661193
+      },
+      "accepted_baseline_duration_by_task_s": {
+        "pick_support_approach": 12.949654910448558,
+        "pick_support_contact": 6.703772132245394,
+        "pick_support": 0.3,
+        "pick_support_lift": 1.5409477839400605,
+        "pick_support_lift_contact_clear": 0.08,
+        "support_route_front": 24.534674931589613,
+        "support_high_approach": 4.742636128661193
+      },
+      "candidate_window_motion_and_dwell_s": 53.118829611302104,
+      "accepted_baseline_window_motion_and_dwell_s": 50.85168588688482,
+      "candidate_without_C2_motion_and_dwell_s": 53.11882961130212,
+      "smoothing": {
+        "candidate_macros": [
+          {
+            "macro": "pick_support_approach",
+            "arm": "B",
+            "nodes": 29,
+            "group_kind": "local_route_task",
+            "task_ids": [
+              "pick_support_approach"
+            ],
+            "attempts": [],
+            "accepted": false,
+            "reference_rest_to_rest_motion_duration_s": 22.160637734370027,
+            "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+            "reason": "Corner 1 is 106.395636 degrees; split/stop above 6"
+          },
+          {
+            "macro": "pick_support_contact",
+            "arm": "B",
+            "nodes": 2,
+            "group_kind": "local_route_task",
+            "task_ids": [
+              "pick_support_contact"
+            ],
+            "attempts": [],
+            "accepted": false,
+            "reference_rest_to_rest_motion_duration_s": 6.703772132245394,
+            "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+            "reason": "no_small_angle_corner_to_blend"
+          },
+          {
+            "macro": "pick_support_lift",
+            "arm": "B",
+            "nodes": 3,
+            "group_kind": "local_route_task",
+            "task_ids": [
+              "pick_support_lift"
+            ],
+            "attempts": [],
+            "accepted": false,
+            "reference_rest_to_rest_motion_duration_s": 1.5409477839400605,
+            "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+            "reason": "no_small_angle_corner_to_blend"
+          },
+          {
+            "macro": "support_route_front",
+            "arm": "B",
+            "nodes": 15,
+            "group_kind": "local_route_task",
+            "task_ids": [
+              "support_route_front"
+            ],
+            "attempts": [],
+            "accepted": false,
+            "reference_rest_to_rest_motion_duration_s": 11.389450674793448,
+            "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+            "reason": "Corner 1 is 91.3394104 degrees; split/stop above 6"
+          },
+          {
+            "macro": "support_high_approach",
+            "arm": "B",
+            "nodes": 3,
+            "group_kind": "local_route_task",
+            "task_ids": [
+              "support_high_approach"
+            ],
+            "attempts": [],
+            "accepted": false,
+            "reference_rest_to_rest_motion_duration_s": 3.1229444667039354,
+            "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+            "reason": "Corner 1 is 86.7465514 degrees; split/stop above 6"
+          }
+        ],
+        "accepted_macros": 0,
+        "accepted_cartesian_macros": 0,
+        "accepted_local_route_tasks": 0,
+        "blended_corners": 0,
+        "max_tcp_deviation_m": 0.0,
+        "max_orientation_error_rad": 0.0,
+        "collision_sampling_step_rad": 0.003,
+        "tcp_corridor_limit_m": 0.0005,
+        "orientation_limit_rad": 0.005,
+        "continuous_collision_guarantee": false
+      },
+      "parameterization": {
+        "type": "jerk_bounded_continuous_quintic_and_C2_Bezier",
+        "max_velocity_rad_s": 0.6,
+        "max_acceleration_rad_s2": 1.2,
+        "max_jerk_rad_s3": 8.0,
+        "continuous_runs": [
+          {
+            "id": "pick_support_approach::p0000",
+            "node_count": 5,
+            "duration_s": 3.6093594073504076
+          },
+          {
+            "id": "pick_support_approach::p0006",
+            "node_count": 5,
+            "duration_s": 3.6472687786390354
+          },
+          {
+            "id": "pick_support_approach::p0012",
+            "node_count": 3,
+            "duration_s": 2.227948598632916
+          },
+          {
+            "id": "pick_support_approach::p0016",
+            "node_count": 8,
+            "duration_s": 5.892775090505182
+          },
+          {
+            "id": "pick_support_approach::p0025",
+            "node_count": 4,
+            "duration_s": 2.9328463767134663
+          },
+          {
+            "id": "pick_support_contact::p0000",
+            "node_count": 2,
+            "duration_s": 6.703772132245394
+          },
+          {
+            "id": "pick_support_lift::p0000",
+            "node_count": 3,
+            "duration_s": 1.5409477839400605
+          },
+          {
+            "id": "support_route_front::p0000",
+            "node_count": 2,
+            "duration_s": 1.5317035907210914
+          },
+          {
+            "id": "support_route_front::p0003",
+            "node_count": 4,
+            "duration_s": 2.934504560410739
+          },
+          {
+            "id": "support_route_front::p0008",
+            "node_count": 7,
+            "duration_s": 4.797048443032912
+          }
+        ],
+        "pass_through_boundaries": 33,
+        "original_node_ids_and_edges_preserved": true,
+        "original_geometric_paths_unchanged": true,
+        "C2_blended_macros": 0,
+        "skill_dwell_counted_once": true,
+        "extra_runtime_endpoint_settling": "required endpoints only"
+      },
+      "original_candidate_native_checks": "recorded by source producer; this quick-check independently validates every C2 candidate",
+      "actual_pending": true
+    }
+  ],
+  "completed": true,
+  "wall_time_s": 7.963670799974352,
+  "candidate_file_changed_during_check": false
+}

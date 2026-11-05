@@ -1,0 +1,192 @@
+{
+  "status": "mathematical_candidates_only_not_collision_validated",
+  "source_graph": "D:\\APEX_MR_Plus\\apex_mr_scene3\\backups\\smooth_motion_baseline_20261104_01\\results\\apex\\tpg.json",
+  "source_sha256": "d981f1c901ed66763841068b67ebad6e20895c48aa53a3026812b17389fe0b06",
+  "source_run_id": "20261103T121253Z-d0d0c68e",
+  "comparison_scope": "nominal mathematical durations; no dynamic speedup claim",
+  "candidates": [
+    {
+      "macro": "support_slide_in",
+      "file": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_lab\\support_slide_in_candidate.json",
+      "source_nodes": 8,
+      "source_tasks": 8,
+      "knots": 17,
+      "blends": 7,
+      "pieces": 15,
+      "input_limits": {
+        "velocity": 0.12,
+        "acceleration": 0.3,
+        "jerk": 8.0
+      },
+      "baseline_nominal_duration_s": 6.896231549202238,
+      "candidate_nominal_duration_s": 4.909638649686107,
+      "profile_build_seconds": 0.003870600019581616,
+      "parameter_length_rad": 0.5286913390711808,
+      "max_joint_space_deviation_rad": 9.967638969290961e-05,
+      "analytic_bounds": {
+        "velocity": 0.11999999999988,
+        "acceleration": 0.1292582245853507,
+        "jerk": 2.9862757868818086
+      },
+      "sampled_maxima_1001_points_not_used_for_certification": {
+        "velocity": 0.11925871649458636,
+        "acceleration": 0.09649118951078427,
+        "jerk": 2.841140899910993
+      },
+      "collision_validated": false
+    },
+    {
+      "macro": "A_exit_from_support",
+      "file": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_lab\\A_exit_from_support_candidate.json",
+      "source_nodes": 13,
+      "source_tasks": 13,
+      "knots": 30,
+      "blends": 12,
+      "pieces": 25,
+      "input_limits": {
+        "velocity": 0.12,
+        "acceleration": 0.3,
+        "jerk": 8.0
+      },
+      "baseline_nominal_duration_s": 11.36399880279373,
+      "candidate_nominal_duration_s": 8.74674965655004,
+      "profile_build_seconds": 0.005331000022124499,
+      "parameter_length_rad": 0.7777479772704237,
+      "max_joint_space_deviation_rad": 9.83504201304142e-05,
+      "analytic_bounds": {
+        "velocity": 0.11999999999988,
+        "acceleration": 0.0977607726071858,
+        "jerk": 2.324073941925363
+      },
+      "sampled_maxima_1001_points_not_used_for_certification": {
+        "velocity": 0.11913011323598406,
+        "acceleration": 0.0764112644066283,
+        "jerk": 2.0611764910992907
+      },
+      "collision_validated": false
+    },
+    {
+      "macro": "install_K1_slide",
+      "file": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_lab\\install_K1_slide_candidate.json",
+      "source_nodes": 10,
+      "source_tasks": 10,
+      "knots": 44,
+      "blends": 9,
+      "pieces": 19,
+      "input_limits": {
+        "velocity": 0.12,
+        "acceleration": 0.3,
+        "jerk": 8.0
+      },
+      "baseline_nominal_duration_s": 14.317379389546613,
+      "candidate_nominal_duration_s": 14.457805171393574,
+      "profile_build_seconds": 0.0031611999729648232,
+      "parameter_length_rad": 1.3130943490797229,
+      "max_joint_space_deviation_rad": 0.0001443675571476484,
+      "analytic_bounds": {
+        "velocity": 0.11999999999987998,
+        "acceleration": 0.1320118649836446,
+        "jerk": 3.3940876277730805
+      },
+      "sampled_maxima_1001_points_not_used_for_certification": {
+        "velocity": 0.11973961050621514,
+        "acceleration": 0.0985879995291979,
+        "jerk": 3.2162087276038998
+      },
+      "collision_validated": false
+    },
+    {
+      "macro": "extract_support_motion",
+      "file": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_lab\\extract_support_motion_candidate.json",
+      "source_nodes": 8,
+      "source_tasks": 8,
+      "knots": 17,
+      "blends": 7,
+      "pieces": 15,
+      "input_limits": {
+        "velocity": 0.12,
+        "acceleration": 0.3,
+        "jerk": 8.0
+      },
+      "baseline_nominal_duration_s": 6.8962299151668365,
+      "candidate_nominal_duration_s": 4.909638339660926,
+      "profile_build_seconds": 0.0021459999843500555,
+      "parameter_length_rad": 0.5286914726488063,
+      "max_joint_space_deviation_rad": 9.966732619293595e-05,
+      "analytic_bounds": {
+        "velocity": 0.11999999999987998,
+        "acceleration": 0.12925750966778718,
+        "jerk": 2.9863699129765493
+      },
+      "sampled_maxima_1001_points_not_used_for_certification": {
+        "velocity": 0.11925873877190045,
+        "acceleration": 0.09649066317824201,
+        "jerk": 2.8412366120571635
+      },
+      "collision_validated": false
+    },
+    {
+      "macro": "close_gate_slide",
+      "file": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_lab\\close_gate_slide_candidate.json",
+      "source_nodes": 7,
+      "source_tasks": 7,
+      "knots": 15,
+      "blends": 6,
+      "pieces": 13,
+      "input_limits": {
+        "velocity": 0.12,
+        "acceleration": 0.3,
+        "jerk": 8.0
+      },
+      "baseline_nominal_duration_s": 5.874004666693848,
+      "candidate_nominal_duration_s": 4.03520134720316,
+      "profile_build_seconds": 0.0018757000216282904,
+      "parameter_length_rad": 0.3164920641767924,
+      "max_joint_space_deviation_rad": 8.980446387207554e-05,
+      "analytic_bounds": {
+        "velocity": 0.11999999999987997,
+        "acceleration": 0.136313612299929,
+        "jerk": 3.584672252225373
+      },
+      "sampled_maxima_1001_points_not_used_for_certification": {
+        "velocity": 0.119999999999877,
+        "acceleration": 0.10096948074281306,
+        "jerk": 3.4639105626353874
+      },
+      "collision_validated": false
+    },
+    {
+      "macro": "close_gate_retreat",
+      "file": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\smooth_motion_lab\\close_gate_retreat_candidate.json",
+      "source_nodes": 7,
+      "source_tasks": 7,
+      "knots": 15,
+      "blends": 6,
+      "pieces": 13,
+      "input_limits": {
+        "velocity": 0.12,
+        "acceleration": 0.3,
+        "jerk": 8.0
+      },
+      "baseline_nominal_duration_s": 5.874232624164276,
+      "candidate_nominal_duration_s": 4.035477481282654,
+      "profile_build_seconds": 0.004586299997754395,
+      "parameter_length_rad": 0.31651363360763796,
+      "max_joint_space_deviation_rad": 9.008406286082187e-05,
+      "analytic_bounds": {
+        "velocity": 0.11999999999987998,
+        "acceleration": 0.13627426760860925,
+        "jerk": 3.586017971452825
+      },
+      "sampled_maxima_1001_points_not_used_for_certification": {
+        "velocity": 0.11999999999987741,
+        "acceleration": 0.10094599363594811,
+        "jerk": 3.46988684321872
+      },
+      "collision_validated": false,
+      "excluded_semantic_nodes_must_remain_separate": [
+        "close_gate_retreat_contact_clear::skill"
+      ]
+    }
+  ]
+}

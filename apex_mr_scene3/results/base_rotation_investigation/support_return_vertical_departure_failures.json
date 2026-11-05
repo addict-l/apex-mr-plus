@@ -1,0 +1,564 @@
+{
+  "status": "refined_complete",
+  "source_run_id": "20261104T163855Z-0804c434",
+  "candidate_only": true,
+  "actual_pending": true,
+  "full_TPG_certificate_pending": true,
+  "source_sha256_before": {
+    "apex\\allocation.py": "7f1733a7a74a1d0fdd768990cb3dd338f299647f09b3176c96dd242f3f81a86a",
+    "apex\\blend_validation.py": "2837004384012a40b32e38b6a3a0792d11d9c4761c133217e0de3cbb960469b5",
+    "apex\\compile.py": "369042fdb2551d1a1afa9a0048876b724b115166e9a341f13e8dc51cd97a6544",
+    "apex\\controller.lua": "9a30d885056c1d975280e6156b6b4075a49e12f3c42b161d50eca22c8d93f4fc",
+    "apex\\curve.py": "ed669126e5c9948065d26693ec2bf60526d1304eeb0504284dec3ca0f202d69e",
+    "apex\\fast_interarm.lua": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563",
+    "apex\\fast_interarm.py": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03",
+    "apex\\geometry.py": "7901cc625f376cb56a652ac2c099a849ca43985789160d4c84ff4cfd3acb71c4",
+    "apex\\local_routes.py": "e865864374fd45559b93e1d2ad1baaf37ee04d179439dce950e44065b13707ff",
+    "apex\\local_route_chain.py": "9e14a1a070a6e9efb4f5547caaa82d45401368e73a2166f24fe0e29756199550",
+    "apex\\motion.py": "541539b308ebd5f4bd0714523ffdda7887a8dd48ebabe2e1c9d5a97e9c8af362",
+    "apex\\motion_backend.lua": "d215ec7a054804875619aa2af18ccace404feb07ee386c68a34080c7c65065f6",
+    "apex\\performance.py": "3b3f1dd76d3c69bb6954bd7b593dc11adcdb658a720ef727fc7d474472cbd7c7",
+    "apex\\pipeline.py": "a6b98c5fe1265698acf15e7826d11d2f74b0ab847666193bbcbaedb28b134a89",
+    "apex\\plots.py": "21fa7c8b4d3f7fe29ae5c4fdb1db2cbdc8ff2408f43774d0f18e2ac834ef9033",
+    "apex\\program.py": "61264d84aecf98bfa5dbee0dedcdb9ee1aa8aa1dfb7f212ca3b845e40165cfb3",
+    "apex\\runtime.py": "82d6035749a80bf8b3c208b73fc27763e99a62331651a62ddf479b7e6fb68709",
+    "apex\\scene.py": "a859f5c5ff1a501bcd4cb4e27ebfd05675f8f26aa7693f8b193f44cbf05316b5",
+    "apex\\smoothing.py": "d5a81a115f0dd4c9aa1b4b27f42dbe226e248e4607b823a18af10c5670756d01",
+    "apex\\tpg.py": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd",
+    "apex\\validation.py": "0881b1bd00472dad6e5456126048913ca6aab9b579d7e1cfbacf3b3ee90cfef2",
+    "apex\\__init__.py": "c6fad83e333c3351b9c044711f62a14785810c3dce779d77e97f061dc35588bf"
+  },
+  "before": {
+    "q": {
+      "A": [
+        -2.3476570437805973,
+        -0.25173329543603185,
+        1.570735256142382,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "B": [
+        -1.0956956741161292,
+        0.3445584187015806,
+        1.6074960994563636,
+        1.1895381166092058,
+        2.0458969672368155,
+        -3.1415926626764588
+      ]
+    },
+    "payloads": {
+      "A": null,
+      "B": {
+        "part": "TemporarySupport",
+        "name": "TemporarySupport",
+        "offset": [
+          -0.145,
+          0.0,
+          0.031999999999999966
+        ],
+        "quaternion": [
+          -0.0,
+          0.7071067811865475,
+          -0.0,
+          0.7071067811865476
+        ]
+      }
+    },
+    "placed": {
+      "Gate": [
+        0.48,
+        -0.35,
+        0.851,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "Bridge": [
+        0.04000000000000012,
+        0.20000000000000007,
+        1.032,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "TemporarySupport": [
+        0.08,
+        -0.05,
+        0.772,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "K2": [
+        0.24,
+        0.2,
+        1.096,
+        0,
+        0,
+        0,
+        1
+      ],
+      "K1": [
+        0.24,
+        0.2,
+        0.97,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "articulations": {
+      "SupportLift": 0.0
+    }
+  },
+  "task_ids": [
+    "return_support_approach",
+    "return_support_contact",
+    "return_support",
+    "return_support_retreat",
+    "return_support_retreat_contact_clear",
+    "pick_gate_approach"
+  ],
+  "attempts": [
+    {
+      "height_m": 1.2,
+      "tcp": [
+        0.5119999999909589,
+        0.42999999999009436,
+        1.2,
+        1.1821350283870869e-07,
+        0.7071068274174861,
+        -1.506098491809087e-07,
+        -0.7071067349555802
+      ],
+      "ik": {
+        "stats": {
+          "rejections": {},
+          "collision_checks": 1,
+          "required_position_error_m": 5e-05,
+          "ik_calls": 2,
+          "accepted_pose_errors": [
+            {
+              "position_m": 7.76233871180045e-09,
+              "orientation_rad": 3.153981341200582e-07
+            }
+          ],
+          "required_orientation_error_rad": 0.0002,
+          "candidates": 1,
+          "wall_time_s": 0.038000000000000256,
+          "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+        },
+        "solutions": [
+          [
+            -3.5135144539872085,
+            -0.266862994240127,
+            1.7683768694125919,
+            1.6400778297280034,
+            -0.3719218415642925,
+            -3.1415911533841703
+          ]
+        ],
+        "ok": true,
+        "q": [
+          -3.5135144539872085,
+          -0.266862994240127,
+          1.7683768694125919,
+          1.6400778297280034,
+          -0.3719218415642925,
+          -3.1415911533841703
+        ]
+      },
+      "plans": [
+        {
+          "stats": {
+            "solve_budget_s": 1.2,
+            "collision_check_step_rad": 0.0016553550102226268,
+            "joint_bounds": [
+              [
+                -3.7635144539872085,
+                -3.263514436318434
+              ],
+              [
+                -0.516862994240127,
+                0.047326078792088555
+              ],
+              [
+                1.5183768694125919,
+                2.4000194612960817
+              ],
+              [
+                0.9442467536818084,
+                1.8900778297280034
+              ],
+              [
+                -0.6219218415642924,
+                -0.12192182854403988
+              ],
+              [
+                -3.391591938196988,
+                -2.8915911533841703
+              ]
+            ],
+            "algorithm": "RRTConnect",
+            "search_wall_time_s": 1.4649999999999999,
+            "direct_collision_checks": 35,
+            "ompl_solve_called": true,
+            "requested_algorithm": "RRTConnect",
+            "planner_before": {},
+            "candidates": [
+              {
+                "attempt": 1,
+                "exact": false,
+                "planner": {
+                  "edges": 2.0,
+                  "vertices": 4.0
+                }
+              }
+            ],
+            "roadmap_reused": false,
+            "joint_bound_margin": 0.25,
+            "direct_attempted": true,
+            "direct_valid": false,
+            "backend": "simOMPL",
+            "shortcut_trials": 0,
+            "reference_candidates": {},
+            "wall_time_s": 1.5330000000000004,
+            "planner_after": {
+              "edges": 2.0,
+              "vertices": 4.0
+            },
+            "collision_checks": 864,
+            "shortcut_collision_checks": 0,
+            "solve_collision_checks": 827,
+            "shortcut_wall_time_s": 0,
+            "direct_rejection": {
+              "reason": "block_robot_collision:TemporarySupport:B",
+              "pair": [
+                "/B_UR5/B_Finger_neg",
+                "/SupportContactPad"
+              ]
+            },
+            "shortcut_accepted": 0,
+            "planner_reused": false,
+            "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+          },
+          "problem": {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_Finger_neg",
+              "/SupportContactPad"
+            ]
+          },
+          "ok": false,
+          "error": "No exact collision-free solution within budget",
+          "algorithm": "RRTConnect"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "height_m": 1.32,
+      "tcp": [
+        0.5119999999909589,
+        0.42999999999009436,
+        1.32,
+        1.1821350283870869e-07,
+        0.7071068274174861,
+        -1.506098491809087e-07,
+        -0.7071067349555802
+      ],
+      "ik": {
+        "stats": {
+          "rejections": {},
+          "collision_checks": 1,
+          "required_position_error_m": 5e-05,
+          "ik_calls": 2,
+          "accepted_pose_errors": [
+            {
+              "position_m": 4.039377723470393e-09,
+              "orientation_rad": 5.960464477539063e-08
+            }
+          ],
+          "required_orientation_error_rad": 0.0002,
+          "candidates": 1,
+          "wall_time_s": 0.004000000000000448,
+          "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+        },
+        "solutions": [
+          [
+            -3.5135144454557157,
+            -0.20562274922969484,
+            1.4084759829908975,
+            1.9387389119042129,
+            -0.37192183064588064,
+            -3.141591752843842
+          ]
+        ],
+        "ok": true,
+        "q": [
+          -3.5135144454557157,
+          -0.20562274922969484,
+          1.4084759829908975,
+          1.9387389119042129,
+          -0.37192183064588064,
+          -3.141591752843842
+        ]
+      },
+      "plans": [
+        {
+          "stats": {
+            "solve_budget_s": 1.2,
+            "collision_check_step_rad": 0.002023153148083452,
+            "joint_bounds": [
+              [
+                -3.7635144454557157,
+                -3.263514436318434
+              ],
+              [
+                -0.4556227492296948,
+                0.047326078792088555
+              ],
+              [
+                1.1584759829908975,
+                2.4000194612960817
+              ],
+              [
+                0.9442467536818084,
+                2.188738911904213
+              ],
+              [
+                -0.6219218306458807,
+                -0.12192182854403988
+              ],
+              [
+                -3.391591938196988,
+                -2.891591752843842
+              ]
+            ],
+            "algorithm": "RRTConnect",
+            "search_wall_time_s": 1.2079999999999993,
+            "direct_collision_checks": 30,
+            "ompl_solve_called": true,
+            "requested_algorithm": "RRTConnect",
+            "planner_before": {},
+            "candidates": [
+              {
+                "attempt": 1,
+                "exact": false,
+                "planner": {
+                  "edges": 2.0,
+                  "vertices": 4.0
+                }
+              }
+            ],
+            "roadmap_reused": false,
+            "joint_bound_margin": 0.25,
+            "direct_attempted": true,
+            "direct_valid": false,
+            "backend": "simOMPL",
+            "shortcut_trials": 0,
+            "reference_candidates": {},
+            "wall_time_s": 1.2599999999999998,
+            "planner_after": {
+              "edges": 2.0,
+              "vertices": 4.0
+            },
+            "collision_checks": 679,
+            "shortcut_collision_checks": 0,
+            "solve_collision_checks": 647,
+            "shortcut_wall_time_s": 0,
+            "direct_rejection": {
+              "reason": "block_robot_collision:TemporarySupport:B",
+              "pair": [
+                "/B_UR5/B_Finger_neg",
+                "/SupportContactPad"
+              ]
+            },
+            "shortcut_accepted": 0,
+            "planner_reused": false,
+            "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+          },
+          "problem": {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_Finger_neg",
+              "/SupportContactPad"
+            ]
+          },
+          "ok": false,
+          "error": "No exact collision-free solution within budget",
+          "algorithm": "RRTConnect"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "height_m": 1.38,
+      "tcp": [
+        0.5119999999909589,
+        0.42999999999009436,
+        1.38,
+        1.1821350283870869e-07,
+        0.7071068274174861,
+        -1.506098491809087e-07,
+        -0.7071067349555802
+      ],
+      "ik": {
+        "stats": {
+          "rejections": {},
+          "collision_checks": 1,
+          "required_position_error_m": 5e-05,
+          "ik_calls": 2,
+          "accepted_pose_errors": [
+            {
+              "position_m": 3.457207759302068e-08,
+              "orientation_rad": 3.674277068954101e-07
+            }
+          ],
+          "required_orientation_error_rad": 0.0002,
+          "candidates": 1,
+          "wall_time_s": 0.0030000000000001137,
+          "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+        },
+        "solutions": [
+          [
+            -3.513514497154236,
+            -0.14236731837873473,
+            1.1886052624283052,
+            2.0953536741971144,
+            -0.37192181263654794,
+            -3.1415910409806833
+          ]
+        ],
+        "ok": true,
+        "q": [
+          -3.513514497154236,
+          -0.14236731837873473,
+          1.1886052624283052,
+          2.0953536741971144,
+          -0.37192181263654794,
+          -3.1415910409806833
+        ]
+      },
+      "plans": [
+        {
+          "stats": {
+            "solve_budget_s": 1.2,
+            "collision_check_step_rad": 0.0022721744049483987,
+            "joint_bounds": [
+              [
+                -3.763514497154236,
+                -3.263514436318434
+              ],
+              [
+                -0.45267392120791144,
+                0.10763268162126527
+              ],
+              [
+                0.9386052624283052,
+                2.4000194612960817
+              ],
+              [
+                0.9442467536818084,
+                2.3453536741971144
+              ],
+              [
+                -0.6219218285440399,
+                -0.12192181263654794
+              ],
+              [
+                -3.391591938196988,
+                -2.8915910409806833
+              ]
+            ],
+            "algorithm": "RRTConnect",
+            "search_wall_time_s": 1.4250000000000007,
+            "direct_collision_checks": 27,
+            "ompl_solve_called": true,
+            "requested_algorithm": "RRTConnect",
+            "planner_before": {},
+            "candidates": [
+              {
+                "attempt": 1,
+                "exact": false,
+                "planner": {
+                  "edges": 2.0,
+                  "vertices": 4.0
+                }
+              }
+            ],
+            "roadmap_reused": false,
+            "joint_bound_margin": 0.25,
+            "direct_attempted": true,
+            "direct_valid": false,
+            "backend": "simOMPL",
+            "shortcut_trials": 0,
+            "reference_candidates": {},
+            "wall_time_s": 1.4930000000000003,
+            "planner_after": {
+              "edges": 2.0,
+              "vertices": 4.0
+            },
+            "collision_checks": 871,
+            "shortcut_collision_checks": 0,
+            "solve_collision_checks": 842,
+            "shortcut_wall_time_s": 0,
+            "direct_rejection": {
+              "reason": "block_robot_collision:TemporarySupport:B",
+              "pair": [
+                "/B_UR5/B_Finger_neg",
+                "/SupportContactPad"
+              ]
+            },
+            "shortcut_accepted": 0,
+            "planner_reused": false,
+            "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+          },
+          "problem": {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_Finger_neg",
+              "/SupportContactPad"
+            ]
+          },
+          "ok": false,
+          "error": "No exact collision-free solution within budget",
+          "algorithm": "RRTConnect"
+        }
+      ],
+      "accepted": false
+    }
+  ],
+  "candidates": [],
+  "wall_time_s": 10.813090900017414,
+  "source_sha256_after": {
+    "apex\\allocation.py": "7f1733a7a74a1d0fdd768990cb3dd338f299647f09b3176c96dd242f3f81a86a",
+    "apex\\blend_validation.py": "2837004384012a40b32e38b6a3a0792d11d9c4761c133217e0de3cbb960469b5",
+    "apex\\compile.py": "369042fdb2551d1a1afa9a0048876b724b115166e9a341f13e8dc51cd97a6544",
+    "apex\\controller.lua": "9a30d885056c1d975280e6156b6b4075a49e12f3c42b161d50eca22c8d93f4fc",
+    "apex\\curve.py": "ed669126e5c9948065d26693ec2bf60526d1304eeb0504284dec3ca0f202d69e",
+    "apex\\fast_interarm.lua": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563",
+    "apex\\fast_interarm.py": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03",
+    "apex\\geometry.py": "7901cc625f376cb56a652ac2c099a849ca43985789160d4c84ff4cfd3acb71c4",
+    "apex\\local_routes.py": "e865864374fd45559b93e1d2ad1baaf37ee04d179439dce950e44065b13707ff",
+    "apex\\local_route_chain.py": "9e14a1a070a6e9efb4f5547caaa82d45401368e73a2166f24fe0e29756199550",
+    "apex\\motion.py": "541539b308ebd5f4bd0714523ffdda7887a8dd48ebabe2e1c9d5a97e9c8af362",
+    "apex\\motion_backend.lua": "d215ec7a054804875619aa2af18ccace404feb07ee386c68a34080c7c65065f6",
+    "apex\\performance.py": "3b3f1dd76d3c69bb6954bd7b593dc11adcdb658a720ef727fc7d474472cbd7c7",
+    "apex\\pipeline.py": "a6b98c5fe1265698acf15e7826d11d2f74b0ab847666193bbcbaedb28b134a89",
+    "apex\\plots.py": "21fa7c8b4d3f7fe29ae5c4fdb1db2cbdc8ff2408f43774d0f18e2ac834ef9033",
+    "apex\\program.py": "61264d84aecf98bfa5dbee0dedcdb9ee1aa8aa1dfb7f212ca3b845e40165cfb3",
+    "apex\\runtime.py": "82d6035749a80bf8b3c208b73fc27763e99a62331651a62ddf479b7e6fb68709",
+    "apex\\scene.py": "a859f5c5ff1a501bcd4cb4e27ebfd05675f8f26aa7693f8b193f44cbf05316b5",
+    "apex\\smoothing.py": "d5a81a115f0dd4c9aa1b4b27f42dbe226e248e4607b823a18af10c5670756d01",
+    "apex\\tpg.py": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd",
+    "apex\\validation.py": "0881b1bd00472dad6e5456126048913ca6aab9b579d7e1cfbacf3b3ee90cfef2",
+    "apex\\__init__.py": "c6fad83e333c3351b9c044711f62a14785810c3dce779d77e97f061dc35588bf"
+  },
+  "source_changed_during_search": false
+}

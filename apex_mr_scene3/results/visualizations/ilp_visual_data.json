@@ -1,0 +1,1449 @@
+{
+  "schema_version": 1,
+  "run_id": "20261103T121253Z-d0d0c68e",
+  "title_zh": "Scene3 ILP分配的真实输入、决策与证据",
+  "source_files": {
+    "results/apex/allocation.json": {
+      "sha256": "43f73ea0ec62908f897985ca3894b8635f64399c46506e47d6a8051217166c42",
+      "bytes": 20149
+    },
+    "results/apex/allocation_problem.json": {
+      "sha256": "af4ac3b8104f5216d5edd7f8659ce4f74620b08d8e41eee5e9f89ade4a3a7d98",
+      "bytes": 16400
+    },
+    "results/apex/candidate_qualification.json": {
+      "sha256": "c43068e65844c7d073c7a321c57aac777196c37a6e2b066ba26c913536794564",
+      "bytes": 8460
+    },
+    "results/apex/alloc_and_reference.json": {
+      "sha256": "032ed30ed34715359e05f27124465f90ebf9cc1b90fa5d0c87a056239ccc4528",
+      "bytes": 7800206
+    },
+    "apex/allocation.py": {
+      "sha256": "7f1733a7a74a1d0fdd768990cb3dd338f299647f09b3176c96dd242f3f81a86a",
+      "bytes": 22181
+    },
+    "apex/compile.py": {
+      "sha256": "2087e34d269e098648f77973e52d781c215b168b3a86f2d42d1ca09c0b6bec9a",
+      "bytes": 35729
+    },
+    "results/apex/summary.json": {
+      "sha256": "e27a18c78062733c62037e14787ab2f288d98551601ec57ac6537a53eecf88f1",
+      "bytes": 793
+    },
+    "results/apex/pipeline_manifest.json": {
+      "sha256": "44292631e7f11fd3a88a412eec25b60e05685b3ee75f477002453fa6bf2e4cf9",
+      "bytes": 6557
+    },
+    "results/apex/tpg.json": {
+      "sha256": "d981f1c901ed66763841068b67ebad6e20895c48aa53a3026812b17389fe0b06",
+      "bytes": 10338225
+    }
+  },
+  "artifact_consistency": {
+    "allocation_matches_embedded_reference": true,
+    "problem_matches_embedded_reference": true,
+    "all_linear_constraints_recomputed_satisfied": true,
+    "objective_recomputed_matches_solver": true
+  },
+  "model": {
+    "type": "mixed-integer linear program (MILP)",
+    "binary_variable_count": 18,
+    "continuous_variable_count": 1,
+    "constraint_count": 17,
+    "binary_groups": {
+      "support": 6,
+      "task": 10,
+      "handoff": 2
+    },
+    "selected_binary_count": 8,
+    "initial_holder": "A",
+    "available_support_placer_arms": [
+      "B"
+    ],
+    "available_support_remover_arms": [
+      "B"
+    ],
+    "buffer_capacity": 1,
+    "assembly_order": [
+      "K1",
+      "K2"
+    ],
+    "continuous_variable": {
+      "id": "__peak_workload",
+      "symbol": "z",
+      "value": 77.99018929919535,
+      "unit": "proxy_cost"
+    },
+    "binary_upper_bound_one_count": 9
+  },
+  "objective": {
+    "symbolic": "min J = sum(c_i * x_i) + 0.15 * z; z >= W_A, z >= W_B",
+    "unit": "proxy_cost",
+    "is_makespan": false,
+    "value": 108.45964551906576,
+    "selected_mode_cost_sum": 96.76111712418646,
+    "peak_workload_penalty": 11.698528394879302,
+    "load_balance_weight": 0.15,
+    "peak_arm_workload": 77.99018929919535,
+    "arm_workloads": {
+      "A": 18.770927824991098,
+      "B": 77.99018929919535
+    },
+    "breakdown": [
+      {
+        "group": "support",
+        "label_zh": "临时支撑放置与回收",
+        "value": 42.150526673691886
+      },
+      {
+        "group": "task",
+        "label_zh": "供应、安装与封门",
+        "value": 53.61059045049456
+      },
+      {
+        "group": "handoff",
+        "label_zh": "缓冲交接",
+        "value": 1.0
+      },
+      {
+        "group": "balance",
+        "label_zh": "峰值工作量惩罚",
+        "value": 11.698528394879302
+      }
+    ],
+    "cost_construction": {
+      "transport": "(||q_source-q_home||_2 + ||q_goal-q_source||_2) / 0.6 + 2.0",
+      "support": "2 * transport_cost",
+      "handoff": "0.5 per selected A-to-B handoff",
+      "joint_angle_input_unit": "rad",
+      "norm": "Euclidean L2 of direct joint-vector differences; not an RRT path length",
+      "interpretation_zh": "由端点关节位移启发式缩放生成的proxy_cost；0.6与2.0用于评分，未标定为实际秒数。",
+      "workload_rule": "task cost to assigned arm; support half to placer and half to remover (bothB here); handoff half to each arm"
+    },
+    "optimality_scope_zh": "仅对当前已筛选的有限模式和已加入的no-good cut达到MILP最优；不代表运动路径、TPG时序或真实完工时间全局最优。"
+  },
+  "solver": {
+    "solver": "scipy.optimize.milp / HiGHS",
+    "scipy_version": "1.17.1",
+    "solver_called": true,
+    "solver_status": 0,
+    "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "status": "optimal",
+    "solved": true,
+    "optimal": true,
+    "mip_gap": 0.0,
+    "mip_dual_bound": 108.45964551906576,
+    "mip_node_count": 0.0,
+    "elapsed_s": 0.004061400017235428,
+    "solver_objective": 108.45964551906576,
+    "incumbent_validation": {
+      "integrality": true,
+      "bounds": true,
+      "all_linear_constraints": true,
+      "exact_task_coverage": true
+    }
+  },
+  "variables": [
+    {
+      "id": "outer_front:before_gate:B",
+      "group": "support",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 42.150526673691886,
+      "selected": true,
+      "qualification_passed": true,
+      "rejection_reasons": [],
+      "cost_is_placeholder": false,
+      "display_cost": 42.150526673691886,
+      "candidate": "outer_front",
+      "removal_order": "before_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "label_zh": "外侧前方支撑",
+      "failure": null,
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 42.150526673691886
+      },
+      "objective_contribution": 42.150526673691886,
+      "enabled_by_bounds": true,
+      "included_in_no_good_cut": false,
+      "status": "selected",
+      "cut_is_combination_only": false
+    },
+    {
+      "id": "outer_front:after_gate:B",
+      "group": "support",
+      "value": 0.0,
+      "upper_bound": 1.0,
+      "cost": 42.150526673691886,
+      "selected": false,
+      "qualification_passed": true,
+      "rejection_reasons": [],
+      "cost_is_placeholder": false,
+      "display_cost": 42.150526673691886,
+      "candidate": "outer_front",
+      "removal_order": "after_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "label_zh": "外侧前方支撑",
+      "failure": null,
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 42.150526673691886
+      },
+      "objective_contribution": 0.0,
+      "enabled_by_bounds": true,
+      "included_in_no_good_cut": true,
+      "status": "enabled_but_not_selected",
+      "cut_is_combination_only": true
+    },
+    {
+      "id": "inner_pocket:before_gate:B",
+      "group": "support",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0,
+      "selected": false,
+      "qualification_passed": false,
+      "rejection_reasons": [
+        "support_mode_failed_geometry_qualification"
+      ],
+      "cost_is_placeholder": true,
+      "display_cost": null,
+      "candidate": "inner_pocket",
+      "removal_order": "before_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "label_zh": "内侧口袋支撑",
+      "failure": {
+        "stage": "qualify_TemporarySupport_goal",
+        "message": "当前有限IK搜索未获得合格构型，不代表全局不可达证明。",
+        "stats": {
+          "candidates": 0,
+          "collision_checks": 0,
+          "ik_calls": 1,
+          "wall_time_s": 0.41999999999999993,
+          "required_position_error_m": 5e-05,
+          "required_orientation_error_rad": 0.0002
+        }
+      },
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "objective_contribution": 0.0,
+      "enabled_by_bounds": false,
+      "included_in_no_good_cut": false,
+      "status": "disabled_by_bounds",
+      "cut_is_combination_only": false
+    },
+    {
+      "id": "inner_pocket:after_gate:B",
+      "group": "support",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0,
+      "selected": false,
+      "qualification_passed": false,
+      "rejection_reasons": [
+        "support_mode_failed_geometry_qualification",
+        "closed_gate_traps_support"
+      ],
+      "cost_is_placeholder": true,
+      "display_cost": null,
+      "candidate": "inner_pocket",
+      "removal_order": "after_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "label_zh": "内侧口袋支撑",
+      "failure": {
+        "stage": "qualify_TemporarySupport_goal",
+        "message": "当前有限IK搜索未获得合格构型，不代表全局不可达证明。",
+        "stats": {
+          "candidates": 0,
+          "collision_checks": 0,
+          "ik_calls": 1,
+          "wall_time_s": 0.41999999999999993,
+          "required_position_error_m": 5e-05,
+          "required_orientation_error_rad": 0.0002
+        }
+      },
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "objective_contribution": 0.0,
+      "enabled_by_bounds": false,
+      "included_in_no_good_cut": false,
+      "status": "disabled_by_bounds",
+      "cut_is_combination_only": false
+    },
+    {
+      "id": "weak_narrow:before_gate:B",
+      "group": "support",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0,
+      "selected": false,
+      "qualification_passed": false,
+      "rejection_reasons": [
+        "support_mode_failed_geometry_qualification",
+        "insufficient_contact_overlap"
+      ],
+      "cost_is_placeholder": true,
+      "display_cost": null,
+      "candidate": "weak_narrow",
+      "removal_order": "before_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "label_zh": "接触面过窄支撑",
+      "failure": {
+        "stage": "contact overlap below10mm",
+        "message": "contact overlap below10mm"
+      },
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "objective_contribution": 0.0,
+      "enabled_by_bounds": false,
+      "included_in_no_good_cut": false,
+      "status": "disabled_by_bounds",
+      "cut_is_combination_only": false
+    },
+    {
+      "id": "weak_narrow:after_gate:B",
+      "group": "support",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0,
+      "selected": false,
+      "qualification_passed": false,
+      "rejection_reasons": [
+        "support_mode_failed_geometry_qualification",
+        "insufficient_contact_overlap"
+      ],
+      "cost_is_placeholder": true,
+      "display_cost": null,
+      "candidate": "weak_narrow",
+      "removal_order": "after_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "label_zh": "接触面过窄支撑",
+      "failure": {
+        "stage": "contact overlap below10mm",
+        "message": "contact overlap below10mm"
+      },
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "objective_contribution": 0.0,
+      "enabled_by_bounds": false,
+      "included_in_no_good_cut": false,
+      "status": "disabled_by_bounds",
+      "cut_is_combination_only": false
+    },
+    {
+      "id": "supply_K1:A",
+      "group": "task",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 9.613241683047267,
+      "selected": true,
+      "qualification_passed": true,
+      "rejection_reasons": [],
+      "cost_is_placeholder": false,
+      "display_cost": 9.613241683047267,
+      "task": "supply_K1",
+      "arm": "A",
+      "label_zh": "供应K1",
+      "failure": null,
+      "workload_coefficients": {
+        "A": 9.613241683047267,
+        "B": 0.0
+      },
+      "objective_contribution": 9.613241683047267,
+      "enabled_by_bounds": true,
+      "included_in_no_good_cut": true,
+      "status": "selected",
+      "cut_is_combination_only": true
+    },
+    {
+      "id": "supply_K1:B",
+      "group": "task",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0,
+      "selected": false,
+      "qualification_passed": false,
+      "rejection_reasons": [
+        "task_mode_failed_geometry_qualification",
+        "A_exclusive_supply_access"
+      ],
+      "cost_is_placeholder": true,
+      "display_cost": null,
+      "task": "supply_K1",
+      "arm": "B",
+      "label_zh": "供应K1",
+      "failure": {
+        "stage": "qualify_K1_source",
+        "message": "当前有限IK搜索未获得合格构型，不代表全局不可达证明。",
+        "stats": {
+          "candidates": 0,
+          "collision_checks": 0,
+          "ik_calls": 1,
+          "wall_time_s": 0.42100000000000115,
+          "required_position_error_m": 5e-05,
+          "required_orientation_error_rad": 0.0002
+        }
+      },
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "objective_contribution": 0.0,
+      "enabled_by_bounds": false,
+      "included_in_no_good_cut": false,
+      "status": "disabled_by_bounds",
+      "cut_is_combination_only": false
+    },
+    {
+      "id": "install_K1:A",
+      "group": "task",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0,
+      "selected": false,
+      "qualification_passed": false,
+      "rejection_reasons": [
+        "task_mode_failed_geometry_qualification"
+      ],
+      "cost_is_placeholder": true,
+      "display_cost": null,
+      "task": "install_K1",
+      "arm": "A",
+      "label_zh": "安装K1",
+      "failure": {
+        "stage": "qualify_K1_source",
+        "message": "当前有限IK搜索未获得合格构型，不代表全局不可达证明。",
+        "stats": {
+          "candidates": 0,
+          "collision_checks": 0,
+          "ik_calls": 1,
+          "wall_time_s": 0.4159999999999986,
+          "required_position_error_m": 5e-05,
+          "required_orientation_error_rad": 0.0002
+        }
+      },
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "objective_contribution": 0.0,
+      "enabled_by_bounds": false,
+      "included_in_no_good_cut": false,
+      "status": "disabled_by_bounds",
+      "cut_is_combination_only": false
+    },
+    {
+      "id": "install_K1:B",
+      "group": "task",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 15.129863249710922,
+      "selected": true,
+      "qualification_passed": true,
+      "rejection_reasons": [],
+      "cost_is_placeholder": false,
+      "display_cost": 15.129863249710922,
+      "task": "install_K1",
+      "arm": "B",
+      "label_zh": "安装K1",
+      "failure": null,
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 15.129863249710922
+      },
+      "objective_contribution": 15.129863249710922,
+      "enabled_by_bounds": true,
+      "included_in_no_good_cut": true,
+      "status": "selected",
+      "cut_is_combination_only": true
+    },
+    {
+      "id": "supply_K2:A",
+      "group": "task",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 8.657686141943833,
+      "selected": true,
+      "qualification_passed": true,
+      "rejection_reasons": [],
+      "cost_is_placeholder": false,
+      "display_cost": 8.657686141943833,
+      "task": "supply_K2",
+      "arm": "A",
+      "label_zh": "供应K2",
+      "failure": null,
+      "workload_coefficients": {
+        "A": 8.657686141943833,
+        "B": 0.0
+      },
+      "objective_contribution": 8.657686141943833,
+      "enabled_by_bounds": true,
+      "included_in_no_good_cut": true,
+      "status": "selected",
+      "cut_is_combination_only": true
+    },
+    {
+      "id": "supply_K2:B",
+      "group": "task",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0,
+      "selected": false,
+      "qualification_passed": false,
+      "rejection_reasons": [
+        "task_mode_failed_geometry_qualification",
+        "A_exclusive_supply_access"
+      ],
+      "cost_is_placeholder": true,
+      "display_cost": null,
+      "task": "supply_K2",
+      "arm": "B",
+      "label_zh": "供应K2",
+      "failure": {
+        "stage": "qualify_K2_source",
+        "message": "当前有限IK搜索未获得合格构型，不代表全局不可达证明。",
+        "stats": {
+          "candidates": 0,
+          "collision_checks": 0,
+          "ik_calls": 1,
+          "wall_time_s": 0.4169999999999998,
+          "required_position_error_m": 5e-05,
+          "required_orientation_error_rad": 0.0002
+        }
+      },
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "objective_contribution": 0.0,
+      "enabled_by_bounds": false,
+      "included_in_no_good_cut": false,
+      "status": "disabled_by_bounds",
+      "cut_is_combination_only": false
+    },
+    {
+      "id": "install_K2:A",
+      "group": "task",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0,
+      "selected": false,
+      "qualification_passed": false,
+      "rejection_reasons": [
+        "task_mode_failed_geometry_qualification"
+      ],
+      "cost_is_placeholder": true,
+      "display_cost": null,
+      "task": "install_K2",
+      "arm": "A",
+      "label_zh": "安装K2",
+      "failure": {
+        "stage": "qualify_K2_goal",
+        "message": "当前有限IK搜索未获得合格构型，不代表全局不可达证明。",
+        "stats": {
+          "candidates": 0,
+          "collision_checks": 0,
+          "ik_calls": 1,
+          "wall_time_s": 0.4220000000000006,
+          "required_position_error_m": 5e-05,
+          "required_orientation_error_rad": 0.0002
+        }
+      },
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "objective_contribution": 0.0,
+      "enabled_by_bounds": false,
+      "included_in_no_good_cut": false,
+      "status": "disabled_by_bounds",
+      "cut_is_combination_only": false
+    },
+    {
+      "id": "install_K2:B",
+      "group": "task",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 10.27067347342729,
+      "selected": true,
+      "qualification_passed": true,
+      "rejection_reasons": [],
+      "cost_is_placeholder": false,
+      "display_cost": 10.27067347342729,
+      "task": "install_K2",
+      "arm": "B",
+      "label_zh": "安装K2",
+      "failure": null,
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 10.27067347342729
+      },
+      "objective_contribution": 10.27067347342729,
+      "enabled_by_bounds": true,
+      "included_in_no_good_cut": true,
+      "status": "selected",
+      "cut_is_combination_only": true
+    },
+    {
+      "id": "close_gate:A",
+      "group": "task",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0,
+      "selected": false,
+      "qualification_passed": false,
+      "rejection_reasons": [
+        "task_mode_failed_geometry_qualification"
+      ],
+      "cost_is_placeholder": true,
+      "display_cost": null,
+      "task": "close_gate",
+      "arm": "A",
+      "label_zh": "封闭Gate",
+      "failure": {
+        "stage": "qualify_Gate_source",
+        "message": "当前有限IK搜索未获得合格构型，不代表全局不可达证明。",
+        "stats": {
+          "candidates": 0,
+          "collision_checks": 0,
+          "ik_calls": 1,
+          "wall_time_s": 0.42799999999999727,
+          "required_position_error_m": 5e-05,
+          "required_orientation_error_rad": 0.0002
+        }
+      },
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "objective_contribution": 0.0,
+      "enabled_by_bounds": false,
+      "included_in_no_good_cut": false,
+      "status": "disabled_by_bounds",
+      "cut_is_combination_only": false
+    },
+    {
+      "id": "close_gate:B",
+      "group": "task",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 9.939125902365255,
+      "selected": true,
+      "qualification_passed": true,
+      "rejection_reasons": [],
+      "cost_is_placeholder": false,
+      "display_cost": 9.939125902365255,
+      "task": "close_gate",
+      "arm": "B",
+      "label_zh": "封闭Gate",
+      "failure": null,
+      "workload_coefficients": {
+        "A": 0.0,
+        "B": 9.939125902365255
+      },
+      "objective_contribution": 9.939125902365255,
+      "enabled_by_bounds": true,
+      "included_in_no_good_cut": true,
+      "status": "selected",
+      "cut_is_combination_only": true
+    },
+    {
+      "id": "handoff_K1",
+      "group": "handoff",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 0.5,
+      "selected": true,
+      "qualification_passed": true,
+      "rejection_reasons": [],
+      "cost_is_placeholder": false,
+      "display_cost": 0.5,
+      "part": "K1",
+      "from_arm": "A",
+      "to_arm": "B",
+      "label_zh": "K1缓冲交接",
+      "failure": null,
+      "workload_coefficients": {
+        "A": 0.25,
+        "B": 0.25
+      },
+      "objective_contribution": 0.5,
+      "enabled_by_bounds": true,
+      "included_in_no_good_cut": true,
+      "status": "selected",
+      "cut_is_combination_only": true
+    },
+    {
+      "id": "handoff_K2",
+      "group": "handoff",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 0.5,
+      "selected": true,
+      "qualification_passed": true,
+      "rejection_reasons": [],
+      "cost_is_placeholder": false,
+      "display_cost": 0.5,
+      "part": "K2",
+      "from_arm": "A",
+      "to_arm": "B",
+      "label_zh": "K2缓冲交接",
+      "failure": null,
+      "workload_coefficients": {
+        "A": 0.25,
+        "B": 0.25
+      },
+      "objective_contribution": 0.5,
+      "enabled_by_bounds": true,
+      "included_in_no_good_cut": true,
+      "status": "selected",
+      "cut_is_combination_only": true
+    }
+  ],
+  "selected_mode_ids": [
+    "outer_front:before_gate:B",
+    "supply_K1:A",
+    "install_K1:B",
+    "supply_K2:A",
+    "install_K2:B",
+    "close_gate:B",
+    "handoff_K1",
+    "handoff_K2"
+  ],
+  "support_candidates": [
+    {
+      "id": "outer_front",
+      "label_zh": "外侧前方支撑",
+      "endpoint_qualified": true,
+      "mode_ids": [
+        "outer_front:before_gate:B",
+        "outer_front:after_gate:B"
+      ],
+      "goal_pose": [
+        0.08,
+        -0.05,
+        0.772,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "rated_load_N": 40.0,
+      "required_load_N": 29.247503571428574,
+      "contact_overlap_m": 0.04,
+      "minimum_contact_overlap_m": 0.01,
+      "blocked_after_gate": false,
+      "selected": true,
+      "failure": null
+    },
+    {
+      "id": "inner_pocket",
+      "label_zh": "内侧口袋支撑",
+      "endpoint_qualified": false,
+      "mode_ids": [
+        "inner_pocket:before_gate:B",
+        "inner_pocket:after_gate:B"
+      ],
+      "goal_pose": [
+        0.06,
+        0.26,
+        0.772,
+        0.0,
+        0.0,
+        1.0,
+        6.123031769111886e-17
+      ],
+      "rated_load_N": 40.0,
+      "required_load_N": 29.247503571428574,
+      "contact_overlap_m": 0.14,
+      "minimum_contact_overlap_m": 0.01,
+      "blocked_after_gate": true,
+      "selected": false,
+      "failure": {
+        "stage": "qualify_TemporarySupport_goal",
+        "message": "当前有限IK搜索未获得合格构型，不代表全局不可达证明。",
+        "stats": {
+          "candidates": 0,
+          "collision_checks": 0,
+          "ik_calls": 1,
+          "wall_time_s": 0.41999999999999993,
+          "required_position_error_m": 5e-05,
+          "required_orientation_error_rad": 0.0002
+        }
+      }
+    },
+    {
+      "id": "weak_narrow",
+      "label_zh": "接触面过窄支撑",
+      "endpoint_qualified": false,
+      "mode_ids": [
+        "weak_narrow:before_gate:B",
+        "weak_narrow:after_gate:B"
+      ],
+      "goal_pose": [
+        0.06,
+        -0.085,
+        0.772,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "rated_load_N": 40.0,
+      "required_load_N": 29.247503571428574,
+      "contact_overlap_m": 0.005,
+      "minimum_contact_overlap_m": 0.01,
+      "blocked_after_gate": false,
+      "selected": false,
+      "failure": {
+        "stage": "contact overlap below10mm",
+        "message": "contact overlap below10mm"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "supply_K1",
+      "kind": "supply",
+      "part": "K1",
+      "label_zh": "供应K1",
+      "selected_arm": "A",
+      "mode_ids": [
+        "supply_K1:A",
+        "supply_K1:B"
+      ],
+      "feasible_arms": [
+        "A"
+      ],
+      "selection_forced_after_current_qualification": true
+    },
+    {
+      "id": "install_K1",
+      "kind": "install",
+      "part": "K1",
+      "label_zh": "安装K1",
+      "selected_arm": "B",
+      "mode_ids": [
+        "install_K1:A",
+        "install_K1:B"
+      ],
+      "feasible_arms": [
+        "B"
+      ],
+      "selection_forced_after_current_qualification": true
+    },
+    {
+      "id": "supply_K2",
+      "kind": "supply",
+      "part": "K2",
+      "label_zh": "供应K2",
+      "selected_arm": "A",
+      "mode_ids": [
+        "supply_K2:A",
+        "supply_K2:B"
+      ],
+      "feasible_arms": [
+        "A"
+      ],
+      "selection_forced_after_current_qualification": true
+    },
+    {
+      "id": "install_K2",
+      "kind": "install",
+      "part": "K2",
+      "label_zh": "安装K2",
+      "selected_arm": "B",
+      "mode_ids": [
+        "install_K2:A",
+        "install_K2:B"
+      ],
+      "feasible_arms": [
+        "B"
+      ],
+      "selection_forced_after_current_qualification": true
+    },
+    {
+      "id": "close_gate",
+      "kind": "gate",
+      "part": "Gate",
+      "label_zh": "封闭Gate",
+      "selected_arm": "B",
+      "mode_ids": [
+        "close_gate:A",
+        "close_gate:B"
+      ],
+      "feasible_arms": [
+        "B"
+      ],
+      "selection_forced_after_current_qualification": true
+    }
+  ],
+  "handoffs": [
+    {
+      "id": "handoff_K1",
+      "part": "K1",
+      "supply_task": "supply_K1",
+      "install_task": "install_K1",
+      "from_arm": "A",
+      "to_arm": "B",
+      "feasible": true,
+      "cost": 0.5,
+      "deposit_event": "deposit_K1",
+      "pick_event": "pick_K1"
+    },
+    {
+      "id": "handoff_K2",
+      "part": "K2",
+      "supply_task": "supply_K2",
+      "install_task": "install_K2",
+      "from_arm": "A",
+      "to_arm": "B",
+      "feasible": true,
+      "cost": 0.5,
+      "deposit_event": "deposit_K2",
+      "pick_event": "pick_K2"
+    }
+  ],
+  "constraints": [
+    {
+      "constraint": "exactly_one_support_mode",
+      "coefficients": {
+        "outer_front:after_gate:B": 1.0,
+        "inner_pocket:after_gate:B": 1.0,
+        "outer_front:before_gate:B": 1.0,
+        "inner_pocket:before_gate:B": 1.0,
+        "weak_narrow:after_gate:B": 1.0,
+        "weak_narrow:before_gate:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0,
+      "lhs_at_solution": 1.0,
+      "lower_slack": 0.0,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "exactly_one_task_mode:supply_K1",
+      "coefficients": {
+        "supply_K1:A": 1.0,
+        "supply_K1:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0,
+      "lhs_at_solution": 1.0,
+      "lower_slack": 0.0,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "exactly_one_task_mode:install_K1",
+      "coefficients": {
+        "install_K1:A": 1.0,
+        "install_K1:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0,
+      "lhs_at_solution": 1.0,
+      "lower_slack": 0.0,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "exactly_one_task_mode:supply_K2",
+      "coefficients": {
+        "supply_K2:A": 1.0,
+        "supply_K2:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0,
+      "lhs_at_solution": 1.0,
+      "lower_slack": 0.0,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "exactly_one_task_mode:install_K2",
+      "coefficients": {
+        "install_K2:A": 1.0,
+        "install_K2:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0,
+      "lhs_at_solution": 1.0,
+      "lower_slack": 0.0,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "exactly_one_task_mode:close_gate",
+      "coefficients": {
+        "close_gate:A": 1.0,
+        "close_gate:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0,
+      "lhs_at_solution": 1.0,
+      "lower_slack": 0.0,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "handoff_required:handoff_K1",
+      "coefficients": {
+        "supply_K1:A": 1.0,
+        "install_K1:B": 1.0,
+        "handoff_K1": -1.0
+      },
+      "lower": null,
+      "upper": 1.0,
+      "lhs_at_solution": 1.0,
+      "lower_slack": null,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "handoff_supplier:handoff_K1",
+      "coefficients": {
+        "handoff_K1": 1.0,
+        "supply_K1:A": -1.0
+      },
+      "lower": null,
+      "upper": 0.0,
+      "lhs_at_solution": 0.0,
+      "lower_slack": null,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "handoff_installer:handoff_K1",
+      "coefficients": {
+        "handoff_K1": 1.0,
+        "install_K1:B": -1.0
+      },
+      "lower": null,
+      "upper": 0.0,
+      "lhs_at_solution": 0.0,
+      "lower_slack": null,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "unqualified_cross_arm_transport:K1:B:A",
+      "coefficients": {
+        "supply_K1:B": 1.0,
+        "install_K1:A": 1.0
+      },
+      "lower": null,
+      "upper": 1.0,
+      "lhs_at_solution": 0.0,
+      "lower_slack": null,
+      "upper_slack": 1.0,
+      "satisfied": true,
+      "binding": false
+    },
+    {
+      "constraint": "handoff_required:handoff_K2",
+      "coefficients": {
+        "supply_K2:A": 1.0,
+        "install_K2:B": 1.0,
+        "handoff_K2": -1.0
+      },
+      "lower": null,
+      "upper": 1.0,
+      "lhs_at_solution": 1.0,
+      "lower_slack": null,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "handoff_supplier:handoff_K2",
+      "coefficients": {
+        "handoff_K2": 1.0,
+        "supply_K2:A": -1.0
+      },
+      "lower": null,
+      "upper": 0.0,
+      "lhs_at_solution": 0.0,
+      "lower_slack": null,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "handoff_installer:handoff_K2",
+      "coefficients": {
+        "handoff_K2": 1.0,
+        "install_K2:B": -1.0
+      },
+      "lower": null,
+      "upper": 0.0,
+      "lhs_at_solution": 0.0,
+      "lower_slack": null,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "unqualified_cross_arm_transport:K2:B:A",
+      "coefficients": {
+        "supply_K2:B": 1.0,
+        "install_K2:A": 1.0
+      },
+      "lower": null,
+      "upper": 1.0,
+      "lhs_at_solution": 0.0,
+      "lower_slack": null,
+      "upper_slack": 1.0,
+      "satisfied": true,
+      "binding": false
+    },
+    {
+      "constraint": "peak_arm_workload:A",
+      "coefficients": {
+        "outer_front:before_gate:B": 0.0,
+        "outer_front:after_gate:B": 0.0,
+        "inner_pocket:before_gate:B": 0.0,
+        "inner_pocket:after_gate:B": 0.0,
+        "weak_narrow:before_gate:B": 0.0,
+        "weak_narrow:after_gate:B": 0.0,
+        "supply_K1:A": 9.613241683047267,
+        "supply_K1:B": 0.0,
+        "install_K1:A": 0.0,
+        "install_K1:B": 0.0,
+        "supply_K2:A": 8.657686141943833,
+        "supply_K2:B": 0.0,
+        "install_K2:A": 0.0,
+        "install_K2:B": 0.0,
+        "close_gate:A": 0.0,
+        "close_gate:B": 0.0,
+        "handoff_K1": 0.25,
+        "handoff_K2": 0.25,
+        "__peak_workload": -1.0
+      },
+      "lower": null,
+      "upper": -0.0,
+      "lhs_at_solution": -59.21926147420425,
+      "lower_slack": null,
+      "upper_slack": 59.21926147420425,
+      "satisfied": true,
+      "binding": false
+    },
+    {
+      "constraint": "peak_arm_workload:B",
+      "coefficients": {
+        "outer_front:before_gate:B": 42.150526673691886,
+        "outer_front:after_gate:B": 42.150526673691886,
+        "inner_pocket:before_gate:B": 0.0,
+        "inner_pocket:after_gate:B": 0.0,
+        "weak_narrow:before_gate:B": 0.0,
+        "weak_narrow:after_gate:B": 0.0,
+        "supply_K1:A": 0.0,
+        "supply_K1:B": 0.0,
+        "install_K1:A": 0.0,
+        "install_K1:B": 15.129863249710922,
+        "supply_K2:A": 0.0,
+        "supply_K2:B": 0.0,
+        "install_K2:A": 0.0,
+        "install_K2:B": 10.27067347342729,
+        "close_gate:A": 0.0,
+        "close_gate:B": 9.939125902365255,
+        "handoff_K1": 0.25,
+        "handoff_K2": 0.25,
+        "__peak_workload": -1.0
+      },
+      "lower": null,
+      "upper": -0.0,
+      "lhs_at_solution": 0.0,
+      "lower_slack": null,
+      "upper_slack": -0.0,
+      "satisfied": true,
+      "binding": true
+    },
+    {
+      "constraint": "no_good_motion_retry:0",
+      "coefficients": {
+        "outer_front:after_gate:B": 1.0,
+        "supply_K1:A": 1.0,
+        "install_K1:B": 1.0,
+        "supply_K2:A": 1.0,
+        "install_K2:B": 1.0,
+        "close_gate:B": 1.0,
+        "handoff_K1": 1.0,
+        "handoff_K2": 1.0
+      },
+      "lower": null,
+      "upper": 7.0,
+      "lhs_at_solution": 7.0,
+      "lower_slack": null,
+      "upper_slack": 0.0,
+      "satisfied": true,
+      "binding": true
+    }
+  ],
+  "required_buffer_edges": [
+    {
+      "from": "deposit_K1",
+      "to": "pick_K1",
+      "reason": "buffer_material_handoff"
+    },
+    {
+      "from": "deposit_K2",
+      "to": "pick_K2",
+      "reason": "buffer_material_handoff"
+    },
+    {
+      "from": "pick_K1",
+      "to": "deposit_K2",
+      "reason": "shared_buffer_capacity_one"
+    }
+  ],
+  "required_lifecycle_edges": [
+    {
+      "from": "place_support",
+      "to": "verify_support_load"
+    },
+    {
+      "from": "verify_support_load",
+      "to": "release_A"
+    },
+    {
+      "from": "verify_permanent_structure",
+      "to": "close_gate"
+    },
+    {
+      "from": "verify_permanent_structure",
+      "to": "unload_support"
+    },
+    {
+      "from": "unload_support",
+      "to": "extract_support"
+    },
+    {
+      "from": "extract_support",
+      "to": "return_support"
+    },
+    {
+      "from": "release_A",
+      "to": "supply_K1"
+    },
+    {
+      "from": "release_A",
+      "to": "supply_K2"
+    },
+    {
+      "from": "supply_K1",
+      "to": "install_K1"
+    },
+    {
+      "from": "supply_K2",
+      "to": "install_K2"
+    },
+    {
+      "from": "install_K1",
+      "to": "install_K2"
+    },
+    {
+      "from": "install_K2",
+      "to": "verify_permanent_structure"
+    },
+    {
+      "from": "return_support",
+      "to": "close_gate"
+    }
+  ],
+  "retry_history": [
+    {
+      "attempt_index": 0,
+      "failed_stage": "close_gate_goal_branch",
+      "selected_mode_ids": [
+        "outer_front:after_gate:B",
+        "supply_K1:A",
+        "install_K1:B",
+        "supply_K2:A",
+        "install_K2:B",
+        "close_gate:B",
+        "handoff_K1",
+        "handoff_K2"
+      ],
+      "failure_type": "current-context IK configuration search failure; not an RRTConnect path timeout",
+      "candidates": 347,
+      "collision_checks": 347,
+      "ik_calls": 348,
+      "wall_time_s": 1.677000000000021,
+      "collision_reason_counts": {
+        "block_robot_collision:TemporarySupport:B": 38,
+        "table_collision:B": 165,
+        "self_collision:B": 103,
+        "block_robot_collision:K2:B": 41
+      },
+      "collision_pairs": [
+        {
+          "objects": [
+            "/B_UR5/B_joint_3/link",
+            "/TemporarySupport"
+          ],
+          "count": 38
+        },
+        {
+          "objects": [
+            "/B_UR5/B_joint_2/link",
+            "/Workbench"
+          ],
+          "count": 121
+        },
+        {
+          "objects": [
+            "/B_UR5/B_joint_3/link",
+            "/B_UR5/B_joint_6/link"
+          ],
+          "count": 103
+        },
+        {
+          "objects": [
+            "/B_UR5/B_joint_2/link",
+            "/K2"
+          ],
+          "count": 41
+        },
+        {
+          "objects": [
+            "/B_UR5/B_joint_3/link",
+            "/Workbench"
+          ],
+          "count": 44
+        }
+      ],
+      "cut": {
+        "variables": [
+          "outer_front:after_gate:B",
+          "supply_K1:A",
+          "install_K1:B",
+          "supply_K2:A",
+          "install_K2:B",
+          "close_gate:B",
+          "handoff_K1",
+          "handoff_K2"
+        ],
+        "coefficients": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "sense": "<=",
+        "rhs": 7
+      },
+      "scope": "仅排除此完整离散模式组合；不证明所有outer_front-after_gate方案不可行。"
+    }
+  ],
+  "retry_banned_modes": [],
+  "retry_banned_combinations": [
+    [
+      "outer_front:after_gate:B",
+      "supply_K1:A",
+      "install_K1:B",
+      "supply_K2:A",
+      "install_K2:B",
+      "close_gate:B",
+      "handoff_K1",
+      "handoff_K2"
+    ]
+  ],
+  "selection_story": {
+    "initial_recorded_support": "outer_front:after_gate:B",
+    "final_support": "outer_front:before_gate:B",
+    "same_support_order_cost": true,
+    "description_zh": "after_gate组合在仍放置临时支撑的上下文中无法求得合格封门构型；加入一条no-good cut后选择同代理成本的before_gate组合，先回收临时支撑再封门。",
+    "note_zh": "当前筛选后所有5项任务都只有1个可行臂模式；未观察到两种可行机械臂分配之间的时间节约比较。"
+  },
+  "qualification": {
+    "required_reaction_N": 19.498335714285716,
+    "reaction_safety_factor": 1.5,
+    "required_support_load_N": 29.247503571428574,
+    "minimum_contact_overlap_m": 0.01,
+    "candidate_qualification_entry_count": 11,
+    "gate_modes_omitted_from_candidate_qualification_file": [
+      "close_gate:A",
+      "close_gate:B"
+    ],
+    "gate_endpoint_evidence_source": "allocation_problem.json/task_modes (also embedded in alloc_and_reference.json/problem)",
+    "handoff_evidence_scope_zh": "compile.qualify将两个缓冲交接模式设为feasible=true的协议输入；handoff本身没有单独IK证明记录。供应/接收端点以及之后完整编译路径和实际执行另有验收。",
+    "failure_interpretation_zh": "无合格IK候选是当前搜索预算和工具姿态下的失败记录，不能写成整个工作空间数学不可达。"
+  },
+  "timing_comparison": [
+    {
+      "id": "ilp_objective",
+      "label_zh": "ILP分配目标",
+      "value": 108.45964551906576,
+      "unit": "proxy_cost",
+      "source": "allocation.json/objective",
+      "is_time": false
+    },
+    {
+      "id": "ilp_solve_call_wall",
+      "label_zh": "MILP调用墙钟时间（模型构建与求解，不含几何筛选或RRT）",
+      "value": 0.004061400017235428,
+      "unit": "s",
+      "source": "allocation.json/elapsed_s",
+      "is_time": true
+    },
+    {
+      "id": "tpg_nominal_makespan",
+      "label_zh": "TPG标称完工时长",
+      "value": 419.22675228176456,
+      "unit": "s",
+      "source": "summary.json/nominal_makespan_s",
+      "is_time": true
+    },
+    {
+      "id": "actual_execution_makespan",
+      "label_zh": "仿真实际完工时长",
+      "value": 455.5999999998756,
+      "unit": "s",
+      "source": "summary.json/actual_makespan_s",
+      "is_time": true
+    }
+  ],
+  "scope_notes_zh": [
+    "本模型含1个连续辅助变量，严格说是MILP；ILP为项目中的分配阶段名称。",
+    "不要把108.46 proxy_cost绘成108.46秒；工作量A/B也是同一代理单位。",
+    "失败模式中的cost=0是未获得评分的占位值，变量上界为0；可视化用display_cost=null。",
+    "18个二进制变量中6个是位置×拆除顺序，10个是5项任务×双臂，2个是缓冲交接。工具放置和回收均固定B，未优化回收臂。",
+    "负载平衡项是0.15×max(W_A,W_B)，不是|W_A-W_B|，也没有连续时间调度变量。",
+    "buffer容量1由分配结果输出的pick(previous)->deposit(next)强制依赖落实；MILP本身没有缓冲占用时间区间变量。",
+    "最终no-good约束绑定当前解，但不是把outer_front-after_gate变量全局设为0；该变量上界仍为1。",
+    "inner_pocket-before_gate在抽象生命周期上可行，但当前机器人端点IK未通过；inner_pocket-after_gate另受封门困住支撑约束。",
+    "weak_narrow失败原因是5mm接触重叠小于10mm，不是40N额定承载不足。",
+    "HiGHS mip_node_count=0可能由预求解解决，不意味着没有调用优化求解器；结果记录solver_called=true、gap0及相等原始/对偶目标。"
+  ]
+}

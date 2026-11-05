@@ -1,0 +1,2075 @@
+{
+  "scope": "native stopped scene; fixed reference other-arm and payload world",
+  "candidate_only": true,
+  "actual_pending": true,
+  "full_asynchronous_oracle_pending": true,
+  "rollout_pending": true,
+  "source_run_id": "20261104T163855Z-0804c434",
+  "candidate_file": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\base_rotation_investigation\\gate_short_lift_candidates.json",
+  "candidate_sha256": "9ba3891ebecfbaf3e6ffa39b575e9689cb9869e4778b09b8f72156ed042bfd45",
+  "source_sha256_before": {
+    "apex\\allocation.py": "7f1733a7a74a1d0fdd768990cb3dd338f299647f09b3176c96dd242f3f81a86a",
+    "apex\\blend_validation.py": "2837004384012a40b32e38b6a3a0792d11d9c4761c133217e0de3cbb960469b5",
+    "apex\\compile.py": "95cfa50ab940beaccbbcb863900e86c6348ecdf55edd3924ec93d3add9799ae2",
+    "apex\\controller.lua": "9a30d885056c1d975280e6156b6b4075a49e12f3c42b161d50eca22c8d93f4fc",
+    "apex\\curve.py": "ed669126e5c9948065d26693ec2bf60526d1304eeb0504284dec3ca0f202d69e",
+    "apex\\fast_interarm.lua": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563",
+    "apex\\fast_interarm.py": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03",
+    "apex\\geometry.py": "7901cc625f376cb56a652ac2c099a849ca43985789160d4c84ff4cfd3acb71c4",
+    "apex\\motion.py": "541539b308ebd5f4bd0714523ffdda7887a8dd48ebabe2e1c9d5a97e9c8af362",
+    "apex\\motion_backend.lua": "d215ec7a054804875619aa2af18ccace404feb07ee386c68a34080c7c65065f6",
+    "apex\\performance.py": "3b3f1dd76d3c69bb6954bd7b593dc11adcdb658a720ef727fc7d474472cbd7c7",
+    "apex\\pipeline.py": "e52262f5b3e989cd2d904c57f943caa8d2ff486701100c336316fad75594f43d",
+    "apex\\plots.py": "21fa7c8b4d3f7fe29ae5c4fdb1db2cbdc8ff2408f43774d0f18e2ac834ef9033",
+    "apex\\program.py": "61264d84aecf98bfa5dbee0dedcdb9ee1aa8aa1dfb7f212ca3b845e40165cfb3",
+    "apex\\runtime.py": "82d6035749a80bf8b3c208b73fc27763e99a62331651a62ddf479b7e6fb68709",
+    "apex\\scene.py": "a859f5c5ff1a501bcd4cb4e27ebfd05675f8f26aa7693f8b193f44cbf05316b5",
+    "apex\\smoothing.py": "d5a81a115f0dd4c9aa1b4b27f42dbe226e248e4607b823a18af10c5670756d01",
+    "apex\\tpg.py": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd",
+    "apex\\validation.py": "0881b1bd00472dad6e5456126048913ca6aab9b579d7e1cfbacf3b3ee90cfef2",
+    "apex\\__init__.py": "c6fad83e333c3351b9c044711f62a14785810c3dce779d77e97f061dc35588bf"
+  },
+  "scene_path": "D:\\APEX_MR_Plus\\apex_mr_scene3\\backups\\base_rotation_baseline_20261104_01\\scenes\\10_Scene3_Dynamic.ttt",
+  "port": 23070,
+  "candidates": [
+    {
+      "height_m": 0.08,
+      "parts": [
+        {
+          "task_id": "pick_gate_lift",
+          "candidate_waypoints": 17,
+          "joint_path_length_rad": 0.18249962658184576,
+          "joint_total_travel_rad": [
+            7.745634122979794e-08,
+            0.07649623044451792,
+            0.07195606292066115,
+            0.1484516445338402,
+            3.685223193272691e-07,
+            1.248257082142601e-07
+          ],
+          "parameterized_original_motion_s": 6.5798707010548725,
+          "parameterized_candidate_motion_s": 1.8901002079638658,
+          "candidate_node_count": 1,
+          "pass_through_boundaries": 0,
+          "timing_scope": "isolated original task; no physical settling, schedule or dynamics",
+          "start_q": [
+            -0.4719659154799585,
+            0.9380865344616014,
+            1.0618665904524882,
+            1.1416396523576293,
+            -2.042761981226386,
+            -1.5707962209645447
+          ],
+          "end_q": [
+            -0.47196583882456455,
+            0.8615903040170835,
+            0.9899105275318271,
+            1.2900912968914695,
+            -2.0427623497487053,
+            -1.5707960961388365
+          ],
+          "native_validation_and_timing_wall_s": 0.7795827999943867,
+          "smoothing": {
+            "candidate_macros": [
+              {
+                "macro": "pick_gate_lift",
+                "arm": "B",
+                "nodes": 1,
+                "group_kind": "local_route_task",
+                "task_ids": [
+                  "pick_gate_lift"
+                ],
+                "attempts": [
+                  {
+                    "blend_fraction": 0.35,
+                    "validation": {
+                      "accepted": true,
+                      "valid": true,
+                      "geometry_valid": true,
+                      "tcp_corridor_valid": true,
+                      "continuous_collision_guarantee": false,
+                      "scope": "sampled curved macro against fixed reference other-arm state; original FK-polyline corridor",
+                      "geometry_samples_checked": 80,
+                      "geometry_samples_submitted": 80,
+                      "fk_calls": 145,
+                      "validation_performed": true,
+                      "thresholds": {
+                        "step_rad": 0.003,
+                        "max_tcp_deviation_m": 0.0005,
+                        "max_orientation_error_rad": 0.005,
+                        "progress_tolerance_m": 1e-06
+                      },
+                      "macro": "pick_gate_lift",
+                      "arm": "B",
+                      "task_ids": [
+                        "pick_gate_lift"
+                      ],
+                      "context_unchanged": true,
+                      "group_kind": "local_route_task",
+                      "context": {
+                        "payloads": {
+                          "B": {
+                            "part": "Gate",
+                            "name": "Gate",
+                            "offset": [
+                              0.0,
+                              1.3322676295501879e-18,
+                              0.006
+                            ],
+                            "quaternion": [
+                              0.7071067811865475,
+                              -0.0,
+                              -0.0,
+                              0.7071067811865476
+                            ]
+                          },
+                          "A": null
+                        },
+                        "placed": {
+                          "Bridge": [
+                            0.04000000000000012,
+                            0.20000000000000007,
+                            1.032,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ],
+                          "Gate": [
+                            0.48,
+                            -0.35,
+                            0.851,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ],
+                          "TemporarySupport": [
+                            0.48,
+                            0.43,
+                            0.76,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ],
+                          "K1": [
+                            0.24,
+                            0.2,
+                            0.97,
+                            0,
+                            0,
+                            0,
+                            1
+                          ],
+                          "K2": [
+                            0.24,
+                            0.2,
+                            1.096,
+                            0,
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "options": {
+                          "articulations": {
+                            "SupportLift": 0.0
+                          },
+                          "contact_exclusions": [
+                            [
+                              "Gate",
+                              "/Workbench"
+                            ],
+                            [
+                              "Gate",
+                              "/Baseplate"
+                            ],
+                            [
+                              "Gate",
+                              "/A_SupplyMat"
+                            ],
+                            [
+                              "Gate",
+                              "/B_SupplyMat"
+                            ],
+                            [
+                              "Gate",
+                              "/SharedBuffer"
+                            ],
+                            [
+                              "Gate",
+                              "/LeftTower_1_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/LeftTower_2_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/LeftTower_3_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/RightTower_1_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/RightTower_2_Body"
+                            ]
+                          ],
+                          "contact_tolerance": 0.002
+                        },
+                        "other_arm": "A",
+                        "other_q": [
+                          -2.3476570437805973,
+                          -0.25173329543603185,
+                          1.570735256142382,
+                          0.2517970743592172,
+                          -1.5707906253415997,
+                          -0.7768753860521164
+                        ]
+                      },
+                      "curve_sample_count": 80,
+                      "reference_sample_count": 67,
+                      "piece_sampling": [
+                        {
+                          "index": 0,
+                          "s0": 0.0,
+                          "length": 0.006995285817828186,
+                          "control_polygon_length_rad": 0.006995285817828186,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0023317619392761
+                        },
+                        {
+                          "index": 1,
+                          "s0": 0.006995285817828186,
+                          "length": 0.007533384726891993,
+                          "control_polygon_length_rad": 0.007533314771232867,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002511128242297432
+                        },
+                        {
+                          "index": 2,
+                          "s0": 0.01452867054472018,
+                          "length": 0.003273148690501212,
+                          "control_polygon_length_rad": 0.003273148690501212,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016365743452508136
+                        },
+                        {
+                          "index": 3,
+                          "s0": 0.01780181923522139,
+                          "length": 0.007581367288866158,
+                          "control_polygon_length_rad": 0.007581298232338714,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025271224296222563
+                        },
+                        {
+                          "index": 4,
+                          "s0": 0.02538318652408755,
+                          "length": 0.003295702926092661,
+                          "control_polygon_length_rad": 0.0032957029260926615,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016478514630468707
+                        },
+                        {
+                          "index": 5,
+                          "s0": 0.02867888945018021,
+                          "length": 0.007631493229797063,
+                          "control_polygon_length_rad": 0.007631424512492009,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025438310765993175
+                        },
+                        {
+                          "index": 6,
+                          "s0": 0.03631038267997727,
+                          "length": 0.003319551993785286,
+                          "control_polygon_length_rad": 0.0033195519937852863,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016597759968926696
+                        },
+                        {
+                          "index": 7,
+                          "s0": 0.03962993467376256,
+                          "length": 0.007684167732428919,
+                          "control_polygon_length_rad": 0.007684099354067417,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025613892441430515
+                        },
+                        {
+                          "index": 8,
+                          "s0": 0.04731410240619148,
+                          "length": 0.0033445345414688113,
+                          "control_polygon_length_rad": 0.003344534541468811,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016722672707344573
+                        },
+                        {
+                          "index": 9,
+                          "s0": 0.05065863694766029,
+                          "length": 0.007739435208274375,
+                          "control_polygon_length_rad": 0.007739367168687531,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002579811736091762
+                        },
+                        {
+                          "index": 10,
+                          "s0": 0.05839807215593466,
+                          "length": 0.0033706724110464754,
+                          "control_polygon_length_rad": 0.0033706724110464754,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001685336205523484
+                        },
+                        {
+                          "index": 11,
+                          "s0": 0.061768744566981136,
+                          "length": 0.007797343093274704,
+                          "control_polygon_length_rad": 0.007797275391317101,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025991143644250063
+                        },
+                        {
+                          "index": 12,
+                          "s0": 0.06956608766025583,
+                          "length": 0.003397989857382166,
+                          "control_polygon_length_rad": 0.003397989857382166,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016989949286913054
+                        },
+                        {
+                          "index": 13,
+                          "s0": 0.072964077517638,
+                          "length": 0.007857943050482505,
+                          "control_polygon_length_rad": 0.007857875683870398,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002619314350160954
+                        },
+                        {
+                          "index": 14,
+                          "s0": 0.0808220205681205,
+                          "length": 0.0034265133999259382,
+                          "control_polygon_length_rad": 0.003426513399925938,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001713256699963103
+                        },
+                        {
+                          "index": 15,
+                          "s0": 0.08424853396804644,
+                          "length": 0.00792129145787233,
+                          "control_polygon_length_rad": 0.00792122442363498,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0026404304859575013
+                        },
+                        {
+                          "index": 16,
+                          "s0": 0.09216982542591877,
+                          "length": 0.0034562713070802427,
+                          "control_polygon_length_rad": 0.0034562713070802422,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017281356535402762
+                        },
+                        {
+                          "index": 17,
+                          "s0": 0.09562609673299902,
+                          "length": 0.007987449115710102,
+                          "control_polygon_length_rad": 0.007987382409722427,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0026624830385700363
+                        },
+                        {
+                          "index": 18,
+                          "s0": 0.10361354584870912,
+                          "length": 0.003487294591076629,
+                          "control_polygon_length_rad": 0.003487294591076629,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017436472955385204
+                        },
+                        {
+                          "index": 19,
+                          "s0": 0.10710084043978575,
+                          "length": 0.008056482160387927,
+                          "control_polygon_length_rad": 0.008056415777757052,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002685494053462786
+                        },
+                        {
+                          "index": 20,
+                          "s0": 0.11515732260017368,
+                          "length": 0.003519616361284921,
+                          "control_polygon_length_rad": 0.0035196163612849214,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001759808180642961
+                        },
+                        {
+                          "index": 21,
+                          "s0": 0.1186769389614586,
+                          "length": 0.008128461860054143,
+                          "control_polygon_length_rad": 0.008128395794599952,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0027094872866848274
+                        },
+                        {
+                          "index": 22,
+                          "s0": 0.12680540082151276,
+                          "length": 0.0035532729761707186,
+                          "control_polygon_length_rad": 0.0035532729761707186,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017766364880854777
+                        },
+                        {
+                          "index": 23,
+                          "s0": 0.13035867379768348,
+                          "length": 0.008203465745136194,
+                          "control_polygon_length_rad": 0.008203399989982233,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0027344885817122515
+                        },
+                        {
+                          "index": 24,
+                          "s0": 0.13856213954281968,
+                          "length": 0.0035883030032018036,
+                          "control_polygon_length_rad": 0.003588303003201803,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017941515016011425
+                        },
+                        {
+                          "index": 25,
+                          "s0": 0.1421504425460215,
+                          "length": 0.008281577096982969,
+                          "control_polygon_length_rad": 0.008281511643783825,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002760525698994442
+                        },
+                        {
+                          "index": 26,
+                          "s0": 0.15043201964300446,
+                          "length": 0.0036247490350995886,
+                          "control_polygon_length_rad": 0.003624749035099589,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0018123745175500977
+                        },
+                        {
+                          "index": 27,
+                          "s0": 0.15405676867810406,
+                          "length": 0.008362886628482653,
+                          "control_polygon_length_rad": 0.008362821468135514,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002787628876161007
+                        },
+                        {
+                          "index": 28,
+                          "s0": 0.1624196553065867,
+                          "length": 0.003662656198044026,
+                          "control_polygon_length_rad": 0.0036626561980440263,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0018313280990223365
+                        },
+                        {
+                          "index": 29,
+                          "s0": 0.1660823115046307,
+                          "length": 0.008447491782461007,
+                          "control_polygon_length_rad": 0.008447426904430408,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002815830594153817
+                        },
+                        {
+                          "index": 30,
+                          "s0": 0.17452980328709172,
+                          "length": 0.007969823294753828,
+                          "control_polygon_length_rad": 0.007969823294753828,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002656607764918033
+                        }
+                      ],
+                      "included_piece_endpoints": [
+                        0.0,
+                        0.006995285817828186,
+                        0.01452867054472018,
+                        0.01780181923522139,
+                        0.02538318652408755,
+                        0.02867888945018021,
+                        0.03631038267997727,
+                        0.03962993467376256,
+                        0.04731410240619148,
+                        0.05065863694766029,
+                        0.05839807215593466,
+                        0.061768744566981136,
+                        0.06956608766025583,
+                        0.072964077517638,
+                        0.0808220205681205,
+                        0.08424853396804644,
+                        0.09216982542591877,
+                        0.09562609673299902,
+                        0.10361354584870912,
+                        0.10710084043978575,
+                        0.11515732260017368,
+                        0.1186769389614586,
+                        0.12680540082151276,
+                        0.13035867379768348,
+                        0.13856213954281968,
+                        0.1421504425460215,
+                        0.15043201964300446,
+                        0.15405676867810406,
+                        0.1624196553065867,
+                        0.1660823115046307,
+                        0.17452980328709172,
+                        0.18249962658184554
+                      ],
+                      "fk_stride": 1,
+                      "max_sample_joint_gap_rad": 0.0028157942546135147,
+                      "collision_api": "validate_samples",
+                      "planner_type": "apex.motion.MotionPlanner",
+                      "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded",
+                      "reason": "accepted_sampled_macro",
+                      "max_tcp_deviation_m": 1.2023360763374115e-06,
+                      "max_orientation_error_rad": 0.0,
+                      "max_progress_regression_m": 0.0,
+                      "reference_TCP_length_m": 0.0800001814957946,
+                      "worst_position_sample": {
+                        "sample": 65,
+                        "s": 0.14767149394401013,
+                        "reference_segment": 52
+                      },
+                      "worst_orientation_sample": {
+                        "sample": 79,
+                        "s": 0.18249962658184554,
+                        "reference_segment": 65
+                      },
+                      "progress_monotone_within_tolerance": true
+                    },
+                    "timing_non_regression": true,
+                    "duration_s": 1.8901002079638658
+                  }
+                ],
+                "accepted": true,
+                "reference_rest_to_rest_motion_duration_s": 6.5798707010548725,
+                "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+                "duration_s": 1.8901002079638658,
+                "blended_corners": 15,
+                "max_joint_space_deviation_rad": 1.3880117504866803e-05
+              }
+            ],
+            "accepted_macros": 1,
+            "accepted_cartesian_macros": 0,
+            "accepted_local_route_tasks": 1,
+            "blended_corners": 15,
+            "max_tcp_deviation_m": 1.2023360763374115e-06,
+            "max_orientation_error_rad": 0.0,
+            "collision_sampling_step_rad": 0.003,
+            "tcp_corridor_limit_m": 0.0005,
+            "orientation_limit_rad": 0.005,
+            "continuous_collision_guarantee": false
+          }
+        },
+        {
+          "task_id": "close_gate_approach",
+          "candidate_waypoints": 99,
+          "joint_path_length_rad": 3.3703703498844537,
+          "joint_total_travel_rad": [
+            2.04734409842892,
+            0.28169489997854236,
+            1.0263214458448657,
+            0.5059826049920475,
+            1.322426540545778,
+            1.518025507592592
+          ],
+          "parameterized_original_motion_s": 9.14499269842874,
+          "parameterized_candidate_motion_s": 9.14499269842874,
+          "candidate_node_count": 11,
+          "pass_through_boundaries": 8,
+          "timing_scope": "isolated original task; no physical settling, schedule or dynamics",
+          "start_q": [
+            -0.47196583882456455,
+            0.8615903040170835,
+            0.9899105275318271,
+            1.2900912968914695,
+            -2.0427623497487053,
+            -1.5707960961388365
+          ],
+          "end_q": [
+            -1.4059935944568993,
+            0.7365835202777677,
+            1.0676162671941873,
+            1.3373753717954044,
+            -2.9767899211830926,
+            -1.5708137753873876
+          ],
+          "native_validation_and_timing_wall_s": 0.009075399953871965,
+          "smoothing": {
+            "candidate_macros": [
+              {
+                "macro": "close_gate_approach",
+                "arm": "B",
+                "nodes": 11,
+                "group_kind": "local_route_task",
+                "task_ids": [
+                  "close_gate_approach"
+                ],
+                "attempts": [],
+                "accepted": false,
+                "reference_rest_to_rest_motion_duration_s": 8.184103071939719,
+                "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+                "reason": "Corner 1 is 134.025996 degrees; split/stop above 6"
+              }
+            ],
+            "accepted_macros": 0,
+            "accepted_cartesian_macros": 0,
+            "accepted_local_route_tasks": 0,
+            "blended_corners": 0,
+            "max_tcp_deviation_m": 0.0,
+            "max_orientation_error_rad": 0.0,
+            "collision_sampling_step_rad": 0.003,
+            "tcp_corridor_limit_m": 0.0005,
+            "orientation_limit_rad": 0.005,
+            "continuous_collision_guarantee": false
+          }
+        }
+      ],
+      "combined_parameterized_candidate_motion_s": 11.035092906392606,
+      "combined_parameterized_original_motion_s": 15.724863399483613,
+      "chain_boundary_max_joint_error_rad": 0.0,
+      "reconnect_present": true
+    },
+    {
+      "height_m": 0.1,
+      "parts": [
+        {
+          "task_id": "pick_gate_lift",
+          "candidate_waypoints": 21,
+          "joint_path_length_rad": 0.23263432300204087,
+          "joint_total_travel_rad": [
+            7.757401371266681e-08,
+            0.09111662789204689,
+            0.0977512479104472,
+            0.18886719446719558,
+            3.9013562780354505e-07,
+            1.4359786337792002e-07
+          ],
+          "parameterized_original_motion_s": 8.272540215067623,
+          "parameterized_candidate_motion_s": 2.3448664574656024,
+          "candidate_node_count": 1,
+          "pass_through_boundaries": 0,
+          "timing_scope": "isolated original task; no physical settling, schedule or dynamics",
+          "start_q": [
+            -0.4719659154799585,
+            0.9380865344616014,
+            1.0618665904524882,
+            1.1416396523576293,
+            -2.042761981226386,
+            -1.5707962209645447
+          ],
+          "end_q": [
+            -0.47196583894223704,
+            0.8469699065695545,
+            0.964115342542041,
+            1.330506846824825,
+            -2.0427623713620138,
+            -1.5707960773666814
+          ],
+          "native_validation_and_timing_wall_s": 1.0159720999654382,
+          "smoothing": {
+            "candidate_macros": [
+              {
+                "macro": "pick_gate_lift",
+                "arm": "B",
+                "nodes": 1,
+                "group_kind": "local_route_task",
+                "task_ids": [
+                  "pick_gate_lift"
+                ],
+                "attempts": [
+                  {
+                    "blend_fraction": 0.35,
+                    "validation": {
+                      "accepted": true,
+                      "valid": true,
+                      "geometry_valid": true,
+                      "tcp_corridor_valid": true,
+                      "continuous_collision_guarantee": false,
+                      "scope": "sampled curved macro against fixed reference other-arm state; original FK-polyline corridor",
+                      "geometry_samples_checked": 100,
+                      "geometry_samples_submitted": 100,
+                      "fk_calls": 185,
+                      "validation_performed": true,
+                      "thresholds": {
+                        "step_rad": 0.003,
+                        "max_tcp_deviation_m": 0.0005,
+                        "max_orientation_error_rad": 0.005,
+                        "progress_tolerance_m": 1e-06
+                      },
+                      "macro": "pick_gate_lift",
+                      "arm": "B",
+                      "task_ids": [
+                        "pick_gate_lift"
+                      ],
+                      "context_unchanged": true,
+                      "group_kind": "local_route_task",
+                      "context": {
+                        "payloads": {
+                          "B": {
+                            "part": "Gate",
+                            "name": "Gate",
+                            "offset": [
+                              0.0,
+                              1.3322676295501879e-18,
+                              0.006
+                            ],
+                            "quaternion": [
+                              0.7071067811865475,
+                              -0.0,
+                              -0.0,
+                              0.7071067811865476
+                            ]
+                          },
+                          "A": null
+                        },
+                        "placed": {
+                          "Bridge": [
+                            0.04000000000000012,
+                            0.20000000000000007,
+                            1.032,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ],
+                          "Gate": [
+                            0.48,
+                            -0.35,
+                            0.851,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ],
+                          "TemporarySupport": [
+                            0.48,
+                            0.43,
+                            0.76,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ],
+                          "K1": [
+                            0.24,
+                            0.2,
+                            0.97,
+                            0,
+                            0,
+                            0,
+                            1
+                          ],
+                          "K2": [
+                            0.24,
+                            0.2,
+                            1.096,
+                            0,
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "options": {
+                          "articulations": {
+                            "SupportLift": 0.0
+                          },
+                          "contact_exclusions": [
+                            [
+                              "Gate",
+                              "/Workbench"
+                            ],
+                            [
+                              "Gate",
+                              "/Baseplate"
+                            ],
+                            [
+                              "Gate",
+                              "/A_SupplyMat"
+                            ],
+                            [
+                              "Gate",
+                              "/B_SupplyMat"
+                            ],
+                            [
+                              "Gate",
+                              "/SharedBuffer"
+                            ],
+                            [
+                              "Gate",
+                              "/LeftTower_1_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/LeftTower_2_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/LeftTower_3_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/RightTower_1_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/RightTower_2_Body"
+                            ]
+                          ],
+                          "contact_tolerance": 0.002
+                        },
+                        "other_arm": "A",
+                        "other_q": [
+                          -2.3476570437805973,
+                          -0.25173329543603185,
+                          1.570735256142382,
+                          0.2517970743592172,
+                          -1.5707906253415997,
+                          -0.7768753860521164
+                        ]
+                      },
+                      "curve_sample_count": 100,
+                      "reference_sample_count": 87,
+                      "piece_sampling": [
+                        {
+                          "index": 0,
+                          "s0": 0.0,
+                          "length": 0.006995285817828186,
+                          "control_polygon_length_rad": 0.006995285817828186,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0023317619392761
+                        },
+                        {
+                          "index": 1,
+                          "s0": 0.006995285817828186,
+                          "length": 0.007533384726891993,
+                          "control_polygon_length_rad": 0.007533314771232867,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002511128242297432
+                        },
+                        {
+                          "index": 2,
+                          "s0": 0.01452867054472018,
+                          "length": 0.003273148690501212,
+                          "control_polygon_length_rad": 0.003273148690501212,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016365743452508136
+                        },
+                        {
+                          "index": 3,
+                          "s0": 0.01780181923522139,
+                          "length": 0.007581367288866158,
+                          "control_polygon_length_rad": 0.007581298232338714,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025271224296222563
+                        },
+                        {
+                          "index": 4,
+                          "s0": 0.02538318652408755,
+                          "length": 0.003295702926092661,
+                          "control_polygon_length_rad": 0.0032957029260926615,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016478514630468707
+                        },
+                        {
+                          "index": 5,
+                          "s0": 0.02867888945018021,
+                          "length": 0.007631493229797063,
+                          "control_polygon_length_rad": 0.007631424512492009,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025438310765993175
+                        },
+                        {
+                          "index": 6,
+                          "s0": 0.03631038267997727,
+                          "length": 0.003319551993785286,
+                          "control_polygon_length_rad": 0.0033195519937852863,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016597759968926696
+                        },
+                        {
+                          "index": 7,
+                          "s0": 0.03962993467376256,
+                          "length": 0.007684167732428919,
+                          "control_polygon_length_rad": 0.007684099354067417,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025613892441430515
+                        },
+                        {
+                          "index": 8,
+                          "s0": 0.04731410240619148,
+                          "length": 0.0033445345414688113,
+                          "control_polygon_length_rad": 0.003344534541468811,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016722672707344573
+                        },
+                        {
+                          "index": 9,
+                          "s0": 0.05065863694766029,
+                          "length": 0.007739435208274375,
+                          "control_polygon_length_rad": 0.007739367168687531,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002579811736091762
+                        },
+                        {
+                          "index": 10,
+                          "s0": 0.05839807215593466,
+                          "length": 0.0033706724110464754,
+                          "control_polygon_length_rad": 0.0033706724110464754,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001685336205523484
+                        },
+                        {
+                          "index": 11,
+                          "s0": 0.061768744566981136,
+                          "length": 0.007797343093274704,
+                          "control_polygon_length_rad": 0.007797275391317101,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025991143644250063
+                        },
+                        {
+                          "index": 12,
+                          "s0": 0.06956608766025583,
+                          "length": 0.003397989857382166,
+                          "control_polygon_length_rad": 0.003397989857382166,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016989949286913054
+                        },
+                        {
+                          "index": 13,
+                          "s0": 0.072964077517638,
+                          "length": 0.007857943050482505,
+                          "control_polygon_length_rad": 0.007857875683870398,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002619314350160954
+                        },
+                        {
+                          "index": 14,
+                          "s0": 0.0808220205681205,
+                          "length": 0.0034265133999259382,
+                          "control_polygon_length_rad": 0.003426513399925938,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001713256699963103
+                        },
+                        {
+                          "index": 15,
+                          "s0": 0.08424853396804644,
+                          "length": 0.00792129145787233,
+                          "control_polygon_length_rad": 0.00792122442363498,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0026404304859575013
+                        },
+                        {
+                          "index": 16,
+                          "s0": 0.09216982542591877,
+                          "length": 0.0034562713070802427,
+                          "control_polygon_length_rad": 0.0034562713070802422,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017281356535402762
+                        },
+                        {
+                          "index": 17,
+                          "s0": 0.09562609673299902,
+                          "length": 0.007987449115710102,
+                          "control_polygon_length_rad": 0.007987382409722427,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0026624830385700363
+                        },
+                        {
+                          "index": 18,
+                          "s0": 0.10361354584870912,
+                          "length": 0.003487294591076629,
+                          "control_polygon_length_rad": 0.003487294591076629,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017436472955385204
+                        },
+                        {
+                          "index": 19,
+                          "s0": 0.10710084043978575,
+                          "length": 0.008056482160387927,
+                          "control_polygon_length_rad": 0.008056415777757052,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002685494053462786
+                        },
+                        {
+                          "index": 20,
+                          "s0": 0.11515732260017368,
+                          "length": 0.003519616361284921,
+                          "control_polygon_length_rad": 0.0035196163612849214,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001759808180642961
+                        },
+                        {
+                          "index": 21,
+                          "s0": 0.1186769389614586,
+                          "length": 0.008128461860054143,
+                          "control_polygon_length_rad": 0.008128395794599952,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0027094872866848274
+                        },
+                        {
+                          "index": 22,
+                          "s0": 0.12680540082151276,
+                          "length": 0.0035532729761707186,
+                          "control_polygon_length_rad": 0.0035532729761707186,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017766364880854777
+                        },
+                        {
+                          "index": 23,
+                          "s0": 0.13035867379768348,
+                          "length": 0.008203465745136194,
+                          "control_polygon_length_rad": 0.008203399989982233,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0027344885817122515
+                        },
+                        {
+                          "index": 24,
+                          "s0": 0.13856213954281968,
+                          "length": 0.0035883030032018036,
+                          "control_polygon_length_rad": 0.003588303003201803,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017941515016011425
+                        },
+                        {
+                          "index": 25,
+                          "s0": 0.1421504425460215,
+                          "length": 0.008281577096982969,
+                          "control_polygon_length_rad": 0.008281511643783825,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002760525698994442
+                        },
+                        {
+                          "index": 26,
+                          "s0": 0.15043201964300446,
+                          "length": 0.0036247490350995886,
+                          "control_polygon_length_rad": 0.003624749035099589,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0018123745175500977
+                        },
+                        {
+                          "index": 27,
+                          "s0": 0.15405676867810406,
+                          "length": 0.008362886628482653,
+                          "control_polygon_length_rad": 0.008362821468135514,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002787628876161007
+                        },
+                        {
+                          "index": 28,
+                          "s0": 0.1624196553065867,
+                          "length": 0.003662656198044026,
+                          "control_polygon_length_rad": 0.0036626561980440263,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0018313280990223365
+                        },
+                        {
+                          "index": 29,
+                          "s0": 0.1660823115046307,
+                          "length": 0.008447491782461007,
+                          "control_polygon_length_rad": 0.008447426904430408,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002815830594153817
+                        },
+                        {
+                          "index": 30,
+                          "s0": 0.17452980328709172,
+                          "length": 0.003702074079659337,
+                          "control_polygon_length_rad": 0.003702074079659337,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0018510370398301188
+                        },
+                        {
+                          "index": 31,
+                          "s0": 0.17823187736675106,
+                          "length": 0.008535498430188979,
+                          "control_polygon_length_rad": 0.008535433822992152,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002845166143396447
+                        },
+                        {
+                          "index": 32,
+                          "s0": 0.18676737579694003,
+                          "length": 0.0037430555909421085,
+                          "control_polygon_length_rad": 0.0037430555909421077,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001871527795471358
+                        },
+                        {
+                          "index": 33,
+                          "s0": 0.19051043138788212,
+                          "length": 0.008627020560347153,
+                          "control_polygon_length_rad": 0.008626956211010957,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002875673520115944
+                        },
+                        {
+                          "index": 34,
+                          "s0": 0.19913745194822927,
+                          "length": 0.0037856586849652975,
+                          "control_polygon_length_rad": 0.003785658684965297,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.00189282934248313
+                        },
+                        {
+                          "index": 35,
+                          "s0": 0.20292311063319457,
+                          "length": 0.008722181962457363,
+                          "control_polygon_length_rad": 0.00872211785681375,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0029073939874859193
+                        },
+                        {
+                          "index": 36,
+                          "s0": 0.21164529259565193,
+                          "length": 0.0038299456323483095,
+                          "control_polygon_length_rad": 0.00382994563234831,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0019149728161743942
+                        },
+                        {
+                          "index": 37,
+                          "s0": 0.21547523822800024,
+                          "length": 0.008821116353082923,
+                          "control_polygon_length_rad": 0.008821052475538908,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002940372117694351
+                        },
+                        {
+                          "index": 38,
+                          "s0": 0.22429635458108316,
+                          "length": 0.008337968420957347,
+                          "control_polygon_length_rad": 0.008337968420957347,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0027793228069860495
+                        }
+                      ],
+                      "included_piece_endpoints": [
+                        0.0,
+                        0.006995285817828186,
+                        0.01452867054472018,
+                        0.01780181923522139,
+                        0.02538318652408755,
+                        0.02867888945018021,
+                        0.03631038267997727,
+                        0.03962993467376256,
+                        0.04731410240619148,
+                        0.05065863694766029,
+                        0.05839807215593466,
+                        0.061768744566981136,
+                        0.06956608766025583,
+                        0.072964077517638,
+                        0.0808220205681205,
+                        0.08424853396804644,
+                        0.09216982542591877,
+                        0.09562609673299902,
+                        0.10361354584870912,
+                        0.10710084043978575,
+                        0.11515732260017368,
+                        0.1186769389614586,
+                        0.12680540082151276,
+                        0.13035867379768348,
+                        0.13856213954281968,
+                        0.1421504425460215,
+                        0.15043201964300446,
+                        0.15405676867810406,
+                        0.1624196553065867,
+                        0.1660823115046307,
+                        0.17452980328709172,
+                        0.17823187736675106,
+                        0.18676737579694003,
+                        0.19051043138788212,
+                        0.19913745194822927,
+                        0.20292311063319457,
+                        0.21164529259565193,
+                        0.21547523822800024,
+                        0.22429635458108316,
+                        0.2326343230020405
+                      ],
+                      "fk_stride": 1,
+                      "max_sample_joint_gap_rad": 0.0029403363385215766,
+                      "collision_api": "validate_samples",
+                      "planner_type": "apex.motion.MotionPlanner",
+                      "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded",
+                      "reason": "accepted_sampled_macro",
+                      "max_tcp_deviation_m": 1.2023360763374115e-06,
+                      "max_orientation_error_rad": 0.0,
+                      "max_progress_regression_m": 0.0,
+                      "reference_TCP_length_m": 0.10000023361829218,
+                      "worst_position_sample": {
+                        "sample": 65,
+                        "s": 0.14767149394401013,
+                        "reference_segment": 52
+                      },
+                      "worst_orientation_sample": {
+                        "sample": 99,
+                        "s": 0.2326343230020405,
+                        "reference_segment": 85
+                      },
+                      "progress_monotone_within_tolerance": true
+                    },
+                    "timing_non_regression": true,
+                    "duration_s": 2.3448664574656024
+                  }
+                ],
+                "accepted": true,
+                "reference_rest_to_rest_motion_duration_s": 8.272540215067623,
+                "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+                "duration_s": 2.3448664574656024,
+                "blended_corners": 19,
+                "max_joint_space_deviation_rad": 1.4073998359567626e-05
+              }
+            ],
+            "accepted_macros": 1,
+            "accepted_cartesian_macros": 0,
+            "accepted_local_route_tasks": 1,
+            "blended_corners": 19,
+            "max_tcp_deviation_m": 1.2023360763374115e-06,
+            "max_orientation_error_rad": 0.0,
+            "collision_sampling_step_rad": 0.003,
+            "tcp_corridor_limit_m": 0.0005,
+            "orientation_limit_rad": 0.005,
+            "continuous_collision_guarantee": false
+          }
+        },
+        {
+          "task_id": "close_gate_approach",
+          "candidate_waypoints": 80,
+          "joint_path_length_rad": 2.70055806103081,
+          "joint_total_travel_rad": [
+            1.1353953471004776,
+            1.376092438942053,
+            0.7072510969977346,
+            1.1305317757058666,
+            0.9340275498210788,
+            0.7158828267728579
+          ],
+          "parameterized_original_motion_s": 6.635726299802953,
+          "parameterized_candidate_motion_s": 6.635726299802953,
+          "candidate_node_count": 8,
+          "pass_through_boundaries": 5,
+          "timing_scope": "isolated original task; no physical settling, schedule or dynamics",
+          "start_q": [
+            -0.47196583894223704,
+            0.8469699065695545,
+            0.964115342542041,
+            1.330506846824825,
+            -2.0427623713620138,
+            -1.5707960773666814
+          ],
+          "end_q": [
+            -1.4059935944568993,
+            0.7365835202777677,
+            1.0676162671941873,
+            1.3373753717954044,
+            -2.9767899211830926,
+            -1.5708137753873876
+          ],
+          "native_validation_and_timing_wall_s": 0.008076900034211576,
+          "smoothing": {
+            "candidate_macros": [
+              {
+                "macro": "close_gate_approach",
+                "arm": "B",
+                "nodes": 8,
+                "group_kind": "local_route_task",
+                "task_ids": [
+                  "close_gate_approach"
+                ],
+                "attempts": [],
+                "accepted": false,
+                "reference_rest_to_rest_motion_duration_s": 5.5560967622640325,
+                "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+                "reason": "Corner 1 is 121.889155 degrees; split/stop above 6"
+              }
+            ],
+            "accepted_macros": 0,
+            "accepted_cartesian_macros": 0,
+            "accepted_local_route_tasks": 0,
+            "blended_corners": 0,
+            "max_tcp_deviation_m": 0.0,
+            "max_orientation_error_rad": 0.0,
+            "collision_sampling_step_rad": 0.003,
+            "tcp_corridor_limit_m": 0.0005,
+            "orientation_limit_rad": 0.005,
+            "continuous_collision_guarantee": false
+          }
+        }
+      ],
+      "combined_parameterized_candidate_motion_s": 8.980592757268555,
+      "combined_parameterized_original_motion_s": 14.908266514870576,
+      "chain_boundary_max_joint_error_rad": 0.0,
+      "reconnect_present": true
+    },
+    {
+      "height_m": 0.12,
+      "parts": [
+        {
+          "task_id": "pick_gate_lift",
+          "candidate_waypoints": 25,
+          "joint_path_length_rad": 0.2852179530373221,
+          "joint_total_travel_rad": [
+            7.785566813467426e-08,
+            0.10370820905365075,
+            0.12699601428476692,
+            0.2307035031878477,
+            4.173652889960522e-07,
+            1.6698802518533284e-07
+          ],
+          "parameterized_original_motion_s": 9.984815490133368,
+          "parameterized_candidate_motion_s": 2.833641991604057,
+          "candidate_node_count": 1,
+          "pass_through_boundaries": 0,
+          "timing_scope": "isolated original task; no physical settling, schedule or dynamics",
+          "start_q": [
+            -0.4719659154799585,
+            0.9380865344616014,
+            1.0618665904524882,
+            1.1416396523576293,
+            -2.042761981226386,
+            -1.5707962209645447
+          ],
+          "end_q": [
+            -0.47196583922389146,
+            0.8343783254079506,
+            0.9348705761677213,
+            1.372343155545477,
+            -2.042762398591675,
+            -1.5707960539765196
+          ],
+          "native_validation_and_timing_wall_s": 1.374011900043115,
+          "smoothing": {
+            "candidate_macros": [
+              {
+                "macro": "pick_gate_lift",
+                "arm": "B",
+                "nodes": 1,
+                "group_kind": "local_route_task",
+                "task_ids": [
+                  "pick_gate_lift"
+                ],
+                "attempts": [
+                  {
+                    "blend_fraction": 0.35,
+                    "validation": {
+                      "accepted": true,
+                      "valid": true,
+                      "geometry_valid": true,
+                      "tcp_corridor_valid": true,
+                      "continuous_collision_guarantee": false,
+                      "scope": "sampled curved macro against fixed reference other-arm state; original FK-polyline corridor",
+                      "geometry_samples_checked": 123,
+                      "geometry_samples_submitted": 123,
+                      "fk_calls": 228,
+                      "validation_performed": true,
+                      "thresholds": {
+                        "step_rad": 0.003,
+                        "max_tcp_deviation_m": 0.0005,
+                        "max_orientation_error_rad": 0.005,
+                        "progress_tolerance_m": 1e-06
+                      },
+                      "macro": "pick_gate_lift",
+                      "arm": "B",
+                      "task_ids": [
+                        "pick_gate_lift"
+                      ],
+                      "context_unchanged": true,
+                      "group_kind": "local_route_task",
+                      "context": {
+                        "payloads": {
+                          "B": {
+                            "part": "Gate",
+                            "name": "Gate",
+                            "offset": [
+                              0.0,
+                              1.3322676295501879e-18,
+                              0.006
+                            ],
+                            "quaternion": [
+                              0.7071067811865475,
+                              -0.0,
+                              -0.0,
+                              0.7071067811865476
+                            ]
+                          },
+                          "A": null
+                        },
+                        "placed": {
+                          "Bridge": [
+                            0.04000000000000012,
+                            0.20000000000000007,
+                            1.032,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ],
+                          "Gate": [
+                            0.48,
+                            -0.35,
+                            0.851,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ],
+                          "TemporarySupport": [
+                            0.48,
+                            0.43,
+                            0.76,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ],
+                          "K1": [
+                            0.24,
+                            0.2,
+                            0.97,
+                            0,
+                            0,
+                            0,
+                            1
+                          ],
+                          "K2": [
+                            0.24,
+                            0.2,
+                            1.096,
+                            0,
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "options": {
+                          "articulations": {
+                            "SupportLift": 0.0
+                          },
+                          "contact_exclusions": [
+                            [
+                              "Gate",
+                              "/Workbench"
+                            ],
+                            [
+                              "Gate",
+                              "/Baseplate"
+                            ],
+                            [
+                              "Gate",
+                              "/A_SupplyMat"
+                            ],
+                            [
+                              "Gate",
+                              "/B_SupplyMat"
+                            ],
+                            [
+                              "Gate",
+                              "/SharedBuffer"
+                            ],
+                            [
+                              "Gate",
+                              "/LeftTower_1_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/LeftTower_2_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/LeftTower_3_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/RightTower_1_Body"
+                            ],
+                            [
+                              "Gate",
+                              "/RightTower_2_Body"
+                            ]
+                          ],
+                          "contact_tolerance": 0.002
+                        },
+                        "other_arm": "A",
+                        "other_q": [
+                          -2.3476570437805973,
+                          -0.25173329543603185,
+                          1.570735256142382,
+                          0.2517970743592172,
+                          -1.5707906253415997,
+                          -0.7768753860521164
+                        ]
+                      },
+                      "curve_sample_count": 123,
+                      "reference_sample_count": 107,
+                      "piece_sampling": [
+                        {
+                          "index": 0,
+                          "s0": 0.0,
+                          "length": 0.006995285817828186,
+                          "control_polygon_length_rad": 0.006995285817828186,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0023317619392761
+                        },
+                        {
+                          "index": 1,
+                          "s0": 0.006995285817828186,
+                          "length": 0.007533384726891993,
+                          "control_polygon_length_rad": 0.007533314771232867,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002511128242297432
+                        },
+                        {
+                          "index": 2,
+                          "s0": 0.01452867054472018,
+                          "length": 0.003273148690501212,
+                          "control_polygon_length_rad": 0.003273148690501212,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016365743452508136
+                        },
+                        {
+                          "index": 3,
+                          "s0": 0.01780181923522139,
+                          "length": 0.007581367288866158,
+                          "control_polygon_length_rad": 0.007581298232338714,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025271224296222563
+                        },
+                        {
+                          "index": 4,
+                          "s0": 0.02538318652408755,
+                          "length": 0.003295702926092661,
+                          "control_polygon_length_rad": 0.0032957029260926615,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016478514630468707
+                        },
+                        {
+                          "index": 5,
+                          "s0": 0.02867888945018021,
+                          "length": 0.007631493229797063,
+                          "control_polygon_length_rad": 0.007631424512492009,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025438310765993175
+                        },
+                        {
+                          "index": 6,
+                          "s0": 0.03631038267997727,
+                          "length": 0.003319551993785286,
+                          "control_polygon_length_rad": 0.0033195519937852863,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016597759968926696
+                        },
+                        {
+                          "index": 7,
+                          "s0": 0.03962993467376256,
+                          "length": 0.007684167732428919,
+                          "control_polygon_length_rad": 0.007684099354067417,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025613892441430515
+                        },
+                        {
+                          "index": 8,
+                          "s0": 0.04731410240619148,
+                          "length": 0.0033445345414688113,
+                          "control_polygon_length_rad": 0.003344534541468811,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016722672707344573
+                        },
+                        {
+                          "index": 9,
+                          "s0": 0.05065863694766029,
+                          "length": 0.007739435208274375,
+                          "control_polygon_length_rad": 0.007739367168687531,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002579811736091762
+                        },
+                        {
+                          "index": 10,
+                          "s0": 0.05839807215593466,
+                          "length": 0.0033706724110464754,
+                          "control_polygon_length_rad": 0.0033706724110464754,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001685336205523484
+                        },
+                        {
+                          "index": 11,
+                          "s0": 0.061768744566981136,
+                          "length": 0.007797343093274704,
+                          "control_polygon_length_rad": 0.007797275391317101,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0025991143644250063
+                        },
+                        {
+                          "index": 12,
+                          "s0": 0.06956608766025583,
+                          "length": 0.003397989857382166,
+                          "control_polygon_length_rad": 0.003397989857382166,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0016989949286913054
+                        },
+                        {
+                          "index": 13,
+                          "s0": 0.072964077517638,
+                          "length": 0.007857943050482505,
+                          "control_polygon_length_rad": 0.007857875683870398,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002619314350160954
+                        },
+                        {
+                          "index": 14,
+                          "s0": 0.0808220205681205,
+                          "length": 0.0034265133999259382,
+                          "control_polygon_length_rad": 0.003426513399925938,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001713256699963103
+                        },
+                        {
+                          "index": 15,
+                          "s0": 0.08424853396804644,
+                          "length": 0.00792129145787233,
+                          "control_polygon_length_rad": 0.00792122442363498,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0026404304859575013
+                        },
+                        {
+                          "index": 16,
+                          "s0": 0.09216982542591877,
+                          "length": 0.0034562713070802427,
+                          "control_polygon_length_rad": 0.0034562713070802422,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017281356535402762
+                        },
+                        {
+                          "index": 17,
+                          "s0": 0.09562609673299902,
+                          "length": 0.007987449115710102,
+                          "control_polygon_length_rad": 0.007987382409722427,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0026624830385700363
+                        },
+                        {
+                          "index": 18,
+                          "s0": 0.10361354584870912,
+                          "length": 0.003487294591076629,
+                          "control_polygon_length_rad": 0.003487294591076629,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017436472955385204
+                        },
+                        {
+                          "index": 19,
+                          "s0": 0.10710084043978575,
+                          "length": 0.008056482160387927,
+                          "control_polygon_length_rad": 0.008056415777757052,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002685494053462786
+                        },
+                        {
+                          "index": 20,
+                          "s0": 0.11515732260017368,
+                          "length": 0.003519616361284921,
+                          "control_polygon_length_rad": 0.0035196163612849214,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001759808180642961
+                        },
+                        {
+                          "index": 21,
+                          "s0": 0.1186769389614586,
+                          "length": 0.008128461860054143,
+                          "control_polygon_length_rad": 0.008128395794599952,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0027094872866848274
+                        },
+                        {
+                          "index": 22,
+                          "s0": 0.12680540082151276,
+                          "length": 0.0035532729761707186,
+                          "control_polygon_length_rad": 0.0035532729761707186,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017766364880854777
+                        },
+                        {
+                          "index": 23,
+                          "s0": 0.13035867379768348,
+                          "length": 0.008203465745136194,
+                          "control_polygon_length_rad": 0.008203399989982233,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0027344885817122515
+                        },
+                        {
+                          "index": 24,
+                          "s0": 0.13856213954281968,
+                          "length": 0.0035883030032018036,
+                          "control_polygon_length_rad": 0.003588303003201803,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0017941515016011425
+                        },
+                        {
+                          "index": 25,
+                          "s0": 0.1421504425460215,
+                          "length": 0.008281577096982969,
+                          "control_polygon_length_rad": 0.008281511643783825,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002760525698994442
+                        },
+                        {
+                          "index": 26,
+                          "s0": 0.15043201964300446,
+                          "length": 0.0036247490350995886,
+                          "control_polygon_length_rad": 0.003624749035099589,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0018123745175500977
+                        },
+                        {
+                          "index": 27,
+                          "s0": 0.15405676867810406,
+                          "length": 0.008362886628482653,
+                          "control_polygon_length_rad": 0.008362821468135514,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002787628876161007
+                        },
+                        {
+                          "index": 28,
+                          "s0": 0.1624196553065867,
+                          "length": 0.003662656198044026,
+                          "control_polygon_length_rad": 0.0036626561980440263,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0018313280990223365
+                        },
+                        {
+                          "index": 29,
+                          "s0": 0.1660823115046307,
+                          "length": 0.008447491782461007,
+                          "control_polygon_length_rad": 0.008447426904430408,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002815830594153817
+                        },
+                        {
+                          "index": 30,
+                          "s0": 0.17452980328709172,
+                          "length": 0.003702074079659337,
+                          "control_polygon_length_rad": 0.003702074079659337,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0018510370398301188
+                        },
+                        {
+                          "index": 31,
+                          "s0": 0.17823187736675106,
+                          "length": 0.008535498430188979,
+                          "control_polygon_length_rad": 0.008535433822992152,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002845166143396447
+                        },
+                        {
+                          "index": 32,
+                          "s0": 0.18676737579694003,
+                          "length": 0.0037430555909421085,
+                          "control_polygon_length_rad": 0.0037430555909421077,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001871527795471358
+                        },
+                        {
+                          "index": 33,
+                          "s0": 0.19051043138788212,
+                          "length": 0.008627020560347153,
+                          "control_polygon_length_rad": 0.008626956211010957,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002875673520115944
+                        },
+                        {
+                          "index": 34,
+                          "s0": 0.19913745194822927,
+                          "length": 0.0037856586849652975,
+                          "control_polygon_length_rad": 0.003785658684965297,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.00189282934248313
+                        },
+                        {
+                          "index": 35,
+                          "s0": 0.20292311063319457,
+                          "length": 0.008722181962457363,
+                          "control_polygon_length_rad": 0.00872211785681375,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0029073939874859193
+                        },
+                        {
+                          "index": 36,
+                          "s0": 0.21164529259565193,
+                          "length": 0.0038299456323483095,
+                          "control_polygon_length_rad": 0.00382994563234831,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0019149728161743942
+                        },
+                        {
+                          "index": 37,
+                          "s0": 0.21547523822800024,
+                          "length": 0.008821116353082923,
+                          "control_polygon_length_rad": 0.008821052475538908,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.002940372117694351
+                        },
+                        {
+                          "index": 38,
+                          "s0": 0.22429635458108316,
+                          "length": 0.003875984111832819,
+                          "control_polygon_length_rad": 0.0038759841118328198,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0019379920559165578
+                        },
+                        {
+                          "index": 39,
+                          "s0": 0.22817233869291598,
+                          "length": 0.008923968618249144,
+                          "control_polygon_length_rad": 0.00892390495171974,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0029746562060831566
+                        },
+                        {
+                          "index": 40,
+                          "s0": 0.23709630731116513,
+                          "length": 0.003923847539090381,
+                          "control_polygon_length_rad": 0.003923847539090381,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001961923769545249
+                        },
+                        {
+                          "index": 41,
+                          "s0": 0.24102015485025552,
+                          "length": 0.009030895836539125,
+                          "control_polygon_length_rad": 0.009030832362385766,
+                          "samples": 5,
+                          "joint_arclength_gap_bound_rad": 0.0022577239591348467
+                        },
+                        {
+                          "index": 42,
+                          "s0": 0.2500510506867946,
+                          "length": 0.003973615568246354,
+                          "control_polygon_length_rad": 0.003973615568246354,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.001986807784123337
+                        },
+                        {
+                          "index": 43,
+                          "s0": 0.254024666255041,
+                          "length": 0.00914206837009418,
+                          "control_polygon_length_rad": 0.009142005067973358,
+                          "samples": 5,
+                          "joint_arclength_gap_bound_rad": 0.0022855170925237065
+                        },
+                        {
+                          "index": 44,
+                          "s0": 0.2631667346251352,
+                          "length": 0.004025374880190457,
+                          "control_polygon_length_rad": 0.004025374880190457,
+                          "samples": 3,
+                          "joint_arclength_gap_bound_rad": 0.0020126874400952727
+                        },
+                        {
+                          "index": 45,
+                          "s0": 0.2671921095053256,
+                          "length": 0.009257671301024954,
+                          "control_polygon_length_rad": 0.009257608148906778,
+                          "samples": 5,
+                          "joint_arclength_gap_bound_rad": 0.0023144178252563086
+                        },
+                        {
+                          "index": 46,
+                          "s0": 0.2764497808063506,
+                          "length": 0.008768172230971299,
+                          "control_polygon_length_rad": 0.008768172230971299,
+                          "samples": 4,
+                          "joint_arclength_gap_bound_rad": 0.0029227240769905873
+                        }
+                      ],
+                      "included_piece_endpoints": [
+                        0.0,
+                        0.006995285817828186,
+                        0.01452867054472018,
+                        0.01780181923522139,
+                        0.02538318652408755,
+                        0.02867888945018021,
+                        0.03631038267997727,
+                        0.03962993467376256,
+                        0.04731410240619148,
+                        0.05065863694766029,
+                        0.05839807215593466,
+                        0.061768744566981136,
+                        0.06956608766025583,
+                        0.072964077517638,
+                        0.0808220205681205,
+                        0.08424853396804644,
+                        0.09216982542591877,
+                        0.09562609673299902,
+                        0.10361354584870912,
+                        0.10710084043978575,
+                        0.11515732260017368,
+                        0.1186769389614586,
+                        0.12680540082151276,
+                        0.13035867379768348,
+                        0.13856213954281968,
+                        0.1421504425460215,
+                        0.15043201964300446,
+                        0.15405676867810406,
+                        0.1624196553065867,
+                        0.1660823115046307,
+                        0.17452980328709172,
+                        0.17823187736675106,
+                        0.18676737579694003,
+                        0.19051043138788212,
+                        0.19913745194822927,
+                        0.20292311063319457,
+                        0.21164529259565193,
+                        0.21547523822800024,
+                        0.22429635458108316,
+                        0.22817233869291598,
+                        0.23709630731116513,
+                        0.24102015485025552,
+                        0.2500510506867946,
+                        0.254024666255041,
+                        0.2631667346251352,
+                        0.2671921095053256,
+                        0.2764497808063506,
+                        0.2852179530373219
+                      ],
+                      "fk_stride": 1,
+                      "max_sample_joint_gap_rad": 0.00297462054509779,
+                      "collision_api": "validate_samples",
+                      "planner_type": "apex.motion.MotionPlanner",
+                      "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded",
+                      "reason": "accepted_sampled_macro",
+                      "max_tcp_deviation_m": 2.9549264825050036e-06,
+                      "max_orientation_error_rad": 0.0,
+                      "max_progress_regression_m": 0.0,
+                      "reference_TCP_length_m": 0.12000028909644378,
+                      "worst_position_sample": {
+                        "sample": 117,
+                        "s": 0.2718209451558381,
+                        "reference_segment": 100
+                      },
+                      "worst_orientation_sample": {
+                        "sample": 122,
+                        "s": 0.2852179530373219,
+                        "reference_segment": 105
+                      },
+                      "progress_monotone_within_tolerance": true
+                    },
+                    "timing_non_regression": true,
+                    "duration_s": 2.833641991604057
+                  }
+                ],
+                "accepted": true,
+                "reference_rest_to_rest_motion_duration_s": 9.984815490133368,
+                "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+                "duration_s": 2.833641991604057,
+                "blended_corners": 23,
+                "max_joint_space_deviation_rad": 1.4335986862263638e-05
+              }
+            ],
+            "accepted_macros": 1,
+            "accepted_cartesian_macros": 0,
+            "accepted_local_route_tasks": 1,
+            "blended_corners": 23,
+            "max_tcp_deviation_m": 2.9549264825050036e-06,
+            "max_orientation_error_rad": 0.0,
+            "collision_sampling_step_rad": 0.003,
+            "tcp_corridor_limit_m": 0.0005,
+            "orientation_limit_rad": 0.005,
+            "continuous_collision_guarantee": false
+          }
+        },
+        {
+          "task_id": "close_gate_approach",
+          "candidate_waypoints": 139,
+          "joint_path_length_rad": 4.785737695141422,
+          "joint_total_travel_rad": [
+            2.018863100058675,
+            1.4968375096032491,
+            1.1904568593730191,
+            2.5312108345623967,
+            1.7685095967291664,
+            0.7736254566334821
+          ],
+          "parameterized_original_motion_s": 12.965075739097376,
+          "parameterized_candidate_motion_s": 12.965075739097376,
+          "candidate_node_count": 14,
+          "pass_through_boundaries": 9,
+          "timing_scope": "isolated original task; no physical settling, schedule or dynamics",
+          "start_q": [
+            -0.47196583922389146,
+            0.8343783254079506,
+            0.9348705761677213,
+            1.372343155545477,
+            -2.042762398591675,
+            -1.5707960539765196
+          ],
+          "end_q": [
+            -1.4059935944568993,
+            0.7365835202777677,
+            1.0676162671941873,
+            1.3373753717954044,
+            -2.9767899211830926,
+            -1.5708137753873876
+          ],
+          "native_validation_and_timing_wall_s": 0.011852599971462041,
+          "smoothing": {
+            "candidate_macros": [
+              {
+                "macro": "close_gate_approach",
+                "arm": "B",
+                "nodes": 14,
+                "group_kind": "local_route_task",
+                "task_ids": [
+                  "close_gate_approach"
+                ],
+                "attempts": [],
+                "accepted": false,
+                "reference_rest_to_rest_motion_duration_s": 10.879749918450205,
+                "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+                "reason": "Corner 1 is 114.617231 degrees; split/stop above 6"
+              }
+            ],
+            "accepted_macros": 0,
+            "accepted_cartesian_macros": 0,
+            "accepted_local_route_tasks": 0,
+            "blended_corners": 0,
+            "max_tcp_deviation_m": 0.0,
+            "max_orientation_error_rad": 0.0,
+            "collision_sampling_step_rad": 0.003,
+            "tcp_corridor_limit_m": 0.0005,
+            "orientation_limit_rad": 0.005,
+            "continuous_collision_guarantee": false
+          }
+        }
+      ],
+      "combined_parameterized_candidate_motion_s": 15.798717730701433,
+      "combined_parameterized_original_motion_s": 22.949891229230744,
+      "chain_boundary_max_joint_error_rad": 0.0,
+      "reconnect_present": true
+    }
+  ],
+  "source_sha256_after": {
+    "apex\\allocation.py": "7f1733a7a74a1d0fdd768990cb3dd338f299647f09b3176c96dd242f3f81a86a",
+    "apex\\blend_validation.py": "2837004384012a40b32e38b6a3a0792d11d9c4761c133217e0de3cbb960469b5",
+    "apex\\compile.py": "95cfa50ab940beaccbbcb863900e86c6348ecdf55edd3924ec93d3add9799ae2",
+    "apex\\controller.lua": "9a30d885056c1d975280e6156b6b4075a49e12f3c42b161d50eca22c8d93f4fc",
+    "apex\\curve.py": "ed669126e5c9948065d26693ec2bf60526d1304eeb0504284dec3ca0f202d69e",
+    "apex\\fast_interarm.lua": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563",
+    "apex\\fast_interarm.py": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03",
+    "apex\\geometry.py": "7901cc625f376cb56a652ac2c099a849ca43985789160d4c84ff4cfd3acb71c4",
+    "apex\\motion.py": "541539b308ebd5f4bd0714523ffdda7887a8dd48ebabe2e1c9d5a97e9c8af362",
+    "apex\\motion_backend.lua": "d215ec7a054804875619aa2af18ccace404feb07ee386c68a34080c7c65065f6",
+    "apex\\performance.py": "3b3f1dd76d3c69bb6954bd7b593dc11adcdb658a720ef727fc7d474472cbd7c7",
+    "apex\\pipeline.py": "e52262f5b3e989cd2d904c57f943caa8d2ff486701100c336316fad75594f43d",
+    "apex\\plots.py": "21fa7c8b4d3f7fe29ae5c4fdb1db2cbdc8ff2408f43774d0f18e2ac834ef9033",
+    "apex\\program.py": "61264d84aecf98bfa5dbee0dedcdb9ee1aa8aa1dfb7f212ca3b845e40165cfb3",
+    "apex\\runtime.py": "82d6035749a80bf8b3c208b73fc27763e99a62331651a62ddf479b7e6fb68709",
+    "apex\\scene.py": "a859f5c5ff1a501bcd4cb4e27ebfd05675f8f26aa7693f8b193f44cbf05316b5",
+    "apex\\smoothing.py": "d5a81a115f0dd4c9aa1b4b27f42dbe226e248e4607b823a18af10c5670756d01",
+    "apex\\tpg.py": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd",
+    "apex\\validation.py": "0881b1bd00472dad6e5456126048913ca6aab9b579d7e1cfbacf3b3ee90cfef2",
+    "apex\\__init__.py": "c6fad83e333c3351b9c044711f62a14785810c3dce779d77e97f061dc35588bf"
+  },
+  "source_changed_during_check": false,
+  "candidate_file_changed_during_check": false,
+  "wall_time_s": 12.894813399994746,
+  "completed": true
+}

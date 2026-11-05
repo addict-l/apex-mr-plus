@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "run_id": "20261104T163855Z-0804c434",
+  "status": "complete",
+  "started_at_utc": "2026-11-04T16:38:55.576516+00:00",
+  "arguments": {
+    "rebuild_scene": false,
+    "replan": true,
+    "reuse_reference": false,
+    "reuse_tpg": false,
+    "plan_only": false,
+    "no_video": false,
+    "span": 0.24,
+    "step": 0.07,
+    "rollout_step": 0.06,
+    "vmax": 0.6,
+    "amax": 1.2,
+    "jmax": 8.0,
+    "port": 23060,
+    "timeout_sim": 1800.0,
+    "timeout_wall": 1800.0
+  },
+  "stages": [
+    {
+      "name": "dynamic_source_scene",
+      "status": "passed",
+      "rebuilt": false,
+      "dynamic_bodies": 23,
+      "wall_time_s": 1.5320000000065193
+    },
+    {
+      "name": "geometry_qualified_ILP_and_RRTConnect_reference",
+      "status": "passed",
+      "reused": false,
+      "cache_reason": "reuse_not_requested_or_replan_forced",
+      "reference_task_count": 134,
+      "wall_time_s": 49.32800000003772
+    },
+    {
+      "name": "sampled_conflicts_and_multimodal_TPG",
+      "status": "passed",
+      "reused": false,
+      "cache_reason": "reuse_not_requested_or_replan_forced",
+      "node_count": 390,
+      "edge_count": 753,
+      "nominal_makespan_s": 311.91364408961545,
+      "continuous_passages": 285,
+      "wall_time_s": 86.96899999998277
+    },
+    {
+      "name": "full_nominal_geometry_and_waiting_pose_validation",
+      "status": "passed",
+      "tested_samples": 5589,
+      "wall_time_s": 24.98399999999674
+    },
+    {
+      "name": "embed_initial_state_and_dynamic_controller",
+      "status": "passed",
+      "wall_time_s": 8.686999999976251
+    },
+    {
+      "name": "actual_dynamic_execution",
+      "status": "passed",
+      "controller_success": true,
+      "failure": null,
+      "actual_makespan_s": 317.0800000000016,
+      "wall_time_s": 250.21900000004098
+    },
+    {
+      "name": "independent_actual_event_load_and_pose_audit",
+      "status": "passed",
+      "violation_count": 0,
+      "wall_time_s": 4.061999999976251
+    },
+    {
+      "name": "promote_only_audited_planned_scene",
+      "status": "passed",
+      "wall_time_s": 0.125
+    }
+  ],
+  "execution_performed": true,
+  "main_scene_promoted": true,
+  "continuous_collision_guarantee": false,
+  "grasp_and_connection_model": "idealized rigid grasp and permanent connection; measured rigid-body execution required",
+  "previous_execution_archived_to": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\apex\\history\\previous-20261104T163855Z-f90448",
+  "scene_signature": "0e7861dd22f4fd1c09530693651a8198676f2b1c2731005e4fd1a8a1ea0d4326",
+  "source_scene": "D:\\APEX_MR_Plus\\apex_mr_scene3\\scenes\\10_Scene3_Dynamic.ttt",
+  "planned_scene": "D:\\APEX_MR_Plus\\apex_mr_scene3\\scenes\\11_Scene3_APEX_Planned.ttt",
+  "input_fingerprint": {
+    "files": {
+      "apex/__init__.py": "c6fad83e333c3351b9c044711f62a14785810c3dce779d77e97f061dc35588bf",
+      "apex/allocation.py": "7f1733a7a74a1d0fdd768990cb3dd338f299647f09b3176c96dd242f3f81a86a",
+      "apex/blend_validation.py": "5713802b6c30decc3f6295b5bef58db53540b252c1887217112a46b6c6aa831f",
+      "apex/compile.py": "2722faca82e0efe0d04ada47ba1dea860018568a957c86d0b1bc4908ad9dcae9",
+      "apex/controller.lua": "9a30d885056c1d975280e6156b6b4075a49e12f3c42b161d50eca22c8d93f4fc",
+      "apex/curve.py": "ed669126e5c9948065d26693ec2bf60526d1304eeb0504284dec3ca0f202d69e",
+      "apex/fast_interarm.lua": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563",
+      "apex/fast_interarm.py": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03",
+      "apex/geometry.py": "7901cc625f376cb56a652ac2c099a849ca43985789160d4c84ff4cfd3acb71c4",
+      "apex/motion.py": "541539b308ebd5f4bd0714523ffdda7887a8dd48ebabe2e1c9d5a97e9c8af362",
+      "apex/motion_backend.lua": "d215ec7a054804875619aa2af18ccace404feb07ee386c68a34080c7c65065f6",
+      "apex/performance.py": "3b3f1dd76d3c69bb6954bd7b593dc11adcdb658a720ef727fc7d474472cbd7c7",
+      "apex/pipeline.py": "91133db88396a00c9c6ad56496608e2b1fda69159824ef2ed0c883c2a4821eff",
+      "apex/plots.py": "21fa7c8b4d3f7fe29ae5c4fdb1db2cbdc8ff2408f43774d0f18e2ac834ef9033",
+      "apex/program.py": "61264d84aecf98bfa5dbee0dedcdb9ee1aa8aa1dfb7f212ca3b845e40165cfb3",
+      "apex/runtime.py": "82d6035749a80bf8b3c208b73fc27763e99a62331651a62ddf479b7e6fb68709",
+      "apex/scene.py": "a859f5c5ff1a501bcd4cb4e27ebfd05675f8f26aa7693f8b193f44cbf05316b5",
+      "apex/smoothing.py": "b7e589373ed5da362c6725f124b881bf7f1bd76592b971fbd91e70323dd0ac31",
+      "apex/tpg.py": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd",
+      "apex/validation.py": "0881b1bd00472dad6e5456126048913ca6aab9b579d7e1cfbacf3b3ee90cfef2",
+      "backups/smooth_motion_baseline_20261104_01/baseline_manifest.json": "0966b4341991ad5b3fc010824c88a662a52d28f19efd5d53b74ed09fbc2adf82",
+      "backups/smooth_motion_baseline_20261104_01/config/apex_runtime.json": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+      "backups/smooth_motion_baseline_20261104_01/config/dynamic_homes.json": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+      "backups/smooth_motion_baseline_20261104_01/config/experiment_definition.json": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+      "backups/smooth_motion_baseline_20261104_01/config/scene_manifest.json": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/alloc_and_reference.json": "032ed30ed34715359e05f27124465f90ebf9cc1b90fa5d0c87a056239ccc4528",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/execution_validation.json": "d5c5bbd5a77dbb7c0a6bdc88af3e459aed14d4b17bd92893ffe72dd6e8980ae4",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/independent_final_audit.json": "25c49f1881cfea8d1540e8cd71c42c4d5f4a4c14f3c9f4b137ee079c2fafd0ab",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/pipeline_manifest.json": "44292631e7f11fd3a88a412eec25b60e05685b3ee75f477002453fa6bf2e4cf9",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/reference_tasks.json": "f59ba34c9d9082374ddb1432a2239cb479838aec3668d862c2f5de564bd90b3d",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/source_signature.json": "fae19dd8b3f1643863d791f15867b13aaff0a2715deb093b8728b06ab8d64aa6",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/summary.json": "e27a18c78062733c62037e14787ab2f288d98551601ec57ac6537a53eecf88f1",
+      "config/apex_runtime.json": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+      "config/dynamic_homes.json": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+      "config/experiment_definition.json": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+      "config/scene_manifest.json": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+      "requirements.txt": "cd7a2158bbface0a0a9cd8dda26ac5311a52bf06d1bb897944a44d4e6eee6d80",
+      "scenes/10_Scene3_Dynamic.ttt": "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04",
+      "src/build_scene.py": "3e55e9a4767b5f39ddaf6554ae4e7cd67ac994e39411c361b7080d805897e974",
+      "src/label_mesh.py": "42a32b740f939bf29c28537075ba66efbae1b1284899d2cf0af2b4d6f61b2ad2",
+      "src/lifecycle.py": "3a6f947b1282e59a54a2a5e4092b90c75cadcb032fd37dda116e0834b845004f",
+      "src/open_scene.py": "49ad3053a7345864cf7d2b1e52056b79ea62ef0c7e9019656de57533a2a0cf44",
+      "src/probe_scene3_execution.py": "01fbab9be5d2b0ee9d8605c049a7ec55dd955e5df304b030c14dcb81ac4c414f",
+      "src/probe_support_physics.py": "96d7a8d9cf7ed3e023d3d91075522212d6568a22270f5a13896874c906a61bd3",
+      "src/scene_ui.lua": "439dd1d6830f17aacbd7d1d0590d0ec3fda70e7874f90749fc35ce8aa65470e9",
+      "src/sim_connection.py": "1116bef2f65e21235b6935198e89b3d9cd0e805fce505ac50a70e5609b6f796b",
+      "src/verify_scene.py": "d22d78d70a38240408f1bb93c385763fac66854fc377ba594657756319b37eb0"
+    },
+    "sha256": "4e9e593827678065d9aebd1456e5e07ed68dabead141c5bd94c731cb4cfaf981"
+  },
+  "environment": {
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "pyzmq": "27.2.0",
+      "matplotlib": "3.10.8"
+    },
+    "coppeliasim_program_version": 41000
+  },
+  "planning_settings": {
+    "joint_conflict_step_rad": 0.07,
+    "node_span_rad": 0.24,
+    "rollout_step_s": 0.06,
+    "velocity_rad_s": 0.6,
+    "acceleration_rad_s2": 1.2,
+    "jerk_rad_s3": 8.0
+  },
+  "reference_signature": "bf7b2e49c0681ac433b21fced7dd5b6a67e5b3509c8ae3c466842664258cda19",
+  "planned_scene_sha256": "dd15a73951dae319dbd638b3ac72c3faeab22f504de959ac41aec12e5c423199"
+}

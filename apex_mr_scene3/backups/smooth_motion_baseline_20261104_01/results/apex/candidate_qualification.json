@@ -1,0 +1,328 @@
+[
+  {
+    "part": "TemporarySupport",
+    "candidate": "outer_front",
+    "feasible": true,
+    "evidence": {
+      "q_source": [
+        2.7696709458055477,
+        0.017575730055232483,
+        2.3588107698402245,
+        0.7652065121547388,
+        -0.37192167456412045,
+        3.141592301159198
+      ],
+      "q_goal": [
+        2.2455900838364684,
+        -0.2989166707482575,
+        -1.9699456197742717,
+        -0.8727300855103403,
+        -0.8960026735866939,
+        3.1415927162737622
+      ],
+      "grasp_offset": [
+        0.032,
+        0,
+        0.145
+      ],
+      "grasp_quaternion": [
+        0.0,
+        -0.7071067811865475,
+        0.0,
+        0.7071067811865476
+      ],
+      "cost": 21.075263336845943
+    },
+    "failure": null
+  },
+  {
+    "part": "TemporarySupport",
+    "candidate": "inner_pocket",
+    "feasible": false,
+    "evidence": null,
+    "failure": "qualify_TemporarySupport_goal: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.41999999999999993, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+  },
+  {
+    "part": "TemporarySupport",
+    "candidate": "weak_narrow",
+    "feasible": false,
+    "evidence": null,
+    "failure": "contact overlap below10mm"
+  },
+  {
+    "id": "supply_K1:A",
+    "task": "supply_K1",
+    "arm": "A",
+    "feasible": true,
+    "cost": 9.613241683047267,
+    "grasp_offset": [
+      0,
+      0,
+      0.03
+    ],
+    "grasp_quaternion": [
+      1.0,
+      0,
+      0,
+      0
+    ],
+    "endpoint_evidence": {
+      "q_source": [
+        -3.0213589677859694,
+        0.2571302149562051,
+        1.997419565410272,
+        -0.6837529664764974,
+        -1.5707969869038143,
+        -1.4505610712419659
+      ],
+      "q_goal": [
+        -2.3106172824226783,
+        1.0287742557392459,
+        0.6798956841425222,
+        -0.13787377835564574,
+        -1.570796309807768,
+        -0.7398209626923542
+      ],
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        1.0,
+        0,
+        0,
+        0
+      ],
+      "cost": 9.613241683047267
+    },
+    "failure": null
+  },
+  {
+    "id": "supply_K1:B",
+    "task": "supply_K1",
+    "arm": "B",
+    "feasible": false,
+    "cost": 0.0,
+    "grasp_offset": [
+      0,
+      0,
+      0.03
+    ],
+    "grasp_quaternion": [
+      0,
+      1.0,
+      0,
+      0
+    ],
+    "endpoint_evidence": null,
+    "failure": "qualify_K1_source: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.42100000000000115, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+  },
+  {
+    "id": "install_K1:A",
+    "task": "install_K1",
+    "arm": "A",
+    "feasible": false,
+    "cost": 0.0,
+    "grasp_offset": [
+      0.058,
+      0,
+      0
+    ],
+    "grasp_quaternion": [
+      -0.4999999999999999,
+      -0.5,
+      0.5,
+      0.5000000000000001
+    ],
+    "endpoint_evidence": null,
+    "failure": "qualify_K1_source: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.4159999999999986, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+  },
+  {
+    "id": "install_K1:B",
+    "task": "install_K1",
+    "arm": "B",
+    "feasible": true,
+    "cost": 15.129863249710922,
+    "grasp_offset": [
+      0.058,
+      0,
+      0
+    ],
+    "grasp_quaternion": [
+      -0.4999999999999999,
+      -0.5,
+      0.5,
+      0.5000000000000001
+    ],
+    "endpoint_evidence": {
+      "q_source": [
+        -0.9136797508618444,
+        0.9054986996863632,
+        1.2584752690401781,
+        0.9776186047030228,
+        2.2279128531125205,
+        -1.5707963043553836
+      ],
+      "q_goal": [
+        -2.393438005490884,
+        -0.3452635335361262,
+        2.4300805847251343,
+        1.0567755698121402,
+        0.748154716276809,
+        -1.5707963009813064
+      ],
+      "grasp_offset": [
+        0.058,
+        0,
+        0
+      ],
+      "grasp_quaternion": [
+        -0.4999999999999999,
+        -0.5,
+        0.5,
+        0.5000000000000001
+      ],
+      "cost": 15.129863249710922
+    },
+    "failure": null
+  },
+  {
+    "id": "supply_K2:A",
+    "task": "supply_K2",
+    "arm": "A",
+    "feasible": true,
+    "cost": 8.657686141943833,
+    "grasp_offset": [
+      0,
+      0,
+      0.03
+    ],
+    "grasp_quaternion": [
+      1.0,
+      0,
+      0,
+      0
+    ],
+    "endpoint_evidence": {
+      "q_source": [
+        -2.752152167123429,
+        0.3884669098387358,
+        1.8028715844718335,
+        -0.6205428032716631,
+        -1.5707961632230114,
+        -1.181355087625048
+      ],
+      "q_goal": [
+        -2.310617289959585,
+        1.0277591677074691,
+        0.67671445789318,
+        -0.1336774761774598,
+        -1.5707963085755499,
+        -0.7398209706608992
+      ],
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        1.0,
+        0,
+        0,
+        0
+      ],
+      "cost": 8.657686141943833
+    },
+    "failure": null
+  },
+  {
+    "id": "supply_K2:B",
+    "task": "supply_K2",
+    "arm": "B",
+    "feasible": false,
+    "cost": 0.0,
+    "grasp_offset": [
+      0,
+      0,
+      0.03
+    ],
+    "grasp_quaternion": [
+      0,
+      1.0,
+      0,
+      0
+    ],
+    "endpoint_evidence": null,
+    "failure": "qualify_K2_source: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.4169999999999998, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+  },
+  {
+    "id": "install_K2:A",
+    "task": "install_K2",
+    "arm": "A",
+    "feasible": false,
+    "cost": 0.0,
+    "grasp_offset": [
+      0,
+      0,
+      0.03
+    ],
+    "grasp_quaternion": [
+      1.0,
+      0,
+      0,
+      0
+    ],
+    "endpoint_evidence": null,
+    "failure": "qualify_K2_goal: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.4220000000000006, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+  },
+  {
+    "id": "install_K2:B",
+    "task": "install_K2",
+    "arm": "B",
+    "feasible": true,
+    "cost": 10.27067347342729,
+    "grasp_offset": [
+      0,
+      0,
+      0.03
+    ],
+    "grasp_quaternion": [
+      0,
+      1.0,
+      0,
+      0
+    ],
+    "endpoint_evidence": {
+      "q_source": [
+        -1.089165030444003,
+        1.0277611626793945,
+        0.6767103508639429,
+        -0.1336754222898634,
+        -1.5707963025127918,
+        0.48163152170785584
+      ],
+      "q_goal": [
+        -1.9604801591016945,
+        -0.07892693731605073,
+        1.5689940178875459,
+        0.0807294841230244,
+        -1.5707963187275116,
+        -0.3896837751178593
+      ],
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        0,
+        1.0,
+        0,
+        0
+      ],
+      "cost": 10.27067347342729
+    },
+    "failure": null
+  }
+]

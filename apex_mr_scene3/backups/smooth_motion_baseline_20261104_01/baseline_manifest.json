@@ -1,0 +1,338 @@
+{
+  "baseline_run_id": "20261103T121253Z-d0d0c68e",
+  "actual_makespan_s": 455.6,
+  "files": {
+    "apex_mr_scene3.ttt": {
+      "bytes": 15463063,
+      "sha256": "824fd518607aaab0734684ea71bcb7a5805a932a9df31b3d549d2a5561ed6527"
+    },
+    "Build_Scene3.cmd": {
+      "bytes": 316,
+      "sha256": "cb7ced64dcbe645920b455de88d58ab692438be46b75e2086accb8f536520e53"
+    },
+    "Build_Scene3_Preview.cmd": {
+      "bytes": 398,
+      "sha256": "9a12d10813693da81d2da13755ed4a96d6478043c273ba5729529c3f7df24fc6"
+    },
+    "Open_Scene3.cmd": {
+      "bytes": 80,
+      "sha256": "f2d498e30e05772e1f21bfc2a92c544bed5f8b1452c130666d3e8e8ca7b6fb58"
+    },
+    "Open_Scene3_Preview.cmd": {
+      "bytes": 90,
+      "sha256": "c1deada831820d1eb8600d6f3d488fa387c89e147ec96e5afcd9d4875d1a70b2"
+    },
+    "Plan_Scene3.cmd": {
+      "bytes": 275,
+      "sha256": "650565fbb1674f905f76d16fd7e9649115f6a03160af702f4f1865f8f08b593b"
+    },
+    "Plan_Scene3_Abstract.cmd": {
+      "bytes": 183,
+      "sha256": "a56a389e142558fd100ae11270b9731f9e967403a0c59c9a02aae29a9adea6ea"
+    },
+    "README.md": {
+      "bytes": 23045,
+      "sha256": "812b7ef7e84ab72648d29d5d9c7d243d7a5dbb55e23ce2d49927ed32116f902d"
+    },
+    "Replan_Scene3_APEX.cmd": {
+      "bytes": 682,
+      "sha256": "49390b26bf136076a937db39b2820148abd7694a25aa762db337ef457c23c7d9"
+    },
+    "requirements.txt": {
+      "bytes": 56,
+      "sha256": "cd7a2158bbface0a0a9cd8dda26ac5311a52bf06d1bb897944a44d4e6eee6d80"
+    },
+    "Run_Scene3_APEX.cmd": {
+      "bytes": 666,
+      "sha256": "8bc5e2ec76bb582b36472f7277410dc2311ebe0aed8edf6711bd4acba86a719c"
+    },
+    "apex/allocation.py": {
+      "bytes": 22181,
+      "sha256": "7f1733a7a74a1d0fdd768990cb3dd338f299647f09b3176c96dd242f3f81a86a"
+    },
+    "apex/compile.py": {
+      "bytes": 35729,
+      "sha256": "2087e34d269e098648f77973e52d781c215b168b3a86f2d42d1ca09c0b6bec9a"
+    },
+    "apex/controller.lua": {
+      "bytes": 32035,
+      "sha256": "b938d092e5393538e45eb6c6043f8924ef9379df4aa213fb1ad05ffa0a36a06b"
+    },
+    "apex/fast_interarm.lua": {
+      "bytes": 16889,
+      "sha256": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563"
+    },
+    "apex/fast_interarm.py": {
+      "bytes": 8516,
+      "sha256": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03"
+    },
+    "apex/geometry.py": {
+      "bytes": 25302,
+      "sha256": "b0032d29c4a3257d1c601a582ca54f4240a7a3ef52f50ba2c92b8bfa1437213e"
+    },
+    "apex/motion.py": {
+      "bytes": 7779,
+      "sha256": "cd8487302f52cfdc180056d25c623669ffa7a4c20418f508b63ac75fd71e6d36"
+    },
+    "apex/motion_backend.lua": {
+      "bytes": 33905,
+      "sha256": "ac115a5b747e6b420bc3fa7f782b8c5831b7fa3e412c44bfc7bed9ae44482da9"
+    },
+    "apex/pipeline.py": {
+      "bytes": 22901,
+      "sha256": "f271fa29258333c0335b05b39d1b777d193c4e2abbfa6af4c89c6e2034f9870e"
+    },
+    "apex/plots.py": {
+      "bytes": 12455,
+      "sha256": "21fa7c8b4d3f7fe29ae5c4fdb1db2cbdc8ff2408f43774d0f18e2ac834ef9033"
+    },
+    "apex/program.py": {
+      "bytes": 3715,
+      "sha256": "fb93a9747a167e836557efe1e6c1a87f675a80ac3931ec26eca04998d76e8856"
+    },
+    "apex/runtime.py": {
+      "bytes": 7762,
+      "sha256": "82d6035749a80bf8b3c208b73fc27763e99a62331651a62ddf479b7e6fb68709"
+    },
+    "apex/scene.py": {
+      "bytes": 19063,
+      "sha256": "a859f5c5ff1a501bcd4cb4e27ebfd05675f8f26aa7693f8b193f44cbf05316b5"
+    },
+    "apex/tpg.py": {
+      "bytes": 20453,
+      "sha256": "02c849b9212a47056169972bf9ac7ae192a4cfffc4de6b8bfff42c2741e10834"
+    },
+    "apex/validation.py": {
+      "bytes": 26298,
+      "sha256": "0881b1bd00472dad6e5456126048913ca6aab9b579d7e1cfbacf3b3ee90cfef2"
+    },
+    "apex/__init__.py": {
+      "bytes": 77,
+      "sha256": "c6fad83e333c3351b9c044711f62a14785810c3dce779d77e97f061dc35588bf"
+    },
+    "config/apex_runtime.json": {
+      "bytes": 114,
+      "sha256": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f"
+    },
+    "config/dynamic_homes.json": {
+      "bytes": 607,
+      "sha256": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a"
+    },
+    "config/experiment_definition.json": {
+      "bytes": 7753,
+      "sha256": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10"
+    },
+    "config/scene_manifest.json": {
+      "bytes": 7562,
+      "sha256": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6"
+    },
+    "results/apex/allocation.json": {
+      "bytes": 20149,
+      "sha256": "43f73ea0ec62908f897985ca3894b8635f64399c46506e47d6a8051217166c42"
+    },
+    "results/apex/allocation_problem.json": {
+      "bytes": 16400,
+      "sha256": "af4ac3b8104f5216d5edd7f8659ce4f74620b08d8e41eee5e9f89ade4a3a7d98"
+    },
+    "results/apex/alloc_and_reference.json": {
+      "bytes": 7800206,
+      "sha256": "032ed30ed34715359e05f27124465f90ebf9cc1b90fa5d0c87a056239ccc4528"
+    },
+    "results/apex/candidate_qualification.json": {
+      "bytes": 8460,
+      "sha256": "c43068e65844c7d073c7a321c57aac777196c37a6e2b066ba26c913536794564"
+    },
+    "results/apex/completed_dynamic_scene.png": {
+      "bytes": 639659,
+      "sha256": "2c510c9f7b7c67326de115facac0ff53456977240f42070d960db91a5bde35c5"
+    },
+    "results/apex/delivery.json": {
+      "bytes": 675,
+      "sha256": "2ea89ff16c9468b19c47dd27cdf56df8781e7dee0b1f03316f0ba34b8e97e24c"
+    },
+    "results/apex/execution.json": {
+      "bytes": 38699184,
+      "sha256": "314e6e0c5a1575f5db0bd9f228226f4ebda72b6efb7e24d7031dc2212d11cf3e"
+    },
+    "results/apex/execution_validation.json": {
+      "bytes": 61033,
+      "sha256": "d5c5bbd5a77dbb7c0a6bdc88af3e459aed14d4b17bd92893ffe72dd6e8980ae4"
+    },
+    "results/apex/geometry_statistics.json": {
+      "bytes": 362,
+      "sha256": "8ae74921d86ae1f5809dfa0f39501a0cd33319cfae5555b3f5732024163ef3df"
+    },
+    "results/apex/grasp_qualification_probe.json": {
+      "bytes": 1315332,
+      "sha256": "43bb7fdaffd4e66c405672f6273bf7d1f8b5e8ef23b3c0e259f9c5e38744c648"
+    },
+    "results/apex/independent_final_audit.json": {
+      "bytes": 2100,
+      "sha256": "25c49f1881cfea8d1540e8cd71c42c4d5f4a4c14f3c9f4b137ee079c2fafd0ab"
+    },
+    "results/apex/initial_dynamic_scene.png": {
+      "bytes": 645329,
+      "sha256": "6bd0a0410ce184572b714d768edd77ffa2c11a1edb1511d79e0b863946efb075"
+    },
+    "results/apex/initial_support_physics.json": {
+      "bytes": 167451,
+      "sha256": "ed8842b515900034ea13d9538b6cb518fa659bac656750d4de566049aba9d6a4"
+    },
+    "results/apex/internal_tool_contact_probe.json": {
+      "bytes": 233169,
+      "sha256": "c81aed504c011a148c5c4dded4ec0a24083fbf45a9429c569a0e246a60527d2c"
+    },
+    "results/apex/motion_stats.json": {
+      "bytes": 6178875,
+      "sha256": "1e65f84c32c8b03a68fad7843a77cbc1bd5abcccfd9a3bd69f918dfe789206b4"
+    },
+    "results/apex/nominal_geometry_validation.json": {
+      "bytes": 7953,
+      "sha256": "4c56460781a2c2ed14cb051d04df6d9754bb909981f9ffbd5e764acac62ef215"
+    },
+    "results/apex/permanent_support_verified.png": {
+      "bytes": 642337,
+      "sha256": "e674900dda5bcff53cec1fcd1ae8b0ad72bb1f3cc820c765547adb93ecd7589b"
+    },
+    "results/apex/pipeline_manifest.json": {
+      "bytes": 6557,
+      "sha256": "44292631e7f11fd3a88a412eec25b60e05685b3ee75f477002453fa6bf2e4cf9"
+    },
+    "results/apex/planning_failures.json": {
+      "bytes": 64700,
+      "sha256": "8bd7864689f30348d65d1a9a4b900eb5f3bb195fae062fca97ea5ebc5090b284"
+    },
+    "results/apex/problem.json": {
+      "bytes": 2100,
+      "sha256": "249cc350aa32e904aa4676004e628365ce3a4da320aaa0d169671bb6dc0e56b0"
+    },
+    "results/apex/qualified_homes.json": {
+      "bytes": 607,
+      "sha256": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a"
+    },
+    "results/apex/reference_tasks.json": {
+      "bytes": 951390,
+      "sha256": "f59ba34c9d9082374ddb1432a2239cb479838aec3668d862c2f5de564bd90b3d"
+    },
+    "results/apex/reference_tasks_partial.json": {
+      "bytes": 1037502,
+      "sha256": "4b6ff770f8d122a42b2375e113af87285fe7ff49dce7a7b71bb9458d67a2cec5"
+    },
+    "results/apex/rigid_bodies.json": {
+      "bytes": 11614,
+      "sha256": "d96ac5ce26807999413095c97df680abf19f2b5a71e412365d484374c53412e0"
+    },
+    "results/apex/rollout_verification.json": {
+      "bytes": 7951,
+      "sha256": "24caf162b3ceb392f5eede76ae43f6859dd79529cf5bfe0dca2d5ef920411cbe"
+    },
+    "results/apex/scene3_actual_dynamics.png": {
+      "bytes": 205559,
+      "sha256": "563f8e0af34f187f335ea5e51dde73b32de7408cdd12cb5e3f76dd5cd8a8922f"
+    },
+    "results/apex/scene3_actual_dynamics.svg": {
+      "bytes": 286761,
+      "sha256": "09af3cda0a8d5cf3a78c1a393131e20091f214148502188c24f80e79065af05e"
+    },
+    "results/apex/scene3_execution_timeline.png": {
+      "bytes": 151133,
+      "sha256": "74c03966ad5201dd1053a8475028c46abeb11304620cc0da8bb9d7ab1501861a"
+    },
+    "results/apex/scene3_execution_timeline.svg": {
+      "bytes": 257811,
+      "sha256": "6b53ad7d99b44999f34e6b919636813974c45d37281332fd43b41455bad45db6"
+    },
+    "results/apex/scene3_tpg.png": {
+      "bytes": 442564,
+      "sha256": "3b32daaace0c7ed88a986ae941e2ccde20daff760b8b1219bdc53244feef8c91"
+    },
+    "results/apex/scene3_tpg.svg": {
+      "bytes": 271079,
+      "sha256": "ffc688fb3cbf88535b8c006631c06adda45821f2826378dc91848f561d9195b6"
+    },
+    "results/apex/sequential_task_graph.json": {
+      "bytes": 1145625,
+      "sha256": "f9a09b26acfd6f25215bd7807b3c7c3221e72d614bb35962819877b03141d3d3"
+    },
+    "results/apex/source_signature.json": {
+      "bytes": 11517,
+      "sha256": "fae19dd8b3f1643863d791f15867b13aaff0a2715deb093b8728b06ab8d64aa6"
+    },
+    "results/apex/summary.json": {
+      "bytes": 793,
+      "sha256": "e27a18c78062733c62037e14787ab2f288d98551601ec57ac6537a53eecf88f1"
+    },
+    "results/apex/support_load_transfer.png": {
+      "bytes": 640932,
+      "sha256": "4be247564dd0fda8918646bad4cdf6262a93c4899002919349bd9a279665730c"
+    },
+    "results/apex/tpg.json": {
+      "bytes": 10338225,
+      "sha256": "d981f1c901ed66763841068b67ebad6e20895c48aa53a3026812b17389fe0b06"
+    },
+    "scenes/10_Scene3_Dynamic.ttt": {
+      "bytes": 4472439,
+      "sha256": "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04"
+    },
+    "scenes/11_Scene3_APEX_Planned.ttt": {
+      "bytes": 15463063,
+      "sha256": "824fd518607aaab0734684ea71bcb7a5805a932a9df31b3d549d2a5561ed6527"
+    },
+    "src/build_scene.py": {
+      "bytes": 16310,
+      "sha256": "3e55e9a4767b5f39ddaf6554ae4e7cd67ac994e39411c361b7080d805897e974"
+    },
+    "src/label_mesh.py": {
+      "bytes": 2002,
+      "sha256": "42a32b740f939bf29c28537075ba66efbae1b1284899d2cf0af2b4d6f61b2ad2"
+    },
+    "src/lifecycle.py": {
+      "bytes": 18015,
+      "sha256": "3a6f947b1282e59a54a2a5e4092b90c75cadcb032fd37dda116e0834b845004f"
+    },
+    "src/open_scene.py": {
+      "bytes": 1751,
+      "sha256": "49ad3053a7345864cf7d2b1e52056b79ea62ef0c7e9019656de57533a2a0cf44"
+    },
+    "src/probe_scene3_execution.py": {
+      "bytes": 15219,
+      "sha256": "01fbab9be5d2b0ee9d8605c049a7ec55dd955e5df304b030c14dcb81ac4c414f"
+    },
+    "src/probe_support_physics.py": {
+      "bytes": 6469,
+      "sha256": "96d7a8d9cf7ed3e023d3d91075522212d6568a22270f5a13896874c906a61bd3"
+    },
+    "src/scene_ui.lua": {
+      "bytes": 3647,
+      "sha256": "439dd1d6830f17aacbd7d1d0590d0ec3fda70e7874f90749fc35ce8aa65470e9"
+    },
+    "src/sim_connection.py": {
+      "bytes": 9412,
+      "sha256": "1116bef2f65e21235b6935198e89b3d9cd0e805fce505ac50a70e5609b6f796b"
+    },
+    "src/verify_scene.py": {
+      "bytes": 4604,
+      "sha256": "d22d78d70a38240408f1bb93c385763fac66854fc377ba594657756319b37eb0"
+    },
+    "tests/test_apex_allocation.py": {
+      "bytes": 6867,
+      "sha256": "b2a53b2819d4bb48ba3a1930a3719e5642a4608790908db010c0a328acca03a7"
+    },
+    "tests/test_apex_contacts.py": {
+      "bytes": 6161,
+      "sha256": "1df72557b6ef9169a82a6913ea3d970c1d120ea5a3b7ee5dc15774014ac5fabb"
+    },
+    "tests/test_apex_ik_hints.py": {
+      "bytes": 8026,
+      "sha256": "d208a6df0b087f46e487052b0820d11bc971e4b603ea3b70defc0b22c92e07bb"
+    },
+    "tests/test_apex_tpg.py": {
+      "bytes": 28789,
+      "sha256": "6433d5c21a7c63d625449825e8db3e3bc8976c147c7e24596801082e93c419c5"
+    },
+    "tests/test_lifecycle.py": {
+      "bytes": 4498,
+      "sha256": "fcd57f505cc1eb129f7e26262505b557056bbeaa8bd8aff7477a7e2d30a6bf6c"
+    }
+  }
+}

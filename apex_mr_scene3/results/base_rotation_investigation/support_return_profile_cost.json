@@ -1,0 +1,164 @@
+{
+  "candidate_file": "results\\base_rotation_investigation\\support_return_assembled_candidates.json",
+  "candidate_sha256": "3ebb4993756250ff7427c9b39d0d674c81f407b64296b48f6c7b040f55162939",
+  "source_run_id": "20261104T163855Z-0804c434",
+  "scope": "isolated window production parameterization, excludes servo settling and asynchronous schedule",
+  "actual_pending": true,
+  "full_TPG_certificate_pending": true,
+  "candidates": [
+    {
+      "label": "upper_incoming_side_release_clear_minus3_56",
+      "task_ids": [
+        "return_support_approach",
+        "return_support_contact",
+        "return_support",
+        "return_support_retreat",
+        "return_support_retreat_contact_clear",
+        "pick_gate_approach"
+      ],
+      "candidate_duration_by_task_s": {
+        "return_support_approach": 20.125670988318415,
+        "return_support_contact": 6.7037714885092266,
+        "return_support": 0.3,
+        "return_support_retreat": 11.591855266440364,
+        "return_support_retreat_contact_clear": 0.08,
+        "pick_gate_approach": 12.594648282351356
+      },
+      "accepted_baseline_duration_by_task_s": {
+        "return_support_approach": 12.07927041663268,
+        "return_support_contact": 6.7037714885092266,
+        "return_support": 0.3,
+        "return_support_retreat": 6.7037679952255855,
+        "return_support_retreat_contact_clear": 0.08,
+        "pick_gate_approach": 10.130114764672898
+      },
+      "candidate_window_motion_and_dwell_s": 51.39594602561936,
+      "accepted_baseline_window_motion_and_dwell_s": 35.99692466504039,
+      "candidate_without_C2_motion_and_dwell_s": 51.39594602561938,
+      "smoothing": {
+        "candidate_macros": [
+          {
+            "macro": "return_support_approach",
+            "arm": "B",
+            "nodes": 18,
+            "group_kind": "local_route_task",
+            "task_ids": [
+              "return_support_approach"
+            ],
+            "attempts": [],
+            "accepted": false,
+            "reference_rest_to_rest_motion_duration_s": 14.052592901953997,
+            "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+            "reason": "Corner 1 is 76.1439104 degrees; split/stop above 6"
+          },
+          {
+            "macro": "return_support_contact",
+            "arm": "B",
+            "nodes": 2,
+            "group_kind": "local_route_task",
+            "task_ids": [
+              "return_support_contact"
+            ],
+            "attempts": [],
+            "accepted": false,
+            "reference_rest_to_rest_motion_duration_s": 6.7037714885092266,
+            "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+            "reason": "no_small_angle_corner_to_blend"
+          },
+          {
+            "macro": "return_support_retreat",
+            "arm": "B",
+            "nodes": 3,
+            "group_kind": "local_route_task",
+            "task_ids": [
+              "return_support_retreat"
+            ],
+            "attempts": [],
+            "accepted": false,
+            "reference_rest_to_rest_motion_duration_s": 11.591855266440366,
+            "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+            "reason": "Corner 2 is 114.949002 degrees; split/stop above 6"
+          },
+          {
+            "macro": "pick_gate_approach",
+            "arm": "B",
+            "nodes": 15,
+            "group_kind": "local_route_task",
+            "task_ids": [
+              "pick_gate_approach"
+            ],
+            "attempts": [],
+            "accepted": false,
+            "reference_rest_to_rest_motion_duration_s": 10.574060494088966,
+            "timing_scope": "same path knots and joint limits; excludes physical dwell, servo settling and scheduling",
+            "reason": "Corner 1 is 44.1434437 degrees; split/stop above 6"
+          }
+        ],
+        "accepted_macros": 0,
+        "accepted_cartesian_macros": 0,
+        "accepted_local_route_tasks": 0,
+        "blended_corners": 0,
+        "max_tcp_deviation_m": 0.0,
+        "max_orientation_error_rad": 0.0,
+        "collision_sampling_step_rad": 0.003,
+        "tcp_corridor_limit_m": 0.0005,
+        "orientation_limit_rad": 0.005,
+        "continuous_collision_guarantee": false
+      },
+      "parameterization": {
+        "type": "jerk_bounded_continuous_quintic_and_C2_Bezier",
+        "max_velocity_rad_s": 0.6,
+        "max_acceleration_rad_s2": 1.2,
+        "max_jerk_rad_s3": 8.0,
+        "continuous_runs": [
+          {
+            "id": "return_support_approach::p0004",
+            "node_count": 2,
+            "duration_s": 1.5161858463232967
+          },
+          {
+            "id": "return_support_approach::p0009",
+            "node_count": 5,
+            "duration_s": 3.6681307005134234
+          },
+          {
+            "id": "return_support_approach::p0015",
+            "node_count": 3,
+            "duration_s": 1.5862765804035166
+          },
+          {
+            "id": "return_support_contact::p0000",
+            "node_count": 2,
+            "duration_s": 6.7037714885092266
+          },
+          {
+            "id": "pick_gate_approach::p0000",
+            "node_count": 3,
+            "duration_s": 2.20015463269638
+          },
+          {
+            "id": "pick_gate_approach::p0004",
+            "node_count": 6,
+            "duration_s": 4.363711482810988
+          },
+          {
+            "id": "pick_gate_approach::p0011",
+            "node_count": 4,
+            "duration_s": 2.5002951388506376
+          }
+        ],
+        "pass_through_boundaries": 18,
+        "original_node_ids_and_edges_preserved": true,
+        "original_geometric_paths_unchanged": true,
+        "C2_blended_macros": 0,
+        "skill_dwell_counted_once": true,
+        "extra_runtime_endpoint_settling": "required endpoints only"
+      },
+      "original_candidate_native_checks": "recorded by source producer; this quick-check independently validates every C2 candidate",
+      "actual_pending": true
+    }
+  ],
+  "completed": true,
+  "wall_time_s": 7.235762900032569,
+  "candidate_file_changed_during_check": false
+}

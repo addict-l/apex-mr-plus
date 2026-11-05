@@ -1,0 +1,7 @@
+numpy
+scipy
+Pillow
+pyzmq
+cbor2
+matplotlib
+opencv-python

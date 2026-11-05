@@ -1,0 +1,95 @@
+{
+  "status": "running",
+  "attempts": [
+    {
+      "label": "high_to_park",
+      "margin": 0.2,
+      "result": {
+        "ok": false,
+        "error": "No exact collision-free solution within budget",
+        "problem": {
+          "reason": "block_robot_collision:TemporarySupport:B",
+          "pair": [
+            "/B_UR5/B_Finger_neg",
+            "/SupportContactPad"
+          ]
+        },
+        "stats": {
+          "shortcut_wall_time_s": 0,
+          "reference_candidates": {},
+          "wall_time_s": 4.9639999999999995,
+          "collision_check_step_rad": 0.0018042590595015,
+          "joint_bounds": [
+            [
+              -3.713514651381715,
+              -3.3135144592463432
+            ],
+            [
+              -0.40562295612251875,
+              -0.002673704153316192
+            ],
+            [
+              1.2084765414691174,
+              2.3500194450076743
+            ],
+            [
+              0.9942473926523683,
+              2.138739452321346
+            ],
+            [
+              -0.5719219410666658,
+              -0.17192175247674418
+            ],
+            [
+              2.941592360319838,
+              3.3415924531770926
+            ]
+          ],
+          "joint_bound_margin": 0.2,
+          "planner_reused": false,
+          "direct_valid": false,
+          "algorithm": "RRTConnect",
+          "requested_algorithm": "RRTConnect",
+          "ompl_solve_called": true,
+          "solve_budget_s": 3.0,
+          "shortcut_collision_checks": 0,
+          "direct_rejection": {
+            "reason": "block_robot_collision:TemporarySupport:B",
+            "pair": [
+              "/B_UR5/B_Finger_neg",
+              "/SupportContactPad"
+            ]
+          },
+          "direct_collision_checks": 506,
+          "planner_after": {
+            "edges": 5.0,
+            "vertices": 7.0
+          },
+          "backend": "simOMPL",
+          "roadmap_reused": false,
+          "shortcut_trials": 0,
+          "candidates": [
+            {
+              "planner": {
+                "edges": 5.0,
+                "vertices": 7.0
+              },
+              "exact": false,
+              "attempt": 1
+            }
+          ],
+          "search_wall_time_s": 3.911999999999999,
+          "solve_collision_checks": 2112,
+          "direct_attempted": true,
+          "planner_before": {},
+          "shortcut_accepted": 0,
+          "collision_checks": 2620,
+          "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+        },
+        "algorithm": "RRTConnect"
+      },
+      "base_deg": null
+    }
+  ],
+  "candidates": []
+}

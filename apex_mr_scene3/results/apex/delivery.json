@@ -1,0 +1,11 @@
+{
+  "run_id": "20261105T121655Z-b7a8b9ea",
+  "main_scene": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex_mr_scene3.ttt",
+  "main_scene_sha256": "7cceb742dd35e9ff3c1a7b39cabed9aa3955c4eb0c90750e77eaedd05486e0a6",
+  "source_scene_sha256": "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04",
+  "scene_signature": "1901edca789ad117b053372c92d7524b88b658090cbc141ba95837ab7263c24f",
+  "reference_signature": "cc408c38f60fd6823e1716399c97551810ca5d2620ce86df5d93afb6259f9392",
+  "actual_execution_audited": true,
+  "initial_state_and_embedded_TPG": true,
+  "execution_validation": "D:\\APEX_MR_Plus\\apex_mr_scene3\\results\\apex\\execution_validation.json"
+}

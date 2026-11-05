@@ -1,0 +1,121 @@
+{
+  "project": "apex_mr_scene3",
+  "version": "design-preview-and-symbolic-lifecycle-0.1",
+  "title_zh": "临时支撑与机械臂释放：可拆支撑的双 UR5 连桥装配",
+  "units": {"length": "m", "mass": "kg", "force": "N", "moment": "N*m"},
+  "status": {
+    "scene": "static_design_preview_with_five_snapshots",
+    "planner": "finite_support_candidate_and_removal_order_enumeration",
+    "motion_planning": "pending",
+    "dynamic_execution": "pending",
+    "snapshot_switching_is_execution": false,
+    "scene1_results_are_scene3_evidence": false
+  },
+  "research_question_zh": "如何联合选择临时支撑位置、机械臂释放时机与拆除顺序，在持续承载约束下完成供料和装配，并确保支撑最终可回收？",
+  "architecture_reference": {
+    "name": "APEX-MR",
+    "source": "https://arxiv.org/html/2503.15836v2",
+    "intended_pipeline": ["task_and_support_mode_allocation", "sequential_reference_motion", "RRT_Connect", "multimodal_TPG", "event_based_execution"],
+    "implemented_scope": "Scene definition and symbolic lifecycle enumeration only; not a reproduction of the complete APEX-MR planner."
+  },
+  "geometry": {
+    "table_top_z": 0.76,
+    "baseplate_top_z": 0.772,
+    "arm_bases": {"A": [-0.70, 0.13, 0.783], "B": [0.70, 0.13, 0.783]},
+    "beam": {"center": [0.04, 0.20, 1.032], "size": [0.52, 0.16, 0.04], "mass": 0.45},
+    "left_provisional_connection": {"x": -0.22, "allowable_moment": 0.35},
+    "permanent_tower": {"x": 0.24},
+    "K1": {"size": [0.12, 0.14, 0.08], "goal_center_z": 0.972, "insertion_direction": "horizontal_from_side", "source_xy": [-0.53, -0.36]},
+    "K2": {"role": "bridge_lock", "source_xy": [-0.38, -0.36]},
+    "shared_buffer_xy": [0.0, -0.36],
+    "gate_center_y": 0.105,
+    "gate_width": 0.174,
+    "gate_side_clearance": 0.002,
+    "side_wall_x": [-0.035, 0.155],
+    "rear_wall_y": 0.43,
+    "reachability_status": "A-only supply is an intended layout constraint; full grasp-aware IK and collision qualification are pending."
+  },
+  "support_tool": {
+    "type": "counterweighted_C_jack_with_retractable_shoe",
+    "storage_reference": [0.48, 0.43, 0.760],
+    "foot_size": [0.14, 0.28, 0.012],
+    "ballast_mass": 2.0,
+    "shoe_size": [0.10, 0.22, 0.012],
+    "shoe_local_y_offset": 0.10,
+    "unload_retraction": 0.008,
+    "minimum_projected_overlap": 0.010,
+    "mechanical_design_status": "conceptual_tool; gripping, actuation, tipping and extraction loads require validation"
+  },
+  "nominal_load_case": {
+    "gravity": 9.81,
+    "insertion_force": 8.0,
+    "insertion_x": 0.24,
+    "support_x": 0.06,
+    "beam_gravity_moment": 1.14777,
+    "insertion_moment": 3.68,
+    "support_reaction_estimate": 17.242035714285713,
+    "design_factor": 1.5,
+    "design_reaction_requirement": 25.86305357142857,
+    "assumptions": [
+      "Quasi-static vertical load balance about the left provisional connection.",
+      "Conservative support reaction ignores moment carried by the provisional connection.",
+      "Beam gravity alone exceeds the stated provisional connection allowable moment.",
+      "These calculations are design inputs, not measured force or dynamic validation."
+    ]
+  },
+  "support_candidates": [
+    {"id": "outer_front", "base_reference": [0.06, -0.05, 0.772], "yaw_degrees": 0, "intent": "retain_front_extraction_corridor_after_gate_closure"},
+    {"id": "inner_pocket", "base_reference": [0.06, 0.26, 0.772], "yaw_degrees": 180, "intent": "allow_removal_before_gate; model_final_cage_as_blocking_removal_after_gate"},
+    {"id": "weak_narrow", "base_reference": [0.06, -0.085, 0.772], "yaw_degrees": 0, "projected_overlap": 0.005, "intent": "reject_insufficient_contact_overlap"}
+  ],
+  "symbolic_planning": {
+    "candidate_set": ["outer_front", "inner_pocket", "weak_narrow"],
+    "removal_orders": ["before_gate", "after_gate"],
+    "selection": "minimum_assumed_cost_among_candidates_passing_current_symbolic_checks",
+    "cost_semantics": "assumed_nominal_cost_not_measured_time",
+    "optimality_scope": "finite_enumerated_candidates_only",
+    "inner_before_gate_must_be_considered": true,
+    "full_extraction_path_validated": false
+  },
+  "goal_conditions": [
+    "K1 and K2 are installed and permanent connections are valid.",
+    "Permanent structure supports the required load without arm or temporary support.",
+    "Temporary support has been unloaded, removed and returned to storage.",
+    "Front gate is closed and no support tool remains trapped inside.",
+    "Both arms are empty and can safely leave the assembly area."
+  ],
+  "state_variables": ["installed_parts", "arm_configuration", "held_object", "support_provider", "support_pose", "support_load_verified", "permanent_load_verified", "shoe_retracted", "gate_closed", "support_returned"],
+  "required_event_guards": [
+    {"action": "release_A_support", "requires": ["temporary_support_placed", "load_transfer_verified", "structure_stable_during_transfer"]},
+    {"action": "fetch_A_only_part", "requires": ["A_empty", "continuous_support_available", "pick_and_path_qualified"]},
+    {"action": "install_K1_or_K2", "requires": ["part_held", "assembly_dependencies_satisfied", "required_support_valid", "insertion_path_and_load_valid"]},
+    {"action": "retract_support_shoe", "requires": ["permanent_connections_valid", "independent_permanent_support_verified"]},
+    {"action": "extract_support", "requires": ["shoe_unloaded_and_retracted", "grasp_valid", "extraction_path_valid_in_current_geometry"]},
+    {"action": "close_gate_with_inner_support_choice", "requires": ["inner_support_already_extracted"]},
+    {"action": "declare_complete", "requires": ["permanent_structure_valid", "gate_closed", "support_returned", "both_arms_empty"]}
+  ],
+  "snapshots": [
+    {"id": 1, "meaning": "A holds the incomplete bridge while left-side supply remains uncollected."},
+    {"id": 2, "meaning": "Temporary support is positioned to illustrate arm release after a future load-transfer check."},
+    {"id": 3, "meaning": "Permanent closure is assembled; the temporary support remains present."},
+    {"id": 4, "meaning": "Support is returned to storage and the gate is closed."},
+    {"id": 5, "meaning": "Inner support remains in the pocket after gate closure to illustrate an extraction trap."}
+  ],
+  "baselines": [
+    {"id": "robot_support", "description": "Continuous robot support with feasible handoff, support exchange and staging allowed."},
+    {"id": "fixed_support", "description": "Predetermined temporary support placement; same motion and load checks."},
+    {"id": "stability_only", "description": "Choose support using current support feasibility without future extraction checks."},
+    {"id": "full_lifecycle", "description": "Choose support and removal order while checking load transfer, arm occupancy and extraction."}
+  ],
+  "future_metrics": ["completion_rate", "actual_makespan_s", "planning_time_s", "robot_support_occupancy_s", "extra_action_count", "peak_connection_load", "support_continuity_violations", "support_recovery_rate"],
+  "pending_validation": [
+    "Full IK and collision qualification for supply, insertion, support placement and extraction grasps.",
+    "Grasped-tool and assembly collision-free paths for every lifecycle stage.",
+    "Continuous support during arm-to-tool and tool-to-permanent-structure transfer.",
+    "Ballast stability, contact wrench feasibility, friction and connection strength.",
+    "Actual retractable-shoe mechanism, unloading force and extraction actuation.",
+    "APEX-MR-compatible mode allocation, sequential reference paths and TPG generation.",
+    "Dynamic execution and independent event, geometry and load verification.",
+    "Repeated trials and fair baseline comparisons."
+  ]
+}

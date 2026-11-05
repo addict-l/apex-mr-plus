@@ -1,0 +1,868 @@
+{
+  "solver": "scipy.optimize.milp / HiGHS",
+  "scipy_version": "1.17.1",
+  "model": "joint binary support/task/handoff modes with peak workload auxiliary",
+  "cost_unit": "proxy_cost",
+  "objective_definition": "sum(selected mode costs) + load_balance_weight * peak_arm_workload",
+  "objective_is_makespan": false,
+  "load_balance_weight": 0.15,
+  "required_support_load_N": 29.247503571428574,
+  "minimum_contact_overlap_m": 0.01,
+  "assembly_order": [
+    "K1",
+    "K2"
+  ],
+  "buffer_capacity": 1,
+  "buffer_capacity_enforcement": "mandatory pick(previous)->deposit(next) dependencies emitted for the motion compiler",
+  "geometry_scope": "Caller-provided candidate qualification; endpoints do not certify connecting paths.",
+  "constraint_count": 16,
+  "constraints": [
+    {
+      "constraint": "exactly_one_support_mode",
+      "coefficients": {
+        "weak_narrow:after_gate:B": 1.0,
+        "inner_pocket:after_gate:B": 1.0,
+        "outer_front:before_gate:B": 1.0,
+        "weak_narrow:before_gate:B": 1.0,
+        "inner_pocket:before_gate:B": 1.0,
+        "outer_front:after_gate:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0
+    },
+    {
+      "constraint": "exactly_one_task_mode:supply_K1",
+      "coefficients": {
+        "supply_K1:A": 1.0,
+        "supply_K1:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0
+    },
+    {
+      "constraint": "exactly_one_task_mode:install_K1",
+      "coefficients": {
+        "install_K1:A": 1.0,
+        "install_K1:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0
+    },
+    {
+      "constraint": "exactly_one_task_mode:supply_K2",
+      "coefficients": {
+        "supply_K2:A": 1.0,
+        "supply_K2:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0
+    },
+    {
+      "constraint": "exactly_one_task_mode:install_K2",
+      "coefficients": {
+        "install_K2:A": 1.0,
+        "install_K2:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0
+    },
+    {
+      "constraint": "exactly_one_task_mode:close_gate",
+      "coefficients": {
+        "close_gate:A": 1.0,
+        "close_gate:B": 1.0
+      },
+      "lower": 1.0,
+      "upper": 1.0
+    },
+    {
+      "constraint": "handoff_required:handoff_K1",
+      "coefficients": {
+        "supply_K1:A": 1.0,
+        "install_K1:B": 1.0,
+        "handoff_K1": -1.0
+      },
+      "lower": null,
+      "upper": 1.0
+    },
+    {
+      "constraint": "handoff_supplier:handoff_K1",
+      "coefficients": {
+        "handoff_K1": 1.0,
+        "supply_K1:A": -1.0
+      },
+      "lower": null,
+      "upper": 0.0
+    },
+    {
+      "constraint": "handoff_installer:handoff_K1",
+      "coefficients": {
+        "handoff_K1": 1.0,
+        "install_K1:B": -1.0
+      },
+      "lower": null,
+      "upper": 0.0
+    },
+    {
+      "constraint": "unqualified_cross_arm_transport:K1:B:A",
+      "coefficients": {
+        "supply_K1:B": 1.0,
+        "install_K1:A": 1.0
+      },
+      "lower": null,
+      "upper": 1.0
+    },
+    {
+      "constraint": "handoff_required:handoff_K2",
+      "coefficients": {
+        "supply_K2:A": 1.0,
+        "install_K2:B": 1.0,
+        "handoff_K2": -1.0
+      },
+      "lower": null,
+      "upper": 1.0
+    },
+    {
+      "constraint": "handoff_supplier:handoff_K2",
+      "coefficients": {
+        "handoff_K2": 1.0,
+        "supply_K2:A": -1.0
+      },
+      "lower": null,
+      "upper": 0.0
+    },
+    {
+      "constraint": "handoff_installer:handoff_K2",
+      "coefficients": {
+        "handoff_K2": 1.0,
+        "install_K2:B": -1.0
+      },
+      "lower": null,
+      "upper": 0.0
+    },
+    {
+      "constraint": "unqualified_cross_arm_transport:K2:B:A",
+      "coefficients": {
+        "supply_K2:B": 1.0,
+        "install_K2:A": 1.0
+      },
+      "lower": null,
+      "upper": 1.0
+    },
+    {
+      "constraint": "peak_arm_workload:A",
+      "coefficients": {
+        "outer_front:before_gate:B": 0.0,
+        "outer_front:after_gate:B": 0.0,
+        "inner_pocket:before_gate:B": 0.0,
+        "inner_pocket:after_gate:B": 0.0,
+        "weak_narrow:before_gate:B": 0.0,
+        "weak_narrow:after_gate:B": 0.0,
+        "supply_K1:A": 9.613243674430391,
+        "supply_K1:B": 0.0,
+        "install_K1:A": 0.0,
+        "install_K1:B": 0.0,
+        "supply_K2:A": 8.65768425058982,
+        "supply_K2:B": 0.0,
+        "install_K2:A": 0.0,
+        "install_K2:B": 0.0,
+        "close_gate:A": 0.0,
+        "close_gate:B": 0.0,
+        "handoff_K1": 0.25,
+        "handoff_K2": 0.25,
+        "__peak_workload": -1.0
+      },
+      "lower": null,
+      "upper": -0.0
+    },
+    {
+      "constraint": "peak_arm_workload:B",
+      "coefficients": {
+        "outer_front:before_gate:B": 28.903341437533992,
+        "outer_front:after_gate:B": 28.903341437533992,
+        "inner_pocket:before_gate:B": 0.0,
+        "inner_pocket:after_gate:B": 0.0,
+        "weak_narrow:before_gate:B": 0.0,
+        "weak_narrow:after_gate:B": 0.0,
+        "supply_K1:A": 0.0,
+        "supply_K1:B": 0.0,
+        "install_K1:A": 0.0,
+        "install_K1:B": 13.677146929083538,
+        "supply_K2:A": 0.0,
+        "supply_K2:B": 0.0,
+        "install_K2:A": 0.0,
+        "install_K2:B": 10.270673283455608,
+        "close_gate:A": 0.0,
+        "close_gate:B": 9.939124468960049,
+        "handoff_K1": 0.25,
+        "handoff_K2": 0.25,
+        "__peak_workload": -1.0
+      },
+      "lower": null,
+      "upper": -0.0
+    }
+  ],
+  "binary_variable_count": 18,
+  "continuous_variable_count": 1,
+  "rejected_modes": [
+    {
+      "mode_id": "inner_pocket:before_gate:B",
+      "reason": "support_mode_failed_geometry_qualification"
+    },
+    {
+      "mode_id": "inner_pocket:after_gate:B",
+      "reason": "support_mode_failed_geometry_qualification"
+    },
+    {
+      "mode_id": "inner_pocket:after_gate:B",
+      "reason": "closed_gate_traps_support"
+    },
+    {
+      "mode_id": "weak_narrow:before_gate:B",
+      "reason": "support_mode_failed_geometry_qualification"
+    },
+    {
+      "mode_id": "weak_narrow:before_gate:B",
+      "reason": "insufficient_contact_overlap"
+    },
+    {
+      "mode_id": "weak_narrow:after_gate:B",
+      "reason": "support_mode_failed_geometry_qualification"
+    },
+    {
+      "mode_id": "weak_narrow:after_gate:B",
+      "reason": "insufficient_contact_overlap"
+    },
+    {
+      "mode_id": "supply_K1:B",
+      "reason": "task_mode_failed_geometry_qualification"
+    },
+    {
+      "mode_id": "supply_K1:B",
+      "reason": "A_exclusive_supply_access"
+    },
+    {
+      "mode_id": "install_K1:A",
+      "reason": "task_mode_failed_geometry_qualification"
+    },
+    {
+      "mode_id": "supply_K2:B",
+      "reason": "task_mode_failed_geometry_qualification"
+    },
+    {
+      "mode_id": "supply_K2:B",
+      "reason": "A_exclusive_supply_access"
+    },
+    {
+      "mode_id": "install_K2:A",
+      "reason": "task_mode_failed_geometry_qualification"
+    },
+    {
+      "mode_id": "close_gate:A",
+      "reason": "task_mode_failed_geometry_qualification"
+    },
+    {
+      "mode_id": "weak_narrow:before_gate:B",
+      "reason": "motion_planning_retry_ban"
+    },
+    {
+      "mode_id": "weak_narrow:after_gate:B",
+      "reason": "motion_planning_retry_ban"
+    },
+    {
+      "mode_id": "inner_pocket:before_gate:B",
+      "reason": "motion_planning_retry_ban"
+    },
+    {
+      "mode_id": "outer_front:after_gate:B",
+      "reason": "motion_planning_retry_ban"
+    },
+    {
+      "mode_id": "inner_pocket:after_gate:B",
+      "reason": "motion_planning_retry_ban"
+    }
+  ],
+  "retry_banned_modes": [
+    "inner_pocket:after_gate:B",
+    "inner_pocket:before_gate:B",
+    "outer_front:after_gate:B",
+    "weak_narrow:after_gate:B",
+    "weak_narrow:before_gate:B"
+  ],
+  "retry_banned_combinations": [],
+  "solver_called": true,
+  "solver_status": 0,
+  "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "mip_gap": 0.0,
+  "mip_dual_bound": 91.55475696190838,
+  "mip_node_count": 0.0,
+  "elapsed_s": 0.0021546000498346984,
+  "solved": true,
+  "optimal": true,
+  "status": "optimal",
+  "objective": 91.55475696190838,
+  "solver_objective": 91.55475696190838,
+  "selected_support": {
+    "id": "outer_front:before_gate:B",
+    "candidate": "outer_front",
+    "removal_order": "before_gate",
+    "placer_arm": "B",
+    "remover_arm": "B",
+    "feasible": true,
+    "cost": 28.903341437533992,
+    "rated_load_N": 40.0,
+    "contact_overlap_m": 0.04,
+    "blocked_after_gate": false,
+    "goal_pose": [
+      0.08,
+      -0.05,
+      0.772,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "endpoint_evidence": {
+      "q_source": [
+        -3.5135143213060496,
+        0.01757576174675541,
+        -3.9243745713709566,
+        0.765206551681317,
+        -0.37192162996755546,
+        3.1415922639513534
+      ],
+      "q_goal": [
+        -4.037595171157453,
+        -0.2989168180095531,
+        -1.9699457148274813,
+        -0.8727300376830395,
+        -0.8960025162843961,
+        3.141592599163291
+      ],
+      "grasp_offset": [
+        0.032,
+        0,
+        0.145
+      ],
+      "grasp_quaternion": [
+        0.0,
+        -0.7071067811865475,
+        0.0,
+        0.7071067811865476
+      ],
+      "cost": 14.451670718766996
+    },
+    "failure": null
+  },
+  "choices": [
+    {
+      "id": "supply_K1:A",
+      "task": "supply_K1",
+      "arm": "A",
+      "feasible": true,
+      "cost": 9.613243674430391,
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        1.0,
+        0,
+        0,
+        0
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          -3.0213592600999384,
+          0.257129966078977,
+          1.9974198839012305,
+          -0.6837535108680896,
+          -1.5707963172256285,
+          -1.4505629428684879
+        ],
+        "q_goal": [
+          -2.310617289895985,
+          1.0287740845042375,
+          0.6798960365076843,
+          -0.13787397103547047,
+          -1.5707963086231982,
+          -0.7398209706455077
+        ],
+        "grasp_offset": [
+          0,
+          0,
+          0.03
+        ],
+        "grasp_quaternion": [
+          1.0,
+          0,
+          0,
+          0
+        ],
+        "cost": 9.613243674430391
+      },
+      "failure": null
+    },
+    {
+      "id": "install_K1:B",
+      "task": "install_K1",
+      "arm": "B",
+      "feasible": true,
+      "cost": 13.677146929083538,
+      "grasp_offset": [
+        0.058,
+        0,
+        0
+      ],
+      "grasp_quaternion": [
+        -0.4999999999999999,
+        -0.5,
+        0.5,
+        0.5000000000000001
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          -0.9136797509939102,
+          0.9054987000342374,
+          1.2584752676602455,
+          0.9776186075270759,
+          -4.055272455014549,
+          -1.5707963034682486
+        ],
+        "q_goal": [
+          -2.3934411235557245,
+          -0.3452643722809537,
+          2.4300807847884847,
+          1.056776244063139,
+          -5.535033869521697,
+          -1.5707963288601237
+        ],
+        "grasp_offset": [
+          0.058,
+          0,
+          0
+        ],
+        "grasp_quaternion": [
+          -0.4999999999999999,
+          -0.5,
+          0.5,
+          0.5000000000000001
+        ],
+        "cost": 13.677146929083538
+      },
+      "failure": null
+    },
+    {
+      "id": "supply_K2:A",
+      "task": "supply_K2",
+      "arm": "A",
+      "feasible": true,
+      "cost": 8.65768425058982,
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        1.0,
+        0,
+        0,
+        0
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          -2.7521521508900237,
+          0.388467039512543,
+          1.802871133624465,
+          -0.6205418541741652,
+          -1.5707963188074343,
+          -1.1813558386924974
+        ],
+        "q_goal": [
+          -2.310617285037721,
+          1.0277592810938705,
+          0.6767142245250158,
+          -0.13367734858335464,
+          -1.5707963093556792,
+          -0.7398209654262734
+        ],
+        "grasp_offset": [
+          0,
+          0,
+          0.03
+        ],
+        "grasp_quaternion": [
+          1.0,
+          0,
+          0,
+          0
+        ],
+        "cost": 8.65768425058982
+      },
+      "failure": null
+    },
+    {
+      "id": "install_K2:B",
+      "task": "install_K2",
+      "arm": "B",
+      "feasible": true,
+      "cost": 10.270673283455608,
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        0,
+        1.0,
+        0,
+        0
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          -1.0891650280022318,
+          1.0277612225179147,
+          0.6767102221767697,
+          -0.1336753158775348,
+          -1.570796306384608,
+          0.4816314861622647
+        ],
+        "q_goal": [
+          -1.9604801446759175,
+          -0.0789269497146991,
+          1.5689939979725447,
+          0.0807292993176515,
+          -1.5707963278945019,
+          -0.38968381759772464
+        ],
+        "grasp_offset": [
+          0,
+          0,
+          0.03
+        ],
+        "grasp_quaternion": [
+          0,
+          1.0,
+          0,
+          0
+        ],
+        "cost": 10.270673283455608
+      },
+      "failure": null
+    },
+    {
+      "id": "close_gate:B",
+      "task": "close_gate",
+      "arm": "B",
+      "feasible": true,
+      "cost": 9.939124468960049,
+      "grasp_offset": [
+        0,
+        -0.006,
+        0
+      ],
+      "grasp_quaternion": [
+        -0.7071067811865475,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          -0.4719657871733208,
+          0.9380871654349924,
+          1.0618653253095196,
+          1.141640216223253,
+          -2.0427621027736693,
+          -1.5707963009150852
+        ],
+        "q_goal": [
+          -1.40599311023173,
+          0.8559336253177147,
+          1.204582428155293,
+          1.0810889655736764,
+          -2.976789410523096,
+          -1.5707840109796947
+        ],
+        "grasp_offset": [
+          0,
+          -0.006,
+          0
+        ],
+        "grasp_quaternion": [
+          -0.7071067811865475,
+          0.0,
+          0.0,
+          0.7071067811865476
+        ],
+        "cost": 9.939124468960049
+      },
+      "failure": null
+    }
+  ],
+  "task_assignments": {
+    "supply_K1": "A",
+    "install_K1": "B",
+    "supply_K2": "A",
+    "install_K2": "B",
+    "close_gate": "B"
+  },
+  "handoffs": [
+    {
+      "id": "handoff_K1",
+      "part": "K1",
+      "supply_task": "supply_K1",
+      "install_task": "install_K1",
+      "from_arm": "A",
+      "to_arm": "B",
+      "feasible": true,
+      "cost": 0.5,
+      "deposit_event": "deposit_K1",
+      "pick_event": "pick_K1"
+    },
+    {
+      "id": "handoff_K2",
+      "part": "K2",
+      "supply_task": "supply_K2",
+      "install_task": "install_K2",
+      "from_arm": "A",
+      "to_arm": "B",
+      "feasible": true,
+      "cost": 0.5,
+      "deposit_event": "deposit_K2",
+      "pick_event": "pick_K2"
+    }
+  ],
+  "required_buffer_edges": [
+    {
+      "from": "deposit_K1",
+      "to": "pick_K1",
+      "reason": "buffer_material_handoff"
+    },
+    {
+      "from": "deposit_K2",
+      "to": "pick_K2",
+      "reason": "buffer_material_handoff"
+    },
+    {
+      "from": "pick_K1",
+      "to": "deposit_K2",
+      "reason": "shared_buffer_capacity_one"
+    }
+  ],
+  "required_lifecycle_edges": [
+    {
+      "from": "place_support",
+      "to": "verify_support_load"
+    },
+    {
+      "from": "verify_support_load",
+      "to": "release_A"
+    },
+    {
+      "from": "verify_permanent_structure",
+      "to": "close_gate"
+    },
+    {
+      "from": "verify_permanent_structure",
+      "to": "unload_support"
+    },
+    {
+      "from": "unload_support",
+      "to": "extract_support"
+    },
+    {
+      "from": "extract_support",
+      "to": "return_support"
+    },
+    {
+      "from": "release_A",
+      "to": "supply_K1"
+    },
+    {
+      "from": "release_A",
+      "to": "supply_K2"
+    },
+    {
+      "from": "supply_K1",
+      "to": "install_K1"
+    },
+    {
+      "from": "supply_K2",
+      "to": "install_K2"
+    },
+    {
+      "from": "install_K1",
+      "to": "install_K2"
+    },
+    {
+      "from": "install_K2",
+      "to": "verify_permanent_structure"
+    },
+    {
+      "from": "return_support",
+      "to": "close_gate"
+    }
+  ],
+  "selected_mode_ids": [
+    "outer_front:before_gate:B",
+    "supply_K1:A",
+    "install_K1:B",
+    "supply_K2:A",
+    "install_K2:B",
+    "close_gate:B",
+    "handoff_K1",
+    "handoff_K2"
+  ],
+  "arm_workloads": {
+    "A": 18.77092792502021,
+    "B": 63.29028611903318
+  },
+  "peak_arm_workload": 63.29028611903318,
+  "peak_auxiliary_value": 63.29028611903318,
+  "incumbent_validation": {
+    "integrality": true,
+    "bounds": true,
+    "all_linear_constraints": true,
+    "exact_task_coverage": true
+  },
+  "variables": [
+    {
+      "id": "outer_front:before_gate:B",
+      "group": "support",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 28.903341437533992
+    },
+    {
+      "id": "outer_front:after_gate:B",
+      "group": "support",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 28.903341437533992
+    },
+    {
+      "id": "inner_pocket:before_gate:B",
+      "group": "support",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0
+    },
+    {
+      "id": "inner_pocket:after_gate:B",
+      "group": "support",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0
+    },
+    {
+      "id": "weak_narrow:before_gate:B",
+      "group": "support",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0
+    },
+    {
+      "id": "weak_narrow:after_gate:B",
+      "group": "support",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0
+    },
+    {
+      "id": "supply_K1:A",
+      "group": "task",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 9.613243674430391
+    },
+    {
+      "id": "supply_K1:B",
+      "group": "task",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0
+    },
+    {
+      "id": "install_K1:A",
+      "group": "task",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0
+    },
+    {
+      "id": "install_K1:B",
+      "group": "task",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 13.677146929083538
+    },
+    {
+      "id": "supply_K2:A",
+      "group": "task",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 8.65768425058982
+    },
+    {
+      "id": "supply_K2:B",
+      "group": "task",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0
+    },
+    {
+      "id": "install_K2:A",
+      "group": "task",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0
+    },
+    {
+      "id": "install_K2:B",
+      "group": "task",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 10.270673283455608
+    },
+    {
+      "id": "close_gate:A",
+      "group": "task",
+      "value": 0.0,
+      "upper_bound": 0.0,
+      "cost": 0.0
+    },
+    {
+      "id": "close_gate:B",
+      "group": "task",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 9.939124468960049
+    },
+    {
+      "id": "handoff_K1",
+      "group": "handoff",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 0.5
+    },
+    {
+      "id": "handoff_K2",
+      "group": "handoff",
+      "value": 1.0,
+      "upper_bound": 1.0,
+      "cost": 0.5
+    }
+  ],
+  "reference_tie_break": {
+    "accepted": true,
+    "unrestricted_objective": 91.55475696190838,
+    "restricted_objective": 91.55475696190838,
+    "support_id": "outer_front:before_gate:B",
+    "restriction": "support_modes_only",
+    "restricted_solved": true,
+    "reason": "known_complete_reference_at_equal_unrestricted_objective"
+  },
+  "optimal_scope": "support-constrained MILP; objective equality independently checked against unrestricted optimum"
+}

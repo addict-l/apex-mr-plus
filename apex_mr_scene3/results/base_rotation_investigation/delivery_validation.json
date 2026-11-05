@@ -1,0 +1,28 @@
+{
+  "run_id": "20261105T121655Z-b7a8b9ea",
+  "success": true,
+  "checks": {
+    "same_successful_run": true,
+    "delivery_matches_audited_planned_scene": true,
+    "frozen_inputs_unchanged": true,
+    "simulation_time_zero": true,
+    "scheduler_present": true,
+    "embedded_nodes_match_audited_graph": true,
+    "embedded_edges_match_audited_graph": true,
+    "continuous_profiles_match": true,
+    "force_limits_unchanged": true,
+    "actual_applied_proof_required": true,
+    "initial_objects_in_place": true
+  },
+  "node_count": 353,
+  "edge_count": 719,
+  "main_scene_sha256": "7cceb742dd35e9ff3c1a7b39cabed9aa3955c4eb0c90750e77eaedd05486e0a6",
+  "initial_position_errors_m": {
+    "K1": 0.0,
+    "K2": 0.0,
+    "Bridge": 2.0014830212433605e-16,
+    "Gate": 0.0,
+    "TemporarySupport": 0.0
+  },
+  "scope": "Read-only cold initial-state load. No additional dynamic execution."
+}

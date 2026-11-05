@@ -1,0 +1,116 @@
+{
+  "parts": [
+    {
+      "id": "K1",
+      "source": [
+        -0.53,
+        -0.36,
+        0.804
+      ],
+      "goal": [
+        0.24,
+        0.2,
+        0.97
+      ],
+      "dependencies": {},
+      "size": [
+        0.12,
+        0.14,
+        0.076
+      ],
+      "insertion_force": 0.0,
+      "mass": 0.18
+    },
+    {
+      "id": "K2",
+      "source": [
+        -0.38,
+        -0.36,
+        0.806
+      ],
+      "goal": [
+        0.24,
+        0.2,
+        1.096
+      ],
+      "dependencies": {},
+      "size": [
+        0.1,
+        0.18,
+        0.08
+      ],
+      "insertion_force": 8.0,
+      "mass": 0.14
+    },
+    {
+      "id": "Gate",
+      "source": [
+        0.48,
+        -0.35,
+        0.851
+      ],
+      "goal": [
+        0.06,
+        0.105,
+        0.857
+      ],
+      "dependencies": {},
+      "size": [
+        0.174,
+        0.012,
+        0.17
+      ],
+      "insertion_force": 0.0,
+      "mass": 0.12
+    },
+    {
+      "id": "Bridge",
+      "source": [
+        0.04,
+        0.2,
+        1.032
+      ],
+      "goal": [
+        0.04,
+        0.2,
+        1.032
+      ],
+      "dependencies": {},
+      "size": [
+        0.52,
+        0.16,
+        0.04
+      ],
+      "insertion_force": 0.0,
+      "mass": 0.45
+    },
+    {
+      "id": "TemporarySupport",
+      "source": [
+        0.48,
+        0.43,
+        0.76
+      ],
+      "dependencies": {},
+      "size": [
+        0.14,
+        0.35,
+        0.24
+      ],
+      "goal": [
+        0.48,
+        0.43,
+        0.76
+      ],
+      "mass": 2.36
+    }
+  ],
+  "physics": {
+    "jack": "compound ballast, dynamic prismatic lift and load sensor",
+    "engine": "Bullet",
+    "initial_bridge": "passive pitch hinge with 0.35Nm friction brake and actual A-pad contact",
+    "connections": "ideal rigid snap at measured pose; no LEGO deformation",
+    "grasp": "ideal dynamic force-sensor constraints"
+  },
+  "scene_signature": "0e7861dd22f4fd1c09530693651a8198676f2b1c2731005e4fd1a8a1ea0d4326"
+}

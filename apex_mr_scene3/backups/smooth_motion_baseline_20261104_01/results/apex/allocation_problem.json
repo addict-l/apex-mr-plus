@@ -1,0 +1,615 @@
+{
+  "support_modes": [
+    {
+      "id": "outer_front:before_gate:B",
+      "candidate": "outer_front",
+      "removal_order": "before_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "feasible": true,
+      "cost": 42.150526673691886,
+      "rated_load_N": 40.0,
+      "contact_overlap_m": 0.04,
+      "blocked_after_gate": false,
+      "goal_pose": [
+        0.08,
+        -0.05,
+        0.772,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          2.7696709458055477,
+          0.017575730055232483,
+          2.3588107698402245,
+          0.7652065121547388,
+          -0.37192167456412045,
+          3.141592301159198
+        ],
+        "q_goal": [
+          2.2455900838364684,
+          -0.2989166707482575,
+          -1.9699456197742717,
+          -0.8727300855103403,
+          -0.8960026735866939,
+          3.1415927162737622
+        ],
+        "grasp_offset": [
+          0.032,
+          0,
+          0.145
+        ],
+        "grasp_quaternion": [
+          0.0,
+          -0.7071067811865475,
+          0.0,
+          0.7071067811865476
+        ],
+        "cost": 21.075263336845943
+      },
+      "failure": null
+    },
+    {
+      "id": "outer_front:after_gate:B",
+      "candidate": "outer_front",
+      "removal_order": "after_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "feasible": true,
+      "cost": 42.150526673691886,
+      "rated_load_N": 40.0,
+      "contact_overlap_m": 0.04,
+      "blocked_after_gate": false,
+      "goal_pose": [
+        0.08,
+        -0.05,
+        0.772,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          2.7696709458055477,
+          0.017575730055232483,
+          2.3588107698402245,
+          0.7652065121547388,
+          -0.37192167456412045,
+          3.141592301159198
+        ],
+        "q_goal": [
+          2.2455900838364684,
+          -0.2989166707482575,
+          -1.9699456197742717,
+          -0.8727300855103403,
+          -0.8960026735866939,
+          3.1415927162737622
+        ],
+        "grasp_offset": [
+          0.032,
+          0,
+          0.145
+        ],
+        "grasp_quaternion": [
+          0.0,
+          -0.7071067811865475,
+          0.0,
+          0.7071067811865476
+        ],
+        "cost": 21.075263336845943
+      },
+      "failure": null
+    },
+    {
+      "id": "inner_pocket:before_gate:B",
+      "candidate": "inner_pocket",
+      "removal_order": "before_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "feasible": false,
+      "cost": 0.0,
+      "rated_load_N": 40.0,
+      "contact_overlap_m": 0.14,
+      "blocked_after_gate": true,
+      "goal_pose": [
+        0.06,
+        0.26,
+        0.772,
+        0.0,
+        0.0,
+        1.0,
+        6.123031769111886e-17
+      ],
+      "endpoint_evidence": null,
+      "failure": "qualify_TemporarySupport_goal: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.41999999999999993, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+    },
+    {
+      "id": "inner_pocket:after_gate:B",
+      "candidate": "inner_pocket",
+      "removal_order": "after_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "feasible": false,
+      "cost": 0.0,
+      "rated_load_N": 40.0,
+      "contact_overlap_m": 0.14,
+      "blocked_after_gate": true,
+      "goal_pose": [
+        0.06,
+        0.26,
+        0.772,
+        0.0,
+        0.0,
+        1.0,
+        6.123031769111886e-17
+      ],
+      "endpoint_evidence": null,
+      "failure": "qualify_TemporarySupport_goal: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.41999999999999993, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+    },
+    {
+      "id": "weak_narrow:before_gate:B",
+      "candidate": "weak_narrow",
+      "removal_order": "before_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "feasible": false,
+      "cost": 0.0,
+      "rated_load_N": 40.0,
+      "contact_overlap_m": 0.005,
+      "blocked_after_gate": false,
+      "goal_pose": [
+        0.06,
+        -0.085,
+        0.772,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "endpoint_evidence": null,
+      "failure": "contact overlap below10mm"
+    },
+    {
+      "id": "weak_narrow:after_gate:B",
+      "candidate": "weak_narrow",
+      "removal_order": "after_gate",
+      "placer_arm": "B",
+      "remover_arm": "B",
+      "feasible": false,
+      "cost": 0.0,
+      "rated_load_N": 40.0,
+      "contact_overlap_m": 0.005,
+      "blocked_after_gate": false,
+      "goal_pose": [
+        0.06,
+        -0.085,
+        0.772,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "endpoint_evidence": null,
+      "failure": "contact overlap below10mm"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "supply_K1",
+      "kind": "supply",
+      "part": "K1"
+    },
+    {
+      "id": "install_K1",
+      "kind": "install",
+      "part": "K1"
+    },
+    {
+      "id": "supply_K2",
+      "kind": "supply",
+      "part": "K2"
+    },
+    {
+      "id": "install_K2",
+      "kind": "install",
+      "part": "K2"
+    },
+    {
+      "id": "close_gate",
+      "kind": "gate",
+      "part": "Gate"
+    }
+  ],
+  "task_modes": [
+    {
+      "id": "supply_K1:A",
+      "task": "supply_K1",
+      "arm": "A",
+      "feasible": true,
+      "cost": 9.613241683047267,
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        1.0,
+        0,
+        0,
+        0
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          -3.0213589677859694,
+          0.2571302149562051,
+          1.997419565410272,
+          -0.6837529664764974,
+          -1.5707969869038143,
+          -1.4505610712419659
+        ],
+        "q_goal": [
+          -2.3106172824226783,
+          1.0287742557392459,
+          0.6798956841425222,
+          -0.13787377835564574,
+          -1.570796309807768,
+          -0.7398209626923542
+        ],
+        "grasp_offset": [
+          0,
+          0,
+          0.03
+        ],
+        "grasp_quaternion": [
+          1.0,
+          0,
+          0,
+          0
+        ],
+        "cost": 9.613241683047267
+      },
+      "failure": null
+    },
+    {
+      "id": "supply_K1:B",
+      "task": "supply_K1",
+      "arm": "B",
+      "feasible": false,
+      "cost": 0.0,
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        0,
+        1.0,
+        0,
+        0
+      ],
+      "endpoint_evidence": null,
+      "failure": "qualify_K1_source: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.42100000000000115, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+    },
+    {
+      "id": "install_K1:A",
+      "task": "install_K1",
+      "arm": "A",
+      "feasible": false,
+      "cost": 0.0,
+      "grasp_offset": [
+        0.058,
+        0,
+        0
+      ],
+      "grasp_quaternion": [
+        -0.4999999999999999,
+        -0.5,
+        0.5,
+        0.5000000000000001
+      ],
+      "endpoint_evidence": null,
+      "failure": "qualify_K1_source: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.4159999999999986, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+    },
+    {
+      "id": "install_K1:B",
+      "task": "install_K1",
+      "arm": "B",
+      "feasible": true,
+      "cost": 15.129863249710922,
+      "grasp_offset": [
+        0.058,
+        0,
+        0
+      ],
+      "grasp_quaternion": [
+        -0.4999999999999999,
+        -0.5,
+        0.5,
+        0.5000000000000001
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          -0.9136797508618444,
+          0.9054986996863632,
+          1.2584752690401781,
+          0.9776186047030228,
+          2.2279128531125205,
+          -1.5707963043553836
+        ],
+        "q_goal": [
+          -2.393438005490884,
+          -0.3452635335361262,
+          2.4300805847251343,
+          1.0567755698121402,
+          0.748154716276809,
+          -1.5707963009813064
+        ],
+        "grasp_offset": [
+          0.058,
+          0,
+          0
+        ],
+        "grasp_quaternion": [
+          -0.4999999999999999,
+          -0.5,
+          0.5,
+          0.5000000000000001
+        ],
+        "cost": 15.129863249710922
+      },
+      "failure": null
+    },
+    {
+      "id": "supply_K2:A",
+      "task": "supply_K2",
+      "arm": "A",
+      "feasible": true,
+      "cost": 8.657686141943833,
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        1.0,
+        0,
+        0,
+        0
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          -2.752152167123429,
+          0.3884669098387358,
+          1.8028715844718335,
+          -0.6205428032716631,
+          -1.5707961632230114,
+          -1.181355087625048
+        ],
+        "q_goal": [
+          -2.310617289959585,
+          1.0277591677074691,
+          0.67671445789318,
+          -0.1336774761774598,
+          -1.5707963085755499,
+          -0.7398209706608992
+        ],
+        "grasp_offset": [
+          0,
+          0,
+          0.03
+        ],
+        "grasp_quaternion": [
+          1.0,
+          0,
+          0,
+          0
+        ],
+        "cost": 8.657686141943833
+      },
+      "failure": null
+    },
+    {
+      "id": "supply_K2:B",
+      "task": "supply_K2",
+      "arm": "B",
+      "feasible": false,
+      "cost": 0.0,
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        0,
+        1.0,
+        0,
+        0
+      ],
+      "endpoint_evidence": null,
+      "failure": "qualify_K2_source: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.4169999999999998, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+    },
+    {
+      "id": "install_K2:A",
+      "task": "install_K2",
+      "arm": "A",
+      "feasible": false,
+      "cost": 0.0,
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        1.0,
+        0,
+        0,
+        0
+      ],
+      "endpoint_evidence": null,
+      "failure": "qualify_K2_goal: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.4220000000000006, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+    },
+    {
+      "id": "install_K2:B",
+      "task": "install_K2",
+      "arm": "B",
+      "feasible": true,
+      "cost": 10.27067347342729,
+      "grasp_offset": [
+        0,
+        0,
+        0.03
+      ],
+      "grasp_quaternion": [
+        0,
+        1.0,
+        0,
+        0
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          -1.089165030444003,
+          1.0277611626793945,
+          0.6767103508639429,
+          -0.1336754222898634,
+          -1.5707963025127918,
+          0.48163152170785584
+        ],
+        "q_goal": [
+          -1.9604801591016945,
+          -0.07892693731605073,
+          1.5689940178875459,
+          0.0807294841230244,
+          -1.5707963187275116,
+          -0.3896837751178593
+        ],
+        "grasp_offset": [
+          0,
+          0,
+          0.03
+        ],
+        "grasp_quaternion": [
+          0,
+          1.0,
+          0,
+          0
+        ],
+        "cost": 10.27067347342729
+      },
+      "failure": null
+    },
+    {
+      "id": "close_gate:A",
+      "task": "close_gate",
+      "arm": "A",
+      "feasible": false,
+      "cost": 0.0,
+      "grasp_offset": [
+        0,
+        -0.006,
+        0
+      ],
+      "grasp_quaternion": [
+        -0.7071067811865475,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "endpoint_evidence": null,
+      "failure": "qualify_Gate_source: {'stats': {'required_orientation_error_rad': 0.0002, 'rejections': {}, 'candidates': 0, 'accepted_pose_errors': {}, 'collision_checks': 0, 'wall_time_s': 0.42799999999999727, 'ik_calls': 1, 'required_position_error_m': 5e-05, 'collision_geometry_policy': 'native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded'}, 'ok': False, 'solutions': {}}"
+    },
+    {
+      "id": "close_gate:B",
+      "task": "close_gate",
+      "arm": "B",
+      "feasible": true,
+      "cost": 9.939125902365255,
+      "grasp_offset": [
+        0,
+        -0.006,
+        0
+      ],
+      "grasp_quaternion": [
+        -0.7071067811865475,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "endpoint_evidence": {
+        "q_source": [
+          -0.47196580260948584,
+          0.9380869830967118,
+          1.0618656877160217,
+          1.1416400213497877,
+          -2.04276211851257,
+          -1.5707963088032042
+        ],
+        "q_goal": [
+          -1.4059931670499446,
+          0.8559323889061489,
+          1.2045846853008328,
+          1.0810846433096866,
+          -2.9767894774258177,
+          -1.5707872982919586
+        ],
+        "grasp_offset": [
+          0,
+          -0.006,
+          0
+        ],
+        "grasp_quaternion": [
+          -0.7071067811865475,
+          0.0,
+          0.0,
+          0.7071067811865476
+        ],
+        "cost": 9.939125902365255
+      },
+      "failure": null
+    }
+  ],
+  "handoffs": [
+    {
+      "id": "handoff_K1",
+      "part": "K1",
+      "supply_task": "supply_K1",
+      "install_task": "install_K1",
+      "from_arm": "A",
+      "to_arm": "B",
+      "feasible": true,
+      "cost": 0.5
+    },
+    {
+      "id": "handoff_K2",
+      "part": "K2",
+      "supply_task": "supply_K2",
+      "install_task": "install_K2",
+      "from_arm": "A",
+      "to_arm": "B",
+      "feasible": true,
+      "cost": 0.5
+    }
+  ],
+  "assembly_order": [
+    "K1",
+    "K2"
+  ],
+  "required_support_load_N": 29.247503571428574,
+  "minimum_contact_overlap_m": 0.01,
+  "buffer_capacity": 1,
+  "supply_access": {
+    "K1": [
+      "A"
+    ],
+    "K2": [
+      "A"
+    ]
+  },
+  "required_reaction_N": 19.498335714285716,
+  "reaction_safety_factor": 1.5,
+  "load_balance_weight": 0.15,
+  "qualification_signature": "381a040a31ebf6dd47f3c84d364080532cbdbd5580449dc441958d060ea29a4a"
+}

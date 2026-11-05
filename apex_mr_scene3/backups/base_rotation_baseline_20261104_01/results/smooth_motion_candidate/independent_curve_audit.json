@@ -1,0 +1,1837 @@
+{
+  "schema": "scene3_independent_curve_audit_v1",
+  "run_id": "20261104T163855Z-0804c434",
+  "created_at_utc": "2026-11-04T16:47:12.352944+00:00",
+  "planning_checks_passed": true,
+  "actual_pending": false,
+  "actual_execution_accepted": true,
+  "scope": "Independent reference-world, Bezier derivative, C2, path-sample, schedule and dependency checks, followed by review of the matching accepted actual execution events and sampled joint measurements. No simulator was started or rerun by this audit.",
+  "source_file_hashes": {
+    "pipeline_manifest.json": "743a74dc2fc02953e0c4eb2eaa95e95a4aa420d350585cab8cf4055324ebba09",
+    "source_signature.json": "5a93b219fff9d07e8aa9eebc4fbd49cdcb7aeed640784c1b89c1dff25c9ee9ed",
+    "reference_tasks.json": "1eb81607a9c99d1f9d99f0e2558f659119f0d7b38a68e9ce801c1fbc8f518a46",
+    "curve_smoothing_validation.json": "44d2e47750be3c6997eb27abbf4ec5432356816fd9af584991f0ee45ca7cd712",
+    "tpg.json": "f10f8504015c39fae780f6dcb24f1e3de2179120b9c049942a48fbea6d736662",
+    "nominal_geometry_validation.json": "6d9c2ff1c52dcbf26399571a2f1d70c640a1ee10e2236de30071a89ee24fcfb1",
+    "geometry_statistics.json": "2f3a5a1a85512042fee63768e02636d2e6d12e253d9390518e08497191296b9a"
+  },
+  "frozen_input_file_count": 47,
+  "frozen_input_hashes_match": true,
+  "scene_signature": "0e7861dd22f4fd1c09530693651a8198676f2b1c2731005e4fd1a8a1ea0d4326",
+  "reference_signature": "bf7b2e49c0681ac433b21fced7dd5b6a67e5b3509c8ae3c466842664258cda19",
+  "macro_count": 6,
+  "curve_pose_node_count": 53,
+  "blended_corner_count": 47,
+  "recorded_full_geometry_samples": 1317,
+  "recorded_real_FK_calls": 2629,
+  "macro_reference_contexts": [
+    {
+      "macro": "support_slide_in",
+      "active_arm": "B",
+      "other_arm": "A",
+      "own_reference_start_error_rad": 0.0,
+      "other_reference_q_error_rad": 0.0,
+      "other_q": [
+        -2.0202543124966823,
+        0.646671244000393,
+        1.1821610976426105,
+        1.3127602609233984,
+        -0.44945800781232836,
+        -1.570796275996565
+      ],
+      "held_parts": {
+        "A": null,
+        "B": "TemporarySupport"
+      },
+      "articulations": {
+        "SupportLift": 0.0
+      },
+      "effective_placed_parts": [
+        "Bridge",
+        "Gate",
+        "K1",
+        "K2"
+      ],
+      "contact_permissions_unchanged": true
+    },
+    {
+      "macro": "A_exit_from_support",
+      "active_arm": "A",
+      "other_arm": "B",
+      "own_reference_start_error_rad": 0.0,
+      "other_reference_q_error_rad": 0.0,
+      "other_q": [
+        -1.4018425115070414,
+        0.29891632579950617,
+        1.9699457305248664,
+        0.8727305935398232,
+        1.7397501250027885,
+        3.1415926528262443
+      ],
+      "held_parts": {
+        "A": null,
+        "B": null
+      },
+      "articulations": {
+        "SupportLift": 0.01
+      },
+      "effective_placed_parts": [
+        "Bridge",
+        "Gate",
+        "K1",
+        "K2",
+        "TemporarySupport"
+      ],
+      "contact_permissions_unchanged": true
+    },
+    {
+      "macro": "install_K1_slide",
+      "active_arm": "B",
+      "other_arm": "A",
+      "own_reference_start_error_rad": 5.551115123125783e-17,
+      "other_reference_q_error_rad": 0.0,
+      "other_q": [
+        -2.3476570437805973,
+        -0.25173329543603185,
+        1.5707352561423822,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "held_parts": {
+        "A": null,
+        "B": "K1"
+      },
+      "articulations": {
+        "SupportLift": 0.01
+      },
+      "effective_placed_parts": [
+        "Bridge",
+        "Gate",
+        "K2",
+        "TemporarySupport"
+      ],
+      "contact_permissions_unchanged": true
+    },
+    {
+      "macro": "extract_support_motion",
+      "active_arm": "B",
+      "other_arm": "A",
+      "own_reference_start_error_rad": 0.0,
+      "other_reference_q_error_rad": 0.0,
+      "other_q": [
+        -2.3476570437805973,
+        -0.25173329543603185,
+        1.570735256142382,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "held_parts": {
+        "A": null,
+        "B": "TemporarySupport"
+      },
+      "articulations": {
+        "SupportLift": 0.0
+      },
+      "effective_placed_parts": [
+        "Bridge",
+        "Gate",
+        "K1",
+        "K2"
+      ],
+      "contact_permissions_unchanged": true
+    },
+    {
+      "macro": "close_gate_slide",
+      "active_arm": "B",
+      "other_arm": "A",
+      "own_reference_start_error_rad": 0.0,
+      "other_reference_q_error_rad": 0.0,
+      "other_q": [
+        -2.3476570437805973,
+        -0.25173329543603185,
+        1.570735256142382,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "held_parts": {
+        "A": null,
+        "B": "Gate"
+      },
+      "articulations": {
+        "SupportLift": 0.0
+      },
+      "effective_placed_parts": [
+        "Bridge",
+        "K1",
+        "K2",
+        "TemporarySupport"
+      ],
+      "contact_permissions_unchanged": true
+    },
+    {
+      "macro": "close_gate_retreat",
+      "active_arm": "B",
+      "other_arm": "A",
+      "own_reference_start_error_rad": 0.0,
+      "other_reference_q_error_rad": 0.0,
+      "other_q": [
+        -2.3476570437805973,
+        -0.25173329543603185,
+        1.570735256142382,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "held_parts": {
+        "A": null,
+        "B": null
+      },
+      "articulations": {
+        "SupportLift": 0.0
+      },
+      "effective_placed_parts": [
+        "Bridge",
+        "Gate",
+        "K1",
+        "K2",
+        "TemporarySupport"
+      ],
+      "contact_permissions_unchanged": true
+    }
+  ],
+  "reference_final_state": {
+    "held_parts": {
+      "A": null,
+      "B": null
+    },
+    "articulations": {
+      "SupportLift": 0.0
+    },
+    "joint_configurations": {
+      "A": [
+        -2.3476570437805973,
+        -0.2517332954360318,
+        1.5707352561423822,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "B": [
+        -1.3742187234102956,
+        1.2389301902143843,
+        -1.572353406970473,
+        1.9041820476107,
+        -1.5706878338204409,
+        0.19654087532175812
+      ]
+    }
+  },
+  "macros": [
+    {
+      "macro": "support_slide_in",
+      "run_id": "support_slide_in_01::p0000",
+      "pose_nodes": 8,
+      "blended_corners": 7,
+      "duration_s": 4.94362174478616,
+      "node_durations_sum_s": 4.94362174478616,
+      "profile_sha256": "50bac6d04d9a1117b27dbb79e3d6ce985152adc050d9b3ac638ad950d0f5c8fb",
+      "independently_recomputed_global_bounds": {
+        "velocity_rad_s": 0.11999999999987995,
+        "acceleration_rad_s2": 0.09752107398433213,
+        "jerk_rad_s3": 1.0252332025572466
+      },
+      "C2_max_join_errors": {
+        "position": 0.0,
+        "first_parameter_derivative": 5.620140473272246e-14,
+        "second_parameter_derivative": 1.7983262911893382e-11
+      },
+      "max_milestone_error_rad": 1.4443570596498132e-15,
+      "max_rebuilt_q_sample_error_rad": 1.3322676295501878e-15,
+      "geometry_samples_checked": 185,
+      "fk_calls": 366,
+      "max_tcp_deviation_m": 5.433840376396285e-05,
+      "max_orientation_error_rad": 4.2146848510894035e-08
+    },
+    {
+      "macro": "A_exit_from_support",
+      "run_id": "A_exit_from_support_01::p0000",
+      "pose_nodes": 13,
+      "blended_corners": 12,
+      "duration_s": 8.789578391903554,
+      "node_durations_sum_s": 8.789578391903554,
+      "profile_sha256": "decb4de792bda24c952ee8c96c6504954ce636594c7ad8a7086d05a17744dddd",
+      "independently_recomputed_global_bounds": {
+        "velocity_rad_s": 0.11999999999987992,
+        "acceleration_rad_s2": 0.0634383876608999,
+        "jerk_rad_s3": 0.5799359664252999
+      },
+      "C2_max_join_errors": {
+        "position": 0.0,
+        "first_parameter_derivative": 7.205347429817266e-14,
+        "second_parameter_derivative": 3.403780771387096e-11
+      },
+      "max_milestone_error_rad": 1.5059797815742444e-15,
+      "max_rebuilt_q_sample_error_rad": 1.3322676295501878e-15,
+      "geometry_samples_checked": 273,
+      "fk_calls": 545,
+      "max_tcp_deviation_m": 4.6433102839557685e-05,
+      "max_orientation_error_rad": 0.0
+    },
+    {
+      "macro": "install_K1_slide",
+      "run_id": "install_K1_slide_01::p0000",
+      "pose_nodes": 10,
+      "blended_corners": 9,
+      "duration_s": 14.468955393381306,
+      "node_durations_sum_s": 14.468955393381306,
+      "profile_sha256": "395d8192f43e791c09934bf717d65cedfb1e2c33cbceba9b6495b189af73cf8b",
+      "independently_recomputed_global_bounds": {
+        "velocity_rad_s": 0.11999999999988,
+        "acceleration_rad_s2": 0.06896853622206064,
+        "jerk_rad_s3": 0.8595248843457973
+      },
+      "C2_max_join_errors": {
+        "position": 0.0,
+        "first_parameter_derivative": 3.2335245592207684e-14,
+        "second_parameter_derivative": 6.613613418310485e-12
+      },
+      "max_milestone_error_rad": 7.043575467574348e-16,
+      "max_rebuilt_q_sample_error_rad": 1.7763568394002505e-15,
+      "geometry_samples_checked": 450,
+      "fk_calls": 906,
+      "max_tcp_deviation_m": 5.8768409569382584e-05,
+      "max_orientation_error_rad": 4.2146848510894035e-08
+    },
+    {
+      "macro": "extract_support_motion",
+      "run_id": "extract_support_motion_01::p0000",
+      "pose_nodes": 8,
+      "blended_corners": 7,
+      "duration_s": 4.943621421258286,
+      "node_durations_sum_s": 4.943621421258286,
+      "profile_sha256": "800f9f1e0d5c217070af8c9e47be3a372eb10b85316036db870cbe7207e70127",
+      "independently_recomputed_global_bounds": {
+        "velocity_rad_s": 0.11999999999987997,
+        "acceleration_rad_s2": 0.09752306820015165,
+        "jerk_rad_s3": 1.0252272961702538
+      },
+      "C2_max_join_errors": {
+        "position": 0.0,
+        "first_parameter_derivative": 4.523271104709416e-14,
+        "second_parameter_derivative": 1.280717424394243e-11
+      },
+      "max_milestone_error_rad": 1.047382306668854e-15,
+      "max_rebuilt_q_sample_error_rad": 1.7763568394002505e-15,
+      "geometry_samples_checked": 185,
+      "fk_calls": 366,
+      "max_tcp_deviation_m": 5.433834550001817e-05,
+      "max_orientation_error_rad": 0.0
+    },
+    {
+      "macro": "close_gate_slide",
+      "run_id": "close_gate_slide_01::p0000",
+      "pose_nodes": 7,
+      "blended_corners": 6,
+      "duration_s": 4.035201347203104,
+      "node_durations_sum_s": 4.035201347203104,
+      "profile_sha256": "5e938ff1421838252e7d98df131802c077d6bf96dac2626347db23b6ef2e6341",
+      "independently_recomputed_global_bounds": {
+        "velocity_rad_s": 0.11999999999987998,
+        "acceleration_rad_s2": 0.09555201588575188,
+        "jerk_rad_s3": 0.9916473217449449
+      },
+      "C2_max_join_errors": {
+        "position": 0.0,
+        "first_parameter_derivative": 8.112843756721528e-14,
+        "second_parameter_derivative": 3.7169457099654755e-11
+      },
+      "max_milestone_error_rad": 8.308148362110449e-16,
+      "max_rebuilt_q_sample_error_rad": 8.881784197001252e-16,
+      "geometry_samples_checked": 112,
+      "fk_calls": 223,
+      "max_tcp_deviation_m": 3.952450302952245e-05,
+      "max_orientation_error_rad": 1.9082797281243954e-07
+    },
+    {
+      "macro": "close_gate_retreat",
+      "run_id": "close_gate_retreat_01::p0000",
+      "pose_nodes": 7,
+      "blended_corners": 6,
+      "duration_s": 4.035477481282691,
+      "node_durations_sum_s": 4.035477481282691,
+      "profile_sha256": "dfc11e83e1c332a3ab8394122a4e5622726a28929ab73add8f72d05fa3547215",
+      "independently_recomputed_global_bounds": {
+        "velocity_rad_s": 0.11999999999988,
+        "acceleration_rad_s2": 0.09557302864079228,
+        "jerk_rad_s3": 0.9920110598913232
+      },
+      "C2_max_join_errors": {
+        "position": 0.0,
+        "first_parameter_derivative": 6.947749615834543e-14,
+        "second_parameter_derivative": 4.6174066168375446e-11
+      },
+      "max_milestone_error_rad": 1.041481514324134e-15,
+      "max_rebuilt_q_sample_error_rad": 1.7763568394002505e-15,
+      "geometry_samples_checked": 112,
+      "fk_calls": 223,
+      "max_tcp_deviation_m": 3.956843888767073e-05,
+      "max_orientation_error_rad": 0.0
+    }
+  ],
+  "curve_macro_duration_sum_s": 41.2164557798151,
+  "TPG": {
+    "nodes": 390,
+    "edges": 753,
+    "nominal_makespan_s": 311.91364408961545,
+    "stale_schedule_flag": false,
+    "motion_conflict_queries": 1638,
+    "queries_involving_curved_nodes": 328,
+    "curved_cross_arm_pairs_covered_by_query_or_order": 6656,
+    "continuous_gate_edges": 23,
+    "all_continuous_run_gates": [
+      {
+        "run": "pick_support_approach::p0000",
+        "curved": false,
+        "members": 19,
+        "external_predecessors": 0,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "pick_support_contact::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "pick_support_lift::p0000",
+        "curved": false,
+        "members": 3,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "support_route_front::p0000",
+        "curved": false,
+        "members": 10,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "support_route_front::p0011",
+        "curved": false,
+        "members": 7,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "support_route_front::p0019",
+        "curved": false,
+        "members": 4,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "support_route_front::p0024",
+        "curved": false,
+        "members": 6,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "support_slide_in_01::p0000",
+        "curved": true,
+        "members": 8,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "A_exit_from_support_01::p0000",
+        "curved": true,
+        "members": 13,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "A_free_home::p0000",
+        "curved": false,
+        "members": 6,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "B_clear_fixture::p0000",
+        "curved": false,
+        "members": 9,
+        "external_predecessors": 13,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "B_clear_fixture::p0010",
+        "curved": false,
+        "members": 6,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "supply_K1_approach::p0000",
+        "curved": false,
+        "members": 3,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "supply_K1_contact::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "supply_K1_lift::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "deposit_K1_approach::p0000",
+        "curved": false,
+        "members": 7,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "deposit_K1_contact::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "deposit_K1_retreat::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 18,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "supplier_clear_K1::p0000",
+        "curved": false,
+        "members": 6,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "pick_K1_approach::p0000",
+        "curved": false,
+        "members": 17,
+        "external_predecessors": 4,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "pick_K1_lift::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "install_K1_approach::p0000",
+        "curved": false,
+        "members": 5,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "install_K1_approach::p0006",
+        "curved": false,
+        "members": 5,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "install_K1_slide_01::p0000",
+        "curved": true,
+        "members": 10,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "install_K1_retreat::p0000",
+        "curved": false,
+        "members": 5,
+        "external_predecessors": 5,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "supply_K2_approach::p0000",
+        "curved": false,
+        "members": 3,
+        "external_predecessors": 20,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "supply_K2_contact::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "supply_K2_lift::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "deposit_K2_approach::p0000",
+        "curved": false,
+        "members": 6,
+        "external_predecessors": 7,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "deposit_K2_contact::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "deposit_K2_retreat::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 28,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "supplier_clear_K2::p0000",
+        "curved": false,
+        "members": 6,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "pick_K2_approach::p0000",
+        "curved": false,
+        "members": 15,
+        "external_predecessors": 6,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "pick_K2_contact::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "pick_K2_lift::p0000",
+        "curved": false,
+        "members": 3,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "install_K2_approach::p0000",
+        "curved": false,
+        "members": 5,
+        "external_predecessors": 3,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "install_K2_contact::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "install_K2_retreat::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 3,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "remove_support_approach::p0000",
+        "curved": false,
+        "members": 8,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "remove_support_approach::p0009",
+        "curved": false,
+        "members": 6,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "extract_support_motion_01::p0000",
+        "curved": true,
+        "members": 8,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "return_support_approach::p0000",
+        "curved": false,
+        "members": 17,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "return_support_contact::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "return_support_retreat::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "pick_gate_approach::p0000",
+        "curved": false,
+        "members": 14,
+        "external_predecessors": 3,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "pick_gate_contact::p0000",
+        "curved": false,
+        "members": 2,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "pick_gate_lift::p0000",
+        "curved": false,
+        "members": 15,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "close_gate_approach::p0000",
+        "curved": false,
+        "members": 19,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "close_gate_slide_01::p0000",
+        "curved": true,
+        "members": 7,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "close_gate_retreat_01::p0000",
+        "curved": true,
+        "members": 7,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "B_final_home::p0000",
+        "curved": false,
+        "members": 7,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "B_final_home::p0008",
+        "curved": false,
+        "members": 6,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      },
+      {
+        "run": "B_final_home::p0015",
+        "curved": false,
+        "members": 5,
+        "external_predecessors": 1,
+        "all_acquired_before_entry": true
+      }
+    ],
+    "DAG_verified": true,
+    "original_task_and_arm_edges_retained": true
+  },
+  "full_nominal_rollout": {
+    "tested_samples": 5589,
+    "valid": true,
+    "world_state_reconstructed": true,
+    "waiting_poses_included": true
+  },
+  "limitations": [
+    "Curve FK/collision calls are verified from the real MotionPlanner evidence and frozen call path, not independently rerun.",
+    "Collision validation remains sampled, with no continuous-collision guarantee.",
+    "The original grasp and permanent-connection idealization remains.",
+    "Actual execution was accepted for this one measured run; arbitrary-delay and continuous-time collision guarantees are not established."
+  ],
+  "violations": [],
+  "updated_at_utc": "2026-11-04T16:51:55.773426+00:00",
+  "actual_curve_checks_passed": true,
+  "actual_file_hashes": {
+    "execution.json": "a53e522639746b99e12648c3150fbc8aecddba8bae92dc47e0887e9be9ef9611",
+    "execution_validation.json": "af90d928a25aea3ce364251c6809921441111403123aeca55f29e7468b605493",
+    "summary.json": "231e3aac5eb57c44ca4ce09501be70fa45d81553b164d0d7318388f9f186d4d0",
+    "pipeline_manifest.json": "743a74dc2fc02953e0c4eb2eaa95e95a4aa420d350585cab8cf4055324ebba09",
+    "tpg.json": "f10f8504015c39fae780f6dcb24f1e3de2179120b9c049942a48fbea6d736662"
+  },
+  "actual_curve_review": {
+    "scope": "Actual event timestamps and sampled measured joint configurations/velocities; reconstructed frozen command reference used only for cyclic-angle unwrapping. No independent repeat execution.",
+    "statistics": {
+      "curve_pose_nodes_observed": 53,
+      "internal_curve_handoffs": 47,
+      "same_frame_actual_handoffs": 47,
+      "velocity_samples_available": 47,
+      "near_zero_boundary_observations_below_0_01_rad_s": 0,
+      "boundary_speed_min_rad_s": 0.03251712513659323,
+      "boundary_speed_median_rad_s": 0.08684875680535298,
+      "boundary_speed_max_rad_s": 0.09877762603758042,
+      "max_nearest_velocity_sample_distance_s": 0.040000000000020464,
+      "max_post_event_q_sample_delay_s": 0.08000000000004093,
+      "min_observed_post_event_tangent_progress_rad": 0.002011010144201076,
+      "max_observed_post_event_perpendicular_error_rad": 0.0001972251708680737,
+      "boundaries_requiring_cyclic_measurement_unwrap": 7,
+      "required_macro_terminal_count": 6,
+      "terminals_observed_near_zero": 6,
+      "terminal_completion_margin_min_s": 0.05104460662612276,
+      "terminal_completion_margin_max_s": 0.07042160809471198,
+      "sampled_macro_peak_velocity_rad_s": 0.09904618322260628,
+      "max_sampled_macro_configuration_difference_rad": 0.0047542471619288484
+    },
+    "internal_boundaries": [
+      {
+        "arm": "B",
+        "from_node": "support_slide_in_01::p0000",
+        "to_node": "support_slide_in_02::p0000",
+        "completed_at_s": 57.280000000003355,
+        "next_started_at_s": 57.280000000003355,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 57.280000000003355,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.05647462829475961,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 57.280000000003355,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.004190925144068937,
+        "post_event_perpendicular_max_component_error_rad": 1.788799991615949e-05,
+        "max_measurement_wrap_correction_rad": 6.283185307179586
+      },
+      {
+        "arm": "B",
+        "from_node": "support_slide_in_02::p0000",
+        "to_node": "support_slide_in_03::p0000",
+        "completed_at_s": 57.720000000003424,
+        "next_started_at_s": 57.720000000003424,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 57.68000000000342,
+        "velocity_sample_distance_s": 0.04000000000000625,
+        "max_abs_measured_joint_speed_rad_s": 0.07516488096772542,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 57.78000000000343,
+        "post_event_sample_delay_s": 0.06000000000000938,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.01555191242523949,
+        "post_event_perpendicular_max_component_error_rad": 0.00011512241760016848,
+        "max_measurement_wrap_correction_rad": 6.283185307179586
+      },
+      {
+        "arm": "B",
+        "from_node": "support_slide_in_03::p0000",
+        "to_node": "support_slide_in_04::p0000",
+        "completed_at_s": 58.08000000000348,
+        "next_started_at_s": 58.08000000000348,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 58.08000000000348,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.09077782436775271,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 58.08000000000348,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.005846551254436396,
+        "post_event_perpendicular_max_component_error_rad": 3.524521051445563e-05,
+        "max_measurement_wrap_correction_rad": 6.283185307179587
+      },
+      {
+        "arm": "B",
+        "from_node": "support_slide_in_04::p0000",
+        "to_node": "support_slide_in_05::p0000",
+        "completed_at_s": 58.42000000000353,
+        "next_started_at_s": 58.42000000000353,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 58.38000000000353,
+        "velocity_sample_distance_s": 0.04000000000000625,
+        "max_abs_measured_joint_speed_rad_s": 0.09642113838457542,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 58.48000000000354,
+        "post_event_sample_delay_s": 0.06000000000000938,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.019587223396736065,
+        "post_event_perpendicular_max_component_error_rad": 0.0001833860364926585,
+        "max_measurement_wrap_correction_rad": 6.283185307179587
+      },
+      {
+        "arm": "B",
+        "from_node": "support_slide_in_05::p0000",
+        "to_node": "support_slide_in_06::p0000",
+        "completed_at_s": 58.74000000000358,
+        "next_started_at_s": 58.74000000000358,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 58.78000000000359,
+        "velocity_sample_distance_s": 0.04000000000000625,
+        "max_abs_measured_joint_speed_rad_s": 0.09572836676617782,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 58.78000000000359,
+        "post_event_sample_delay_s": 0.04000000000000625,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.01244866283335688,
+        "post_event_perpendicular_max_component_error_rad": 9.576619471672945e-05,
+        "max_measurement_wrap_correction_rad": 6.283185307179587
+      },
+      {
+        "arm": "B",
+        "from_node": "support_slide_in_06::p0000",
+        "to_node": "support_slide_in_07::p0000",
+        "completed_at_s": 59.10000000000364,
+        "next_started_at_s": 59.10000000000364,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 59.080000000003636,
+        "velocity_sample_distance_s": 0.020000000000003126,
+        "max_abs_measured_joint_speed_rad_s": 0.08733697978733831,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 59.18000000000365,
+        "post_event_sample_delay_s": 0.0800000000000125,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.017142030056759138,
+        "post_event_perpendicular_max_component_error_rad": 0.00014830730256316666,
+        "max_measurement_wrap_correction_rad": 6.283185307179586
+      },
+      {
+        "arm": "B",
+        "from_node": "support_slide_in_07::p0000",
+        "to_node": "support_slide_in_08::p0000",
+        "completed_at_s": 59.56000000000371,
+        "next_started_at_s": 59.56000000000371,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 59.580000000003714,
+        "velocity_sample_distance_s": 0.020000000000003126,
+        "max_abs_measured_joint_speed_rad_s": 0.06277542495038606,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 59.580000000003714,
+        "post_event_sample_delay_s": 0.020000000000003126,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.006803537640390686,
+        "post_event_perpendicular_max_component_error_rad": 3.0804720003647576e-05,
+        "max_measurement_wrap_correction_rad": 6.283185307179587
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_01::p0000",
+        "to_node": "A_exit_from_support_02::p0000",
+        "completed_at_s": 65.76000000000406,
+        "next_started_at_s": 65.76000000000406,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 65.78000000000405,
+        "velocity_sample_distance_s": 0.01999999999999602,
+        "max_abs_measured_joint_speed_rad_s": 0.03251712513659323,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 65.78000000000405,
+        "post_event_sample_delay_s": 0.01999999999999602,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.0039644786125846345,
+        "post_event_perpendicular_max_component_error_rad": 2.5697654606941876e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_02::p0000",
+        "to_node": "A_exit_from_support_03::p0000",
+        "completed_at_s": 66.30000000000395,
+        "next_started_at_s": 66.30000000000395,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 66.28000000000395,
+        "velocity_sample_distance_s": 0.01999999999999602,
+        "max_abs_measured_joint_speed_rad_s": 0.04437601335426595,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 66.38000000000393,
+        "post_event_sample_delay_s": 0.07999999999998408,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.010574396724767714,
+        "post_event_perpendicular_max_component_error_rad": 9.616872517562158e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_03::p0000",
+        "to_node": "A_exit_from_support_04::p0000",
+        "completed_at_s": 66.74000000000386,
+        "next_started_at_s": 66.74000000000386,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 66.78000000000385,
+        "velocity_sample_distance_s": 0.03999999999999204,
+        "max_abs_measured_joint_speed_rad_s": 0.06063366161538787,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 66.78000000000385,
+        "post_event_sample_delay_s": 0.03999999999999204,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.008927792002417964,
+        "post_event_perpendicular_max_component_error_rad": 7.25692051209018e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_04::p0000",
+        "to_node": "A_exit_from_support_05::p0000",
+        "completed_at_s": 67.12000000000378,
+        "next_started_at_s": 67.12000000000378,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 67.08000000000379,
+        "velocity_sample_distance_s": 0.03999999999999204,
+        "max_abs_measured_joint_speed_rad_s": 0.06933723353823598,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 67.18000000000377,
+        "post_event_sample_delay_s": 0.05999999999998806,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.013154242340714415,
+        "post_event_perpendicular_max_component_error_rad": 0.00012411128619380617,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_05::p0000",
+        "to_node": "A_exit_from_support_06::p0000",
+        "completed_at_s": 67.48000000000371,
+        "next_started_at_s": 67.48000000000371,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 67.48000000000371,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.08086392568924386,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 67.48000000000371,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.0060030038649306165,
+        "post_event_perpendicular_max_component_error_rad": 5.725964576270724e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_06::p0000",
+        "to_node": "A_exit_from_support_07::p0000",
+        "completed_at_s": 67.82000000000365,
+        "next_started_at_s": 67.82000000000365,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 67.78000000000365,
+        "velocity_sample_distance_s": 0.03999999999999204,
+        "max_abs_measured_joint_speed_rad_s": 0.08740676082452496,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 67.88000000000363,
+        "post_event_sample_delay_s": 0.05999999999998806,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.015340816677235365,
+        "post_event_perpendicular_max_component_error_rad": 0.00015277793932083096,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_07::p0000",
+        "to_node": "A_exit_from_support_08::p0000",
+        "completed_at_s": 68.16000000000358,
+        "next_started_at_s": 68.16000000000358,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 68.18000000000357,
+        "velocity_sample_distance_s": 0.01999999999999602,
+        "max_abs_measured_joint_speed_rad_s": 0.09441366863617387,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 68.18000000000357,
+        "post_event_sample_delay_s": 0.01999999999999602,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.008123885839039984,
+        "post_event_perpendicular_max_component_error_rad": 7.418563608165918e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_08::p0000",
+        "to_node": "A_exit_from_support_09::p0000",
+        "completed_at_s": 68.5200000000035,
+        "next_started_at_s": 68.5200000000035,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 68.48000000000351,
+        "velocity_sample_distance_s": 0.03999999999999204,
+        "max_abs_measured_joint_speed_rad_s": 0.09660971305239903,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 68.5800000000035,
+        "post_event_sample_delay_s": 0.05999999999998806,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.014979870705887358,
+        "post_event_perpendicular_max_component_error_rad": 0.00014405990654203695,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_09::p0000",
+        "to_node": "A_exit_from_support_10::p0000",
+        "completed_at_s": 68.90000000000343,
+        "next_started_at_s": 68.90000000000343,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 68.88000000000343,
+        "velocity_sample_distance_s": 0.01999999999999602,
+        "max_abs_measured_joint_speed_rad_s": 0.09684815469607247,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 68.98000000000341,
+        "post_event_sample_delay_s": 0.07999999999998408,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.01709529472125334,
+        "post_event_perpendicular_max_component_error_rad": 0.00016807809865459697,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_10::p0000",
+        "to_node": "A_exit_from_support_11::p0000",
+        "completed_at_s": 69.34000000000334,
+        "next_started_at_s": 69.34000000000334,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 69.38000000000334,
+        "velocity_sample_distance_s": 0.03999999999999204,
+        "max_abs_measured_joint_speed_rad_s": 0.0918793766324562,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 69.38000000000334,
+        "post_event_sample_delay_s": 0.03999999999999204,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.01169386061639504,
+        "post_event_perpendicular_max_component_error_rad": 0.00010108895740009761,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_11::p0000",
+        "to_node": "A_exit_from_support_12::p0000",
+        "completed_at_s": 69.84000000000324,
+        "next_started_at_s": 69.84000000000324,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 69.88000000000324,
+        "velocity_sample_distance_s": 0.03999999999999204,
+        "max_abs_measured_joint_speed_rad_s": 0.08100774229658629,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 69.88000000000324,
+        "post_event_sample_delay_s": 0.03999999999999204,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.009023359213136944,
+        "post_event_perpendicular_max_component_error_rad": 6.972070300283488e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "A",
+        "from_node": "A_exit_from_support_12::p0000",
+        "to_node": "A_exit_from_support_13::p0000",
+        "completed_at_s": 70.52000000000311,
+        "next_started_at_s": 70.52000000000311,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 70.48000000000312,
+        "velocity_sample_distance_s": 0.03999999999999204,
+        "max_abs_measured_joint_speed_rad_s": 0.062276010107927535,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 70.5800000000031,
+        "post_event_sample_delay_s": 0.05999999999998806,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.00819481181288804,
+        "post_event_perpendicular_max_component_error_rad": 5.421452237165431e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "install_K1_slide_01::p0000",
+        "to_node": "install_K1_slide_02::p0000",
+        "completed_at_s": 135.6599999999956,
+        "next_started_at_s": 135.6599999999956,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 135.6599999999956,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.053640910645712886,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 135.6599999999956,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.002011010144201076,
+        "post_event_perpendicular_max_component_error_rad": 1.4392822803641525e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "install_K1_slide_02::p0000",
+        "to_node": "install_K1_slide_03::p0000",
+        "completed_at_s": 136.87999999999622,
+        "next_started_at_s": 136.87999999999622,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 136.87999999999622,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.07658188923328954,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 136.87999999999622,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.004670442644453112,
+        "post_event_perpendicular_max_component_error_rad": 3.8193752544426357e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "install_K1_slide_03::p0000",
+        "to_node": "install_K1_slide_04::p0000",
+        "completed_at_s": 137.8399999999967,
+        "next_started_at_s": 137.8399999999967,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 137.8399999999967,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.090043741119998,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 137.8399999999967,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.0033742958155999233,
+        "post_event_perpendicular_max_component_error_rad": 4.287961923836014e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "install_K1_slide_04::p0000",
+        "to_node": "install_K1_slide_05::p0000",
+        "completed_at_s": 138.71999999999716,
+        "next_started_at_s": 138.71999999999716,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 138.71999999999716,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.09727533160339534,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 138.71999999999716,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.003943160810466137,
+        "post_event_perpendicular_max_component_error_rad": 5.5555295985128435e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "install_K1_slide_05::p0000",
+        "to_node": "install_K1_slide_06::p0000",
+        "completed_at_s": 139.5599999999976,
+        "next_started_at_s": 139.5599999999976,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 139.5599999999976,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.09877762603758042,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 139.5599999999976,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.00470293319301095,
+        "post_event_perpendicular_max_component_error_rad": 6.834125578460419e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "install_K1_slide_06::p0000",
+        "to_node": "install_K1_slide_07::p0000",
+        "completed_at_s": 140.379999999998,
+        "next_started_at_s": 140.379999999998,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 140.379999999998,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.09486248405776278,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 140.379999999998,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.0036390858343556924,
+        "post_event_perpendicular_max_component_error_rad": 6.415493007057699e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "install_K1_slide_07::p0000",
+        "to_node": "install_K1_slide_08::p0000",
+        "completed_at_s": 141.23999999999845,
+        "next_started_at_s": 141.23999999999845,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 141.23999999999845,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.08530501709148824,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 141.23999999999845,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.0053439653845581145,
+        "post_event_perpendicular_max_component_error_rad": 7.771425931387706e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "install_K1_slide_08::p0000",
+        "to_node": "install_K1_slide_09::p0000",
+        "completed_at_s": 142.1399999999989,
+        "next_started_at_s": 142.1399999999989,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 142.1399999999989,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.07037485189921704,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 142.1399999999989,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.002516432856529849,
+        "post_event_perpendicular_max_component_error_rad": 4.493173841697864e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "install_K1_slide_09::p0000",
+        "to_node": "install_K1_slide_10::p0000",
+        "completed_at_s": 143.25999999999948,
+        "next_started_at_s": 143.25999999999948,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 143.25999999999948,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.04751729648707683,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 143.25999999999948,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.0023994733724115127,
+        "post_event_perpendicular_max_component_error_rad": 2.7202161026448348e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "extract_support_motion_01::p0000",
+        "to_node": "extract_support_motion_02::p0000",
+        "completed_at_s": 220.82000000003916,
+        "next_started_at_s": 220.82000000003916,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 220.78000000003914,
+        "velocity_sample_distance_s": 0.040000000000020464,
+        "max_abs_measured_joint_speed_rad_s": 0.06373378914285241,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 220.8800000000392,
+        "post_event_sample_delay_s": 0.060000000000030695,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.010547688105889946,
+        "post_event_perpendicular_max_component_error_rad": 6.955789869055908e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "extract_support_motion_02::p0000",
+        "to_node": "extract_support_motion_03::p0000",
+        "completed_at_s": 221.2800000000394,
+        "next_started_at_s": 221.2800000000394,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 221.2800000000394,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.08773888975113903,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 221.2800000000394,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.005859811269218177,
+        "post_event_perpendicular_max_component_error_rad": 4.865784986334302e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "extract_support_motion_03::p0000",
+        "to_node": "extract_support_motion_04::p0000",
+        "completed_at_s": 221.64000000003958,
+        "next_started_at_s": 221.64000000003958,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 221.6800000000396,
+        "velocity_sample_distance_s": 0.040000000000020464,
+        "max_abs_measured_joint_speed_rad_s": 0.09632661080823705,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 221.6800000000396,
+        "post_event_sample_delay_s": 0.040000000000020464,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.014100271806324997,
+        "post_event_perpendicular_max_component_error_rad": 0.00012827616870492685,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "extract_support_motion_04::p0000",
+        "to_node": "extract_support_motion_05::p0000",
+        "completed_at_s": 221.98000000003975,
+        "next_started_at_s": 221.98000000003975,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 221.98000000003975,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.09589256161401617,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 221.98000000003975,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.007871106838500116,
+        "post_event_perpendicular_max_component_error_rad": 6.48857367963945e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "extract_support_motion_05::p0000",
+        "to_node": "extract_support_motion_06::p0000",
+        "completed_at_s": 222.30000000003992,
+        "next_started_at_s": 222.30000000003992,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 222.2800000000399,
+        "velocity_sample_distance_s": 0.020000000000010232,
+        "max_abs_measured_joint_speed_rad_s": 0.08992040567790435,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 222.38000000003996,
+        "post_event_sample_delay_s": 0.08000000000004093,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.02033530367142987,
+        "post_event_perpendicular_max_component_error_rad": 0.0001972251708680737,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "extract_support_motion_06::p0000",
+        "to_node": "extract_support_motion_07::p0000",
+        "completed_at_s": 222.6600000000401,
+        "next_started_at_s": 222.6600000000401,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 222.6800000000401,
+        "velocity_sample_distance_s": 0.020000000000010232,
+        "max_abs_measured_joint_speed_rad_s": 0.07411841839761196,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 222.6800000000401,
+        "post_event_sample_delay_s": 0.020000000000010232,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.007917206954278111,
+        "post_event_perpendicular_max_component_error_rad": 4.9140091546198174e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "extract_support_motion_07::p0000",
+        "to_node": "extract_support_motion_08::p0000",
+        "completed_at_s": 223.10000000004032,
+        "next_started_at_s": 223.10000000004032,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 223.08000000004031,
+        "velocity_sample_distance_s": 0.020000000000010232,
+        "max_abs_measured_joint_speed_rad_s": 0.05585820320938809,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 223.18000000004037,
+        "post_event_sample_delay_s": 0.08000000000004093,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.012197278868377242,
+        "post_event_perpendicular_max_component_error_rad": 7.04760312627813e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_slide_01::p0000",
+        "to_node": "close_gate_slide_02::p0000",
+        "completed_at_s": 292.5200000000239,
+        "next_started_at_s": 292.5200000000239,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 292.5200000000239,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.06883151682191062,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 292.5200000000239,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.003257865033441009,
+        "post_event_perpendicular_max_component_error_rad": 4.4454293548269546e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_slide_02::p0000",
+        "to_node": "close_gate_slide_03::p0000",
+        "completed_at_s": 292.92000000002355,
+        "next_started_at_s": 292.92000000002355,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 292.92000000002355,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.09055831974636759,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 292.92000000002355,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.00413703538773753,
+        "post_event_perpendicular_max_component_error_rad": 6.676007927192596e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_slide_03::p0000",
+        "to_node": "close_gate_slide_04::p0000",
+        "completed_at_s": 293.24000000002326,
+        "next_started_at_s": 293.24000000002326,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 293.24000000002326,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.09854091763903207,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 293.24000000002326,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.0034532993726489264,
+        "post_event_perpendicular_max_component_error_rad": 6.860338643128192e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_slide_04::p0000",
+        "to_node": "close_gate_slide_05::p0000",
+        "completed_at_s": 293.56000000002297,
+        "next_started_at_s": 293.56000000002297,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 293.56000000002297,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.09646377352014258,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 293.56000000002297,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.005243193529795226,
+        "post_event_perpendicular_max_component_error_rad": 8.314354944392258e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_slide_05::p0000",
+        "to_node": "close_gate_slide_06::p0000",
+        "completed_at_s": 293.8800000000227,
+        "next_started_at_s": 293.8800000000227,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 293.8800000000227,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.08457865697003485,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 293.8800000000227,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.004717951642042,
+        "post_event_perpendicular_max_component_error_rad": 6.927984979504098e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_slide_06::p0000",
+        "to_node": "close_gate_slide_07::p0000",
+        "completed_at_s": 294.26000000002233,
+        "next_started_at_s": 294.26000000002233,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 294.26000000002233,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.06077986772716857,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 294.26000000002233,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.003225709287711588,
+        "post_event_perpendicular_max_component_error_rad": 4.10552821930013e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_retreat_01::p0000",
+        "to_node": "close_gate_retreat_02::p0000",
+        "completed_at_s": 296.86000000001997,
+        "next_started_at_s": 296.86000000001997,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 296.86000000001997,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.0640703722845154,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 296.86000000001997,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.0028769866120678562,
+        "post_event_perpendicular_max_component_error_rad": 3.7558578100766946e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_retreat_02::p0000",
+        "to_node": "close_gate_retreat_03::p0000",
+        "completed_at_s": 297.2400000000196,
+        "next_started_at_s": 297.2400000000196,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 297.2400000000196,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.08684875680535298,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 297.2400000000196,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.003614722008939259,
+        "post_event_perpendicular_max_component_error_rad": 5.871127093176197e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_retreat_03::p0000",
+        "to_node": "close_gate_retreat_04::p0000",
+        "completed_at_s": 297.56000000001933,
+        "next_started_at_s": 297.56000000001933,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 297.56000000001933,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.09737230432980445,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 297.56000000001933,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.00416320052921335,
+        "post_event_perpendicular_max_component_error_rad": 7.217663626896196e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_retreat_04::p0000",
+        "to_node": "close_gate_retreat_05::p0000",
+        "completed_at_s": 297.86000000001906,
+        "next_started_at_s": 297.86000000001906,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 297.86000000001906,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.09821393773773886,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 297.86000000001906,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.003192166686157869,
+        "post_event_perpendicular_max_component_error_rad": 6.625921127367167e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_retreat_05::p0000",
+        "to_node": "close_gate_retreat_06::p0000",
+        "completed_at_s": 298.20000000001875,
+        "next_started_at_s": 298.20000000001875,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 298.20000000001875,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.088563389006551,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 298.20000000001875,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.004634604246150026,
+        "post_event_perpendicular_max_component_error_rad": 7.371155158447358e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      },
+      {
+        "arm": "B",
+        "from_node": "close_gate_retreat_06::p0000",
+        "to_node": "close_gate_retreat_07::p0000",
+        "completed_at_s": 298.6000000000184,
+        "next_started_at_s": 298.6000000000184,
+        "actual_event_gap_s": 0.0,
+        "nearest_velocity_sample_time_s": 298.6000000000184,
+        "velocity_sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.06568198171096838,
+        "near_zero_below_0_01_rad_s": false,
+        "post_event_q_sample_time_s": 298.6000000000184,
+        "post_event_sample_delay_s": 0.0,
+        "post_event_unwrapped_signed_tangent_progress_rad": 0.0033942124014829486,
+        "post_event_perpendicular_max_component_error_rad": 4.823409908554595e-05,
+        "max_measurement_wrap_correction_rad": 0.0
+      }
+    ],
+    "required_terminals": [
+      {
+        "node": "support_slide_in_08::p0000",
+        "arm": "B",
+        "completed_at_s": 60.88000000000392,
+        "planned_profile_end_at_s": 60.82362174478929,
+        "completion_after_planned_profile_end_s": 0.056378255214621475,
+        "nearest_velocity_sample_time_s": 60.88000000000392,
+        "sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.00010137084639748498,
+        "observed_near_zero": true,
+        "boundary_role": "required_macro_endpoint_settling; geometric or semantic next operation may follow in same dispatcher frame"
+      },
+      {
+        "node": "A_exit_from_support_13::p0000",
+        "arm": "A",
+        "completed_at_s": 72.78000000000266,
+        "planned_profile_end_at_s": 72.70957839190794,
+        "completion_after_planned_profile_end_s": 0.07042160809471198,
+        "nearest_velocity_sample_time_s": 72.78000000000266,
+        "sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 2.5342658749375702e-05,
+        "observed_near_zero": true,
+        "boundary_role": "required_macro_endpoint_settling; geometric or semantic next operation may follow in same dispatcher frame"
+      },
+      {
+        "node": "install_K1_slide_10::p0000",
+        "arm": "B",
+        "completed_at_s": 146.52000000000115,
+        "planned_profile_end_at_s": 146.468955393375,
+        "completion_after_planned_profile_end_s": 0.05104460662612276,
+        "nearest_velocity_sample_time_s": 146.52000000000115,
+        "sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 1.2806475602139458e-05,
+        "observed_near_zero": true,
+        "boundary_role": "required_macro_endpoint_settling; geometric or semantic next operation may follow in same dispatcher frame"
+      },
+      {
+        "node": "extract_support_motion_08::p0000",
+        "arm": "B",
+        "completed_at_s": 224.420000000041,
+        "planned_profile_end_at_s": 224.36362142129673,
+        "completion_after_planned_profile_end_s": 0.05637857874427166,
+        "nearest_velocity_sample_time_s": 224.38000000004098,
+        "sample_distance_s": 0.040000000000020464,
+        "max_abs_measured_joint_speed_rad_s": 0.00019950707884258315,
+        "observed_near_zero": true,
+        "boundary_role": "required_macro_endpoint_settling; geometric or semantic next operation may follow in same dispatcher frame"
+      },
+      {
+        "node": "close_gate_slide_07::p0000",
+        "arm": "B",
+        "completed_at_s": 295.36000000002133,
+        "planned_profile_end_at_s": 295.29520134722816,
+        "completion_after_planned_profile_end_s": 0.06479865279316677,
+        "nearest_velocity_sample_time_s": 295.36000000002133,
+        "sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.00011679007369480429,
+        "observed_near_zero": true,
+        "boundary_role": "required_macro_endpoint_settling; geometric or semantic next operation may follow in same dispatcher frame"
+      },
+      {
+        "node": "close_gate_retreat_07::p0000",
+        "arm": "B",
+        "completed_at_s": 299.7800000000173,
+        "planned_profile_end_at_s": 299.7154774813037,
+        "completion_after_planned_profile_end_s": 0.06452251871357984,
+        "nearest_velocity_sample_time_s": 299.7800000000173,
+        "sample_distance_s": 0.0,
+        "max_abs_measured_joint_speed_rad_s": 0.00011499149898897705,
+        "observed_near_zero": true,
+        "boundary_role": "required_macro_endpoint_settling; geometric or semantic next operation may follow in same dispatcher frame"
+      }
+    ],
+    "macros": [
+      {
+        "macro_run_id": "support_slide_in_01::p0000",
+        "arm": "B",
+        "actual_start_s": 55.880000000003136,
+        "actual_end_s": 60.88000000000392,
+        "actual_duration_s": 5.000000000000782,
+        "planned_profile_duration_s": 4.94362174478616,
+        "actual_trace_samples": 51,
+        "max_abs_sampled_joint_velocity_rad_s": 0.09761519546003578,
+        "max_wrapped_configuration_difference_from_reconstructed_command_rad": 0.004679702542357944,
+        "command_reference_scope": "Reconstructed from the frozen curve and logged macro entry; actual joint target commands were not separately logged."
+      },
+      {
+        "macro_run_id": "A_exit_from_support_01::p0000",
+        "arm": "A",
+        "actual_start_s": 63.92000000000439,
+        "actual_end_s": 72.78000000000266,
+        "actual_duration_s": 8.859999999998266,
+        "planned_profile_duration_s": 8.789578391903554,
+        "actual_trace_samples": 89,
+        "max_abs_sampled_joint_velocity_rad_s": 0.09753091227828718,
+        "max_wrapped_configuration_difference_from_reconstructed_command_rad": 0.004681492230401263,
+        "command_reference_scope": "Reconstructed from the frozen curve and logged macro entry; actual joint target commands were not separately logged."
+      },
+      {
+        "macro_run_id": "install_K1_slide_01::p0000",
+        "arm": "B",
+        "actual_start_s": 131.99999999999372,
+        "actual_end_s": 146.52000000000115,
+        "actual_duration_s": 14.520000000007428,
+        "planned_profile_duration_s": 14.468955393381306,
+        "actual_trace_samples": 727,
+        "max_abs_sampled_joint_velocity_rad_s": 0.09878442876651007,
+        "max_wrapped_configuration_difference_from_reconstructed_command_rad": 0.004741184812681488,
+        "command_reference_scope": "Reconstructed from the frozen curve and logged macro entry; actual joint target commands were not separately logged."
+      },
+      {
+        "macro_run_id": "extract_support_motion_01::p0000",
+        "arm": "B",
+        "actual_start_s": 219.42000000003844,
+        "actual_end_s": 224.420000000041,
+        "actual_duration_s": 5.000000000002558,
+        "planned_profile_duration_s": 4.943621421258286,
+        "actual_trace_samples": 50,
+        "max_abs_sampled_joint_velocity_rad_s": 0.09756181416326073,
+        "max_wrapped_configuration_difference_from_reconstructed_command_rad": 0.004674789181417172,
+        "command_reference_scope": "Reconstructed from the frozen curve and logged macro entry; actual joint target commands were not separately logged."
+      },
+      {
+        "macro_run_id": "close_gate_slide_01::p0000",
+        "arm": "B",
+        "actual_start_s": 291.26000000002506,
+        "actual_end_s": 295.36000000002133,
+        "actual_duration_s": 4.099999999996271,
+        "planned_profile_duration_s": 4.035201347203104,
+        "actual_trace_samples": 206,
+        "max_abs_sampled_joint_velocity_rad_s": 0.0990322205643304,
+        "max_wrapped_configuration_difference_from_reconstructed_command_rad": 0.00475358625090494,
+        "command_reference_scope": "Reconstructed from the frozen curve and logged macro entry; actual joint target commands were not separately logged."
+      },
+      {
+        "macro_run_id": "close_gate_retreat_01::p0000",
+        "arm": "B",
+        "actual_start_s": 295.68000000002104,
+        "actual_end_s": 299.7800000000173,
+        "actual_duration_s": 4.099999999996271,
+        "planned_profile_duration_s": 4.035477481282691,
+        "actual_trace_samples": 206,
+        "max_abs_sampled_joint_velocity_rad_s": 0.09904618322260628,
+        "max_wrapped_configuration_difference_from_reconstructed_command_rad": 0.0047542471619288484,
+        "command_reference_scope": "Reconstructed from the frozen curve and logged macro entry; actual joint target commands were not separately logged."
+      }
+    ],
+    "actual_metrics": {
+      "makespan_s": 317.0800000000016,
+      "completed_nodes": 390,
+      "graph_edges_checked": 753,
+      "max_goal_position_error_m": 0.002028204598592008,
+      "max_goal_orientation_error_rad": 0.007480002761534646,
+      "controller_reported_peak_tracking_rad": 0.036796000825348764,
+      "controller_reported_peak_joint_velocity_rad_s": 0.5178579661803462,
+      "assembly_contact_audit": {
+        "enabled": true,
+        "intervals": [
+          {
+            "arm": "B",
+            "start": 122.91999999999268,
+            "end": 161.58000000000885,
+            "sample_count": 1934
+          },
+          {
+            "arm": "B",
+            "start": 188.8200000000228,
+            "end": 205.98000000003157,
+            "sample_count": 859
+          },
+          {
+            "arm": "B",
+            "start": 277.4800000000376,
+            "end": 299.8800000000172,
+            "sample_count": 1121
+          }
+        ],
+        "samples_checked": {
+          "A": 0,
+          "B": 3914
+        },
+        "max_force_N": {
+          "A": null,
+          "B": 10.010394289132316
+        },
+        "max_torque_Nm": {
+          "A": null,
+          "B": 0.9405658000543979
+        }
+      },
+      "permanent_load_test_observed_duration_s": 0.5000000000002558,
+      "final_state": {
+        "support_returned": true,
+        "support_unloaded": true,
+        "gate_closed": true,
+        "permanent_verified": true,
+        "held": {
+          "A": null,
+          "B": null
+        },
+        "installed": {
+          "Gate": true,
+          "K2": true,
+          "K1": true
+        }
+      },
+      "main_scene_promoted": true
+    },
+    "frozen_source_hashes_rechecked": true,
+    "planning_evidence_unchanged_except_progress_manifest": true,
+    "violations": [],
+    "limitations": [
+      "47 zero event gaps are exact logged scheduler observations; positive boundary speed is based on the nearest actual velocity sample, at most 40 ms away.",
+      "The first post-event q sample may be up to 80 ms later, and same-time sensing occurs after actuation; this supports no observed plane-crossing anomaly, not a direct per-event acknowledgment-pose certificate.",
+      "Measured q is unwrapped against a command reference reconstructed from the frozen profile and actual macro start. Actual targets were not separately logged.",
+      "Six macro endpoints intentionally retain rest and settling; nonzero velocity is required only at accepted internal pass-through milestones.",
+      "The planning certificate remains sampled and nominal. This audit does not prove collision safety for arbitrary tracking delay, unobserved dynamics, or all continuous times.",
+      "No continuous measured acceleration or jerk limit is inferred from these velocity samples."
+    ]
+  }
+}

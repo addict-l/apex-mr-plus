@@ -1,0 +1,116 @@
+{
+  "parts": [
+    {
+      "mass": 0.18,
+      "source": [
+        -0.53,
+        -0.36,
+        0.804
+      ],
+      "insertion_force": 0.0,
+      "goal": [
+        0.24,
+        0.2,
+        0.97
+      ],
+      "size": [
+        0.12,
+        0.14,
+        0.076
+      ],
+      "dependencies": {},
+      "id": "K1"
+    },
+    {
+      "mass": 0.14,
+      "source": [
+        -0.38,
+        -0.36,
+        0.806
+      ],
+      "insertion_force": 8.0,
+      "goal": [
+        0.24,
+        0.2,
+        1.096
+      ],
+      "size": [
+        0.1,
+        0.18,
+        0.08
+      ],
+      "dependencies": {},
+      "id": "K2"
+    },
+    {
+      "mass": 0.12,
+      "source": [
+        0.48,
+        -0.35,
+        0.851
+      ],
+      "insertion_force": 0.0,
+      "goal": [
+        0.06,
+        0.105,
+        0.857
+      ],
+      "size": [
+        0.174,
+        0.012,
+        0.17
+      ],
+      "dependencies": {},
+      "id": "Gate"
+    },
+    {
+      "mass": 0.45,
+      "source": [
+        0.04,
+        0.2,
+        1.032
+      ],
+      "insertion_force": 0.0,
+      "goal": [
+        0.04,
+        0.2,
+        1.032
+      ],
+      "size": [
+        0.52,
+        0.16,
+        0.04
+      ],
+      "dependencies": {},
+      "id": "Bridge"
+    },
+    {
+      "mass": 2.36,
+      "source": [
+        0.48,
+        0.43,
+        0.76
+      ],
+      "goal": [
+        0.48,
+        0.43,
+        0.76
+      ],
+      "size": [
+        0.14,
+        0.35,
+        0.24
+      ],
+      "id": "TemporarySupport",
+      "dependencies": {}
+    }
+  ],
+  "physics": {
+    "grasp": "ideal dynamic force-sensor constraints",
+    "jack": "compound ballast, dynamic prismatic lift and load sensor",
+    "initial_bridge": "passive pitch hinge with 0.35Nm friction brake and actual A-pad contact",
+    "connections": "ideal rigid snap at measured pose; no LEGO deformation",
+    "engine": "Bullet"
+  },
+  "scene_signature": "1901edca789ad117b053372c92d7524b88b658090cbc141ba95837ab7263c24f"
+}

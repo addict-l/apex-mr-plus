@@ -1,0 +1,1170 @@
+{
+  "source": "known_complete_reference",
+  "path_count": 101,
+  "planner_query_count": 6,
+  "unchanged_reference_path_count": 95,
+  "refinements": [
+    {
+      "task_id": "support_route_front",
+      "baseline_cost": 15.854333821300386,
+      "selected_cost": 8.8044641273771,
+      "fixed_endpoints": true,
+      "algorithm": "RRTConnect",
+      "path_source": "rrt_connect",
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 8.804464127377088,
+            "exact": true,
+            "raw_states": 6,
+            "raw_cost": 8.804464127377088,
+            "planner": {
+              "edges": 7.0,
+              "vertices": 8.0
+            },
+            "attempt": 1
+          }
+        ],
+        "selected_path_backend": "simOMPL",
+        "path_source": "rrt_connect",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 7.0,
+          "vertices": 8.0
+        },
+        "wall_time_s": 13.670000000000002,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 1,
+        "optimized_cost": 8.8044641273771,
+        "joint_bounds": [
+          [
+            -1.7704892047189642,
+            3.969670857751262
+          ],
+          [
+            -1.4215567814146186,
+            1.077561159449217
+          ],
+          [
+            0.8034729177455351,
+            3.3100752054719003
+          ],
+          [
+            0.05307416874176263,
+            2.4605585257638785
+          ],
+          [
+            -1.571921788381667,
+            3.7711034943990676
+          ],
+          [
+            1.9415926509739545,
+            4.341592708386516
+          ]
+        ],
+        "reference_candidates": [
+          {
+            "cost": 15.854333821300386,
+            "source": "known_complete_reference:support_route_front",
+            "index": 1,
+            "validated_states": 3179,
+            "valid": true
+          }
+        ],
+        "collision_checks": 7150,
+        "search_wall_time_s": 4.295999999999999,
+        "shortcut_collision_checks": 287,
+        "algorithm": "RRTConnect",
+        "backend": "simOMPL",
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 0,
+        "collision_check_step_rad": 0.005,
+        "solve_collision_checks": 1918,
+        "raw_cost": 8.804464127377088,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "roadmap_reused": false,
+        "shortcut_wall_time_s": 0.6039999999999992,
+        "selected_candidate": 1,
+        "direct_attempted": false,
+        "solve_budget_s": 3.0,
+        "validated_states": 1764,
+        "reference_shortcut": {
+          "accepted": 0,
+          "budget_exhausted": true,
+          "trials": 1
+        },
+        "raw_states": 6,
+        "execution_states": 254,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "task_id": "support_high_approach",
+      "baseline_cost": 3.322124282049992,
+      "selected_cost": 1.0832411137633198,
+      "fixed_endpoints": true,
+      "algorithm": "ValidatedReferencePath",
+      "path_source": "validated_reference_candidate",
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 2.4133137157473747,
+            "exact": true,
+            "raw_states": 3,
+            "raw_cost": 2.4133137157473747,
+            "planner": {
+              "edges": 5.0,
+              "vertices": 6.0
+            },
+            "attempt": 1
+          }
+        ],
+        "selected_path_backend": "simulator_geometry",
+        "path_source": "validated_reference_candidate",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 5.0,
+          "vertices": 6.0
+        },
+        "wall_time_s": 4.874000000000002,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 11,
+        "optimized_cost": 1.0832411137633198,
+        "joint_bounds": [
+          [
+            -2.2956956819298986,
+            0.6295107952810357
+          ],
+          [
+            -1.322438840550783,
+            1.5445584088233817
+          ],
+          [
+            0.4074961217119377,
+            3.203472917745535
+          ],
+          [
+            -0.010461916259825399,
+            2.4605585257638785
+          ],
+          [
+            0.8458969406863235,
+            3.7711034943990676
+          ],
+          [
+            1.9415926359930211,
+            4.341592650973954
+          ]
+        ],
+        "solve_budget_s": 3.0,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "search_wall_time_s": 3.164999999999999,
+        "shortcut_collision_checks": 288,
+        "algorithm": "ValidatedReferencePath",
+        "backend": "simOMPL",
+        "selected_reference_candidate": 1,
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 1,
+        "solve_collision_checks": 1308,
+        "raw_cost": 3.322124282049992,
+        "collision_check_step_rad": 0.005,
+        "roadmap_reused": false,
+        "collision_checks": 2490,
+        "shortcut_wall_time_s": 0.6000000000000014,
+        "direct_attempted": false,
+        "reference_shortcut": {
+          "accepted": 1,
+          "budget_exhausted": true,
+          "trials": 11
+        },
+        "validated_states": 219,
+        "execution_states": 33,
+        "raw_states": 97,
+        "reference_candidates": [
+          {
+            "cost": 3.322124282049992,
+            "source": "known_complete_reference:support_high_approach",
+            "index": 1,
+            "validated_states": 673,
+            "valid": true
+          }
+        ],
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "task_id": "B_clear_fixture",
+      "baseline_cost": 6.037829322619864,
+      "selected_cost": 6.037829322619864,
+      "fixed_endpoints": true,
+      "algorithm": "ValidatedReferencePath",
+      "path_source": "validated_reference_candidate",
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 6.744940494546833,
+            "exact": true,
+            "raw_states": 4,
+            "raw_cost": 6.744940494546833,
+            "planner": {
+              "edges": 4.0,
+              "vertices": 5.0
+            },
+            "attempt": 1
+          }
+        ],
+        "selected_path_backend": "simulator_geometry",
+        "path_source": "validated_reference_candidate",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 4.0,
+          "vertices": 5.0
+        },
+        "wall_time_s": 7.609000000000002,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 2,
+        "optimized_cost": 6.037829322619864,
+        "joint_bounds": [
+          [
+            -2.6018425115070416,
+            -0.17421872341029565
+          ],
+          [
+            -0.9010836742004937,
+            2.4389301902143843
+          ],
+          [
+            -2.772353406970473,
+            3.1699457305248666
+          ],
+          [
+            -0.32726940646017677,
+            3.1041820476107
+          ],
+          [
+            -2.770687833820441,
+            2.9397501250027886
+          ],
+          [
+            -1.0034591246782418,
+            4.341592652826244
+          ]
+        ],
+        "solve_budget_s": 3.0,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "search_wall_time_s": 2.6279999999999966,
+        "shortcut_collision_checks": 135,
+        "algorithm": "ValidatedReferencePath",
+        "backend": "simOMPL",
+        "selected_reference_candidate": 1,
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 0,
+        "solve_collision_checks": 886,
+        "raw_cost": 6.037829322619864,
+        "collision_check_step_rad": 0.005,
+        "roadmap_reused": false,
+        "collision_checks": 3461,
+        "shortcut_wall_time_s": 0.6049999999999969,
+        "direct_attempted": false,
+        "reference_shortcut": {
+          "accepted": 0,
+          "budget_exhausted": true,
+          "trials": 2
+        },
+        "validated_states": 1219,
+        "execution_states": 175,
+        "raw_states": 175,
+        "reference_candidates": [
+          {
+            "cost": 6.037829322619864,
+            "source": "known_complete_reference:B_clear_fixture",
+            "index": 1,
+            "validated_states": 1219,
+            "valid": true
+          }
+        ],
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "task_id": "install_K1_approach",
+      "baseline_cost": 3.725532037228156,
+      "selected_cost": 3.1927597001457273,
+      "fixed_endpoints": true,
+      "algorithm": "RRTConnect",
+      "path_source": "rrt_connect",
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 3.1927597001457264,
+            "exact": true,
+            "raw_states": 3,
+            "raw_cost": 3.1927597001457264,
+            "planner": {
+              "edges": 3.0,
+              "vertices": 4.0
+            },
+            "attempt": 1
+          },
+          {
+            "exact": false,
+            "planner": {
+              "edges": 2.0,
+              "vertices": 4.0
+            },
+            "attempt": 2
+          }
+        ],
+        "selected_path_backend": "simOMPL",
+        "path_source": "rrt_connect",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 2.0,
+          "vertices": 4.0
+        },
+        "wall_time_s": 6.438000000000002,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 2,
+        "optimized_cost": 3.1927597001457273,
+        "joint_bounds": [
+          [
+            -2.680151414512278,
+            0.28632024144698354
+          ],
+          [
+            -1.4615476575539113,
+            1.9396398187064767
+          ],
+          [
+            -0.05563556585359497,
+            3.5747962800308795
+          ],
+          [
+            -0.17165598766022305,
+            2.4575882541922294
+          ],
+          [
+            0.4614413302163496,
+            3.42791281763974
+          ],
+          [
+            -2.770796282512066,
+            -0.37079625035672925
+          ]
+        ],
+        "reference_candidates": [
+          {
+            "cost": 3.725532037228156,
+            "source": "known_complete_reference:install_K1_approach",
+            "index": 1,
+            "validated_states": 757,
+            "valid": true
+          }
+        ],
+        "collision_checks": 3479,
+        "search_wall_time_s": 3.855000000000004,
+        "shortcut_collision_checks": 352,
+        "algorithm": "RRTConnect",
+        "backend": "simOMPL",
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 0,
+        "collision_check_step_rad": 0.005,
+        "solve_collision_checks": 1727,
+        "raw_cost": 3.1927597001457264,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "roadmap_reused": false,
+        "shortcut_wall_time_s": 0.6000000000000014,
+        "selected_candidate": 1,
+        "direct_attempted": false,
+        "solve_budget_s": 3.0,
+        "validated_states": 641,
+        "reference_shortcut": {
+          "accepted": 0,
+          "budget_exhausted": true,
+          "trials": 2
+        },
+        "raw_states": 3,
+        "execution_states": 94,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "task_id": "remove_support_approach",
+      "baseline_cost": 4.958442259389031,
+      "selected_cost": 4.944271856227576,
+      "fixed_endpoints": true,
+      "algorithm": "RRTConnect",
+      "path_source": "rrt_connect",
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 4.944271856227569,
+            "exact": true,
+            "raw_states": 4,
+            "raw_cost": 4.944271856227569,
+            "planner": {
+              "edges": 5.0,
+              "vertices": 6.0
+            },
+            "attempt": 1
+          }
+        ],
+        "selected_path_backend": "simOMPL",
+        "path_source": "rrt_connect",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 5.0,
+          "vertices": 6.0
+        },
+        "wall_time_s": 7.186,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 1,
+        "optimized_cost": 4.944271856227576,
+        "joint_bounds": [
+          [
+            -3.160480166941494,
+            -0.20184253557123388
+          ],
+          [
+            -1.2012572134561563,
+            1.4989163063592055
+          ],
+          [
+            -0.049056037850358614,
+            3.1699457013062533
+          ],
+          [
+            -0.7788904980227974,
+            2.0727307347673496
+          ],
+          [
+            -2.770796316381624,
+            2.9397500453339385
+          ],
+          [
+            -4.341591982164824,
+            0.8103162183762285
+          ]
+        ],
+        "reference_candidates": [
+          {
+            "cost": 4.958442259389031,
+            "source": "known_complete_reference:remove_support_approach",
+            "index": 1,
+            "validated_states": 1002,
+            "valid": true
+          }
+        ],
+        "collision_checks": 3413,
+        "search_wall_time_s": 2.992999999999995,
+        "shortcut_collision_checks": 345,
+        "algorithm": "RRTConnect",
+        "backend": "simOMPL",
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 0,
+        "collision_check_step_rad": 0.005,
+        "solve_collision_checks": 1072,
+        "raw_cost": 4.944271856227569,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "roadmap_reused": false,
+        "shortcut_wall_time_s": 0.6029999999999944,
+        "selected_candidate": 1,
+        "direct_attempted": false,
+        "solve_budget_s": 3.0,
+        "validated_states": 992,
+        "reference_shortcut": {
+          "accepted": 0,
+          "budget_exhausted": true,
+          "trials": 1
+        },
+        "raw_states": 4,
+        "execution_states": 144,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "task_id": "B_final_home",
+      "baseline_cost": 6.2516671455109565,
+      "selected_cost": 6.2516671455109565,
+      "fixed_endpoints": true,
+      "algorithm": "ValidatedReferencePath",
+      "path_source": "validated_reference_candidate",
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 8.2344265319041,
+            "exact": true,
+            "raw_states": 5,
+            "raw_cost": 8.2344265319041,
+            "planner": {
+              "edges": 5.0,
+              "vertices": 6.0
+            },
+            "attempt": 1
+          }
+        ],
+        "selected_path_backend": "simulator_geometry",
+        "path_source": "validated_reference_candidate",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 5.0,
+          "vertices": 6.0
+        },
+        "wall_time_s": 8.403999999999996,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 2,
+        "optimized_cost": 6.2516671455109565,
+        "joint_bounds": [
+          [
+            -2.6059933274189944,
+            -0.17421872341029565
+          ],
+          [
+            -0.4634103518962446,
+            2.4389301902143843
+          ],
+          [
+            -2.772353406970473,
+            2.2676055340729513
+          ],
+          [
+            0.1373962579722312,
+            3.1041820476107
+          ],
+          [
+            -4.176789659279244,
+            -0.3706878338204409
+          ],
+          [
+            -2.770797535002412,
+            1.396540875321758
+          ]
+        ],
+        "solve_budget_s": 3.0,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "search_wall_time_s": 3.8930000000000007,
+        "shortcut_collision_checks": 302,
+        "algorithm": "ValidatedReferencePath",
+        "backend": "simOMPL",
+        "selected_reference_candidate": 1,
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 0,
+        "solve_collision_checks": 1715,
+        "raw_cost": 6.2516671455109565,
+        "collision_check_step_rad": 0.005,
+        "roadmap_reused": false,
+        "collision_checks": 4541,
+        "shortcut_wall_time_s": 0.6009999999999991,
+        "direct_attempted": false,
+        "reference_shortcut": {
+          "accepted": 0,
+          "budget_exhausted": true,
+          "trials": 2
+        },
+        "validated_states": 1261,
+        "execution_states": 181,
+        "raw_states": 181,
+        "reference_candidates": [
+          {
+            "cost": 6.2516671455109565,
+            "source": "known_complete_reference:B_final_home",
+            "index": 1,
+            "validated_states": 1261,
+            "valid": true
+          }
+        ],
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    }
+  ],
+  "rrt_path_count": 3,
+  "direct_path_count": 0,
+  "reference_path_count": 3,
+  "ompl_solve_call_count": 7,
+  "calls": [
+    {
+      "type": "RRTConnect",
+      "label": "support_route_front",
+      "ok": true,
+      "cached": false,
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 8.804464127377088,
+            "exact": true,
+            "raw_states": 6,
+            "raw_cost": 8.804464127377088,
+            "planner": {
+              "edges": 7.0,
+              "vertices": 8.0
+            },
+            "attempt": 1
+          }
+        ],
+        "selected_path_backend": "simOMPL",
+        "path_source": "rrt_connect",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 7.0,
+          "vertices": 8.0
+        },
+        "wall_time_s": 13.670000000000002,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 1,
+        "optimized_cost": 8.8044641273771,
+        "joint_bounds": [
+          [
+            -1.7704892047189642,
+            3.969670857751262
+          ],
+          [
+            -1.4215567814146186,
+            1.077561159449217
+          ],
+          [
+            0.8034729177455351,
+            3.3100752054719003
+          ],
+          [
+            0.05307416874176263,
+            2.4605585257638785
+          ],
+          [
+            -1.571921788381667,
+            3.7711034943990676
+          ],
+          [
+            1.9415926509739545,
+            4.341592708386516
+          ]
+        ],
+        "reference_candidates": [
+          {
+            "cost": 15.854333821300386,
+            "source": "known_complete_reference:support_route_front",
+            "index": 1,
+            "validated_states": 3179,
+            "valid": true
+          }
+        ],
+        "collision_checks": 7150,
+        "search_wall_time_s": 4.295999999999999,
+        "shortcut_collision_checks": 287,
+        "algorithm": "RRTConnect",
+        "backend": "simOMPL",
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 0,
+        "collision_check_step_rad": 0.005,
+        "solve_collision_checks": 1918,
+        "raw_cost": 8.804464127377088,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "roadmap_reused": false,
+        "shortcut_wall_time_s": 0.6039999999999992,
+        "selected_candidate": 1,
+        "direct_attempted": false,
+        "solve_budget_s": 3.0,
+        "validated_states": 1764,
+        "reference_shortcut": {
+          "accepted": 0,
+          "budget_exhausted": true,
+          "trials": 1
+        },
+        "raw_states": 6,
+        "execution_states": 254,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "type": "ValidatedReferencePath",
+      "label": "support_high_approach",
+      "ok": true,
+      "cached": false,
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 2.4133137157473747,
+            "exact": true,
+            "raw_states": 3,
+            "raw_cost": 2.4133137157473747,
+            "planner": {
+              "edges": 5.0,
+              "vertices": 6.0
+            },
+            "attempt": 1
+          }
+        ],
+        "selected_path_backend": "simulator_geometry",
+        "path_source": "validated_reference_candidate",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 5.0,
+          "vertices": 6.0
+        },
+        "wall_time_s": 4.874000000000002,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 11,
+        "optimized_cost": 1.0832411137633198,
+        "joint_bounds": [
+          [
+            -2.2956956819298986,
+            0.6295107952810357
+          ],
+          [
+            -1.322438840550783,
+            1.5445584088233817
+          ],
+          [
+            0.4074961217119377,
+            3.203472917745535
+          ],
+          [
+            -0.010461916259825399,
+            2.4605585257638785
+          ],
+          [
+            0.8458969406863235,
+            3.7711034943990676
+          ],
+          [
+            1.9415926359930211,
+            4.341592650973954
+          ]
+        ],
+        "solve_budget_s": 3.0,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "search_wall_time_s": 3.164999999999999,
+        "shortcut_collision_checks": 288,
+        "algorithm": "ValidatedReferencePath",
+        "backend": "simOMPL",
+        "selected_reference_candidate": 1,
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 1,
+        "solve_collision_checks": 1308,
+        "raw_cost": 3.322124282049992,
+        "collision_check_step_rad": 0.005,
+        "roadmap_reused": false,
+        "collision_checks": 2490,
+        "shortcut_wall_time_s": 0.6000000000000014,
+        "direct_attempted": false,
+        "reference_shortcut": {
+          "accepted": 1,
+          "budget_exhausted": true,
+          "trials": 11
+        },
+        "validated_states": 219,
+        "execution_states": 33,
+        "raw_states": 97,
+        "reference_candidates": [
+          {
+            "cost": 3.322124282049992,
+            "source": "known_complete_reference:support_high_approach",
+            "index": 1,
+            "validated_states": 673,
+            "valid": true
+          }
+        ],
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "type": "ValidatedReferencePath",
+      "label": "B_clear_fixture",
+      "ok": true,
+      "cached": false,
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 6.744940494546833,
+            "exact": true,
+            "raw_states": 4,
+            "raw_cost": 6.744940494546833,
+            "planner": {
+              "edges": 4.0,
+              "vertices": 5.0
+            },
+            "attempt": 1
+          }
+        ],
+        "selected_path_backend": "simulator_geometry",
+        "path_source": "validated_reference_candidate",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 4.0,
+          "vertices": 5.0
+        },
+        "wall_time_s": 7.609000000000002,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 2,
+        "optimized_cost": 6.037829322619864,
+        "joint_bounds": [
+          [
+            -2.6018425115070416,
+            -0.17421872341029565
+          ],
+          [
+            -0.9010836742004937,
+            2.4389301902143843
+          ],
+          [
+            -2.772353406970473,
+            3.1699457305248666
+          ],
+          [
+            -0.32726940646017677,
+            3.1041820476107
+          ],
+          [
+            -2.770687833820441,
+            2.9397501250027886
+          ],
+          [
+            -1.0034591246782418,
+            4.341592652826244
+          ]
+        ],
+        "solve_budget_s": 3.0,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "search_wall_time_s": 2.6279999999999966,
+        "shortcut_collision_checks": 135,
+        "algorithm": "ValidatedReferencePath",
+        "backend": "simOMPL",
+        "selected_reference_candidate": 1,
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 0,
+        "solve_collision_checks": 886,
+        "raw_cost": 6.037829322619864,
+        "collision_check_step_rad": 0.005,
+        "roadmap_reused": false,
+        "collision_checks": 3461,
+        "shortcut_wall_time_s": 0.6049999999999969,
+        "direct_attempted": false,
+        "reference_shortcut": {
+          "accepted": 0,
+          "budget_exhausted": true,
+          "trials": 2
+        },
+        "validated_states": 1219,
+        "execution_states": 175,
+        "raw_states": 175,
+        "reference_candidates": [
+          {
+            "cost": 6.037829322619864,
+            "source": "known_complete_reference:B_clear_fixture",
+            "index": 1,
+            "validated_states": 1219,
+            "valid": true
+          }
+        ],
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "type": "RRTConnect",
+      "label": "install_K1_approach",
+      "ok": true,
+      "cached": false,
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 3.1927597001457264,
+            "exact": true,
+            "raw_states": 3,
+            "raw_cost": 3.1927597001457264,
+            "planner": {
+              "edges": 3.0,
+              "vertices": 4.0
+            },
+            "attempt": 1
+          },
+          {
+            "exact": false,
+            "planner": {
+              "edges": 2.0,
+              "vertices": 4.0
+            },
+            "attempt": 2
+          }
+        ],
+        "selected_path_backend": "simOMPL",
+        "path_source": "rrt_connect",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 2.0,
+          "vertices": 4.0
+        },
+        "wall_time_s": 6.438000000000002,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 2,
+        "optimized_cost": 3.1927597001457273,
+        "joint_bounds": [
+          [
+            -2.680151414512278,
+            0.28632024144698354
+          ],
+          [
+            -1.4615476575539113,
+            1.9396398187064767
+          ],
+          [
+            -0.05563556585359497,
+            3.5747962800308795
+          ],
+          [
+            -0.17165598766022305,
+            2.4575882541922294
+          ],
+          [
+            0.4614413302163496,
+            3.42791281763974
+          ],
+          [
+            -2.770796282512066,
+            -0.37079625035672925
+          ]
+        ],
+        "reference_candidates": [
+          {
+            "cost": 3.725532037228156,
+            "source": "known_complete_reference:install_K1_approach",
+            "index": 1,
+            "validated_states": 757,
+            "valid": true
+          }
+        ],
+        "collision_checks": 3479,
+        "search_wall_time_s": 3.855000000000004,
+        "shortcut_collision_checks": 352,
+        "algorithm": "RRTConnect",
+        "backend": "simOMPL",
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 0,
+        "collision_check_step_rad": 0.005,
+        "solve_collision_checks": 1727,
+        "raw_cost": 3.1927597001457264,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "roadmap_reused": false,
+        "shortcut_wall_time_s": 0.6000000000000014,
+        "selected_candidate": 1,
+        "direct_attempted": false,
+        "solve_budget_s": 3.0,
+        "validated_states": 641,
+        "reference_shortcut": {
+          "accepted": 0,
+          "budget_exhausted": true,
+          "trials": 2
+        },
+        "raw_states": 3,
+        "execution_states": 94,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "type": "RRTConnect",
+      "label": "remove_support_approach",
+      "ok": true,
+      "cached": false,
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 4.944271856227569,
+            "exact": true,
+            "raw_states": 4,
+            "raw_cost": 4.944271856227569,
+            "planner": {
+              "edges": 5.0,
+              "vertices": 6.0
+            },
+            "attempt": 1
+          }
+        ],
+        "selected_path_backend": "simOMPL",
+        "path_source": "rrt_connect",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 5.0,
+          "vertices": 6.0
+        },
+        "wall_time_s": 7.186,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 1,
+        "optimized_cost": 4.944271856227576,
+        "joint_bounds": [
+          [
+            -3.160480166941494,
+            -0.20184253557123388
+          ],
+          [
+            -1.2012572134561563,
+            1.4989163063592055
+          ],
+          [
+            -0.049056037850358614,
+            3.1699457013062533
+          ],
+          [
+            -0.7788904980227974,
+            2.0727307347673496
+          ],
+          [
+            -2.770796316381624,
+            2.9397500453339385
+          ],
+          [
+            -4.341591982164824,
+            0.8103162183762285
+          ]
+        ],
+        "reference_candidates": [
+          {
+            "cost": 4.958442259389031,
+            "source": "known_complete_reference:remove_support_approach",
+            "index": 1,
+            "validated_states": 1002,
+            "valid": true
+          }
+        ],
+        "collision_checks": 3413,
+        "search_wall_time_s": 2.992999999999995,
+        "shortcut_collision_checks": 345,
+        "algorithm": "RRTConnect",
+        "backend": "simOMPL",
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 0,
+        "collision_check_step_rad": 0.005,
+        "solve_collision_checks": 1072,
+        "raw_cost": 4.944271856227569,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "roadmap_reused": false,
+        "shortcut_wall_time_s": 0.6029999999999944,
+        "selected_candidate": 1,
+        "direct_attempted": false,
+        "solve_budget_s": 3.0,
+        "validated_states": 992,
+        "reference_shortcut": {
+          "accepted": 0,
+          "budget_exhausted": true,
+          "trials": 1
+        },
+        "raw_states": 4,
+        "execution_states": 144,
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    },
+    {
+      "type": "ValidatedReferencePath",
+      "label": "B_final_home",
+      "ok": true,
+      "cached": false,
+      "stats": {
+        "candidates": [
+          {
+            "optimized_cost": 8.2344265319041,
+            "exact": true,
+            "raw_states": 5,
+            "raw_cost": 8.2344265319041,
+            "planner": {
+              "edges": 5.0,
+              "vertices": 6.0
+            },
+            "attempt": 1
+          }
+        ],
+        "selected_path_backend": "simulator_geometry",
+        "path_source": "validated_reference_candidate",
+        "ompl_solve_called": true,
+        "planner_after": {
+          "edges": 5.0,
+          "vertices": 6.0
+        },
+        "wall_time_s": 8.403999999999996,
+        "requested_algorithm": "RRTConnect",
+        "shortcut_trials": 2,
+        "optimized_cost": 6.2516671455109565,
+        "joint_bounds": [
+          [
+            -2.6059933274189944,
+            -0.17421872341029565
+          ],
+          [
+            -0.4634103518962446,
+            2.4389301902143843
+          ],
+          [
+            -2.772353406970473,
+            2.2676055340729513
+          ],
+          [
+            0.1373962579722312,
+            3.1041820476107
+          ],
+          [
+            -4.176789659279244,
+            -0.3706878338204409
+          ],
+          [
+            -2.770797535002412,
+            1.396540875321758
+          ]
+        ],
+        "solve_budget_s": 3.0,
+        "postprocess": "bounded_gain_ranked_collision_checked_shortcut_and_candidate_selection",
+        "search_wall_time_s": 3.8930000000000007,
+        "shortcut_collision_checks": 302,
+        "algorithm": "ValidatedReferencePath",
+        "backend": "simOMPL",
+        "selected_reference_candidate": 1,
+        "planner_reused": false,
+        "planner_before": {},
+        "joint_bound_margin": 1.2,
+        "shortcut_accepted": 0,
+        "solve_collision_checks": 1715,
+        "raw_cost": 6.2516671455109565,
+        "collision_check_step_rad": 0.005,
+        "roadmap_reused": false,
+        "collision_checks": 4541,
+        "shortcut_wall_time_s": 0.6009999999999991,
+        "direct_attempted": false,
+        "reference_shortcut": {
+          "accepted": 0,
+          "budget_exhausted": true,
+          "trials": 2
+        },
+        "validated_states": 1261,
+        "execution_states": 181,
+        "raw_states": 181,
+        "reference_candidates": [
+          {
+            "cost": 6.2516671455109565,
+            "source": "known_complete_reference:B_final_home",
+            "index": 1,
+            "validated_states": 1261,
+            "valid": true
+          }
+        ],
+        "collision_geometry_policy": "native base + dynamic/respondable collision shapes + explicit cuboid Palm/Finger/SupportShoe tools; purely visual static shells excluded"
+      }
+    }
+  ]
+}

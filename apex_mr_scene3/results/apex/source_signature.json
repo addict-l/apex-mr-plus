@@ -1,0 +1,515 @@
+{
+  "inputs": {
+    "files": {
+      "apex/__init__.py": "c6fad83e333c3351b9c044711f62a14785810c3dce779d77e97f061dc35588bf",
+      "apex/allocation.py": "7f1733a7a74a1d0fdd768990cb3dd338f299647f09b3176c96dd242f3f81a86a",
+      "apex/blend_validation.py": "2837004384012a40b32e38b6a3a0792d11d9c4761c133217e0de3cbb960469b5",
+      "apex/compile.py": "cbd230f6f1d084fad4ab75425ca67c8473869020fc4f09fbf2457a75e52fe6dd",
+      "apex/controller.lua": "9a30d885056c1d975280e6156b6b4075a49e12f3c42b161d50eca22c8d93f4fc",
+      "apex/curve.py": "ed669126e5c9948065d26693ec2bf60526d1304eeb0504284dec3ca0f202d69e",
+      "apex/fast_interarm.lua": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563",
+      "apex/fast_interarm.py": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03",
+      "apex/geometry.py": "7901cc625f376cb56a652ac2c099a849ca43985789160d4c84ff4cfd3acb71c4",
+      "apex/local_route_candidates.json": "c902c15042f00b62d2be456d4a2f64828dd677df75a8df19f7a76ab833221ccc",
+      "apex/local_route_chain.py": "9e14a1a070a6e9efb4f5547caaa82d45401368e73a2166f24fe0e29756199550",
+      "apex/local_routes.py": "e865864374fd45559b93e1d2ad1baaf37ee04d179439dce950e44065b13707ff",
+      "apex/motion.py": "541539b308ebd5f4bd0714523ffdda7887a8dd48ebabe2e1c9d5a97e9c8af362",
+      "apex/motion_backend.lua": "d215ec7a054804875619aa2af18ccace404feb07ee386c68a34080c7c65065f6",
+      "apex/performance.py": "3b3f1dd76d3c69bb6954bd7b593dc11adcdb658a720ef727fc7d474472cbd7c7",
+      "apex/pipeline.py": "a6b98c5fe1265698acf15e7826d11d2f74b0ab847666193bbcbaedb28b134a89",
+      "apex/plots.py": "21fa7c8b4d3f7fe29ae5c4fdb1db2cbdc8ff2408f43774d0f18e2ac834ef9033",
+      "apex/program.py": "61264d84aecf98bfa5dbee0dedcdb9ee1aa8aa1dfb7f212ca3b845e40165cfb3",
+      "apex/runtime.py": "82d6035749a80bf8b3c208b73fc27763e99a62331651a62ddf479b7e6fb68709",
+      "apex/scene.py": "a859f5c5ff1a501bcd4cb4e27ebfd05675f8f26aa7693f8b193f44cbf05316b5",
+      "apex/smoothing.py": "d5a81a115f0dd4c9aa1b4b27f42dbe226e248e4607b823a18af10c5670756d01",
+      "apex/tpg.py": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd",
+      "apex/validation.py": "0881b1bd00472dad6e5456126048913ca6aab9b579d7e1cfbacf3b3ee90cfef2",
+      "backups/base_rotation_baseline_20261104_01/baseline_manifest.json": "97ffae98a24bb398328f5b7a7779a4dff5f7ad156b0037fadd2a8d73c7c03d11",
+      "backups/base_rotation_baseline_20261104_01/config/apex_runtime.json": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+      "backups/base_rotation_baseline_20261104_01/config/dynamic_homes.json": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+      "backups/base_rotation_baseline_20261104_01/config/experiment_definition.json": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+      "backups/base_rotation_baseline_20261104_01/config/scene_manifest.json": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+      "backups/base_rotation_baseline_20261104_01/results/apex/alloc_and_reference.json": "3a3191448085cb960fffd342853d74f643e3d7360790c218cd73d289ab362ca2",
+      "backups/base_rotation_baseline_20261104_01/results/apex/execution_validation.json": "af90d928a25aea3ce364251c6809921441111403123aeca55f29e7468b605493",
+      "backups/base_rotation_baseline_20261104_01/results/apex/independent_final_audit.json": "7e9deb280861ccf1eab1957e67169625017da98a995c7433a28d2d9810c9e5ea",
+      "backups/base_rotation_baseline_20261104_01/results/apex/pipeline_manifest.json": "743a74dc2fc02953e0c4eb2eaa95e95a4aa420d350585cab8cf4055324ebba09",
+      "backups/base_rotation_baseline_20261104_01/results/apex/reference_tasks.json": "1eb81607a9c99d1f9d99f0e2558f659119f0d7b38a68e9ce801c1fbc8f518a46",
+      "backups/base_rotation_baseline_20261104_01/results/apex/source_signature.json": "5a93b219fff9d07e8aa9eebc4fbd49cdcb7aeed640784c1b89c1dff25c9ee9ed",
+      "backups/base_rotation_baseline_20261104_01/results/apex/summary.json": "231e3aac5eb57c44ca4ce09501be70fa45d81553b164d0d7318388f9f186d4d0",
+      "backups/smooth_motion_baseline_20261104_01/baseline_manifest.json": "0966b4341991ad5b3fc010824c88a662a52d28f19efd5d53b74ed09fbc2adf82",
+      "backups/smooth_motion_baseline_20261104_01/config/apex_runtime.json": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+      "backups/smooth_motion_baseline_20261104_01/config/dynamic_homes.json": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+      "backups/smooth_motion_baseline_20261104_01/config/experiment_definition.json": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+      "backups/smooth_motion_baseline_20261104_01/config/scene_manifest.json": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/alloc_and_reference.json": "032ed30ed34715359e05f27124465f90ebf9cc1b90fa5d0c87a056239ccc4528",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/execution_validation.json": "d5c5bbd5a77dbb7c0a6bdc88af3e459aed14d4b17bd92893ffe72dd6e8980ae4",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/independent_final_audit.json": "25c49f1881cfea8d1540e8cd71c42c4d5f4a4c14f3c9f4b137ee079c2fafd0ab",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/pipeline_manifest.json": "44292631e7f11fd3a88a412eec25b60e05685b3ee75f477002453fa6bf2e4cf9",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/reference_tasks.json": "f59ba34c9d9082374ddb1432a2239cb479838aec3668d862c2f5de564bd90b3d",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/source_signature.json": "fae19dd8b3f1643863d791f15867b13aaff0a2715deb093b8728b06ab8d64aa6",
+      "backups/smooth_motion_baseline_20261104_01/results/apex/summary.json": "e27a18c78062733c62037e14787ab2f288d98551601ec57ac6537a53eecf88f1",
+      "config/apex_runtime.json": "5d8cb6bffb0291c7c34cf14bd4c286cea61db3787291fb7fad2de8af4a26187f",
+      "config/dynamic_homes.json": "ed462285befc8b05019f3306a88dbb3c81215773606e0dd7800be48f4161cb6a",
+      "config/experiment_definition.json": "0f0c9a15d3eb453f3a474783fa4ac6cf7829848146ce0e97d948446c79049e10",
+      "config/scene_manifest.json": "838379af9c196eb637aa3d3419746d380bb4e8a9ffbfbc81b1e861be240d70a6",
+      "requirements.txt": "cd7a2158bbface0a0a9cd8dda26ac5311a52bf06d1bb897944a44d4e6eee6d80",
+      "scenes/10_Scene3_Dynamic.ttt": "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04",
+      "src/build_scene.py": "3e55e9a4767b5f39ddaf6554ae4e7cd67ac994e39411c361b7080d805897e974",
+      "src/label_mesh.py": "42a32b740f939bf29c28537075ba66efbae1b1284899d2cf0af2b4d6f61b2ad2",
+      "src/lifecycle.py": "3a6f947b1282e59a54a2a5e4092b90c75cadcb032fd37dda116e0834b845004f",
+      "src/open_scene.py": "49ad3053a7345864cf7d2b1e52056b79ea62ef0c7e9019656de57533a2a0cf44",
+      "src/probe_scene3_execution.py": "01fbab9be5d2b0ee9d8605c049a7ec55dd955e5df304b030c14dcb81ac4c414f",
+      "src/probe_support_physics.py": "96d7a8d9cf7ed3e023d3d91075522212d6568a22270f5a13896874c906a61bd3",
+      "src/scene_ui.lua": "439dd1d6830f17aacbd7d1d0590d0ec3fda70e7874f90749fc35ce8aa65470e9",
+      "src/sim_connection.py": "1116bef2f65e21235b6935198e89b3d9cd0e805fce505ac50a70e5609b6f796b",
+      "src/verify_scene.py": "d22d78d70a38240408f1bb93c385763fac66854fc377ba594657756319b37eb0"
+    },
+    "sha256": "07088d9d51eb8cc6edb3e49719f6a93b6163b613f33455cfed540af42e1a354f"
+  },
+  "resolved_scene": {
+    "initial_articulations": {
+      "SupportLift": 0.0
+    },
+    "bridge_hinge": 69,
+    "baseplate": 22,
+    "table": 16,
+    "support_surface_handles": [
+      22,
+      285,
+      287,
+      289,
+      24,
+      46,
+      68,
+      90,
+      112
+    ],
+    "support_sensor": 298,
+    "support_pad": 299,
+    "blocks": {
+      "K1": 242,
+      "K2": 263,
+      "Gate": 282,
+      "Bridge": 70,
+      "TemporarySupport": 295
+    },
+    "sizes": {
+      "TemporarySupport": [
+        0.14,
+        0.35,
+        0.24
+      ],
+      "Gate": [
+        0.174,
+        0.012,
+        0.17
+      ],
+      "Bridge": [
+        0.52,
+        0.16,
+        0.04
+      ],
+      "K2": [
+        0.1,
+        0.18,
+        0.08
+      ],
+      "K1": [
+        0.12,
+        0.14,
+        0.076
+      ]
+    },
+    "runtime": {
+      "force_min_N": 1.0,
+      "loaded_dwell_s": 0.3,
+      "assembly_tool_force_limit_N": 40.0,
+      "support_extension_m": 0.01,
+      "assembly_tool_torque_limit_Nm": 8.0,
+      "unload_force_max_N": 0.8,
+      "pose_tolerance_m": 0.009
+    },
+    "physics": {
+      "grasp": "ideal dynamic force-sensor constraints",
+      "jack": "compound ballast, dynamic prismatic lift and load sensor",
+      "initial_bridge": "passive pitch hinge with 0.35Nm friction brake and actual A-pad contact",
+      "connections": "ideal rigid snap at measured pose; no LEGO deformation",
+      "engine": "Bullet"
+    },
+    "dt": 0.02,
+    "root_path": "/APEX_MR_Scene3",
+    "obstacles": [
+      22,
+      226,
+      227,
+      228,
+      229,
+      231,
+      233,
+      24,
+      46,
+      68,
+      182,
+      204
+    ],
+    "free_q": {
+      "A": [
+        -2.3476570437805973,
+        -0.2517332954360318,
+        1.5707352561423822,
+        0.2517970743592172,
+        -1.5707906253415997,
+        -0.7768753860521164
+      ],
+      "B": [
+        -1.3742187234102956,
+        1.2389301902143843,
+        -1.572353406970473,
+        1.9041820476107,
+        -1.5706878338204409,
+        0.19654087532175812
+      ]
+    },
+    "initial_support_contacts": {
+      "A": [
+        [
+          "A_SupportShoe",
+          "Bridge"
+        ]
+      ]
+    },
+    "arms": {
+      "A": {
+        "tip": 324,
+        "support_pad": 326,
+        "target": 328,
+        "support_sensor": 325,
+        "model": 300,
+        "quaternion": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "connection": 319,
+        "palm": 321,
+        "sensor": 320,
+        "joints": [
+          302,
+          305,
+          308,
+          311,
+          314,
+          316
+        ],
+        "shapes": [
+          300,
+          301,
+          303,
+          304,
+          306,
+          307,
+          309,
+          310,
+          312,
+          313,
+          315,
+          327,
+          317,
+          318,
+          321,
+          322,
+          323,
+          326
+        ],
+        "home_q": [
+          -2.0202543124966823,
+          0.646671244000393,
+          1.1821610976426105,
+          1.3127602609233984,
+          -0.44945800781232836,
+          -1.570796275996565
+        ],
+        "fingers": [
+          322,
+          323
+        ]
+      },
+      "B": {
+        "tip": 353,
+        "support_pad": 355,
+        "target": 357,
+        "support_sensor": 354,
+        "model": 329,
+        "quaternion": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "connection": 348,
+        "palm": 350,
+        "sensor": 349,
+        "joints": [
+          331,
+          334,
+          337,
+          340,
+          343,
+          345
+        ],
+        "shapes": [
+          329,
+          330,
+          332,
+          333,
+          335,
+          336,
+          338,
+          339,
+          341,
+          342,
+          344,
+          356,
+          346,
+          347,
+          350,
+          351,
+          352,
+          355
+        ],
+        "home_q": [
+          -1.3742187234102956,
+          1.2389301902143843,
+          -1.572353406970473,
+          1.9041820476107,
+          -1.5706878338204409,
+          0.19654087532175812
+        ],
+        "fingers": [
+          351,
+          352
+        ]
+      }
+    },
+    "camera": 240,
+    "right_tower": 204,
+    "root": 15,
+    "articulations": {
+      "SupportLift": 296
+    },
+    "program": {},
+    "goal": {
+      "TemporarySupport": [
+        0.48,
+        0.43,
+        0.76
+      ],
+      "Gate": [
+        0.06,
+        0.105,
+        0.857
+      ],
+      "Bridge": [
+        0.04,
+        0.2,
+        1.032
+      ],
+      "K2": [
+        0.24,
+        0.2,
+        1.096
+      ],
+      "K1": [
+        0.24,
+        0.2,
+        0.97
+      ]
+    },
+    "obstacle_aliases": [
+      "Baseplate",
+      "PocketSideWall_0",
+      "PocketSideWall_1",
+      "PocketRearWall",
+      "A_SupplyMat",
+      "B_SupplyMat",
+      "SharedBuffer",
+      "LeftTower_1_Body",
+      "LeftTower_2_Body",
+      "LeftTower_3_Body",
+      "RightTower_1_Body",
+      "RightTower_2_Body"
+    ],
+    "parts": [
+      {
+        "mass": 0.18,
+        "source": [
+          -0.53,
+          -0.36,
+          0.804
+        ],
+        "insertion_force": 0.0,
+        "goal": [
+          0.24,
+          0.2,
+          0.97
+        ],
+        "size": [
+          0.12,
+          0.14,
+          0.076
+        ],
+        "dependencies": {},
+        "id": "K1"
+      },
+      {
+        "mass": 0.14,
+        "source": [
+          -0.38,
+          -0.36,
+          0.806
+        ],
+        "insertion_force": 8.0,
+        "goal": [
+          0.24,
+          0.2,
+          1.096
+        ],
+        "size": [
+          0.1,
+          0.18,
+          0.08
+        ],
+        "dependencies": {},
+        "id": "K2"
+      },
+      {
+        "mass": 0.12,
+        "source": [
+          0.48,
+          -0.35,
+          0.851
+        ],
+        "insertion_force": 0.0,
+        "goal": [
+          0.06,
+          0.105,
+          0.857
+        ],
+        "size": [
+          0.174,
+          0.012,
+          0.17
+        ],
+        "dependencies": {},
+        "id": "Gate"
+      },
+      {
+        "mass": 0.45,
+        "source": [
+          0.04,
+          0.2,
+          1.032
+        ],
+        "insertion_force": 0.0,
+        "goal": [
+          0.04,
+          0.2,
+          1.032
+        ],
+        "size": [
+          0.52,
+          0.16,
+          0.04
+        ],
+        "dependencies": {},
+        "id": "Bridge"
+      },
+      {
+        "mass": 2.36,
+        "source": [
+          0.48,
+          0.43,
+          0.76
+        ],
+        "goal": [
+          0.48,
+          0.43,
+          0.76
+        ],
+        "size": [
+          0.14,
+          0.35,
+          0.24
+        ],
+        "id": "TemporarySupport",
+        "dependencies": {}
+      }
+    ],
+    "initial": {
+      "TemporarySupport": [
+        0.48,
+        0.43,
+        0.76,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "Gate": [
+        0.48,
+        -0.35,
+        0.851,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "Bridge": [
+        0.04000000000000012,
+        0.20000000000000007,
+        1.032,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "K2": [
+        -0.38,
+        -0.36,
+        0.806,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "K1": [
+        -0.53,
+        -0.36,
+        0.804,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "settings": {
+    "joint_conflict_step_rad": 0.07,
+    "node_span_rad": 0.24,
+    "rollout_step_s": 0.06,
+    "velocity_rad_s": 0.6,
+    "acceleration_rad_s2": 1.2,
+    "jerk_rad_s3": 8.0
+  },
+  "environment": {
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "pyzmq": "27.2.0",
+      "matplotlib": "3.10.8"
+    },
+    "coppeliasim_program_version": 41000
+  }
+}

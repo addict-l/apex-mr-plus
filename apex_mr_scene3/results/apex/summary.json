@@ -1,0 +1,29 @@
+{
+  "run_id": "20261105T121655Z-b7a8b9ea",
+  "success": true,
+  "planning_success": true,
+  "execution_performed": true,
+  "main_scene_promoted": true,
+  "reference_task_count": 134,
+  "tpg": {
+    "nodes": 353,
+    "pose_nodes": 320,
+    "skill_nodes": 33,
+    "type1_edges": 492,
+    "task_type2_edges": 7,
+    "motion_type2_edges": 197,
+    "cross_arm_pairs": 21450,
+    "oracle_queries": 1616,
+    "already_ordered_pairs_skipped": 19834,
+    "pairs_without_geometry": 0,
+    "continuous_gate_edges": 23,
+    "all_edges_after_timing": 719
+  },
+  "nominal_makespan_s": 302.9424911288946,
+  "failure": null,
+  "actual_makespan_s": 309.42000000000854,
+  "max_goal_position_error_m": 0.002028300205724475,
+  "max_goal_orientation_error_rad": 0.007475737596856459,
+  "actual_edges_checked": 719,
+  "stage": "actual_execution_audited"
+}

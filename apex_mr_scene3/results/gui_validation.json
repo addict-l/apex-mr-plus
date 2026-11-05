@@ -1,0 +1,49 @@
+{
+  "kind": "saved_scene_and_UI_validation",
+  "gui_checked": true,
+  "states": [
+    {
+      "preset": 0,
+      "dynamics_validated": false,
+      "motion_planner_connected": false,
+      "ui_created": true,
+      "kind": "static_design_preview"
+    },
+    {
+      "preset": 1,
+      "dynamics_validated": false,
+      "motion_planner_connected": false,
+      "ui_created": true,
+      "kind": "static_design_preview"
+    },
+    {
+      "preset": 2,
+      "dynamics_validated": false,
+      "motion_planner_connected": false,
+      "ui_created": true,
+      "kind": "static_design_preview"
+    },
+    {
+      "preset": 3,
+      "dynamics_validated": false,
+      "motion_planner_connected": false,
+      "ui_created": true,
+      "kind": "static_design_preview"
+    },
+    {
+      "preset": 4,
+      "dynamics_validated": false,
+      "motion_planner_connected": false,
+      "ui_created": true,
+      "kind": "static_design_preview"
+    }
+  ],
+  "geometry_checked": [
+    "source_parts_rest_on_supply_mats",
+    "parked_support_on_table",
+    "closed_gate_clear_of_walls",
+    "arms_clear_of_support_in_all_presets"
+  ],
+  "scene_sha256": "bd519209154f52a89f4abeceace2dc735fa377f2f84a00e9df078f438626e729",
+  "scope": "Saved design presets and panel only; not motion execution or dynamics."
+}

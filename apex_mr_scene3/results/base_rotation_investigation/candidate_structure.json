@@ -1,0 +1,54 @@
+[
+  {
+    "scope": "structural candidate checks only; native geometry and dynamics pending",
+    "arm": "B",
+    "first_task": "pick_support_approach",
+    "last_task": "support_high_approach",
+    "replaced_transits": [
+      "pick_support_approach",
+      "pick_support_contact",
+      "pick_support_lift",
+      "support_route_front",
+      "support_high_approach"
+    ],
+    "shifted_skill_postures": [
+      "pick_support",
+      "pick_support_lift_contact_clear"
+    ],
+    "before_base_travel_deg": 552.2833090395736,
+    "after_base_travel_deg": 364.55997316836306
+  },
+  {
+    "scope": "structural candidate checks only; native geometry and dynamics pending",
+    "arm": "B",
+    "first_task": "return_support_approach",
+    "last_task": "pick_gate_approach",
+    "replaced_transits": [
+      "return_support_approach",
+      "return_support_contact",
+      "return_support_retreat",
+      "pick_gate_approach"
+    ],
+    "shifted_skill_postures": [
+      "return_support",
+      "return_support_retreat_contact_clear"
+    ],
+    "before_base_travel_deg": 407.2012923379169,
+    "after_base_travel_deg": 380.17405192833166
+  },
+  {
+    "scope": "structural candidate checks only; native geometry and dynamics pending",
+    "arm": "B",
+    "first_task": "pick_gate_lift",
+    "last_task": "close_gate_approach",
+    "replaced_transits": [
+      "pick_gate_lift",
+      "close_gate_approach"
+    ],
+    "shifted_skill_postures": [
+      "pick_gate_lift_contact_clear"
+    ],
+    "before_base_travel_deg": 449.26829518685236,
+    "after_base_travel_deg": 65.05336591231212
+  }
+]

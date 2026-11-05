@@ -1,0 +1,74 @@
+{
+  "run_id": "20261103T121253Z-d0d0c68e",
+  "audit_kind": "independent raw-event/trace arithmetic, no simulator writes",
+  "success": true,
+  "violations": [],
+  "completed_nodes": 419,
+  "graph_edges_checked": 760,
+  "makespan_s": 455.5999999998756,
+  "raw_trace_samples": 8538,
+  "support_handoff_force_N": 1.960491119621261,
+  "support_continuity_samples": 4341,
+  "max_support_trace_gap_s": 0.10000000000005116,
+  "proof": {
+    "qualified_continuous_duration_s": 0.6999999999993634,
+    "samples": 8,
+    "force_N_range": [
+      13.642086334150104,
+      14.056833351351132
+    ],
+    "applied_load_N": [
+      8.0
+    ],
+    "actual_call_substeps_range": [
+      10,
+      10
+    ],
+    "max_temporary_reaction_N": 0.001191720635628446
+  },
+  "assembly_contact": {
+    "A": {
+      "samples": 0,
+      "guarded_intervals": 0,
+      "peak_force_N": null,
+      "peak_torque_Nm": null
+    },
+    "B": {
+      "samples": 4978,
+      "guarded_intervals": 75,
+      "peak_force_N": 9.890173043913776,
+      "peak_torque_Nm": 0.9518990944015351
+    }
+  },
+  "final_dynamic_constraints": {
+    "K1": true,
+    "K2": true,
+    "Gate": true,
+    "Bridge": true
+  },
+  "goal_errors": {
+    "K1": {
+      "position_error_m": 1.917236970863908e-05,
+      "orientation_error_rad": 0.00016887027032417632
+    },
+    "K2": {
+      "position_error_m": 7.626201720483505e-05,
+      "orientation_error_rad": 0.00015620244130835423
+    },
+    "Gate": {
+      "position_error_m": 4.434058441416025e-05,
+      "orientation_error_rad": 0.0007643646427417706
+    },
+    "Bridge": {
+      "position_error_m": 0.002028991626116519,
+      "orientation_error_rad": 0.007478999326659251
+    },
+    "TemporarySupport": {
+      "position_error_m": 0.001558828010542342,
+      "orientation_error_rad": 1.852228122621995e-05
+    }
+  },
+  "frozen_inputs_checked": 31,
+  "main_scene_sha256": "824fd518607aaab0734684ea71bcb7a5805a932a9df31b3d549d2a5561ed6527",
+  "source_scene_sha256": "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04"
+}

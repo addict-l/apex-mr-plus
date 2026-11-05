@@ -1,0 +1,34 @@
+{
+  "eligible": true,
+  "source": "known_complete_reference",
+  "files": {
+    "backups/base_rotation_baseline_20261104_01/results/apex/alloc_and_reference.json": "3a3191448085cb960fffd342853d74f643e3d7360790c218cd73d289ab362ca2",
+    "backups/base_rotation_baseline_20261104_01/results/apex/reference_tasks.json": "1eb81607a9c99d1f9d99f0e2558f659119f0d7b38a68e9ce801c1fbc8f518a46",
+    "backups/base_rotation_baseline_20261104_01/results/apex/source_signature.json": "5a93b219fff9d07e8aa9eebc4fbd49cdcb7aeed640784c1b89c1dff25c9ee9ed",
+    "backups/base_rotation_baseline_20261104_01/results/apex/pipeline_manifest.json": "743a74dc2fc02953e0c4eb2eaa95e95a4aa420d350585cab8cf4055324ebba09",
+    "backups/base_rotation_baseline_20261104_01/results/apex/summary.json": "231e3aac5eb57c44ca4ce09501be70fa45d81553b164d0d7318388f9f186d4d0",
+    "backups/base_rotation_baseline_20261104_01/results/apex/execution_validation.json": "af90d928a25aea3ce364251c6809921441111403123aeca55f29e7468b605493",
+    "backups/base_rotation_baseline_20261104_01/results/apex/independent_final_audit.json": "7e9deb280861ccf1eab1957e67169625017da98a995c7433a28d2d9810c9e5ea"
+  },
+  "reason": "unchanged_physics_and_intact_complete_reference",
+  "run_id": "20261104T163855Z-0804c434",
+  "reference_signature": "bf7b2e49c0681ac433b21fced7dd5b6a67e5b3509c8ae3c466842664258cda19",
+  "task_count": 134,
+  "source_scene_sha256": "d3f991c9661461df8d9720185ff91b3605cfe6a685dbf048d4cb5894b8ad1c04",
+  "original_joint_length_rad": 98.01691947868726,
+  "allocation_tie_break": {
+    "accepted": true,
+    "unrestricted_objective": 91.55475696190838,
+    "restricted_objective": 91.55475696190838,
+    "support_id": "outer_front:before_gate:B",
+    "restriction": "support_modes_only",
+    "restricted_solved": true,
+    "reason": "known_complete_reference_at_equal_unrestricted_objective"
+  },
+  "selected": true,
+  "planning_timing": {
+    "vmax": 0.6,
+    "amax": 1.2,
+    "jmax": 8.0
+  }
+}

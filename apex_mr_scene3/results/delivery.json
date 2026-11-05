@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-03",
+  "scene": "apex_mr_scene3.ttt",
+  "sha256": "bd519209154f52a89f4abeceace2dc735fa377f2f84a00e9df078f438626e729",
+  "status": "design_preview_and_symbolic_planner",
+  "gui_presets_verified": 5,
+  "symbolic_tests_passed": 9,
+  "archived_scene1_tests_passed": 15,
+  "dynamic_execution_validated": false,
+  "motion_TPG_generated": false,
+  "reference": "https://arxiv.org/html/2503.15836v2"
+}

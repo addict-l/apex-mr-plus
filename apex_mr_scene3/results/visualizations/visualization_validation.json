@@ -1,0 +1,15 @@
+{
+  "run_id": "20261103T121253Z-d0d0c68e",
+  "checks": [
+    "ILP matrix, objective and all 17 constraints render",
+    "All 419 nodes and 760 original edges render with switches enabled",
+    "Node selection, derived modes, search and graph zoom work",
+    "Actual 419-node Gantt, continuous holding hatch, time cursor and event seek work"
+  ],
+  "mobile_dimensions": {
+    "scroll": 390,
+    "viewport": 390
+  },
+  "console_errors": [],
+  "success": true
+}
