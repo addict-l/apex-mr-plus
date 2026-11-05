@@ -1,0 +1,479 @@
+{
+  "model": "synthetic offline discrete recovery, not CoppeliaSim execution",
+  "python": "3.11.15",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "evidence_reuse": true,
+  "cases": [
+    {
+      "case": "independent_work",
+      "policy": "fixed",
+      "status": "partial",
+      "abstract_audit_passed": true,
+      "completed": [
+        "block3"
+      ],
+      "predicted_makespan_s": 3.0,
+      "action_count": 1,
+      "expanded": 3,
+      "wall_time_s": 0.0001587910228408873,
+      "evidence_queries": {
+        "capability_misses": 3,
+        "wrench_hits": 4,
+        "capability_hits": 1
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "independent_work",
+      "policy": "reassign",
+      "status": "partial",
+      "abstract_audit_passed": true,
+      "completed": [
+        "block3"
+      ],
+      "predicted_makespan_s": 3.0,
+      "action_count": 1,
+      "expanded": 3,
+      "wall_time_s": 0.0001574999769218266,
+      "evidence_queries": {
+        "capability_misses": 3,
+        "wrench_hits": 4,
+        "capability_hits": 4
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "independent_work",
+      "policy": "recovery",
+      "status": "partial",
+      "abstract_audit_passed": true,
+      "completed": [
+        "block3"
+      ],
+      "predicted_makespan_s": 3.0,
+      "action_count": 1,
+      "expanded": 3,
+      "wall_time_s": 0.000152749998960644,
+      "evidence_queries": {
+        "capability_misses": 3,
+        "wrench_hits": 4,
+        "capability_hits": 4
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "direct_swap",
+      "policy": "fixed",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 5,
+      "wall_time_s": 0.0009659579955041409,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 7,
+        "capability_hits": 4
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "direct_swap",
+      "policy": "reassign",
+      "status": "solved",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready",
+        "fit_cap"
+      ],
+      "predicted_makespan_s": 4.0,
+      "action_count": 2,
+      "expanded": 7,
+      "wall_time_s": 0.0014650420052930713,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 10,
+        "capability_hits": 5
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "direct_swap",
+      "policy": "recovery",
+      "status": "solved",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready",
+        "fit_cap"
+      ],
+      "predicted_makespan_s": 4.0,
+      "action_count": 2,
+      "expanded": 14,
+      "wall_time_s": 0.001370999962091446,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 28,
+        "capability_hits": 13
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "held_handover",
+      "policy": "fixed",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0008196669514290988,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "capability_hits": 2,
+        "wrench_hits": 1
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "held_handover",
+      "policy": "reassign",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0008091250201687217,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "capability_hits": 2,
+        "wrench_hits": 1
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "held_handover",
+      "policy": "recovery",
+      "status": "solved",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready",
+        "fit_cap"
+      ],
+      "predicted_makespan_s": 4.5,
+      "action_count": 2,
+      "expanded": 11,
+      "wall_time_s": 0.0012511250097304583,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 22,
+        "capability_hits": 11
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "support_swap",
+      "policy": "fixed",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0008798749768175185,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 3,
+        "capability_hits": 4
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "support_swap",
+      "policy": "reassign",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0008863750263117254,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 3,
+        "capability_hits": 4
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "support_swap",
+      "policy": "recovery",
+      "status": "solved",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready",
+        "fit_cap"
+      ],
+      "predicted_makespan_s": 7.0,
+      "action_count": 6,
+      "expanded": 18,
+      "wall_time_s": 0.0019124170066788793,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 42,
+        "capability_hits": 12
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "weak_support",
+      "policy": "fixed",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0008838329813443124,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 3,
+        "capability_hits": 4
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "weak_support",
+      "policy": "reassign",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0008987909532152116,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 3,
+        "capability_hits": 4
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "weak_support",
+      "policy": "recovery",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 13,
+      "wall_time_s": 0.0016478750039823353,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 35,
+        "capability_hits": 11
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "no_buffer",
+      "policy": "fixed",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0008813750464469194,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 3,
+        "capability_hits": 4
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "no_buffer",
+      "policy": "reassign",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0009714160114526749,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 3,
+        "capability_hits": 4
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "no_buffer",
+      "policy": "recovery",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0009186250390484929,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 3,
+        "capability_hits": 4
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "unknown_substitute",
+      "policy": "fixed",
+      "status": "unknown",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 5,
+      "wall_time_s": 0.00018824997823685408,
+      "evidence_queries": {
+        "capability_misses": 2,
+        "wrench_hits": 7,
+        "capability_hits": 3
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "unknown_substitute",
+      "policy": "reassign",
+      "status": "unknown",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 5,
+      "wall_time_s": 0.00019641604740172625,
+      "evidence_queries": {
+        "capability_misses": 3,
+        "wrench_hits": 7,
+        "capability_hits": 3
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "unknown_substitute",
+      "policy": "recovery",
+      "status": "unknown",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 12,
+      "wall_time_s": 0.0005915410001762211,
+      "evidence_queries": {
+        "capability_misses": 3,
+        "wrench_hits": 25,
+        "capability_hits": 11
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "alternative_contact",
+      "policy": "fixed",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0009080410236492753,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 3,
+        "capability_hits": 5
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "alternative_contact",
+      "policy": "reassign",
+      "status": "no_plan",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready"
+      ],
+      "predicted_makespan_s": 0.0,
+      "action_count": 0,
+      "expanded": 1,
+      "wall_time_s": 0.0009212499717250466,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 3,
+        "capability_hits": 5
+      },
+      "search_budget_exhausted": false
+    },
+    {
+      "case": "alternative_contact",
+      "policy": "recovery",
+      "status": "solved",
+      "abstract_audit_passed": true,
+      "completed": [
+        "beam_ready",
+        "fit_cap"
+      ],
+      "predicted_makespan_s": 7.0,
+      "action_count": 6,
+      "expanded": 27,
+      "wall_time_s": 0.0024752910248935223,
+      "evidence_queries": {
+        "capability_misses": 1,
+        "wrench_hits": 66,
+        "capability_hits": 18
+      },
+      "search_budget_exhausted": false
+    }
+  ],
+  "run_date": "2026-11-05",
+  "baseline_commit": "2167cefb6feccf0b58f64c9bbe96cb2d86a35fde",
+  "validation": {
+    "unittest_passed": 41,
+    "unittest_failed": 0,
+    "synthetic_policy_runs": 24,
+    "coppeliasim_execution_performed": false
+  }
+}

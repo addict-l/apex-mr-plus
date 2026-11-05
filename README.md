@@ -2,6 +2,15 @@
 
 正常模式采用 **ILP 分工与抓取/支撑选择 → 顺序任务图 → RRT-Connect 参考路径 → 多模态 TPG → 中央调度器动力学执行**。详细模型、算法边界和输出说明见 [normal/README.md](normal/README.md)。
 
+新增的问题①[离线恢复原型](recovery/README.md)借鉴 D-ITAGS 的事件修复与 WRAP 的状态动作搜索、受力检查，复用本仓库的 MILP 分配器和 TPG。它能从给定持物/支撑快照搜索换工、暂存、交接及支撑接替；当前验证范围是离散状态和二维准静态模型，尚未接入 CoppeliaSim 的运动重规划与实时续跑。
+
+```sh
+python -m recovery --case support_swap
+python -m recovery --suite --policy all
+```
+
+以上两个命令在 macOS、Linux、Windows 上只需要 Python 3.11、NumPy、SciPy，不启动模拟器。完整运行与输出说明见 [recovery/README.md](recovery/README.md)。
+
 ![双臂正常装配完成](results/normal/completed_dynamic_scene.png)
 
 ![顺序任务图、参考运动路径与多模态 TPG](results/normal/normal_pipeline_tpg.png)
@@ -50,7 +59,7 @@
 
 这部分是**运动学环境与 IK 端点预览**，切换预设直接设置物体和机械臂端点状态。预览中的场景结构采用静态设置，积木采用放大后的模块尺寸，非真实 LEGO 尺寸。它与上面的正常动力学基线分别保存。
 
-尚未实现自主恢复搜索、碰撞自由的连接轨迹、真实 LEGO 卡扣连接、接触力控制和支撑承载动力学。预设③由场景作者指定，**不是算法生成的恢复结果**。关节范围缩小也未证明目标任务在该范围下整体不可行；这些内容需要后续规划与验证模块确认。
+这部分概念预览没有自主恢复搜索、碰撞自由的连接轨迹、真实 LEGO 卡扣连接、接触力控制和支撑承载动力学。预设③由场景作者指定，**不是算法生成的恢复结果**。关节范围缩小也未证明目标任务在该范围下整体不可行；这些内容需要后续规划与验证模块确认。新增 `recovery/` 的离散搜索与这些手工预览分别保存，尚未驱动预览或正常模式的机器人。
 
 后续研究目标是从当前持物、连接和支撑状态出发，根据能力变化自动组合通用动作，并生成可执行的剩余计划。`config/experiment_definition.json` 记录动作接口与未来验证要求，不包含固定恢复动作链。
 
@@ -60,6 +69,8 @@
 - `Run_Normal_Mode.cmd / Replan_Normal_Mode.cmd`：复用规划复跑 / 完整重算并执行。
 - `Open_APEX_MR_Plus.cmd`：只打开当前顶层主场景。
 - `normal/`：正常模式 ILP、运动规划、TPG、动力学中央调度与说明。
+- `recovery/`：问题①离线恢复搜索、准静态 LP、事件证据缓存和抽象调度验收。
+- `examples/recovery/`：已运行原型的示例输入、恢复结果和合成场景对照记录。
 - `backups/environment_preview/APEX_MR_Plus.ttt`：原有静态概念预览，保留三种状态控制面板。
 - `src/`：原预览场景构建、中文控制面板、纹理和打开工具。
 - `assets/`：中文标牌 PNG 纹理。

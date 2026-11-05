@@ -1,0 +1,124 @@
+{
+  "name": "support_swap",
+  "parts": [
+    {
+      "id": "cap",
+      "mass": 0.06
+    }
+  ],
+  "slots": [
+    "source",
+    "buffer"
+  ],
+  "buffers": [
+    "buffer"
+  ],
+  "tasks": [
+    {
+      "id": "fit_cap",
+      "kind": "install",
+      "part": "cap",
+      "original_arm": "B",
+      "dependencies": [
+        "beam_ready"
+      ],
+      "duration": 3.0,
+      "insertion_force_N": 8.0,
+      "load_x_m": 0.2
+    }
+  ],
+  "snapshot": {
+    "locations": {
+      "cap": "held:B"
+    },
+    "supports": {
+      "A": "left"
+    },
+    "completed": [
+      "beam_ready"
+    ]
+  },
+  "capabilities": {
+    "A": {
+      "pick": {
+        "cap@source": "VALID",
+        "cap@buffer": "VALID"
+      },
+      "place": {
+        "cap@buffer": "VALID"
+      },
+      "install": {
+        "fit_cap": "VALID"
+      },
+      "support": {
+        "left": "VALID"
+      },
+      "handover": {
+        "cap@B": "VALID"
+      },
+      "work": {}
+    },
+    "B": {
+      "pick": {
+        "cap@source": "VALID",
+        "cap@buffer": "VALID"
+      },
+      "place": {
+        "cap@buffer": "VALID"
+      },
+      "install": {
+        "fit_cap": "VALID"
+      },
+      "support": {
+        "right": "VALID"
+      },
+      "handover": {
+        "cap@A": "VALID"
+      },
+      "work": {}
+    }
+  },
+  "physics": {
+    "gravity_m_s2": 9.81,
+    "loads": [
+      {
+        "fx_N": 0.0,
+        "fz_N": -4.5,
+        "x_m": 0.12,
+        "z_m": 0.0
+      }
+    ],
+    "contacts": {
+      "left": {
+        "arm": "A",
+        "x_m": 0.18,
+        "z_m": -0.03,
+        "normal_limit_N": 40.0,
+        "friction": 0.6
+      },
+      "right": {
+        "arm": "B",
+        "x_m": 0.18,
+        "z_m": -0.03,
+        "normal_limit_N": 40.0,
+        "friction": 0.6
+      }
+    },
+    "connection": {
+      "force_x_limit_N": 100.0,
+      "force_z_limit_N": 100.0,
+      "moment_limit_Nm": 0.3,
+      "reinforced_by": "fit_cap",
+      "reinforced_moment_limit_Nm": 3.0
+    }
+  },
+  "event": {
+    "description": "B loses the declared fit_cap skill; other skills remain available",
+    "updates": [
+      {
+        "fact": "capabilities/B/install/fit_cap",
+        "value": "INVALID"
+      }
+    ]
+  }
+}

@@ -22,6 +22,9 @@ results/normal/fast_reference/
 results/normal/rrt_paths/
 results/normal/geometry_pair_checks.jsonl
 
+# Reproducible offline recovery runs; reviewed examples live in examples/recovery
+results/recovery/
+
 # Local machine configuration and credentials
 .env
 .env.*

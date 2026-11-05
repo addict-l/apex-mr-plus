@@ -94,4 +94,4 @@ python -m normal.pipeline --replan --plan-only
 - `normal_execution.mp4`：实际仿真相机录像；可靠的耗时数据应读取日志中的仿真时间，而非根据视频帧数推算。`initial_dynamic_scene.png、completed_dynamic_scene.png` 或 `failed_dynamic_scene.png` 保存对应实测画面。
 - `pipeline_manifest.json`：场景签名、流水线阶段及理想化模型边界。`../scenes/11_Normal_APEX_MR_Planned.ttt` 包含已生成计划和中央调度脚本。
 
-**与 APEX-MR 的关系。** 本实现沿用 ILP 分工、串行可行参考、RRT-Connect、多模态 TPG 和实际完成反馈调度这条主线；没有复刻原论文的全部 ILP 公式、装配序列生成、EOAT、力控制技能或可选 shortcut 优化。实际碰撞验证采用有限采样，不能据此宣称连续时间、任意延迟下的完整碰撞保证；TPG 无环也不意味着装配动力学或接触过程必然成功。能力退化后的自主恢复搜索属于后续工作，正常模式不会把人工快照作为恢复算法输出。
+**与 APEX-MR 的关系。** 本实现沿用 ILP 分工、串行可行参考、RRT-Connect、多模态 TPG 和实际完成反馈调度这条主线；没有复刻原论文的全部 ILP 公式、装配序列生成、EOAT、力控制技能或可选 shortcut 优化。实际碰撞验证采用有限采样，不能据此宣称连续时间、任意延迟下的完整碰撞保证；TPG 无环也不意味着装配动力学或接触过程必然成功。正常模式尚不包含在线自主恢复，也不会把人工快照作为恢复算法输出；问题①的离线状态搜索原型见 [../recovery/README.md](../recovery/README.md)，它尚未接入本目录的运动编译和执行器。

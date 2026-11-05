@@ -1,0 +1,822 @@
+{
+  "schema_version": 1,
+  "case": "support_swap",
+  "policy": "recovery",
+  "status": "solved",
+  "solved": true,
+  "actions": [
+    {
+      "id": "r0000",
+      "kind": "place",
+      "arm": "B",
+      "target": "cap@buffer",
+      "duration": 1.0,
+      "part": "cap",
+      "destination": "buffer",
+      "receiver": null,
+      "resources": [
+        "B"
+      ],
+      "start": 0.0,
+      "end": 1.0
+    },
+    {
+      "id": "r0001",
+      "kind": "acquire_support",
+      "arm": "B",
+      "target": "right",
+      "duration": 1.0,
+      "part": null,
+      "destination": null,
+      "receiver": null,
+      "resources": [
+        "B"
+      ],
+      "start": 1.0,
+      "end": 2.0
+    },
+    {
+      "id": "r0002",
+      "kind": "release_support",
+      "arm": "A",
+      "target": "left",
+      "duration": 0.5,
+      "part": null,
+      "destination": null,
+      "receiver": null,
+      "resources": [
+        "A"
+      ],
+      "start": 2.0,
+      "end": 2.5
+    },
+    {
+      "id": "r0003",
+      "kind": "pick",
+      "arm": "A",
+      "target": "cap@buffer",
+      "duration": 1.0,
+      "part": "cap",
+      "destination": null,
+      "receiver": null,
+      "resources": [
+        "A"
+      ],
+      "start": 2.5,
+      "end": 3.5
+    },
+    {
+      "id": "r0004",
+      "kind": "install",
+      "arm": "A",
+      "target": "fit_cap",
+      "duration": 3.0,
+      "part": "cap",
+      "destination": null,
+      "receiver": null,
+      "resources": [
+        "A"
+      ],
+      "start": 3.5,
+      "end": 6.5
+    },
+    {
+      "id": "r0005",
+      "kind": "release_support",
+      "arm": "B",
+      "target": "right",
+      "duration": 0.5,
+      "part": null,
+      "destination": null,
+      "receiver": null,
+      "resources": [
+        "B"
+      ],
+      "start": 6.5,
+      "end": 7.0
+    }
+  ],
+  "final_state": {
+    "locations": {
+      "cap": "installed"
+    },
+    "supports": {},
+    "completed": [
+      "beam_ready",
+      "fit_cap"
+    ]
+  },
+  "unfinished_tasks": [],
+  "predicted_makespan_s": 7.0,
+  "allocation_hint": {
+    "solver": "scipy.optimize.milp / HiGHS",
+    "scipy_version": "1.17.1",
+    "model": "binary assembly modes with a continuous peak-workload auxiliary",
+    "cost_unit": "abstract_skill_seconds",
+    "load_balance_weight": 0.15,
+    "objective_definition": "sum(mode_cost * x) + load_balance_weight * peak_arm_workload",
+    "objective_is_makespan": false,
+    "support_criterion": {
+      "formula": "(mass_kg * gravity_m_s2 + insertion_force_N) * lever_arm_m > connection_moment_limit_Nm",
+      "scope": "quasi-static load screening at the supplied connection/load point",
+      "assumption": "each feasible support candidate supplies the needed counter-support; caller must certify its geometry and capacity",
+      "per_part": [
+        {
+          "part": "cap",
+          "mass_kg": 0.06,
+          "gravity_m_s2": 9.81,
+          "insertion_force_N": 8.0,
+          "lever_arm_m": 0.2,
+          "required_moment_Nm": 1.71772,
+          "connection_moment_limit_Nm": 0.3,
+          "support_required": true
+        }
+      ]
+    },
+    "constraints_summary": {
+      "exactly_one_mode_per_part": 1,
+      "arm_peak_workload_inequalities": 2,
+      "installer_support_same_arm_forbidden": true,
+      "unsupported_over_limit_mode_forbidden": true,
+      "binary_mode_count": 1,
+      "continuous_auxiliary_count": 1,
+      "assembly_sequence": "provided externally; not optimized by this model"
+    },
+    "rejected_candidates": [
+      {
+        "candidate_index": 0,
+        "reason": "unsupported mode violates the specified load-moment limit"
+      },
+      {
+        "candidate_index": 1,
+        "reason": "installer/grasp candidate is geometrically infeasible"
+      }
+    ],
+    "solver_called": true,
+    "solver_status": 0,
+    "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "mip_gap": 0.0,
+    "elapsed_s": 0.0007862499915063381,
+    "status": "optimal",
+    "solved": true,
+    "optimal": true,
+    "objective": 4.95,
+    "solver_objective": 4.95,
+    "choices": [
+      {
+        "mode_id": "m0000",
+        "candidate_index": 0,
+        "support_candidate_index": 0,
+        "part": "cap",
+        "arm": "A",
+        "grasp": "declared_grasp",
+        "support_arm": "B",
+        "support_required": true,
+        "support_tcp_position": [
+          0.18,
+          0.0,
+          -0.03
+        ],
+        "support_quaternion": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "main_cost": 3.0,
+        "support_cost": 1.5,
+        "mode_cost": 4.5,
+        "arm_workload": {
+          "A": 3.0,
+          "B": 1.5
+        }
+      }
+    ],
+    "arm_workloads": {
+      "A": 3.0,
+      "B": 1.5
+    },
+    "peak_arm_workload": 3.0,
+    "peak_auxiliary_value": 3.0,
+    "variables": [
+      {
+        "mode_id": "m0000",
+        "part": "cap",
+        "arm": "A",
+        "grasp": "declared_grasp",
+        "support_arm": "B",
+        "value": 1.0,
+        "mode_cost": 4.5
+      }
+    ],
+    "hint_only": true,
+    "qualifications": "declared capabilities, not IK/path evidence"
+  },
+  "search": {
+    "expanded": 18,
+    "generated": 16,
+    "visited_states": 19,
+    "complete": true,
+    "exhausted_finite_frontier": false,
+    "budget_exhausted": false,
+    "unknown_capabilities": [],
+    "unknown_wrench_queries": 0,
+    "rejections": {
+      "wrench_invalid": 4,
+      "capability_invalid": 1
+    },
+    "wall_time_s": 0.0019674590439535677
+  },
+  "evidence_queries": {
+    "capability_misses": 1,
+    "wrench_hits": 42,
+    "capability_hits": 12
+  },
+  "execution_model": "abstract deterministic event simulation with a global assembly-skill mutex",
+  "objective": "remaining abstract makespan; no original D-ITAGS optimality bound claimed",
+  "executable_in_coppeliasim": false,
+  "limitations": [
+    "declared capabilities, no IK or path validation",
+    "planar quasi-static structure LP",
+    "finite candidates and bounded search",
+    "no live state capture or controller resume"
+  ],
+  "event": {
+    "description": "B loses the declared fit_cap skill; other skills remain available",
+    "updates": [
+      {
+        "fact": "capabilities/B/install/fit_cap",
+        "value": "INVALID"
+      }
+    ]
+  },
+  "repair": {
+    "seed_tasks": [
+      "fit_cap"
+    ],
+    "affected_tasks": [
+      "fit_cap"
+    ],
+    "seed_reasons": {
+      "fit_cap": [
+        "capabilities/B/install/fit_cap"
+      ]
+    },
+    "other_pending_tasks": [],
+    "resource_recheck_arms": [
+      "B"
+    ],
+    "preserved_completed": [
+      "beam_ready"
+    ],
+    "scope": "evidence invalidation and task impact only; remaining-window search is rebuilt",
+    "changed_facts": [
+      "capabilities/B/install/fit_cap"
+    ],
+    "invalidated_evidence": [
+      {
+        "kind": "capability",
+        "key": "[\"B\",\"install\",\"fit_cap\"]",
+        "changed_facts": [
+          "capabilities/B/install/fit_cap"
+        ]
+      }
+    ],
+    "reuse_evidence": true,
+    "nominal_plan_status": "solved"
+  },
+  "schedule": [
+    {
+      "id": "r0000",
+      "kind": "place",
+      "arm": "B",
+      "target": "cap@buffer",
+      "duration": 1.0,
+      "part": "cap",
+      "destination": "buffer",
+      "receiver": null,
+      "resources": [
+        "B"
+      ],
+      "start": 0.0,
+      "end": 1.0
+    },
+    {
+      "id": "r0001",
+      "kind": "acquire_support",
+      "arm": "B",
+      "target": "right",
+      "duration": 1.0,
+      "part": null,
+      "destination": null,
+      "receiver": null,
+      "resources": [
+        "B"
+      ],
+      "start": 1.0,
+      "end": 2.0
+    },
+    {
+      "id": "r0002",
+      "kind": "release_support",
+      "arm": "A",
+      "target": "left",
+      "duration": 0.5,
+      "part": null,
+      "destination": null,
+      "receiver": null,
+      "resources": [
+        "A"
+      ],
+      "start": 2.0,
+      "end": 2.5
+    },
+    {
+      "id": "r0003",
+      "kind": "pick",
+      "arm": "A",
+      "target": "cap@buffer",
+      "duration": 1.0,
+      "part": "cap",
+      "destination": null,
+      "receiver": null,
+      "resources": [
+        "A"
+      ],
+      "start": 2.5,
+      "end": 3.5
+    },
+    {
+      "id": "r0004",
+      "kind": "install",
+      "arm": "A",
+      "target": "fit_cap",
+      "duration": 3.0,
+      "part": "cap",
+      "destination": null,
+      "receiver": null,
+      "resources": [
+        "A"
+      ],
+      "start": 3.5,
+      "end": 6.5
+    },
+    {
+      "id": "r0005",
+      "kind": "release_support",
+      "arm": "B",
+      "target": "right",
+      "duration": 0.5,
+      "part": null,
+      "destination": null,
+      "receiver": null,
+      "resources": [
+        "B"
+      ],
+      "start": 6.5,
+      "end": 7.0
+    }
+  ],
+  "validation": {
+    "valid": true,
+    "failures": [],
+    "final_state": {
+      "locations": {
+        "cap": "installed"
+      },
+      "supports": {},
+      "completed": [
+        "beam_ready",
+        "fit_cap"
+      ]
+    },
+    "all_goals_completed_and_resources_released": true,
+    "support_intervals": [
+      {
+        "arm": "A",
+        "contact": "left",
+        "start": 0.0,
+        "initial": true,
+        "end": 2.5
+      },
+      {
+        "arm": "B",
+        "contact": "right",
+        "start": 2.0,
+        "initial": false,
+        "end": 7.0
+      }
+    ],
+    "wrench_witnesses": [
+      {
+        "time": 0.0,
+        "phase": "snapshot",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -4.5,
+          -0.54
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 2.220446049250313e-16,
+        "connection_reaction_Fx_Fz_M": [
+          -2.545454545454546,
+          0.2575757575757569,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "A",
+            "contact": "left",
+            "fx_N": 2.545454545454546,
+            "fz_N": 4.242424242424243
+          }
+        ]
+      },
+      {
+        "time": 0.0,
+        "phase": "after_completion",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -4.5,
+          -0.54
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 2.220446049250313e-16,
+        "connection_reaction_Fx_Fz_M": [
+          -2.545454545454546,
+          0.2575757575757569,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "A",
+            "contact": "left",
+            "fx_N": 2.545454545454546,
+            "fz_N": 4.242424242424243
+          }
+        ]
+      },
+      {
+        "time": 0.0,
+        "phase": "during_skills",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -4.5,
+          -0.54
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 2.220446049250313e-16,
+        "connection_reaction_Fx_Fz_M": [
+          -2.545454545454546,
+          0.2575757575757569,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "A",
+            "contact": "left",
+            "fx_N": 2.545454545454546,
+            "fz_N": 4.242424242424243
+          }
+        ]
+      },
+      {
+        "time": 1.0,
+        "phase": "after_completion",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -4.5,
+          -0.54
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 2.220446049250313e-16,
+        "connection_reaction_Fx_Fz_M": [
+          -2.545454545454546,
+          0.2575757575757569,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "A",
+            "contact": "left",
+            "fx_N": 2.545454545454546,
+            "fz_N": 4.242424242424243
+          }
+        ]
+      },
+      {
+        "time": 1.0,
+        "phase": "during_skills",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -4.5,
+          -0.54
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 2.220446049250313e-16,
+        "connection_reaction_Fx_Fz_M": [
+          -2.545454545454546,
+          0.2575757575757569,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "A",
+            "contact": "left",
+            "fx_N": 2.545454545454546,
+            "fz_N": 4.242424242424243
+          }
+        ]
+      },
+      {
+        "time": 2.0,
+        "phase": "after_completion",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -4.5,
+          -0.54
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 0.0,
+        "connection_reaction_Fx_Fz_M": [
+          -0.0,
+          -0.16666666666666696,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "A",
+            "contact": "left",
+            "fx_N": -0.0,
+            "fz_N": 0.0
+          },
+          {
+            "arm": "B",
+            "contact": "right",
+            "fx_N": 0.0,
+            "fz_N": 4.666666666666667
+          }
+        ]
+      },
+      {
+        "time": 2.0,
+        "phase": "during_skills",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -4.5,
+          -0.54
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 0.0,
+        "connection_reaction_Fx_Fz_M": [
+          -0.0,
+          -0.16666666666666696,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "A",
+            "contact": "left",
+            "fx_N": -0.0,
+            "fz_N": 0.0
+          },
+          {
+            "arm": "B",
+            "contact": "right",
+            "fx_N": 0.0,
+            "fz_N": 4.666666666666667
+          }
+        ]
+      },
+      {
+        "time": 2.5,
+        "phase": "after_completion",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -4.5,
+          -0.54
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 2.220446049250313e-16,
+        "connection_reaction_Fx_Fz_M": [
+          -2.545454545454546,
+          0.2575757575757569,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "B",
+            "contact": "right",
+            "fx_N": 2.545454545454546,
+            "fz_N": 4.242424242424243
+          }
+        ]
+      },
+      {
+        "time": 2.5,
+        "phase": "during_skills",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -4.5,
+          -0.54
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 2.220446049250313e-16,
+        "connection_reaction_Fx_Fz_M": [
+          -2.545454545454546,
+          0.2575757575757569,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "B",
+            "contact": "right",
+            "fx_N": 2.545454545454546,
+            "fz_N": 4.242424242424243
+          }
+        ]
+      },
+      {
+        "time": 3.5,
+        "phase": "after_completion",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -4.5,
+          -0.54
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 2.220446049250313e-16,
+        "connection_reaction_Fx_Fz_M": [
+          -2.545454545454546,
+          0.2575757575757569,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "B",
+            "contact": "right",
+            "fx_N": 2.545454545454546,
+            "fz_N": 4.242424242424243
+          }
+        ]
+      },
+      {
+        "time": 3.5,
+        "phase": "during_skills",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -13.0886,
+          -2.25772
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 0.0,
+        "connection_reaction_Fx_Fz_M": [
+          -7.750666666666667,
+          0.1708222222222222,
+          -0.3
+        ],
+        "support_reactions": [
+          {
+            "arm": "B",
+            "contact": "right",
+            "fx_N": 7.750666666666667,
+            "fz_N": 12.917777777777777
+          }
+        ]
+      },
+      {
+        "time": 6.5,
+        "phase": "after_completion",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -5.0886,
+          -0.6577200000000001
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 6.661338147750939e-16,
+        "connection_reaction_Fx_Fz_M": [
+          -11.084000000000001,
+          -13.384733333333337,
+          -3.0
+        ],
+        "support_reactions": [
+          {
+            "arm": "B",
+            "contact": "right",
+            "fx_N": 11.084000000000001,
+            "fz_N": 18.473333333333336
+          }
+        ]
+      },
+      {
+        "time": 6.5,
+        "phase": "during_skills",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -5.0886,
+          -0.6577200000000001
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 6.661338147750939e-16,
+        "connection_reaction_Fx_Fz_M": [
+          -11.084000000000001,
+          -13.384733333333337,
+          -3.0
+        ],
+        "support_reactions": [
+          {
+            "arm": "B",
+            "contact": "right",
+            "fx_N": 11.084000000000001,
+            "fz_N": 18.473333333333336
+          }
+        ]
+      },
+      {
+        "time": 7.0,
+        "phase": "after_completion",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -5.0886,
+          -0.6577200000000001
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 0.0,
+        "connection_reaction_Fx_Fz_M": [
+          -0.0,
+          5.0886,
+          0.6577200000000001
+        ],
+        "support_reactions": []
+      },
+      {
+        "time": 7.0,
+        "phase": "during_skills",
+        "model": "planar_single_structure_quasistatic",
+        "solver": "scipy.optimize.linprog/HiGHS",
+        "external_wrench_Fx_Fz_M": [
+          0.0,
+          -5.0886,
+          -0.6577200000000001
+        ],
+        "solver_status": 0,
+        "status": "VALID",
+        "balance_residual": 0.0,
+        "connection_reaction_Fx_Fz_M": [
+          -0.0,
+          5.0886,
+          0.6577200000000001
+        ],
+        "support_reactions": []
+      }
+    ],
+    "predicted_makespan_s": 7.0,
+    "level": "abstract event/state/planar-physics audit",
+    "robot_execution_verified": false,
+    "ik_verified": false,
+    "path_verified": false,
+    "collision_verified": false
+  }
+}
