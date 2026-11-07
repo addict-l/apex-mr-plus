@@ -132,6 +132,20 @@ class MotionPlanner:
         return self._call("mpValidateJoint", _arm(arm), _vector(q, 6, "q"),
                           _payload(payload), placed or {}, options or {})
 
+    def validate_edge(self, arm, q_start, q_goal, payload=None, placed=None, other_q=None,
+                      contact_exclusions=None, step=.005, options=None):
+        """Check a joint-space edge in the same geometry as the RRT backend."""
+        if not math.isfinite(float(step)) or step <= 0:
+            raise ValueError("step must be finite and positive")
+        opts = deepcopy(options or {})
+        opts["edge_check_step"] = float(step)
+        if other_q is not None:
+            opts["other_q"] = _vector(other_q, 6, "other_q")
+        if contact_exclusions is not None:
+            opts["contact_exclusions"] = deepcopy(contact_exclusions)
+        return self._call("mpValidateJointEdge", _arm(arm), _vector(q_start, 6, "q_start"),
+                          _vector(q_goal, 6, "q_goal"), _payload(payload), placed or {}, opts)
+
     def validate_pair(self, qA, qB, payloads=None, placed=None, contact_exclusions=None, options=None):
         opts = deepcopy(options or {})
         if contact_exclusions is not None:

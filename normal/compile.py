@@ -340,7 +340,8 @@ class _Compiler:
                           "wall_s":answer.get("stats",{}).get("wall_time_s")}),flush=True)
         return answer["path"]
 
-    def staged_support_path(self, choice, support, placed, other_q, other_payload=None, reverse=False):
+    def staged_support_path(self, choice, support, placed, other_q, other_payload=None, reverse=False,
+                            persistent_contacts=None):
         """Enter a support contact from below, with no sideways loaded sliding.
 
         Lower/translate stages retain every tool/structure collision test. Only
@@ -349,6 +350,7 @@ class _Compiler:
         certifies that the contact segment remains on its vertical TCP axis.
         """
         arm = support["arm"]
+        persistent_contacts = list(persistent_contacts or [])
         contact = support["tcp_position"]
         pre = support["precontact_position"]
         bottom = self.parts[support["support_part"]]["goal"][2] - self.parts[support["support_part"]]["size"][2]/2
@@ -361,7 +363,7 @@ class _Compiler:
                 for position,seed in zip(positions,[support["q_precontact"],support["q_contact"]]):
                     answer = self.planner.solve_ik(arm,position,support["quaternion"],placed=placed,
                         options={"seed":seed,"multiple":False,"other_q":other_q,
-                                 "other_payload":other_payload or {},"contact_exclusions":[],
+                                 "other_payload":other_payload or {},"contact_exclusions":persistent_contacts,
                                  "contact_tolerance":.003})
                     self.calls.append({"type":"IK","arm":arm,"position":position,
                         "ok":bool(answer.get("ok")),"stats":answer.get("stats",{}),
@@ -387,7 +389,7 @@ class _Compiler:
         result, markers = [], []
         for name,start,goal,contact_allowed in stages:
             path = self.plan(choice,arm,start,goal,placed,other_q=other_q,other_payload=other_payload,
-                exclusions=support["contact_exclusions"] if contact_allowed else [],solve_time=.6,
+                exclusions=persistent_contacts+(support["contact_exclusions"] if contact_allowed else []),solve_time=.6,
                 motion_options={"joint_bound_margin":.06 if _norm(start,goal)<.08 else .16,
                                 "max_joint_step":.015})
             marker = {"name":name,"q_start_index":max(0,len(result)-1),"contact_allowed":contact_allowed}

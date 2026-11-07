@@ -17,9 +17,21 @@ from typing import Any, BinaryIO
 import uuid
 
 
-DEFAULT_INSTALL = Path(r"C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu")
+DEFAULT_INSTALL = (Path("/Applications/coppeliaSim.app") if sys.platform == "darwin" else
+                   Path(r"C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu") if sys.platform == "win32" else
+                   Path("/opt/CoppeliaSim"))
 _INSTANCE_PARAM = "dualArmBlocks.instance"
 _LOG = logging.getLogger(__name__)
+
+
+def installation_paths(root: Path | str) -> tuple[Path, Path]:
+    """Return resource directory and executable for Mac bundles or flat installs."""
+    root = Path(root).expanduser()
+    if root.suffix == ".app":
+        return root / "Contents" / "Resources", root / "Contents" / "MacOS" / "coppeliaSim"
+    if root.name in {"Resources", "MacOS"} and root.parent.name == "Contents":
+        return root.parent / "Resources", root.parent / "MacOS" / "coppeliaSim"
+    return root, root / ("coppeliaSim.exe" if sys.platform == "win32" else "coppeliaSim")
 
 
 class Simulator:
@@ -38,8 +50,7 @@ class Simulator:
         timeout: float = 8.0,
     ) -> None:
         self.root = Path(root).expanduser().resolve()
-        self.install = Path(os.environ.get("COPPELIASIM_ROOT", DEFAULT_INSTALL))
-        self.executable = self.install / "coppeliaSim.exe"
+        self.install, self.executable = installation_paths(os.environ.get("COPPELIASIM_ROOT", DEFAULT_INSTALL))
         self.host = host
         self.port = int(port)
         self.timeout = float(timeout)

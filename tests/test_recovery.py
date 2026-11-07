@@ -3,9 +3,9 @@ from copy import deepcopy
 import unittest
 
 from recovery.__main__ import run_case
-from recovery.model import Action, Problem, apply_event
+from recovery.model import Action, Problem, apply_event, transition
 from recovery.oracles import DeclaredCapabilities, EvidenceCache, PlanarWrenchOracle
-from recovery.planner import affected_tasks, plan_recovery
+from recovery.planner import actions, affected_tasks, plan_recovery
 from recovery.scenarios import cases, get_case
 from recovery.schedule import action_schedule, build_schedule, validate_schedule
 
@@ -16,6 +16,19 @@ def changed(name):
 
 
 class RecoveryPlanningTests(unittest.TestCase):
+    def test_existing_support_commitment_survives_a_statically_stable_snapshot(self):
+        data=cases()['support_swap']
+        data['physics']['connection']['moment_limit_Nm']=3.
+        data['support_until']='fit_cap'
+        problem=Problem(data)
+        release=Action('release_support','A','left',problem.durations['release_support'])
+        self.assertNotIn(release,actions(problem,problem.initial))
+        with self.assertRaisesRegex(ValueError,'continuous support'):
+            transition(problem,problem.initial,release)
+        state=transition(problem,problem.initial,Action('place','B','cap@buffer',1.,part='cap',destination='buffer'))
+        state=transition(problem,state,Action('acquire_support','B','right',1.))
+        self.assertIn(release,actions(problem,state))
+
     def test_blocked_predecessor_does_not_block_independent_work_or_become_success(self):
         result = run_case(get_case("independent_work"))
         self.assertEqual(result["status"], "partial")

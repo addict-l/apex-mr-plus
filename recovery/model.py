@@ -134,6 +134,10 @@ class Problem:
                 raise ValueError("work tasks must explicitly be independent_of_assembly")
         if len(set(installed_parts)) != len(installed_parts):
             raise ValueError("this finite model supports one install goal per part")
+        self.support_until = data.get("support_until")
+        if self.support_until is not None and (self.support_until not in self.tasks
+                                               or self.tasks[self.support_until]["kind"] != "install"):
+            raise ValueError("support_until must reference an install goal")
         pending = set(self.tasks)
         known = set(self.initial.completed)
         while pending:
@@ -175,6 +179,8 @@ class Problem:
 
     def validate_state(self, state: State):
         locations, supports = dict(state.locations), dict(state.supports)
+        if self.support_until and self.support_until not in state.completed and not supports:
+            raise ValueError("continuous support is required until the named installation completes")
         if set(locations) != set(self.parts):
             raise ValueError("snapshot must locate every declared part exactly once")
         occupied_slots = []

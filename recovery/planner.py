@@ -32,7 +32,8 @@ def actions(problem: Problem, state: State, policy: str = "recovery") -> list[Ac
     for arm in ARMS:
         held = state.held(arm)
         if arm in supports:
-            result.append(Action("release_support", arm, supports[arm], problem.durations["release_support"]))
+            if (not problem.support_until or problem.support_until in state.completed or len(supports) > 1):
+                result.append(Action("release_support", arm, supports[arm], problem.durations["release_support"]))
         elif held:
             if policy == "recovery":
                 for slot in problem.buffers:

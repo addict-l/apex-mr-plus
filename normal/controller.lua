@@ -113,7 +113,11 @@ local function beginNode(node,t)
   local nominalBottom=cfg.goal[s.part][3]-half
   local dz=actualBottom-nominalBottom
   if math.abs(dz)>.002 then fail(string.format('Support surface outside 2mm skill envelope: %.6fm',dz));return end
-  pose[3]=pose[3]+dz
+  -- A recovery support joining an already loaded beam can request a lighter
+  -- contact. Keep the normal skill's original 2 mm correction envelope.
+  local bias=node.metadata.support_height_bias_m or 0
+  if math.abs(bias)>.0007 or math.abs(dz+bias)>.002 then fail('Support adjustment outside skill envelope');return end
+  pose[3]=pose[3]+dz+bias
   simIK.setObjectPose(ikEnvironment,a.ik_map[a.ik_target],pose,simIK.handle_world)
   local result=simIK.handleGroup(ikEnvironment,a.ik_group,{syncWorlds=false,allowError=false})
   if result~=simIK.result_success then fail('Virtual support-height IK failed');return end
@@ -123,7 +127,7 @@ local function beginNode(node,t)
   end
   if maxdq>.015 then fail('Support correction changed IK branch');return end
   s.height_correction_m=dz
-  log('support_height_compensation',node,{height_m=dz,max_joint_correction_rad=maxdq,virtual_ik_only=true})
+  log('support_height_compensation',node,{height_m=dz,contact_bias_m=bias,max_joint_correction_rad=maxdq,virtual_ik_only=true})
   sim.setObjectInt32Param(arms[node.arm].pad,sim.shapeintparam_respondable,1)
   -- The physics engine caches respondability when a body is created.
   sim.resetDynamicObject(arms[node.arm].pad)

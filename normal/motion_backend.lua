@@ -504,10 +504,11 @@ function mpPlanJoint(side,startQ,goalQ,algorithm,payload,placed,options)
             local cyclic,interval=sim.getJointInterval(j)
             local low,high=interval[1],interval[1]+interval[2]
             if cyclic then low=-2*math.pi high=2*math.pi end
-            if options.joint_bound_margin then
-                assert(options.joint_bound_margin>0,'joint_bound_margin must be positive')
-                low=math.max(low,math.min(startQ[i],goalQ[i])-options.joint_bound_margin)
-                high=math.min(high,math.max(startQ[i],goalQ[i])+options.joint_bound_margin)
+            local margin=options.joint_bound_margins and options.joint_bound_margins[i] or options.joint_bound_margin
+            if margin then
+                assert(margin>0,'joint bound margins must be positive')
+                low=math.max(low,math.min(startQ[i],goalQ[i])-margin)
+                high=math.min(high,math.max(startQ[i],goalQ[i])+margin)
             end
             actualBounds[i]={low,high}
         end
@@ -557,7 +558,7 @@ function mpPlanJoint(side,startQ,goalQ,algorithm,payload,placed,options)
         local exact=solved and simOMPL.hasExactSolution(entry.task)
         local stats={algorithm=algorithm,backend='simOMPL',roadmap_reused=reused and multi,
             planner_reused=reused,planner_before=before,joint_bounds=actualBounds,
-            joint_bound_margin=options.joint_bound_margin,
+            joint_bound_margin=options.joint_bound_margin,joint_bound_margins=options.joint_bound_margins,
             planner_after=plannerData(entry.task,6),solve_budget_s=options.solve_time or 1.5}
         stats.solve_collision_checks=checks-checksBeforeSolve
         if not exact then
@@ -565,15 +566,23 @@ function mpPlanJoint(side,startQ,goalQ,algorithm,payload,placed,options)
             return {ok=false,error='No exact collision-free solution within budget',stats=stats,problem=lastProblem}
         end
         local raw=unpackPath(simOMPL.getPath(entry.task),6)
+        local simplified=raw
+        if options.ompl_simplify_time and options.ompl_simplify_time>0 then
+            simOMPL.simplifyPath(entry.task,options.ompl_simplify_time)
+            local candidate=unpackPath(simOMPL.getPath(entry.task),6)
+            if pathCost(candidate)<pathCost(raw) then simplified=candidate end
+        end
         local extent=0
         for _,bound in ipairs(actualBounds) do extent=extent+(bound[2]-bound[1])^2 end
         local checkStep=math.min(.005,(options.resolution or .001)*math.sqrt(extent))
-        local waypoints=raw
+        local waypoints=simplified
         local checksBeforeShortcut=checks
         if options.simplify~=false then
-            waypoints=checkedShortcut(raw,function(q)return validJoint(side,q,ctx)end,checkStep)
+            waypoints=checkedShortcut(simplified,function(q)return validJoint(side,q,ctx)end,checkStep)
         end
-        stats.postprocess='bounded_collision_checked_joint_shortcut'
+        stats.postprocess=options.ompl_simplify_time and 'OMPL_simplification_and_sampled_shortcuts' or 'bounded_collision_checked_joint_shortcut'
+        stats.ompl_simplify_time_s=options.ompl_simplify_time or 0
+        stats.simplified_cost=pathCost(simplified)
         stats.shortcut_collision_checks=checks-checksBeforeShortcut
         stats.collision_check_step_rad=checkStep
         local certificate=denseJoint(waypoints,checkStep)
@@ -589,3 +598,18 @@ function mpPlanJoint(side,startQ,goalQ,algorithm,payload,placed,options)
     end)
 end
 
+
+-- Validate shortcut edges using the exact same payload/contact context as RRT.
+function mpValidateJointEdge(side,startQ,goalQ,payload,placed,options)
+    return transaction(function()
+        options=options or {} checks=0 lastProblem=nil
+        local ctx=newContext({[side]=payload},placed,options,side)
+        local samples=denseJoint({startQ,goalQ},options.edge_check_step or .005)
+        for i,q in ipairs(samples) do
+            if not validJoint(side,q,ctx) then
+                return {ok=false,sample=i,samples=#samples,problem=lastProblem,collision_checks=checks}
+            end
+        end
+        return {ok=true,samples=#samples,collision_checks=checks}
+    end)
+end
