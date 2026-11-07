@@ -2,7 +2,7 @@
 
 正常模式采用 **ILP 分工与抓取/支撑选择 → 顺序任务图 → RRT-Connect 参考路径 → 多模态 TPG → 中央调度器动力学执行**。详细模型、算法边界和输出说明见 [normal/README.md](normal/README.md)。
 
-**演示问题①**：在 CoppeliaSim 4.10 中打开 [APEX_MR_Recovery_Demo.ttt](APEX_MR_Recovery_Demo.ttt)，点击 ▶。原装配场景运行到 B 准备安装连接砖时注入故障，随后演示缓存、支撑接替和 A 接手安装。面板支持切换自动恢复和保持等待。
+**演示问题①**：在 CoppeliaSim 4.10 中打开 [APEX_MR_Recovery_Demo.ttt](APEX_MR_Recovery_Demo.ttt)，点击 ▶。B 安装失败后先安全撤回，按原方式再次尝试，默认总共 3 次。面板可在首次尝试前切换“持续失败 / 暂时失败”：前者耗尽重试后进行缓存、支撑接替和 A 接手安装；后者最后一次成功后继续原计划。普通 TPG 中间节点使用连续运动曲线。
 
 问题①的 [Python 恢复搜索与演示说明](recovery/README.md)包含两个入口。抽象搜索借鉴 D-ITAGS 的事件修复和 WRAP 的动作搜索、受力检查。演示生成器把该场景搜索到的动作交给现有运动规划器和动力学执行器。
 

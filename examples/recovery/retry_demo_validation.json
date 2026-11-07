@@ -1,0 +1,157 @@
+{
+  "scope": "Original workcell only; known installation stroke failure; no multi-scene claim",
+  "scene_sha256": "4901f2443b7c279eff71f0279a8ee73a69d6cf46315e9d1d66dd94539d431823",
+  "source_scene_sha256": "b6244603205e3755acabdd311b93400eac9c271cc0fc1d717304cc3a5bfe39f5",
+  "software_tests": {
+    "run": 68,
+    "failed": 0,
+    "skipped": 0
+  },
+  "continuity_source_commit": "70ada87",
+  "runs": {
+    "persistent_3_host": {
+      "verified": true,
+      "time_s": 180.94000000001876,
+      "checks": {
+        "goals": true,
+        "fault_injected": true,
+        "empty_arms": true,
+        "connected": true,
+        "all_actions": true,
+        "measured_transfer": true,
+        "supported_insertion": true,
+        "attempt_budget": true,
+        "actual_failed_observations": true,
+        "safe_retreat_before_retry_or_repair": true,
+        "repair_only_after_exhaustion": true,
+        "failed_task_not_completed": true,
+        "continuous_motion": true,
+        "dynamic_arms": true,
+        "host_mode": true
+      },
+      "max_position_error_m": 0.0017120071800189244,
+      "max_orientation_error_rad": 0.0016916419779714961,
+      "actual_failed_position_errors_m": [
+        0.024384237581153215,
+        0.024384238416249576,
+        0.024384238555309287
+      ],
+      "attempt_start_times_s": [
+        88.89999999999945,
+        92.81999999999867,
+        96.73999999999789
+      ],
+      "retreat_completion_times_s": [
+        92.81999999999867,
+        96.73999999999789,
+        100.65999999999711
+      ],
+      "repair_start_times_s": [
+        103.67999999999651
+      ],
+      "continuous_milestones": {
+        "count": 192,
+        "nonzero_speed_count": 192
+      },
+      "recovery_used": true
+    },
+    "persistent_3_native": {
+      "verified": true,
+      "time_s": 180.92000000001875,
+      "checks": {
+        "goals": true,
+        "fault_injected": true,
+        "empty_arms": true,
+        "connected": true,
+        "all_actions": true,
+        "measured_transfer": true,
+        "supported_insertion": true,
+        "attempt_budget": true,
+        "actual_failed_observations": true,
+        "safe_retreat_before_retry_or_repair": true,
+        "repair_only_after_exhaustion": true,
+        "failed_task_not_completed": true,
+        "continuous_motion": true,
+        "dynamic_arms": true,
+        "host_mode": true
+      },
+      "max_position_error_m": 0.00156277220044827,
+      "max_orientation_error_rad": 0.0016493800205569687,
+      "actual_failed_position_errors_m": [
+        0.02439360116262291,
+        0.024393601904360854,
+        0.024393602265241454
+      ],
+      "attempt_start_times_s": [
+        88.89999999999945,
+        92.81999999999867,
+        96.73999999999789
+      ],
+      "retreat_completion_times_s": [
+        92.81999999999867,
+        96.73999999999789,
+        100.65999999999711
+      ],
+      "repair_start_times_s": [
+        103.67999999999651
+      ],
+      "continuous_milestones": {
+        "count": 192,
+        "nonzero_speed_count": 192
+      },
+      "recovery_used": true
+    },
+    "transient_3_native": {
+      "verified": true,
+      "time_s": 115.67999999999412,
+      "checks": {
+        "goals": true,
+        "fault_injected": true,
+        "empty_arms": true,
+        "connected": true,
+        "all_actions": true,
+        "measured_transfer": true,
+        "supported_insertion": true,
+        "attempt_budget": true,
+        "actual_failed_observations": true,
+        "safe_retreat_before_retry_or_repair": true,
+        "repair_only_after_exhaustion": true,
+        "failed_task_not_completed": true,
+        "continuous_motion": true,
+        "dynamic_arms": true,
+        "host_mode": true
+      },
+      "max_position_error_m": 0.001595755952571298,
+      "max_orientation_error_rad": 0.00152030312492197,
+      "actual_failed_position_errors_m": [
+        0.024391514234768544,
+        0.024391513667397724
+      ],
+      "attempt_start_times_s": [
+        88.89999999999945,
+        92.81999999999867,
+        96.73999999999789
+      ],
+      "retreat_completion_times_s": [
+        92.81999999999867,
+        96.73999999999789
+      ],
+      "repair_start_times_s": [],
+      "continuous_milestones": {
+        "count": 112,
+        "nonzero_speed_count": 112
+      },
+      "recovery_used": false
+    }
+  },
+  "native_gui": {
+    "file_sha256": "4901f2443b7c279eff71f0279a8ee73a69d6cf46315e9d1d66dd94539d431823",
+    "native_gui": true,
+    "panel_visible": true,
+    "waiting_option_verified": true,
+    "automatic_option_verified": true,
+    "fault_mode_toggle_verified": true,
+    "retry_budget_configuration_verified": true,
+    "invalid_retry_budget_rejected": true
+  }
+}

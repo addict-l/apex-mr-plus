@@ -92,8 +92,9 @@ local function releaseAndSnap(node)
  log('snap_connected',node,{part=part,position_error_m=error,measured_position=xyz,
                           anchor=anchor,model='ideal rigid snap at measured pose'})
 end
-local function beginNode(node,t)
- local info={node=node,start=t,within_since=nil}
+local function beginNode(node,t,profileOrigin)
+ local info={node=node,start=t,within_since=nil,
+  profile_origin=profileOrigin or (t-(node.metadata.motion_run_offset or 0))}
  states[node.id]='running';active[node.arm]=info
  local task=taskTimes[node.task_id]
  if not task then task={id=node.task_id,task_id=node.task_id,arm=node.arm,kind=node.kind,part=node.part,start=t};taskTimes[node.task_id]=task end
@@ -135,12 +136,31 @@ local function beginNode(node,t)
  end
  log('node_started',node)
 end
+local function curveQ(profile,u)
+ local s=profile.length*u*u*u*(10+u*(-15+6*u))
+ local pieces=profile.pieces
+ local piece=pieces[#pieces]
+ for _,candidate in ipairs(pieces) do
+  if s<candidate.s0+candidate.length then piece=candidate;break end
+ end
+ if piece.length<=0 then return {table.unpack(piece.controls[1])} end
+ local v=math.max(0,math.min(1,(s-piece.s0)/piece.length))
+ local controls={}
+ for i=1,6 do controls[i]={table.unpack(piece.controls[i])} end
+ for level=5,1,-1 do
+  for i=1,level do for joint=1,6 do
+   controls[i][joint]=(1-v)*controls[i][joint]+v*controls[i+1][joint]
+  end end
+ end
+ return controls[1]
+end
 local function plannedQ(node,elapsed)
  local segments=node.motion_segments or {}
  local t=elapsed
  for _,s in ipairs(segments) do
-  if t<=s.duration then
-   local u=math.max(0,math.min(1,t/s.duration));local v=u*u*u*(10+u*(-15+6*u))
+  if s.profile_duration or t<=s.duration then
+   local u=math.max(0,math.min(1,(t+(s.profile_offset or 0))/(s.profile_duration or s.duration)));local v=u*u*u*(10+u*(-15+6*u))
+   if s.geometry_profile then return curveQ(s.geometry_profile,u) end
    local q={} for i=1,6 do q[i]=s.q0[i]+(s.q1[i]-s.q0[i])*v end return q
   end
   t=t-s.duration
@@ -148,6 +168,29 @@ local function plannedQ(node,elapsed)
  -- The contact controller adds a small correction to its local target.
  -- Never return a graph-owned array that could accumulate that correction.
  return {table.unpack(node.q_end or node.q_samples[#node.q_samples])}
+end
+local function waypointPassed(node,actual,planned)
+ local segment=(node.motion_segments or {})[1]
+ if not segment or not segment.profile_duration then return false end
+ local unwrapped={}
+ for i=1,6 do unwrapped[i]=planned[i]+delta(actual[i],planned[i]) end
+ local dot,length=0,0
+ for i=1,6 do
+  local d=segment.progress_direction and segment.progress_direction[i] or (segment.q1[i]-segment.q0[i])
+  dot=dot+(unwrapped[i]-node.q_end[i])*d;length=length+d*d
+ end
+ if length<1e-15 or dot/length < -1e-8 then return false end
+ local error=0
+ for i=1,6 do
+  local d=segment.progress_direction and segment.progress_direction[i] or (segment.q1[i]-segment.q0[i])
+  error=math.max(error,math.abs(unwrapped[i]-(node.q_end[i]+dot/length*d)))
+ end
+ return error<.008
+end
+local function readyNode(node)
+ if not node or states[node.id]~='pending' or active[node.arm] then return false end
+ for _,p in ipairs(pred[node.id]) do if states[p]~='done' then return false end end
+ return true
 end
 local function finishNode(info,t)
  local node=info.node;local kind=node.kind
@@ -234,15 +277,14 @@ function sysCall_actuation()
  end
  -- Nodes are admitted only when every graph predecessor has completed.
  for _,node in ipairs(program.nodes) do
-  if states[node.id]=='pending' and not active[node.arm] then
-   local ready=true for _,p in ipairs(pred[node.id]) do if states[p]~='done' then ready=false;break end end
-   if ready then beginNode(node,t) end
-  end
+  if readyNode(node) then beginNode(node,t) end
  end
  for _,side in ipairs({'A','B'}) do
-  local info=active[side]
-  if info then
+  local transitions=0
+  while active[side] do
+   local info=active[side]
    local node=info.node;local elapsed=t-info.start
+   if node.metadata.motion_run_id then elapsed=t-info.profile_origin-(node.metadata.motion_run_offset or 0) end
    local q=plannedQ(node,elapsed)
    if support[side] and support[side].dq and (node.kind=='support_start' or node.kind=='support_end') then
     local motion=0 for _,seg in ipairs(node.motion_segments or {}) do motion=motion+seg.duration end
@@ -261,7 +303,19 @@ function sysCall_actuation()
     if not support[helper] or not support[helper].ready then fail('Insertion lacks support-ready barrier')
     else pressLoad={part=node.metadata.support_part or 'beam',force=node.metadata.force_N,position=node.metadata.goal or cfg.goal[node.part]} end
    end
-   if elapsed>=node.duration then
+   local continued=false
+   if node.metadata.continuation_to then
+    if elapsed>=node.duration and waypointPassed(node,actual,q) then
+     local nextNode=nodes[node.metadata.continuation_to];local origin=info.profile_origin
+     local velocity={}
+     for i,j in ipairs(arms[side].joints) do velocity[i]=sim.getJointVelocity(j) end
+     log('motion_milestone_passed',node,{measured_speed_rad_s=norm(velocity)})
+     finishNode(info,t)
+     if failure then return end
+     if not readyNode(nextNode) then fail('Continuous run reached an unacquired dependency');return end
+     beginNode(nextNode,t,origin);continued=true
+    end
+   elseif elapsed>=node.duration then
     local qualified=err<.008
     if node.kind=='support_start' then qualified=qualified and supportForce(side)>.15 end
     if qualified then
@@ -272,7 +326,10 @@ function sysCall_actuation()
     else info.within_since=nil end
    end
    if elapsed>node.duration+8 then fail('Endpoint did not settle: '..node.id) end
-  else target(side,arms[side].hold) end
+   transitions=transitions+1
+   if not continued or failure or transitions>#program.nodes then break end
+  end
+  if not active[side] then target(side,arms[side].hold) end
  end
  local all=true for _,state in pairs(states) do if state~='done' then all=false;break end end
  if all then done=true;finishTime=t;log('assembly_completed',nil) end

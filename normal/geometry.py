@@ -314,7 +314,12 @@ def _configuration_at(node, stamp, beginning, end):
         for segment in segments:
             duration = float(segment["duration"])
             if elapsed <= duration+EPS:
-                u = min(1., elapsed/duration) if duration > EPS else 1.
+                if segment.get('geometry_profile'):
+                    from .curve import eval_profile
+                    return eval_profile(segment['geometry_profile'], elapsed+float(segment.get('profile_offset', 0.)))
+                profile_duration = float(segment.get('profile_duration', duration))
+                profile_offset = float(segment.get('profile_offset', 0.))
+                u = min(1., max(0., (elapsed+profile_offset)/profile_duration)) if profile_duration > EPS else 1.
                 v = u*u*u*(10+u*(-15+6*u))
                 return [a+(b-a)*v for a,b in zip(segment["q0"],segment["q1"])]
             elapsed -= duration

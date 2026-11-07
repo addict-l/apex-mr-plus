@@ -24,6 +24,7 @@ from scipy.spatial.transform import Rotation
 from .__main__ import run_case
 from .model import Problem
 from .path_quality import compact_route, path_metrics
+from .retry import RetryPolicy
 from .scenarios import cases
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,7 +35,7 @@ from sim_connection import Simulator
 from label_mesh import make_label
 from normal.compile import _Compiler, _payload, _position, support_contact_geometry
 from normal.motion import MotionPlanner
-from normal.program import parameterize
+from normal.program import parameterize, _inverse_quintic
 from normal.scene import resolve
 from normal.tpg import build_tpg
 
@@ -405,6 +406,93 @@ def embed_controller(sim, root, demo, previous_script, output):
     return script
 
 
+def retime_embedded(graph):
+    """Recreate bookkeeping omitted from older embedded programs, keeping geometry."""
+    graph=deepcopy(graph)
+    for node in graph['nodes']:
+        if node.get('node_type')=='pose' and node.get('fragment_index',0)<node.get('fragment_count',1)-1:
+            node['metadata'].pop('effects',None)
+    if 'reference_schedule' not in graph:
+        graph['reference_schedule']=[];graph['task_map']={}
+        for node in graph['nodes']:
+            key=node['task_id']
+            if key not in graph['task_map']:
+                graph['reference_schedule'].append({'task_id':key,'arm':node['arm'],'kind':node['kind']})
+                graph['task_map'][key]={'node_ids':[]}
+            graph['task_map'][key]['node_ids'].append(node['id'])
+    return parameterize(graph)
+
+
+def add_retry_configuration(normal, demo, policy):
+    """Compile a reverse of the same approach; no new geometric shortcut."""
+    blocked=[n for n in normal['nodes'] if n['task_id']==demo['fault_task']]
+    if len(blocked)!=1 or blocked[0]['kind'] not in {'pick','place'}:
+        raise ValueError('The demo needs a single grasp/installation skill as its fault target')
+    skill=blocked[0]
+    path=skill['q_samples']
+    lengths=[float(np.linalg.norm(np.asarray(b)-a)) for a,b in zip(path,path[1:])]
+    distance=.75*sum(lengths)
+    prefix=[path[0]]
+    for a,b,length in zip(path,path[1:],lengths):
+        if length and distance<=length:
+            prefix.append((np.asarray(a)+(np.asarray(b)-a)*distance/length).tolist());break
+        prefix.append(b);distance-=length
+    if len(prefix)<2:
+        raise ValueError('Fault skill has no approach motion')
+    blocked_q=prefix[-1]
+    if max(abs(a-b) for a,b in zip(blocked_q,skill['q_end']))>.13:
+        raise ValueError('Injected stroke limit would exceed the servo tracking envelope')
+    retreat_task={'id':'local_skill_retreat','arm':skill['arm'],'kind':'transit','part':skill['part'],
+                  'q_path':list(reversed(prefix)),'duration':1.,
+                  'metadata':{'max_velocity_rad_s':.30,'max_acceleration_rad_s2':.60}}
+    retreat_graph=parameterize(build_tpg([retreat_task],max_joint_span=100.))
+    cursor=0.;block_after=None
+    for segment in skill['motion_segments']:
+        a=np.asarray(segment['q0']);direction=np.asarray(segment['q1'])-a
+        denom=float(direction@direction)
+        fraction=float((np.asarray(blocked_q)-a)@direction)/denom if denom else -1.
+        if -.000001<=fraction<=1.000001 and np.max(abs(a+fraction*direction-blocked_q))<1e-6:
+            block_after=cursor+segment['duration']*_inverse_quintic(fraction);break
+        cursor+=segment['duration']
+    if block_after is None:raise ValueError('Blocked configuration is not on the commanded approach')
+    demo.update(version=3,retry_config=policy.to_dict(),retry_skill=deepcopy(skill),
+                retry_blocked_q=blocked_q,retry_block_after_s=block_after,retry_retreat=retreat_graph['nodes'][0],
+                fault='B installation stroke is limited; actual goal error triggers local withdrawal/retry',
+                smoothing={'source_commit':'70ada87','method':'shared quintic profiles and jerk bounds',
+                           'normal_pass_through':normal['time_parameterization']['pass_through_boundaries'],
+                           'recovery_pass_through':demo['recovery_program']['time_parameterization']['pass_through_boundaries'],
+                           'joint_paths_unchanged':True})
+    demo['handoff_q'][skill['arm']]=list(skill['q_start'])
+
+
+def upgrade(owner, existing, output, policy, motion_ledger=None):
+    """Reuse the original workcell and already generated, validated joint paths."""
+    _,sim=owner.connect();sim.loadScene(str(existing));cfg=resolve(sim)
+    raw=sim.readCustomTableData(cfg['root'],'NormalAssembly')
+    demo=sim.readCustomTableData(cfg['root'],'RecoveryDemo')
+    if not demo or hashlib.sha256(SOURCE_SCENE.read_bytes()).hexdigest()!=demo['source_sha256']:
+        raise ValueError('Original source scene identity no longer matches the recovery demonstration')
+    raw['program']=retime_embedded(raw['program'])
+    if motion_ledger:
+        tasks=json.loads(Path(motion_ledger).read_text())
+        if not all(compact_route(t['q_path']) for t in tasks if t['kind']=='transit'):
+            raise ValueError('Supplied recovery reference contains excessive winding')
+        graph=parameterize(build_tpg(tasks))
+        demo['recovery_reference_tasks']=tasks
+    elif demo.get('recovery_reference_tasks'):
+        graph=parameterize(build_tpg(demo['recovery_reference_tasks']))
+    else:
+        graph=retime_embedded(demo['recovery_program'])
+    demo['recovery_program']=graph
+    add_retry_configuration(raw['program'],demo,policy)
+    sim.writeCustomTableData(cfg['root'],'NormalAssembly',raw)
+    script=embed_controller(sim,cfg['root'],demo,sim.getObject('/APEX_MR_Plus/RecoveryDemoController'),output)
+    save(OUT/'retry_build_manifest.json',{'source':str(existing),'output':str(output),
+        'retry_config':demo['retry_config'],'smoothing':demo['smoothing'],
+        'source_scene_sha256':demo['source_sha256'],'motion_ledger':str(motion_ledger) if motion_ledger else None})
+    return cfg,script
+
+
 def build(owner, output):
     client,sim=owner.connect()
     source=SOURCE_SCENE
@@ -492,13 +580,17 @@ def bind_live_plan(sim, script, cfg):
         raise RuntimeError('Live bindings differ from the motion-compiled actions')
 
 
-def verify(owner, output, live=False):
+def verify(owner, output, live=False, mode='persistent', attempts=None):
     client,sim=owner.connect()
     sim.loadScene(str(output))
     cfg=resolve(sim)
-    expected_actions=sim.readCustomTableData(cfg['root'],'RecoveryDemo')['recovery_actions']
+    embedded=sim.readCustomTableData(cfg['root'],'RecoveryDemo')
+    expected_actions=embedded['recovery_actions']
+    budget=attempts or embedded['retry_config']['max_attempts']
     script=sim.getObject('/APEX_MR_Plus/RecoveryDemoController')
     sim.setStepping(True);sim.startSimulation();sim.step()
+    if not sim.callScriptFunction('setDemoRetryConfig',script,budget,mode):
+        raise RuntimeError('Could not configure the fault mode and retry budget')
     if live:
         if not sim.callScriptFunction('requireLiveRecovery',script,True):
             raise RuntimeError('Could not arm the live event handler')
@@ -528,20 +620,42 @@ def verify(owner, output, live=False):
                 result['goal_orientation_errors_rad']=orientation
                 transfers=[e for e in result['events'] if e['kind']=='support_transfer_confirmed']
                 samples=result['insertion_samples']
+                persistent=mode=='persistent'
+                starts=[e for e in result['events'] if e['kind']=='skill_attempt_started']
+                failed=[e for e in result['events'] if e['kind']=='skill_attempt_failed']
+                retreats=[e for e in result['events'] if e['kind']=='skill_retreat_completed']
+                repairs=[e for e in result['events'] if e['kind']=='recovery_plan_installed']
+                milestones=[e for e in result['events'] if e['kind']=='motion_milestone_passed']
+                expected_failed=budget if persistent else budget-1
+                helper='B' if persistent else 'A'
+                chosen_samples=[s for s in samples if s['phase']=='recovery'] if persistent else samples
                 checks={'goals':max(errors.values())<.009 and max(orientation.values())<.04,
-                        'fault_injected':result['fault_injected'],
+                        'fault_injected':result['fault_injected']==(expected_failed>0),
                         'empty_arms':not result['held'] and not result['support'],
                         'connected':set(result['connections'])=={p['id'] for p in cfg['parts']},
-                        'all_actions':result['macro_starts']==[r['id'] for r in expected_actions],
-                        'measured_transfer':len(transfers)==1 and transfers[0]['details']['replacement_force_N']>.15,
-                        'supported_insertion':bool(samples) and all(s['support_B_ready'] and s['load_N']==8 for s in samples)
-                                              and max(s['support_B_N'] for s in samples)>.4,
+                        'all_actions':(result['macro_starts'] or [])==([r['id'] for r in expected_actions] if persistent else []),
+                        'measured_transfer':(len(transfers)==1 and transfers[0]['details']['replacement_force_N']>.15)
+                                             if persistent else not transfers,
+                        'supported_insertion':bool(chosen_samples) and all(s[f'support_{helper}_ready'] and s['load_N']==8 for s in chosen_samples)
+                                              and max(s[f'support_{helper}_N'] for s in chosen_samples)>.4,
+                        'attempt_budget':len(starts)==budget and [e['details']['attempt'] for e in starts]==list(range(1,budget+1)),
+                        'actual_failed_observations':len(failed)==expected_failed and all(e['details']['position_error_m']>.009 for e in failed),
+                        'safe_retreat_before_retry_or_repair':len(retreats)==expected_failed and all(
+                            retreats[i]['time']<starts[i+1]['time']+.000001 for i in range(min(len(retreats),len(starts)-1))),
+                        'repair_only_after_exhaustion':(len(repairs)==1 and repairs[0]['time']>retreats[-1]['time'])
+                                                      if persistent else not repairs and result['retry_succeeded'],
+                        'failed_task_not_completed':not any(e['kind']=='node_completed' and e.get('task_id')==embedded['fault_task']
+                                                           for e in result['events']) if persistent else result['retry_succeeded'],
+                        'continuous_motion':bool(milestones) and sum(e['details']['measured_speed_rad_s']>.005 for e in milestones)>.8*len(milestones),
                         'dynamic_arms':set(result['dynamic_enablement'])=={'A','B'} and
                             all(len(a['joints'])==6 and all(a['joints']) and a['pad_sensor'] and a['tool_sensor']
                                 for a in result['dynamic_enablement'].values()),
                         'host_mode':result['live_host_accepted']==live}
                 result['checks']=checks;result['verified']=all(checks.values())
-                save(OUT/('live_playback_validation.json' if live else 'playback_validation.json'),result)
+                result['scene_sha256']=hashlib.sha256(Path(output).read_bytes()).hexdigest()
+                result['continuous_milestones']={'count':len(milestones),'nonzero_speed_count':sum(e['details']['measured_speed_rad_s']>.005 for e in milestones)}
+                save(OUT/f'validation_{mode}_{budget}_{"host" if live else "native"}.json',result)
+                if persistent:save(OUT/('live_playback_validation.json' if live else 'playback_validation.json'),result)
                 if not result['verified']:raise RuntimeError(f'playback validation failed: {checks}')
                 return result
         raise TimeoutError('demo playback budget exceeded')
@@ -557,6 +671,10 @@ def main():
     parser.add_argument('--output',type=Path,default=ROOT/'APEX_MR_Recovery_Demo.ttt')
     parser.add_argument('--verify',action='store_true')
     parser.add_argument('--verify-only',action='store_true')
+    parser.add_argument('--reuse-motion',action='store_true',help='Upgrade the existing demonstration without changing its geometry')
+    parser.add_argument('--motion-ledger',type=Path,help='Previously generated recovery reference paths to revalidate/reuse')
+    parser.add_argument('--attempts',type=int,default=3,help='Total attempts including the first execution')
+    parser.add_argument('--fault-mode',choices=['persistent','transient'],default='persistent')
     parser.add_argument('--port',type=int,default=23076)
     args=parser.parse_args();OUT.mkdir(parents=True,exist_ok=True)
     output=args.output.resolve()
@@ -567,17 +685,33 @@ def main():
     try:
         owner.start(headless=True)
         candidate=output if args.verify_only else OUT/'RecoveryDemo_candidate.ttt'
-        if not args.verify_only:build(owner,candidate)
+        policy=RetryPolicy(args.attempts,args.fault_mode)
+        if not args.verify_only:
+            if args.reuse_motion:
+                existing=output if output.exists() else ROOT/'APEX_MR_Recovery_Demo.ttt'
+                upgrade(owner,existing,candidate,policy,args.motion_ledger)
+            else:
+                build(owner,candidate)
+                upgrade(owner,candidate,candidate,policy)
         if args.verify or args.verify_only:
-            verify(owner,candidate,live=True)
-            verify(owner,candidate)
+            verify(owner,candidate,live=True,mode='persistent',attempts=args.attempts)
+            verify(owner,candidate,mode='persistent',attempts=args.attempts)
+            verify(owner,candidate,mode='transient',attempts=args.attempts)
         if not args.verify_only:
             output.parent.mkdir(parents=True,exist_ok=True)
+            backup=OUT/'before_retry_and_continuity'
+            backup.mkdir(exist_ok=True)
+            if output.exists() and not (backup/output.name).exists():
+                import shutil
+                shutil.copyfile(output,backup/output.name)
             os.replace(candidate,output)
         verified=bool(args.verify or args.verify_only)
         save(OUT/'delivery.json',{'file':str(output),'sha256':hashlib.sha256(output.read_bytes()).hexdigest(),
                                  'source':str(SOURCE_SCENE),'source_sha256':hashlib.sha256(SOURCE_SCENE.read_bytes()).hexdigest(),
-                                 'live_verified':verified,'standalone_verified':verified})
+                                 'live_verified':verified,'standalone_verified':verified,
+                                 'persistent_verified':verified,'transient_verified':verified,
+                                 'verified_total_attempts':args.attempts,'default_failure_mode':args.fault_mode,
+                                 'continuity_source_commit':'70ada87'})
         print('DEMO_READY: '+str(output),flush=True)
     finally:owner.close()
 

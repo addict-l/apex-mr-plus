@@ -198,6 +198,10 @@ def build_tpg(tasks: Sequence[Mapping[str, Any]], conflict_oracle: ConflictOracl
         for fragment_index, (chunk, length) in enumerate(zip(chunks, lengths)):
             duration = task["duration"] * (length / total_length if total_length > EPS else 1/len(chunks))
             node_id = f"{task_id}::p{fragment_index:04d}" if is_motion else f"{task_id}::skill"
+            node_metadata = deepcopy(task["metadata"])
+            # Completion effects belong to the last fragment, as in Scene3.
+            if is_motion and fragment_index < len(chunks)-1:
+                node_metadata.pop("effects", None)
             node = {
                 "id": node_id, "task_id": task_id, "arm": arm, "kind": task["kind"],
                 "node_type": "pose" if is_motion else "skill", "part": task.get("part"),
@@ -205,7 +209,7 @@ def build_tpg(tasks: Sequence[Mapping[str, Any]], conflict_oracle: ConflictOracl
                 "q_start": deepcopy(chunk[0]) if chunk else None,
                 "q_end": deepcopy(chunk[-1]) if chunk else None,
                 "q_samples": deepcopy(chunk), "payload": deepcopy(task.get("payload")),
-                "metadata": deepcopy(task["metadata"]),
+                "metadata": node_metadata,
                 "mode": deepcopy(task.get("mode", task["metadata"].get("mode", {}))),
                 "reference_index": len(nodes), "reference_order": task["reference_order"],
                 "reference_start": local_clock, "reference_end": local_clock + duration,
