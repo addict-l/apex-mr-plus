@@ -1,0 +1,113 @@
+name = "gen_f5_s20261115_001"
+description = "装好两层柱子、悬臂梁和配重，最后收好临时积木，两只手都空出来。"
+instruction = "装好两层柱子、悬臂梁和配重，最后收好临时积木，两只手都空出来。"
+goal = []
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.3, 0.3, 0.2]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.3, 0.3, 0.2]
+speed = 0.25
+
+[[location]]
+id = "stock_r0"
+kind = "stock"
+pos = [0.49922200686123397, -0.2006481721658717, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_r1"
+kind = "stock"
+pos = [0.7203795133937833, -0.2992356832040385, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_r2"
+kind = "stock"
+pos = [0.5997057587364386, -0.500575487183906, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_r3"
+kind = "stock"
+pos = [0.4999509777388304, 0.4994505512339691, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_l1"
+kind = "stock"
+pos = [-0.4997780993348091, -0.1994745004688475, 0.0]
+owner = "A"
+
+[[block]]
+id = "pillar_base"
+type = "pillar_type"
+at = "stock_r0"
+
+[[block]]
+id = "pillar"
+type = "pillar_type"
+at = "stock_r1"
+
+[[block]]
+id = "beam_block"
+type = "beam_type"
+at = "stock_r2"
+
+[[block]]
+id = "counterweight"
+type = "counterweight_type"
+at = "stock_r3"
+
+[[block]]
+id = "temp_block1"
+type = "temporary_gen_single"
+at = "stock_l1"
+
+[[slot]]
+id = "p0"
+type = "pillar_type"
+pos = [0.12656780462481634, 0.12953209769286364, 0.03]
+below = []
+
+[[slot]]
+id = "p1"
+type = "pillar_type"
+pos = [0.12656780462481634, 0.12953209769286364, 0.06]
+below = ["p0"]
+
+[[slot]]
+id = "beam"
+type = "beam_type"
+pos = [-0.0031146018538048634, 0.12953209769286364, 0.09]
+below = ["p1"]
+overhang = true
+anchors = ["cw"]
+support_point = false
+
+[[slot]]
+id = "cw"
+type = "counterweight_type"
+pos = [0.1809080211945116, 0.12953209769286364, 0.12]
+below = ["beam"]
+
+[[slot]]
+id = "tp1"
+type = "temporary_gen_single"
+pos = [-0.1841083904469709, 0.12953209769286364, 0.03]
+below = []
+temporary = true
+platform_for = "beam"
+
+[capabilities.reach]
+default = "INVALID"
+valid = {"A" = ["stock_l1", "tp1"], "B" = ["stock_r0", "stock_r1", "stock_r2", "stock_r3", "p0", "p1", "beam", "cw"]}
+
+[capabilities.liftable]
+default = "VALID"

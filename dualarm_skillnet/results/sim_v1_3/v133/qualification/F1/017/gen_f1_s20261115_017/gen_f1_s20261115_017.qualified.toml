@@ -1,0 +1,12 @@
+name = "gen_f1_s20261115_017"
+description = "把 6 块积木分别放到底板对应目标位，最后两只手都空出来。"
+instruction = "把 6 块积木分别放到底板对应目标位，最后两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = ["at(b1, board_1)", "at(b2, board_2)", "at(b3, board_3)", "at(b4, board_4)", "at(b5, board_5)", "at(b6, board_6)"]
+fill_all_slots = true
+location = [{id = "stock_b1", kind = "stock", pos = [0.6492645978620843, -0.250329158156176, 0.0], owner = "B"}, {id = "board_1", kind = "board", pos = [0.22191078647922616, 0.2950069856816531, 0.0]}, {id = "stock_a1", kind = "stock", pos = [-0.44457269726508697, -0.03978230647762593, 0.0], owner = "A"}, {id = "board_2", kind = "board", pos = [-0.2722099825906686, -0.129846614031442, 0.0]}, {id = "stock_a2", kind = "stock", pos = [-0.8543997140762604, -0.25178655888576457, 0.0], owner = "A"}, {id = "board_3", kind = "board", pos = [-0.12542413429121105, 0.2034740789529849, 0.0]}, {id = "stock_b2", kind = "stock", pos = [0.44564703062412264, -0.25003537955661115, 0.0], owner = "B"}, {id = "board_4", kind = "board", pos = [0.21847182194930387, 0.0047578043447067675, 0.0]}, {id = "stock_b3", kind = "stock", pos = [0.6491177950798336, 0.5212821264938169, 0.0], owner = "B"}, {id = "board_5", kind = "board", pos = [0.052217863808047826, -0.11935943099978119, 0.0]}, {id = "stock_b4", kind = "stock", pos = [0.8560795170798403, -0.46109591675642797, 0.0], owner = "B"}, {id = "board_6", kind = "board", pos = [0.013762785818059786, 0.3750223985009956, 0.0]}]
+block = [{id = "b1", type = "2x4", at = "stock_b1"}, {id = "b2", type = "2x4", at = "stock_a1"}, {id = "b3", type = "2x4", at = "stock_a2"}, {id = "b4", type = "2x4", at = "stock_b2"}, {id = "b5", type = "2x4", at = "stock_b3"}, {id = "b6", type = "2x4", at = "stock_b4"}]
+slot = []
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["stock_a1", "board_2", "stock_a2", "board_3", "board_5", "board_6"], B = ["stock_b1", "board_1", "board_3", "stock_b2", "board_4", "stock_b3", "board_5", "stock_b4", "board_6"]}, invalid = {A = ["stock_b1", "stock_b3", "stock_b4"], B = ["stock_a2"]}, unknown = {A = ["board_1", "stock_b2", "board_4"], B = ["stock_a1", "board_2"]}}}
+capability_source = "ik_qualified"

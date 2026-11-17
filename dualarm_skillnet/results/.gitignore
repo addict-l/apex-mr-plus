@@ -1,0 +1,3 @@
+# Keep the explicitly published text fixtures and proofs; generated results stay local.
+*
+!.gitignore

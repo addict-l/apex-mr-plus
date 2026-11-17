@@ -1,0 +1,38 @@
+name = "s1_nearest_arm"
+description = "两只臂都可达，由距离较近的臂搬运中央积木"
+instruction = "把中央那块红色积木放到底板中间的位置。"
+goal = ["at(red, board_c)"]
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.30, 0.30, 0.20]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.30, 0.30, 0.20]
+speed = 0.25
+
+[[location]]
+id = "stock_c"
+kind = "stock"
+pos = [-0.1, -0.2, 0.0]
+
+[[location]]
+id = "board_c"
+kind = "board"
+pos = [0.0, 0.2, 0.0]
+
+[[block]]
+id = "red"
+type = "2x4"
+at = "stock_c"
+
+[capabilities.reach]
+default = "INVALID"
+valid = { A = ["stock_c", "board_c"], B = ["stock_c", "board_c"] }
+
+[capabilities.liftable]
+default = "VALID"

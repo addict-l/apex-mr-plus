@@ -1,0 +1,107 @@
+{
+  "at": "2026-11-17T09:32:00.423280+00:00",
+  "passed": true,
+  "registered_selection_sha256": "cbd597643c5c96d0293c934d51b79882fb2862c25ad4d891c32be498a3fc8f28",
+  "selection_unchanged": true,
+  "restored_snapshot": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\frozen_complete_snapshot",
+  "files": [
+    {
+      "registered_name": "skillnet/planning/search.py",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\skillnet\\planning\\search.py",
+      "expected_sha256": "568cbdea427be8daabf3497f3e5554bfe36250949203ded838f6b22712600a22",
+      "actual_sha256": "568cbdea427be8daabf3497f3e5554bfe36250949203ded838f6b22712600a22",
+      "bytes": 21771,
+      "passed": true
+    },
+    {
+      "registered_name": "skillnet/planning/heuristic.py",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\skillnet\\planning\\heuristic.py",
+      "expected_sha256": "d99719627db745e5d7b3a10d9c8ed573b0638e804edd6b1a8e79ec86bc3f4fdb",
+      "actual_sha256": "d99719627db745e5d7b3a10d9c8ed573b0638e804edd6b1a8e79ec86bc3f4fdb",
+      "bytes": 7358,
+      "passed": true
+    },
+    {
+      "registered_name": "skillnet/planning/bounds.py",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\skillnet\\planning\\bounds.py",
+      "expected_sha256": "d3f1f80af246000dee3747eb60e33aa54016e84b2bc7903089fbe49a74cbeedb",
+      "actual_sha256": "d3f1f80af246000dee3747eb60e33aa54016e84b2bc7903089fbe49a74cbeedb",
+      "bytes": 14913,
+      "passed": true
+    },
+    {
+      "registered_name": "skillnet/planning/allocation.py",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\skillnet\\planning\\allocation.py",
+      "expected_sha256": "765a2f7b8edb38875be5ca0ce82efadac78bcd6c1fe1a5abec57b2ca9d3afd73",
+      "actual_sha256": "765a2f7b8edb38875be5ca0ce82efadac78bcd6c1fe1a5abec57b2ca9d3afd73",
+      "bytes": 14134,
+      "passed": true
+    },
+    {
+      "registered_name": "skillnet/pipeline.py",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\skillnet\\pipeline.py",
+      "expected_sha256": "4bebf9cf4f8ccedeea2c3c47af07c0132219c21fbf2aebe49c123c2c208a6633",
+      "actual_sha256": "4bebf9cf4f8ccedeea2c3c47af07c0132219c21fbf2aebe49c123c2c208a6633",
+      "bytes": 11759,
+      "passed": true
+    },
+    {
+      "registered_name": "simbridge/backend.py",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\simbridge\\backend.py",
+      "expected_sha256": "3ab3de31e32c63a363fbc14a1f10f167b4e485ba346df1cba931ba343d5b1abb",
+      "actual_sha256": "3ab3de31e32c63a363fbc14a1f10f167b4e485ba346df1cba931ba343d5b1abb",
+      "bytes": 26413,
+      "passed": true
+    },
+    {
+      "registered_name": "simbridge/qualifier.py",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\simbridge\\qualifier.py",
+      "expected_sha256": "0ddf05422f8df6119413d2b7cd40f5d889b733b0206a7e1a4852d9958ad5763b",
+      "actual_sha256": "0ddf05422f8df6119413d2b7cd40f5d889b733b0206a7e1a4852d9958ad5763b",
+      "bytes": 25515,
+      "passed": true
+    },
+    {
+      "registered_name": "simbridge/__main__.py",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\simbridge\\__main__.py",
+      "expected_sha256": "0256b7a3e56dbb106592e420c6d6b88cbc5b394e0d64c2b99b6c4e4e92130d8b",
+      "actual_sha256": "0256b7a3e56dbb106592e420c6d6b88cbc5b394e0d64c2b99b6c4e4e92130d8b",
+      "bytes": 2754,
+      "passed": true
+    },
+    {
+      "registered_name": "simbridge/taskio.py",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\simbridge\\taskio.py",
+      "expected_sha256": "74cbeea81c57762595c6b6668623d53202a0779baab1671201368f437b5f4c44",
+      "actual_sha256": "74cbeea81c57762595c6b6668623d53202a0779baab1671201368f437b5f4c44",
+      "bytes": 2156,
+      "passed": true
+    },
+    {
+      "registered_name": "skillnet/cost/model.py",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\skillnet\\cost\\model.py",
+      "expected_sha256": "7b2311e41b1442d7850667f374599773c1c4a5625230531994739e96631acdcd",
+      "actual_sha256": "7b2311e41b1442d7850667f374599773c1c4a5625230531994739e96631acdcd",
+      "bytes": 3196,
+      "passed": true
+    },
+    {
+      "registered_name": "skills/blocks_v1.toml",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\skills\\blocks_v1.toml",
+      "expected_sha256": "aa0126377dc0f787ee7a61ab1e3c87a2662fb387e44fd030462b92edb431e172",
+      "actual_sha256": "aa0126377dc0f787ee7a61ab1e3c87a2662fb387e44fd030462b92edb431e172",
+      "bytes": 5311,
+      "passed": true
+    },
+    {
+      "registered_name": "calibration.json",
+      "actual_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v133\\calibration.json",
+      "expected_sha256": "ebf2120105f35c84c9f20263a3608c138e5f2c323f3e130b0ce57c24d0317e6b",
+      "actual_sha256": "ebf2120105f35c84c9f20263a3608c138e5f2c323f3e130b0ce57c24d0317e6b",
+      "bytes": 73935,
+      "passed": true
+    }
+  ],
+  "candidate_archive": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\scope_trials\\stopped_by_user_v1",
+  "user_ruling": "FIX v1.3.4 section8; no full suite, no planning rerun, no reregistration"
+}

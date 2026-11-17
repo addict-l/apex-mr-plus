@@ -1,0 +1,176 @@
+{
+  "task": "gen_f3_s20261115_000",
+  "rules_replayed": true,
+  "goal_satisfied": true,
+  "initial_invariant_valid": true,
+  "steps": [
+    "pick(A, b1_1, stock_a1)",
+    "insert(A, b1_1, s1_1)",
+    "pick(B, b1_2, stock_b1)",
+    "insert(B, b1_2, s1_2)",
+    "pick(A, b2_1, stock_a2)",
+    "insert(A, b2_1, s2_1)",
+    "pick(B, b2_2, stock_b2)",
+    "insert(B, b2_2, s2_2)"
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "action": "pick(A, b1_1, stock_a1)",
+      "estimate_seconds": 4.374787311999701,
+      "state_after": [
+        "arm_at(A, stock_a1)",
+        "arm_at(B, home_B)",
+        "at(b1_2, stock_b1)",
+        "at(b2_1, stock_a2)",
+        "at(b2_2, stock_b2)",
+        "empty(stock_a1)",
+        "free(B)",
+        "held(A, b1_1)"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "insert(A, b1_1, s1_1)",
+      "estimate_seconds": 5.090158017067809,
+      "state_after": [
+        "arm_at(A, s1_1)",
+        "arm_at(B, home_B)",
+        "at(b1_2, stock_b1)",
+        "at(b2_1, stock_a2)",
+        "at(b2_2, stock_b2)",
+        "empty(stock_a1)",
+        "filled(s1_1)",
+        "free(A)",
+        "free(B)",
+        "installed(b1_1, s1_1)"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "pick(B, b1_2, stock_b1)",
+      "estimate_seconds": 5.436435737845242,
+      "state_after": [
+        "arm_at(A, s1_1)",
+        "arm_at(B, stock_b1)",
+        "at(b2_1, stock_a2)",
+        "at(b2_2, stock_b2)",
+        "empty(stock_a1)",
+        "empty(stock_b1)",
+        "filled(s1_1)",
+        "free(A)",
+        "held(B, b1_2)",
+        "installed(b1_1, s1_1)"
+      ]
+    },
+    {
+      "step": 4,
+      "action": "insert(B, b1_2, s1_2)",
+      "estimate_seconds": 6.277462986267361,
+      "state_after": [
+        "arm_at(A, s1_1)",
+        "arm_at(B, s1_2)",
+        "at(b2_1, stock_a2)",
+        "at(b2_2, stock_b2)",
+        "empty(stock_a1)",
+        "empty(stock_b1)",
+        "filled(s1_1)",
+        "filled(s1_2)",
+        "free(A)",
+        "free(B)",
+        "installed(b1_1, s1_1)",
+        "installed(b1_2, s1_2)"
+      ]
+    },
+    {
+      "step": 5,
+      "action": "pick(A, b2_1, stock_a2)",
+      "estimate_seconds": 4.813561810202096,
+      "state_after": [
+        "arm_at(A, stock_a2)",
+        "arm_at(B, s1_2)",
+        "at(b2_2, stock_b2)",
+        "empty(stock_a1)",
+        "empty(stock_a2)",
+        "empty(stock_b1)",
+        "filled(s1_1)",
+        "filled(s1_2)",
+        "free(B)",
+        "held(A, b2_1)",
+        "installed(b1_1, s1_1)",
+        "installed(b1_2, s1_2)"
+      ]
+    },
+    {
+      "step": 6,
+      "action": "insert(A, b2_1, s2_1)",
+      "estimate_seconds": 5.8212284664358,
+      "state_after": [
+        "arm_at(A, s2_1)",
+        "arm_at(B, s1_2)",
+        "at(b2_2, stock_b2)",
+        "empty(stock_a1)",
+        "empty(stock_a2)",
+        "empty(stock_b1)",
+        "filled(s1_1)",
+        "filled(s1_2)",
+        "filled(s2_1)",
+        "free(A)",
+        "free(B)",
+        "installed(b1_1, s1_1)",
+        "installed(b1_2, s1_2)",
+        "installed(b2_1, s2_1)"
+      ]
+    },
+    {
+      "step": 7,
+      "action": "pick(B, b2_2, stock_b2)",
+      "estimate_seconds": 4.598756684147659,
+      "state_after": [
+        "arm_at(A, s2_1)",
+        "arm_at(B, stock_b2)",
+        "empty(stock_a1)",
+        "empty(stock_a2)",
+        "empty(stock_b1)",
+        "empty(stock_b2)",
+        "filled(s1_1)",
+        "filled(s1_2)",
+        "filled(s2_1)",
+        "free(A)",
+        "held(B, b2_2)",
+        "installed(b1_1, s1_1)",
+        "installed(b1_2, s1_2)",
+        "installed(b2_1, s2_1)"
+      ]
+    },
+    {
+      "step": 8,
+      "action": "insert(B, b2_2, s2_2)",
+      "estimate_seconds": 5.607055101719589,
+      "state_after": [
+        "arm_at(A, s2_1)",
+        "arm_at(B, s2_2)",
+        "empty(stock_a1)",
+        "empty(stock_a2)",
+        "empty(stock_b1)",
+        "empty(stock_b2)",
+        "filled(s1_1)",
+        "filled(s1_2)",
+        "filled(s2_1)",
+        "filled(s2_2)",
+        "free(A)",
+        "free(B)",
+        "installed(b1_1, s1_1)",
+        "installed(b1_2, s1_2)",
+        "installed(b2_1, s2_1)",
+        "installed(b2_2, s2_2)"
+      ]
+    }
+  ],
+  "serial_witness_estimate_seconds": 42.019446115685255,
+  "search_performed": false,
+  "wall_budget_experiment_performed": false,
+  "independent_planner_solved": null,
+  "optimal_makespan_seconds": null,
+  "scope": "构造见证的前提、能力、起止不变量和目标重放；不是独立规划搜索、IK或动力学验收"
+}

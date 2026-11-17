@@ -1,0 +1,94 @@
+name = "gen_f4_s20261115_000"
+description = "装好两层柱子、悬臂梁和配重，最后两只手都空出来。"
+instruction = "装好两层柱子、悬臂梁和配重，最后两只手都空出来。"
+goal = []
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.3, 0.3, 0.2]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.3, 0.3, 0.2]
+speed = 0.25
+
+[[location]]
+id = "stock_r0"
+kind = "stock"
+pos = [0.499894649461417, -0.19921160510110286, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_r1"
+kind = "stock"
+pos = [0.7190793473698289, -0.2995555860484416, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_r2"
+kind = "stock"
+pos = [0.6003557297799441, -0.4991091323501595, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_r3"
+kind = "stock"
+pos = [0.4991260218901186, 0.5003823966393416, 0.0]
+owner = "B"
+
+[[block]]
+id = "pillar_base"
+type = "pillar_type"
+at = "stock_r0"
+
+[[block]]
+id = "pillar"
+type = "pillar_type"
+at = "stock_r1"
+
+[[block]]
+id = "beam_block"
+type = "beam_type"
+at = "stock_r2"
+
+[[block]]
+id = "counterweight"
+type = "counterweight_type"
+at = "stock_r3"
+
+[[slot]]
+id = "p0"
+type = "pillar_type"
+pos = [0.12616509257837788, 0.10848879413711196, 0.03]
+below = []
+
+[[slot]]
+id = "p1"
+type = "pillar_type"
+pos = [0.12616509257837788, 0.10848879413711196, 0.06]
+below = ["p0"]
+
+[[slot]]
+id = "beam"
+type = "beam_type"
+pos = [-0.0017632266661578837, 0.10848879413711196, 0.09]
+below = ["p1"]
+overhang = true
+anchors = ["cw"]
+support_point = true
+
+[[slot]]
+id = "cw"
+type = "counterweight_type"
+pos = [0.18948701280618505, 0.10848879413711196, 0.12]
+below = ["beam"]
+
+[capabilities.reach]
+default = "INVALID"
+valid = {"A" = ["beam"], "B" = ["stock_r0", "stock_r1", "stock_r2", "stock_r3", "p0", "p1", "beam", "cw"]}
+
+[capabilities.liftable]
+default = "VALID"

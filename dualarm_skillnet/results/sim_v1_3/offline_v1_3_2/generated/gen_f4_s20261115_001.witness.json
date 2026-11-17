@@ -1,0 +1,220 @@
+{
+  "task": "gen_f4_s20261115_001",
+  "rules_replayed": true,
+  "goal_satisfied": true,
+  "initial_invariant_valid": true,
+  "steps": [
+    "pick(B, pillar_base, stock_r0)",
+    "insert(B, pillar_base, p0)",
+    "pick(B, pillar, stock_r1)",
+    "insert(B, pillar, p1)",
+    "support_on(A, beam)",
+    "pick(B, beam_block, stock_r2)",
+    "insert(B, beam_block, beam)",
+    "pick(B, counterweight, stock_r3)",
+    "insert(B, counterweight, cw)",
+    "support_off(A, beam)"
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "action": "pick(B, pillar_base, stock_r0)",
+      "estimate_seconds": 4.297250785054838,
+      "state_after": [
+        "arm_at(A, home_A)",
+        "arm_at(B, stock_r0)",
+        "at(beam_block, stock_r2)",
+        "at(counterweight, stock_r3)",
+        "at(pillar, stock_r1)",
+        "empty(stock_r0)",
+        "free(A)",
+        "held(B, pillar_base)"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "insert(B, pillar_base, p0)",
+      "estimate_seconds": 4.909290010967721,
+      "state_after": [
+        "arm_at(A, home_A)",
+        "arm_at(B, p0)",
+        "at(beam_block, stock_r2)",
+        "at(counterweight, stock_r3)",
+        "at(pillar, stock_r1)",
+        "empty(stock_r0)",
+        "filled(p0)",
+        "free(A)",
+        "free(B)",
+        "installed(pillar_base, p0)"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "pick(B, pillar, stock_r1)",
+      "estimate_seconds": 4.85878088148632,
+      "state_after": [
+        "arm_at(A, home_A)",
+        "arm_at(B, stock_r1)",
+        "at(beam_block, stock_r2)",
+        "at(counterweight, stock_r3)",
+        "empty(stock_r0)",
+        "empty(stock_r1)",
+        "filled(p0)",
+        "free(A)",
+        "held(B, pillar)",
+        "installed(pillar_base, p0)"
+      ]
+    },
+    {
+      "step": 4,
+      "action": "insert(B, pillar, p1)",
+      "estimate_seconds": 5.866326591362488,
+      "state_after": [
+        "arm_at(A, home_A)",
+        "arm_at(B, p1)",
+        "at(beam_block, stock_r2)",
+        "at(counterweight, stock_r3)",
+        "empty(stock_r0)",
+        "empty(stock_r1)",
+        "filled(p0)",
+        "filled(p1)",
+        "free(A)",
+        "free(B)",
+        "installed(pillar, p1)",
+        "installed(pillar_base, p0)"
+      ]
+    },
+    {
+      "step": 5,
+      "action": "support_on(A, beam)",
+      "estimate_seconds": 3.5302800391169775,
+      "state_after": [
+        "arm_at(A, beam)",
+        "arm_at(B, p1)",
+        "at(beam_block, stock_r2)",
+        "at(counterweight, stock_r3)",
+        "empty(stock_r0)",
+        "empty(stock_r1)",
+        "filled(p0)",
+        "filled(p1)",
+        "free(B)",
+        "installed(pillar, p1)",
+        "installed(pillar_base, p0)",
+        "supporting(A, beam)"
+      ]
+    },
+    {
+      "step": 6,
+      "action": "pick(B, beam_block, stock_r2)",
+      "estimate_seconds": 5.063437305194775,
+      "state_after": [
+        "arm_at(A, beam)",
+        "arm_at(B, stock_r2)",
+        "at(counterweight, stock_r3)",
+        "empty(stock_r0)",
+        "empty(stock_r1)",
+        "empty(stock_r2)",
+        "filled(p0)",
+        "filled(p1)",
+        "held(B, beam_block)",
+        "installed(pillar, p1)",
+        "installed(pillar_base, p0)",
+        "supporting(A, beam)"
+      ]
+    },
+    {
+      "step": 7,
+      "action": "insert(B, beam_block, beam)",
+      "estimate_seconds": 6.396576711501947,
+      "state_after": [
+        "arm_at(A, beam)",
+        "arm_at(B, beam)",
+        "at(counterweight, stock_r3)",
+        "empty(stock_r0)",
+        "empty(stock_r1)",
+        "empty(stock_r2)",
+        "filled(beam)",
+        "filled(p0)",
+        "filled(p1)",
+        "free(B)",
+        "installed(beam_block, beam)",
+        "installed(pillar, p1)",
+        "installed(pillar_base, p0)",
+        "supporting(A, beam)"
+      ]
+    },
+    {
+      "step": 8,
+      "action": "pick(B, counterweight, stock_r3)",
+      "estimate_seconds": 4.555440111669565,
+      "state_after": [
+        "arm_at(A, beam)",
+        "arm_at(B, stock_r3)",
+        "empty(stock_r0)",
+        "empty(stock_r1)",
+        "empty(stock_r2)",
+        "empty(stock_r3)",
+        "filled(beam)",
+        "filled(p0)",
+        "filled(p1)",
+        "held(B, counterweight)",
+        "installed(beam_block, beam)",
+        "installed(pillar, p1)",
+        "installed(pillar_base, p0)",
+        "supporting(A, beam)"
+      ]
+    },
+    {
+      "step": 9,
+      "action": "insert(B, counterweight, cw)",
+      "estimate_seconds": 5.043065768080277,
+      "state_after": [
+        "arm_at(A, beam)",
+        "arm_at(B, cw)",
+        "empty(stock_r0)",
+        "empty(stock_r1)",
+        "empty(stock_r2)",
+        "empty(stock_r3)",
+        "filled(beam)",
+        "filled(cw)",
+        "filled(p0)",
+        "filled(p1)",
+        "free(B)",
+        "installed(beam_block, beam)",
+        "installed(counterweight, cw)",
+        "installed(pillar, p1)",
+        "installed(pillar_base, p0)",
+        "supporting(A, beam)"
+      ]
+    },
+    {
+      "step": 10,
+      "action": "support_off(A, beam)",
+      "estimate_seconds": 1.0,
+      "state_after": [
+        "arm_at(A, beam)",
+        "arm_at(B, cw)",
+        "empty(stock_r0)",
+        "empty(stock_r1)",
+        "empty(stock_r2)",
+        "empty(stock_r3)",
+        "filled(beam)",
+        "filled(cw)",
+        "filled(p0)",
+        "filled(p1)",
+        "free(A)",
+        "free(B)",
+        "installed(beam_block, beam)",
+        "installed(counterweight, cw)",
+        "installed(pillar, p1)",
+        "installed(pillar_base, p0)"
+      ]
+    }
+  ],
+  "serial_witness_estimate_seconds": 45.520448204434906,
+  "search_performed": false,
+  "wall_budget_experiment_performed": false,
+  "independent_planner_solved": null,
+  "optimal_makespan_seconds": null,
+  "scope": "构造见证的前提、能力、起止不变量和目标重放；不是独立规划搜索、IK或动力学验收"
+}

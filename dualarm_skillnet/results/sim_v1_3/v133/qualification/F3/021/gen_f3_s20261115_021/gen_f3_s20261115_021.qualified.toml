@@ -1,0 +1,12 @@
+name = "gen_f3_s20261115_021"
+description = "把积木装成 5 层、每层 1 块的塔，最后两只手都空出来。"
+instruction = "把积木装成 5 层、每层 1 块的塔，最后两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = []
+fill_all_slots = true
+location = [{id = "stock_b1", kind = "stock", pos = [0.6506310895159777, -0.46120129009448046, 0.0], owner = "B"}, {id = "stock_b2", kind = "stock", pos = [0.6507360651586719, 0.5041900727766148, 0.0], owner = "B"}, {id = "stock_b3", kind = "stock", pos = [0.4445286574274849, -0.46191463212082334, 0.0], owner = "B"}, {id = "stock_b4", kind = "stock", pos = [0.44598386423846276, -0.03822032552975874, 0.0], owner = "B"}, {id = "stock_b5", kind = "stock", pos = [0.8560817774070578, 0.5034922924603322, 0.0], owner = "B"}]
+block = [{id = "b1_1", type = "tower_block", at = "stock_b1"}, {id = "b2_1", type = "tower_block", at = "stock_b2"}, {id = "b3_1", type = "tower_block", at = "stock_b3"}, {id = "b4_1", type = "tower_block", at = "stock_b4"}, {id = "b5_1", type = "tower_block", at = "stock_b5"}]
+slot = [{id = "s1_1", type = "tower_block", pos = [0.06540329020074044, 0.3302817763363324, 0.03], below = []}, {id = "s2_1", type = "tower_block", pos = [0.06540329020074044, 0.3302817763363324, 0.06], below = ["s1_1"]}, {id = "s3_1", type = "tower_block", pos = [0.06540329020074044, 0.3302817763363324, 0.09], below = ["s2_1"]}, {id = "s4_1", type = "tower_block", pos = [0.06540329020074044, 0.3302817763363324, 0.12], below = ["s3_1"]}, {id = "s5_1", type = "tower_block", pos = [0.06540329020074044, 0.3302817763363324, 0.15], below = ["s4_1"]}]
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["s1_1", "s2_1", "s3_1"], B = ["stock_b1", "stock_b2", "stock_b3", "stock_b4", "stock_b5", "s1_1", "s2_1", "s3_1", "s4_1", "s5_1"]}, invalid = {A = ["stock_b1", "stock_b2", "stock_b3", "stock_b5"], B = []}, unknown = {A = ["stock_b4", "s4_1", "s5_1"], B = []}}}
+capability_source = "ik_qualified"

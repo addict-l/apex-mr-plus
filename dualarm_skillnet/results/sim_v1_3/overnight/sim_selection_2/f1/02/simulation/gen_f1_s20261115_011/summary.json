@@ -1,0 +1,117 @@
+{
+  "task_file": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\overnight\\generated\\gen_f1_s20261115_011.toml",
+  "status": "passed",
+  "passed": true,
+  "profile": "skillnet_v1_3",
+  "port": 23210,
+  "timeout_wall_s": 1200.0,
+  "fatal_environment": false,
+  "task": "gen_f1_s20261115_011",
+  "task_sha256": "0a01e413863037ce527e90001a6a3289d20db54ac62009040a8d75b9ac4442ed",
+  "environment": {
+    "c_free_bytes": 16392974336,
+    "port": 23210
+  },
+  "planning_status": "solved",
+  "feedback": [],
+  "simulator_pid": 47444,
+  "real_planning_status": "solved",
+  "backend_nominal_seconds": 84.5598671253227,
+  "success": true,
+  "phase": "complete",
+  "reason": null,
+  "planning_seconds": 41.70300000003772,
+  "compile_seconds": 2.9070000000065193,
+  "motion_task_count": 34,
+  "video": false,
+  "step_durations": [
+    {
+      "step": 1,
+      "action": "pick(B, b1, stock_b1)",
+      "estimated_seconds": 3.833767699,
+      "actual_seconds": 16.719999999999718,
+      "estimated_actual_ratio": 0.2292923264952192
+    },
+    {
+      "step": 2,
+      "action": "pick(A, b3, stock_a2)",
+      "estimated_seconds": 5.200676289,
+      "actual_seconds": 17.5999999999997,
+      "estimated_actual_ratio": 0.2954929709659141
+    },
+    {
+      "step": 3,
+      "action": "place(B, b1, board_1)",
+      "estimated_seconds": 3.9036349230000003,
+      "actual_seconds": 16.079999999999902,
+      "estimated_actual_ratio": 0.24276336585821046
+    },
+    {
+      "step": 4,
+      "action": "place(A, b3, board_3)",
+      "estimated_seconds": 4.369066225,
+      "actual_seconds": 15.880000000000027,
+      "estimated_actual_ratio": 0.2751301149244328
+    },
+    {
+      "step": 5,
+      "action": "pick(B, b4, stock_b2)",
+      "estimated_seconds": 3.834689030999999,
+      "actual_seconds": 16.900000000002642,
+      "estimated_actual_ratio": 0.22690467639049702
+    },
+    {
+      "step": 6,
+      "action": "pick(A, b2, stock_a1)",
+      "estimated_seconds": 5.641658588,
+      "actual_seconds": 24.82000000000388,
+      "estimated_actual_ratio": 0.22730292457691856
+    },
+    {
+      "step": 7,
+      "action": "place(B, b4, board_4)",
+      "estimated_seconds": 2.8785116440000014,
+      "actual_seconds": 14.46000000000199,
+      "estimated_actual_ratio": 0.19906719529734476
+    },
+    {
+      "step": 8,
+      "action": "place(A, b2, board_2)",
+      "estimated_seconds": 5.888214313999999,
+      "actual_seconds": 27.25999999999639,
+      "estimated_actual_ratio": 0.2160019924431687
+    }
+  ],
+  "remote_interface_failure": false,
+  "tpg_seconds": 307.90600000001723,
+  "tpg_nodes": 220,
+  "tpg_edges": 393,
+  "nominal_makespan_seconds": 84.5598671253227,
+  "actual_makespan_seconds": 87.87999999999965,
+  "execution_wall_seconds": 35.51600000000326,
+  "failure_phase": null,
+  "executor_wall_seconds": 354.93800000002375,
+  "motion_backend_cache": {
+    "entries": 34,
+    "hits": 32,
+    "misses": 34
+  },
+  "motion_feedback_count": 0,
+  "qualification_calls": 0,
+  "simulator_log": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\logs\\coppeliasim-20261115-172301-a905f2ee.log",
+  "simulator_closed": true,
+  "phase_seconds": {
+    "load": 0.0,
+    "environment": 0.0,
+    "planning": 8.672000000020489,
+    "simulator_start": 0.23399999999674037,
+    "simulator_connect": 4.077999999979511,
+    "workcell": 1.8910000000032596,
+    "real_planning": 33.03100000001723,
+    "compile": 3.0630000000237487,
+    "execute": 355.2029999999795
+  },
+  "initial_planning_seconds": 8.672000000020489,
+  "real_planning_seconds": 33.03100000001723,
+  "wall_seconds": 412.31300000002375
+}

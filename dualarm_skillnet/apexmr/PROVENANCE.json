@@ -1,0 +1,109 @@
+{
+  "files": [
+    {
+      "file": "sim_connection.py",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\src\\sim_connection.py",
+      "source_sha256": "1116bef2f65e21235b6935198e89b3d9cd0e805fce505ac50a70e5609b6f796b",
+      "modifications": [
+        "Route owned simulator logs to results/sim_v1_3/logs; preserve process ownership, bundled-client loading and shutdown behavior."
+      ],
+      "current_sha256": "ff218ac2a6d887bd3eab4eff24770449f9863d9590c29a3a695ff5a76642ad56"
+    },
+    {
+      "file": "motion.py",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\motion.py",
+      "source_sha256": "541539b308ebd5f4bd0714523ffdda7887a8dd48ebabe2e1c9d5a97e9c8af362",
+      "modifications": []
+    },
+    {
+      "file": "motion_backend.lua",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\motion_backend.lua",
+      "source_sha256": "d215ec7a054804875619aa2af18ccace404feb07ee386c68a34080c7c65065f6",
+      "modifications": []
+    },
+    {
+      "file": "tpg.py",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\tpg.py",
+      "source_sha256": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd",
+      "modifications": []
+    },
+    {
+      "file": "geometry.py",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\geometry.py",
+      "source_sha256": "7901cc625f376cb56a652ac2c099a849ca43985789160d4c84ff4cfd3acb71c4",
+      "modifications": [
+        "Reconstruct the bounded receiver-grasp/giver-release handover transient from explicit metadata/effects, preserving single-holder checks for other actions and the original geometry conflict policy."
+      ],
+      "current_sha256": "3ed9eadcecb191476320ad0f90e5f237152553625f244791fcaca14bba0813c8"
+    },
+    {
+      "file": "fast_interarm.py",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\fast_interarm.py",
+      "source_sha256": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03",
+      "modifications": []
+    },
+    {
+      "file": "fast_interarm.lua",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\fast_interarm.lua",
+      "source_sha256": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563",
+      "modifications": []
+    },
+    {
+      "file": "program.py",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\program.py",
+      "source_sha256": "61264d84aecf98bfa5dbee0dedcdb9ee1aa8aa1dfb7f212ca3b845e40165cfb3",
+      "modifications": []
+    },
+    {
+      "file": "curve.py",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\curve.py",
+      "source_sha256": "ed669126e5c9948065d26693ec2bf60526d1304eeb0504284dec3ca0f202d69e",
+      "modifications": []
+    },
+    {
+      "file": "runtime.py",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\runtime.py",
+      "source_sha256": "82d6035749a80bf8b3c208b73fc27763e99a62331651a62ddf479b7e6fb68709",
+      "modifications": [
+        "Select and concatenate the project-local controller extension only for profile skillnet_v1_3.",
+        "Add generic measured runtime polling, wall timeout, collision/tracking evidence and optional video rejection without importing cv2 for the v1.3 profile; preserve Scene3 defaults.",
+        "For skillnet_v1_3 only, retain typed remote transport failures from polling/result/cleanup in execution artifacts; invalidate success and avoid further result/image queries after known transport loss. Legacy Scene3 execution remains unchanged."
+      ],
+      "current_sha256": "01df627d2fbb776f67abf7e4bc2f5ae1d50ec81938a5a08b1743554d7f8e42bf"
+    },
+    {
+      "file": "controller.lua",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\controller.lua",
+      "source_sha256": "9a30d885056c1d975280e6156b6b4075a49e12f3c42b161d50eca22c8d93f4fc",
+      "modifications": [
+        "Append dispatch wrappers selecting the task-generic skillnet_v1_3 extension while preserving the original Scene3 callback path."
+      ],
+      "current_sha256": "81cf1fb99934bfd7be663965f437421be5ec8189dc9162b6932b4bc489230753"
+    },
+    {
+      "file": "validation.py",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\validation.py",
+      "source_sha256": "0881b1bd00472dad6e5456126048913ca6aab9b579d7e1cfbacf3b3ee90cfef2",
+      "modifications": [
+        "Add explicit skillnet_v1_3 requirements profile auditing measured goal poses (5mm/.02rad), installed goals, temporary occupancy, empty hands, home joints, events and dynamic collision/tracking telemetry without Scene3-specific milestones."
+      ],
+      "current_sha256": "b90aa5b41d7e2b7a82730cec6b3d6891b99fa3273cad14020dd39d51d041743d"
+    },
+    {
+      "file": "scene_helpers.py",
+      "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\scene.py",
+      "source_sha256": "a859f5c5ff1a501bcd4cb4e27ebfd05675f8f26aa7693f8b193f44cbf05316b5",
+      "additional_sources": [
+        {
+          "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\src\\label_mesh.py",
+          "source_sha256": "42a32b740f939bf29c28537075ba66efbae1b1284899d2cf0af2b4d6f61b2ad2"
+        }
+      ],
+      "modifications": [
+        "Extracted mass_inertia/build_arms from scene.py and make_label from label_mesh.py without changing function bodies.",
+        "Removed archive scene construction, import-path modification, archive output writes, and command-line entry point; retained only required imports."
+      ],
+      "current_sha256": "0161fcaaabcb28a10e6107ccbab06fd9352f46bfe38d690c8b5156bff52937b8"
+    }
+  ]
+}

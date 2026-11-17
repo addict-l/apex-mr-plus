@@ -1,0 +1,45 @@
+name = "gen_f2_s20261115_001"
+description = "把积木送到另一只手所在区域的目标位，最后两只手都空出来。"
+instruction = "把积木送到另一只手所在区域的目标位，最后两只手都空出来。"
+goal = ["at(b1, board_1)"]
+fill_all_slots = true
+arms = ["A", "B"]
+slot = []
+
+[[arm]]
+id = "A"
+home = [-0.3, 0.3, 0.2]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.3, 0.3, 0.2]
+speed = 0.25
+
+[[location]]
+id = "hand_mid"
+kind = "handover"
+pos = [-0.015550948918452817, 0.16590601637379926, 0.20575688305114467]
+
+[[location]]
+id = "stock_a1"
+kind = "stock"
+pos = [-0.8553808787555268, -0.24139682074009142, 0.0]
+owner = "A"
+
+[[location]]
+id = "board_1"
+kind = "board"
+pos = [0.16, 0.1896760838014843, 0.0]
+
+[[block]]
+id = "b1"
+type = "2x4"
+at = "stock_a1"
+
+[capabilities.reach]
+default = "INVALID"
+valid = {"A" = ["hand_mid", "stock_a1"], "B" = ["hand_mid", "board_1"]}
+
+[capabilities.liftable]
+default = "VALID"

@@ -1,0 +1,15 @@
+{
+  "path": "FIX_v1.3.4.md",
+  "baseline_sha256": "cf8286ff8a5f97011453ff65d67cce1340485ff6f48c313d0cbd7c4b6c32d72f",
+  "authorized_sha256": "35ef8d241d18aaf8cf3e71fc300f9c787472496b5cc79ac99f11e662d98b2b86",
+  "original_prefix_bytes": 15375,
+  "baseline_json_sha256": "9eb524ff2c9734f262cb02002736bb1c67cabee276e3dfc8811c4248d74e631b",
+  "authority": "user explicit instruction and appended section8,2026-11-17",
+  "append_only_verified": true,
+  "planning_acceptance": "passed_by_section8_ruling",
+  "known_limits": [
+    "F3_005/F3_012 formal-slot relay budgets accepted",
+    "legacy reference full HMax exception waived"
+  ],
+  "guard_scope": "only this exact user-appended instruction; external archive/v133/core baselines unchanged"
+}

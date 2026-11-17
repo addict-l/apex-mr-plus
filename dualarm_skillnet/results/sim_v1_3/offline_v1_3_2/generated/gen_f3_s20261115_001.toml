@@ -1,0 +1,125 @@
+name = "gen_f3_s20261115_001"
+description = "把积木装成 3 层、每层 2 块的墙，最后两只手都空出来。"
+instruction = "把积木装成 3 层、每层 2 块的墙，最后两只手都空出来。"
+goal = []
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.3, 0.3, 0.2]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.3, 0.3, 0.2]
+speed = 0.25
+
+[[location]]
+id = "stock_a1"
+kind = "stock"
+pos = [-0.6499913323620542, 0.49959966206506207, 0.0]
+owner = "A"
+
+[[location]]
+id = "stock_b1"
+kind = "stock"
+pos = [0.6490273952072475, 0.5006192758179423, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_a2"
+kind = "stock"
+pos = [-0.648745514799802, -0.23865418445415285, 0.0]
+owner = "A"
+
+[[location]]
+id = "stock_b2"
+kind = "stock"
+pos = [0.8558425258117364, -0.4601218837210049, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_a3"
+kind = "stock"
+pos = [-0.8554060078849935, -0.45977743543199184, 0.0]
+owner = "A"
+
+[[location]]
+id = "stock_b3"
+kind = "stock"
+pos = [0.4456845592728938, 0.5001308130988467, 0.0]
+owner = "B"
+
+[[block]]
+id = "b1_1"
+type = "tower_block"
+at = "stock_a1"
+
+[[block]]
+id = "b1_2"
+type = "tower_block"
+at = "stock_b1"
+
+[[block]]
+id = "b2_1"
+type = "tower_block"
+at = "stock_a2"
+
+[[block]]
+id = "b2_2"
+type = "tower_block"
+at = "stock_b2"
+
+[[block]]
+id = "b3_1"
+type = "tower_block"
+at = "stock_a3"
+
+[[block]]
+id = "b3_2"
+type = "tower_block"
+at = "stock_b3"
+
+[[slot]]
+id = "s1_1"
+type = "tower_block"
+pos = [-0.0892587492156218, 0.1424596789153285, 0.03]
+below = []
+
+[[slot]]
+id = "s1_2"
+type = "tower_block"
+pos = [0.11074125078437821, 0.1424596789153285, 0.03]
+below = []
+
+[[slot]]
+id = "s2_1"
+type = "tower_block"
+pos = [-0.0892587492156218, 0.1424596789153285, 0.06]
+below = ["s1_1"]
+
+[[slot]]
+id = "s2_2"
+type = "tower_block"
+pos = [0.11074125078437821, 0.1424596789153285, 0.06]
+below = ["s1_2"]
+
+[[slot]]
+id = "s3_1"
+type = "tower_block"
+pos = [-0.0892587492156218, 0.1424596789153285, 0.09]
+below = ["s2_1"]
+
+[[slot]]
+id = "s3_2"
+type = "tower_block"
+pos = [0.11074125078437821, 0.1424596789153285, 0.09]
+below = ["s2_2"]
+
+[capabilities.reach]
+default = "INVALID"
+valid = {"A" = ["stock_a1", "s1_1", "stock_a2", "s2_1", "stock_a3", "s3_1"], "B" = ["stock_b1", "s1_2", "stock_b2", "s2_2", "stock_b3", "s3_2"]}
+
+[capabilities.liftable]
+default = "VALID"

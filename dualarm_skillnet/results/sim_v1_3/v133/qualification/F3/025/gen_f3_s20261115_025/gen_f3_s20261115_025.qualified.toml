@@ -1,0 +1,12 @@
+name = "gen_f3_s20261115_025"
+description = "把积木装成 4 层、每层 1 块的塔，最后两只手都空出来。"
+instruction = "把积木装成 4 层、每层 1 块的塔，最后两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = []
+fill_all_slots = true
+location = [{id = "stock_b1", kind = "stock", pos = [0.44363287562141185, -0.4602815394045617, 0.0], owner = "B"}, {id = "stock_b2", kind = "stock", pos = [0.8545944299137567, -0.45937951048801495, 0.0], owner = "B"}, {id = "stock_b3", kind = "stock", pos = [0.8536400244301349, -0.25068368182433615, 0.0], owner = "B"}, {id = "stock_b4", kind = "stock", pos = [0.44388013419871436, -0.2518963220479672, 0.0], owner = "B"}]
+block = [{id = "b1_1", type = "tower_base", at = "stock_b1"}, {id = "b2_1", type = "tower_middle", at = "stock_b2"}, {id = "b3_1", type = "tower_top", at = "stock_b3"}, {id = "b4_1", type = "tower_base", at = "stock_b4"}]
+slot = [{id = "s1_1", type = "tower_base", pos = [0.0677024639341506, 0.29935736498617327, 0.03], below = []}, {id = "s2_1", type = "tower_middle", pos = [0.0677024639341506, 0.29935736498617327, 0.06], below = ["s1_1"]}, {id = "s3_1", type = "tower_top", pos = [0.0677024639341506, 0.29935736498617327, 0.09], below = ["s2_1"]}, {id = "s4_1", type = "tower_base", pos = [0.0677024639341506, 0.29935736498617327, 0.12], below = ["s3_1"]}]
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["s1_1", "s2_1", "s3_1"], B = ["stock_b1", "stock_b2", "stock_b3", "stock_b4", "s1_1", "s2_1", "s3_1", "s4_1"]}, invalid = {A = ["stock_b1", "stock_b2", "stock_b3"], B = []}, unknown = {A = ["stock_b4", "s4_1"], B = []}}}
+capability_source = "ik_qualified"

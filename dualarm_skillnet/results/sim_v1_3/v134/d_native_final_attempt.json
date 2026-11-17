@@ -1,0 +1,125 @@
+{
+  "attempt": "runtime_fix2",
+  "at": "2026-11-17T06:15:32.719014+00:00",
+  "closed_all": true,
+  "fully_resolved": 4,
+  "tasks": [
+    {
+      "task": "gen_f3_s20261115_005",
+      "status": "completed",
+      "checked": 40,
+      "total": 40,
+      "counts": {
+        "VALID": 24,
+        "INVALID": 16,
+        "UNKNOWN": 0
+      },
+      "seconds": 35.54700000002049,
+      "simulator_closed": true,
+      "unresolved": [],
+      "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\qualification\\gen_f3_s20261115_005\\gen_f3_s20261115_005\\qualify_log.json",
+      "sha256": "57bbcf82c35994438ff2885829b45c61e20dbcded12207d50f778559f19f8aba",
+      "escalation_entries": 11
+    },
+    {
+      "task": "gen_f3_s20261115_012",
+      "status": "completed",
+      "checked": 40,
+      "total": 40,
+      "counts": {
+        "VALID": 24,
+        "INVALID": 16,
+        "UNKNOWN": 0
+      },
+      "seconds": 35.45400000002701,
+      "simulator_closed": true,
+      "unresolved": [],
+      "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\qualification\\gen_f3_s20261115_012\\gen_f3_s20261115_012\\qualify_log.json",
+      "sha256": "4eff8c84a26a8bcaf8143eccd996eebc6fd7c8ffa49dcccce7d383dc94417eb1",
+      "escalation_entries": 11
+    },
+    {
+      "task": "gen_f3_s20261115_013",
+      "status": "completed",
+      "checked": 40,
+      "total": 40,
+      "counts": {
+        "VALID": 23,
+        "INVALID": 17,
+        "UNKNOWN": 0
+      },
+      "seconds": 39.53100000007544,
+      "simulator_closed": true,
+      "unresolved": [],
+      "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\qualification\\gen_f3_s20261115_013\\gen_f3_s20261115_013\\qualify_log.json",
+      "sha256": "bf4a283a4ea6d0f9a5f0f14b6787d728434581f9552c94cfe07c03665d4c52ab",
+      "escalation_entries": 12
+    },
+    {
+      "task": "gen_f3_s20261115_015",
+      "status": "completed",
+      "checked": 40,
+      "total": 40,
+      "counts": {
+        "VALID": 23,
+        "INVALID": 17,
+        "UNKNOWN": 0
+      },
+      "seconds": 36.875,
+      "simulator_closed": true,
+      "unresolved": [],
+      "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\qualification\\gen_f3_s20261115_015\\gen_f3_s20261115_015\\qualify_log.json",
+      "sha256": "2b0074b468c9a701b604146cb6bea896bfdfb0e590e1c4e2d509cd03332d5075",
+      "escalation_entries": 10
+    },
+    {
+      "task": "gen_f3_s20261115_018",
+      "status": "partial",
+      "checked": 54,
+      "total": 60,
+      "counts": {
+        "VALID": 32,
+        "INVALID": 21,
+        "UNKNOWN": 7
+      },
+      "seconds": 50.35900000005495,
+      "simulator_closed": true,
+      "unresolved": [
+        [
+          "B",
+          "stock_a2"
+        ],
+        [
+          "B",
+          "stock_a4"
+        ],
+        [
+          "B",
+          "stock_a9"
+        ],
+        [
+          "B",
+          "s1_1"
+        ],
+        [
+          "B",
+          "s2_1"
+        ],
+        [
+          "B",
+          "s3_1"
+        ],
+        [
+          "B",
+          "s3_2"
+        ]
+      ],
+      "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\qualification\\gen_f3_s20261115_018\\gen_f3_s20261115_018\\qualify_log.json",
+      "sha256": "6662a101c66d13e80fe53611b1605aae8df2c28c9830331fdba41bb3f46ebec0",
+      "escalation_entries": 14
+    }
+  ],
+  "qualification_complete_not_equivalent_to_feasible": true,
+  "D_convergence": "4 resolved;018 partial seven UNKNOWN; no further native retry",
+  "previous_two_timeouts_retained": true
+}

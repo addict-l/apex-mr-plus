@@ -1,0 +1,104 @@
+name = "gen_f1_s20261115_000"
+description = "把 5 块积木分别放到底板对应目标位，最后两只手都空出来。"
+instruction = "把 5 块积木分别放到底板对应目标位，最后两只手都空出来。"
+goal = ["at(b1, board_1)", "at(b2, board_2)", "at(b3, board_3)", "at(b4, board_4)", "at(b5, board_5)"]
+fill_all_slots = true
+arms = ["A", "B"]
+slot = []
+
+[[arm]]
+id = "A"
+home = [-0.3, 0.3, 0.2]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.3, 0.3, 0.2]
+speed = 0.25
+
+[[location]]
+id = "stock_a1"
+kind = "stock"
+pos = [-0.4447685688875653, 0.5013576571902126, 0.0]
+owner = "A"
+
+[[location]]
+id = "board_1"
+kind = "board"
+pos = [0.00010496116850508032, 0.23725720667635006, 0.0]
+
+[[location]]
+id = "stock_b1"
+kind = "stock"
+pos = [0.8558303181273409, -0.23868641414978864, 0.0]
+owner = "B"
+
+[[location]]
+id = "board_2"
+kind = "board"
+pos = [0.17667159207549168, 0.24355469254599135, 0.0]
+
+[[location]]
+id = "stock_a2"
+kind = "stock"
+pos = [-0.44588772392632614, -0.45856572320094413, 0.0]
+owner = "A"
+
+[[location]]
+id = "board_3"
+kind = "board"
+pos = [-0.0027790204650025717, 0.0035339344655796632, 0.0]
+
+[[location]]
+id = "stock_b2"
+kind = "stock"
+pos = [0.8556281294406451, 0.4987450482597328, 0.0]
+owner = "B"
+
+[[location]]
+id = "board_4"
+kind = "board"
+pos = [-0.17523359709677838, -0.0017895435569077267, 0.0]
+
+[[location]]
+id = "stock_a3"
+kind = "stock"
+pos = [-0.853808944633176, -0.23970430163062614, 0.0]
+owner = "A"
+
+[[location]]
+id = "board_5"
+kind = "board"
+pos = [0.17548508051003836, -0.0026240822780114136, 0.0]
+
+[[block]]
+id = "b1"
+type = "2x4"
+at = "stock_a1"
+
+[[block]]
+id = "b2"
+type = "2x4"
+at = "stock_b1"
+
+[[block]]
+id = "b3"
+type = "2x4"
+at = "stock_a2"
+
+[[block]]
+id = "b4"
+type = "2x4"
+at = "stock_b2"
+
+[[block]]
+id = "b5"
+type = "2x4"
+at = "stock_a3"
+
+[capabilities.reach]
+default = "INVALID"
+valid = {"A" = ["stock_a1", "board_1", "board_2", "stock_a2", "board_3", "board_4", "stock_a3", "board_5"], "B" = ["stock_b1", "board_2", "board_3", "stock_b2", "board_4"]}
+
+[capabilities.liftable]
+default = "VALID"

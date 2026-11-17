@@ -1,0 +1,2024 @@
+{
+  "schema_version": 1,
+  "version": "v1.3.3-cost",
+  "reference_speed": 0.25,
+  "total_samples": 67,
+  "samples": [
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 1,
+      "action": "pick(B, blue, stock_r1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.5477225575051661,
+      "arm_distances_m": {
+        "B": 0.5477225575051661
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.19089023,
+      "actual_seconds": 16.919999999999714
+    },
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 2,
+      "action": "pick(A, red, stock_l1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.5477225575051661,
+      "arm_distances_m": {
+        "A": 0.5477225575051661
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.19089023,
+      "actual_seconds": 18.599999999999678
+    },
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 3,
+      "action": "place(A, red, board_l1)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.47169905660283024,
+      "arm_distances_m": {
+        "A": 0.47169905660283024
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.8867962260000004,
+      "actual_seconds": 16.720000000000336
+    },
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 4,
+      "action": "place(B, blue, board_r1)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.47169905660283024,
+      "arm_distances_m": {
+        "B": 0.47169905660283024
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.8867962260000004,
+      "actual_seconds": 15.479999999999844
+    },
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/plan.json",
+      "task_file": "tasks/s1_reach_handover.toml",
+      "task": "s1_reach_handover",
+      "step": 1,
+      "action": "pick(B, red, stock_r1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.5477225575051661,
+      "arm_distances_m": {
+        "B": 0.5477225575051661
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.19089023,
+      "actual_seconds": 17.5199999999997
+    },
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/plan.json",
+      "task_file": "tasks/s1_reach_handover.toml",
+      "task": "s1_reach_handover",
+      "step": 2,
+      "action": "handover(B, A, red, hand_mid)",
+      "skill": "handover",
+      "arms": [
+        "B",
+        "A"
+      ],
+      "distance_m": 0.5385164807134505,
+      "arm_distances_m": {
+        "B": 0.5385164807134505,
+        "A": 0.3605551275463989
+      },
+      "speeds_m_s": {
+        "B": 0.25,
+        "A": 0.25
+      },
+      "op_time": 3.0,
+      "old_estimated_seconds": 5.154065923,
+      "actual_seconds": 17.02000000000019
+    },
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/plan.json",
+      "task_file": "tasks/s1_reach_handover.toml",
+      "task": "s1_reach_handover",
+      "step": 3,
+      "action": "place(A, red, board_l1)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.2692582403567252,
+      "arm_distances_m": {
+        "A": 0.2692582403567252
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.0770329610000005,
+      "actual_seconds": 19.32000000000302
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/plan.json",
+      "task_file": "tasks/sim/s1_qualify_sim.toml",
+      "task": "s1_qualify_sim",
+      "step": 1,
+      "action": "pick(B, red, stock_b)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.5744562646538028,
+      "arm_distances_m": {
+        "B": 0.5744562646538028
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.297825059,
+      "actual_seconds": 17.939999999999692
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/plan.json",
+      "task_file": "tasks/sim/s1_qualify_sim.toml",
+      "task": "s1_qualify_sim",
+      "step": 2,
+      "action": "handover(B, A, red, hand_mid)",
+      "skill": "handover",
+      "arms": [
+        "B",
+        "A"
+      ],
+      "distance_m": 0.6164414002968976,
+      "arm_distances_m": {
+        "B": 0.6164414002968976,
+        "A": 0.3605551275463989
+      },
+      "speeds_m_s": {
+        "B": 0.25,
+        "A": 0.25
+      },
+      "op_time": 3.0,
+      "old_estimated_seconds": 5.465765601,
+      "actual_seconds": 17.480000000000338
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/plan.json",
+      "task_file": "tasks/sim/s1_qualify_sim.toml",
+      "task": "s1_qualify_sim",
+      "step": 3,
+      "action": "place(A, red, final_buffer)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.9103845341392833,
+      "arm_distances_m": {
+        "A": 0.9103845341392833
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.6415381369999995,
+      "actual_seconds": 19.660000000003073
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/plan.json",
+      "task_file": "tasks/sim/s1_feedback_sim_attempt2.toml",
+      "task": "s1_feedback_sim",
+      "step": 1,
+      "action": "pick(B, red, stock_b)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.5744562646538028,
+      "arm_distances_m": {
+        "B": 0.5744562646538028
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.297825059,
+      "actual_seconds": 17.939999999999692
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/plan.json",
+      "task_file": "tasks/sim/s1_feedback_sim_attempt2.toml",
+      "task": "s1_feedback_sim",
+      "step": 2,
+      "action": "handover(B, A, red, hand_mid)",
+      "skill": "handover",
+      "arms": [
+        "B",
+        "A"
+      ],
+      "distance_m": 0.6164414002968976,
+      "arm_distances_m": {
+        "B": 0.6164414002968976,
+        "A": 0.3605551275463989
+      },
+      "speeds_m_s": {
+        "B": 0.25,
+        "A": 0.25
+      },
+      "op_time": 3.0,
+      "old_estimated_seconds": 5.465765601,
+      "actual_seconds": 17.480000000000338
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/plan.json",
+      "task_file": "tasks/sim/s1_feedback_sim_attempt2.toml",
+      "task": "s1_feedback_sim",
+      "step": 3,
+      "action": "place(A, red, final_buffer)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.9103845341392833,
+      "arm_distances_m": {
+        "A": 0.9103845341392833
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.6415381369999995,
+      "actual_seconds": 19.660000000003073
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/plan.json",
+      "task_file": "tasks/sim/s2_tower_sim.toml",
+      "task": "s2_tower_sim",
+      "step": 1,
+      "action": "pick(A, b1, stock_l1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.5744562646538028,
+      "arm_distances_m": {
+        "A": 0.5744562646538028
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.297825059,
+      "actual_seconds": 19.83999999999965
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/plan.json",
+      "task_file": "tasks/sim/s2_tower_sim.toml",
+      "task": "s2_tower_sim",
+      "step": 2,
+      "action": "insert(A, b1, t1)",
+      "skill": "insert",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.5943904440685432,
+      "arm_distances_m": {
+        "A": 0.5943904440685432
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 3.0,
+      "old_estimated_seconds": 5.377561775999999,
+      "actual_seconds": 16.280000000000488
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/plan.json",
+      "task_file": "tasks/sim/s2_tower_sim.toml",
+      "task": "s2_tower_sim",
+      "step": 3,
+      "action": "pick(A, b2, stock_l2)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.7365459931328118,
+      "arm_distances_m": {
+        "A": 0.7365459931328118
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.946183973,
+      "actual_seconds": 16.96000000000265
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/plan.json",
+      "task_file": "tasks/sim/s2_tower_sim.toml",
+      "task": "s2_tower_sim",
+      "step": 4,
+      "action": "insert(A, b2, t2)",
+      "skill": "insert",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.7383765976789893,
+      "arm_distances_m": {
+        "A": 0.7383765976789893
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 3.0,
+      "old_estimated_seconds": 5.9535063909999995,
+      "actual_seconds": 16.9200000000003
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/plan.json",
+      "task_file": "tasks/sim/s2_tower_sim.toml",
+      "task": "s2_tower_sim",
+      "step": 5,
+      "action": "pick(B, b3, stock_r1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.5744562646538028,
+      "arm_distances_m": {
+        "B": 0.5744562646538028
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.297825058999999,
+      "actual_seconds": 17.58000000000223
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/plan.json",
+      "task_file": "tasks/sim/s2_tower_sim.toml",
+      "task": "s2_tower_sim",
+      "step": 6,
+      "action": "insert(B, b3, t3)",
+      "skill": "insert",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.6004165220911231,
+      "arm_distances_m": {
+        "B": 0.6004165220911231
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 3.0,
+      "old_estimated_seconds": 5.4016660880000025,
+      "actual_seconds": 31.099999999993813
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 1,
+      "action": "pick(B, blue, stock_r1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.5477225575051661,
+      "arm_distances_m": {
+        "B": 0.5477225575051661
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.19089023,
+      "actual_seconds": 16.919999999999714
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 2,
+      "action": "pick(A, red, stock_l1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.5477225575051661,
+      "arm_distances_m": {
+        "A": 0.5477225575051661
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.19089023,
+      "actual_seconds": 18.599999999999678
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 3,
+      "action": "place(A, red, board_l1)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.47169905660283024,
+      "arm_distances_m": {
+        "A": 0.47169905660283024
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.8867962260000004,
+      "actual_seconds": 16.720000000000336
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 4,
+      "action": "place(B, blue, board_r1)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.47169905660283024,
+      "arm_distances_m": {
+        "B": 0.47169905660283024
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.8867962260000004,
+      "actual_seconds": 15.479999999999844
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 1,
+      "action": "pick(B, blue, stock_r1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.5477225575051661,
+      "arm_distances_m": {
+        "B": 0.5477225575051661
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.19089023,
+      "actual_seconds": 16.919999999999714
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 2,
+      "action": "pick(A, red, stock_l1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.5477225575051661,
+      "arm_distances_m": {
+        "A": 0.5477225575051661
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.19089023,
+      "actual_seconds": 18.599999999999678
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 3,
+      "action": "place(A, red, board_l1)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.47169905660283024,
+      "arm_distances_m": {
+        "A": 0.47169905660283024
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.8867962260000004,
+      "actual_seconds": 16.720000000000336
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "step": 4,
+      "action": "place(B, blue, board_r1)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.47169905660283024,
+      "arm_distances_m": {
+        "B": 0.47169905660283024
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.8867962260000004,
+      "actual_seconds": 15.479999999999844
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_021.toml",
+      "task": "gen_f1_s20261115_021",
+      "step": 1,
+      "action": "pick(A, b2, stock_a1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.7986586392592185,
+      "arm_distances_m": {
+        "A": 0.7986586392592185
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.194634557,
+      "actual_seconds": 17.5999999999997
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_021.toml",
+      "task": "gen_f1_s20261115_021",
+      "step": 2,
+      "action": "pick(B, b3, stock_b2)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.45118503568622187,
+      "arm_distances_m": {
+        "B": 0.45118503568622187
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.804740143,
+      "actual_seconds": 16.919999999999714
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_021.toml",
+      "task": "gen_f1_s20261115_021",
+      "step": 3,
+      "action": "place(B, b3, board_3)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.7845265305292788,
+      "arm_distances_m": {
+        "B": 0.7845265305292788
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.138106122,
+      "actual_seconds": 19.400000000000457
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_021.toml",
+      "task": "gen_f1_s20261115_021",
+      "step": 4,
+      "action": "place(A, b2, board_2)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.4140058927182801,
+      "arm_distances_m": {
+        "A": 0.4140058927182801
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.6560235709999995,
+      "actual_seconds": 16.500000000000124
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_021.toml",
+      "task": "gen_f1_s20261115_021",
+      "step": 5,
+      "action": "pick(A, b4, stock_a2)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.5979418863889858,
+      "arm_distances_m": {
+        "A": 0.5979418863889858
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.3917675460000005,
+      "actual_seconds": 23.320000000003645
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_021.toml",
+      "task": "gen_f1_s20261115_021",
+      "step": 6,
+      "action": "pick(B, b1, stock_b1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.6792665420394396,
+      "arm_distances_m": {
+        "B": 0.6792665420394396
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.717066168000001,
+      "actual_seconds": 16.18000000000253
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_021.toml",
+      "task": "gen_f1_s20261115_021",
+      "step": 7,
+      "action": "place(A, b4, board_4)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.8959809897120371,
+      "arm_distances_m": {
+        "A": 0.8959809897120371
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.583923959,
+      "actual_seconds": 27.35999999999668
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_021.toml",
+      "task": "gen_f1_s20261115_021",
+      "step": 8,
+      "action": "place(B, b1, board_1)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.8853747326076882,
+      "arm_distances_m": {
+        "B": 0.8853747326076882
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.541498929999998,
+      "actual_seconds": 20.699999999999754
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_033.toml",
+      "task": "gen_f1_s20261115_033",
+      "step": 1,
+      "action": "pick(A, b2, stock_a1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.6017817127899132,
+      "arm_distances_m": {
+        "A": 0.6017817127899132
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.407126851,
+      "actual_seconds": 18.97999999999967
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_033.toml",
+      "task": "gen_f1_s20261115_033",
+      "step": 2,
+      "action": "pick(B, b1, stock_b1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.6237054961559634,
+      "arm_distances_m": {
+        "B": 0.6237054961559634
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.494821985,
+      "actual_seconds": 28.699999999999463
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_033.toml",
+      "task": "gen_f1_s20261115_033",
+      "step": 3,
+      "action": "place(A, b2, board_2)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.5491967901551096,
+      "arm_distances_m": {
+        "A": 0.5491967901551096
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.196787161,
+      "actual_seconds": 16.38000000000035
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_033.toml",
+      "task": "gen_f1_s20261115_033",
+      "step": 4,
+      "action": "place(B, b1, board_1)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.7040687076025977,
+      "arm_distances_m": {
+        "B": 0.7040687076025977
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.816274830000001,
+      "actual_seconds": 18.220000000002365
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_022.toml",
+      "task": "gen_f1_s20261115_022",
+      "step": 1,
+      "action": "pick(A, b1, stock_a1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.807264338908912,
+      "arm_distances_m": {
+        "A": 0.807264338908912
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.229057356,
+      "actual_seconds": 24.59999999999955
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_022.toml",
+      "task": "gen_f1_s20261115_022",
+      "step": 2,
+      "action": "pick(B, b2, stock_b1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.862312290151191,
+      "arm_distances_m": {
+        "B": 0.862312290151191
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.449249161,
+      "actual_seconds": 23.419999999999575
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_022.toml",
+      "task": "gen_f1_s20261115_022",
+      "step": 3,
+      "action": "place(A, b1, board_1)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.6687755612179845,
+      "arm_distances_m": {
+        "A": 0.6687755612179845
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.675102245,
+      "actual_seconds": 18.460000000001674
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_022.toml",
+      "task": "gen_f1_s20261115_022",
+      "step": 4,
+      "action": "place(B, b2, board_2)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.5314099382606814,
+      "arm_distances_m": {
+        "B": 0.5314099382606814
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.125639753000001,
+      "actual_seconds": 17.54000000000132
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_039.toml",
+      "task": "gen_f1_s20261115_039",
+      "step": 1,
+      "action": "pick(B, b1, stock_b1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.9619258177479549,
+      "arm_distances_m": {
+        "B": 0.9619258177479549
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.847703271,
+      "actual_seconds": 26.219999999999516
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_039.toml",
+      "task": "gen_f1_s20261115_039",
+      "step": 2,
+      "action": "pick(A, b3, stock_a2)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.8002645901084734,
+      "arm_distances_m": {
+        "A": 0.8002645901084734
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.20105836,
+      "actual_seconds": 17.5999999999997
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_039.toml",
+      "task": "gen_f1_s20261115_039",
+      "step": 3,
+      "action": "place(A, b3, board_3)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.3748709824299865,
+      "arm_distances_m": {
+        "A": 0.3748709824299865
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.4994839299999994,
+      "actual_seconds": 15.720000000000002
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_039.toml",
+      "task": "gen_f1_s20261115_039",
+      "step": 4,
+      "action": "pick(A, b2, stock_a1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.24225478714470888,
+      "arm_distances_m": {
+        "A": 0.24225478714470888
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 2.969019149000001,
+      "actual_seconds": 17.940000000002804
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_039.toml",
+      "task": "gen_f1_s20261115_039",
+      "step": 5,
+      "action": "place(B, b1, board_1)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 1.0718472960593306,
+      "arm_distances_m": {
+        "B": 1.0718472960593306
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 6.287389184,
+      "actual_seconds": 22.200000000002547
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_039.toml",
+      "task": "gen_f1_s20261115_039",
+      "step": 6,
+      "action": "place(A, b2, board_2)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.5498649726365353,
+      "arm_distances_m": {
+        "A": 0.5498649726365353
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.199459891,
+      "actual_seconds": 16.60000000000101
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_007.toml",
+      "task": "gen_f1_s20261115_007",
+      "step": 1,
+      "action": "pick(B, b1, stock_b1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.6822517551933936,
+      "arm_distances_m": {
+        "B": 0.6822517551933936
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.729007021,
+      "actual_seconds": 28.039999999999477
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_007.toml",
+      "task": "gen_f1_s20261115_007",
+      "step": 2,
+      "action": "pick(A, b2, stock_a1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.9638151688368871,
+      "arm_distances_m": {
+        "A": 0.9638151688368871
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.855260675,
+      "actual_seconds": 25.639999999999528
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_007.toml",
+      "task": "gen_f1_s20261115_007",
+      "step": 3,
+      "action": "place(B, b1, board_1)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.7037775561006508,
+      "arm_distances_m": {
+        "B": 0.7037775561006508
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.815110224,
+      "actual_seconds": 19.420000000002435
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_007.toml",
+      "task": "gen_f1_s20261115_007",
+      "step": 4,
+      "action": "place(A, b2, board_2)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.960019448153874,
+      "arm_distances_m": {
+        "A": 0.960019448153874
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.840077792999999,
+      "actual_seconds": 25.780000000003003
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_011.toml",
+      "task": "gen_f1_s20261115_011",
+      "step": 1,
+      "action": "pick(B, b1, stock_b1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.4584419248593995,
+      "arm_distances_m": {
+        "B": 0.4584419248593995
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.833767699,
+      "actual_seconds": 16.719999999999718
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_011.toml",
+      "task": "gen_f1_s20261115_011",
+      "step": 2,
+      "action": "pick(A, b3, stock_a2)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.8001690722054181,
+      "arm_distances_m": {
+        "A": 0.8001690722054181
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.200676289,
+      "actual_seconds": 17.5999999999997
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_011.toml",
+      "task": "gen_f1_s20261115_011",
+      "step": 3,
+      "action": "place(B, b1, board_1)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.4759087308631106,
+      "arm_distances_m": {
+        "B": 0.4759087308631106
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.9036349230000003,
+      "actual_seconds": 16.079999999999902
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_011.toml",
+      "task": "gen_f1_s20261115_011",
+      "step": 4,
+      "action": "place(A, b3, board_3)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.5922665561483381,
+      "arm_distances_m": {
+        "A": 0.5922665561483381
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.369066225,
+      "actual_seconds": 15.880000000000027
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_011.toml",
+      "task": "gen_f1_s20261115_011",
+      "step": 5,
+      "action": "pick(B, b4, stock_b2)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.45867225765747455,
+      "arm_distances_m": {
+        "B": 0.45867225765747455
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.834689030999999,
+      "actual_seconds": 16.900000000002642
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_011.toml",
+      "task": "gen_f1_s20261115_011",
+      "step": 6,
+      "action": "pick(A, b2, stock_a1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.9104146468816533,
+      "arm_distances_m": {
+        "A": 0.9104146468816533
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.641658588,
+      "actual_seconds": 24.82000000000388
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_011.toml",
+      "task": "gen_f1_s20261115_011",
+      "step": 7,
+      "action": "place(B, b4, board_4)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.2196279108852968,
+      "arm_distances_m": {
+        "B": 0.2196279108852968
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 2.8785116440000014,
+      "actual_seconds": 14.46000000000199
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_011.toml",
+      "task": "gen_f1_s20261115_011",
+      "step": 8,
+      "action": "place(A, b2, board_2)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.972053578523974,
+      "arm_distances_m": {
+        "A": 0.972053578523974
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.888214313999999,
+      "actual_seconds": 27.25999999999639
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_038.toml",
+      "task": "gen_f1_s20261115_038",
+      "step": 1,
+      "action": "pick(B, b2, stock_b1)",
+      "skill": "pick",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.3249225621439057,
+      "arm_distances_m": {
+        "B": 0.3249225621439057
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.299690249,
+      "actual_seconds": 14.739999999999762
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_038.toml",
+      "task": "gen_f1_s20261115_038",
+      "step": 2,
+      "action": "pick(A, b1, stock_a1)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.6029817840463475,
+      "arm_distances_m": {
+        "A": 0.6029817840463475
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.411927136,
+      "actual_seconds": 18.95999999999967
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_038.toml",
+      "task": "gen_f1_s20261115_038",
+      "step": 3,
+      "action": "place(A, b1, board_1)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.2528645120944303,
+      "arm_distances_m": {
+        "A": 0.2528645120944303
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.0114580479999997,
+      "actual_seconds": 16.26000000000033
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_038.toml",
+      "task": "gen_f1_s20261115_038",
+      "step": 4,
+      "action": "place(B, b2, board_2)",
+      "skill": "place",
+      "arms": [
+        "B"
+      ],
+      "distance_m": 0.6153492107210722,
+      "arm_distances_m": {
+        "B": 0.6153492107210722
+      },
+      "speeds_m_s": {
+        "B": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 4.461396843,
+      "actual_seconds": 16.71999999999965
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_038.toml",
+      "task": "gen_f1_s20261115_038",
+      "step": 5,
+      "action": "pick(A, b3, stock_a2)",
+      "skill": "pick",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.4289003789028251,
+      "arm_distances_m": {
+        "A": 0.4289003789028251
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 3.7156015160000004,
+      "actual_seconds": 14.920000000002332
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_038.toml",
+      "task": "gen_f1_s20261115_038",
+      "step": 6,
+      "action": "place(A, b3, board_3)",
+      "skill": "place",
+      "arms": [
+        "A"
+      ],
+      "distance_m": 0.7893085397246131,
+      "arm_distances_m": {
+        "A": 0.7893085397246131
+      },
+      "speeds_m_s": {
+        "A": 0.25
+      },
+      "op_time": 2.0,
+      "old_estimated_seconds": 5.1572341590000015,
+      "actual_seconds": 23.899999999999956
+    }
+  ],
+  "sources": [
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "sample_count": 4,
+      "actual_makespan_seconds": 37.78000000000031
+    },
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/plan.json",
+      "task_file": "tasks/s1_reach_handover.toml",
+      "task": "s1_reach_handover",
+      "sample_count": 3,
+      "actual_makespan_seconds": 66.20000000000397
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/plan.json",
+      "task_file": "tasks/sim/s1_qualify_sim.toml",
+      "task": "s1_qualify_sim",
+      "sample_count": 3,
+      "actual_makespan_seconds": 62.58000000000418
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/plan.json",
+      "task_file": "tasks/sim/s1_feedback_sim_attempt2.toml",
+      "task": "s1_feedback_sim",
+      "sample_count": 3,
+      "actual_makespan_seconds": 62.58000000000418
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/plan.json",
+      "task_file": "tasks/sim/s2_tower_sim.toml",
+      "task": "s2_tower_sim",
+      "sample_count": 6,
+      "actual_makespan_seconds": 116.85999999999389
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "sample_count": 4,
+      "actual_makespan_seconds": 37.78000000000031
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "sample_count": 4,
+      "actual_makespan_seconds": 37.78000000000031
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_021.toml",
+      "task": "gen_f1_s20261115_021",
+      "sample_count": 8,
+      "actual_makespan_seconds": 87.25999999999978
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_033.toml",
+      "task": "gen_f1_s20261115_033",
+      "sample_count": 4,
+      "actual_makespan_seconds": 64.5600000000043
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_022.toml",
+      "task": "gen_f1_s20261115_022",
+      "sample_count": 4,
+      "actual_makespan_seconds": 52.98000000000268
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_039.toml",
+      "task": "gen_f1_s20261115_039",
+      "sample_count": 6,
+      "actual_makespan_seconds": 70.78000000000306
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_007.toml",
+      "task": "gen_f1_s20261115_007",
+      "sample_count": 4,
+      "actual_makespan_seconds": 77.78000000000166
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_011.toml",
+      "task": "gen_f1_s20261115_011",
+      "sample_count": 8,
+      "actual_makespan_seconds": 87.87999999999965
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_038.toml",
+      "task": "gen_f1_s20261115_038",
+      "sample_count": 6,
+      "actual_makespan_seconds": 76.82000000000185
+    }
+  ],
+  "training_tasks": [
+    "gen_f1_s20261115_007",
+    "gen_f1_s20261115_011",
+    "gen_f1_s20261115_021",
+    "gen_f1_s20261115_022",
+    "gen_f1_s20261115_033",
+    "gen_f1_s20261115_038",
+    "gen_f1_s20261115_039",
+    "s1_feedback_sim",
+    "s1_parallel_place",
+    "s1_qualify_sim",
+    "s1_reach_handover",
+    "s2_tower_sim"
+  ],
+  "skills": {
+    "pick": {
+      "reference_speed": 0.25,
+      "fixed_delta": 11.211279200839742,
+      "movement_multiplier": 3.826328842745374,
+      "a_skill": 13.211279200839742,
+      "b_skill": 15.305315370981496,
+      "samples": 32,
+      "training_tasks": [
+        "gen_f1_s20261115_007",
+        "gen_f1_s20261115_011",
+        "gen_f1_s20261115_021",
+        "gen_f1_s20261115_022",
+        "gen_f1_s20261115_033",
+        "gen_f1_s20261115_038",
+        "gen_f1_s20261115_039",
+        "s1_feedback_sim",
+        "s1_parallel_place",
+        "s1_qualify_sim",
+        "s1_reach_handover",
+        "s2_tower_sim"
+      ],
+      "status": "fitted",
+      "fit_constraints": [
+        "a>=原op_time",
+        "b>=4秒/米",
+        "共享非缩小比例满足14个训练来源的资源重计时/实际处于0.7–1.3；不作独立泛化声明"
+      ],
+      "distance_range_m": [
+        0.24225478714470888,
+        0.9638151688368871
+      ],
+      "rmse_seconds": 4.458714824526386,
+      "unscaled_a_skill": 11.331092194793351,
+      "unscaled_b_skill": 13.127111833951382,
+      "coverage_scale": 1.1659316660498393
+    },
+    "place": {
+      "reference_speed": 0.25,
+      "fixed_delta": 11.082892120837263,
+      "movement_multiplier": 3.489599503883876,
+      "a_skill": 13.082892120837263,
+      "b_skill": 13.958398015535504,
+      "samples": 29,
+      "training_tasks": [
+        "gen_f1_s20261115_007",
+        "gen_f1_s20261115_011",
+        "gen_f1_s20261115_021",
+        "gen_f1_s20261115_022",
+        "gen_f1_s20261115_033",
+        "gen_f1_s20261115_038",
+        "gen_f1_s20261115_039",
+        "s1_feedback_sim",
+        "s1_parallel_place",
+        "s1_qualify_sim",
+        "s1_reach_handover"
+      ],
+      "status": "fitted",
+      "fit_constraints": [
+        "a>=原op_time",
+        "b>=4秒/米",
+        "共享非缩小比例满足14个训练来源的资源重计时/实际处于0.7–1.3；不作独立泛化声明"
+      ],
+      "distance_range_m": [
+        0.2196279108852968,
+        1.0718472960593306
+      ],
+      "rmse_seconds": 3.806041174036991,
+      "unscaled_a_skill": 11.220976753433522,
+      "unscaled_b_skill": 11.971883449075852,
+      "coverage_scale": 1.1659316660498393
+    },
+    "handover": {
+      "reference_speed": 0.25,
+      "fixed_delta": 6.651749184536076,
+      "movement_multiplier": 4.473947272460712,
+      "a_skill": 9.651749184536076,
+      "b_skill": 17.895789089842847,
+      "samples": 3,
+      "training_tasks": [
+        "s1_feedback_sim",
+        "s1_qualify_sim",
+        "s1_reach_handover"
+      ],
+      "status": "fitted_sparse_order_constrained",
+      "fit_constraints": [
+        "a>=原op_time",
+        "b>=4秒/米",
+        "near交接优于buffer，far交接劣于buffer至少0.25秒",
+        "共享非缩小比例满足14个训练来源的资源重计时/实际处于0.7–1.3；不作独立泛化声明"
+      ],
+      "limitation": "仅3条/2种距离；不宣称独立识别了远距离斜率",
+      "distance_range_m": [
+        0.5385164807134505,
+        0.6164414002968976
+      ],
+      "rmse_seconds": 2.9253073203073545,
+      "unscaled_a_skill": 8.27814310699363,
+      "unscaled_b_skill": 15.348917617508011,
+      "coverage_scale": 1.1659316660498393
+    },
+    "insert": {
+      "reference_speed": 0.25,
+      "fixed_delta": 12.56111375304947,
+      "movement_multiplier": 3.6579641733146255,
+      "a_skill": 15.56111375304947,
+      "b_skill": 14.631856693258502,
+      "samples": 3,
+      "training_tasks": [
+        "s2_tower_sim"
+      ],
+      "status": "sparse_slope_prior",
+      "fit_constraints": [
+        "保留全部3条实测，不剔除31.1秒样本",
+        "b固定为pick/place斜率均值>=4，仅拟合非负额外截距",
+        "共享非缩小比例满足14个训练来源的资源重计时/实际处于0.7–1.3；不作独立泛化声明"
+      ],
+      "limitation": "仅1个塔任务，含异臂/停车开销；无约束OLS负斜率未采用",
+      "distance_range_m": [
+        0.5943904440685432,
+        0.7383765976789893
+      ],
+      "rmse_seconds": 8.133671116433481,
+      "unscaled_a_skill": 13.3465058083295,
+      "unscaled_b_skill": 12.549497641513618,
+      "coverage_scale": 1.1659316660498393
+    },
+    "detach": {
+      "reference_speed": 0.25,
+      "fixed_delta": 0.0,
+      "movement_multiplier": 1.0,
+      "a_skill": 3.0,
+      "b_skill": 4.0,
+      "samples": 0,
+      "training_tasks": [],
+      "status": "uncalibrated",
+      "fit_constraints": [
+        "无真实成功样本，保持原模型"
+      ],
+      "distance_range_m": [
+        null,
+        null
+      ],
+      "rmse_seconds": null
+    },
+    "support_on": {
+      "reference_speed": 0.25,
+      "fixed_delta": 0.0,
+      "movement_multiplier": 1.0,
+      "a_skill": 2.0,
+      "b_skill": 4.0,
+      "samples": 0,
+      "training_tasks": [],
+      "status": "uncalibrated",
+      "fit_constraints": [
+        "无真实成功样本，保持原模型"
+      ],
+      "distance_range_m": [
+        null,
+        null
+      ],
+      "rmse_seconds": null
+    },
+    "support_off": {
+      "reference_speed": 0.25,
+      "fixed_delta": 0.0,
+      "movement_multiplier": 1.0,
+      "a_skill": 1.0,
+      "b_skill": 4.0,
+      "samples": 0,
+      "training_tasks": [],
+      "status": "uncalibrated",
+      "fit_constraints": [
+        "无真实成功样本，保持原模型"
+      ],
+      "distance_range_m": [
+        null,
+        null
+      ],
+      "rmse_seconds": null
+    },
+    "co_pick": {
+      "reference_speed": 0.25,
+      "fixed_delta": 0.0,
+      "movement_multiplier": 1.0,
+      "a_skill": 3.0,
+      "b_skill": 4.0,
+      "samples": 0,
+      "training_tasks": [],
+      "status": "uncalibrated",
+      "fit_constraints": [
+        "无真实成功样本，保持原模型"
+      ],
+      "distance_range_m": [
+        null,
+        null
+      ],
+      "rmse_seconds": null
+    },
+    "co_insert": {
+      "reference_speed": 0.25,
+      "fixed_delta": 0.0,
+      "movement_multiplier": 1.0,
+      "a_skill": 4.0,
+      "b_skill": 4.0,
+      "samples": 0,
+      "training_tasks": [],
+      "status": "uncalibrated",
+      "fit_constraints": [
+        "无真实成功样本，保持原模型"
+      ],
+      "distance_range_m": [
+        null,
+        null
+      ],
+      "rmse_seconds": null
+    }
+  },
+  "ordering_constraints": {
+    "source": "旧near/far任务的两条可行路线，扣除共同B取料；不调用规划器或被测estimate",
+    "minimum_ordering_margin_seconds": 0.25,
+    "buffer_after_common_pick_seconds": 54.14766462010398,
+    "far_handover_distance_m": 1.4696938456699067,
+    "near_handover_distance_m": 0.5385164807134505,
+    "far_handover_min_seconds": 30.83635286713956,
+    "near_handover_max_seconds": 39.453159595416494,
+    "coverage_scale": 1.1659316660498393,
+    "values_before_shared_scale": true,
+    "final_minimum_ordering_margin_seconds": 0.29148291651245983,
+    "final_buffer_after_common_pick_seconds": 63.13247682322577,
+    "final_far_handover_min_seconds": 35.95308027328477,
+    "final_near_handover_max_seconds": 45.99968809801416
+  },
+  "shared_coverage_constraint": {
+    "scale": 1.1659316660498393,
+    "feasible_interval": [
+      1.1659316660488392,
+      1.31711547785025
+    ],
+    "target_interval": [
+      0.7,
+      1.3
+    ],
+    "limitation": "补偿训练任务的TPG跨臂等待；新任务仍需独立真实验证，不保证泛化"
+  },
+  "lower_bound_contract": "new=action.op_time+fixed_delta+movement_multiplier*max(distance/current_speed)，fixed_delta>=0且multiplier>=1，逐动作不低于旧模型",
+  "training_schedule_replay": [
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "sample_count": 4,
+      "actual_makespan_seconds": 37.78000000000031,
+      "replayed_estimate_seconds": 41.26140097570904,
+      "estimate_to_actual": 1.0921493111622207,
+      "unscaled_estimate_to_actual": 0.9367181139031997
+    },
+    {
+      "source_summary": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/summary.json",
+      "source_plan": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/plan.json",
+      "task_file": "tasks/s1_reach_handover.toml",
+      "task": "s1_reach_handover",
+      "sample_count": 3,
+      "actual_makespan_seconds": 66.20000000000397,
+      "replayed_estimate_seconds": 57.724578032744425,
+      "estimate_to_actual": 0.8719724778359662,
+      "unscaled_estimate_to_actual": 0.7478761433679876
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/plan.json",
+      "task_file": "tasks/sim/s1_qualify_sim.toml",
+      "task": "s1_qualify_sim",
+      "sample_count": 3,
+      "actual_makespan_seconds": 62.58000000000418,
+      "replayed_estimate_seconds": 68.47736976424021,
+      "estimate_to_actual": 1.0942372924933785,
+      "unscaled_estimate_to_actual": 0.9385089404086945
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/plan.json",
+      "task_file": "tasks/sim/s1_feedback_sim_attempt2.toml",
+      "task": "s1_feedback_sim",
+      "sample_count": 3,
+      "actual_makespan_seconds": 62.58000000000418,
+      "replayed_estimate_seconds": 68.47736976424021,
+      "estimate_to_actual": 1.0942372924933785,
+      "unscaled_estimate_to_actual": 0.9385089404086945
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/plan.json",
+      "task_file": "tasks/sim/s2_tower_sim.toml",
+      "task": "s2_tower_sim",
+      "sample_count": 6,
+      "actual_makespan_seconds": 116.85999999999389,
+      "replayed_estimate_seconds": 121.45726753617078,
+      "estimate_to_actual": 1.0393399583790615,
+      "unscaled_estimate_to_actual": 0.8914244193232449
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_idle_parking/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "sample_count": 4,
+      "actual_makespan_seconds": 37.78000000000031,
+      "replayed_estimate_seconds": 41.26140097570904,
+      "estimate_to_actual": 1.0921493111622207,
+      "unscaled_estimate_to_actual": 0.9367181139031997
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/m4/gate_reach_cert/simulation/s1_parallel_place/plan.json",
+      "task_file": "tasks/s1_parallel_place.toml",
+      "task": "s1_parallel_place",
+      "sample_count": 4,
+      "actual_makespan_seconds": 37.78000000000031,
+      "replayed_estimate_seconds": 41.26140097570904,
+      "estimate_to_actual": 1.0921493111622207,
+      "unscaled_estimate_to_actual": 0.9367181139031997
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/00/simulation/gen_f1_s20261115_021/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_021.toml",
+      "task": "gen_f1_s20261115_021",
+      "sample_count": 8,
+      "actual_makespan_seconds": 87.25999999999978,
+      "replayed_estimate_seconds": 93.19940702958014,
+      "estimate_to_actual": 1.0680656317852437,
+      "unscaled_estimate_to_actual": 0.9160619467552809
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/01/simulation/gen_f1_s20261115_033/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_033.toml",
+      "task": "gen_f1_s20261115_033",
+      "sample_count": 4,
+      "actual_makespan_seconds": 64.5600000000043,
+      "replayed_estimate_seconds": 45.66785188995926,
+      "estimate_to_actual": 0.7073706922236094,
+      "unscaled_estimate_to_actual": 0.606699957485649
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_1/f1/02/simulation/gen_f1_s20261115_022/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_022.toml",
+      "task": "gen_f1_s20261115_022",
+      "sample_count": 4,
+      "actual_makespan_seconds": 52.98000000000268,
+      "replayed_estimate_seconds": 47.98464208296856,
+      "estimate_to_actual": 0.9057123835969447,
+      "unscaled_estimate_to_actual": 0.7768142936416557
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/00/simulation/gen_f1_s20261115_039/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_039.toml",
+      "task": "gen_f1_s20261115_039",
+      "sample_count": 6,
+      "actual_makespan_seconds": 70.78000000000306,
+      "replayed_estimate_seconds": 81.45226301266807,
+      "estimate_to_actual": 1.1507807715832798,
+      "unscaled_estimate_to_actual": 0.9870053323811931
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/01/simulation/gen_f1_s20261115_007/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_007.toml",
+      "task": "gen_f1_s20261115_007",
+      "sample_count": 4,
+      "actual_makespan_seconds": 77.78000000000166,
+      "replayed_estimate_seconds": 54.44600000004787,
+      "estimate_to_actual": 0.7000000000006005,
+      "unscaled_estimate_to_actual": 0.6003782386082633
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/02/simulation/gen_f1_s20261115_011/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_011.toml",
+      "task": "gen_f1_s20261115_011",
+      "sample_count": 8,
+      "actual_makespan_seconds": 87.87999999999965,
+      "replayed_estimate_seconds": 100.6047689959203,
+      "estimate_to_actual": 1.1447970982694662,
+      "unscaled_estimate_to_actual": 0.9818732363175479
+    },
+    {
+      "source_summary": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/summary.json",
+      "source_plan": "results/sim_v1_3/overnight/sim_selection_2/f1/03/simulation/gen_f1_s20261115_038/plan.json",
+      "task_file": "results/sim_v1_3/overnight/generated/gen_f1_s20261115_038.toml",
+      "task": "gen_f1_s20261115_038",
+      "sample_count": 6,
+      "actual_makespan_seconds": 76.82000000000185,
+      "replayed_estimate_seconds": 82.92869083133714,
+      "estimate_to_actual": 1.079519536986919,
+      "unscaled_estimate_to_actual": 0.9258857687983694
+    }
+  ],
+  "training_makespan_ratio_median": 1.0858344240745699,
+  "training_scope": "固定旧可行路线的资源顺序重计时，不运行搜索，不当作独立最优或held-out验收",
+  "holdout_policy": "新sim20优先选择不在training_tasks中的任务，单独报告训练任务重叠"
+}

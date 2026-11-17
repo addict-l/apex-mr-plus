@@ -1,0 +1,58 @@
+{
+  "task": "gen_f2_s20261115_001",
+  "rules_replayed": true,
+  "goal_satisfied": true,
+  "initial_invariant_valid": true,
+  "steps": [
+    "pick(A, b1, stock_a1)",
+    "handover(A, B, b1, hand_mid)",
+    "place(B, b1, board_1)"
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "action": "pick(A, b1, stock_a1)",
+      "estimate_seconds": 5.203893726064559,
+      "state_after": [
+        "arm_at(A, stock_a1)",
+        "arm_at(B, home_B)",
+        "empty(board_1)",
+        "empty(stock_a1)",
+        "free(B)",
+        "held(A, b1)"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "handover(A, B, b1, hand_mid)",
+      "estimate_seconds": 6.823183609703498,
+      "state_after": [
+        "arm_at(A, hand_mid)",
+        "arm_at(B, hand_mid)",
+        "empty(board_1)",
+        "empty(stock_a1)",
+        "free(A)",
+        "held(B, b1)"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "place(B, b1, board_1)",
+      "estimate_seconds": 3.086050066577841,
+      "state_after": [
+        "arm_at(A, hand_mid)",
+        "arm_at(B, board_1)",
+        "at(b1, board_1)",
+        "empty(stock_a1)",
+        "free(A)",
+        "free(B)"
+      ]
+    }
+  ],
+  "serial_witness_estimate_seconds": 15.113127402345896,
+  "search_performed": false,
+  "wall_budget_experiment_performed": false,
+  "independent_planner_solved": null,
+  "optimal_makespan_seconds": null,
+  "scope": "构造见证的前提、能力、起止不变量和目标重放；不是独立规划搜索、IK或动力学验收"
+}

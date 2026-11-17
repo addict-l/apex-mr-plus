@@ -1,0 +1,52 @@
+name = "s3a_platform_demo_needs_support"
+description = "在已装好的梁上插装盖块，插装期间必须由另一只臂托住梁"
+instruction = "把盖块装到已经装好的梁上，做好后两只手都空出来。"
+fill_all_slots = true
+goal = []
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.30, 0.30, 0.20]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.30, 0.30, 0.20]
+speed = 0.25
+
+[[location]]
+id = "stock_r1"
+kind = "stock"
+pos = [0.40, -0.20, 0.00]
+
+[[block]]
+id = "beam_block"
+type = "beam_type"
+installed_in = "beam"
+
+[[block]]
+id = "cap_block"
+type = "cap_type"
+at = "stock_r1"
+
+[[slot]]
+id = "beam"
+type = "beam_type"
+pos = [0.00, 0.10, 0.03]
+below = []
+support_point = true
+
+[[slot]]
+id = "cap"
+type = "cap_type"
+pos = [0.00, 0.10, 0.06]
+below = ["beam"]
+needs_support_during = ["beam"]
+
+[capabilities.reach]
+default = "INVALID"
+valid = { A = ["beam", "cap"], B = ["stock_r1", "beam", "cap"] }
+
+[capabilities.liftable]
+default = "VALID"

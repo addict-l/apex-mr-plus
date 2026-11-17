@@ -1,0 +1,85 @@
+{
+  "task_file": "D:\\APEX_MR_Plus\\dualarm_skillnet\\tasks\\sim\\s1_qualify_sim.toml",
+  "status": "passed",
+  "passed": true,
+  "profile": "skillnet_v1_3",
+  "port": 23210,
+  "timeout_wall_s": 1200.0,
+  "fatal_environment": false,
+  "task": "s1_qualify_sim",
+  "task_sha256": "24d8282ff58dc3b11346db8daa9020c7461a4ed71d21e0fc46375383d111d3a9",
+  "environment": {
+    "c_free_bytes": 16353456128,
+    "port": 23210
+  },
+  "planning_status": "unknown",
+  "feedback": [
+    "相关动作剪枝搜索结论为 unknown，回退到完整搜索。",
+    "运动后端按需验证：reach(B, stock_b) → VALID。"
+  ],
+  "simulator_pid": 14284,
+  "real_planning_status": "solved",
+  "backend_nominal_seconds": 57.177725477309124,
+  "success": true,
+  "phase": "complete",
+  "reason": null,
+  "planning_seconds": 8.65600000001723,
+  "compile_seconds": 5.5,
+  "motion_task_count": 16,
+  "video": false,
+  "step_durations": [
+    {
+      "step": 1,
+      "action": "pick(B, red, stock_b)",
+      "estimated_seconds": 4.297825059,
+      "actual_seconds": 17.939999999999692,
+      "estimated_actual_ratio": 0.23956661421405093
+    },
+    {
+      "step": 2,
+      "action": "handover(B, A, red, hand_mid)",
+      "estimated_seconds": 5.465765601,
+      "actual_seconds": 17.480000000000338,
+      "estimated_actual_ratio": 0.3126868192791702
+    },
+    {
+      "step": 3,
+      "action": "place(A, red, final_buffer)",
+      "estimated_seconds": 5.6415381369999995,
+      "actual_seconds": 19.660000000003073,
+      "estimated_actual_ratio": 0.28695514430310876
+    }
+  ],
+  "remote_interface_failure": false,
+  "tpg_seconds": 88.90600000001723,
+  "tpg_nodes": 178,
+  "tpg_edges": 203,
+  "nominal_makespan_seconds": 60.086393083803344,
+  "actual_makespan_seconds": 62.58000000000418,
+  "execution_wall_seconds": 22.51600000000326,
+  "failure_phase": null,
+  "executor_wall_seconds": 117.53100000001723,
+  "motion_backend_cache": {
+    "entries": 16,
+    "hits": 14,
+    "misses": 16
+  },
+  "motion_feedback_count": 0,
+  "qualification_calls": 1,
+  "simulator_log": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\logs\\coppeliasim-20261115-162419-e9e0af86.log",
+  "simulator_closed": true,
+  "phase_seconds": {
+    "load": 0.01600000000325963,
+    "environment": 0.0,
+    "planning": 0.031000000017229468,
+    "simulator_start": 0.25,
+    "simulator_connect": 4.312999999965541,
+    "workcell": 1.687000000034459,
+    "real_planning": 8.625,
+    "compile": 5.60999999998603,
+    "execute": 117.68699999997625
+  },
+  "initial_planning_seconds": 0.031000000017229468,
+  "real_planning_seconds": 8.625,
+  "wall_seconds": 144.6720000000205
+}

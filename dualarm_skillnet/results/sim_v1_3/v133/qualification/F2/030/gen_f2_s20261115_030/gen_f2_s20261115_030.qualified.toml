@@ -1,0 +1,12 @@
+name = "gen_f2_s20261115_030"
+description = "把积木送到另一只手所在区域的目标位，最后两只手都空出来。"
+instruction = "把积木送到另一只手所在区域的目标位，最后两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = ["at(b1, board_1)", "at(b2, board_2)"]
+fill_all_slots = true
+location = [{id = "hand_mid", kind = "handover", pos = [-0.0032660836360998077, 0.021844640981395286, 0.2069641318280332]}, {id = "stock_b1", kind = "stock", pos = [0.4449191720643767, -0.04231065622539163, 0.0], owner = "B"}, {id = "board_1", kind = "board", pos = [-0.14353495647752615, -0.048015947950618434, 0.0]}, {id = "stock_a1", kind = "stock", pos = [-0.44529346292737143, -0.04111578977634547, 0.0], owner = "A"}, {id = "board_2", kind = "board", pos = [0.27726024838774865, 0.32402317296996525, 0.0]}]
+block = [{id = "b1", type = "2x4", at = "stock_b1"}, {id = "b2", type = "2x4", at = "stock_a1"}]
+slot = []
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["hand_mid", "board_1", "stock_a1"], B = ["hand_mid", "stock_b1", "board_2"]}, invalid = {A = [], B = []}, unknown = {A = ["stock_b1", "board_2"], B = ["board_1", "stock_a1"]}}}
+capability_source = "ik_qualified"

@@ -1,0 +1,93 @@
+{
+  "created_at_utc": "2026-11-17T03:55:09.239420+00:00",
+  "fix": "v1.3.4 C",
+  "implemented": true,
+  "production_files": [
+    "skillnet/pipeline.py",
+    "simbridge/backend.py"
+  ],
+  "file_sha256": {
+    "skillnet/pipeline.py": "4bebf9cf4f8ccedeea2c3c47af07c0132219c21fbf2aebe49c123c2c208a6633",
+    "simbridge/backend.py": "4c408ee1e2c7fbfe68c7f0fe9bcc867a5873b389f7cebba1051755594dedf50c",
+    "tests/test_v134_motion_feedback.py": "9b8f6b027c4b4fc7d02d3cdc25f6073c6a9aad8dc4aecbf7d482861620d86215"
+  },
+  "logs": {
+    "out/v134_c_red.log": {
+      "sha256": "b2df26e225c2eb07368384ec4822d1a209945d8ca87d370491029a7319345a44",
+      "bytes": 16440
+    },
+    "out/v134_c_pipeline_seam_green.log": {
+      "sha256": "4173b85fe1738a91d9dee2204adf792d1f2c55a1806cf1d7a204e8d871302f34",
+      "bytes": 1259
+    },
+    "out/v134_c_first_green.log": {
+      "sha256": "07f8444fbea1375c14ca5843960695bb7521fcf10119bc89e6dbdf331e24c751",
+      "bytes": 3190
+    },
+    "out/v134_c_existing_focused.log": {
+      "sha256": "13b3c089324ac69955680cd2bca779198b0112d7a2d7e43a761cccc9557e1656",
+      "bytes": 12816
+    },
+    "out/v134_c_green.log": {
+      "sha256": "fada78d0c7b6ec53d4ab34c9484ab0535b22ed0e37f20de78adb16e2ac8914cd",
+      "bytes": 3379
+    }
+  },
+  "tdd": {
+    "red": {
+      "tests": 16,
+      "failures": 11,
+      "errors": 7,
+      "seconds": 0.323,
+      "log": "out/v134_c_red.log"
+    },
+    "six_pipeline_seams": {
+      "passed": 6,
+      "seconds": 0.095,
+      "log": "out/v134_c_pipeline_seam_green.log"
+    },
+    "final_new_tests": {
+      "passed": 17,
+      "seconds": 0.449,
+      "log": "out/v134_c_green.log"
+    },
+    "existing_focused": {
+      "passed": 74,
+      "seconds": 7.042,
+      "new_tests_included": 16,
+      "existing_related_tests": 58,
+      "log": "out/v134_c_existing_focused.log"
+    },
+    "unique_passing_tests": 75,
+    "modules": [
+      "tests.test_v134_motion_feedback",
+      "tests.test_pipeline",
+      "tests.test_coppelia_backend",
+      "tests.test_v13_compiler",
+      "tests.test_remote_backend"
+    ]
+  },
+  "behavior": {
+    "classification": "Only terminal independent IK records are scanned for table_collision/interarm_collision prefixes or collision pairs. Raw status/evidence retained with source paths. RRT attempts/last_answer, branch-wrapper answer, timeout and inactive recovery history do not leak pairs into INVALID.",
+    "escalation": "Non-collision UNKNOWN has at most one escalation per action key from its original seed limit to 24. It retries the exact rolled-back action/state/snapshot without resetting its validated prefix. Already-24 UNKNOWN does not trigger another duplicate upgrade.",
+    "seed_bank": "deterministic_ik_seeds(cfg,count) retains original unique seeds and adds deterministic six-dimensional Halton entries. At least count unique bank rows ensure compiler current-q insertion/dedup still produces count distinct trials. Helper supports 24 and 32 without mutating cfg.",
+    "cache": "Backend-local _SeedCompiler uses shared per-action seed overrides. Temporary cfg view includes bank SHA in geometry_version and limits contains 24; main/scratch/final compilation retains original runner compiler identity and exact certificates. Other action contexts stay at the original seed limit.",
+    "cuts": "Both INVALID and post-escalation UNKNOWN receive state/action cuts, counted only once per distinct cut. Three cuts for one action key invalidate corresponding run-local reach facts, with explicit motion-level avoidance source. liftable is untouched; support_off maps to its arm/slot.",
+    "oracle": "Working Problem is shallow-copied with a deep oracle copy. Honest qualification updates both working and caller oracle for compatibility; motion-driven reach downgrades affect only the working oracle exposed in PipelineResult.",
+    "round_limit": "Real backend default 12, other backends default 6, explicit max_rounds preserved. Round exhaustion is budget. Search no_plan under uncertain motion cuts is overall unknown; conditional search status remains no_plan. Remote fatal loss stops upgrades and further search.",
+    "evidence": "plan.feedback contains action/round/reason/cut/downgrade messages; backend.audit.feedback_rounds stores structured per-round search and motion attempts. Existing runner motion_feedback_count still counts INVALID validations only and must not be used as all-cut count."
+  },
+  "deferred": [
+    "D qualification escalation",
+    "full default suite after A/B/C/D complete",
+    "post-fixes original11 regression",
+    "same20 real sim20 plus three wall execution samples"
+  ],
+  "not_run": [
+    "full default suite",
+    "real simulator",
+    "planning experiments",
+    "v133 result mutations"
+  ],
+  "review": "Root-delegated read-only reviewer checked reason mapping, distinct seed bank, prefix transaction, certificate limits/bank digest and stable runner/scratch compiler identity; no blocker reported."
+}

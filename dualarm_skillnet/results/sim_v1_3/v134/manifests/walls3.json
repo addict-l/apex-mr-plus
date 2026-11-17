@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "session_id": "c_wall_v134_runtime_fix2_walls3",
+  "port": 23210,
+  "state_dir": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\states\\runtime_fix2\\walls3",
+  "report_dir": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\stage_reports\\runtime_fix2\\walls3",
+  "session_budget_seconds": null,
+  "phase_budgets_seconds": {
+    "plan": null,
+    "sim": 18000.0,
+    "gates": null
+  },
+  "jobs": [
+    {
+      "id": "v134-wall-001",
+      "phase": "sim",
+      "kind": "sim",
+      "family": "F3",
+      "index": 1,
+      "task": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v133\\qualification\\F3\\001\\gen_f3_s20261115_001\\gen_f3_s20261115_001.qualified.toml",
+      "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\walls3\\001",
+      "experiment_namespace": "c_wall_v134",
+      "experiment_selection_sha256": "cbd597643c5c96d0293c934d51b79882fb2862c25ad4d891c32be498a3fc8f28",
+      "planning_code_sha256": {
+        "skillnet/planning/search.py": "568cbdea427be8daabf3497f3e5554bfe36250949203ded838f6b22712600a22",
+        "skillnet/planning/heuristic.py": "d99719627db745e5d7b3a10d9c8ed573b0638e804edd6b1a8e79ec86bc3f4fdb",
+        "skillnet/planning/bounds.py": "d3f1f80af246000dee3747eb60e33aa54016e84b2bc7903089fbe49a74cbeedb",
+        "skillnet/planning/allocation.py": "765a2f7b8edb38875be5ca0ce82efadac78bcd6c1fe1a5abec57b2ca9d3afd73",
+        "skillnet/pipeline.py": "4bebf9cf4f8ccedeea2c3c47af07c0132219c21fbf2aebe49c123c2c208a6633",
+        "simbridge/backend.py": "3ab3de31e32c63a363fbc14a1f10f167b4e485ba346df1cba931ba343d5b1abb",
+        "simbridge/qualifier.py": "0ddf05422f8df6119413d2b7cd40f5d889b733b0206a7e1a4852d9958ad5763b",
+        "simbridge/__main__.py": "0256b7a3e56dbb106592e420c6d6b88cbc5b394e0d64c2b99b6c4e4e92130d8b",
+        "simbridge/taskio.py": "74cbeea81c57762595c6b6668623d53202a0779baab1671201368f437b5f4c44",
+        "skillnet/cost/model.py": "7b2311e41b1442d7850667f374599773c1c4a5625230531994739e96631acdcd",
+        "skills/blocks_v1.toml": "aa0126377dc0f787ee7a61ab1e3c87a2662fb387e44fd030462b92edb431e172",
+        "calibration.json": "ebf2120105f35c84c9f20263a3608c138e5f2c323f3e130b0ce57c24d0317e6b"
+      },
+      "prepared_task_sha256": "b8476818784a44f257a4a135abe03c4bbcfe5552e921d1a08a2549b8c8298395",
+      "motion_code_sha256": {
+        "compiler.py": "6841af6d0907fe628be8af918c1ecacb8dab5cb62af92eb47f24687a29ba202b",
+        "frames.py": "ed471d9bf61b2663474466cef68ce29f4f8a1396c6bf289c78bebedfbcc264a5",
+        "primitives.py": "c83c73e8d190f409e733faf0088c712bccd655ec73b510950c802db8e8915069",
+        "backend.py": "3ab3de31e32c63a363fbc14a1f10f167b4e485ba346df1cba931ba343d5b1abb",
+        "workcell.py": "22951d787191541371261d3fb85b211e184f188e9526e409130f44a9dd80e962",
+        "runner.py": "a538ccfc2b5b4d550f6735541b85b910abb39e638df271e5becabe816668a070",
+        "qualifier.py": "0ddf05422f8df6119413d2b7cd40f5d889b733b0206a7e1a4852d9958ad5763b",
+        "controller_ext.lua": "d35143a5f228abce545d02ecd44e7c42d449479811fc88a356944dfbad46fc66",
+        "executor.py": "2272330faf512f535388ee01a58941e5d0a460840d1841aee96193b495c9e54f"
+      },
+      "timeout_seconds": 1200.0
+    },
+    {
+      "id": "v134-wall-009",
+      "phase": "sim",
+      "kind": "sim",
+      "family": "F3",
+      "index": 9,
+      "task": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v133\\qualification\\F3\\009\\gen_f3_s20261115_009\\gen_f3_s20261115_009.qualified.toml",
+      "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\walls3\\009",
+      "experiment_namespace": "c_wall_v134",
+      "experiment_selection_sha256": "cbd597643c5c96d0293c934d51b79882fb2862c25ad4d891c32be498a3fc8f28",
+      "planning_code_sha256": {
+        "skillnet/planning/search.py": "568cbdea427be8daabf3497f3e5554bfe36250949203ded838f6b22712600a22",
+        "skillnet/planning/heuristic.py": "d99719627db745e5d7b3a10d9c8ed573b0638e804edd6b1a8e79ec86bc3f4fdb",
+        "skillnet/planning/bounds.py": "d3f1f80af246000dee3747eb60e33aa54016e84b2bc7903089fbe49a74cbeedb",
+        "skillnet/planning/allocation.py": "765a2f7b8edb38875be5ca0ce82efadac78bcd6c1fe1a5abec57b2ca9d3afd73",
+        "skillnet/pipeline.py": "4bebf9cf4f8ccedeea2c3c47af07c0132219c21fbf2aebe49c123c2c208a6633",
+        "simbridge/backend.py": "3ab3de31e32c63a363fbc14a1f10f167b4e485ba346df1cba931ba343d5b1abb",
+        "simbridge/qualifier.py": "0ddf05422f8df6119413d2b7cd40f5d889b733b0206a7e1a4852d9958ad5763b",
+        "simbridge/__main__.py": "0256b7a3e56dbb106592e420c6d6b88cbc5b394e0d64c2b99b6c4e4e92130d8b",
+        "simbridge/taskio.py": "74cbeea81c57762595c6b6668623d53202a0779baab1671201368f437b5f4c44",
+        "skillnet/cost/model.py": "7b2311e41b1442d7850667f374599773c1c4a5625230531994739e96631acdcd",
+        "skills/blocks_v1.toml": "aa0126377dc0f787ee7a61ab1e3c87a2662fb387e44fd030462b92edb431e172",
+        "calibration.json": "ebf2120105f35c84c9f20263a3608c138e5f2c323f3e130b0ce57c24d0317e6b"
+      },
+      "prepared_task_sha256": "52a0fe76af1697c81d27905f1909ee686c8b6ee8ea8b02ca6cbc76ae74afdb66",
+      "motion_code_sha256": {
+        "compiler.py": "6841af6d0907fe628be8af918c1ecacb8dab5cb62af92eb47f24687a29ba202b",
+        "frames.py": "ed471d9bf61b2663474466cef68ce29f4f8a1396c6bf289c78bebedfbcc264a5",
+        "primitives.py": "c83c73e8d190f409e733faf0088c712bccd655ec73b510950c802db8e8915069",
+        "backend.py": "3ab3de31e32c63a363fbc14a1f10f167b4e485ba346df1cba931ba343d5b1abb",
+        "workcell.py": "22951d787191541371261d3fb85b211e184f188e9526e409130f44a9dd80e962",
+        "runner.py": "a538ccfc2b5b4d550f6735541b85b910abb39e638df271e5becabe816668a070",
+        "qualifier.py": "0ddf05422f8df6119413d2b7cd40f5d889b733b0206a7e1a4852d9958ad5763b",
+        "controller_ext.lua": "d35143a5f228abce545d02ecd44e7c42d449479811fc88a356944dfbad46fc66",
+        "executor.py": "2272330faf512f535388ee01a58941e5d0a460840d1841aee96193b495c9e54f"
+      },
+      "timeout_seconds": 1200.0
+    },
+    {
+      "id": "v134-wall-037",
+      "phase": "sim",
+      "kind": "sim",
+      "family": "F3",
+      "index": 37,
+      "task": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v133\\qualification\\F3\\037\\gen_f3_s20261115_037\\gen_f3_s20261115_037.qualified.toml",
+      "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\walls3\\037",
+      "experiment_namespace": "c_wall_v134",
+      "experiment_selection_sha256": "cbd597643c5c96d0293c934d51b79882fb2862c25ad4d891c32be498a3fc8f28",
+      "planning_code_sha256": {
+        "skillnet/planning/search.py": "568cbdea427be8daabf3497f3e5554bfe36250949203ded838f6b22712600a22",
+        "skillnet/planning/heuristic.py": "d99719627db745e5d7b3a10d9c8ed573b0638e804edd6b1a8e79ec86bc3f4fdb",
+        "skillnet/planning/bounds.py": "d3f1f80af246000dee3747eb60e33aa54016e84b2bc7903089fbe49a74cbeedb",
+        "skillnet/planning/allocation.py": "765a2f7b8edb38875be5ca0ce82efadac78bcd6c1fe1a5abec57b2ca9d3afd73",
+        "skillnet/pipeline.py": "4bebf9cf4f8ccedeea2c3c47af07c0132219c21fbf2aebe49c123c2c208a6633",
+        "simbridge/backend.py": "3ab3de31e32c63a363fbc14a1f10f167b4e485ba346df1cba931ba343d5b1abb",
+        "simbridge/qualifier.py": "0ddf05422f8df6119413d2b7cd40f5d889b733b0206a7e1a4852d9958ad5763b",
+        "simbridge/__main__.py": "0256b7a3e56dbb106592e420c6d6b88cbc5b394e0d64c2b99b6c4e4e92130d8b",
+        "simbridge/taskio.py": "74cbeea81c57762595c6b6668623d53202a0779baab1671201368f437b5f4c44",
+        "skillnet/cost/model.py": "7b2311e41b1442d7850667f374599773c1c4a5625230531994739e96631acdcd",
+        "skills/blocks_v1.toml": "aa0126377dc0f787ee7a61ab1e3c87a2662fb387e44fd030462b92edb431e172",
+        "calibration.json": "ebf2120105f35c84c9f20263a3608c138e5f2c323f3e130b0ce57c24d0317e6b"
+      },
+      "prepared_task_sha256": "f0ca1825adb974a0d0230f2fa9038f66f12fcc09b54105f070ec4d2f7f52b5f8",
+      "motion_code_sha256": {
+        "compiler.py": "6841af6d0907fe628be8af918c1ecacb8dab5cb62af92eb47f24687a29ba202b",
+        "frames.py": "ed471d9bf61b2663474466cef68ce29f4f8a1396c6bf289c78bebedfbcc264a5",
+        "primitives.py": "c83c73e8d190f409e733faf0088c712bccd655ec73b510950c802db8e8915069",
+        "backend.py": "3ab3de31e32c63a363fbc14a1f10f167b4e485ba346df1cba931ba343d5b1abb",
+        "workcell.py": "22951d787191541371261d3fb85b211e184f188e9526e409130f44a9dd80e962",
+        "runner.py": "a538ccfc2b5b4d550f6735541b85b910abb39e638df271e5becabe816668a070",
+        "qualifier.py": "0ddf05422f8df6119413d2b7cd40f5d889b733b0206a7e1a4852d9958ad5763b",
+        "controller_ext.lua": "d35143a5f228abce545d02ecd44e7c42d449479811fc88a356944dfbad46fc66",
+        "executor.py": "2272330faf512f535388ee01a58941e5d0a460840d1841aee96193b495c9e54f"
+      },
+      "timeout_seconds": 1200.0
+    }
+  ]
+}

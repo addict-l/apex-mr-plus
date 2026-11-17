@@ -1,0 +1,110 @@
+name = "s3a_cantilever"
+description = "装配悬臂梁及配重，比较臂托举和临时支撑台"
+instruction = "把柱子、梁和配重装好，最后把临时积木收好，两只手都空出来。"
+fill_all_slots = true
+goal = []
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.30, 0.30, 0.20]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.30, 0.30, 0.20]
+speed = 0.25
+
+[[location]]
+id = "stock_l1"
+kind = "stock"
+pos = [-0.4, -0.2, 0.0]
+
+[[location]]
+id = "stock_l2"
+kind = "stock"
+pos = [-0.4, -0.1, 0.0]
+
+[[location]]
+id = "stock_l3"
+kind = "stock"
+pos = [-0.4, 0.0, 0.0]
+
+[[location]]
+id = "stock_r1"
+kind = "stock"
+pos = [0.4, -0.2, 0.0]
+
+[[location]]
+id = "stock_r2"
+kind = "stock"
+pos = [0.4, -0.1, 0.0]
+
+[[block]]
+id = "pillar"
+type = "pillar_type"
+at = "stock_l1"
+
+[[block]]
+id = "beam_block"
+type = "beam_type"
+at = "stock_r1"
+
+[[block]]
+id = "counterweight"
+type = "counterweight_type"
+at = "stock_r2"
+
+[[block]]
+id = "temp_block1"
+type = "temporary_type1"
+at = "stock_l2"
+
+[[block]]
+id = "temp_block2"
+type = "temporary_type2"
+at = "stock_l3"
+
+[[slot]]
+id = "p1"
+type = "pillar_type"
+pos = [0.00, 0.10, 0.03]
+below = []
+
+[[slot]]
+id = "beam"
+type = "beam_type"
+pos = [0.00, 0.10, 0.06]
+below = ["p1"]
+overhang = true
+anchors = ["cw"]
+support_point = true
+
+[[slot]]
+id = "cw"
+type = "counterweight_type"
+pos = [0.00, 0.10, 0.09]
+below = ["beam"]
+
+[[slot]]
+id = "tp1"
+type = "temporary_type1"
+pos = [0.00, 0.10, 0.03]
+below = []
+temporary = true
+platform_for = "beam"
+
+[[slot]]
+id = "tp2"
+type = "temporary_type2"
+pos = [0.00, 0.10, 0.06]
+below = ["tp1"]
+temporary = true
+platform_for = "beam"
+
+[capabilities.reach]
+default = "INVALID"
+valid = { A = ["stock_l1", "stock_l2", "stock_l3", "p1", "cw", "tp1", "tp2", "beam"], B = ["stock_r1", "stock_r2", "p1", "beam", "cw", "tp1", "tp2"] }
+
+[capabilities.liftable]
+default = "VALID"

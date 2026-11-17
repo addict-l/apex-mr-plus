@@ -1,0 +1,12 @@
+name = "gen_f1_s20261115_032"
+description = "把 2 块积木分别放到底板对应目标位，最后两只手都空出来。"
+instruction = "把 2 块积木分别放到底板对应目标位，最后两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = ["at(b1, board_1)", "at(b2, board_2)"]
+fill_all_slots = true
+location = [{id = "stock_a1", kind = "stock", pos = [-0.8546368348273959, -0.45909380403479577, 0.0], owner = "A"}, {id = "board_1", kind = "board", pos = [-0.2176549009486678, -0.08513151991002947, 0.0]}, {id = "stock_b1", kind = "stock", pos = [0.6497497949905919, -0.4605834633476596, 0.0], owner = "B"}, {id = "board_2", kind = "board", pos = [0.2193370114483693, -0.011913309388175142, 0.0]}]
+block = [{id = "b1", type = "2x4", at = "stock_a1"}, {id = "b2", type = "2x4", at = "stock_b1"}]
+slot = []
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["stock_a1", "board_1"], B = ["stock_b1", "board_2"]}, invalid = {A = ["stock_b1"], B = ["stock_a1"]}, unknown = {A = ["board_2"], B = ["board_1"]}}}
+capability_source = "ik_qualified"

@@ -1,0 +1,45 @@
+name = "s1_feedback_sim"
+description = "反馈验收：故意把 B 对远侧目标的能力写为 VALID，真实后端须拒绝并重新规划"
+instruction = "把红色积木从右侧料位送到左侧目标垫，最后两只手都空出来。"
+goal = ["at(red, final_buffer)"]
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.30, 0.30, 0.20]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.30, 0.30, 0.20]
+speed = 0.25
+
+[[location]]
+id = "stock_b"
+kind = "stock"
+owner = "B"
+pos = [0.50, -0.20, 0.0]
+
+[[location]]
+id = "backup_buffer"
+kind = "buffer"
+pos = [0.0, -0.36, 0.0]
+
+[[location]]
+id = "hand_mid"
+kind = "handover"
+pos = [0.0, 0.10, 0.20]
+
+[[location]]
+id = "final_buffer"
+kind = "buffer"
+pos = [-0.72, -0.42, 0.0]
+
+[[block]]
+id = "red"
+type = "2x4"
+at = "stock_b"
+
+[capabilities.liftable]
+default = "VALID"

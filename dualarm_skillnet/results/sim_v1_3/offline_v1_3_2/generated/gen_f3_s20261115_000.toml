@@ -1,0 +1,91 @@
+name = "gen_f3_s20261115_000"
+description = "把积木装成 2 层、每层 2 块的墙，最后两只手都空出来。"
+instruction = "把积木装成 2 层、每层 2 块的墙，最后两只手都空出来。"
+goal = []
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.3, 0.3, 0.2]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.3, 0.3, 0.2]
+speed = 0.25
+
+[[location]]
+id = "stock_a1"
+kind = "stock"
+pos = [-0.4436689514698962, -0.24021769312075794, 0.0]
+owner = "A"
+
+[[location]]
+id = "stock_b1"
+kind = "stock"
+pos = [0.6489245804973586, -0.4591572948974348, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_a2"
+kind = "stock"
+pos = [-0.4448751339380321, -0.46072639322413733, 0.0]
+owner = "A"
+
+[[location]]
+id = "stock_b2"
+kind = "stock"
+pos = [0.6488813392807128, 0.5000613735052377, 0.0]
+owner = "B"
+
+[[block]]
+id = "b1_1"
+type = "tower_base"
+at = "stock_a1"
+
+[[block]]
+id = "b1_2"
+type = "tower_base"
+at = "stock_b1"
+
+[[block]]
+id = "b2_1"
+type = "tower_middle"
+at = "stock_a2"
+
+[[block]]
+id = "b2_2"
+type = "tower_middle"
+at = "stock_b2"
+
+[[slot]]
+id = "s1_1"
+type = "tower_base"
+pos = [-0.09783956216150176, 0.150358249571742, 0.03]
+below = []
+
+[[slot]]
+id = "s1_2"
+type = "tower_base"
+pos = [0.10216043783849825, 0.150358249571742, 0.03]
+below = []
+
+[[slot]]
+id = "s2_1"
+type = "tower_middle"
+pos = [-0.09783956216150176, 0.150358249571742, 0.06]
+below = ["s1_1"]
+
+[[slot]]
+id = "s2_2"
+type = "tower_middle"
+pos = [0.10216043783849825, 0.150358249571742, 0.06]
+below = ["s1_2"]
+
+[capabilities.reach]
+default = "INVALID"
+valid = {"A" = ["stock_a1", "s1_1", "stock_a2", "s2_1"], "B" = ["stock_b1", "s1_2", "stock_b2", "s2_2"]}
+
+[capabilities.liftable]
+default = "VALID"

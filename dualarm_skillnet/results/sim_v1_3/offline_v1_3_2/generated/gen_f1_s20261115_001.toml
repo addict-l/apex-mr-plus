@@ -1,0 +1,88 @@
+name = "gen_f1_s20261115_001"
+description = "把 4 块积木分别放到底板对应目标位，最后两只手都空出来。"
+instruction = "把 4 块积木分别放到底板对应目标位，最后两只手都空出来。"
+goal = ["at(b1, board_1)", "at(b2, board_2)", "at(b3, board_3)", "at(b4, board_4)"]
+fill_all_slots = true
+arms = ["A", "B"]
+slot = []
+
+[[arm]]
+id = "A"
+home = [-0.3, 0.3, 0.2]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.3, 0.3, 0.2]
+speed = 0.25
+
+[[location]]
+id = "stock_b1"
+kind = "stock"
+pos = [0.8562936156302053, -0.4613116482606682, 0.0]
+owner = "B"
+
+[[location]]
+id = "board_1"
+kind = "board"
+pos = [-0.0013807272759193989, 0.004589038188272813, 0.0]
+
+[[location]]
+id = "stock_a1"
+kind = "stock"
+pos = [-0.44443458793039675, -0.24124701126531453, 0.0]
+owner = "A"
+
+[[location]]
+id = "board_2"
+kind = "board"
+pos = [-0.17718513445903353, 0.24353684843800474, 0.0]
+
+[[location]]
+id = "stock_a2"
+kind = "stock"
+pos = [-0.4440088636300325, 0.49929635997150545, 0.0]
+owner = "A"
+
+[[location]]
+id = "board_3"
+kind = "board"
+pos = [0.1787811316501772, 0.23525035616909895, 0.0]
+
+[[location]]
+id = "stock_b2"
+kind = "stock"
+pos = [0.6498779085790541, -0.46012478757781633, 0.0]
+owner = "B"
+
+[[location]]
+id = "board_4"
+kind = "board"
+pos = [-0.18038434933186032, -0.002976004302251929, 0.0]
+
+[[block]]
+id = "b1"
+type = "2x4"
+at = "stock_b1"
+
+[[block]]
+id = "b2"
+type = "2x4"
+at = "stock_a1"
+
+[[block]]
+id = "b3"
+type = "2x4"
+at = "stock_a2"
+
+[[block]]
+id = "b4"
+type = "2x4"
+at = "stock_b2"
+
+[capabilities.reach]
+default = "INVALID"
+valid = {"A" = ["stock_a1", "board_2", "stock_a2", "board_3"], "B" = ["stock_b1", "board_1", "stock_b2", "board_4"]}
+
+[capabilities.liftable]
+default = "VALID"
