@@ -5,21 +5,30 @@
       "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\src\\sim_connection.py",
       "source_sha256": "1116bef2f65e21235b6935198e89b3d9cd0e805fce505ac50a70e5609b6f796b",
       "modifications": [
-        "Route owned simulator logs to results/sim_v1_3/logs; preserve process ownership, bundled-client loading and shutdown behavior."
+        "Route owned simulator logs to results/sim_v1_3/logs; preserve process ownership, bundled-client loading and shutdown behavior.",
+        "motion_v135 M5: add nonce-owned stopped-scene fast-idle context and JSON-safe app/physics snapshots; preserve exact idle FPS and raw helper stack across success, nested/stale state and partial enable failure. Refuse unowned/running instances and expose uncertain restoration as an explicit error. No dynamics, stepping, collision or persistent configuration change.",
+        "motion_v135 M5 binary-RPC correction: use official readCustomBufferData/writeCustomBufferData for the packed int32 fast-idle app tag; avoid invalid CBOR TEXT responses and preserve exact original bytes. The Lua fastIdleLoop semantics, physics state and ownership checks remain unchanged; c1 failed measurements are retained."
       ],
-      "current_sha256": "ff218ac2a6d887bd3eab4eff24770449f9863d9590c29a3a695ff5a76642ad56"
+      "current_sha256": "5133c19c97655024812e5d549099ed29050218ff3f32e9321b7e0a2a9e3b5d29"
     },
     {
       "file": "motion.py",
       "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\motion.py",
       "source_sha256": "541539b308ebd5f4bd0714523ffdda7887a8dd48ebabe2e1c9d5a97e9c8af362",
-      "modifications": []
+      "modifications": [
+        "motion_v135 M5: expose read/reset sample_batch_statistics as one explicitly budgeted remote query; preserve existing sampling and validation signatures."
+      ],
+      "current_sha256": "f2b3881a304fb99cc61602232716f8de9fbefebeb7756f69b1247feb0a4f020e"
     },
     {
       "file": "motion_backend.lua",
       "source": "D:\\APEX_MR_Plus\\apex_mr_scene3\\apex\\motion_backend.lua",
       "source_sha256": "d215ec7a054804875619aa2af18ccace404feb07ee386c68a34080c7c65065f6",
-      "modifications": []
+      "modifications": [
+        "motion_v135 M5: reuse only exact consecutive complete sample worlds with explicit payload transforms inside mpValidateSamples; retain every full geometry predicate, scalar/batch results, and outer transactional restoration. Add precise phase/collision-query counters and an explicit diagnostic legacy_batch_reset control.",
+        "Mount registry candidate: resolve registered physical fixture identities and filter only exact fixed-root installation shape pairs from obstacle collections; retain moving links, tool and payload checks and include installation policy in geometry cache signatures."
+      ],
+      "current_sha256": "07e4b42f19db5f587b1cb0de4239af1f4808157e79c178016f7c7d26bb7346d9"
     },
     {
       "file": "tpg.py",

@@ -1,5 +1,6 @@
 """Generate a dynamic dual-UR5 workcell solely from a task and catalog."""
 from dataclasses import asdict
+import hashlib
 import json
 import math
 from pathlib import Path
@@ -154,12 +155,15 @@ def build(sim, client, task, install, outdir, catalog=None):
                                      | sim.objectspecialproperty_collidable
                                      | sim.objectspecialproperty_measurable)
         objects.append({"alias": name, "handle": handle, "size": list(size),
-                        "static": static, "respondable": respondable})
+                        "static": static, "respondable": respondable,
+                        "fixed_fixture": parent == root and static and respondable})
         return handle
 
     table = shape("Workbench", [1.90, 1.27, .065], [0, 0, TABLE_TOP-.0325], [.70, .77, .80])
     baseplate = shape("Baseplate", [.70, .72, .012], [0, .12, BOARD_TOP-.006], [.25, .33, .38])
-    obstacles = [baseplate]
+    # Bearing materials are independent of collision eligibility. Mounts
+    # retain the simulator material they were created with.
+    material_surfaces = [table, baseplate]
     surfaces = [table, baseplate]
     pads = {}
     labels = {}
@@ -170,7 +174,7 @@ def build(sim, client, task, install, outdir, catalog=None):
         pad = shape("Pad_"+name, [.18, .18, .012], [x, y, z-.006], [.23, .62, .63],
                     respondable=row["kind"] != "handover")
         if row["kind"] != "handover":
-            obstacles.append(pad)
+            material_surfaces.append(pad)
             surfaces.append(pad)
         else:
             sim.setObjectSpecialProperty(pad, sim.objectspecialproperty_renderable)
@@ -179,8 +183,9 @@ def build(sim, client, task, install, outdir, catalog=None):
         _label_asset(asset, name)
         labels[name] = make_label(sim, root, "Label_"+name, asset,
                                  [x, y-.07, z+.0003], [.16, .032])
+    mounts = {}
     for side, x in (("A", -.70), ("B", .70)):
-        shape(side+"_Mount", [.23, .24, .022], [x, .13, .771], [.20, .25, .30])
+        mounts[side] = shape(side+"_Mount", [.23, .24, .022], [x, .13, .771], [.20, .25, .30])
 
     blocks, parts, initial, sizes, attachments = {}, [], {}, {}, {}
     for name, row in frames.blocks.items():
@@ -229,7 +234,7 @@ def build(sim, client, task, install, outdir, catalog=None):
     sim.setVector3Property(sim.handle_scene, "gravity", [0, 0, -9.81])
     sim.setFloatParam(sim.floatparam_simulation_time_step, .02)
     sim.setBoolParam(sim.boolparam_realtime_simulation, False)
-    for handle in [table, *obstacles, *blocks.values()]:
+    for handle in [*material_surfaces, *blocks.values()]:
         sim.setFloatProperty(handle, "bullet.friction", .8)
         sim.setFloatProperty(handle, "bullet.frictionOld", .8)
         sim.setFloatProperty(handle, "bullet.restitution", 0.)
@@ -250,12 +255,28 @@ def build(sim, client, task, install, outdir, catalog=None):
     sim.setObjectParent(camera, root, True)
     sim.setObjectPose(camera, camera_pose, -1)
     sim.setObjectInt32Param(camera, sim.objintparam_visibility_layer, 0)
+    # Workbench has its own collision role in both geometry consumers.
+    # Persist identities instead of the scene-local integer shape handles.
+    fixed = [obj for obj in objects if obj["fixed_fixture"] and obj["handle"] != table]
+    identities = [obj["alias"] for obj in fixed]
+    if len(identities) != len(set(identities)):
+        raise ValueError("固定障碍物标识必须唯一")
+    fixture_geometry = [(obj["alias"], obj["size"], sim.getObjectPose(obj["handle"], -1))
+                        for obj in fixed]
+    # The imported static robot base is mounted on its own pedestal.
+    # Only these two exact static mesh pairs are intentional installation contact.
+    installation = [[sim.getObjectAlias(arms[side]["model"]), sim.getObjectAlias(mount)]
+                    for side, mount in mounts.items()]
+    geometry = {"fixtures": sorted(fixture_geometry), "installation_pairs": sorted(installation)}
+    digest = hashlib.sha256(json.dumps(geometry, separators=(",", ":"),
+                                      allow_nan=False).encode("utf-8")).hexdigest()
     cfg = {"root": root, "root_path": ROOT_PATH, "task_name": data["name"],
            "support_tool_configuration": "horizontal" if horizontal_support else "catalog_grasp",
            "blocks": blocks, "block_shapes": {name: [handle] for name, handle in blocks.items()},
            "parts": parts, "arms": arms, "table": table, "baseplate": baseplate,
-           "camera": camera, "obstacles": obstacles,
-           "obstacle_aliases": [sim.getObjectAlias(handle) for handle in obstacles],
+           "camera": camera, "obstacles": identities, "obstacle_aliases": list(identities),
+           "fixed_installation_contacts": installation,
+           "geometry_version": "fixed-respondable-fixtures-v1:" + digest,
            "support_surface_handles": surfaces, "initial": initial, "sizes": sizes,
            "support_contact_surfaces": {
                part["id"]: list(dict.fromkeys(part["support_contact_surfaces"]+["Baseplate"]))

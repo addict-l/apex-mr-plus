@@ -6,6 +6,7 @@ processes are changed.  ``close`` never quits an instance attached by connect.
 
 from __future__ import annotations
 
+from contextlib import contextmanager
 import logging
 import os
 from pathlib import Path
@@ -20,6 +21,15 @@ import uuid
 DEFAULT_INSTALL = Path(r"C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu")
 _INSTANCE_PARAM = "dualArmBlocks.instance"
 _LOG = logging.getLogger(__name__)
+_IDLE_TAG = "__IDLEFPSSTACKSIZE__"
+
+
+class FastIdleRestorationError(RuntimeError):
+    """The owned instance must not proceed to dynamics after uncertain cleanup."""
+
+    def __init__(self, message, receipt):
+        super().__init__(message)
+        self.receipt = receipt
 
 
 class Simulator:
@@ -188,6 +198,103 @@ class Simulator:
         if isinstance(value, (bytes, bytearray, memoryview)):
             value = bytes(value).decode("utf-8")
         return self._instance is not None and value == self._instance
+
+    def _idle_snapshot(self):
+        sim = self.sim
+        # The official helper stores packed int32 bytes. The string API can
+        # serialize these as invalid CBOR TEXT; its buffer wrapper guarantees
+        # CBOR byte-string transport for every stack value.
+        raw = sim.readCustomBufferData(sim.handle_app, _IDLE_TAG)
+        if isinstance(raw, str):
+            raw = raw.encode("utf-8")
+        raw = bytes(raw) if raw else b""
+        stack = list(sim.unpackInt32Table(raw)) if raw else [0, None]
+        if len(stack) != 2 or not isinstance(stack[0], int) or stack[0] < 0:
+            raise RuntimeError("Malformed fast-idle application stack")
+        return {"idle_fps": sim.getInt32Param(sim.intparam_idle_fps),
+                "fast_idle_tag_hex": raw.hex(), "stack": stack,
+                "simulation_state": sim.getSimulationState(),
+                "simulation_time_s": sim.getSimulationTime(),
+                "simulation_timestep_s": sim.getSimulationTimeStep(),
+                "dynamics_step_s": sim.getFloatProperty(sim.handle_scene, "dynamicsStepSize"),
+                "dynamics_engine": sim.getInt32Param(sim.intparam_dynamic_engine),
+                "gravity": list(sim.getVector3Property(sim.handle_scene, "gravity"))}
+
+    def stopped_scene_snapshot(self):
+        """Read JSON-safe app/physics evidence only from our stopped instance."""
+        if (self.process is None or self.process.poll() is not None
+                or self.sim is None or self.client is None or not self._is_owned_api(self.sim)):
+            raise RuntimeError("A stopped snapshot requires a live nonce-owned simulator")
+        result = self._idle_snapshot()
+        if result["simulation_state"] != self.sim.simulation_stopped:
+            raise RuntimeError("Snapshot requires simulation stopped")
+        return result
+
+    @contextmanager
+    def fast_idle_stopped(self, *, deadline=None):
+        """Temporarily accelerate idle dispatch on this owned, stopped instance.
+
+        This changes only the app idle rate and its official helper's stack.
+        Exact original values are restored, including a stale zero-count saved
+        FPS. Cleanup also covers a partially applied enable. A restore failure
+        is fatal to using this instance; callers retain process ownership and
+        the shared hard deadline. No attached/manual instance is eligible.
+        """
+        if (self.process is None or self.process.poll() is not None
+                or self.sim is None or self.client is None or not self._is_owned_api(self.sim)):
+            raise RuntimeError("Fast idle requires a live nonce-owned simulator")
+        if deadline is not None and time.monotonic() >= deadline:
+            raise TimeoutError("No task budget remains for fast-idle scope")
+        sim = self.sim
+        before = self.stopped_scene_snapshot()
+        if before["stack"][0] and before["idle_fps"] != 0:
+            raise RuntimeError("Existing fast-idle stack conflicts with actual idle FPS")
+        if deadline is not None and time.monotonic() >= deadline:
+            raise TimeoutError("Task deadline reached during idle preflight")
+        receipt = {"pid": self.process.pid, "instance_nonce": self._instance,
+                   "before": before, "enabled": False, "restored": False}
+        active = None
+        try:
+            sim.fastIdleLoop(True)
+            active = self._idle_snapshot()
+            receipt["active"] = active
+            if active["idle_fps"] != 0 or active["stack"][0] != before["stack"][0]+1:
+                raise RuntimeError("Official fast-idle enable was not confirmed")
+            for key in before.keys()-{"idle_fps", "fast_idle_tag_hex", "stack"}:
+                if active[key] != before[key]:
+                    raise RuntimeError("Physical state changed during idle enable: "+key)
+            receipt["enabled"] = True
+            yield receipt
+        finally:
+            try:
+                if (self.process.poll() is not None or not self._is_owned_api(sim)):
+                    raise RuntimeError("Simulator ownership lost before idle restoration")
+                current = self._idle_snapshot()
+                # The helper may have set FPS then failed before recording its
+                # increment. Never decrement somebody else's preexisting scope.
+                if active is not None:
+                    if (current["fast_idle_tag_hex"] != active["fast_idle_tag_hex"]
+                            or current["idle_fps"] != active["idle_fps"]):
+                        raise RuntimeError("Fast-idle app state changed by another scope")
+                    sim.fastIdleLoop(False)
+                elif current["fast_idle_tag_hex"] == before["fast_idle_tag_hex"]:
+                    pass
+                elif (current["stack"][0] == before["stack"][0]+1
+                      and current["stack"][1] == (before["stack"][1]
+                                                if before["fast_idle_tag_hex"] else before["idle_fps"])):
+                    sim.fastIdleLoop(False)
+                else:
+                    raise RuntimeError("Partially enabled idle stack cannot be safely identified")
+                sim.setInt32Param(sim.intparam_idle_fps, before["idle_fps"])
+                sim.writeCustomBufferData(sim.handle_app, _IDLE_TAG,
+                                          bytes.fromhex(before["fast_idle_tag_hex"]))
+                receipt["after"] = self._idle_snapshot()
+                if receipt["after"] != before:
+                    raise RuntimeError("Idle/physical state did not restore exactly")
+                receipt["restored"] = True
+            except BaseException as exc:
+                receipt["restoration_error"] = f"{type(exc).__name__}: {exc}"
+                raise FastIdleRestorationError("Fast-idle restoration not verified: "+str(exc), receipt) from exc
 
     def close(self) -> None:
         """Request API quit only from our still-running, nonce-matched process.

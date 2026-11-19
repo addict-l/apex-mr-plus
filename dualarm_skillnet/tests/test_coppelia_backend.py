@@ -40,17 +40,19 @@ class BackendStatusTests(unittest.TestCase):
         geometry.plan_failure = {"ok": False, "error": "No exact collision-free solution within budget"}
         result = backend.validate(engine.parse_action("pick(A, red, stock_l1)"), engine.initial)
         self.assertEqual(result.status, Status.UNKNOWN)
-        self.assertEqual(sum(row[0] == "plan" for row in geometry.calls), 2)
+        self.assertGreaterEqual(sum(row[0] == "plan" for row in geometry.calls), 2)
         attempts = backend.validation_records[-1]["failure_evidence"]["attempts"]
-        self.assertEqual([row["stage"] for row in attempts], ["local_box", "global"])
+        self.assertEqual([row["stage"] for row in attempts],
+                         ["local_box", "global"]*(len(attempts)//2))
 
-    def test_collision_is_invalid_with_pair_and_rollback(self):
+    def test_candidate_collision_is_unknown_with_pair_and_rollback(self):
         engine, geometry, backend = backend_fixture()
         geometry.collision_failure = {"ok": False, "problem": {
             "reason": "block_robot_collision", "pair": ["red", "A_link"]}}
         before = deepcopy(backend.compiler.q)
         result = backend.validate(engine.parse_action("pick(A, red, stock_l1)"), engine.initial)
-        self.assertEqual(result.status, Status.INVALID)
+        self.assertEqual(result.status, Status.UNKNOWN)
+        self.assertEqual(backend.validation_context["failure_scope"], "candidate")
         self.assertIn("A_link", result.detail)
         self.assertEqual(backend.compiler.q, before)
         self.assertFalse(backend.compiler.tasks)
@@ -60,7 +62,7 @@ class BackendStatusTests(unittest.TestCase):
         steps = sequential(engine, ["pick(A, red, stock_l1)", "place(A, red, board_l1)"])
         self.assertEqual(backend.validate(steps[0].action, steps[0].state).status, Status.VALID)
         geometry.plan_failure = {"ok": False, "error": "Invalid goal", "problem": {"reason": "collision"}}
-        self.assertEqual(backend.validate(steps[1].action, steps[1].state).status, Status.INVALID)
+        self.assertEqual(backend.validate(steps[1].action, steps[1].state).status, Status.UNKNOWN)
         geometry.plan_failure = None
         calls = len(geometry.calls)
         self.assertEqual(backend.validate(steps[0].action, steps[0].state).status, Status.VALID)

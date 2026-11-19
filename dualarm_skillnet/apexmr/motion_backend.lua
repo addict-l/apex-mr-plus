@@ -21,6 +21,40 @@ local function wrappedDist(a,b)
     local d=0 for i=1,#a do local x=math.atan(math.sin(a[i]-b[i]),math.cos(a[i]-b[i])) d=d+x*x end return math.sqrt(d)
 end
 local function clock() return sim.getSystemTime() end
+local function freshSampleBatchStats()
+    return {batches=0,samples_requested=0,samples_checked=0,invalid_samples=0,failures=0,
+        full_context_resets=0,world_reuse_samples=0,fallback_samples=0,forced_legacy_batches=0,
+        geometry_calls=0,shape_collision_queries=0,context_equal_checks=0,
+        snapshot_seconds=0,restore_seconds=0,context_seconds=0,configuration_payload_seconds=0,
+        geometry_seconds=0,context_comparison_seconds=0,batch_seconds=0,
+        scope='Exact stopped-scene full geometry per supplied sample; no collision predicates omitted',
+        timing_scope='Inner snapshot and per-sample phases; batch total also includes outer transaction snapshot/restore and bookkeeping'}
+end
+local sampleBatchStats=freshSampleBatchStats()
+local sampleGeometryActive=false
+local function sampleTimed(field,f)
+    local began=clock()
+    local result=table.pack(pcall(f))
+    sampleBatchStats[field]=sampleBatchStats[field]+math.max(0,clock()-began)
+    if not result[1] then error(result[2],0) end
+    return table.unpack(result,2,result.n)
+end
+local function exactEqual(a,b)
+    if type(a)~=type(b) then return false end
+    if type(a)~='table' then return a==b end
+    for k,v in pairs(a) do if not exactEqual(v,b[k]) then return false end end
+    for k in pairs(b) do if a[k]==nil then return false end end
+    return true
+end
+local function explicitSample(s)
+    if type(s.A)~='table' or #s.A~=6 or type(s.B)~='table' or #s.B~=6 then return false end
+    for side,payload in pairs(s.payloads or {}) do
+        if (side~='A' and side~='B') or type(payload)~='table' or not (payload.name or payload.part)
+            or type(payload.offset)~='table' or #payload.offset~=3
+            or type(payload.quaternion)~='table' or #payload.quaternion~=4 then return false end
+    end
+    return true
+end
 local function resolve(h)
     if type(h)=='number' then return h end
     if C.blocks and C.blocks[h] then return C.blocks[h] end
@@ -48,12 +82,25 @@ local function restore(s)
     for name,p in pairs(s.blocks) do sim.setObjectPose(C.blocks[name],p,sim.handle_world) end
     for name,q in pairs(s.articulations or {}) do sim.setJointPosition(C.articulations[name],q) end
 end
-local function transaction(f)
+local function transaction(f,probe)
     local s=snapshot()
     local ok,r=xpcall(f,debug.traceback)
+    if probe then
+        probe.work_ended_s=clock()
+        if ok and not probe.work_expired and probe.work_ended_s>=probe.work_deadline_s then
+            probe.work_expired=true
+            probe.boundary='transaction_work_end'
+            r={ok=false,probe_timeout=true,problem={reason='optional_IK_work_deadline'}}
+        end
+    end
     local restored,err=pcall(restore,s)
-    if not restored then return {ok=false,error='Transaction restore failed: '..tostring(err)} end
-    if not ok then return {ok=false,error=tostring(r)} end
+    if not restored then r={ok=false,error='Transaction restore failed: '..tostring(err)}
+    elseif not ok then r={ok=false,error=tostring(r)} end
+    if probe then
+        probe.restored=restored
+        probe.restored_s=clock()
+        r.probe_receipt=probe
+    end
     return r
 end
 local function applyPlaced(placed)
@@ -126,6 +173,7 @@ local function excluded(h1,h2,ctx)
     return false
 end
 local function hit(x,y,label,ctx)
+    if sampleGeometryActive then sampleBatchStats.shape_collision_queries=sampleBatchStats.shape_collision_queries+1 end
     local result,pair=sim.checkCollision(x,y)
     if result>0 then
         if pair and excluded(pair[1],pair[2],ctx) then
@@ -134,8 +182,11 @@ local function hit(x,y,label,ctx)
             local xs=collectionSet[x] and sim.getCollectionObjects(x) or {x}
             local ys=collectionSet[y] and sim.getCollectionObjects(y) or {y}
             for _,a in ipairs(xs) do for _,b in ipairs(ys) do
-                if not excluded(a,b,ctx) and sim.checkCollision(a,b)>0 then
-                    lastProblem={reason=label,pair={sim.getObjectAlias(a,1),sim.getObjectAlias(b,1)}} return true
+                if not excluded(a,b,ctx) then
+                    if sampleGeometryActive then sampleBatchStats.shape_collision_queries=sampleBatchStats.shape_collision_queries+1 end
+                    if sim.checkCollision(a,b)>0 then
+                        lastProblem={reason=label,pair={sim.getObjectAlias(a,1),sim.getObjectAlias(b,1)}} return true
+                    end
                 end
             end end
             return false
@@ -199,7 +250,9 @@ local function geometry(ctx)
         local arm=A[side]
         for _,e in ipairs(arm.selfpairs) do if hit(e[1],e[2],'self_collision:'..side,ctx) then return false end end
         if hit(arm.moving,C.table,'table_collision:'..side,ctx) then return false end
-        for _,h in ipairs(C.obstacles) do if hit(arm.all,h,'obstacle_collision:'..side,ctx) then return false end end
+        for _,h in ipairs(C.obstacles) do
+            if hit(arm.obstacleCollections[h] or arm.all,h,'obstacle_collision:'..side,ctx) then return false end
+        end
     end
     if hit(A.A.all,A.B.all,'interarm_collision',ctx) then return false end
     local payloadHandles={}
@@ -292,7 +345,8 @@ end
 local function signature(side,ctx,algorithm)
     local geometryOptions=copy(ctx.options)
     for _,k in ipairs({'seed','seeds','start_q','ik_time','solve_time','simplify_time','max_joint_step','multiple','max_dist','center_step','max_branch_step'}) do geometryOptions[k]=nil end
-    local world={side=side,algorithm=algorithm,options=geometryOptions,payloads=ctx.payloads,blocks={},obstacles={},fixed={},geometry={}}
+    local world={side=side,algorithm=algorithm,options=geometryOptions,payloads=ctx.payloads,blocks={},obstacles={},fixed={},geometry={},
+        geometry_version=C.geometry_version,fixed_installation_contacts=C.fixed_installation_contacts}
     for name,h in pairs(C.blocks) do if not (ctx.payloads[side] and ctx.payloads[side].handle==h) then world.blocks[name]=pose(h) end end
     for _,h in ipairs(C.obstacles) do world.obstacles[h]=pose(h) end
     world.table=pose(C.table)
@@ -354,6 +408,19 @@ function mpSetup(cfg)
         for name,h in pairs(cfg.articulations or {}) do C.articulations[name]=resolve(h) end
         C.obstacles={}
         for _,h in ipairs(cfg.obstacles or {}) do C.obstacles[#C.obstacles+1]=resolve(h) end
+        local fixedInstallation={}
+        for _,pair in ipairs(cfg.fixed_installation_contacts or {}) do
+            local a,b=resolve(pair[1]),resolve(pair[2])
+            for _,h in ipairs({a,b}) do
+                assert(sim.getObjectParent(h)==C.root and sim.getObjectType(h)==sim.object_shape_type
+                    and sim.getObjectInt32Param(h,sim.shapeintparam_static)~=0,
+                    'Installation contact requires fixed root shapes')
+            end
+            fixedInstallation[a]=fixedInstallation[a] or {}
+            fixedInstallation[b]=fixedInstallation[b] or {}
+            fixedInstallation[a][b]=true
+            fixedInstallation[b][a]=true
+        end
         -- Only explicitly horizontal bearing surfaces receive z-contact
         -- tolerance exemptions. A future vertical obstacle is never included
         -- merely because it is present in the obstacle list.
@@ -410,6 +477,17 @@ function mpSetup(cfg)
             arm.all=collection(arm.shapes)
             arm.moving=collection(moving)
             arm.withoutTool=collection(withoutTool)
+            arm.obstacleCollections={}
+            for _,obstacle in ipairs(C.obstacles) do
+                local excludes=fixedInstallation[obstacle]
+                if excludes then
+                    local checked={}
+                    for _,shape in ipairs(arm.shapes) do
+                        if not excludes[shape] then checked[#checked+1]=shape end
+                    end
+                    if #checked<#arm.shapes then arm.obstacleCollections[obstacle]=collection(checked) end
+                end
+            end
             arm.env=simIK.createEnvironment()
             arm.group=simIK.createGroup(arm.env)
             simIK.setGroupCalculation(arm.env,arm.group,simIK.method_damped_least_squares,.03,80)
@@ -446,35 +524,113 @@ function mpValidatePair(left,right,payloads,placed,options)
         return {ok=geometry(ctx),problem=lastProblem}
     end)
 end
+function mpSampleBatchStatistics(options)
+    local answer=copy(sampleBatchStats)
+    if options and options.reset then sampleBatchStats=freshSampleBatchStats() end
+    return answer
+end
 function mpValidateSamples(samples,options)
-    return transaction(function()
-        local base=snapshot() local results={}
+    local began=clock()
+    sampleBatchStats.batches=sampleBatchStats.batches+1
+    sampleBatchStats.samples_requested=sampleBatchStats.samples_requested+#samples
+    local wasActive=sampleGeometryActive
+    local legacySeen=false
+    local result=transaction(function()
+        local base=sampleTimed('snapshot_seconds',snapshot)
+        local results={} local previous=nil local ctx=nil
+        sampleGeometryActive=true
         for _,s in ipairs(samples) do
-            restore(base) lastProblem=nil
-            local ctx=newContext(s.payloads or {},s.placed or {},s.options or options)
-            if s.A then setq(A.A,s.A) end
-            if s.B then setq(A.B,s.B) end
-            for side,p in pairs(ctx.payloads) do movePayload(side,p) end
-            results[#results+1]={ok=geometry(ctx),problem=lastProblem}
+            local payloads,placed,opts=s.payloads or {},s.placed or {},s.options or options or {}
+            local complete=explicitSample(s)
+            local legacy=(options and options.legacy_batch_reset==true) or opts.legacy_batch_reset==true
+            if legacy and not legacySeen then
+                sampleBatchStats.forced_legacy_batches=sampleBatchStats.forced_legacy_batches+1
+                legacySeen=true
+            end
+            local reuse=false
+            if complete and previous and previous.complete and not legacy then
+                sampleBatchStats.context_equal_checks=sampleBatchStats.context_equal_checks+1
+                reuse=sampleTimed('context_comparison_seconds',function()
+                    return exactEqual(payloads,previous.payloads) and exactEqual(placed,previous.placed)
+                        and exactEqual(opts,previous.options)
+                end)
+            end
+            if reuse then
+                sampleBatchStats.world_reuse_samples=sampleBatchStats.world_reuse_samples+1
+            else
+                sampleTimed('restore_seconds',function() restore(base) end)
+                ctx=sampleTimed('context_seconds',function() return newContext(payloads,placed,opts) end)
+                sampleBatchStats.full_context_resets=sampleBatchStats.full_context_resets+1
+            end
+            if not complete then sampleBatchStats.fallback_samples=sampleBatchStats.fallback_samples+1 end
+            lastProblem=nil
+            sampleTimed('configuration_payload_seconds',function()
+                if s.A then setq(A.A,s.A) end
+                if s.B then setq(A.B,s.B) end
+                for side,p in pairs(ctx.payloads) do movePayload(side,p) end
+            end)
+            sampleBatchStats.geometry_calls=sampleBatchStats.geometry_calls+1
+            local ok=sampleTimed('geometry_seconds',function() return geometry(ctx) end)
+            results[#results+1]={ok=ok,problem=lastProblem}
+            sampleBatchStats.samples_checked=sampleBatchStats.samples_checked+1
+            if not ok then sampleBatchStats.invalid_samples=sampleBatchStats.invalid_samples+1 end
+            previous={payloads=payloads,placed=placed,options=opts,complete=complete}
         end
         return results
     end)
+    sampleGeometryActive=wasActive
+    sampleBatchStats.batch_seconds=sampleBatchStats.batch_seconds+math.max(0,clock()-began)
+    if type(result)=='table' and result.ok==false and result.error then
+        sampleBatchStats.failures=sampleBatchStats.failures+1
+    end
+    return result
 end
+
 function mpSolveIK(side,p,quat,payload,placed,options)
+    options=options or {}
+    local probe=nil
+    if options.probe_work_budget_s~=nil or options.probe_request_id~=nil then
+        local budget,id=options.probe_work_budget_s,options.probe_request_id
+        if type(budget)~='number' or budget~=budget or budget<0 or budget>2
+            or type(id)~='number' or id%1~=0 or id<0 then
+            return {ok=false,error='Invalid optional IK work deadline'}
+        end
+        local entered=clock()
+        probe={request_id=id,server_entered_s=entered,work_deadline_s=entered+budget,work_expired=false}
+        -- Transport metadata must not split the geometric context cache.
+        options.probe_work_budget_s=nil
+        options.probe_request_id=nil
+    end
+    local function expired(boundary)
+        if not probe or clock()<probe.work_deadline_s then return nil end
+        probe.work_expired=true
+        probe.boundary=boundary
+        return {ok=false,probe_timeout=true,problem={reason='optional_IK_work_deadline'}}
+    end
     return transaction(function()
-        options=options or {} checks=0 ikCalls=0 lastProblem=nil
+        checks=0 ikCalls=0 lastProblem=nil
+        local stopped=expired('before_context')
+        if stopped then return stopped end
         local start=clock()
         local arm=A[side]
         local ctx=newContext({[side]=payload},placed,options,side)
         local seed=options.seed or getq(arm)
         local candidates={}
+        stopped=expired('before_seed')
+        if stopped then return stopped end
+        -- simIK.handleGroup has no supported mid-call cancellation. Keep
+        -- its original solver settings and check between complete calls.
         local localQ=ikFromSeed(side,p,quat,seed)
+        stopped=expired('after_seed')
+        if stopped then return stopped end
         if localQ then candidates[#candidates+1]=localQ end
         if options.multiple~=false then
             sim.setObjectPose(arm.target,{p[1],p[2],p[3],table.unpack(quat)},sim.handle_world)
             simIK.syncFromSim(arm.env,{arm.group})
             local sampled=simIK.findConfigs(arm.env,arm.group,arm.ikjoints,
                 {maxTime=options.ik_time or .3,findMultiple=true,findAlt=false,maxDist=options.max_dist or .7})
+            stopped=expired('after_sampling')
+            if stopped then return stopped end
             for _,q in ipairs(sampled) do candidates[#candidates+1]=q end
         end
         table.sort(candidates,function(a,b)return dist(a,seed)<dist(b,seed)end)
@@ -484,7 +640,11 @@ function mpSolveIK(side,p,quat,payload,placed,options)
             -- refine each branch with the element's strict pose precision.
             -- Otherwise a nominal grasp transform can move a resting compound
             -- tool into the table when carrying starts, despite a clear pick.
+            stopped=expired('before_refinement')
+            if stopped then return stopped end
             local refined=ikFromSeed(side,p,quat,q)
+            stopped=expired('after_refinement')
+            if stopped then return stopped end
             local poseError,angleError=math.huge,math.huge
             if refined then
                 -- A sampled branch was refined around its own seed above.
@@ -499,7 +659,12 @@ function mpSolveIK(side,p,quat,payload,placed,options)
                 poseError=dist({actual[1],actual[2],actual[3]},p)
                 angleError=quaternionError({actual[4],actual[5],actual[6],actual[7]},quat)
             end
-            if refined and poseError<=.00005 and angleError<=.0002 and validJoint(side,q,ctx) then
+            stopped=expired('before_collision')
+            if stopped then return stopped end
+            local valid=refined and poseError<=.00005 and angleError<=.0002 and validJoint(side,q,ctx)
+            stopped=expired('after_collision')
+            if stopped then return stopped end
+            if valid then
                 local duplicate=false
                 for _,old in ipairs(accepted) do if dist(q,old)<.001 then duplicate=true end end
                 if not duplicate then
@@ -517,10 +682,13 @@ function mpSolveIK(side,p,quat,payload,placed,options)
         table.sort(ranked,function(a,b)return dist(a.q,seed)<dist(b.q,seed)end)
         accepted={} acceptedErrors={}
         for _,item in ipairs(ranked) do accepted[#accepted+1]=item.q;acceptedErrors[#acceptedErrors+1]=item.error end
+        stopped=expired('before_reply')
+        if stopped then return stopped end
+        if probe then probe.boundary='completed' end
         return {ok=#accepted>0,solutions=accepted,problem=#accepted==0 and lastProblem or nil,
             stats={wall_time_s=clock()-start,candidates=#candidates,collision_checks=checks,rejections=rejections,ik_calls=ikCalls,
                    accepted_pose_errors=acceptedErrors,required_position_error_m=.00005,required_orientation_error_rad=.0002}}
-    end)
+    end,probe)
 end
 
 local function unpackPath(flat,dim)

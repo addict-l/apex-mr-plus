@@ -187,7 +187,7 @@ class IdleParkingTests(unittest.TestCase):
         self.assertTrue(set(prior.values()) <= set(parked["dependencies"]))
         moving = next(task for task in tasks if task["arm"] == "B")
         self.assertIn(parked["id"], moving["dependencies"])
-        self.assertEqual(len(tasks), 5)
+        self.assertEqual(len(tasks), 6)
         self.assertEqual(len(failed), compiler.ik_seeds)
         parking_query = next(call[2] for call in geometry.calls if call[0] == "plan" and call[1] == "A"
                              and call[2]["goal"] == compiler.cfg["arms"]["A"]["home_q"])
@@ -202,7 +202,7 @@ class IdleParkingTests(unittest.TestCase):
         tasks = compiler.compile(steps, build_task_graph(engine, steps), return_home=False)
         self.assertEqual(len(geometry.calls), calls)
         self.assertEqual(len([task for task in tasks if task["metadata"].get("idle_arm_parking")]), 1)
-        self.assertEqual(len(tasks), 25)
+        self.assertEqual(len(tasks), 26)
 
     def test_other_held_or_supporting_arm_is_not_parked(self):
         for mode in ("held", "supporting", "compiled_support"):
@@ -251,7 +251,7 @@ class IdleParkingTests(unittest.TestCase):
         with self.assertRaises(CompileFailure) as caught:
             compiler.compile_action(engine.parse_action("insert(B, b3, t3)"), state, step_id=6)
         self.assertEqual(caught.exception.status, Status.UNKNOWN)
-        self.assertEqual(caught.exception.evidence["recovery_status"], "INVALID")
+        self.assertEqual(caught.exception.evidence["recovery_status"], "UNKNOWN")
         self.assertEqual(caught.exception.evidence["recovery_phase"], "parking")
         self.assertEqual(compiler._snapshot(), before)
 

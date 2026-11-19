@@ -5,8 +5,11 @@ the physics controller. Attached object transforms are relative to the TCP.
 """
 from __future__ import annotations
 
+from contextlib import contextmanager
 from copy import deepcopy
+from itertools import count
 import math
+import time
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -41,6 +44,16 @@ def _payload(value: Any) -> Any:
     return result
 
 
+_PROBE_IDS = count()
+_PRECHECK_DRAIN_SECONDS = .15
+
+
+class PrecheckTimeout(TimeoutError):
+    def __init__(self, message, receipt=None):
+        super().__init__(message)
+        self.receipt = receipt
+
+
 class MotionPlanner:
     """Own a temporary planning script in a stopped APEX MR Scene 3 scene.
 
@@ -54,6 +67,8 @@ class MotionPlanner:
             raise RuntimeError("MotionPlanner must be initialized with simulation stopped")
         self.sim, self.client, self.cfg = sim, client, cfg
         self.script = None
+        self._precheck_deadline = None
+        self._probe_transport_fault = None
         source = Path(__file__).with_name("motion_backend.lua").read_text(encoding="utf-8")
         self.script = sim.createScript(sim.scripttype_customization, source, 0, "lua")
         try:
@@ -68,10 +83,14 @@ class MotionPlanner:
             raise
 
     def _call(self, function: str, *args):
+        if getattr(self, "_probe_transport_fault", None):
+            raise ConnectionError(self._probe_transport_fault)
         if self.script is None:
             raise RuntimeError("MotionPlanner is closed")
         import zmq
 
+        if self._precheck_deadline is not None:
+            return self._call_bounded_precheck(function, *args)
         socket = self.client.socket
         before = socket.getsockopt(zmq.RCVTIMEO)
         try:
@@ -79,6 +98,103 @@ class MotionPlanner:
             return self.sim.callScriptFunction(function, self.script, *args)
         finally:
             socket.setsockopt(zmq.RCVTIMEO, before)
+
+    @contextmanager
+    def precheck_deadline(self, deadline):
+        """Bound optional probe waits without changing ordinary planning calls."""
+        before = self._precheck_deadline
+        self._precheck_deadline = deadline
+        try:
+            yield
+        finally:
+            self._precheck_deadline = before
+
+    def _call_bounded_precheck(self, function, *args):
+        import zmq
+
+        client, hard_deadline = self.client, self._precheck_deadline
+        work_deadline = hard_deadline - _PRECHECK_DRAIN_SECONDS
+        if time.monotonic() >= work_deadline:
+            raise PrecheckTimeout("Precheck work deadline reached before sending")
+        request_id, options = None, None
+        if function == "mpSolveIK":
+            request_id = next(_PROBE_IDS)
+            options = dict(args[-1])
+            options["probe_request_id"] = request_id
+            args = (*args[:-1], options)
+        socket = client.socket
+        send, recv = client._send, client._recv
+        prior = {name: vars(client)[name] for name in ("_send", "_recv") if name in vars(client)}
+        before = {option: socket.getsockopt(option) for option in (zmq.SNDTIMEO, zmq.RCVTIMEO)}
+        sent_at = None
+
+        def send_until(request):
+            nonlocal sent_at
+            now = time.monotonic()
+            original = sent_at is None or isinstance(request, dict) and request.get("func") == "sim.callScriptFunction"
+            deadline = work_deadline if original else hard_deadline
+            ms = int(max(0., deadline - now) * 1000)
+            if not ms:
+                if sent_at is None:
+                    raise PrecheckTimeout("Precheck work deadline reached before sending")
+                raise ConnectionError("Precheck RPC could not complete its protocol handshake")
+            if original and options is not None:
+                options["probe_work_budget_s"] = deadline - now
+            socket.setsockopt(zmq.SNDTIMEO, ms)
+            send(request)
+            if sent_at is None:
+                sent_at = now
+
+        def recv_until(*data, **kwargs):
+            remaining = int(max(0., hard_deadline - time.monotonic()) * 1000)
+            socket.setsockopt(zmq.RCVTIMEO, remaining)
+            return recv(*data, **kwargs)
+
+        client._send, client._recv = send_until, recv_until
+        try:
+            try:
+                result = self.sim.callScriptFunction(function, self.script, *args)
+                received_at = time.monotonic()
+                if received_at >= hard_deadline or sent_at is None or not isinstance(result, dict):
+                    raise ConnectionError("Precheck did not receive a final reply within its total deadline")
+                if str(result.get("error", "")).startswith("Transaction restore failed"):
+                    raise ConnectionError(result["error"])
+                native = result.get("probe_receipt")
+                if request_id is not None and not self._confirmed_probe(native, request_id, result):
+                    raise ConnectionError("Precheck response did not confirm recovery of its IK transaction")
+            except PrecheckTimeout:
+                raise
+            except Exception as exc:
+                self._probe_transport_fault = f"Unsafe precheck transport: {exc}"
+                raise ConnectionError(self._probe_transport_fault) from exc
+            if result.get("probe_timeout") is True or received_at >= work_deadline:
+                receipt = {"request_id": request_id, "request_sent_s": sent_at, "final_reply_s": received_at,
+                           "client_work_deadline_s": work_deadline, "client_hard_deadline_s": hard_deadline,
+                           "native": native}
+                raise PrecheckTimeout("Precheck work expired and final transaction reply was received", receipt)
+            return result
+        finally:
+            for name in ("_send", "_recv"):
+                if name in prior:
+                    setattr(client, name, prior[name])
+                else:
+                    delattr(client, name)
+            for option, value in before.items():
+                socket.setsockopt(option, value)
+
+    @staticmethod
+    def _confirmed_probe(receipt, request_id, result):
+        if not isinstance(receipt, dict) or receipt.get("request_id") != request_id or receipt.get("restored") is not True:
+            return False
+        times = [receipt.get(name) for name in ("server_entered_s", "work_ended_s", "restored_s", "work_deadline_s")]
+        if not all(isinstance(value, (float, int)) and not isinstance(value, bool) and math.isfinite(value) for value in times):
+            return False
+        entered, ended, restored, deadline = times
+        timed_out = result.get("probe_timeout") is True
+        return (entered <= ended <= restored and entered <= deadline
+                and receipt.get("work_expired") is timed_out and (timed_out or ended < deadline)
+                and (not timed_out or ended >= deadline and result.get("ok") is False
+                     and isinstance(receipt.get("boundary"), str)))
 
     def solve_ik(self, arm, position, quaternion=None, payload=None, placed=None, options=None):
         arm = _arm(arm)
@@ -167,6 +283,10 @@ class MotionPlanner:
 
     validate_samples = sample_state_pairs
 
+    def sample_batch_statistics(self, *, reset=False):
+        """Read exact full-geometry batch counters; callers budget this RPC."""
+        return self._call("mpSampleBatchStatistics", {"reset": bool(reset)})
+
     def fk(self, arm, q):
         return self._call("mpFK", _arm(arm), _vector(q, 6, "q"))
 
@@ -174,6 +294,10 @@ class MotionPlanner:
         return self._call("mpInvalidate")
 
     def close(self):
+        if getattr(self, "_probe_transport_fault", None):
+            # The owned process supervisor handles teardown on a broken REQ.
+            self.script = None
+            return
         if self.script is not None:
             try:
                 self._call("mpCleanup")

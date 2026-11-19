@@ -219,9 +219,9 @@ class MotionCompilerTests(unittest.TestCase):
         self.assertEqual(failed.exception.status, Status.INVALID)
         self.assertEqual(len(geometry.calls), 1)
 
-    def test_rrt_budget_unknown_but_invalid_start_collision_invalid(self):
+    def test_rrt_and_invalid_start_exhaust_only_finite_motion_candidates(self):
         for answer, status in [({"ok": False, "error": "No exact collision-free solution within budget"}, Status.UNKNOWN),
-                               ({"ok": False, "error": "Invalid start", "problem": {"pair": ["red", "table"]}}, Status.INVALID)]:
+                               ({"ok": False, "error": "Invalid start", "problem": {"pair": ["red", "table"]}}, Status.UNKNOWN)]:
             with self.subTest(status=status):
                 engine, geometry, compiler = fixture()
                 geometry.plan_failure = answer
@@ -235,7 +235,7 @@ class MotionCompilerTests(unittest.TestCase):
         geometry.collision_failure = {"ok": False, "problem": {"reason": "block_robot_collision", "pair": ["red", "A_link"]}}
         with self.assertRaises(CompileFailure) as failed:
             compiler.compile_action(engine.parse_action("pick(A, red, stock_l1)"), engine.initial)
-        self.assertEqual(failed.exception.status, Status.INVALID)
+        self.assertEqual(failed.exception.status, Status.UNKNOWN)
         self.assertIn("A_link", failed.exception.detail)
         self.assertFalse(compiler.tasks)
         self.assertEqual(compiler.q["A"], compiler.cfg["arms"]["A"]["home_q"])
@@ -244,13 +244,10 @@ class MotionCompilerTests(unittest.TestCase):
         engine, geometry, compiler = fixture()
         steps = sequential(engine, ["pick(A, red, stock_l1)", "place(A, red, board_l1)"])
         original = geometry.plan
-        motions = []
         def fail_second(arm, start, goal, **kwargs):
-            # The second distinct free motion fails in both search stages.
-            key = (tuple(start), tuple(goal))
-            if key not in motions:
-                motions.append(key)
-            if motions.index(key) == 1:
+            # Every candidate for the place action fails, while the pick
+            # prefix succeeds. One blocked endpoint alone is now recoverable.
+            if kwargs.get("payload"):
                 return {"ok": False, "error": "budget"}
             return original(arm, start, goal, **kwargs)
         geometry.plan = fail_second
@@ -312,9 +309,11 @@ class MotionCompilerTests(unittest.TestCase):
             compiler.compile_action(engine.parse_action("pick(A, red, stock_l1)"), engine.initial)
         self.assertEqual(failed.exception.status, Status.UNKNOWN)
         self.assertIn("IK_branch_discontinuity", failed.exception.detail)
-        # Three transit endpoint candidates, then exactly three bounded retries
-        # of the discontinuous first Cartesian line sample.
-        self.assertEqual(sum(call[0] == "ik" for call in geometry.calls), 6)
+        # The initial pool and each bounded whole-action candidate may try a
+        # line. The aggregate remains finite under the configured action cap.
+        self.assertGreater(sum(call[0] == "ik" for call in geometry.calls), compiler.ik_seeds)
+        self.assertLessEqual(sum(call[0] == "ik" for call in geometry.calls),
+                             compiler.ik_seeds*(1+compiler.action_candidate_limit))
         self.assertFalse(compiler.tasks)
         self.assertEqual(compiler.q["A"], compiler.cfg["arms"]["A"]["home_q"])
 
@@ -377,10 +376,10 @@ class TwoStageTransitSearchTests(unittest.TestCase):
         self.assertEqual(calls[0][0], 4.)
         self.assertEqual(calls[0][1]["joint_bound_margin"], .6)
         self.assertNotIn("joint_bound_margin", calls[1][1])
-        # The global stage receives whatever wall time the box stage left of
-        # the single 10 s budget (the fake answers instantly).
-        self.assertGreaterEqual(calls[1][0], 6.-1e-9)
-        self.assertLessEqual(calls[1][0], 10.+1e-9)
+        # Reserve part of the unchanged 10 s request budget for other valid
+        # endpoints. The current endpoint still receives local then global.
+        self.assertGreater(calls[1][0], 0.)
+        self.assertLessEqual(sum(row[0] for row in calls), 10.+1e-9)
         stages = [row["search_stage"] for row in compiler.evidence if row["query"] == "RRTConnect"]
         self.assertEqual(stages, ["local_box", "global"])
         self.assertEqual(tasks[0]["kind"], "transit")
@@ -395,9 +394,16 @@ class TwoStageTransitSearchTests(unittest.TestCase):
             compiler.compile_action(engine.parse_action("pick(A, red, stock_l1)"), engine.initial)
         self.assertEqual(failed.exception.status, Status.UNKNOWN)
         attempts = failed.exception.evidence["attempts"]
-        self.assertEqual([a["stage"] for a in attempts], ["local_box", "global"])
+        self.assertEqual([a["stage"] for a in attempts],
+                         ["local_box", "global"]*(len(attempts)//2))
+        self.assertGreaterEqual(len(attempts), 2)
         self.assertIn("local_box、global", str(failed.exception))
-        self.assertEqual(len([row for row in geometry.calls if row[0] == "plan"]), 2)
+        plans = [row[2] for row in geometry.calls if row[0] == "plan"]
+        goals = {tuple(row["goal"]) for row in plans}
+        self.assertGreaterEqual(len(goals), 2)
+        self.assertTrue(all(len([row for row in plans if tuple(row["goal"]) == goal]) == 2
+                            for goal in goals))
+        self.assertLessEqual(sum(row["solve_time"] for row in plans), 10.+1e-9)
 
     def test_invalid_box_failure_does_not_retry_globally(self):
         engine, geometry, compiler = fixture()
@@ -405,12 +411,15 @@ class TwoStageTransitSearchTests(unittest.TestCase):
                                  "problem": {"reason": "table_collision:A"}}
         with self.assertRaises(CompileFailure):
             compiler.compile_action(engine.parse_action("pick(A, red, stock_l1)"), engine.initial)
-        self.assertEqual(len([row for row in geometry.calls if row[0] == "plan"]), 1)
+        plans = [row[2] for row in geometry.calls if row[0] == "plan"]
+        self.assertEqual(len(plans), len({tuple(row["goal"]) for row in plans}))
+        self.assertGreaterEqual(len(plans), 2)
+        self.assertTrue(all("joint_bound_margin" in row["options"] for row in plans))
 
     def test_local_box_can_be_disabled(self):
         engine, geometry, compiler = fixture(local_box_margin=None)
         compiler.compile_action(engine.parse_action("pick(A, red, stock_l1)"), engine.initial)
         plans = [row for row in geometry.calls if row[0] == "plan"]
-        self.assertTrue(all(row[2]["solve_time"] == 10. for row in plans))
+        self.assertTrue(all(0 < row[2]["solve_time"] <= 10. for row in plans))
         self.assertTrue(all("joint_bound_margin" not in row[2]["options"] for row in plans))
 

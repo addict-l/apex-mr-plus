@@ -2,9 +2,12 @@
 from __future__ import annotations
 
 from collections import Counter
+from datetime import datetime, timezone
+from functools import partial
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import shutil
 import time
@@ -28,6 +31,40 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUT = ROOT / "results/sim_v1_3/v133"
 PORT = 23210
 VIDEO_LIMIT = 2 * 1024**3
+
+
+class _PlanningIncomplete(RuntimeError):
+    def __init__(self, status, message):
+        self.status = status
+        super().__init__(message)
+
+
+class MotionEvidenceJournal:
+    """Commit motion boundaries before a hard task timeout can kill a worker."""
+
+    def __init__(self, output, started, phase):
+        self.output, self.started, self.phase = Path(output), started, phase
+        self.events, self.wall_seconds = 0, 0.
+
+    def __call__(self, event):
+        began = time.monotonic()
+        row = {"at": datetime.now(timezone.utc).isoformat(), "sequence": self.events+1,
+               "elapsed_seconds": began-self.started, "pid": os.getpid(), "event": event}
+        # Encode before opening the append-only file: invalid data must not
+        # leave a torn JSON line or overwrite any previous committed event.
+        encoded = (json.dumps(row, ensure_ascii=False, allow_nan=False)+"\n").encode("utf-8")
+        self.output.mkdir(parents=True, exist_ok=True)
+        with (self.output/"motion_live.jsonl").open("ab") as stream:
+            stream.write(encoded)
+            stream.flush()
+            os.fsync(stream.fileno())
+        self.events += 1
+        atomic_progress_json(self.output/"motion_progress.json", {
+            **{key: value for key, value in row.items() if key != "event"},
+            "phase": self.phase()+"/"+event.get("query", "motion")+":"+event.get("phase", "event"),
+            "event": {key: value for key, value in event.items() if key != "record"},
+            "journal": str(self.output/"motion_live.jsonl")})
+        self.wall_seconds += time.monotonic()-began
 
 
 def write_json(path, data):
@@ -82,19 +119,20 @@ def run_task(task, *, port=PORT, headless=True, video=False,
     owner = None
     compiler = None
     backend = None
+    motion_journal = None
 
     def enter(name):
         nonlocal phase, phase_start
         now = time.monotonic()
         phase_times[phase] = phase_times.get(phase, 0.) + now - phase_start
         phase, phase_start = name, now
-        if name in {"simulator_start", "simulator_connect", "workcell"}:
-            # Commit before the potentially blocking call. A supervisor hard
-            # timeout can then distinguish startup/connect from a built scene.
-            atomic_progress_json(output / "run_progress.json", {
-                "phase": name, "pid": summary.get("simulator_pid"),
-                "elapsed_seconds": now-started, "task": summary.get("task", task_path.stem),
-                "task_file": str(task_path), "task_sha256": summary.get("task_sha256")})
+        # Every stage is durable before a blocking call, including motion and
+        # TPG. A killed worker must retain its last completed timings.
+        atomic_progress_json(output / "run_progress.json", {
+            "phase": name, "pid": summary.get("simulator_pid"),
+            "elapsed_seconds": now-started, "phase_seconds": dict(phase_times),
+            "task": summary.get("task", task_path.stem),
+            "task_file": str(task_path), "task_sha256": summary.get("task_sha256")})
         if now >= deadline:
             raise TimeoutError("任务达到墙钟超时")
 
@@ -117,7 +155,7 @@ def run_task(task, *, port=PORT, headless=True, video=False,
         if prequalify:
             summary["planning_status"] = "awaiting_ik_prequalification"
         else:
-            result = run(problem)
+            result = run(problem, deadline=deadline)
             summary["planning_status"] = result.status
             summary["feedback"] = list(result.feedback)
             write_json(output / "plan.json", plan_to_dict(result))
@@ -125,9 +163,9 @@ def run_task(task, *, port=PORT, headless=True, video=False,
         # UNKNOWN may be resolved by the real backend's capability queries.
         # The scene must exist before qualify can check those poses.
         if not prequalify and result.status not in {"solved", "unknown"}:
-            raise RuntimeError(f"符号规划未求解：{result.status}")
+            raise _PlanningIncomplete(result.status, f"符号规划未求解：{result.status}")
         enter("simulator_start")
-        owner = Simulator(ROOT, port=port, timeout=30)
+        owner = Simulator(output / "instance", port=port, timeout=30)
         try:
             owner.start(headless=headless)
             summary["simulator_pid"] = owner.process.pid
@@ -141,8 +179,18 @@ def run_task(task, *, port=PORT, headless=True, video=False,
         cfg["profile"] = "skillnet_v1_3"
         with MotionPlanner(sim, client, cfg) as planner:
             backend = CoppeliaBackend(planner, cfg, Frames(task_path))
+            motion_journal = MotionEvidenceJournal(output, started, lambda: phase)
+            backend.progress_callback = motion_journal
             compiler = backend.compiler
             compiler.deadline = deadline
+            qualification_log = task_path.parent / "qualify_log.json"
+            if qualification_log.is_file():
+                hints = json.loads(qualification_log.read_text(encoding="utf-8-sig"))
+                if hints.get("task") in (None, problem.name):
+                    receipt = backend.import_qualification_hints(hints, source={
+                        "path": str(qualification_log),
+                        "sha256": hashlib.sha256(qualification_log.read_bytes()).hexdigest()})
+                    write_json(output / "qualification_hint_import.json", receipt)
             if prequalify:
                 from .qualifier import qualified_task_data, qualify_workspace
                 from .taskio import task_data_to_toml
@@ -160,25 +208,31 @@ def run_task(task, *, port=PORT, headless=True, video=False,
                 if backend.fatal_error:
                     raise ConnectionError("IK预验证远程接口失联："+backend.fatal_error)
                 enter("planning")
-                result = run(problem)
+                result = run(problem, deadline=deadline)
                 summary["planning_status"] = result.status
                 summary["feedback"] = list(result.feedback)
                 write_json(output / "plan.json", plan_to_dict(result))
                 write_json(output / "initial_plan.json", plan_to_dict(result))
                 if result.status not in {"solved", "unknown"}:
-                    raise RuntimeError(f"IK预验证后符号规划未求解：{result.status}")
+                    raise _PlanningIncomplete(result.status, f"IK预验证后符号规划未求解：{result.status}")
             enter("real_planning")
-            result = run(problem, backend=backend)
+            result = run(problem, backend=backend, deadline=deadline)
             summary["real_planning_status"] = result.status
+            summary["symbolic_makespan_seconds"] = result.schedule.makespan
+            summary["symbolic_lower_bound"] = result.schedule.lower_bound
+            summary["symbolic_suboptimality_bound"] = result.schedule.suboptimality_bound
             summary["feedback"] = list(result.feedback)
             write_json(output / "plan.json", plan_to_dict(result))
             write_json(output / "motion_backend.json", backend.audit())
             if backend.fatal_error:
                 raise ConnectionError(f"真实运动后端远程接口失联，停止后续任务：{backend.fatal_error}")
             if result.status != "solved":
-                raise RuntimeError(f"真实运动后端重规划未求解：{result.status}")
+                raise _PlanningIncomplete(result.status, f"真实运动后端重规划未求解：{result.status}")
             enter("compile")
-            tasks = compiler.compile(result.schedule, result.graph)
+            receipt = backend.export_reference(result.schedule, result.graph)
+            tasks = receipt["tasks"]
+            write_json(output / "reference_receipt.json", receipt)
+            summary["reference_reused"] = True
             compile_seconds = time.monotonic() - phase_start
             summary["backend_nominal_seconds"] = backend.evaluate(result.schedule, result.graph)
             write_json(output / "tasks.json", tasks)
@@ -192,6 +246,7 @@ def run_task(task, *, port=PORT, headless=True, video=False,
                                   + phase_times.get("real_planning", 0.)),
                 compile_seconds=compile_seconds,
                 video=video_allowed(video, DEFAULT_OUT),
+                stopped_geometry_context=partial(owner.fast_idle_stopped, deadline=deadline),
                 timeout_wall_s=max(.001, deadline-time.monotonic()))
             summary.update(measured)
             if measured.get("remote_interface_failure"):
@@ -208,7 +263,8 @@ def run_task(task, *, port=PORT, headless=True, video=False,
             summary.setdefault("startup_failure_phase", phase)
         if is_transport_failure(exc):
             summary["fatal_environment"] = True
-        summary.update(status="timeout" if isinstance(exc, TimeoutError) else "failed",
+        summary.update(status="timeout" if isinstance(exc, TimeoutError) else
+                       exc.status if isinstance(exc, _PlanningIncomplete) else "failed",
                        passed=False, failure_phase=phase,
                        reason=f"{type(exc).__name__}: {exc}", traceback=traceback.format_exc())
         if isinstance(exc, CompileFailure):
@@ -225,7 +281,8 @@ def run_task(task, *, port=PORT, headless=True, video=False,
             backend_audit = backend.audit()
             summary["motion_backend_cache"] = backend_audit["cache"]
             summary["motion_feedback_count"] = sum(
-                record["status"] == "INVALID" for record in backend.validation_records)
+                record["status"] in {"INVALID", "UNKNOWN"} for record in backend.validation_records)
+            summary["motion_feedback_rounds"] = len(backend_audit.get("feedback_rounds", []))
             summary["qualification_calls"] = len(backend.qualification_records)
             write_json(output / "motion_backend.json", backend_audit)
         if owner is not None:
@@ -249,6 +306,10 @@ def run_task(task, *, port=PORT, headless=True, video=False,
         summary["planning_seconds"] = (summary["initial_planning_seconds"]
                                        + summary["real_planning_seconds"])
         summary["wall_seconds"] = time.monotonic()-started
+        if motion_journal is not None:
+            summary["motion_journal"] = {"events": motion_journal.events,
+                "persistence_wall_seconds": motion_journal.wall_seconds,
+                "path": str(output/"motion_live.jsonl")}
         write_json(output / "summary.json", summary)
     return summary
 

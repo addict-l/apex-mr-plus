@@ -287,6 +287,17 @@ function SkillnetV13.init(cfg,helpers)
  for _,handle in ipairs(sim.getObjectsInTree(cfg.root,sim.handle_all,0)) do
   K.aliases[sim.getObjectAlias(handle)]=handle
  end
+ K.fixedInstallation={}
+ for _,pair in ipairs(cfg.fixed_installation_contacts or {}) do
+  local a,b=resolve(pair[1]),resolve(pair[2])
+  for _,h in ipairs({a,b}) do
+   assert(sim.getObjectParent(h)==cfg.root and sim.getObjectType(h)==sim.object_shape_type
+    and sim.getObjectInt32Param(h,sim.shapeintparam_static)~=0,'Installation contact requires fixed root shapes')
+  end
+  K.fixedInstallation[a]=K.fixedInstallation[a] or {}
+  K.fixedInstallation[b]=K.fixedInstallation[b] or {}
+  K.fixedInstallation[a][b]=true;K.fixedInstallation[b][a]=true
+ end
  for _,part in ipairs(cfg.parts) do K.blocks[part.id]=resolve(part.alias or part.id);K.definitions[part.id]=part end
  for part,handle in pairs(cfg.initial_attachments or {}) do K.snaps[part]=resolve(handle) end
  for slot,part in pairs(cfg.initial_installed or {}) do K.installed[part]=slot end
@@ -498,6 +509,8 @@ local function isContact(first,second)
  return allowed
 end
 local function collision(first,second,node)
+ local fixed=K.fixedInstallation[first]
+ if fixed and fixed[second] then return false end
  local hit=sim.checkCollision(first,second);K.collision_checks=K.collision_checks+1
  if hit>0 and not isContact(first,second) then
   local details={first=sim.getObjectAlias(first),second=sim.getObjectAlias(second),time=sim.getSimulationTime()}
