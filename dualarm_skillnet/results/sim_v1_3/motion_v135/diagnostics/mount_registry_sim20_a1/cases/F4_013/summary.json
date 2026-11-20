@@ -1,0 +1,57 @@
+{
+  "task_file": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v133\\qualification\\F4\\013\\gen_f4_s20261115_013\\gen_f4_s20261115_013.qualified.toml",
+  "status": "unknown",
+  "passed": false,
+  "profile": "skillnet_v1_3",
+  "port": 23210,
+  "timeout_wall_s": 1200.0,
+  "fatal_environment": false,
+  "task": "gen_f4_s20261115_013",
+  "task_sha256": "b7fc2b71b0cec6355893dc39989243d5de17d7c2eb2ae8322f7084926e4fb236",
+  "environment": {
+    "c_free_bytes": 32062054400,
+    "port": 23210
+  },
+  "planning_status": "solved",
+  "feedback": [
+    "完整参考轨迹验证未通过：home_B；完整参考验证未通过（home_B）：运动段 home_B 的轨迹点碰撞或无效：{'pair': ['/B_UR5/B_GripperPalm', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}"
+  ],
+  "simulator_pid": 22660,
+  "real_planning_status": "unknown",
+  "symbolic_makespan_seconds": 193.341317901,
+  "symbolic_lower_bound": 193.341317901,
+  "symbolic_suboptimality_bound": 1.0,
+  "original_failure_phase": "real_planning",
+  "original_failure_reason": "_PlanningIncomplete: 真实运动后端重规划未求解：unknown",
+  "failure_phase": "real_planning",
+  "reason": "_PlanningIncomplete: 真实运动后端重规划未求解：unknown",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\simbridge\\runner.py\", line 230, in run_task\n    raise _PlanningIncomplete(result.status, f\"真实运动后端重规划未求解：{result.status}\")\nsimbridge.runner._PlanningIncomplete: 真实运动后端重规划未求解：unknown\n",
+  "motion_backend_cache": {
+    "entries": 42,
+    "hits": 0,
+    "misses": 41
+  },
+  "motion_feedback_count": 0,
+  "motion_feedback_rounds": 1,
+  "qualification_calls": 4,
+  "simulator_log": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\15\\a1\\simulation\\gen_f4_s20261115_013\\instance\\results\\sim_v1_3\\logs\\coppeliasim-20261118-122105-7f930720.log",
+  "simulator_closed": true,
+  "phase_seconds": {
+    "load": 0.015000000013969839,
+    "environment": 0.01600000006146729,
+    "planning": 5.358999999938533,
+    "simulator_start": 0.2660000000614673,
+    "simulator_connect": 3.75,
+    "workcell": 2.593999999924563,
+    "real_planning": 79.98400000005495
+  },
+  "initial_planning_seconds": 5.358999999938533,
+  "real_planning_seconds": 79.98400000005495,
+  "planning_seconds": 85.34299999999348,
+  "wall_seconds": 98.46900000004098,
+  "motion_journal": {
+    "events": 34,
+    "persistence_wall_seconds": 0.5310000000754371,
+    "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\15\\a1\\simulation\\gen_f4_s20261115_013\\motion_live.jsonl"
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "task_file": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v133\\qualification\\F3\\006\\gen_f3_s20261115_006\\gen_f3_s20261115_006.qualified.toml",
+  "status": "passed",
+  "passed": true,
+  "profile": "skillnet_v1_3",
+  "port": 23210,
+  "timeout_wall_s": 1200.0,
+  "fatal_environment": false,
+  "task": "gen_f3_s20261115_006",
+  "task_sha256": "433e549d8edb6c225244d098be6f5ccfca9587b5179d4ac127d2eda672e9d436",
+  "environment": {
+    "c_free_bytes": 32149745664,
+    "port": 23210
+  },
+  "planning_status": "solved",
+  "feedback": [],
+  "simulator_pid": 65168,
+  "real_planning_status": "solved",
+  "symbolic_makespan_seconds": 251.752987534,
+  "symbolic_lower_bound": 251.752987534,
+  "symbolic_suboptimality_bound": 1.0,
+  "reference_reused": true,
+  "backend_nominal_seconds": 230.86744408202085,
+  "success": true,
+  "phase": "complete",
+  "reason": null,
+  "planning_seconds": 81.24900000006892,
+  "compile_seconds": 0.0940000000409782,
+  "motion_task_count": 42,
+  "video": false,
+  "step_durations": [
+    {
+      "step": 1,
+      "action": "pick(A, b4_1, stock_a4)",
+      "estimated_seconds": 23.637298464,
+      "actual_seconds": 23.439999999999575,
+      "estimated_actual_ratio": 1.0084171699658886
+    },
+    {
+      "step": 2,
+      "action": "insert(A, b4_1, s1_1)",
+      "estimated_seconds": 24.354414244,
+      "actual_seconds": 17.980000000001393,
+      "estimated_actual_ratio": 1.3545280447162467
+    },
+    {
+      "step": 3,
+      "action": "pick(A, b2_1, stock_a2)",
+      "estimated_seconds": 19.500493658999993,
+      "actual_seconds": 19.940000000003117,
+      "estimated_actual_ratio": 0.9779585586257245
+    },
+    {
+      "step": 4,
+      "action": "insert(A, b2_1, s2_1)",
+      "estimated_seconds": 21.621472489000013,
+      "actual_seconds": 18.559999999997032,
+      "estimated_actual_ratio": 1.1649500263471697
+    },
+    {
+      "step": 5,
+      "action": "pick(A, b3_1, stock_a3)",
+      "estimated_seconds": 23.820245705999994,
+      "actual_seconds": 21.539999999995715,
+      "estimated_actual_ratio": 1.10586098913671
+    },
+    {
+      "step": 6,
+      "action": "insert(A, b3_1, s3_1)",
+      "estimated_seconds": 25.750653206999985,
+      "actual_seconds": 23.199999999995384,
+      "estimated_actual_ratio": 1.1099419485778064
+    },
+    {
+      "step": 7,
+      "action": "pick(A, b1_1, stock_a1)",
+      "estimated_seconds": 26.568038403000003,
+      "actual_seconds": 21.660000000009134,
+      "estimated_actual_ratio": 1.226594570775106
+    },
+    {
+      "step": 8,
+      "action": "insert(A, b1_1, s4_1)",
+      "estimated_seconds": 28.38285939100001,
+      "actual_seconds": 25.74000000001317,
+      "estimated_actual_ratio": 1.1026751900149763
+    },
+    {
+      "step": 9,
+      "action": "pick(A, b5_1, stock_a5)",
+      "estimated_seconds": 28.18300289300001,
+      "actual_seconds": 23.480000000012012,
+      "estimated_actual_ratio": 1.2002982492753658
+    },
+    {
+      "step": 10,
+      "action": "insert(A, b5_1, s5_1)",
+      "estimated_seconds": 29.93450907799999,
+      "actual_seconds": 34.060000000017425,
+      "estimated_actual_ratio": 0.8788757803283815
+    }
+  ],
+  "remote_interface_failure": false,
+  "geometry_scope": "sampled swept conflicts at 0.07 rad and nominal rollout at 0.05 s; no continuous collision guarantee",
+  "stage_seconds": {
+    "requirements": 0.03100000007543713,
+    "geometry_context_enter": 0.10899999993853271,
+    "tpg_structure": 0.10999999998603016,
+    "tpg_geometry": 0.14000000001396984,
+    "parameterize": 0.4380000000819564,
+    "rollout": 20.45299999997951,
+    "geometry_context_restore": 0.030999999959021807,
+    "install": 1.1570000000065193,
+    "execution": 169.18700000003446,
+    "acceptance": 0.06299999996554106,
+    "complete": 0.015000000013969839
+  },
+  "query_statistics": {
+    "attempted_calls": 46,
+    "completed_calls": 46,
+    "wall_seconds": 18.824794300016947,
+    "sample_batches": 39,
+    "sample_states": 4980,
+    "methods": {
+      "sample_batch_statistics": {
+        "attempted": 7,
+        "completed": 7,
+        "wall_seconds": 0.010185000021010637
+      },
+      "sample_state_pairs": {
+        "attempted": 39,
+        "completed": 39,
+        "wall_seconds": 18.814609299995936
+      }
+    },
+    "scope": "planner API calls including client/server and codec; not isolated network time"
+  },
+  "stopped_geometry_context": {
+    "enabled": true,
+    "scope": "stopped TPG/parameterization/nominal rollout only",
+    "enter_seconds": 0.10899999993853271,
+    "restore_seconds": 0.030999999959021807,
+    "receipt": {
+      "pid": 65168,
+      "instance_nonce": "1c898367efe6440b9c588f8d05b4c7df",
+      "before": {
+        "idle_fps": 8,
+        "fast_idle_tag_hex": "",
+        "stack": [
+          0,
+          null
+        ],
+        "simulation_state": 0,
+        "simulation_time_s": 0.0,
+        "simulation_timestep_s": 0.02,
+        "dynamics_step_s": 0.002,
+        "dynamics_engine": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ]
+      },
+      "enabled": true,
+      "restored": true,
+      "active": {
+        "idle_fps": 0,
+        "fast_idle_tag_hex": "0100000008000000",
+        "stack": [
+          1,
+          8
+        ],
+        "simulation_state": 0,
+        "simulation_time_s": 0.0,
+        "simulation_timestep_s": 0.02,
+        "dynamics_step_s": 0.002,
+        "dynamics_engine": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ]
+      },
+      "after": {
+        "idle_fps": 8,
+        "fast_idle_tag_hex": "",
+        "stack": [
+          0,
+          null
+        ],
+        "simulation_state": 0,
+        "simulation_time_s": 0.0,
+        "simulation_timestep_s": 0.02,
+        "dynamics_step_s": 0.002,
+        "dynamics_engine": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ]
+      }
+    }
+  },
+  "server_geometry_statistics": {
+    "context_seconds": 0.0049999999999954525,
+    "invalid_samples": 0,
+    "snapshot_seconds": 0.001999999999981128,
+    "restore_seconds": 0.007000000000005002,
+    "world_reuse_samples": 4911,
+    "context_equal_checks": 4941,
+    "context_comparison_seconds": 0.9549999999999415,
+    "batches": 39,
+    "scope": "Exact stopped-scene full geometry per supplied sample; no collision predicates omitted",
+    "configuration_payload_seconds": 0.3200000000000216,
+    "samples_requested": 4980,
+    "full_context_resets": 69,
+    "fallback_samples": 0,
+    "timing_scope": "Inner snapshot and per-sample phases; batch total also includes outer transaction snapshot/restore and bookkeeping",
+    "shape_collision_queries": 325475,
+    "forced_legacy_batches": 0,
+    "samples_checked": 4980,
+    "failures": 0,
+    "batch_seconds": 13.289999999999992,
+    "geometry_seconds": 11.87400000000008,
+    "geometry_calls": 4980
+  },
+  "server_geometry_statistics_before_tpg": {
+    "context_seconds": 0,
+    "invalid_samples": 0,
+    "snapshot_seconds": 0,
+    "restore_seconds": 0,
+    "world_reuse_samples": 0,
+    "context_equal_checks": 0,
+    "context_comparison_seconds": 0,
+    "batches": 0,
+    "scope": "Exact stopped-scene full geometry per supplied sample; no collision predicates omitted",
+    "configuration_payload_seconds": 0,
+    "samples_requested": 0,
+    "full_context_resets": 0,
+    "fallback_samples": 0,
+    "timing_scope": "Inner snapshot and per-sample phases; batch total also includes outer transaction snapshot/restore and bookkeeping",
+    "shape_collision_queries": 0,
+    "forced_legacy_batches": 0,
+    "samples_checked": 0,
+    "failures": 0,
+    "batch_seconds": 0,
+    "geometry_seconds": 0,
+    "geometry_calls": 0
+  },
+  "tpg_nodes": 362,
+  "candidate_conflict_pairs": 361,
+  "structural_ordered_pairs_skipped": 361,
+  "geometry_statistics": {
+    "oracle_calls": 0,
+    "conflicting_calls": 0,
+    "mode_conflicts": 0,
+    "mesh_state_queries": 0,
+    "cache_hits": 0,
+    "states_considered": 0,
+    "batch_calls": 0,
+    "wall_s": 0.0,
+    "joint_sample_step_rad": 0.07,
+    "batch_size": 128,
+    "continuous_collision_guarantee": false
+  },
+  "tpg_counts": {
+    "nodes": 362,
+    "pose_nodes": 352,
+    "skill_nodes": 10,
+    "type1_edges": 404,
+    "task_type2_edges": 1,
+    "motion_type2_edges": 0,
+    "cross_arm_pairs": 361,
+    "oracle_queries": 0,
+    "already_ordered_pairs_skipped": 361,
+    "pairs_without_geometry": 0
+  },
+  "tpg_seconds": 0.6880000000819564,
+  "tpg_edges": 405,
+  "nominal_makespan_seconds": 230.86744408202085,
+  "actual_makespan_seconds": 238.56000000004823,
+  "execution_wall_seconds": 166.5779999999795,
+  "failure_phase": null,
+  "executor_wall_seconds": 191.73400000005495,
+  "motion_backend_cache": {
+    "entries": 42,
+    "hits": 0,
+    "misses": 42
+  },
+  "motion_feedback_count": 0,
+  "motion_feedback_rounds": 1,
+  "qualification_calls": 4,
+  "simulator_log": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006\\instance\\results\\sim_v1_3\\logs\\coppeliasim-20261118-113401-1c898367.log",
+  "simulator_closed": true,
+  "phase_seconds": {
+    "load": 0.015999999945051968,
+    "environment": 0.0,
+    "planning": 9.359000000054948,
+    "simulator_start": 0.26599999994505197,
+    "simulator_connect": 3.76500000001397,
+    "workcell": 2.35999999998603,
+    "real_planning": 71.89000000001397,
+    "compile": 0.5940000000409782,
+    "execute": 191.81299999996554
+  },
+  "initial_planning_seconds": 9.359000000054948,
+  "real_planning_seconds": 71.89000000001397,
+  "wall_seconds": 286.60999999998603,
+  "motion_journal": {
+    "events": 34,
+    "persistence_wall_seconds": 0.31400000012945384,
+    "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006\\motion_live.jsonl"
+  }
+}
