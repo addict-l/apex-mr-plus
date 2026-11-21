@@ -216,7 +216,7 @@ def run_task(task, *, port=PORT, headless=True, video=False,
                 if result.status not in {"solved", "unknown"}:
                     raise _PlanningIncomplete(result.status, f"IK预验证后符号规划未求解：{result.status}")
             enter("real_planning")
-            result = run(problem, backend=backend, deadline=deadline)
+            result = run(problem, backend=backend, deadline=deadline, post_first_solution_limit=2.0)
             summary["real_planning_status"] = result.status
             summary["symbolic_makespan_seconds"] = result.schedule.makespan
             summary["symbolic_lower_bound"] = result.schedule.lower_bound

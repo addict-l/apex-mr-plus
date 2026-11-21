@@ -756,6 +756,64 @@ local function checkedShortcut(path,check,step,maxTrials,deadline)
     local out={} for _,node in ipairs(nodes) do out[#out+1]=node.q end
     return out,{trials=trials,accepted=accepted,budget_exhausted=timedOut}
 end
+-- Map the existing denseJoint index to its source edge only when reporting a failure.
+local function certificateSegment(path,step,sample)
+    local first=1
+    for i=2,#path do
+        local last=first+math.max(1,math.ceil(dist(path[i-1],path[i])/step))
+        if sample<=last then return i-1 end
+        first=last
+    end
+    return math.max(1,#path-1)
+end
+local function finalizeJointPath(waypoints,startQ,goalQ,checkStep,executionStep,check,stats)
+    local began=clock()
+    local path=denseJoint(waypoints,executionStep)
+    local legacy=denseJoint(waypoints,checkStep)
+    local returnedAt=clock()
+    local returned=denseJoint(path,checkStep)
+    stats.final_returned_grid_seconds=clock()-returnedAt
+    stats.final_legacy_grid_states=#legacy
+    stats.final_returned_grid_states=#returned
+    stats.final_collision_queries=0
+    stats.final_legacy_grid_queries=0
+    stats.final_returned_grid_queries=0
+
+    local function checkGrid(samples,sourcePath,grid,queryField)
+        local gridAt=clock()
+        for i,q in ipairs(samples) do
+            local ok,problem=check(q)
+            if not ok then
+                stats[queryField]=i
+                stats.final_collision_queries=stats.final_collision_queries+i
+                if grid=='returned' then
+                    stats.final_returned_grid_seconds=stats.final_returned_grid_seconds+clock()-gridAt
+                end
+                return {ok=false,error='Dense path validation failed',grid=grid,
+                    segment=certificateSegment(sourcePath,checkStep,i),sample=i,q=q,problem=problem,stats=stats}
+            end
+        end
+        stats[queryField]=#samples
+        stats.final_collision_queries=stats.final_collision_queries+#samples
+        if grid=='returned' then
+            stats.final_returned_grid_seconds=stats.final_returned_grid_seconds+clock()-gridAt
+        end
+    end
+
+    local result=checkGrid(legacy,waypoints,'legacy','final_legacy_grid_queries')
+    if not result then
+        stats.validated_states=#legacy
+        if dist(path[1],startQ)>1e-5 or dist(path[#path],goalQ)>1e-5 then
+            result={ok=false,error='Planner endpoint mismatch',stats=stats}
+        else
+            result=checkGrid(returned,path,'returned','final_returned_grid_queries')
+        end
+    end
+    stats.final_check_seconds=clock()-began
+    if result then return result end
+    stats.execution_states=#path
+    return {ok=true,path=path,stats=stats}
+end
 function mpPlanJoint(side,startQ,goalQ,algorithm,payload,placed,options)
     return transaction(function()
         options=options or {} checks=0 ikCalls=0 lastProblem=nil
@@ -788,19 +846,18 @@ function mpPlanJoint(side,startQ,goalQ,algorithm,payload,placed,options)
             collision_check_step_rad=checkStep,solve_budget_s=options.solve_time or 1.5,
             direct_attempted=options.direct_first~=false,ompl_solve_called=false}
         local function finish(waypoints,source,selectedAlgorithm)
-            -- Recheck even the chosen optimized path. The direct candidate,
-            -- RRT and every shortcut share payload/contact/articulation rules.
-            local certificate=denseJoint(waypoints,checkStep)
-            for i,q in ipairs(certificate) do
-                if not validJoint(side,q,ctx) then return {ok=false,error='Dense path validation failed',sample=i,problem=lastProblem} end
-            end
-            local path=denseJoint(waypoints,options.max_joint_step or .04)
-            if dist(path[1],startQ)>1e-5 or dist(path[#path],goalQ)>1e-5 then return {ok=false,error='Planner endpoint mismatch'} end
+            -- Preserve the legacy certificate and check the exact returned path
+            -- in the same payload, contact and articulation context.
+            local result=finalizeJointPath(waypoints,startQ,goalQ,checkStep,options.max_joint_step or .04,function(q)
+                local ok=validJoint(side,q,ctx)
+                return ok,lastProblem
+            end,stats)
+            stats.wall_time_s=clock()-startTime stats.collision_checks=checks
+            if not result.ok then return result end
+            local path=result.path
             stats.algorithm=selectedAlgorithm stats.path_source=source
             stats.selected_path_backend=selectedAlgorithm=='RRTConnect' and 'simOMPL' or 'simulator_geometry'
             if not stats.ompl_solve_called then stats.backend='simulator_geometry' end
-            stats.wall_time_s=clock()-startTime stats.collision_checks=checks
-            stats.validated_states=#certificate stats.execution_states=#path
             stats.optimized_cost=pathCost(path)
             return {ok=true,path=path,cost=stats.optimized_cost,stats=stats,
                 algorithm=selectedAlgorithm,path_source=source}

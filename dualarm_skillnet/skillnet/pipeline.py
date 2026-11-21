@@ -44,7 +44,9 @@ def _motion_reach_facts(action, failed_arm=None):
 
 
 def run(problem, *, decomposer=None, backend=None, prune=True, max_rounds=None,
-        max_model_rounds=2, deadline=None):
+        max_model_rounds=2, deadline=None, post_first_solution_limit: float | None = None):
+    early_stop_enabled = post_first_solution_limit is not None
+    search_policy = {"post_first_solution_limit": post_first_solution_limit} if early_stop_enabled else {}
     backend = backend if backend is not None else NullBackend()
     if max_rounds is None:
         max_rounds = getattr(backend, "feedback_round_limit", 6)
@@ -121,6 +123,7 @@ def run(problem, *, decomposer=None, backend=None, prune=True, max_rounds=None,
     unknown_seen = set()
     motion = []
     schedule = None
+    schedule_pruned = False
     round_record = None
     unrestricted_lower_bound = None
     oracle_epoch = 0
@@ -138,10 +141,10 @@ def run(problem, *, decomposer=None, backend=None, prune=True, max_rounds=None,
 
         if round_record is not None:
             round_record["terminal_status"] = status
-            if cuts:
-                # A cut excludes motion candidates that have not been proved
-                # globally impossible. The restricted graph's optimality
-                # certificate cannot certify the original symbolic graph.
+            if cuts or (early_stop_enabled and schedule_pruned):
+                # A restricted graph certificate applies only to the current
+                # action set and cuts. Carry forward an unrestricted lower
+                # bound only while the same capability model is in force.
                 raw = {"lower_bound": schedule.lower_bound,
                        "suboptimality_bound": schedule.suboptimality_bound}
                 lower = unrestricted_lower_bound
@@ -158,7 +161,11 @@ def run(problem, *, decomposer=None, backend=None, prune=True, max_rounds=None,
                     "temporary_cuts": len(uncertain_cuts), "restricted_search": raw,
                     "unrestricted_lower_bound": lower,
                     "suboptimality_bound": schedule.suboptimality_bound}
-                feedback.append("运动规避后的受限图证书单独保留；最终界仅使用同一能力模型下未加规避的符号搜索下界。")
+                if early_stop_enabled:
+                    round_record["certificate_scope"]["pruned"] = schedule_pruned
+                    feedback.append("当前动作范围的证书单独保留；最终界仅使用同一能力模型下未剪枝、未规避的符号搜索下界。")
+                else:
+                    feedback.append("运动规避后的受限图证书单独保留；最终界仅使用同一能力模型下未加规避的符号搜索下界。")
         record_round()
         # This is the final motion-aware status. Raw symbolic conclusions are
         # retained in feedback-round evidence, never serialized as a conflicting
@@ -171,24 +178,35 @@ def run(problem, *, decomposer=None, backend=None, prune=True, max_rounds=None,
                               completion_elapsed)
 
     def bounded_search(**kwargs):
-        nonlocal unrestricted_lower_bound
+        nonlocal unrestricted_lower_bound, schedule_pruned
+        schedule_pruned = kwargs.get("allowed") is not None
         callback = getattr(backend, "progress_callback", None)
         search_began = monotonic()
         if callable(callback):
             callback({"query": "symbolic_search", "phase": "before",
                       "round": round_index+1, "cuts": len(cuts),
-                      "temporary_cuts": len(uncertain_cuts), "pruned": kwargs.get("allowed") is not None})
+                      "temporary_cuts": len(uncertain_cuts), "pruned": schedule_pruned})
         remaining = 60. if deadline is None else min(60., deadline-monotonic())
-        result = (SearchResult("budget", [], 0., 0, 0, {}, frozenset(), 0.) if remaining <= 0 else
-                  search(engine, hint=hint, cuts=cuts, time_limit=remaining, **kwargs))
+        if remaining <= 0:
+            result = SearchResult("budget", [], 0., 0, 0, {}, frozenset(), 0.,
+                early_stop_enabled=early_stop_enabled, post_first_solution_limit=post_first_solution_limit)
+        else:
+            result = search(engine, hint=hint, cuts=cuts, time_limit=remaining, **search_policy, **kwargs)
         if callable(callback):
             callback({"query": "symbolic_search", "phase": "after", "round": round_index+1,
                       "cuts": len(cuts), "temporary_cuts": len(uncertain_cuts),
                       "status": result.status, "expanded": result.expanded,
                       "generated": result.generated, "elapsed_seconds": monotonic()-search_began,
-                      "lower_bound": result.lower_bound, "suboptimality_bound": result.suboptimality_bound})
+                      "lower_bound": result.lower_bound, "suboptimality_bound": result.suboptimality_bound,
+                      "pruned": schedule_pruned, "oracle_epoch": oracle_epoch,
+                      "certificate_scope": "restricted" if cuts or schedule_pruned else "unrestricted",
+                      "early_stop_enabled": result.early_stop_enabled,
+                      "early_stop_triggered": result.early_stop_triggered,
+                      "early_stop_reason": result.early_stop_reason,
+                      "first_solution_seconds": result.first_solution_seconds,
+                      "post_first_solution_limit": result.post_first_solution_limit})
         lower = result.lower_bound
-        if (not cuts and kwargs.get("allowed") is None
+        if (not cuts and not schedule_pruned
                 and isinstance(lower, (int, float)) and not isinstance(lower, bool)
                 and math.isfinite(lower) and lower >= 0):
             unrestricted_lower_bound = (lower if unrestricted_lower_bound is None

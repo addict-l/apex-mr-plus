@@ -194,7 +194,7 @@ class ExecutorPlumbingTests(unittest.TestCase):
                 result = execute_plan(None, None, cfg, tasks, engine.problem, outdir,
                                       planner=geometry, timeout_wall_s=1.)
             self.assertEqual(result['status'], 'timeout')
-            self.assertEqual(result['failure_phase'], 'tpg')
+            self.assertEqual(result['failure_phase'], 'tpg_geometry')
             install.assert_not_called()
             actual.assert_not_called()
             self.assertEqual(json.loads((Path(outdir)/'summary.json').read_text(encoding='utf-8'))['status'], 'timeout')

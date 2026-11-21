@@ -8,6 +8,7 @@ outside the supplied MotionPlanner's transactional query interface.
 """
 from __future__ import annotations
 
+from collections import Counter
 from copy import deepcopy
 import hashlib
 import itertools
@@ -312,6 +313,304 @@ class SampledConflictOracle:
         return self._record(node_a, node_b, {"conflict": first_hit is not None, "evidence": evidence}, started)
 
 
+class _BaselinePlanner:
+    """Instrument the original 2D route without advertising a bounds method."""
+
+    def __init__(self, owner, info):
+        self.owner = owner
+        self.info = info
+
+    def sample_state_pairs(self, samples):
+        return self.owner._sample("fallback", samples, self.owner._fallback_projection)
+
+
+class BroadphaseConflictOracle(SampledConflictOracle):
+    """Reuse only positive projections of full-scene mesh queries.
+
+    One instance is scoped to a fixed stopped scene and the immutable nodes of
+    one TPG build. In a strictly separated pair the original mesh predicate
+    decomposes into local A and B checks and a fixed-scene context. In particular,
+    unheld geometry remains present in the original sample_state_pairs calls.
+    """
+
+    def __init__(self, planner, cfg, outdir, *, bounds_sampler, step=.07):
+        self._remote = planner
+        self._bounds_sampler = bounds_sampler
+        self._fallback_projection = None
+        self._node_bounds = {}
+        blocks = cfg.get("blocks", {})
+        handle_counts = Counter(_canonical(handle) for handle in blocks.values())
+        self._canonical_block_names = {
+            name for name, handle in blocks.items() if handle_counts[_canonical(handle)] == 1
+        } if blocks else None
+        # Logically keyed by arm, own q, own binding, opposing payload name,
+        # placed and options. Group the q values by their common key prefix.
+        self.single_ok_cache = {}
+        self._full_context_ok = set()
+        full_info = getattr(planner, "info", {})
+        bounds_info = getattr(bounds_sampler, "info", {})
+        shared_metadata = ("collision_geometry_policy", "collision_shape_counts")
+        self._bounds_compatible = all(
+            full_info[key] == bounds_info[key] for key in shared_metadata
+            if key in full_info and key in bounds_info
+        )
+        super().__init__(_BaselinePlanner(self, full_info), cfg, outdir, step)
+        self.stats.update({
+            "aabb_seconds": 0.,
+            "cross_query_seconds": 0.,
+            "fallback_query_seconds": 0.,
+            "cross_mesh_queries": 0,
+            "fallback_mesh_queries": 0,
+            "bounds_calls": 0,
+            "bounds_cache_hits": 0,
+            "bounds_sampler_cache_hits": 0,
+            "broadphase_eligible_calls": 0,
+            "broadphase_disjoint_calls": 0,
+            "single_cache_lookups": 0,
+            "single_cache_hits": 0,
+            "cross_calls": 0,
+            "zero_rpc_cross_calls": 0,
+            "fallback_calls": 0,
+            "fallback_reasons": {},
+            "bounds_rejected_nodes": 0,
+            "bounds_rejections": [],
+        })
+
+    @staticmethod
+    def _ordinary(node):
+        if node.get("kind") not in (None, "transit") or node.get("node_type") not in (None, "pose"):
+            return False
+        if node.get("geometry_available") is False or node.get("mode"):
+            return False
+        metadata = node.get("metadata", {})
+        unsupported = ("shared_payload", "closed_chain", "cohold", "coheld", "grasp_transforms")
+        return not any(
+            source.get(key) for source in (node, metadata, metadata.get("options", {}))
+            for key in unsupported
+        ) and not metadata.get("mode")
+
+    def _eligibility(self, nodes, context):
+        if not all(self._ordinary(node) for node in nodes):
+            return "nonordinary_or_shared"
+        if context["options"]["articulations"]:
+            # Per-node bounds use their own options. Refuse their use where
+            # the merged scene moves any articulated part of the workcell.
+            return "merged_articulations"
+        for payload in context["payloads"].values():
+            # With a bare name each backend infers the binding from its current
+            # snapshot at a different layer. Require the same explicit rigid
+            # transform in both the bounds and native mesh query.
+            if not isinstance(payload, Mapping) or not payload.get("offset") or not payload.get("quaternion"):
+                return "implicit_payload_transform"
+            if (self._canonical_block_names is not None
+                    and _payload_name(payload) not in self._canonical_block_names):
+                return "unregistered_or_aliased_payload"
+        return None
+
+    def _projection(self, context):
+        payloads = context["payloads"]
+        world = _canonical((context["placed"], context["options"]))
+        pair = (world, _canonical(payloads))
+        a = ("A", _canonical(payloads.get("A")), _payload_name(payloads.get("B")), world)
+        b = ("B", _canonical(payloads.get("B")), _payload_name(payloads.get("A")), world)
+        return pair, self.single_ok_cache.setdefault(a, set()), self.single_ok_cache.setdefault(b, set())
+
+    def _sample(self, route, samples, projection):
+        began = time.perf_counter()
+        raw = self._remote.sample_state_pairs(samples)
+        self.stats[f"{route}_query_seconds"] += time.perf_counter()-began
+        self.stats[f"{route}_mesh_queries"] += len(samples)
+        if projection is not None:
+            answers = raw.get("results", raw.get("samples")) if isinstance(raw, Mapping) else raw
+            if (isinstance(answers, Sequence) and not isinstance(answers, (str, bytes))
+                    and len(answers) == len(samples)):
+                full_key, good_a, good_b = projection
+                for sample, answer in zip(samples, answers):
+                    if isinstance(answer, Mapping) and answer.get("ok") is True:
+                        self._full_context_ok.add(full_key)
+                        good_a.add(tuple(sample["A"]))
+                        good_b.add(tuple(sample["B"]))
+        return raw
+
+    def _bounds(self, node):
+        # TPG hands the oracle deep-copied nodes. Use stable fragment identity
+        # and inspect the exact geometry so a reused ID cannot reuse a stale box.
+        identity = node.get("id")
+        source = node.get("q_samples") or node.get("q_path")
+        if not source:
+            source = [node.get("q_start"), node.get("q_end", node.get("q_start"))]
+        geometry = (node["arm"], source, node.get("payload"))
+        saved = self._node_bounds.get(identity)
+        if saved is not None and saved[0] == geometry:
+            self.stats["bounds_cache_hits"] += 1
+            return saved[1]
+        began = time.perf_counter()
+        self.stats["bounds_calls"] += 1
+        box, path = None, None
+        try:
+            # Cover the exact discrete grid points checked by the reference
+            # oracle directly. Keep the native sweep inflation and radius test;
+            # equivalence on this finite grid needs no between-point assumption.
+            path = _node_path(node, self.step)
+            result = self._bounds_sampler.bounds_for_node(dict(node, q_samples=path))
+            if not isinstance(result, Mapping):
+                raise ValueError("Malformed node AABB")
+            if result.get("ok") is False:
+                raise ValueError(result.get("error") or "Node AABB refused")
+            if not result.get("covers_between_linear_joint_samples", True):
+                raise ValueError("Node AABB does not cover the sampled path")
+            if node.get("payload") and not result.get("payload_included", True):
+                raise ValueError("Node AABB omitted the carried geometry")
+            low, high = tuple(map(float, result["min"])), tuple(map(float, result["max"]))
+            if len(low) != 3 or len(high) != 3 or not all(
+                math.isfinite(a) and math.isfinite(b) and a <= b for a, b in zip(low, high)
+            ):
+                raise ValueError("Node AABB has invalid coordinates")
+            observed = result.get("max_observed_corner_joint_distance_m")
+            radius = result.get("model_bound_m")
+            if observed is not None and radius is not None and observed > radius+1e-8:
+                raise ValueError("Observed geometry exceeds the revolute-joint radius bound")
+            self.stats["bounds_sampler_cache_hits"] += int(bool(result.get("cache_hit")))
+            box = low, high
+        except Exception as error:
+            from simbridge.errors import is_transport_failure
+
+            if (isinstance(error, TimeoutError) or is_transport_failure(error)
+                    or "restore failed" in str(error).lower()):
+                raise
+            self.stats["bounds_rejected_nodes"] += 1
+            if len(self.stats["bounds_rejections"]) < 8:
+                self.stats["bounds_rejections"].append({"node": node.get("id"), "reason": str(error)})
+        finally:
+            self.stats["aabb_seconds"] += time.perf_counter()-began
+        # Memoize refusals for identical fragments as well as successful boxes.
+        self._node_bounds[identity] = deepcopy(geometry), (box, path)
+        return box, path
+
+    def _fallback(self, a, b, reason, projection=None):
+        self.stats["fallback_calls"] += 1
+        reasons = self.stats["fallback_reasons"]
+        reasons[reason] = reasons.get(reason, 0)+1
+        self._fallback_projection = projection
+        try:
+            return super().__call__(a, b)
+        finally:
+            self._fallback_projection = None
+
+    def __call__(self, node_a, node_b):
+        began = time.perf_counter()
+        nodes = node_a, node_b
+        if node_a["arm"] == node_b["arm"]:
+            return super().__call__(*nodes)
+        context, mismatch = _merge_modes(*nodes, self.cfg)
+        if mismatch:
+            return super().__call__(*nodes)
+        reason = self._eligibility(nodes, context)
+        if reason:
+            return self._fallback(*nodes, reason)
+        if not self._bounds_compatible:
+            return self._fallback(*nodes, "collision_geometry_policy_mismatch")
+        self.stats["broadphase_eligible_calls"] += 1
+        projection = self._projection(context)
+        a, b = (next(n for n in nodes if n["arm"] == arm) for arm in ARMS)
+        (ba, path_a), (bb, path_b) = self._bounds(a), self._bounds(b)
+        if ba is None or bb is None:
+            return self._fallback(*nodes, "bounds_refused", projection)
+        axis = next((i for i in range(3) if ba[1][i] < bb[0][i] or bb[1][i] < ba[0][i]), None)
+        if axis is None:
+            return self._fallback(*nodes, "bounds_overlap_or_touch", projection)
+        self.stats["broadphase_disjoint_calls"] += 1
+        self.stats["cross_calls"] += 1
+        self.stats["oracle_calls"] += 1
+        return self._cross(nodes, (path_a, path_b), context, projection, (ba, bb), axis, began)
+
+    def _cross(self, nodes, paths, context, projection, bounds, axis, began):
+        full_key, good_a, good_b = projection
+        path_a, path_b = (list(map(tuple, path)) for path in paths)
+        anchor = path_a[0], path_b[0]
+        remaining_a = [q for q in path_a if q not in good_a]
+        remaining_b = [q for q in path_b if q not in good_b]
+        hits = len(path_a)+len(path_b)-len(remaining_a)-len(remaining_b)
+        self.stats["single_cache_lookups"] += len(path_a)+len(path_b)
+        self.stats["single_cache_hits"] += hits
+
+        pairs = dict.fromkeys((q, anchor[1]) for q in remaining_a)
+        pairs.update(dict.fromkeys((anchor[0], q) for q in remaining_b))
+        if not pairs and full_key not in self._full_context_ok:
+            pairs[anchor] = None
+
+        queried, considered, exact_hits = 0, 0, 0
+        problem = None
+        pending = []
+        for qa, qb in pairs:
+            sample = {"A": list(qa), "B": list(qb), **context}
+            considered += 1
+            key = _canonical(sample)
+            if key in self.cache:
+                exact_hits += 1
+                if not self.cache[key]["ok"]:
+                    problem = self._collision(sample, self.cache[key])
+                    break
+            else:
+                pending.append((sample, key))
+                if len(pending) == BATCH_SIZE:
+                    problem = self._cross_batch(pending, projection)
+                    queried += len(pending)
+                    pending.clear()
+                    if problem is not None:
+                        break
+        if pending and problem is None:
+            problem = self._cross_batch(pending, projection)
+            queried += len(pending)
+
+        self.stats["mesh_state_queries"] += queried
+        self.stats["cache_hits"] += exact_hits
+        self.stats["states_considered"] += considered
+        self.stats["zero_rpc_cross_calls"] += int(queried == 0)
+        evidence = {
+            "method": "swept_AABB_separated_cross_full_scene",
+            "separation_axis": axis,
+            "bounds_A": {"min": bounds[0][0], "max": bounds[0][1]},
+            "bounds_B": {"min": bounds[1][0], "max": bounds[1][1]},
+            "joint_sample_step_rad": self.step,
+            "all_relative_phases": True,
+            "continuous_collision_guarantee": False,
+            "waiting_endpoint_verification": False,
+            "backend": type(self._remote).__name__+".sample_state_pairs",
+            "grid_shape": [len(path_a), len(path_b)],
+            "pair_states_total": len(path_a)*len(path_b),
+            "pair_states_considered": considered,
+            "new_mesh_queries": queried,
+            "cache_hits": exact_hits,
+            "single_ok_cache_hits": hits,
+            "checked_all_pair_states": considered == len(path_a)*len(path_b) and problem is None,
+            "mode_fingerprint": hashlib.sha256(_canonical(context).encode()).hexdigest(),
+        }
+        if problem is not None:
+            evidence.update(problem)
+        return self._record(*nodes, {"conflict": problem is not None, "evidence": evidence}, began)
+
+    def _cross_batch(self, entries, projection):
+        samples = [sample for sample, _ in entries]
+
+        class Batch:
+            def sample_state_pairs(_, batch):
+                return self._sample("cross", batch, projection)
+
+        answers = _answers(Batch(), samples)
+        self.stats["batch_calls"] += 1
+        problem = None
+        for (sample, key), answer in zip(entries, answers):
+            self.cache[key] = answer
+            if not answer["ok"] and problem is None:
+                problem = self._collision(sample, answer)
+        return problem
+
+    @staticmethod
+    def _collision(sample, answer):
+        return {"problem": deepcopy(answer.get("problem")), "qA": sample["A"], "qB": sample["B"],
+                "payloads": sample["payloads"], "placed": sample["placed"]}
+
 def _configuration_at(node, stamp, beginning, end):
     """Use runtime segment timing when supplied; otherwise reference arclength."""
     elapsed = max(0., stamp-beginning)
@@ -542,4 +841,4 @@ def verify_rollout(tpg, planner, cfg, step_s=.05, *, outdir=None, stop_on_first_
     return report
 
 
-__all__=["SampledConflictOracle","verify_rollout"]
+__all__=["SampledConflictOracle","BroadphaseConflictOracle","verify_rollout"]

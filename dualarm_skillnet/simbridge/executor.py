@@ -1,13 +1,16 @@
 """Build a collision-sampled TPG, execute actual dynamics, and audit evidence."""
 from contextlib import ExitStack
 from copy import deepcopy
+from hashlib import sha256
 import json
 import math
 from pathlib import Path
 import sys
 import time
 
-from apexmr.geometry import SampledConflictOracle, verify_rollout
+from apexmr import fast_interarm
+from apexmr.fast_interarm import FastInterarmSampler
+from apexmr.geometry import BroadphaseConflictOracle, SampledConflictOracle, verify_rollout
 from apexmr.motion import MotionPlanner
 from apexmr.program import parameterize
 from apexmr.sim_connection import FastIdleRestorationError
@@ -22,6 +25,23 @@ from .errors import is_transport_failure
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE = "skillnet_v1_3"
+_BOUNDS_SCRIPT_ALIAS = "Scene3FastInterarmSampler"
+
+
+def _has_stopped_bounds_connection(sim, client):
+    stopped = getattr(sim, "simulation_stopped", None)
+    if type(stopped) is not int or not all(callable(getattr(sim, name, None)) for name in
+            ("createScript", "getSimulationState", "getObjectsInTree", "getObjectAlias")):
+        return False
+    socket = getattr(client, "socket", None)
+    if not all(callable(getattr(socket, name, None)) for name in ("getsockopt", "setsockopt")):
+        return False
+    state = sim.getSimulationState()
+    return type(state) is int and state == stopped
+
+
+def _bounds_script_handles(sim):
+    return sim.getObjectsInTree(sim.handle_scene, sim.object_script_type, 0)
 
 
 class _BudgetedPlanner:
@@ -187,6 +207,10 @@ def execute_plan(sim, client, cfg, tasks, problem, outdir, *, video=False,
                         "scope": "stopped TPG/parameterization/nominal rollout only",
                         "enter_seconds": 0., "restore_seconds": 0., "receipt": None}
     summary["stopped_geometry_context"] = geometry_context
+    bounds_receipt = {"created": False, "closed": False, "script_absent": None,
+                      "script_handle": None, "script_alias": _BOUNDS_SCRIPT_ALIAS,
+                      "lua_sha256": None, "setup_seconds": 0.}
+    summary["tpg_bounds_sampler"] = bounds_receipt
 
     def checkpoint(force=False):
         nonlocal checkpoint_at
@@ -203,6 +227,7 @@ def execute_plan(sim, client, cfg, tasks, problem, outdir, *, video=False,
             "candidate_conflict_pairs": summary.get("candidate_conflict_pairs"),
             "query_statistics": queries,
              "stopped_geometry_context": geometry_context,
+             "tpg_bounds_sampler": bounds_receipt,
             "server_geometry_statistics": summary.get("server_geometry_statistics"),
             "geometry_statistics": {} if oracle is None else dict(getattr(oracle, "stats", {}))})
 
@@ -268,7 +293,36 @@ def execute_plan(sim, client, cfg, tasks, problem, outdir, *, video=False,
                                    candidate_conflict_pairs=structural["counts"]["cross_arm_pairs"],
                                    structural_ordered_pairs_skipped=structural["counts"]["already_ordered_pairs_skipped"])
                     enter("tpg_geometry")
-                    oracle = SampledConflictOracle(budgeted_planner, cfg, output/"geometry")
+                    if _has_stopped_bounds_connection(sim, client):
+                        sampler = None
+                        def verify_bounds_cleanup():
+                            if sampler is None:
+                                return
+                            handles = _bounds_script_handles(sim)
+                            present = bounds_receipt["script_handle"] in handles or any(
+                                sim.getObjectAlias(handle) == _BOUNDS_SCRIPT_ALIAS for handle in handles)
+                            bounds_receipt.update(closed=sampler.script is None, script_absent=not present)
+                            if not bounds_receipt["closed"] or present:
+                                raise RuntimeError("TPG bounds sampler removal was not confirmed in the scene")
+
+                        # ExitStack is LIFO: first close the sampler, then
+                        # verify native removal while still in the idle scope.
+                        geometry_resources.callback(verify_bounds_cleanup)
+                        setup_started = time.monotonic()
+                        sampler = FastInterarmSampler(sim, client, cfg)
+                        geometry_resources.callback(sampler.close)
+                        bounds_receipt["script_handle"] = sampler.script
+                        if (sampler.script not in _bounds_script_handles(sim)
+                                or sim.getObjectAlias(sampler.script) != _BOUNDS_SCRIPT_ALIAS):
+                            raise RuntimeError("TPG bounds sampler creation was not confirmed in the scene")
+                        source = Path(fast_interarm.__file__).with_suffix(".lua")
+                        bounds_receipt.update(created=True, lua_sha256=sha256(source.read_bytes()).hexdigest(),
+                                              setup_seconds=time.monotonic()-setup_started)
+                        checkpoint(force=True)
+                        oracle = BroadphaseConflictOracle(budgeted_planner, cfg, output/"geometry",
+                            bounds_sampler=_BudgetedPlanner(sampler, check_deadline))
+                    else:
+                        oracle = SampledConflictOracle(budgeted_planner, cfg, output/"geometry")
 
                     def timed_oracle(first, second):
                         check_deadline()

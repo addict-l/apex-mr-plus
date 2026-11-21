@@ -1,0 +1,835 @@
+{
+  "schema": "skillnet-v1.4-recovery-validation-v1",
+  "date": "2026-11-20",
+  "handoff_branch": "handoff/skillnet-tpg-broadphase-15of20-20261120",
+  "candidate": "tpg_broadphase_sim20_a1",
+  "candidate_fingerprint": "87dd723bcee7ae34d95daa3359ac911c0383555a428546bb6f0cd7f5cac99e61",
+  "scope": "提取自冻结候选的历史离线与原生验证。发布轮的干净检出自检另有独立收据。绝对路径、运行日志和临时产物未收入。",
+  "source_artifacts": {
+    "report.md": {
+      "source_relative_to_dualarm_skillnet": "results/sim_v1_3/motion_v135/diagnostics/tpg_broadphase_sim20_a1/report.md",
+      "sha256": "5ab7a7514d1d26e1590f9de995d7edb138be07841b6f6ca3e3a89efd6aa6bd79"
+    },
+    "summary.json": {
+      "source_relative_to_dualarm_skillnet": "results/sim_v1_3/motion_v135/diagnostics/tpg_broadphase_sim20_a1/summary.json",
+      "sha256": "78424af16f08ea85ff96191f90c4d45622e3ecd7980fa9f0f74073062b5c58ad"
+    },
+    "comparison.csv": {
+      "source_relative_to_dualarm_skillnet": "results/sim_v1_3/motion_v135/diagnostics/tpg_broadphase_sim20_a1/comparison.csv",
+      "sha256": "0474c4ab286f4fd5f38c4d1156d605565ba5a6058890456041c73ee1c9a7fce7"
+    },
+    "isolation_receipt.json": {
+      "source_relative_to_dualarm_skillnet": "results/sim_v1_3/motion_v135/diagnostics/tpg_broadphase_sim20_a1/isolation_receipt.json",
+      "sha256": "7bfce9a05b792b3a64b894083d8b15262e6d4aff10c4668a6392f235dbf8aff8"
+    },
+    "offline_receipt.json": {
+      "source_relative_to_dualarm_skillnet": "results/sim_v1_3/motion_v135/diagnostics/tpg_broadphase_sim20_a1/offline_receipt.json",
+      "sha256": "a8d43abf5f0e6efd7da958475d318896e2e89be9cacf8bb5556d86d38d7e1ade"
+    },
+    "gate_recovery_receipt.json": {
+      "source_relative_to_dualarm_skillnet": "results/sim_v1_3/motion_v135/diagnostics/tpg_broadphase_sim20_a1/gate_recovery_receipt.json",
+      "sha256": "2c10e21ed1bf634969a7ee489ce217cbe0c19bd4aeb1ad80d1324d74587efc33"
+    },
+    "gate_native_evidence_recheck.json": {
+      "source_relative_to_dualarm_skillnet": "results/sim_v1_3/motion_v135/diagnostics/tpg_broadphase_sim20_a1/gate_native_evidence_recheck.json",
+      "sha256": "6458587d53d7ee0ced804a84b7ce0c82a58b2ad0e06719db3633cd48d4e9110c"
+    },
+    "manifest.json": {
+      "source_relative_to_dualarm_skillnet": "results/sim_v1_3/motion_v135/diagnostics/tpg_broadphase_sim20_a1/manifest.json",
+      "sha256": "88998643e82a187f43cf5f9bf26b9203b47e97c09d3b6c0bd276b000988e4474"
+    },
+    "state/completed.jsonl": {
+      "source_relative_to_dualarm_skillnet": "results/sim_v1_3/motion_v135/diagnostics/tpg_broadphase_sim20_a1/state/completed.jsonl",
+      "sha256": "b2dbf524dffd9f03c32d496f36355ea8c428b4315f8b62375a2b69abaeb6cd9c"
+    },
+    "postflight_receipt.json": {
+      "source_relative_to_dualarm_skillnet": "results/sim_v1_3/motion_v135/diagnostics/tpg_broadphase_sim20_a1/postflight_receipt.json",
+      "sha256": "7727e270fcec85ee1e93a8afbdcedbe8c034342d1490afe3ea3f53a88751ff0c"
+    }
+  },
+  "offline_regression": {
+    "python": "3.11",
+    "passed": 208,
+    "total": 208,
+    "groups": {
+      "online_early_stop": {
+        "modules": [
+          "test_online_early_stop_search",
+          "test_online_early_stop_wiring"
+        ],
+        "total": 10,
+        "passes": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "v11_and_planning_core": {
+        "modules": [
+          "test_v11_admissibility",
+          "test_v11_ordering",
+          "test_v11_reporting",
+          "test_v11_search",
+          "test_search",
+          "test_bounded_search",
+          "test_pipeline",
+          "test_engine",
+          "test_blocks"
+        ],
+        "total": 57,
+        "passes": 57,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "motion_compiler_backend": {
+        "modules": [
+          "test_motion_v135_sample_batch",
+          "test_v13_compiler",
+          "test_coppelia_backend",
+          "test_motion_v135_backend_candidates",
+          "test_adjacent_ik_precheck",
+          "test_adjacent_ik_deadline",
+          "test_motion_v135_certificate_scope"
+        ],
+        "total": 85,
+        "passes": 85,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "broadphase_and_lifecycle": {
+        "modules": [
+          "test_tpg_broadphase_oracle",
+          "test_tpg_bounds_sampler_lifecycle"
+        ],
+        "total": 12,
+        "passes": 12,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "executor_and_stopped_geometry": {
+        "modules": [
+          "test_v13_executor",
+          "test_motion_v135_geometry_scope",
+          "test_motion_v135_tpg_profile",
+          "test_motion_v135_fast_tpg_profile",
+          "test_motion_v135_fast_idle"
+        ],
+        "total": 44,
+        "passes": 44,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  },
+  "native_gate": {
+    "task": "s1_parallel_place",
+    "task_sha256": "ab461dfff439d3622d592455a476488bcacdef85d21d8eac45ae1c4cbc889558",
+    "passed": true,
+    "native_completed_nodes": 108,
+    "native_total_nodes": 108,
+    "independent_violations": 0,
+    "fixed_home_verified": true,
+    "sampler_created_closed_absent": true,
+    "broadphase_disjoint_calls": 1556,
+    "zero_rpc_cross_calls": 1209,
+    "tpg_seconds": 19.343999999924563,
+    "runner_wall_seconds": 105.09399999992456,
+    "native_evidence_sha256": {
+      "summary.json": "f4e75c7f2d43378c94d028f79fd1a74ff280221b091708a9f612ba2e53977612",
+      "execution.json": "77fd8f7c907737f6dea21a32dabb8e94efb1230595cc0a739ecd5127e478e345",
+      "validation.json": "8146ee5d8c8d7709194b56145d6236bca9e48e43772632a199b6516f07645b3a",
+      "execution_validation.json": "8146ee5d8c8d7709194b56145d6236bca9e48e43772632a199b6516f07645b3a",
+      "geometry/rollout_verification.json": "d8b4b8052d077b70fc358b8569eb58b638f383a9aef0df3dd1276e2b9f0aefd6",
+      "reference_receipt.json": "5f17cb349bd6b1be1031fbd5bd0efb07bd975e92f81a1c355693e15e226c9080",
+      "tasks.json": "5985cefe015602797c1553f47265caa91e6d9630f2a8e660c24900c86e7fbbf8",
+      "tpg.json": "72083ac5eb9cf86bbf5ccbe11ca18ba4fd5053c89b376d41dd9e1b4e257d6b75"
+    },
+    "receipt_recovery": {
+      "cause": "客户端注入的 require 覆盖了工作脚本的同名检查，异常发生于正常入口返回之后",
+      "original_gate_sha256": "1de5653535f9a8856a70f0108790d8fb1ab49893a8f53fff57d34c1e575164b9",
+      "native_proof_sha256": "6458587d53d7ee0ced804a84b7ce0c82a58b2ad0e06719db3633cd48d4e9110c",
+      "native_attempt_repeated": false,
+      "strict_native_credit": true
+    }
+  },
+  "fixed_sim20": {
+    "input_paths_relative_to": "dualarm_skillnet/",
+    "qualification_archive_note": "精确复现须从受保护的研究归档取得逐例 qualification_archive_path，对照 SHA-256 后按原文件名放在任务 TOML 同目录。发布分支不附带资格日志。",
+    "complete": true,
+    "submitted": 20,
+    "passed": 15,
+    "pass_rate": 0.75,
+    "baseline": "mount_registry_sim20_a1",
+    "baseline_fingerprint": "81abae5d08e36e7b3e75a9c7b86daebaea4a05523626565bf420b204f5f8a0f7",
+    "baseline_passed": 13,
+    "retained_passes": 13,
+    "added_passes": [
+      "F3_021",
+      "F4_033"
+    ],
+    "regressions": 0,
+    "statuses": {
+      "passed": 15,
+      "unknown": 1,
+      "timeout": 1,
+      "budget": 3
+    },
+    "families": {
+      "F1": {
+        "baseline_passed": 4,
+        "passed": 4,
+        "committed": 4,
+        "denominator": 4
+      },
+      "F2": {
+        "baseline_passed": 4,
+        "passed": 4,
+        "committed": 4,
+        "denominator": 4
+      },
+      "F3": {
+        "baseline_passed": 3,
+        "passed": 4,
+        "committed": 4,
+        "denominator": 4
+      },
+      "F4": {
+        "baseline_passed": 2,
+        "passed": 3,
+        "committed": 4,
+        "denominator": 4
+      },
+      "F5": {
+        "baseline_passed": 0,
+        "passed": 0,
+        "committed": 4,
+        "denominator": 4
+      }
+    },
+    "eligibility_for_r_m3_and_r_m4": "仅从这 15 个原生执行与独立验收均已通过的正常任务中抽取恢复样本。",
+    "eligible_case_ids": [
+      "F1_014",
+      "F1_028",
+      "F1_024",
+      "F1_035",
+      "F2_009",
+      "F2_001",
+      "F2_014",
+      "F2_012",
+      "F3_021",
+      "F3_020",
+      "F3_006",
+      "F3_000",
+      "F4_030",
+      "F4_033",
+      "F4_039"
+    ],
+    "case_wall_limit_seconds": 1200,
+    "seed_policy": "Original qualified TOML and sibling IK qualification logs. Candidate defaults, no artificial RNG override. Historical generation seed 20261115, manifest selection 20261116.",
+    "cases": [
+      {
+        "case": "F1_014",
+        "task_name": "gen_f1_s20261115_014",
+        "source_job_id": "sim20-f1-0",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 1,
+        "runner_wall_seconds": 345.2029999999795,
+        "supervisor_wall_seconds": 349.76599999994505,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F1/014/gen_f1_s20261115_014/gen_f1_s20261115_014.qualified.toml",
+        "task_sha256": "54bdf0fb551a77a3447161b7b66b3940b17ff3d6699196926e6e3d9f729a98b6",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F1/014/gen_f1_s20261115_014/qualify_log.json",
+        "qualification_log_sha256": "81dbce068f977a84c6583183a99bd3a63ee0a3f3c1f408f640931d5bb25be523",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "9491c85ac54975b57481d3fc49a27cc0b1ccb0c85ada94bd1223418cc9f036f1",
+          "execution_validation.json": "0cd50cbd0a09038aba5a3c2dd3f237de58e435639d7dda236e663232d5d8a553",
+          "geometry/rollout_verification.json": "bb2de49279a87bab1bcc65a8173097f08cf7859ca5b29e7b241417ca3c79c74e"
+        }
+      },
+      {
+        "case": "F1_028",
+        "task_name": "gen_f1_s20261115_028",
+        "source_job_id": "sim20-f1-1",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 1,
+        "runner_wall_seconds": 325.530999999959,
+        "supervisor_wall_seconds": 333.9529999999795,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F1/028/gen_f1_s20261115_028/gen_f1_s20261115_028.qualified.toml",
+        "task_sha256": "a97bcdc08e0bbc53140cfaa6ecc825cd435bb61a32fe97fb59d16f27e051797f",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F1/028/gen_f1_s20261115_028/qualify_log.json",
+        "qualification_log_sha256": "c4369ba53c8e6c786e89e8c13014a896bf6b7928c1290a59a3ec9fdfd53bb282",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "870a71873de29e69afaff2b38a03474b4d08d098ca3717fcfbbd3d16b322b090",
+          "execution_validation.json": "6b2a991bc6cf21a213aae7d1300918d118dad109d7738b9fab3120d423d86bce",
+          "geometry/rollout_verification.json": "8f9c3b1234da9588060cc1047039a920e4ab38a9dd5ca31f8a51eef3421670ee"
+        }
+      },
+      {
+        "case": "F1_024",
+        "task_name": "gen_f1_s20261115_024",
+        "source_job_id": "sim20-f1-2",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 1,
+        "runner_wall_seconds": 405.59399999992456,
+        "supervisor_wall_seconds": 409.60899999993853,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F1/024/gen_f1_s20261115_024/gen_f1_s20261115_024.qualified.toml",
+        "task_sha256": "bdc7f3790defc2c21a1a8538d7fd5d0a1130eebda5ccab3a6649eb54210ccf50",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F1/024/gen_f1_s20261115_024/qualify_log.json",
+        "qualification_log_sha256": "7769e56baa3042b9c5ce1e1b1cbf69bbd8645a05b099ca2b4603edf72514174a",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "0fb73fac5bf062aa0b25a858e1b2cbaba13535c7104a54f36052e6a20bea53f3",
+          "execution_validation.json": "1a45696ef375f5a9c1919b13a1f9c01e534620609691b2dc98da45c11a77ad71",
+          "geometry/rollout_verification.json": "08c70fa395747ca6806152b4b0fe959d8fa6d4bbe50ae10326245d8534d4ea6f"
+        }
+      },
+      {
+        "case": "F1_035",
+        "task_name": "gen_f1_s20261115_035",
+        "source_job_id": "sim20-f1-3",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 1,
+        "runner_wall_seconds": 184.51599999994505,
+        "supervisor_wall_seconds": 188.31199999991804,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F1/035/gen_f1_s20261115_035/gen_f1_s20261115_035.qualified.toml",
+        "task_sha256": "4da055c6790595e82e17fb0dfaa08b874b341649b12864f3fd8cc4bfc387d3c2",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F1/035/gen_f1_s20261115_035/qualify_log.json",
+        "qualification_log_sha256": "87fe4d0cd4177c2e15df40f0c9e8658194d725d0195812597aac4b804ba84e8b",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "3d03b000eb135c446acc430b9270957fcdea25ffb23ef968da467886b7551472",
+          "execution_validation.json": "eb63ad935bdd37d43ac94eecaf28eb8329ac8637136725be0a80673121d24daa",
+          "geometry/rollout_verification.json": "47b5d8361e91373af2effb9d555423fc48c23cecb4339cf31d98a10b1ac4b317"
+        }
+      },
+      {
+        "case": "F2_009",
+        "task_name": "gen_f2_s20261115_009",
+        "source_job_id": "sim20-f2-0",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 1,
+        "runner_wall_seconds": 111.875,
+        "supervisor_wall_seconds": 115.625,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F2/009/gen_f2_s20261115_009/gen_f2_s20261115_009.qualified.toml",
+        "task_sha256": "9043f90fe2dd884411de2d0c3d63860ca7ba843147e9958cd15f930721181f61",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F2/009/gen_f2_s20261115_009/qualify_log.json",
+        "qualification_log_sha256": "b010295ffd0cee477a61f7c817ba8b0d8b2638ac351493cf5539dd739ece4749",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "d4c4675dadc7e8d2514766a2a48e33ac3cd3696ba8295599680249d517708ff8",
+          "execution_validation.json": "0b439200b0aea650d6feac54255c3bbbbd580e1f19687ee408d475982b2f6b50",
+          "geometry/rollout_verification.json": "04c3bc85456e4bdc5c781ad409a46f8ff6ee1f2a7332383cf29ce13b4796def2"
+        }
+      },
+      {
+        "case": "F2_001",
+        "task_name": "gen_f2_s20261115_001",
+        "source_job_id": "sim20-f2-1",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 1,
+        "runner_wall_seconds": 103.78099999995902,
+        "supervisor_wall_seconds": 107.53100000007544,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F2/001/gen_f2_s20261115_001/gen_f2_s20261115_001.qualified.toml",
+        "task_sha256": "6aed1f1b8c722c56dec9daa1d07be105e78d30743c235ba68f764149ae87e738",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F2/001/gen_f2_s20261115_001/qualify_log.json",
+        "qualification_log_sha256": "acbfa2780606a69a784c25b79737da334e89d52c1d0db717fe705c81be2f6935",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "4072b9e21c1578130275a612ae55fb86f9f0fbdfaf1f8e73d6a8106547ce6d94",
+          "execution_validation.json": "45c908b6d59cd58d199fa1c5b9d9cd32a56a9f62c765cfa5445534f3dcdf795d",
+          "geometry/rollout_verification.json": "b11ce912310901b9843e15f110c69d5cedf8717192ea8804dc873a92e2baaf9a"
+        }
+      },
+      {
+        "case": "F2_014",
+        "task_name": "gen_f2_s20261115_014",
+        "source_job_id": "sim20-f2-2",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 6,
+        "runner_wall_seconds": 348.6570000000065,
+        "supervisor_wall_seconds": 352.26600000006147,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F2/014/gen_f2_s20261115_014/gen_f2_s20261115_014.qualified.toml",
+        "task_sha256": "0a96ab247e074a104891604134704d98846d91c223294711179b458987510293",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F2/014/gen_f2_s20261115_014/qualify_log.json",
+        "qualification_log_sha256": "3119075a1000d4150427d1e17f2050af6476a1d835e7a3f29f65344d0b0b14a3",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "e0ed199abf37ada9ccd552ccd19eeffe3d7557ba52f5cb6e87bcf2dd459e0c92",
+          "execution_validation.json": "8557e5b3b715b4301461a6ad310875de15cf9594dacbb8bff652a30323f2dcb9",
+          "geometry/rollout_verification.json": "bac08a01fcaf2d0d6ff9f41fa70e4fa0abcd13aab2284c3e34348be9af665fbd"
+        }
+      },
+      {
+        "case": "F2_012",
+        "task_name": "gen_f2_s20261115_012",
+        "source_job_id": "sim20-f2-3",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 6,
+        "runner_wall_seconds": 525.2029999999795,
+        "supervisor_wall_seconds": 529.140999999945,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F2/012/gen_f2_s20261115_012/gen_f2_s20261115_012.qualified.toml",
+        "task_sha256": "cde22aaca4e95ccef7393c7c5f56d47f0d7b8d052e9ac9cae6fb2f304e20c0cc",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F2/012/gen_f2_s20261115_012/qualify_log.json",
+        "qualification_log_sha256": "df3ed3027d8eb7ea227b5db8142a6953efcb9a2a202421b57cd429909f1d0062",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "975b0147c7c0191edeb197a72c8b10ca2d02c40bdd3456b7fae88ef0ff70aaa7",
+          "execution_validation.json": "cafdd5af0c81b513cc79ffcb8b10f42615e97e6a5fee4a252c8dfa82cd5386c5",
+          "geometry/rollout_verification.json": "e0d00a9972cc35f6f2584cd74dd5c5e10c30dca4348e7700c4f4f9333dc0fbb6"
+        }
+      },
+      {
+        "case": "F3_021",
+        "task_name": "gen_f3_s20261115_021",
+        "source_job_id": "sim20-f3-0",
+        "baseline_status": "budget",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 1,
+        "runner_wall_seconds": 473.0929999999935,
+        "supervisor_wall_seconds": 476.875,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F3/021/gen_f3_s20261115_021/gen_f3_s20261115_021.qualified.toml",
+        "task_sha256": "941de06c1a30217afda2bf2375017a6d516e6ad6a3b7dc54f2640232371fad83",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F3/021/gen_f3_s20261115_021/qualify_log.json",
+        "qualification_log_sha256": "83bad6ba799fd02c5bded5cd19f00ab3bf57e313981f4d2d5727f526fdc2e281",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "7abba3fede31152bd6ee9ea2303ead44f8051b4c0aed2dda71a7eaa8f43920db",
+          "execution_validation.json": "dcc26827e9a20dfa26e2bcb396ea5c77abdb7a82f646a276d91c1a3b6c0b417b",
+          "geometry/rollout_verification.json": "4f377ad079d802272ae51d03391c44f63b1e78eab5d84db9151e9e978545a719"
+        }
+      },
+      {
+        "case": "F3_020",
+        "task_name": "gen_f3_s20261115_020",
+        "source_job_id": "sim20-f3-1",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 2,
+        "runner_wall_seconds": 274.4529999999795,
+        "supervisor_wall_seconds": 278.39099999994505,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F3/020/gen_f3_s20261115_020/gen_f3_s20261115_020.qualified.toml",
+        "task_sha256": "ade06636b4a367fa6b92a828fca58ec48e281fc0052aecb673031317a64fad56",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F3/020/gen_f3_s20261115_020/qualify_log.json",
+        "qualification_log_sha256": "3449f76cebfa7addbe6d4a305ac57eef2406fc10808f6a94507f6f6ee5a2db2c",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "128e518c5a8495647f8745d71a68cd936fff714f55658290585bb85460b34f21",
+          "execution_validation.json": "e0a3148582d4582b1ed8dbf07f55dd081fcbc3ab97300d2f5bf5158d350b9aab",
+          "geometry/rollout_verification.json": "bebbc7ee2389b9f15c0d1d5722ab65d384913b36f951bd30c204a59c366d31c3"
+        }
+      },
+      {
+        "case": "F3_006",
+        "task_name": "gen_f3_s20261115_006",
+        "source_job_id": "sim20-f3-2",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 1,
+        "runner_wall_seconds": 332.35999999998603,
+        "supervisor_wall_seconds": 336.2970000000205,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F3/006/gen_f3_s20261115_006/gen_f3_s20261115_006.qualified.toml",
+        "task_sha256": "433e549d8edb6c225244d098be6f5ccfca9587b5179d4ac127d2eda672e9d436",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F3/006/gen_f3_s20261115_006/qualify_log.json",
+        "qualification_log_sha256": "5da858af95d35b23c26924f16e5eb038f0d64aed2a4f83fd25a38be7c55a5e59",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "31489b3bdc4bc8a80fe5f21208844cbeef33a734e6dcc3994d04b787902db3de",
+          "execution_validation.json": "ceb3698953c37139056ad13ac4a2c811ddf400d62dc7cf8a615d4270b5f78849",
+          "geometry/rollout_verification.json": "a7cf4626c212a8e506b11b2165f9e6bb7eed7c22ef7cc407fcc9dc30dfb8eacf"
+        }
+      },
+      {
+        "case": "F3_000",
+        "task_name": "gen_f3_s20261115_000",
+        "source_job_id": "sim20-f3-3",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 1,
+        "runner_wall_seconds": 319.81199999991804,
+        "supervisor_wall_seconds": 323.469000000041,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F3/000/gen_f3_s20261115_000/gen_f3_s20261115_000.qualified.toml",
+        "task_sha256": "8abe138d8ddc0855cd87c3a086e3982737e7fdfcd6b0d72d5b4de6bbbf0f6cd0",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F3/000/gen_f3_s20261115_000/qualify_log.json",
+        "qualification_log_sha256": "53ccf0921ea9228078de3467be8732265cb79faab68fb12f1009faa7ab1fa741",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "6f1039bfddc3f671dc8a22263b1615afe6352045e3953854cfe3faa9b5ae1252",
+          "execution_validation.json": "42606e6d209bed4b96371d5ae5f7f42e65a52a69c38880cce917beaf310487d5",
+          "geometry/rollout_verification.json": "d4485ab944008aa70ec6cecdcc9eea10d8cf36a32ad2de5951690aacfdab65f2"
+        }
+      },
+      {
+        "case": "F4_030",
+        "task_name": "gen_f4_s20261115_030",
+        "source_job_id": "sim20-f4-0",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 1,
+        "runner_wall_seconds": 344.905999999959,
+        "supervisor_wall_seconds": 348.625,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F4/030/gen_f4_s20261115_030/gen_f4_s20261115_030.qualified.toml",
+        "task_sha256": "c46509f35eb4bb497060ba913175cadefd8c67cdaedd732e2c41e11cd5afaa9c",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F4/030/gen_f4_s20261115_030/qualify_log.json",
+        "qualification_log_sha256": "fac631f6f53fa3257ae8147c1cabbf3dade28c17afa154b777df70e0a69de832",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "8a4bb0c9f8bd441daecf607aac53ce61562c0372a1742916bab75babdcceba70",
+          "execution_validation.json": "3f795467ea94f2d0bdbfaab405d4a4b2061ac064aed0b471a69e59bbebb326f2",
+          "geometry/rollout_verification.json": "983bd709915a3cb8beb53c628a4f75a438b3deddc9d2cc066efe205bde7f111b"
+        }
+      },
+      {
+        "case": "F4_033",
+        "task_name": "gen_f4_s20261115_033",
+        "source_job_id": "sim20-f4-1",
+        "baseline_status": "unknown",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 7,
+        "runner_wall_seconds": 842.0320000000065,
+        "supervisor_wall_seconds": 845.969000000041,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F4/033/gen_f4_s20261115_033/gen_f4_s20261115_033.qualified.toml",
+        "task_sha256": "c2fffc9b418a676043c93b428acb5867e3aa82fbd40ae6efc16b8dca5f0e403d",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F4/033/gen_f4_s20261115_033/qualify_log.json",
+        "qualification_log_sha256": "c3833f4cc8a9db8319771d87c17fa54db6bc9646c76b06d77bcf51218f477ccf",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "5ec7b167941c6f74310252cae8167bcb737ecba0793d1215e0b385bece1c3bec",
+          "execution_validation.json": "766f320dde7cc9293cd99b725d2895d118d6627f891f85e7a5eb5e6e8f7d9e1c",
+          "geometry/rollout_verification.json": "14d6fc95b2654abd55488ff66352e924984a18e8af7a883ad80008920c8cec44"
+        }
+      },
+      {
+        "case": "F4_039",
+        "task_name": "gen_f4_s20261115_039",
+        "source_job_id": "sim20-f4-2",
+        "baseline_status": "passed",
+        "status": "passed",
+        "passed": true,
+        "feedback_rounds": 7,
+        "runner_wall_seconds": 849.609999999986,
+        "supervisor_wall_seconds": 859.3279999999795,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F4/039/gen_f4_s20261115_039/gen_f4_s20261115_039.qualified.toml",
+        "task_sha256": "ea05eaa37e4cf5475a0206fc0cb721ccccd80698ad3272c0683e463efb114148",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F4/039/gen_f4_s20261115_039/qualify_log.json",
+        "qualification_log_sha256": "c52ffebdbb58c74bbd82a2f3d1da9784b93484ae095f9831a79d6bdba3d8f743",
+        "native_execution_passed": true,
+        "independent_validation_passed": true,
+        "sampled_rollout_passed": true,
+        "native_evidence_sha256": {
+          "execution.json": "5ad789e7acff7f66373d712326f07bc6f91302f8e4515f192f2e6be13c7db0d4",
+          "execution_validation.json": "4828f6f560ed50fc2dbd1687fdb343ed4393a5afc5e988fd3a388b6b89271615",
+          "geometry/rollout_verification.json": "1fbc8d2ee3098b73b0ebaa869825f63d9fae13c4fcbc7064d93bc04599a044b6"
+        }
+      },
+      {
+        "case": "F4_013",
+        "task_name": "gen_f4_s20261115_013",
+        "source_job_id": "sim20-f4-3",
+        "baseline_status": "unknown",
+        "status": "unknown",
+        "passed": false,
+        "feedback_rounds": 3,
+        "runner_wall_seconds": 262.8429999999935,
+        "supervisor_wall_seconds": 266.68799999996554,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F4/013/gen_f4_s20261115_013/gen_f4_s20261115_013.qualified.toml",
+        "task_sha256": "b7fc2b71b0cec6355893dc39989243d5de17d7c2eb2ae8322f7084926e4fb236",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F4/013/gen_f4_s20261115_013/qualify_log.json",
+        "qualification_log_sha256": "76c0c896d11812f54dba5a84c2796d9e83bb96b57552365fe43076ccd21b7ba0",
+        "dynamics_started": false,
+        "independent_validation_passed": null,
+        "terminal_point": {
+          "phase": "final_reference",
+          "class": "home_goal_collision",
+          "segment": "home_B",
+          "detail": "完整参考验证未通过（home_B）：运动段 home_B 的轨迹点碰撞或无效：{'pair': ['/B_UR5/B_GripperPalm', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+          "pair": [
+            "/B_UR5/B_GripperPalm",
+            "/counterweight"
+          ],
+          "home_attempts": [
+            {
+              "order": [
+                "A",
+                "B"
+              ],
+              "phase": "goal",
+              "status": "UNKNOWN",
+              "detail": "运动段 home_B 的轨迹点碰撞或无效：{'pair': ['/B_UR5/B_GripperPalm', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+              "pair": [
+                "/B_UR5/B_GripperPalm",
+                "/counterweight"
+              ],
+              "failed_segment": "home_B"
+            },
+            {
+              "order": [
+                "B",
+                "A"
+              ],
+              "phase": "goal",
+              "status": "UNKNOWN",
+              "detail": "运动段 home_B 的轨迹点碰撞或无效：{'pair': ['/B_UR5/B_GripperPalm', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+              "pair": [
+                "/B_UR5/B_GripperPalm",
+                "/counterweight"
+              ],
+              "failed_segment": "home_B"
+            }
+          ],
+          "evidence": "motion_backend.json"
+        },
+        "last_progress": {
+          "phase": "real_planning/feedback_round:after",
+          "round": 3,
+          "query": "feedback_round",
+          "artifact_sequence": 90
+        }
+      },
+      {
+        "case": "F5_028",
+        "task_name": "gen_f5_s20261115_028",
+        "source_job_id": "sim20-f5-0",
+        "baseline_status": "budget",
+        "status": "timeout",
+        "passed": false,
+        "feedback_rounds": 9,
+        "runner_wall_seconds": null,
+        "supervisor_wall_seconds": 1200.140000000014,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F5/028/gen_f5_s20261115_028/gen_f5_s20261115_028.qualified.toml",
+        "task_sha256": "d750d605d6eecdc75c2f1c3f77e6b5275179c69f2b41a260ac667bc8ca6b0f14",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F5/028/gen_f5_s20261115_028/qualify_log.json",
+        "qualification_log_sha256": "135fce3ec5f78c2cdfee7f9fa0a18f2e8b83ddf5c0323b5ada9b968a3b661848",
+        "dynamics_started": false,
+        "independent_validation_passed": null,
+        "terminal_point": {
+          "phase": "real_planning/symbolic_search:before",
+          "class": "wall_clock_timeout",
+          "detail": "原单任务1200秒硬墙钟到限",
+          "budget_basis": "墙钟上限"
+        },
+        "last_progress": {
+          "phase": "real_planning/symbolic_search:before",
+          "round": 10,
+          "query": "symbolic_search",
+          "artifact_sequence": 391
+        }
+      },
+      {
+        "case": "F5_037",
+        "task_name": "gen_f5_s20261115_037",
+        "source_job_id": "sim20-f5-1",
+        "baseline_status": "budget",
+        "status": "budget",
+        "passed": false,
+        "feedback_rounds": 12,
+        "runner_wall_seconds": 674.9220000000205,
+        "supervisor_wall_seconds": 679.125,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F5/037/gen_f5_s20261115_037/gen_f5_s20261115_037.qualified.toml",
+        "task_sha256": "d3451e3ac1207161fcee0954ce8d16491349521e4553d760524cd87355339b19",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F5/037/gen_f5_s20261115_037/qualify_log.json",
+        "qualification_log_sha256": "ab843d59b9950dcc68f9af4d6be2b820ac679c1c675993801d985c3488bee19e",
+        "dynamics_started": false,
+        "independent_validation_passed": null,
+        "terminal_point": {
+          "round": null,
+          "action": "insert(B, beam_block, beam)",
+          "segment": null,
+          "class": "sampling_unknown",
+          "detail": "运动段 r1 的 IK 已耗尽 24 个种子：未找到解",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN",
+          "phase": "real_planning",
+          "evidence": "motion_backend.json",
+          "budget_basis": "反馈轮数上限"
+        },
+        "last_progress": {
+          "phase": "real_planning/feedback_round:after",
+          "round": 12,
+          "query": "feedback_round",
+          "artifact_sequence": 422
+        }
+      },
+      {
+        "case": "F5_033",
+        "task_name": "gen_f5_s20261115_033",
+        "source_job_id": "sim20-f5-2",
+        "baseline_status": "timeout",
+        "status": "budget",
+        "passed": false,
+        "feedback_rounds": 12,
+        "runner_wall_seconds": 722.2810000000754,
+        "supervisor_wall_seconds": 726.5780000000959,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F5/033/gen_f5_s20261115_033/gen_f5_s20261115_033.qualified.toml",
+        "task_sha256": "02cb07f2548cdad14b5325419fd3ca6a3eaa43f8a9c645692071749065386fab",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F5/033/gen_f5_s20261115_033/qualify_log.json",
+        "qualification_log_sha256": "8f3a4f17f251652ec8aa87254bb887a017f4597a1699c2f3777b18e459e2309c",
+        "dynamics_started": false,
+        "independent_validation_passed": null,
+        "terminal_point": {
+          "round": null,
+          "action": "place(B, beam_block, stock_b1)",
+          "segment": null,
+          "class": "rrt_exhausted",
+          "detail": "运动段 r1 的 RRT-Connect 失败（local_box 均未找到解）：No exact collision-free solution within budget; {'pair': ['/B_UR5/link', '/B_UR5/B_joint_5/link'], 'reason': 'self_collision:B'}",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN",
+          "phase": "real_planning",
+          "evidence": "motion_backend.json",
+          "budget_basis": "反馈轮数上限"
+        },
+        "last_progress": {
+          "phase": "real_planning/feedback_round:after",
+          "round": 12,
+          "query": "feedback_round",
+          "artifact_sequence": 440
+        }
+      },
+      {
+        "case": "F5_024",
+        "task_name": "gen_f5_s20261115_024",
+        "source_job_id": "sim20-f5-3",
+        "baseline_status": "budget",
+        "status": "budget",
+        "passed": false,
+        "feedback_rounds": 12,
+        "runner_wall_seconds": 781.780999999959,
+        "supervisor_wall_seconds": 785.9529999999795,
+        "task_archive_path": "results/sim_v1_3/v133/qualification/F5/024/gen_f5_s20261115_024/gen_f5_s20261115_024.qualified.toml",
+        "task_sha256": "19e17f87a69ca84195058f173733b9eee4a785f781425bb14b92e802ea78825a",
+        "qualification_archive_path": "results/sim_v1_3/v133/qualification/F5/024/gen_f5_s20261115_024/qualify_log.json",
+        "qualification_log_sha256": "582b6336fa017bb19b3b5b3f758c77b1c770aa8827aa37ed888f5d38c4e6a8b4",
+        "dynamics_started": false,
+        "independent_validation_passed": null,
+        "terminal_point": {
+          "round": null,
+          "action": "place(A, beam_block, stock_a2)",
+          "segment": null,
+          "class": "rrt_exhausted",
+          "detail": "运动段 r1 的 RRT-Connect 失败（ 均未找到解）：No new endpoint within shared RRT budget; None",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN",
+          "phase": "real_planning",
+          "evidence": "motion_backend.json",
+          "budget_basis": "反馈轮数上限"
+        },
+        "last_progress": {
+          "phase": "real_planning/feedback_round:after",
+          "round": 12,
+          "query": "feedback_round",
+          "artifact_sequence": 450
+        }
+      }
+    ]
+  },
+  "historical_postflight": {
+    "history_hash_audit_passed": true,
+    "history_changes": [],
+    "archive_audit_passed": true,
+    "archive_changes": [],
+    "coppeliasim_processes": [],
+    "port_23210_free": true,
+    "c_free_gib": 33.346
+  },
+  "release_offline_verification": {
+    "passed": true,
+    "planning_smoke_passed": 21,
+    "focused_passed": 208,
+    "counting_note": "冒烟与聚焦集合有重叠，分别验收。",
+    "new_simulations_started": 0,
+    "groups": {
+      "planning_smoke": {
+        "tests": 21,
+        "expected": 21,
+        "passed": true,
+        "log_sha256": "9f07246ff22ef2775d0be27908e6ea33dfe74aef03e88ff9d27b3ee9b776ecb9"
+      },
+      "online_early_stop": {
+        "tests": 10,
+        "expected": 10,
+        "passed": true,
+        "log_sha256": "53f7d7e48271be467002ef13e7e89f597eedf9d09ed6818146c7be474f16c697"
+      },
+      "v11_and_planning_core": {
+        "tests": 57,
+        "expected": 57,
+        "passed": true,
+        "log_sha256": "f81edc0bbd6f72bce932aafbc720703c5b449ef3d9d596121c4ec492546b5784"
+      },
+      "motion_compiler_backend": {
+        "tests": 85,
+        "expected": 85,
+        "passed": true,
+        "log_sha256": "4b30f0a44b53dd9eb09e3f5e01bbce2e776cf510d3ed211c0613c028fe5281c9"
+      },
+      "broadphase_and_lifecycle": {
+        "tests": 12,
+        "expected": 12,
+        "passed": true,
+        "log_sha256": "f473192bef044263b6a3bf1a5cb3b7e390efc44972b58eb32b872b15e309cbac"
+      },
+      "executor_and_stopped_geometry": {
+        "tests": 44,
+        "expected": 44,
+        "passed": true,
+        "log_sha256": "647d081bb3909a14efb47a01be0738bfbe4ccb662f28538475b7496aad339da2"
+      }
+    }
+  }
+}
