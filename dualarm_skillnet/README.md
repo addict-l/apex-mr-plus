@@ -19,6 +19,34 @@ python -X utf8 -m skillnet all --out out
 
 命令退出码：成功为 `0`，规划未解决为 `1`，输入或文件错误为 `2`。
 
+## 备份优先的增量恢复
+
+离线阶段先规划正常路线，同时保存搜索中展开过的候选动作边。在正常路线的停稳检查点，临时屏蔽下一步的机械臂技能或具体动作，生成从该状态出发的备选后缀。备份数、检查点数和候选图大小都可按离线预算调整。
+
+```sh
+python -B -m skillnet.recovery prepare tasks/s1_nearest_arm.toml --out out/recovery-flat
+python -B -m skillnet.recovery recover tasks/s1_nearest_arm.toml --bundle out/recovery-flat --snapshot out/fault.json --compare
+```
+
+上面的 `out/fault.json` 模拟在中央积木任务开始前失去 A 臂的放置技能。一般任务从停稳后的实测状态生成这些事实，也可以从 `plans.json` 取一个检查点做离线实验。
+
+```json
+{
+  "state": [
+    "arm_at(A, home_A)", "arm_at(B, home_B)",
+    "free(A)", "free(B)", "at(red, stock_c)", "empty(board_c)"
+  ],
+  "disabled_skills": {"A": ["place"]}
+}
+```
+
+`disabled_actions` 可列出失效的具体动作，例如 `["place(A, red, board_c)"]`。`capabilities` 可按事实更新资格，例如 `{"reach(A, board_c)": "UNKNOWN"}`。输入使用原任务已登记的积木、位置和槽位，并提供完整的停稳状态。
+
+- **备份命中。** 用实测事实重放备选动作，重新检查前置条件、三值能力、资源占用、结构稳定性和原目标。返回已验证备选中工时最短的一条，输出 `stage: backup`。候选图文件无需读取，最优性界为空。
+- **备份未命中。** 加载离线候选图，复用相同符号状态已计算的出边。能力依赖改变的动作按新能力表复核，未缓存的状态按需生成出边。搜索覆盖当前全部可用动作，输出 `stage: graph_search`、复用和新生成的计数。最优性界到达 1 时，表示已证明当前符号模型下的最优工时。
+
+`plans.json` 存放正常路线与备选后缀，图文件单独保存。任务、技能库或负责转换的代码变更后应重新 `prepare`。`--compare` 用同一故障状态额外运行现有规划器作对照。当前实现的验收范围是离线符号恢复，包括备份选路和搜索，运动轨迹与 CoppeliaSim 续跑由仿真层接入。
+
 ## 输入格式
 
 技能库位于 `skills/blocks_v1.toml`，所有任务共享同一份九技能定义。参数类型为 `arm`、`block`、`loc`、`slot`，`pre` 允许否定条件，`add` 在结束时生效，`delete` 在开始时生效。技能网络从效果与前置条件自动生成，推导条件通过领域声明的基础谓词连线。

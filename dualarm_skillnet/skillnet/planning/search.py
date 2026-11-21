@@ -71,10 +71,21 @@ def _early_reachability(engine, *, start, goal, allowed, protected, running=(), 
     return SearchResult(status, [], 0., 0, 1, rejected, unknown, monotonic()-began)
 
 
+def _advance(engine, state, running):
+    delta = min(remaining for _, remaining in running)
+    pending = []
+    for key, remaining in running:
+        if remaining <= delta:
+            state = engine.finish(engine.actions[key], state)
+        else:
+            pending.append((key, _time(remaining - delta)))
+    return state, tuple(pending), delta
+
+
 def _search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
             allowed=None, max_expansions=200_000, time_limit=60.0,
             bound=None, upper=None, observer=None, initial_running=(), weight=1.,
-            prune_infinite=False, deadline=None):
+            prune_infinite=False, deadline=None, candidate_graph=None):
     if isinstance(weight, bool) or not isinstance(weight, (int, float)) or not isfinite(weight) or weight < 1:
         raise ValueError("搜索权重必须是大于等于1的有限数")
     began = monotonic()
@@ -205,7 +216,9 @@ def _search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
             busy.update(action.occupies)
             structural |= action.structural
             running_keys.add(key)
-        for action in engine.candidates(node.state):
+        candidates = ((action, None) for action in engine.candidates(node.state)) if candidate_graph is None else (
+            candidate_graph.starts(node.state))
+        for action, cached_duration in candidates:
             if deadline is not None and window_expired(token):
                 return result("budget")
             if allowed is not None and action.key not in allowed:
@@ -214,10 +227,12 @@ def _search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
                 continue
             if action.structural and structural:
                 continue
-            if not engine.satisfied(action.pre, node.state):
+            if candidate_graph is None and not engine.satisfied(action.pre, node.state):
                 continue
             if action.key not in capability_cache:
-                capability_cache[action.key] = engine.oracle.evaluate(action.capability)
+                capability_cache[action.key] = (
+                    engine.oracle.evaluate(action.capability) if candidate_graph is None
+                    else candidate_graph.evaluate(action))
             status, evidence = capability_cache[action.key]
             if status != Status.VALID:
                 rejected["capability_invalid" if status == Status.INVALID else "capability_unknown"] += 1
@@ -230,10 +245,10 @@ def _search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
                 rejected["protected"] += 1
                 continue
             state = engine.start(action, node.state)
-            if engine.hooks.invariant(state):
+            if (engine.hooks.invariant(state) if candidate_graph is None else cached_duration is None):
                 rejected["invariant"] += 1
                 continue
-            duration = _time(cost.estimate(action, node.state))
+            duration = _time(cost.estimate(action, node.state)) if candidate_graph is None else cached_duration
             if duration <= 0:
                 raise ValueError(f"动作 {action} 的耗时必须大于零")
             running = tuple(sorted(node.running + ((action.key, duration),)))
@@ -244,18 +259,11 @@ def _search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
         if deadline is not None and window_expired(token):
             return result("budget")
         if node.running:
-            delta = min(remaining for _, remaining in node.running)
-            state = node.state
-            running = []
-            for key, remaining in node.running:
-                if remaining <= delta:
-                    state = engine.finish(engine.actions[key], state)
-                else:
-                    running.append((key, _time(remaining - delta)))
+            state, running, delta = _advance(engine, node.state, node.running)
             if engine.hooks.invariant(state):
                 rejected["invariant"] += 1
             else:
-                enqueue(_Node(state, tuple(running), _time(node.time + delta),
+                enqueue(_Node(state, running, _time(node.time + delta),
                               node.deviation, node))
         if deadline is not None and window_expired(token):
             return result("budget")
@@ -265,7 +273,7 @@ def _search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
 def weighted_anytime(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
                      allowed=None, max_expansions=200_000, time_limit=60.0,
                      bound=None, observer=None, initial_running=(),
-                     post_first_solution_limit: float | None = None):
+                     post_first_solution_limit: float | None = None, candidate_graph=None):
     """Restart weighted A* under one budget, retaining a feasible incumbent.
 
     Weights change only OPEN ordering. Every certificate uses the unweighted
@@ -294,6 +302,8 @@ def weighted_anytime(engine, *, start=None, goal=None, hint=None, cuts=(), prote
     options = dict(start=start, goal=goal, hint=hint, cuts=cuts, protected=protected,
                    allowed=allowed, max_expansions=max_expansions, time_limit=time_limit,
                    observer=observer, initial_running=initial_running)
+    if candidate_graph is not None:
+        options["candidate_graph"] = candidate_graph
     if max_expansions <= 0 or time_limit <= 0:
         return annotate(_search(engine, **options))
     began = monotonic()
@@ -502,8 +512,8 @@ def weighted_anytime(engine, *, start=None, goal=None, hint=None, cuts=(), prote
 
 def search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
            allowed=None, max_expansions=200_000, time_limit=60.0, initial_running=(),
-           post_first_solution_limit: float | None = None):
+           post_first_solution_limit: float | None = None, candidate_graph=None):
     return weighted_anytime(engine, start=start, goal=goal, hint=hint, cuts=cuts,
         protected=protected, allowed=allowed, max_expansions=max_expansions,
         time_limit=time_limit, initial_running=initial_running,
-        post_first_solution_limit=post_first_solution_limit)
+         post_first_solution_limit=post_first_solution_limit, candidate_graph=candidate_graph)
