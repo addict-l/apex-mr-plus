@@ -74,7 +74,7 @@ def _early_reachability(engine, *, start, goal, allowed, protected, running=(), 
 def _search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
             allowed=None, max_expansions=200_000, time_limit=60.0,
             bound=None, upper=None, observer=None, initial_running=(), weight=1.,
-            prune_infinite=False, deadline=None):
+            prune_infinite=False, deadline=None, check_reachability=True):
     if isinstance(weight, bool) or not isinstance(weight, (int, float)) or not isfinite(weight) or weight < 1:
         raise ValueError("搜索权重必须是大于等于1的有限数")
     began = monotonic()
@@ -163,7 +163,7 @@ def _search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
     if engine.hooks.invariant(initial):
         rejected["invariant"] += 1
         return result("no_plan")
-    if max_expansions > 0 and time_limit > 0:
+    if check_reachability and max_expansions > 0 and time_limit > 0:
         early = _early_reachability(engine, start=initial, goal=targets, allowed=allowed,
                                    protected=protected, running=root_running, began=began)
         if deadline is not None and window_expired():
@@ -265,12 +265,13 @@ def _search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
 def weighted_anytime(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
                      allowed=None, max_expansions=200_000, time_limit=60.0,
                      bound=None, observer=None, initial_running=(),
-                     post_first_solution_limit: float | None = None):
+                     post_first_solution_limit: float | None = None, repair_actions=None):
     """Restart weighted A* under one budget, retaining a feasible incumbent.
 
     Weights change only OPEN ordering. Every certificate uses the unweighted
     live frontier of the most recent full-action search; the reference probe
     can provide an incumbent, never a full-action optimality certificate.
+    A caller can supply a small repair scope to look for an incumbent first.
     An optional improvement window starts with the first feasible incumbent.
     """
     enabled = post_first_solution_limit is not None
@@ -358,14 +359,33 @@ def weighted_anytime(engine, *, start=None, goal=None, hint=None, cuts=(), prote
             "lower_bound": answer.lower_bound if phase == "weighted" else None,
             "suboptimality_bound": answer.suboptimality_bound if phase == "weighted" else None,
             "action_scope": action_scope or ("all_actions" if allowed is None else "caller_allowed"),
-            "allowed_actions": allowed_actions if phase in {"reference", "incumbent"} else
+            "allowed_actions": allowed_actions if phase in {"reference", "incumbent", "repair"} else
                 (len(allowed) if allowed is not None else None),
-            "incumbent_only": phase in {"reference", "incumbent"}, "time_budget": time_budget,
+            "incumbent_only": phase in {"reference", "incumbent", "repair"}, "time_budget": time_budget,
             "expansion_budget": expansion_budget, "non_admissible_ordering": phase=='incumbent',
             "first_solution_seconds": first_solution_seconds,
             "first_solution_expanded": first_solution_expanded})
 
-    if guide_eligible:
+    if repair_actions:
+        repair_scope = frozenset(repair_actions)
+        if allowed is not None:
+            repair_scope &= allowed
+        repair_deadline = min(deadline, monotonic()+min(.5, time_limit/4))
+        repair_time = repair_deadline-monotonic()
+        repair_expansions = min(2_000, max_expansions//4)
+        if repair_scope and repair_time > 0 and repair_expansions > 0:
+            answer = _search(engine, **{**options, "allowed": repair_scope,
+                "time_limit": repair_time, "max_expansions": repair_expansions},
+                bound=bound, weight=3., deadline=repair_deadline, check_reachability=False)
+            account(answer, "repair", 3., action_scope="nominal_repair",
+                    allowed_actions=len(repair_scope), time_budget=repair_time,
+                    expansion_budget=repair_expansions)
+            if answer.status == "solved":
+                incumbent = answer
+                lower = bound(initial, initial_running)
+
+    repaired = incumbent is not None
+    if guide_eligible and not repaired:
         from .allocation import Allocation
         # Construction and both attempts share this allowance and the original
         # global wall/expansion budget. Failed restricted probes prove nothing.
@@ -414,7 +434,7 @@ def weighted_anytime(engine, *, start=None, goal=None, hint=None, cuts=(), prote
     probe_options.update(max_expansions=min(20_000, max_expansions // 5, max_expansions-total_expanded),
                          time_limit=min(10.0, time_limit / 4))
     reference_filter = getattr(engine.hooks, "reference_actions", None)
-    if reference_filter is not None and max_expansions >= 1000 and monotonic() < deadline:
+    if not repaired and reference_filter is not None and max_expansions >= 1000 and monotonic() < deadline:
         # This optional domain/goal filter supplies only an incumbent probe.
         # It is independent of proposals or generated witnesses; an explicit
         # caller hint retains its original intersection semantics.
@@ -444,7 +464,10 @@ def weighted_anytime(engine, *, start=None, goal=None, hint=None, cuts=(), prote
                 incumbent = reference
                 if not enabled or monotonic() < deadline:
                     lower = bound(initial, initial_running)
-    for weight in (3., 2., 1.5, 1.):
+    # After a successful repair, a single exact pass can use the upper bound
+    # immediately. The repair also witnesses reachability in the larger space.
+    weights = (1.,) if repaired else (3., 2., 1.5, 1.)
+    for weight in weights:
         remaining_time = max(0., deadline-monotonic())
         remaining_expansions = max_expansions-total_expanded
         if remaining_time <= 0 or remaining_expansions <= 0:
@@ -453,7 +476,8 @@ def weighted_anytime(engine, *, start=None, goal=None, hint=None, cuts=(), prote
                          "max_expansions": remaining_expansions}
         answer = _search(engine, **stage_options, bound=bound, weight=weight,
                          upper=incumbent.makespan if incumbent is not None else None,
-                         deadline=active_deadline())
+                         deadline=deadline if repaired else active_deadline(),
+                         check_reachability=not repaired)
         account(answer, "weighted", weight, time_budget=remaining_time,
                 expansion_budget=remaining_expansions)
         last, lower = answer, answer.lower_bound
@@ -502,8 +526,8 @@ def weighted_anytime(engine, *, start=None, goal=None, hint=None, cuts=(), prote
 
 def search(engine, *, start=None, goal=None, hint=None, cuts=(), protected=(),
            allowed=None, max_expansions=200_000, time_limit=60.0, initial_running=(),
-           post_first_solution_limit: float | None = None):
+           post_first_solution_limit: float | None = None, repair_actions=None):
     return weighted_anytime(engine, start=start, goal=goal, hint=hint, cuts=cuts,
         protected=protected, allowed=allowed, max_expansions=max_expansions,
         time_limit=time_limit, initial_running=initial_running,
-        post_first_solution_limit=post_first_solution_limit)
+         post_first_solution_limit=post_first_solution_limit, repair_actions=repair_actions)

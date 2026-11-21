@@ -1,6 +1,7 @@
 """Command-line entry points for offline dual-arm planning."""
 
 import argparse
+import json
 from pathlib import Path
 import sys
 
@@ -52,6 +53,14 @@ def _parser():
     run.add_argument("--model", metavar="NAME", help="使用本机 Ollama 模型生成方案")
     run.add_argument("--mode", choices=("minimal", "with_capabilities", "nl_only"), default="with_capabilities", help="模型提示词模式")
     run.add_argument("--host", default="http://127.0.0.1:11434", metavar="URL", help="本机 Ollama 地址")
+    recover = commands.add_parser("recover", help="从故障快照增量重搜剩余任务")
+    recover.add_argument("task", metavar="TASK", help="原任务 TOML")
+    recover.add_argument("--skills", default="skills/blocks_v1.toml", metavar="PATH", help="技能库 TOML 路径")
+    recover.add_argument("--nominal", required=True, type=Path, metavar="PLAN", help="正常规划生成的 plan.json")
+    recover.add_argument("--snapshot", required=True, type=Path, metavar="JSON", help="故障后的符号快照与能力变化")
+    recover.add_argument("--time-limit", type=float, default=60., help="每次恢复搜索的墙钟预算（秒）")
+    recover.add_argument("--max-expansions", type=int, default=200_000, help="每次恢复搜索的扩展预算")
+    recover.add_argument("--compare", action="store_true", help="用同一快照和预算再运行一次完整重搜")
     prompt = commands.add_parser("prompt", help="生成小模型提示词")
     prompt.add_argument("task", metavar="TASK", help="任务 TOML 路径")
     prompt.add_argument("--mode", choices=("minimal", "with_capabilities", "nl_only"), default="with_capabilities", help="提示词模式，默认包含能力摘要")
@@ -100,6 +109,62 @@ def _run_task(task, out, skills="skills/blocks_v1.toml", no_proposal=False, prun
     return result
 
 
+def _recover(args):
+    from skillnet.core.logic import Fact, parse_fact
+    from skillnet.planning.recovery import RecoveryPlanner
+
+    problem = load_problem(args.task, skills=args.skills)
+    nominal = json.loads(args.nominal.read_text(encoding="utf-8-sig"))
+    snapshot = json.loads(args.snapshot.read_text(encoding="utf-8-sig"))
+    if (not isinstance(nominal, dict) or nominal.get("task") != problem.name
+            or nominal.get("status") != "solved" or not isinstance(nominal.get("schedule"), list)
+            or any(not isinstance(step, dict) or "action" not in step for step in nominal["schedule"])):
+        raise ValueError("nominal 必须是原任务已求解的 plan.json")
+    if not isinstance(snapshot, dict) or not isinstance(snapshot.get("state"), list):
+        raise ValueError("snapshot 必须包含完整的 state 事实列表")
+    updates = snapshot.get("capabilities", {})
+    disabled = snapshot.get("disabled_skills", {})
+    completed = snapshot.get("completed_steps", [])
+    protected = snapshot.get("protected", [])
+    if (not isinstance(updates, dict) or not isinstance(disabled, dict)
+            or any(not isinstance(skills, list) or any(not isinstance(skill, str) for skill in skills)
+                   for skills in disabled.values()) or not isinstance(completed, list)
+            or not isinstance(protected, list)):
+        raise ValueError("snapshot 能力、技能或步骤字段格式错误")
+
+    state = tuple(map(parse_fact, snapshot["state"]))
+    planner = RecoveryPlanner(problem, (step["action"] for step in nominal["schedule"]))
+    options = dict(capabilities={parse_fact(fact): status for fact, status in updates.items()},
+                   disabled_skills=[(arm, skill) for arm, skills in disabled.items() for skill in skills],
+                   completed_steps=completed, protected=tuple(map(parse_fact, protected)),
+                   time_limit=args.time_limit, max_expansions=args.max_expansions)
+
+    def report(result):
+        plan = result.schedule
+        first = plan.first_solution_seconds
+        return {
+            "status": plan.status, "elapsed_seconds": result.elapsed, "setup_seconds": result.setup_seconds,
+            "first_solution_seconds": result.setup_seconds + first if first is not None else None,
+            "first_solution_search_seconds": first, "expanded": plan.expanded,
+            "remaining_makespan_seconds": plan.makespan if plan.status == "solved" else None,
+            "suboptimality_bound": plan.suboptimality_bound, "affected_actions": result.affected_actions,
+            "excluded_actions": [str(Fact(name, values)) for name, values in sorted(result.excluded)],
+            "repair_scope": result.repair_scope, "stages": list(plan.stages),
+            "unknown": [str(fact) for fact in sorted(plan.unknown)],
+            "schedule": [{"action": str(step.action), "start": step.start, "end": step.end,
+                          "state_before": [str(fact) for fact in sorted(step.state)]} for step in plan.steps],
+            "task_graph": result.graph.to_json() if result.graph is not None else None,
+        }
+
+    incremental = planner.replan(state, **options)
+    output = {"task": problem.name, "preparation_seconds": planner.preparation_seconds,
+              "incremental": report(incremental)}
+    if args.compare:
+        output["full_replan"] = report(planner.replan(state, incremental=False, **options))
+    print(json.dumps(output, ensure_ascii=False, indent=2))
+    return 0 if incremental.schedule.status == "solved" else 1
+
+
 def main(argv=None):
     for stream in (sys.stdout, sys.stderr):
         if hasattr(stream, "reconfigure"):
@@ -119,6 +184,8 @@ def main(argv=None):
             result = _run_task(args.task, args.out, args.skills, args.no_proposal, not args.no_prune,
                                args.model, args.mode, args.host)
             return 0 if result.status == "solved" else 1
+        if args.command == "recover":
+            return _recover(args)
         if args.command == "experiment":
             from skillnet.experiment import run_experiment
             result = run_experiment(model=args.model, out=args.out, tasks=args.tasks, host=args.host)

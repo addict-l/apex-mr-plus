@@ -19,6 +19,33 @@ python -X utf8 -m skillnet all --out out
 
 命令退出码：成功为 `0`，规划未解决为 `1`，输入或文件错误为 `2`。
 
+## 离线增量恢复
+
+先用 `run` 保存正常方案，再用 `recover` 从停稳后的完整符号快照生成剩余计划。例如在中央积木任务开始前，A 臂的放置技能失效：
+
+```sh
+python -B -m skillnet run tasks/s1_nearest_arm.toml
+python -B -m skillnet recover tasks/s1_nearest_arm.toml --nominal out/s1_nearest_arm/plan.json --snapshot out/fault.json --compare > out/recovery.json
+```
+
+第二条命令使用以下 `out/fault.json`：
+
+```json
+{
+  "state": [
+    "arm_at(A, home_A)", "arm_at(B, home_B)",
+    "free(A)", "free(B)", "at(red, stock_c)", "empty(board_c)"
+  ],
+  "disabled_skills": {"A": ["place"]}
+}
+```
+
+`capabilities` 可选，用事实字符串映射到 `VALID`、`INVALID` 或 `UNKNOWN`，例如 `{"reach(A, board_c)": "INVALID"}`。`completed_steps` 可选，使用原 `schedule` 的零基索引缩小修补范围。实际完成状态由 `state` 提供。`protected` 可选，列出搜索中必须保护的事实。
+
+恢复器建立能力和技能到候选动作的索引。它先用旧计划的剩余动作、换臂候选和一层前置条件的提供动作找可行解，再在全部可用动作中做分支限界。比较结果包括首解搜索时间、扩展数、最终剩余工时和最优性界。进程内可保留 `skillnet.planning.recovery.RecoveryPlanner` 以复用动作网和索引。独立的命令行调用从 TOML 建索引，从 `plan.json` 读取旧计划，准备时间单列为 `preparation_seconds`。
+
+当前入口做符号恢复，快照使用任务中已登记的对象和位置。运动验证、在线状态采集和 TPG 切换由后续仿真接入处理。
+
 ## 输入格式
 
 技能库位于 `skills/blocks_v1.toml`，所有任务共享同一份九技能定义。参数类型为 `arm`、`block`、`loc`、`slot`，`pre` 允许否定条件，`add` 在结束时生效，`delete` 在开始时生效。技能网络从效果与前置条件自动生成，推导条件通过领域声明的基础谓词连线。
