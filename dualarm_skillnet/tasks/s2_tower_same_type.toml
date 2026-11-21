@@ -1,0 +1,71 @@
+name = "s2_tower_same_type"
+description = "使用同类型积木自主选择三层塔的积木分配与插装顺序"
+instruction = "用这三块积木装成一座三层塔，做好后两只手都空出来。"
+goal = []
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.30, 0.30, 0.20]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.30, 0.30, 0.20]
+speed = 0.25
+
+[[location]]
+id = "stock_l1"
+kind = "stock"
+pos = [-0.4, -0.2, 0.0]
+
+[[location]]
+id = "stock_l2"
+kind = "stock"
+pos = [-0.4, -0.1, 0.0]
+
+[[location]]
+id = "stock_r1"
+kind = "stock"
+pos = [0.4, -0.2, 0.0]
+
+[[block]]
+id = "b1"
+type = "tower_block"
+at = "stock_l1"
+
+[[block]]
+id = "b2"
+type = "tower_block"
+at = "stock_l2"
+
+[[block]]
+id = "b3"
+type = "tower_block"
+at = "stock_r1"
+
+[[slot]]
+id = "t1"
+type = "tower_block"
+pos = [0.00, 0.10, 0.03]
+below = []
+
+[[slot]]
+id = "t2"
+type = "tower_block"
+pos = [0.00, 0.10, 0.06]
+below = ["t1"]
+
+[[slot]]
+id = "t3"
+type = "tower_block"
+pos = [0.00, 0.10, 0.09]
+below = ["t2"]
+
+[capabilities.reach]
+default = "INVALID"
+valid = { A = ["stock_l1", "stock_l2", "t1", "t2", "t3"], B = ["stock_r1", "t1", "t2", "t3"] }
+
+[capabilities.liftable]
+default = "VALID"

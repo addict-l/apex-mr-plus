@@ -1,0 +1,84 @@
+{
+  "task_file": "D:\\APEX_MR_Plus\\dualarm_skillnet\\tasks\\sim\\s1_feedback_sim_attempt2.toml",
+  "status": "passed",
+  "passed": true,
+  "profile": "skillnet_v1_3",
+  "port": 23210,
+  "timeout_wall_s": 1200.0,
+  "fatal_environment": false,
+  "task": "s1_feedback_sim",
+  "task_sha256": "115131d417978139d0dc79f97f9ab72c31bda16efe5801086298d8cbbae3f358",
+  "environment": {
+    "c_free_bytes": 16385458176,
+    "port": 23210
+  },
+  "planning_status": "solved",
+  "feedback": [
+    "运动失败：place(B, red, final_buffer)，开始时间 4.298 秒；原因：运动段 r1 超出实际模型的串行转动链外球上界：距离 1.548975 m > 1.245275 m（链长 1.235275 m + 余量 0.010 m）。已禁止该状态下的此动作并重新搜索。"
+  ],
+  "simulator_pid": 30108,
+  "real_planning_status": "solved",
+  "backend_nominal_seconds": 57.177725477309124,
+  "success": true,
+  "phase": "complete",
+  "reason": null,
+  "planning_seconds": 9.436999999976251,
+  "compile_seconds": 4.938000000023749,
+  "motion_task_count": 16,
+  "video": false,
+  "step_durations": [
+    {
+      "step": 1,
+      "action": "pick(B, red, stock_b)",
+      "estimated_seconds": 4.297825059,
+      "actual_seconds": 17.939999999999692,
+      "estimated_actual_ratio": 0.23956661421405093
+    },
+    {
+      "step": 2,
+      "action": "handover(B, A, red, hand_mid)",
+      "estimated_seconds": 5.465765601,
+      "actual_seconds": 17.480000000000338,
+      "estimated_actual_ratio": 0.3126868192791702
+    },
+    {
+      "step": 3,
+      "action": "place(A, red, final_buffer)",
+      "estimated_seconds": 5.6415381369999995,
+      "actual_seconds": 19.660000000003073,
+      "estimated_actual_ratio": 0.28695514430310876
+    }
+  ],
+  "remote_interface_failure": false,
+  "tpg_seconds": 94.68800000002375,
+  "tpg_nodes": 182,
+  "tpg_edges": 200,
+  "nominal_makespan_seconds": 60.086393083803344,
+  "actual_makespan_seconds": 62.58000000000418,
+  "execution_wall_seconds": 21.93799999996554,
+  "failure_phase": null,
+  "executor_wall_seconds": 122.68800000002375,
+  "motion_backend_cache": {
+    "entries": 16,
+    "hits": 18,
+    "misses": 16
+  },
+  "motion_feedback_count": 1,
+  "qualification_calls": 2,
+  "simulator_log": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\logs\\coppeliasim-20261115-163852-19caf805.log",
+  "simulator_closed": true,
+  "phase_seconds": {
+    "load": 0.0,
+    "environment": 0.0,
+    "planning": 0.031000000017229468,
+    "simulator_start": 0.23499999998603016,
+    "simulator_connect": 4.01500000001397,
+    "workcell": 1.672000000020489,
+    "real_planning": 9.405999999959022,
+    "compile": 5.032000000006519,
+    "execute": 122.875
+  },
+  "initial_planning_seconds": 0.031000000017229468,
+  "real_planning_seconds": 9.405999999959022,
+  "wall_seconds": 149.40600000001723
+}

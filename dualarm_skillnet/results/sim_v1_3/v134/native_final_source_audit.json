@@ -1,0 +1,214 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-00",
+      "source_job_id": "sim20-f1-0",
+      "expected_sha256": "54bdf0fb551a77a3447161b7b66b3940b17ff3d6699196926e6e3d9f729a98b6",
+      "actual_sha256": "54bdf0fb551a77a3447161b7b66b3940b17ff3d6699196926e6e3d9f729a98b6",
+      "committed_task_sha256": "54bdf0fb551a77a3447161b7b66b3940b17ff3d6699196926e6e3d9f729a98b6",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-01",
+      "source_job_id": "sim20-f1-1",
+      "expected_sha256": "a97bcdc08e0bbc53140cfaa6ecc825cd435bb61a32fe97fb59d16f27e051797f",
+      "actual_sha256": "a97bcdc08e0bbc53140cfaa6ecc825cd435bb61a32fe97fb59d16f27e051797f",
+      "committed_task_sha256": "a97bcdc08e0bbc53140cfaa6ecc825cd435bb61a32fe97fb59d16f27e051797f",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-02",
+      "source_job_id": "sim20-f1-2",
+      "expected_sha256": "bdc7f3790defc2c21a1a8538d7fd5d0a1130eebda5ccab3a6649eb54210ccf50",
+      "actual_sha256": "bdc7f3790defc2c21a1a8538d7fd5d0a1130eebda5ccab3a6649eb54210ccf50",
+      "committed_task_sha256": "bdc7f3790defc2c21a1a8538d7fd5d0a1130eebda5ccab3a6649eb54210ccf50",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-03",
+      "source_job_id": "sim20-f1-3",
+      "expected_sha256": "4da055c6790595e82e17fb0dfaa08b874b341649b12864f3fd8cc4bfc387d3c2",
+      "actual_sha256": "4da055c6790595e82e17fb0dfaa08b874b341649b12864f3fd8cc4bfc387d3c2",
+      "committed_task_sha256": "4da055c6790595e82e17fb0dfaa08b874b341649b12864f3fd8cc4bfc387d3c2",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-04",
+      "source_job_id": "sim20-f2-0",
+      "expected_sha256": "9043f90fe2dd884411de2d0c3d63860ca7ba843147e9958cd15f930721181f61",
+      "actual_sha256": "9043f90fe2dd884411de2d0c3d63860ca7ba843147e9958cd15f930721181f61",
+      "committed_task_sha256": "9043f90fe2dd884411de2d0c3d63860ca7ba843147e9958cd15f930721181f61",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-05",
+      "source_job_id": "sim20-f2-1",
+      "expected_sha256": "6aed1f1b8c722c56dec9daa1d07be105e78d30743c235ba68f764149ae87e738",
+      "actual_sha256": "6aed1f1b8c722c56dec9daa1d07be105e78d30743c235ba68f764149ae87e738",
+      "committed_task_sha256": "6aed1f1b8c722c56dec9daa1d07be105e78d30743c235ba68f764149ae87e738",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-06",
+      "source_job_id": "sim20-f2-2",
+      "expected_sha256": "0a96ab247e074a104891604134704d98846d91c223294711179b458987510293",
+      "actual_sha256": "0a96ab247e074a104891604134704d98846d91c223294711179b458987510293",
+      "committed_task_sha256": "0a96ab247e074a104891604134704d98846d91c223294711179b458987510293",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-07",
+      "source_job_id": "sim20-f2-3",
+      "expected_sha256": "cde22aaca4e95ccef7393c7c5f56d47f0d7b8d052e9ac9cae6fb2f304e20c0cc",
+      "actual_sha256": "cde22aaca4e95ccef7393c7c5f56d47f0d7b8d052e9ac9cae6fb2f304e20c0cc",
+      "committed_task_sha256": "cde22aaca4e95ccef7393c7c5f56d47f0d7b8d052e9ac9cae6fb2f304e20c0cc",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-08",
+      "source_job_id": "sim20-f3-0",
+      "expected_sha256": "941de06c1a30217afda2bf2375017a6d516e6ad6a3b7dc54f2640232371fad83",
+      "actual_sha256": "941de06c1a30217afda2bf2375017a6d516e6ad6a3b7dc54f2640232371fad83",
+      "committed_task_sha256": "941de06c1a30217afda2bf2375017a6d516e6ad6a3b7dc54f2640232371fad83",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-09",
+      "source_job_id": "sim20-f3-1",
+      "expected_sha256": "ade06636b4a367fa6b92a828fca58ec48e281fc0052aecb673031317a64fad56",
+      "actual_sha256": "ade06636b4a367fa6b92a828fca58ec48e281fc0052aecb673031317a64fad56",
+      "committed_task_sha256": "ade06636b4a367fa6b92a828fca58ec48e281fc0052aecb673031317a64fad56",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-10",
+      "source_job_id": "sim20-f3-2",
+      "expected_sha256": "433e549d8edb6c225244d098be6f5ccfca9587b5179d4ac127d2eda672e9d436",
+      "actual_sha256": "433e549d8edb6c225244d098be6f5ccfca9587b5179d4ac127d2eda672e9d436",
+      "committed_task_sha256": "433e549d8edb6c225244d098be6f5ccfca9587b5179d4ac127d2eda672e9d436",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-11",
+      "source_job_id": "sim20-f3-3",
+      "expected_sha256": "8abe138d8ddc0855cd87c3a086e3982737e7fdfcd6b0d72d5b4de6bbbf0f6cd0",
+      "actual_sha256": "8abe138d8ddc0855cd87c3a086e3982737e7fdfcd6b0d72d5b4de6bbbf0f6cd0",
+      "committed_task_sha256": "8abe138d8ddc0855cd87c3a086e3982737e7fdfcd6b0d72d5b4de6bbbf0f6cd0",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-12",
+      "source_job_id": "sim20-f4-0",
+      "expected_sha256": "c46509f35eb4bb497060ba913175cadefd8c67cdaedd732e2c41e11cd5afaa9c",
+      "actual_sha256": "c46509f35eb4bb497060ba913175cadefd8c67cdaedd732e2c41e11cd5afaa9c",
+      "committed_task_sha256": "c46509f35eb4bb497060ba913175cadefd8c67cdaedd732e2c41e11cd5afaa9c",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-13",
+      "source_job_id": "sim20-f4-1",
+      "expected_sha256": "c2fffc9b418a676043c93b428acb5867e3aa82fbd40ae6efc16b8dca5f0e403d",
+      "actual_sha256": "c2fffc9b418a676043c93b428acb5867e3aa82fbd40ae6efc16b8dca5f0e403d",
+      "committed_task_sha256": "c2fffc9b418a676043c93b428acb5867e3aa82fbd40ae6efc16b8dca5f0e403d",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-14",
+      "source_job_id": "sim20-f4-2",
+      "expected_sha256": "ea05eaa37e4cf5475a0206fc0cb721ccccd80698ad3272c0683e463efb114148",
+      "actual_sha256": "ea05eaa37e4cf5475a0206fc0cb721ccccd80698ad3272c0683e463efb114148",
+      "committed_task_sha256": "ea05eaa37e4cf5475a0206fc0cb721ccccd80698ad3272c0683e463efb114148",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-15",
+      "source_job_id": "sim20-f4-3",
+      "expected_sha256": "b7fc2b71b0cec6355893dc39989243d5de17d7c2eb2ae8322f7084926e4fb236",
+      "actual_sha256": "b7fc2b71b0cec6355893dc39989243d5de17d7c2eb2ae8322f7084926e4fb236",
+      "committed_task_sha256": "b7fc2b71b0cec6355893dc39989243d5de17d7c2eb2ae8322f7084926e4fb236",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-16",
+      "source_job_id": "sim20-f5-0",
+      "expected_sha256": "d750d605d6eecdc75c2f1c3f77e6b5275179c69f2b41a260ac667bc8ca6b0f14",
+      "actual_sha256": "d750d605d6eecdc75c2f1c3f77e6b5275179c69f2b41a260ac667bc8ca6b0f14",
+      "committed_task_sha256": "d750d605d6eecdc75c2f1c3f77e6b5275179c69f2b41a260ac667bc8ca6b0f14",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-17",
+      "source_job_id": "sim20-f5-1",
+      "expected_sha256": "d3451e3ac1207161fcee0954ce8d16491349521e4553d760524cd87355339b19",
+      "actual_sha256": "d3451e3ac1207161fcee0954ce8d16491349521e4553d760524cd87355339b19",
+      "committed_task_sha256": "d3451e3ac1207161fcee0954ce8d16491349521e4553d760524cd87355339b19",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-18",
+      "source_job_id": "sim20-f5-2",
+      "expected_sha256": "02cb07f2548cdad14b5325419fd3ca6a3eaa43f8a9c645692071749065386fab",
+      "actual_sha256": "02cb07f2548cdad14b5325419fd3ca6a3eaa43f8a9c645692071749065386fab",
+      "committed_task_sha256": "02cb07f2548cdad14b5325419fd3ca6a3eaa43f8a9c645692071749065386fab",
+      "passed": true
+    },
+    {
+      "stage": "sim20",
+      "id": "v134-fixed20-19",
+      "source_job_id": "sim20-f5-3",
+      "expected_sha256": "19e17f87a69ca84195058f173733b9eee4a785f781425bb14b92e802ea78825a",
+      "actual_sha256": "19e17f87a69ca84195058f173733b9eee4a785f781425bb14b92e802ea78825a",
+      "committed_task_sha256": "19e17f87a69ca84195058f173733b9eee4a785f781425bb14b92e802ea78825a",
+      "passed": true
+    },
+    {
+      "stage": "walls3",
+      "id": "v134-wall-001",
+      "source_job_id": null,
+      "expected_sha256": "b8476818784a44f257a4a135abe03c4bbcfe5552e921d1a08a2549b8c8298395",
+      "actual_sha256": "b8476818784a44f257a4a135abe03c4bbcfe5552e921d1a08a2549b8c8298395",
+      "committed_task_sha256": "b8476818784a44f257a4a135abe03c4bbcfe5552e921d1a08a2549b8c8298395",
+      "passed": true
+    },
+    {
+      "stage": "walls3",
+      "id": "v134-wall-009",
+      "source_job_id": null,
+      "expected_sha256": "52a0fe76af1697c81d27905f1909ee686c8b6ee8ea8b02ca6cbc76ae74afdb66",
+      "actual_sha256": "52a0fe76af1697c81d27905f1909ee686c8b6ee8ea8b02ca6cbc76ae74afdb66",
+      "committed_task_sha256": "52a0fe76af1697c81d27905f1909ee686c8b6ee8ea8b02ca6cbc76ae74afdb66",
+      "passed": true
+    },
+    {
+      "stage": "walls3",
+      "id": "v134-wall-037",
+      "source_job_id": null,
+      "expected_sha256": "f0ca1825adb974a0d0230f2fa9038f66f12fcc09b54105f070ec4d2f7f52b5f8",
+      "actual_sha256": "f0ca1825adb974a0d0230f2fa9038f66f12fcc09b54105f070ec4d2f7f52b5f8",
+      "committed_task_sha256": "f0ca1825adb974a0d0230f2fa9038f66f12fcc09b54105f070ec4d2f7f52b5f8",
+      "passed": true
+    }
+  ],
+  "selection_sha256": "cbd597643c5c96d0293c934d51b79882fb2862c25ad4d891c32be498a3fc8f28",
+  "core_registered_SHA_match": true
+}

@@ -1,0 +1,12 @@
+name = "gen_f3_s20261115_014"
+description = "把积木装成 5 层、每层 1 块的塔，最后两只手都空出来。"
+instruction = "把积木装成 5 层、每层 1 块的塔，最后两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = []
+fill_all_slots = true
+location = [{id = "stock_a1", kind = "stock", pos = [-0.6506508608129826, -0.4569447961877057, 0.0], owner = "A"}, {id = "stock_a2", kind = "stock", pos = [-0.8560479030519278, -0.457398350104887, 0.0], owner = "A"}, {id = "stock_a3", kind = "stock", pos = [-0.44591852429464324, -0.2508983688459189, 0.0], owner = "A"}, {id = "stock_a4", kind = "stock", pos = [-0.6497814449240145, 0.5077605015629496, 0.0], owner = "A"}, {id = "stock_a5", kind = "stock", pos = [-0.8550160686713714, 0.5073931260142293, 0.0], owner = "A"}]
+block = [{id = "b1_1", type = "tower_base", at = "stock_a1"}, {id = "b2_1", type = "tower_middle", at = "stock_a2"}, {id = "b3_1", type = "tower_top", at = "stock_a3"}, {id = "b4_1", type = "tower_base", at = "stock_a4"}, {id = "b5_1", type = "tower_middle", at = "stock_a5"}]
+slot = [{id = "s1_1", type = "tower_base", pos = [-0.07793458507014538, -0.09221863780418649, 0.03], below = []}, {id = "s2_1", type = "tower_middle", pos = [-0.07793458507014538, -0.09221863780418649, 0.06], below = ["s1_1"]}, {id = "s3_1", type = "tower_top", pos = [-0.07793458507014538, -0.09221863780418649, 0.09], below = ["s2_1"]}, {id = "s4_1", type = "tower_base", pos = [-0.07793458507014538, -0.09221863780418649, 0.12], below = ["s3_1"]}, {id = "s5_1", type = "tower_middle", pos = [-0.07793458507014538, -0.09221863780418649, 0.15], below = ["s4_1"]}]
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["stock_a1", "stock_a2", "stock_a3", "stock_a4", "stock_a5", "s1_1", "s2_1", "s3_1", "s4_1", "s5_1"], B = ["s1_1", "s2_1"]}, invalid = {A = [], B = ["stock_a1", "stock_a2", "stock_a4", "stock_a5"]}, unknown = {A = [], B = ["stock_a3", "s3_1", "s4_1", "s5_1"]}}}
+capability_source = "ik_qualified"

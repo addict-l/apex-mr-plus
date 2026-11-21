@@ -1,0 +1,265 @@
+{
+  "task_file": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v133\\qualification\\F2\\009\\gen_f2_s20261115_009\\gen_f2_s20261115_009.qualified.toml",
+  "status": "passed",
+  "passed": true,
+  "profile": "skillnet_v1_3",
+  "port": 23210,
+  "timeout_wall_s": 1200.0,
+  "fatal_environment": false,
+  "task": "gen_f2_s20261115_009",
+  "task_sha256": "9043f90fe2dd884411de2d0c3d63860ca7ba843147e9958cd15f930721181f61",
+  "environment": {
+    "c_free_bytes": 32107544576,
+    "port": 23210
+  },
+  "planning_status": "solved",
+  "feedback": [],
+  "simulator_pid": 47616,
+  "real_planning_status": "solved",
+  "symbolic_makespan_seconds": 67.475368366,
+  "symbolic_lower_bound": 67.475368366,
+  "symbolic_suboptimality_bound": 1.0,
+  "reference_reused": true,
+  "backend_nominal_seconds": 70.32719560015707,
+  "success": true,
+  "phase": "complete",
+  "reason": null,
+  "planning_seconds": 22.718999999924563,
+  "compile_seconds": 0.03100000007543713,
+  "motion_task_count": 16,
+  "video": false,
+  "step_durations": [
+    {
+      "step": 1,
+      "action": "pick(A, b1, stock_a1)",
+      "estimated_seconds": 25.424208984,
+      "actual_seconds": 20.89999999999963,
+      "estimated_actual_ratio": 1.216469329378012
+    },
+    {
+      "step": 2,
+      "action": "handover(A, B, b1, hand_mid)",
+      "estimated_seconds": 22.703705189,
+      "actual_seconds": 18.960000000001095,
+      "estimated_actual_ratio": 1.197452805326935
+    },
+    {
+      "step": 3,
+      "action": "place(B, b1, board_1)",
+      "estimated_seconds": 19.347454192999997,
+      "actual_seconds": 19.480000000003045,
+      "estimated_actual_ratio": 0.993195800461857
+    }
+  ],
+  "remote_interface_failure": false,
+  "geometry_scope": "sampled swept conflicts at 0.07 rad and nominal rollout at 0.05 s; no continuous collision guarantee",
+  "stage_seconds": {
+    "requirements": 0.0,
+    "geometry_context_enter": 0.0470000000204891,
+    "tpg_structure": 0.03200000000651926,
+    "tpg_geometry": 21.79599999997299,
+    "parameterize": 0.1720000000204891,
+    "rollout": 4.032000000006519,
+    "geometry_context_restore": 0.015000000013969839,
+    "install": 0.9529999999795109,
+    "execution": 42.98499999998603,
+    "acceptance": 0.015000000013969839,
+    "complete": 0.01600000006146729
+  },
+  "query_statistics": {
+    "attempted_calls": 565,
+    "completed_calls": 565,
+    "wall_seconds": 24.04114189860411,
+    "sample_batches": 558,
+    "sample_states": 10078,
+    "methods": {
+      "sample_batch_statistics": {
+        "attempted": 7,
+        "completed": 7,
+        "wall_seconds": 0.007908000028692186
+      },
+      "sample_state_pairs": {
+        "attempted": 558,
+        "completed": 558,
+        "wall_seconds": 24.033233898575418
+      }
+    },
+    "scope": "planner API calls including client/server and codec; not isolated network time"
+  },
+  "stopped_geometry_context": {
+    "enabled": true,
+    "scope": "stopped TPG/parameterization/nominal rollout only",
+    "enter_seconds": 0.030999999959021807,
+    "restore_seconds": 0.015000000013969839,
+    "receipt": {
+      "pid": 47616,
+      "instance_nonce": "a5ac47fcb03a44faa1a4b8b3288a5795",
+      "before": {
+        "idle_fps": 8,
+        "fast_idle_tag_hex": "",
+        "stack": [
+          0,
+          null
+        ],
+        "simulation_state": 0,
+        "simulation_time_s": 0.0,
+        "simulation_timestep_s": 0.02,
+        "dynamics_step_s": 0.002,
+        "dynamics_engine": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ]
+      },
+      "enabled": true,
+      "restored": true,
+      "active": {
+        "idle_fps": 0,
+        "fast_idle_tag_hex": "0100000008000000",
+        "stack": [
+          1,
+          8
+        ],
+        "simulation_state": 0,
+        "simulation_time_s": 0.0,
+        "simulation_timestep_s": 0.02,
+        "dynamics_step_s": 0.002,
+        "dynamics_engine": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ]
+      },
+      "after": {
+        "idle_fps": 8,
+        "fast_idle_tag_hex": "",
+        "stack": [
+          0,
+          null
+        ],
+        "simulation_state": 0,
+        "simulation_time_s": 0.0,
+        "simulation_timestep_s": 0.02,
+        "dynamics_step_s": 0.002,
+        "dynamics_engine": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ]
+      }
+    }
+  },
+  "server_geometry_statistics": {
+    "geometry_calls": 10078,
+    "restore_seconds": 0.025000000000027,
+    "context_equal_checks": 9520,
+    "context_comparison_seconds": 0.6639999999999482,
+    "snapshot_seconds": 0.024000000000004462,
+    "samples_checked": 10078,
+    "geometry_seconds": 16.66899999999988,
+    "timing_scope": "Inner snapshot and per-sample phases; batch total also includes outer transaction snapshot/restore and bookkeeping",
+    "forced_legacy_batches": 0,
+    "context_seconds": 0.013000000000012335,
+    "configuration_payload_seconds": 0.7360000000000895,
+    "batch_seconds": 18.456000000000042,
+    "full_context_resets": 569,
+    "world_reuse_samples": 9509,
+    "fallback_samples": 0,
+    "shape_collision_queries": 479728,
+    "invalid_samples": 6,
+    "batches": 558,
+    "samples_requested": 10078,
+    "failures": 0,
+    "scope": "Exact stopped-scene full geometry per supplied sample; no collision predicates omitted"
+  },
+  "server_geometry_statistics_before_tpg": {
+    "geometry_calls": 0,
+    "restore_seconds": 0,
+    "context_equal_checks": 0,
+    "context_comparison_seconds": 0,
+    "snapshot_seconds": 0,
+    "samples_checked": 0,
+    "geometry_seconds": 0,
+    "timing_scope": "Inner snapshot and per-sample phases; batch total also includes outer transaction snapshot/restore and bookkeeping",
+    "forced_legacy_batches": 0,
+    "context_seconds": 0,
+    "configuration_payload_seconds": 0,
+    "batch_seconds": 0,
+    "full_context_resets": 0,
+    "world_reuse_samples": 0,
+    "fallback_samples": 0,
+    "shape_collision_queries": 0,
+    "invalid_samples": 0,
+    "batches": 0,
+    "samples_requested": 0,
+    "failures": 0,
+    "scope": "Exact stopped-scene full geometry per supplied sample; no collision predicates omitted"
+  },
+  "tpg_nodes": 175,
+  "candidate_conflict_pairs": 7384,
+  "structural_ordered_pairs_skipped": 6838,
+  "geometry_statistics": {
+    "oracle_calls": 545,
+    "conflicting_calls": 1,
+    "mode_conflicts": 0,
+    "mesh_state_queries": 8448,
+    "cache_hits": 4577,
+    "states_considered": 13025,
+    "batch_calls": 545,
+    "wall_s": 20.88595160038676,
+    "joint_sample_step_rad": 0.07,
+    "batch_size": 128,
+    "continuous_collision_guarantee": false
+  },
+  "tpg_counts": {
+    "nodes": 175,
+    "pose_nodes": 171,
+    "skill_nodes": 4,
+    "type1_edges": 187,
+    "task_type2_edges": 7,
+    "motion_type2_edges": 1,
+    "cross_arm_pairs": 7384,
+    "oracle_queries": 545,
+    "already_ordered_pairs_skipped": 6839,
+    "pairs_without_geometry": 0
+  },
+  "tpg_seconds": 22.0,
+  "tpg_edges": 195,
+  "nominal_makespan_seconds": 72.7359687687985,
+  "actual_makespan_seconds": 75.72000000000207,
+  "execution_wall_seconds": 41.59400000004098,
+  "failure_phase": null,
+  "executor_wall_seconds": 70.06300000008196,
+  "motion_backend_cache": {
+    "entries": 16,
+    "hits": 0,
+    "misses": 16
+  },
+  "motion_feedback_count": 0,
+  "motion_feedback_rounds": 1,
+  "qualification_calls": 1,
+  "simulator_log": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009\\instance\\results\\sim_v1_3\\logs\\coppeliasim-20261118-104924-a5ac47fc.log",
+  "simulator_closed": true,
+  "phase_seconds": {
+    "load": 0.015999999945051968,
+    "environment": 0.0,
+    "planning": 0.030999999959021807,
+    "simulator_start": 0.26500000001396984,
+    "simulator_connect": 3.6880000000819564,
+    "workcell": 2.280999999959022,
+    "real_planning": 22.68799999996554,
+    "compile": 0.2029999999795109,
+    "execute": 70.18700000003446
+  },
+  "initial_planning_seconds": 0.030999999959021807,
+  "real_planning_seconds": 22.68799999996554,
+  "wall_seconds": 105.5,
+  "motion_journal": {
+    "events": 14,
+    "persistence_wall_seconds": 0.17099999997299165,
+    "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009\\motion_live.jsonl"
+  }
+}

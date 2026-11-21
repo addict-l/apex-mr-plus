@@ -1,0 +1,643 @@
+{
+  "M1": {
+    "status": "passed",
+    "tests": 251,
+    "skipped": 1,
+    "test_seconds": 58.973,
+    "test_log": "out/v1_3_m1_tests.txt",
+    "live_evidence": "results/sim_v1_3/s1_parallel_place/m1_validation.json"
+  },
+  "M2": {
+    "status": "passed",
+    "tests": 279,
+    "skipped": 1,
+    "test_seconds": 60.873,
+    "test_log": "out/v1_3_m2_tests.txt",
+    "live_evidence": "results/sim_v1_3/s1_parallel_place/m2_attempt_3/m2_validation.json",
+    "tasks": 18,
+    "actual_rrt_calls": 6,
+    "compile_seconds": 12.563
+  },
+  "M3": {
+    "evidence_version": "overnight-v1",
+    "status": "passed",
+    "accepted": true,
+    "regression_passed": true,
+    "pitch_degrees": 60,
+    "handover_summary": "results/sim_v1_3/m3_attempt_5/s1_reach_handover/summary.json",
+    "parallel_summary": "results/sim_v1_3/m3_attempt_5/s1_parallel_place/summary.json"
+  },
+  "M4": {
+    "evidence_version": "overnight-v1",
+    "status": "not_met",
+    "fixtures": {
+      "s2_tower_sim": {
+        "passed": true,
+        "source": "results/sim_v1_3/overnight/m4/attempt_2/s2_tower_sim/simulation/s2_tower_sim/summary.json"
+      },
+      "s3a_cantilever_sim": {
+        "passed": false,
+        "source": "results/sim_v1_3/overnight/m4/attempt_1/s3a_cantilever_sim/simulation/s3a_cantilever_sim/summary.json"
+      },
+      "s3a_platform_sim": {
+        "passed": false,
+        "source": "results/sim_v1_3/overnight/m4/attempt_1/s3a_platform_sim/simulation/s3a_platform_sim/summary.json"
+      }
+    },
+    "notes": [
+      "finished仅表示第5步已结束，M4尚未达到全部验收。",
+      "悬臂两项在首个目录顶抓被水平SupportShoe穿入24mm阻塞，尚未到真实托举受力或搭拆台。",
+      "固定工具相对抓取变换的相交与IK/RRT分支无关；不重复无效随机重试，不绕过受保护grasp_pose，不放宽碰撞，不改旧任务。",
+      "保守保留目录顶抓及两臂镜像水平工具；后续需明确工具机构或允许工具感知抓取设计。",
+      "普通取放回归门通过后保留空闲臂安全回位；塔第二次运行和INVALID反馈第二次运行通过。"
+    ],
+    "invalid_cut_execution": {
+      "passed": true,
+      "invalid_records": 1,
+      "cut_feedback_present": true,
+      "source": "results/sim_v1_3/overnight/m4/attempt_2/s1_feedback_sim/simulation/s1_feedback_sim/summary.json"
+    },
+    "unknown_qualify_execution": {
+      "passed": true,
+      "valid_reach_qualifications": 1,
+      "source": "results/sim_v1_3/overnight/m4/attempt_1/s1_qualify_sim/simulation/s1_qualify_sim/summary.json"
+    },
+    "passed": false
+  },
+  "M5": {
+    "evidence_version": "overnight-v1",
+    "status": "not_met",
+    "passed": false,
+    "checks": {
+      "planning_200_thresholds": false,
+      "sim20_executed": false,
+      "sim20_success_ge_80_percent": false,
+      "generator_exact_contract": false
+    }
+  },
+  "final_verification": {
+    "tests_run": 315,
+    "passed": 309,
+    "skipped": 6,
+    "seconds": 61.016,
+    "test_log": "out/v1_3_final_tests.txt",
+    "archives_unchanged": true,
+    "archive_files": 2653,
+    "protected_files_unchanged": true,
+    "provenance_current_hashes_match": true,
+    "owned_simulators_remaining": 0,
+    "port_23210_listeners": 0
+  },
+  "history": {
+    "M3": [
+      {
+        "status": "blocked",
+        "stop_rule": "HANDOFF_v1.3_SIM.md 第1节：同一问题重试3次仍失败；第11节：不放宽验收，记录阻塞后报告。",
+        "parallel_passed": true,
+        "parallel_summary": "results/sim_v1_3/m3_attempt_1/s1_parallel_place/summary.json",
+        "handover_attempts": [
+          {
+            "attempt": 1,
+            "summary": "results/sim_v1_3/m3_attempt_1/s1_reach_handover/summary.json",
+            "status": "failed",
+            "phase": "compile",
+            "reason": "CompileFailure: 运动段 r1 的 RRT-Connect 失败：No exact collision-free solution within budget; {'pair': ['/B_UR5/link', '/B_UR5/B_joint_5/link'], 'reason': 'self_collision:B'}",
+            "wall_seconds": 30.25,
+            "closed": true
+          },
+          {
+            "attempt": 2,
+            "summary": "results/sim_v1_3/m3_attempt_2/s1_reach_handover/summary.json",
+            "status": "failed",
+            "phase": "compile",
+            "reason": "CompileFailure: 运动段 r5 的 IK 已耗尽 8 个种子：{'reason': 'table_collision:B', 'pair': ['/B_UR5/B_joint_2/link', '/Workbench']}",
+            "wall_seconds": 33.17199999996228,
+            "closed": true
+          },
+          {
+            "attempt": 3,
+            "summary": "results/sim_v1_3/m3_attempt_3/s1_reach_handover/summary.json",
+            "status": "failed",
+            "phase": "compile",
+            "reason": "CompileFailure: 运动段 r5 的 IK 已耗尽 8 个种子：{'reason': 'table_collision:B', 'pair': ['/B_UR5/B_joint_2/link', '/Workbench']}",
+            "wall_seconds": 29.67200000002049,
+            "closed": true
+          }
+        ],
+        "accepted": false,
+        "four_end_to_end_runs_wall_seconds": 209.43799999996554
+      }
+    ]
+  },
+  "overnight_summary": {
+    "updated_at": "2026-11-15T22:50:05.342228+00:00",
+    "metrics": "results/sim_v1_3/overnight/summary_metrics.json",
+    "gates_passed": false
+  },
+  "v1.3.3": {
+    "status": "not_met",
+    "acceptance": {
+      "planning_200": {
+        "status": "not_met",
+        "passed": false,
+        "requirement": "IK表每族40：F1–F3≥95%、F4–F5≥85%；所有unknown含实测耗时且≤5s",
+        "evidence": "results/sim_v1_3/v133/manifests/planning200_retry1.json"
+      },
+      "sim_20": {
+        "status": "not_met",
+        "passed": false,
+        "requirement": "五族各4次实际尝试，真实动力学通过≥14/20；缺额不改变分母",
+        "evidence": "results/sim_v1_3/v133/manifests/sim20.json"
+      },
+      "no_reach_pipeline": {
+        "status": "passed",
+        "passed": true,
+        "requirement": "任务不含reach表，塔/悬臂/平台三夹具真实qualify→规划→编译→执行完整链路通过",
+        "evidence": "v133/summary_metrics.json:physical.no_reach_fixtures"
+      },
+      "physical_fixtures_and_gates": {
+        "status": "passed",
+        "passed": true,
+        "requirement": "悬臂/平台端到端通过；五门控各1测零跳过、原生实例已关闭，真实动力学通过5/5",
+        "evidence": "results/sim_v1_3/v133/manifests/gates.json"
+      },
+      "calibrated_estimate_ratio": {
+        "status": "passed",
+        "passed": true,
+        "requirement": "≥30步真实成功源的标定产物；sim20成功样本最终规划makespan/实际中位数0.7–1.3，分母齐全",
+        "evidence": "results/sim_v1_3/v133/calibration.json"
+      },
+      "archive_unchanged": {
+        "status": "passed",
+        "passed": true,
+        "requirement": "v133_guard归档及保护校验passed",
+        "evidence": "results/sim_v1_3/v133/archive_check.json"
+      }
+    },
+    "regression_passed": true,
+    "scale_status": "not_met",
+    "temporary_platform_coverage": {
+      "status": "not_met",
+      "passed": false,
+      "attempted": true,
+      "committed": true,
+      "stage": "d_platform_required_attempt2",
+      "task": "s3a_platform_required_sim",
+      "phase": "real_planning",
+      "reason": "RuntimeError: 真实运动后端重规划未求解：unknown",
+      "source": "results/sim_v1_3/v133/d_platform_required_attempt2/s3a_platform_required_sim/simulation/s3a_platform_required_sim/summary.json",
+      "manifest": "results/sim_v1_3/v133/manifests/d_platform_required_attempt2.json",
+      "journal": "results/sim_v1_3/v133/states/d_platform_required_attempt2/completed.jsonl",
+      "tpg_entered": false,
+      "dynamics_entered": false,
+      "real_planning_status": "unknown",
+      "feedback": [
+        "运动验证未知：detach(A, temp_block2, tp2)，开始时间 194.872 秒；原因：运动段 r2 的 IK 已耗尽 8 个种子：{'pair': ['/A_UR5/A_joint_2/link', '/Workbench'], 'reason': 'table_collision:A'}。"
+      ],
+      "scope": "临时台搭建/承托/拆除的额外独立覆盖；不替代原平台臂托结果，不改变第8节六项验收口径",
+      "result_status": "failed",
+      "native_status": "failed",
+      "simulator_pid": 47816,
+      "simulator_closed": true,
+      "actual_makespan_seconds": null
+    },
+    "experiment_selection": {
+      "selection_id": "c_scale_retry1",
+      "stages": {
+        "planning200": "planning200_retry1"
+      },
+      "diagnostic_trials": [
+        "planning200"
+      ],
+      "regressions": {
+        "full": "out/v133_c_scale_retry1_full.json",
+        "original11": "results/sim_v1_3/v133/original11_c_scale_retry1.json"
+      },
+      "planning_code_sha256": {
+        "skillnet/planning/search.py": "d3938b31d6f105558dd2ed15af856a54b66b830cdf6826db49d955ae2e3eac27",
+        "skillnet/planning/heuristic.py": "22152eb4a8a551a1ffaa83e6ce60ce90f9afd0070fc93885fc340899cbad85d9",
+        "skillnet/cost/model.py": "7b2311e41b1442d7850667f374599773c1c4a5625230531994739e96631acdcd",
+        "skills/blocks_v1.toml": "aa0126377dc0f787ee7a61ab1e3c87a2662fb387e44fd030462b92edb431e172",
+        "calibration.json": "ebf2120105f35c84c9f20263a3608c138e5f2c323f3e130b0ce57c24d0317e6b"
+      },
+      "input_cohort_sha256": "34b6cd150e032e133000557ceb07510137be6e70b342d455cb7b9afdd041f241",
+      "source_manifest_sha256": "7c66509c2f64cda30796a547fdd96ce04225e0ff1e770fbbc36951422f2ef1ad",
+      "scale_smoke": "results/sim_v1_3/v133/c_scale_retry1/smoke_acceptance.json",
+      "original_trial_records": 33,
+      "reason": "Generic goal/domain incumbent probe after qualified six-block budgets; no hints/witnesses; identical inputs/budgets",
+      "created_at": "2026-11-16T10:07:28.500874+00:00",
+      "selection_present": true,
+      "selection_sha256": "7df539874d84230f9e3ef88c898315821249f866ac9156b2a20eb3e9d338ac2f",
+      "selection_source": "results/sim_v1_3/v133/experiment_selection.json"
+    },
+    "d_geometry_contract": {
+      "status": "not_met",
+      "passed": false,
+      "source": "results/sim_v1_3/v133/support_geometry.json",
+      "checks": {
+        "strict_tip_centre_80mm_passed": {
+          "value": false,
+          "passed": false,
+          "status": "not_met"
+        },
+        "whole_tip_faces_in_beam_width": {
+          "value": false,
+          "passed": false,
+          "status": "not_met"
+        },
+        "exact_geometry_contract_passed": {
+          "value": false,
+          "passed": false,
+          "status": "not_met"
+        }
+      },
+      "artifact": {
+        "geometry_source": "未改的apexmr/scene_helpers.py原始实体尺寸/TCP/手指位姿AST，实际configure_support_tools装配和Frames位姿",
+        "original_gripper": {
+          "palm_size": [
+            0.18,
+            0.032,
+            0.02
+          ],
+          "finger_size": [
+            0.01,
+            0.016,
+            0.055
+          ],
+          "finger_centres_in_palm": [
+            [
+              -0.075,
+              0,
+              0.042
+            ],
+            [
+              0.075,
+              0,
+              0.042
+            ]
+          ],
+          "tcp_in_palm": [
+            0,
+            0,
+            0.071
+          ]
+        },
+        "arms": {
+          "A": {
+            "sensor_in_palm": [
+              0,
+              -0.014,
+              0.035,
+              0.7071067811865475,
+              0.0,
+              0.0,
+              0.7071067811865476
+            ],
+            "shoe_in_sensor": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "shoe_size_m": [
+              0.05,
+              0.06,
+              0.008
+            ],
+            "sensor_parent_is_palm": true,
+            "shoe_parent_is_sensor": true,
+            "top_grasp": {
+              "shoe_min_z_m": 0.86,
+              "tcp_z_m": 0.8540000000000001,
+              "brick_top_z_m": 0.8480000000000001,
+              "shoe_brick_clearance_m": 0.0119999999999999,
+              "shoe_tcp_clearance_m": 0.005999999999999894
+            },
+            "support": {
+              "tcp_world": [
+                -0.18400780995778798,
+                0.11925016270745391,
+                0.9060000000000001,
+                -0.4947653954952196,
+                0.5051803672159666,
+                -0.5051803672159666,
+                0.4947653954952196
+              ],
+              "support_point_world_m": [
+                -0.22,
+                0.12,
+                0.9240000000000002
+              ],
+              "tcp_axial_compensation_m": 0.035999999999999976,
+              "shoe_top_to_beam_bottom_m": 0.0,
+              "shoe_top_xy_offset_from_support_m": 0.0,
+              "finger_upper_edge_clearance_m": 0.010000000000000009,
+              "beam_width_m": 0.16,
+              "tips": [
+                {
+                  "face_center_world_m": [
+                    -0.18394532351674248,
+                    0.19426513518258504,
+                    0.9060000000000001
+                  ],
+                  "face_corners_world_m": [
+                    [
+                      -0.18384117944833328,
+                      0.1992640504662256,
+                      0.9140000000000001
+                    ],
+                    [
+                      -0.18384117944833328,
+                      0.1992640504662256,
+                      0.8980000000000001
+                    ],
+                    [
+                      -0.18404946758515164,
+                      0.1892662198989445,
+                      0.9140000000000001
+                    ],
+                    [
+                      -0.18404946758515164,
+                      0.1892662198989445,
+                      0.8980000000000001
+                    ]
+                  ],
+                  "face_center_distance_to_support_m": 0.08449408263304593,
+                  "nearest_tip_face_distance_to_support_m": 0.07867814181842372,
+                  "nearest_tip_face_point_world_m": [
+                    -0.18404946758515164,
+                    0.1892662198989445,
+                    0.9140000000000001
+                  ],
+                  "farthest_tip_face_corner_distance_m": 0.09091891992319309,
+                  "centre_within_80mm": false,
+                  "nearest_face_within_80mm": true,
+                  "centre_in_beam_width": true,
+                  "whole_face_in_beam_width": true
+                },
+                {
+                  "face_center_world_m": [
+                    -0.1870696455690178,
+                    0.04429767667336827,
+                    0.9060000000000001
+                  ],
+                  "face_corners_world_m": [
+                    [
+                      -0.18696550150060864,
+                      0.049296591957008834,
+                      0.9140000000000001
+                    ],
+                    [
+                      -0.18696550150060864,
+                      0.049296591957008834,
+                      0.8980000000000001
+                    ],
+                    [
+                      -0.18717378963742698,
+                      0.03929876138972771,
+                      0.9140000000000001
+                    ],
+                    [
+                      -0.18717378963742698,
+                      0.03929876138972771,
+                      0.8980000000000001
+                    ]
+                  ],
+                  "face_center_distance_to_support_m": 0.08449408263304596,
+                  "nearest_tip_face_distance_to_support_m": 0.07867814181842374,
+                  "nearest_tip_face_point_world_m": [
+                    -0.18696550150060864,
+                    0.049296591957008834,
+                    0.9140000000000001
+                  ],
+                  "farthest_tip_face_corner_distance_m": 0.0909189199231931,
+                  "centre_within_80mm": false,
+                  "nearest_face_within_80mm": true,
+                  "centre_in_beam_width": true,
+                  "whole_face_in_beam_width": false
+                }
+              ]
+            }
+          },
+          "B": {
+            "sensor_in_palm": [
+              0,
+              -0.014,
+              0.035,
+              -0.7071067811865475,
+              0.0,
+              0.0,
+              0.7071067811865476
+            ],
+            "shoe_in_sensor": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "shoe_size_m": [
+              0.05,
+              0.06,
+              0.008
+            ],
+            "sensor_parent_is_palm": true,
+            "shoe_parent_is_sensor": true,
+            "top_grasp": {
+              "shoe_min_z_m": 0.86,
+              "tcp_z_m": 0.8540000000000001,
+              "brick_top_z_m": 0.8480000000000001,
+              "shoe_brick_clearance_m": 0.0119999999999999,
+              "shoe_tcp_clearance_m": 0.005999999999999894
+            },
+            "support": {
+              "tcp_world": [
+                -0.2559978735343612,
+                0.11960871876593085,
+                0.9060000000000001,
+                0.497275345465521,
+                0.5027098873029522,
+                -0.5027098873029522,
+                -0.497275345465521
+              ],
+              "support_point_world_m": [
+                -0.22,
+                0.12,
+                0.9240000000000002
+              ],
+              "tcp_axial_compensation_m": 0.03599999999999998,
+              "shoe_top_to_beam_bottom_m": 0.0,
+              "shoe_top_xy_offset_from_support_m": 2.7755575615628914e-17,
+              "finger_upper_edge_clearance_m": 0.010000000000000009,
+              "beam_width_m": 0.16,
+              "tips": [
+                {
+                  "face_center_world_m": [
+                    -0.2536827928994521,
+                    0.044629452287431134,
+                    0.9060000000000001
+                  ],
+                  "face_corners_world_m": [
+                    [
+                      -0.2536284482836092,
+                      0.03962974762988096,
+                      0.9140000000000001
+                    ],
+                    [
+                      -0.2536284482836092,
+                      0.03962974762988096,
+                      0.8980000000000001
+                    ],
+                    [
+                      -0.25373713751529503,
+                      0.04962915694498132,
+                      0.9140000000000001
+                    ],
+                    [
+                      -0.25373713751529503,
+                      0.04962915694498132,
+                      0.8980000000000001
+                    ]
+                  ],
+                  "face_center_distance_to_support_m": 0.08449408263304597,
+                  "nearest_tip_face_distance_to_support_m": 0.07867814181842372,
+                  "nearest_tip_face_point_world_m": [
+                    -0.25373713751529503,
+                    0.04962915694498132,
+                    0.9140000000000001
+                  ],
+                  "farthest_tip_face_corner_distance_m": 0.09091891992319312,
+                  "centre_within_80mm": false,
+                  "nearest_face_within_80mm": true,
+                  "centre_in_beam_width": true,
+                  "whole_face_in_beam_width": false
+                },
+                {
+                  "face_center_world_m": [
+                    -0.2553131313747402,
+                    0.19462059201393633,
+                    0.9060000000000001
+                  ],
+                  "face_corners_world_m": [
+                    [
+                      -0.2552587867588973,
+                      0.18962088735638616,
+                      0.9140000000000001
+                    ],
+                    [
+                      -0.2552587867588973,
+                      0.18962088735638616,
+                      0.8980000000000001
+                    ],
+                    [
+                      -0.2553674759905832,
+                      0.1996202966714865,
+                      0.9140000000000001
+                    ],
+                    [
+                      -0.2553674759905832,
+                      0.1996202966714865,
+                      0.8980000000000001
+                    ]
+                  ],
+                  "face_center_distance_to_support_m": 0.08449408263304597,
+                  "nearest_tip_face_distance_to_support_m": 0.07867814181842377,
+                  "nearest_tip_face_point_world_m": [
+                    -0.2552587867588973,
+                    0.18962088735638616,
+                    0.9140000000000001
+                  ],
+                  "farthest_tip_face_corner_distance_m": 0.09091891992319313,
+                  "centre_within_80mm": false,
+                  "nearest_face_within_80mm": true,
+                  "centre_in_beam_width": true,
+                  "whole_face_in_beam_width": true
+                }
+              ]
+            }
+          }
+        },
+        "fixed_shift_clearance_and_contact_passed": true,
+        "strict_tip_centre_80mm_passed": false,
+        "nearest_tip_face_80mm_passed": true,
+        "tip_centres_in_beam_width": true,
+        "whole_tip_faces_in_beam_width": false,
+        "exact_geometry_contract_passed": false,
+        "measurement_policy": "指尖面是手指局部+z端矩形面；分别公开面中心、到实体面的最短距离、最远角及世界y投影。最近实体面通过不等于中心通过；所有阈值保持原值。",
+        "scope": "纯几何，不代表真实IK、碰撞证书或动力学通过"
+      },
+      "scope": "D严格静态几何指标独立于第8节真实执行验收；最近实体面通过不能替代指尖中心80mm或完整端面宽度约束"
+    },
+    "metrics": "results/sim_v1_3/v133/summary_metrics.json",
+    "updated_at": "2026-11-16T16:53:58.904179+00:00",
+    "execution_status": "completed",
+    "post_workflow_pending": [],
+    "finalization": "results/sim_v1_3/v133/finalization.json",
+    "final_default_full": "out/v133_final_full.json",
+    "csv_source_audit": "results/sim_v1_3/v133/final_csv_source_audit.json",
+    "readonly_v134_prestudy": "results/sim_v1_3/v134_prestudy.md"
+  },
+  "v1.3.4": {
+    "status": "completed_with_unmet_acceptance",
+    "execution_status": "completed",
+    "planning_acceptance": "passed_by_FIX_section8",
+    "acceptance": {
+      "planning": {
+        "passed": true,
+        "basis": "updated FIX section8 ruling; 005/012 and strict B3 accepted limitations",
+        "evidence": "planning_200.csv + user_section8_ruling.json"
+      },
+      "original11_and_optimality": {
+        "passed": true,
+        "evidence": {
+          "full": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\regressions\\full_runtime_fix2.json",
+          "original11": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\original11_four_fixes_runtime_fix2.json"
+        }
+      },
+      "sim20_70_percent": {
+        "passed": false,
+        "actual": "8/20",
+        "evidence": "sim20_final_comparison.csv"
+      },
+      "no_motion_unknown_direct_exit": {
+        "passed": true,
+        "actual_direct": 0,
+        "missing_motion_evidence": 0,
+        "evidence": "feedback_trigger_audit.json"
+      },
+      "walls_at_least_two": {
+        "passed": false,
+        "actual": "1/3"
+      },
+      "five_live_gates": {
+        "passed": true,
+        "actual": "5/5"
+      },
+      "nominal_actual_median": {
+        "passed": true,
+        "actual": {
+          "n": 8,
+          "median": 1.045684262728591
+        },
+        "scope": "final plan makespan / actual simulation makespan, successful source-valid fixed20 only"
+      },
+      "archives_core_source_cleanup": {
+        "passed": true,
+        "evidence": [
+          "archive_final_frozen.json",
+          "frozen_restore_audit.json",
+          "final_cleanup.json",
+          "native_final_source_audit.json"
+        ]
+      }
+    },
+    "summary": "results/sim_v1_3/v134/summary.md",
+    "evidence": "results/sim_v1_3/v134/acceptance.json",
+    "updated_at": "2026-11-17T13:49:21.982823+00:00"
+  }
+}

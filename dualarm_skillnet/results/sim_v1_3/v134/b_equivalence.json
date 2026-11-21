@@ -1,0 +1,183 @@
+{
+  "scope": "B only; actual event-search generated states; no simulator or batch",
+  "sampling_heuristic": "frozen v1.3.3 calibrated-floor HMax, full actions, w=3",
+  "sampling_limit_seconds_per_task": 60,
+  "tasks": [
+    {
+      "family": "F3",
+      "index": 24,
+      "task": "gen_f3_s20261115_024.qualified.toml",
+      "input": "results/sim_v1_3/v133/qualification/F3/024/gen_f3_s20261115_024/gen_f3_s20261115_024.qualified.toml",
+      "input_sha256": "5a6abf3b39875a2e5efdb746eea2e0db3ca736cf3b1c2bd01cf2baddb1b85865",
+      "sampling_status": "sample_limit_300",
+      "sampling_seconds": 3.8905459000961855,
+      "samples": 300,
+      "running_samples": 267,
+      "full_rules": 1110,
+      "restricted_rules": 420,
+      "mismatches": 0,
+      "mismatch_indices": [],
+      "old": {
+        "mean_ms": 14.687195335282013,
+        "median_ms": 14.549850020557642,
+        "max_ms": 25.838200002908707,
+        "total_seconds": 4.406158600584604
+      },
+      "new": {
+        "mean_ms": 5.908397666644305,
+        "median_ms": 5.6577500072307885,
+        "max_ms": 10.816800058819354,
+        "total_seconds": 1.7725192999932915
+      },
+      "restricted": {
+        "mean_ms": 1.683272667384396,
+        "median_ms": 1.6684500151313841,
+        "max_ms": 3.8120000390335917,
+        "total_seconds": 0.5049818002153188
+      },
+      "states_file": "results/sim_v1_3/v134/b_states_f3_024.json",
+      "pre_guard_measurement": {
+        "mean_ms": 5.05738766437086,
+        "median_ms": 4.995649971533567,
+        "max_ms": 9.20530001167208,
+        "total_seconds": 1.517216299311258
+      }
+    },
+    {
+      "family": "F3",
+      "index": 1,
+      "task": "gen_f3_s20261115_001.qualified.toml",
+      "input": "results/sim_v1_3/v133/qualification/F3/001/gen_f3_s20261115_001/gen_f3_s20261115_001.qualified.toml",
+      "input_sha256": "b8476818784a44f257a4a135abe03c4bbcfe5552e921d1a08a2549b8c8298395",
+      "sampling_status": "sample_limit_300",
+      "sampling_seconds": 0.6148315999889746,
+      "samples": 300,
+      "running_samples": 249,
+      "full_rules": 228,
+      "restricted_rules": 114,
+      "mismatches": 0,
+      "mismatch_indices": [],
+      "old": {
+        "mean_ms": 2.7595913340337574,
+        "median_ms": 2.513500046916306,
+        "max_ms": 10.883999988436699,
+        "total_seconds": 0.8278774002101272
+      },
+      "new": {
+        "mean_ms": 1.0801683319732547,
+        "median_ms": 0.8990000351332128,
+        "max_ms": 5.03910006955266,
+        "total_seconds": 0.3240504995919764
+      },
+      "restricted": {
+        "mean_ms": 0.6680703349411488,
+        "median_ms": 0.63624995527789,
+        "max_ms": 2.8437000000849366,
+        "total_seconds": 0.20042110048234463
+      },
+      "states_file": "results/sim_v1_3/v134/b_states_f3_001.json",
+      "pre_guard_measurement": {
+        "mean_ms": 2.0217559998854995,
+        "median_ms": 1.544599945191294,
+        "max_ms": 13.538500061258674,
+        "total_seconds": 0.6065267999656498
+      }
+    },
+    {
+      "family": "F3",
+      "index": 29,
+      "task": "gen_f3_s20261115_029.qualified.toml",
+      "input": "results/sim_v1_3/v133/qualification/F3/029/gen_f3_s20261115_029/gen_f3_s20261115_029.qualified.toml",
+      "input_sha256": "fa3b9281da8bf7965507f3e6b23687f0038f59dd816648f0e6b9623ea76bdb39",
+      "sampling_status": "sample_limit_300",
+      "sampling_seconds": 0.6467892000218853,
+      "samples": 300,
+      "running_samples": 275,
+      "full_rules": 168,
+      "restricted_rules": 54,
+      "mismatches": 0,
+      "mismatch_indices": [],
+      "old": {
+        "mean_ms": 2.765160003133739,
+        "median_ms": 2.5673999916762114,
+        "max_ms": 7.742599933408201,
+        "total_seconds": 0.8295480009401217
+      },
+      "new": {
+        "mean_ms": 0.6920246651861817,
+        "median_ms": 0.6184999947436154,
+        "max_ms": 2.0477999933063984,
+        "total_seconds": 0.2076073995558545
+      },
+      "restricted": {
+        "mean_ms": 0.3908566661023845,
+        "median_ms": 0.3808500478044152,
+        "max_ms": 0.8176000555977225,
+        "total_seconds": 0.11725699983071536
+      },
+      "states_file": "results/sim_v1_3/v134/b_states_f3_029.json",
+      "pre_guard_measurement": {
+        "mean_ms": 0.8373860009790709,
+        "median_ms": 0.8097499958239496,
+        "max_ms": 1.4348000986501575,
+        "total_seconds": 0.25121580029372126
+      }
+    },
+    {
+      "family": "F1",
+      "index": 6,
+      "task": "gen_f1_s20261115_006.qualified.toml",
+      "input": "results/sim_v1_3/v133/qualification/F1/006/gen_f1_s20261115_006/gen_f1_s20261115_006.qualified.toml",
+      "input_sha256": "222df3323d574bf07eddddfcac8fa58927cae847e4fe588e8875110d0043dc43",
+      "sampling_status": "sample_limit_300",
+      "sampling_seconds": 0.6435268999775872,
+      "samples": 300,
+      "running_samples": 267,
+      "full_rules": 168,
+      "restricted_rules": 20,
+      "mismatches": 0,
+      "mismatch_indices": [],
+      "old": {
+        "mean_ms": 3.4115049972509346,
+        "median_ms": 3.096400003414601,
+        "max_ms": 17.314499942585826,
+        "total_seconds": 1.0234514991752803
+      },
+      "new": {
+        "mean_ms": 0.7505426660645753,
+        "median_ms": 0.6185999372974038,
+        "max_ms": 8.728399989195168,
+        "total_seconds": 0.2251627998193726
+      },
+      "restricted": {
+        "mean_ms": 0.2368696666477869,
+        "median_ms": 0.23060000967234373,
+        "max_ms": 1.3923000078648329,
+        "total_seconds": 0.07106089999433607
+      },
+      "states_file": "results/sim_v1_3/v134/b_states_f1_006.json",
+      "pre_guard_measurement": {
+        "mean_ms": 1.0318813325526814,
+        "median_ms": 0.971650006249547,
+        "max_ms": 3.2969999592751265,
+        "total_seconds": 0.3095643997658044
+      }
+    }
+  ],
+  "checked": 1200,
+  "mismatches": 0,
+  "full_15_block_mean_ms_at_most_8": true,
+  "passed": true,
+  "measurement_policy": "uncached mean of 300 actual search states; max also disclosed; no per-state worst-case guarantee",
+  "source_sha256": {
+    "skillnet/planning/bounds.py": "d3f1f80af246000dee3747eb60e33aa54016e84b2bc7903089fbe49a74cbeedb",
+    "skillnet/planning/heuristic.py": "d99719627db745e5d7b3a10d9c8ed573b0638e804edd6b1a8e79ec86bc3f4fdb"
+  },
+  "final_guard_replay": "Final guard source replayed all1200 saved actual-search states; no new search; old timings from preceding matched benchmark retained.",
+  "focused_tests": {
+    "count": 43,
+    "passed": true,
+    "seconds": 57.056,
+    "log": "out/v134_b_focused_final_green.txt"
+  }
+}

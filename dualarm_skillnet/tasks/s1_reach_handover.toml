@@ -1,0 +1,52 @@
+name = "s1_reach_handover"
+description = "红色积木只有 B 够得着，目标位置只有 A 够得着"
+instruction = "把红色积木放到底板左边那个位置。"
+goal = ["at(red, board_l1)"]
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.30, 0.30, 0.20]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.30, 0.30, 0.20]
+speed = 0.25
+
+[[location]]
+id = "stock_r1"
+kind = "stock"
+pos = [0.4, -0.2, 0.0]
+
+[[location]]
+id = "buffer_mid"
+kind = "buffer"
+pos = [0.0, -0.3, 0.0]
+
+[[location]]
+id = "hand_mid"
+kind = "handover"
+pos = [0.0, 0.1, 0.2]
+
+[[location]]
+id = "board_l1"
+kind = "board"
+pos = [-0.15, 0.2, 0.0]
+
+[[block]]
+id = "red"
+type = "2x4"
+at = "stock_r1"
+
+[capabilities.reach]
+default = "INVALID"
+valid = { A = ["buffer_mid", "hand_mid", "board_l1"], B = ["stock_r1", "buffer_mid", "hand_mid"] }
+
+[capabilities.liftable]
+default = "VALID"
+
+[proposal]
+instruction = "红色积木只有 B 够得着，目标位置只有 A 够得着"
+steps = ["pick(B, red, stock_r1)", "place(B, red, board_l1)"]

@@ -1,0 +1,82 @@
+{
+  "task_file": "D:\\APEX_MR_Plus\\dualarm_skillnet\\tasks\\s1_reach_handover.toml",
+  "status": "passed",
+  "passed": true,
+  "profile": "skillnet_v1_3",
+  "port": 23210,
+  "timeout_wall_s": 1200.0,
+  "fatal_environment": false,
+  "task": "s1_reach_handover",
+  "task_sha256": "6808add35edde6355d1c4b2bac4159c7fd34a9d6955a5681f5f55aab368ed31c",
+  "environment": {
+    "c_free_bytes": 16404377600,
+    "port": 23210
+  },
+  "planning_status": "solved",
+  "feedback": [],
+  "simulator_pid": 27088,
+  "real_planning_status": "solved",
+  "backend_nominal_seconds": 60.777352369608515,
+  "success": true,
+  "phase": "complete",
+  "reason": null,
+  "planning_seconds": 9.483999999938533,
+  "compile_seconds": 4.60899999999674,
+  "motion_task_count": 16,
+  "video": false,
+  "step_durations": [
+    {
+      "step": 1,
+      "action": "pick(B, red, stock_r1)",
+      "estimated_seconds": 4.19089023,
+      "actual_seconds": 17.5199999999997,
+      "estimated_actual_ratio": 0.23920606335616845
+    },
+    {
+      "step": 2,
+      "action": "handover(B, A, red, hand_mid)",
+      "estimated_seconds": 5.154065923,
+      "actual_seconds": 17.02000000000019,
+      "estimated_actual_ratio": 0.3028240847826053
+    },
+    {
+      "step": 3,
+      "action": "place(A, red, board_l1)",
+      "estimated_seconds": 3.0770329610000005,
+      "actual_seconds": 19.32000000000302,
+      "estimated_actual_ratio": 0.15926671640784262
+    }
+  ],
+  "remote_interface_failure": false,
+  "tpg_seconds": 108.45300000003772,
+  "tpg_nodes": 186,
+  "tpg_edges": 210,
+  "nominal_makespan_seconds": 63.68602130051354,
+  "actual_makespan_seconds": 66.20000000000397,
+  "execution_wall_seconds": 23.54699999996228,
+  "failure_phase": null,
+  "executor_wall_seconds": 138.079000000027,
+  "motion_backend_cache": {
+    "entries": 16,
+    "hits": 14,
+    "misses": 16
+  },
+  "motion_feedback_count": 0,
+  "qualification_calls": 0,
+  "simulator_log": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\logs\\coppeliasim-20261115-124554-0e2201fc.log",
+  "simulator_closed": true,
+  "phase_seconds": {
+    "load": 0.0,
+    "environment": 0.0,
+    "planning": 0.046999999962281436,
+    "simulator_start": 0.23399999999674037,
+    "simulator_connect": 4.032000000006519,
+    "workcell": 1.422000000020489,
+    "real_planning": 9.436999999976251,
+    "compile": 4.719000000040978,
+    "execute": 138.13999999995576
+  },
+  "initial_planning_seconds": 0.046999999962281436,
+  "real_planning_seconds": 9.436999999976251,
+  "wall_seconds": 164.17199999996228
+}

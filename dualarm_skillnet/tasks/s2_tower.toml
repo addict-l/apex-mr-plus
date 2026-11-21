@@ -1,0 +1,75 @@
+name = "s2_tower"
+description = "将三块积木按底层、中层、顶层的顺序装成三层塔"
+instruction = "把三块积木装成一座三层塔，做好后两只手都空出来。"
+goal = []
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.30, 0.30, 0.20]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.30, 0.30, 0.20]
+speed = 0.25
+
+[[location]]
+id = "stock_l1"
+kind = "stock"
+pos = [-0.4, -0.2, 0.0]
+
+[[location]]
+id = "stock_l2"
+kind = "stock"
+pos = [-0.4, -0.1, 0.0]
+
+[[location]]
+id = "stock_r1"
+kind = "stock"
+pos = [0.4, -0.2, 0.0]
+
+[[block]]
+id = "b1"
+type = "tower_base"
+at = "stock_l1"
+
+[[block]]
+id = "b2"
+type = "tower_middle"
+at = "stock_l2"
+
+[[block]]
+id = "b3"
+type = "tower_top"
+at = "stock_r1"
+
+[[slot]]
+id = "t1"
+type = "tower_base"
+pos = [0.00, 0.10, 0.03]
+below = []
+
+[[slot]]
+id = "t2"
+type = "tower_middle"
+pos = [0.00, 0.10, 0.06]
+below = ["t1"]
+
+[[slot]]
+id = "t3"
+type = "tower_top"
+pos = [0.00, 0.10, 0.09]
+below = ["t2"]
+
+[capabilities.reach]
+default = "INVALID"
+valid = { A = ["stock_l1", "stock_l2", "t1", "t2", "t3"], B = ["stock_r1", "t1", "t2", "t3"] }
+
+[capabilities.liftable]
+default = "VALID"
+
+[proposal]
+instruction = "将三块积木按底层、中层、顶层的顺序装成三层塔"
+steps = ["pick(B, b3, stock_r1)", "insert(B, b3, t3)", "pick(A, b1, stock_l1)", "insert(A, b1, t1)", "pick(A, b2, stock_l2)", "insert(A, b2, t2)"]

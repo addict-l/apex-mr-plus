@@ -1,0 +1,151 @@
+name = "gen_f5_s20261115_000"
+description = "装好两层柱子、悬臂梁和配重，最后收好临时积木，两只手都空出来。"
+instruction = "装好两层柱子、悬臂梁和配重，最后收好临时积木，两只手都空出来。"
+goal = []
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.3, 0.3, 0.2]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.3, 0.3, 0.2]
+speed = 0.25
+
+[[location]]
+id = "stock_r0"
+kind = "stock"
+pos = [0.4990823462435881, -0.1994389804484407, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_r1"
+kind = "stock"
+pos = [0.7193732405240568, -0.3005730266077626, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_r2"
+kind = "stock"
+pos = [0.5990669981568663, -0.4991348139055808, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_r3"
+kind = "stock"
+pos = [0.5001714045846344, 0.4993446776251359, 0.0]
+owner = "B"
+
+[[location]]
+id = "stock_l1"
+kind = "stock"
+pos = [-0.49979142310835356, -0.2000808242872759, 0.0]
+owner = "A"
+
+[[location]]
+id = "stock_l2"
+kind = "stock"
+pos = [-0.49988728073309374, -0.4209501105111864, 0.0]
+owner = "A"
+
+[[location]]
+id = "stock_l3"
+kind = "stock"
+pos = [-0.7191617616192068, -0.2993633882977114, 0.0]
+owner = "A"
+
+[[block]]
+id = "pillar_base"
+type = "pillar_type"
+at = "stock_r0"
+
+[[block]]
+id = "pillar"
+type = "pillar_type"
+at = "stock_r1"
+
+[[block]]
+id = "beam_block"
+type = "beam_type"
+at = "stock_r2"
+
+[[block]]
+id = "counterweight"
+type = "counterweight_type"
+at = "stock_r3"
+
+[[block]]
+id = "temp_block1"
+type = "temporary_gen_third1"
+at = "stock_l1"
+
+[[block]]
+id = "temp_block2"
+type = "temporary_gen_third2"
+at = "stock_l2"
+
+[[block]]
+id = "temp_block3"
+type = "temporary_gen_third3"
+at = "stock_l3"
+
+[[slot]]
+id = "p0"
+type = "pillar_type"
+pos = [0.11498880026012165, 0.1147422236865784, 0.03]
+below = []
+
+[[slot]]
+id = "p1"
+type = "pillar_type"
+pos = [0.11498880026012165, 0.1147422236865784, 0.06]
+below = ["p0"]
+
+[[slot]]
+id = "beam"
+type = "beam_type"
+pos = [-0.00635308731704781, 0.1147422236865784, 0.09]
+below = ["p1"]
+overhang = true
+anchors = ["cw"]
+support_point = false
+
+[[slot]]
+id = "cw"
+type = "counterweight_type"
+pos = [0.17983832570879246, 0.1147422236865784, 0.12]
+below = ["beam"]
+
+[[slot]]
+id = "tp1"
+type = "temporary_gen_third1"
+pos = [-0.17739308740427, 0.1147422236865784, 0.03]
+below = []
+temporary = true
+platform_for = "beam"
+
+[[slot]]
+id = "tp2"
+type = "temporary_gen_third2"
+pos = [-0.17739308740427, 0.1147422236865784, 0.06]
+below = ["tp1"]
+temporary = true
+platform_for = "beam"
+
+[[slot]]
+id = "tp3"
+type = "temporary_gen_third3"
+pos = [-0.17739308740427, 0.1147422236865784, 0.09]
+below = ["tp2"]
+temporary = true
+platform_for = "beam"
+
+[capabilities.reach]
+default = "INVALID"
+valid = {"A" = ["stock_l1", "tp1", "stock_l2", "tp2", "stock_l3", "tp3"], "B" = ["stock_r0", "stock_r1", "stock_r2", "stock_r3", "p0", "p1", "beam", "cw"]}
+
+[capabilities.liftable]
+default = "VALID"

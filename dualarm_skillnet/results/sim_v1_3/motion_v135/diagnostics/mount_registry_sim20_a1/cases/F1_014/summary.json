@@ -1,0 +1,314 @@
+{
+  "task_file": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v133\\qualification\\F1\\014\\gen_f1_s20261115_014\\gen_f1_s20261115_014.qualified.toml",
+  "status": "passed",
+  "passed": true,
+  "profile": "skillnet_v1_3",
+  "port": 23210,
+  "timeout_wall_s": 1200.0,
+  "fatal_environment": false,
+  "task": "gen_f1_s20261115_014",
+  "task_sha256": "54bdf0fb551a77a3447161b7b66b3940b17ff3d6699196926e6e3d9f729a98b6",
+  "environment": {
+    "c_free_bytes": 32197730304,
+    "port": 23210
+  },
+  "planning_status": "solved",
+  "feedback": [],
+  "simulator_pid": 21640,
+  "real_planning_status": "solved",
+  "symbolic_makespan_seconds": 136.713947921,
+  "symbolic_lower_bound": 97.41992808178742,
+  "symbolic_suboptimality_bound": 1.4033468368630275,
+  "reference_reused": true,
+  "backend_nominal_seconds": 129.1912987779914,
+  "success": true,
+  "phase": "complete",
+  "reason": null,
+  "planning_seconds": 194.64100000006147,
+  "compile_seconds": 0.10899999993853271,
+  "motion_task_count": 42,
+  "video": false,
+  "step_durations": [
+    {
+      "step": 1,
+      "action": "pick(B, b3, stock_b2)",
+      "estimated_seconds": 18.02021463,
+      "actual_seconds": 14.759999999999762,
+      "estimated_actual_ratio": 1.2208817500000197
+    },
+    {
+      "step": 2,
+      "action": "place(B, b3, board_3)",
+      "estimated_seconds": 21.178993363,
+      "actual_seconds": 21.600000000000417,
+      "estimated_actual_ratio": 0.9805089519907219
+    },
+    {
+      "step": 3,
+      "action": "pick(A, b4, stock_a2)",
+      "estimated_seconds": 26.398379949,
+      "actual_seconds": 24.43999999999983,
+      "estimated_actual_ratio": 1.0801301124795493
+    },
+    {
+      "step": 4,
+      "action": "pick(B, b2, stock_b1)",
+      "estimated_seconds": 28.508950542999997,
+      "actual_seconds": 21.080000000003295,
+      "estimated_actual_ratio": 1.3524170086810028
+    },
+    {
+      "step": 5,
+      "action": "place(A, b4, board_4)",
+      "estimated_seconds": 24.630920481000004,
+      "actual_seconds": 21.1000000000033,
+      "estimated_actual_ratio": 1.167342202890813
+    },
+    {
+      "step": 6,
+      "action": "place(B, b2, board_2)",
+      "estimated_seconds": 27.814182817000003,
+      "actual_seconds": 25.099999999997124,
+      "estimated_actual_ratio": 1.1081347735857845
+    },
+    {
+      "step": 7,
+      "action": "pick(A, b1, stock_a1)",
+      "estimated_seconds": 24.252950425999998,
+      "actual_seconds": 24.719999999998244,
+      "estimated_actual_ratio": 0.9811064088188398
+    },
+    {
+      "step": 8,
+      "action": "pick(B, b5, stock_b3)",
+      "estimated_seconds": 23.474279846,
+      "actual_seconds": 19.479999999996124,
+      "estimated_actual_ratio": 1.2050451666326834
+    },
+    {
+      "step": 9,
+      "action": "place(A, b1, board_1)",
+      "estimated_seconds": 25.763754117000005,
+      "actual_seconds": 28.539999999994322,
+      "estimated_actual_ratio": 0.9027243909251973
+    },
+    {
+      "step": 10,
+      "action": "place(B, b5, board_5)",
+      "estimated_seconds": 17.717326721999996,
+      "actual_seconds": 19.339999999996152,
+      "estimated_actual_ratio": 0.9160975554293443
+    }
+  ],
+  "remote_interface_failure": false,
+  "geometry_scope": "sampled swept conflicts at 0.07 rad and nominal rollout at 0.05 s; no continuous collision guarantee",
+  "stage_seconds": {
+    "requirements": 0.030999999959021807,
+    "geometry_context_enter": 0.0470000000204891,
+    "tpg_structure": 0.125,
+    "tpg_geometry": 708.6870000000345,
+    "parameterize": 2.297000000020489,
+    "rollout": 15.422000000020489,
+    "geometry_context_restore": 0.015999999945051968,
+    "install": 13.734000000054948,
+    "execution": 93.92199999990407,
+    "acceptance": 0.015000000013969839,
+    "complete": 0.0
+  },
+  "query_statistics": {
+    "attempted_calls": 15151,
+    "completed_calls": 15151,
+    "wall_seconds": 671.3000385961495,
+    "sample_batches": 15004,
+    "sample_states": 165293,
+    "methods": {
+      "sample_batch_statistics": {
+        "attempted": 147,
+        "completed": 147,
+        "wall_seconds": 0.20046549942344427
+      },
+      "sample_state_pairs": {
+        "attempted": 15004,
+        "completed": 15004,
+        "wall_seconds": 671.0995730967261
+      }
+    },
+    "scope": "planner API calls including client/server and codec; not isolated network time"
+  },
+  "stopped_geometry_context": {
+    "enabled": true,
+    "scope": "stopped TPG/parameterization/nominal rollout only",
+    "enter_seconds": 0.03100000007543713,
+    "restore_seconds": 0.015999999945051968,
+    "receipt": {
+      "pid": 21640,
+      "instance_nonce": "a2167e1b4e474b3687dc00b9e9a4f6f8",
+      "before": {
+        "idle_fps": 8,
+        "fast_idle_tag_hex": "",
+        "stack": [
+          0,
+          null
+        ],
+        "simulation_state": 0,
+        "simulation_time_s": 0.0,
+        "simulation_timestep_s": 0.02,
+        "dynamics_step_s": 0.002,
+        "dynamics_engine": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ]
+      },
+      "enabled": true,
+      "restored": true,
+      "active": {
+        "idle_fps": 0,
+        "fast_idle_tag_hex": "0100000008000000",
+        "stack": [
+          1,
+          8
+        ],
+        "simulation_state": 0,
+        "simulation_time_s": 0.0,
+        "simulation_timestep_s": 0.02,
+        "dynamics_step_s": 0.002,
+        "dynamics_engine": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ]
+      },
+      "after": {
+        "idle_fps": 8,
+        "fast_idle_tag_hex": "",
+        "stack": [
+          0,
+          null
+        ],
+        "simulation_state": 0,
+        "simulation_time_s": 0.0,
+        "simulation_timestep_s": 0.02,
+        "dynamics_step_s": 0.002,
+        "dynamics_engine": 0,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ]
+      }
+    }
+  },
+  "server_geometry_statistics": {
+    "fallback_samples": 0,
+    "geometry_calls": 165293,
+    "shape_collision_queries": 12331934,
+    "samples_checked": 165293,
+    "invalid_samples": 6,
+    "context_equal_checks": 150289,
+    "failures": 0,
+    "world_reuse_samples": 150258,
+    "configuration_payload_seconds": 13.847000000000861,
+    "context_seconds": 0.7370000000003074,
+    "timing_scope": "Inner snapshot and per-sample phases; batch total also includes outer transaction snapshot/restore and bookkeeping",
+    "snapshot_seconds": 0.9469999999992638,
+    "samples_requested": 165293,
+    "scope": "Exact stopped-scene full geometry per supplied sample; no collision predicates omitted",
+    "restore_seconds": 0.7799999999999159,
+    "batch_seconds": 465.28000000000156,
+    "batches": 15004,
+    "context_comparison_seconds": 31.98799999999207,
+    "forced_legacy_batches": 0,
+    "geometry_seconds": 409.3420000000033,
+    "full_context_resets": 15035
+  },
+  "server_geometry_statistics_before_tpg": {
+    "fallback_samples": 0,
+    "geometry_calls": 0,
+    "shape_collision_queries": 0,
+    "samples_checked": 0,
+    "invalid_samples": 0,
+    "context_equal_checks": 0,
+    "failures": 0,
+    "world_reuse_samples": 0,
+    "configuration_payload_seconds": 0,
+    "context_seconds": 0,
+    "timing_scope": "Inner snapshot and per-sample phases; batch total also includes outer transaction snapshot/restore and bookkeeping",
+    "snapshot_seconds": 0,
+    "samples_requested": 0,
+    "scope": "Exact stopped-scene full geometry per supplied sample; no collision predicates omitted",
+    "restore_seconds": 0,
+    "batch_seconds": 0,
+    "batches": 0,
+    "context_comparison_seconds": 0,
+    "forced_legacy_batches": 0,
+    "geometry_seconds": 0,
+    "full_context_resets": 0
+  },
+  "tpg_nodes": 376,
+  "candidate_conflict_pairs": 35328,
+  "structural_ordered_pairs_skipped": 5916,
+  "geometry_statistics": {
+    "oracle_calls": 16026,
+    "conflicting_calls": 233,
+    "mode_conflicts": 230,
+    "mesh_state_queries": 162333,
+    "cache_hits": 106213,
+    "states_considered": 268546,
+    "batch_calls": 14980,
+    "wall_s": 684.0289285898907,
+    "joint_sample_step_rad": 0.07,
+    "batch_size": 128,
+    "continuous_collision_guarantee": false
+  },
+  "tpg_counts": {
+    "nodes": 376,
+    "pose_nodes": 366,
+    "skill_nodes": 10,
+    "type1_edges": 414,
+    "task_type2_edges": 2,
+    "motion_type2_edges": 233,
+    "cross_arm_pairs": 35328,
+    "oracle_queries": 16026,
+    "already_ordered_pairs_skipped": 19302,
+    "pairs_without_geometry": 0
+  },
+  "tpg_seconds": 711.109000000055,
+  "tpg_edges": 652,
+  "nominal_makespan_seconds": 129.1912987779914,
+  "actual_makespan_seconds": 134.1399999999948,
+  "execution_wall_seconds": 91.81199999991804,
+  "failure_phase": null,
+  "executor_wall_seconds": 834.295999999973,
+  "motion_backend_cache": {
+    "entries": 42,
+    "hits": 0,
+    "misses": 42
+  },
+  "motion_feedback_count": 0,
+  "motion_feedback_rounds": 1,
+  "qualification_calls": 6,
+  "simulator_log": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014\\instance\\results\\sim_v1_3\\logs\\coppeliasim-20261118-095756-a2167e1b.log",
+  "simulator_closed": true,
+  "phase_seconds": {
+    "load": 0.015999999945051968,
+    "environment": 0.0,
+    "planning": 60.17200000002049,
+    "simulator_start": 0.23400000005494803,
+    "simulator_connect": 3.7339999999385327,
+    "workcell": 2.5,
+    "real_planning": 134.46900000004098,
+    "compile": 0.6720000000204891,
+    "execute": 836.5
+  },
+  "initial_planning_seconds": 60.17200000002049,
+  "real_planning_seconds": 134.46900000004098,
+  "wall_seconds": 1044.9529999999795,
+  "motion_journal": {
+    "events": 38,
+    "persistence_wall_seconds": 0.47000000008847564,
+    "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014\\motion_live.jsonl"
+  }
+}

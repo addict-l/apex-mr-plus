@@ -1,0 +1,109 @@
+{
+  "at": "2026-11-17T13:49:21.937700+00:00",
+  "workflow_status": "finished",
+  "overall_passed": false,
+  "acceptance": {
+    "planning": {
+      "passed": true,
+      "basis": "updated FIX section8 ruling; 005/012 and strict B3 accepted limitations",
+      "evidence": "planning_200.csv + user_section8_ruling.json"
+    },
+    "original11_and_optimality": {
+      "passed": true,
+      "evidence": {
+        "full": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\regressions\\full_runtime_fix2.json",
+        "original11": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\original11_four_fixes_runtime_fix2.json"
+      }
+    },
+    "sim20_70_percent": {
+      "passed": false,
+      "actual": "8/20",
+      "evidence": "sim20_final_comparison.csv"
+    },
+    "no_motion_unknown_direct_exit": {
+      "passed": true,
+      "actual_direct": 0,
+      "missing_motion_evidence": 0,
+      "evidence": "feedback_trigger_audit.json"
+    },
+    "walls_at_least_two": {
+      "passed": false,
+      "actual": "1/3"
+    },
+    "five_live_gates": {
+      "passed": true,
+      "actual": "5/5"
+    },
+    "nominal_actual_median": {
+      "passed": true,
+      "actual": {
+        "n": 8,
+        "median": 1.045684262728591
+      },
+      "scope": "final plan makespan / actual simulation makespan, successful source-valid fixed20 only"
+    },
+    "archives_core_source_cleanup": {
+      "passed": true,
+      "evidence": [
+        "archive_final_frozen.json",
+        "frozen_restore_audit.json",
+        "final_cleanup.json",
+        "native_final_source_audit.json"
+      ]
+    }
+  },
+  "feedback_totals": {
+    "sim20": {
+      "collision_mapping_events": 54,
+      "upgrade_8_to_24_events": 3,
+      "upgrade_requests": 3,
+      "cut_events": 54,
+      "actual_research_rounds": 54,
+      "search_rounds": 74,
+      "downgrade_events": 10,
+      "downgraded_fact_count": 10,
+      "unknown_direct_terminal_events": 0,
+      "missing_motion_evidence": 0,
+      "cut_reasons": {
+        "ik_collision": 54
+      }
+    },
+    "walls3": {
+      "collision_mapping_events": 5,
+      "upgrade_8_to_24_events": 1,
+      "upgrade_requests": 1,
+      "cut_events": 5,
+      "actual_research_rounds": 5,
+      "search_rounds": 8,
+      "downgrade_events": 1,
+      "downgraded_fact_count": 1,
+      "unknown_direct_terminal_events": 0,
+      "missing_motion_evidence": 0,
+      "cut_reasons": {
+        "ik_collision": 5
+      }
+    },
+    "gates": {
+      "collision_mapping_events": 0,
+      "upgrade_8_to_24_events": 0,
+      "upgrade_requests": 0,
+      "cut_events": 0,
+      "actual_research_rounds": 0,
+      "search_rounds": 5,
+      "downgrade_events": 0,
+      "downgraded_fact_count": 0,
+      "unknown_direct_terminal_events": 0,
+      "missing_motion_evidence": 0,
+      "cut_reasons": {}
+    }
+  },
+  "native_passed": {
+    "sim20": 8,
+    "walls3": 1,
+    "gates": 5
+  },
+  "remaining": [],
+  "planning_core_frozen": true,
+  "source_selection_sha256": "cbd597643c5c96d0293c934d51b79882fb2862c25ad4d891c32be498a3fc8f28",
+  "finalizer_sha256": "3649d51fa28ee38b1d12462f2d783cf17aec4e6efc7e2ec24eff76924f2f15a4"
+}

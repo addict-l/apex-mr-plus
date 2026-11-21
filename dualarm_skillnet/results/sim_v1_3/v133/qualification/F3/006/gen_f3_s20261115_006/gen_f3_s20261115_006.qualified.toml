@@ -1,0 +1,12 @@
+name = "gen_f3_s20261115_006"
+description = "把积木装成 5 层、每层 1 块的塔，最后两只手都空出来。"
+instruction = "把积木装成 5 层、每层 1 块的塔，最后两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = []
+fill_all_slots = true
+location = [{id = "stock_a1", kind = "stock", pos = [-0.8537404750808382, -0.45855022870576434, 0.0], owner = "A"}, {id = "stock_a2", kind = "stock", pos = [-0.44566289768973344, -0.2500613939755784, 0.0], owner = "A"}, {id = "stock_a3", kind = "stock", pos = [-0.4460093779850573, 0.5133835912285666, 0.0], owner = "A"}, {id = "stock_a4", kind = "stock", pos = [-0.6503763398927876, -0.24888366848952032, 0.0], owner = "A"}, {id = "stock_a5", kind = "stock", pos = [-0.8544524146869961, 0.5113105274082784, 0.0], owner = "A"}]
+block = [{id = "b1_1", type = "tower_base", at = "stock_a1"}, {id = "b2_1", type = "tower_middle", at = "stock_a2"}, {id = "b3_1", type = "tower_top", at = "stock_a3"}, {id = "b4_1", type = "tower_base", at = "stock_a4"}, {id = "b5_1", type = "tower_middle", at = "stock_a5"}]
+slot = [{id = "s1_1", type = "tower_base", pos = [-0.07728058496452048, -0.07048616650024743, 0.03], below = []}, {id = "s2_1", type = "tower_middle", pos = [-0.07728058496452048, -0.07048616650024743, 0.06], below = ["s1_1"]}, {id = "s3_1", type = "tower_top", pos = [-0.07728058496452048, -0.07048616650024743, 0.09], below = ["s2_1"]}, {id = "s4_1", type = "tower_base", pos = [-0.07728058496452048, -0.07048616650024743, 0.12], below = ["s3_1"]}, {id = "s5_1", type = "tower_middle", pos = [-0.07728058496452048, -0.07048616650024743, 0.15], below = ["s4_1"]}]
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["stock_a1", "stock_a2", "stock_a3", "stock_a4", "stock_a5", "s1_1", "s2_1", "s3_1", "s4_1", "s5_1"], B = ["s1_1", "s2_1"]}, invalid = {A = [], B = ["stock_a1", "stock_a4", "stock_a5"]}, unknown = {A = [], B = ["stock_a2", "stock_a3", "s3_1", "s4_1", "s5_1"]}}}
+capability_source = "ik_qualified"

@@ -1,0 +1,12 @@
+name = "gen_f5_s20261115_020"
+description = "装好两层柱子、悬臂梁和配重，最后收好临时积木，两只手都空出来。"
+instruction = "装好两层柱子、悬臂梁和配重，最后收好临时积木，两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = []
+fill_all_slots = true
+location = [{id = "stock_a1", kind = "stock", pos = [-0.4453842694542207, -0.2513635342687686, 0.0], owner = "A"}, {id = "stock_a2", kind = "stock", pos = [-0.44586869364902254, -0.46273565341972733, 0.0], owner = "A"}, {id = "stock_a3", kind = "stock", pos = [-0.6489309299572867, 0.5063749599237142, 0.0], owner = "A"}, {id = "stock_a4", kind = "stock", pos = [-0.6497753893053606, -0.2510408259616094, 0.0], owner = "A"}, {id = "stock_b1", kind = "stock", pos = [0.8553457679253451, -0.2516148009473857, 0.0], owner = "B"}]
+block = [{id = "pillar_base", type = "pillar_type", at = "stock_a1"}, {id = "pillar", type = "pillar_type", at = "stock_a2"}, {id = "beam_block", type = "beam_type", at = "stock_a3"}, {id = "counterweight", type = "counterweight_type", at = "stock_a4"}, {id = "temp_block1", type = "temporary_gen_single", at = "stock_b1"}]
+slot = [{id = "p0", type = "pillar_type", pos = [-0.1543145123884223, -0.06444355481621622, 0.03], below = []}, {id = "p1", type = "pillar_type", pos = [-0.1543145123884223, -0.06444355481621622, 0.06], below = ["p0"]}, {id = "beam", type = "beam_type", pos = [-0.06798003300229127, -0.06444355481621622, 0.09], below = ["p1"], overhang = true, anchors = ["cw"], support_point = false}, {id = "cw", type = "counterweight_type", pos = [-0.2567641766388682, -0.06444355481621622, 0.12], below = ["beam"]}, {id = "tp1", type = "temporary_gen_single", pos = [0.11308572342531872, -0.06444355481621622, 0.03], below = [], temporary = true, platform_for = "beam"}]
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["stock_a1", "stock_a2", "stock_a3", "stock_a4", "p0", "p1", "beam", "cw"], B = ["stock_b1", "beam", "tp1"]}, invalid = {A = ["stock_b1"], B = ["stock_a2", "stock_a3", "stock_a4"]}, unknown = {A = ["tp1"], B = ["stock_a1", "p0", "p1", "cw"]}}}
+capability_source = "ik_qualified"

@@ -1,0 +1,12 @@
+name = "gen_f1_s20261115_008"
+description = "把 5 块积木分别放到底板对应目标位，最后两只手都空出来。"
+instruction = "把 5 块积木分别放到底板对应目标位，最后两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = ["at(b1, board_1)", "at(b2, board_2)", "at(b3, board_3)", "at(b4, board_4)", "at(b5, board_5)"]
+fill_all_slots = true
+location = [{id = "stock_a1", kind = "stock", pos = [-0.44534976926680314, -0.04098698275083773, 0.0], owner = "A"}, {id = "board_1", kind = "board", pos = [-0.15690640238328984, -0.06400399755453239, 0.0]}, {id = "stock_b1", kind = "stock", pos = [0.44565257652078166, 0.5066327865518803, 0.0], owner = "B"}, {id = "board_2", kind = "board", pos = [0.10180097251079706, 0.22701868861019806, 0.0]}, {id = "stock_b2", kind = "stock", pos = [0.4442511917151391, -0.2493545184751055, 0.0], owner = "B"}, {id = "board_3", kind = "board", pos = [0.24304533705373094, 0.3766687833586574, 0.0]}, {id = "stock_a2", kind = "stock", pos = [-0.8547346348620051, -0.2502204117241725, 0.0], owner = "A"}, {id = "board_4", kind = "board", pos = [-0.05625199777668055, 0.35147376202270864, 0.0]}, {id = "stock_b3", kind = "stock", pos = [0.854685061351916, -0.2492646344757903, 0.0], owner = "B"}, {id = "board_5", kind = "board", pos = [0.2636436534764776, -0.1461337175306931, 0.0]}]
+block = [{id = "b1", type = "2x4", at = "stock_a1"}, {id = "b2", type = "2x4", at = "stock_b1"}, {id = "b3", type = "2x4", at = "stock_b2"}, {id = "b4", type = "2x4", at = "stock_a2"}, {id = "b5", type = "2x4", at = "stock_b3"}]
+slot = []
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["stock_a1", "board_1", "board_2", "stock_a2", "board_4"], B = ["stock_b1", "board_2", "stock_b2", "board_3", "board_4", "stock_b3", "board_5"]}, invalid = {A = ["stock_b3"], B = ["stock_a2"]}, unknown = {A = ["stock_b1", "stock_b2", "board_3", "board_5"], B = ["stock_a1", "board_1"]}}}
+capability_source = "ik_qualified"

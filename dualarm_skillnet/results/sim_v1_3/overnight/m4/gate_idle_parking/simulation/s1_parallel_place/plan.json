@@ -1,0 +1,775 @@
+{
+  "task": "s1_parallel_place",
+  "description": "两只臂分别将左右料区的积木放到底板对应位置",
+  "instruction": "把红色积木放到底板左边，蓝色积木放到底板右边。",
+  "status": "solved",
+  "makespan": 8.077686456,
+  "proposal": null,
+  "used_proposal": false,
+  "model_calls": [],
+  "model_goal_comparison": null,
+  "model_error": null,
+  "completion_elapsed": 0.0,
+  "completion": null,
+  "schedule": [
+    {
+      "action": "pick(B, blue, stock_r1)",
+      "skill": "pick",
+      "title": "抓取",
+      "arms": [
+        "B"
+      ],
+      "start": 0.0,
+      "end": 4.19089023,
+      "state_before": [
+        "arm_at(A, home_A)",
+        "arm_at(B, home_B)",
+        "at(blue, stock_r1)",
+        "at(red, stock_l1)",
+        "empty(board_l1)",
+        "empty(board_r1)",
+        "free(A)",
+        "free(B)"
+      ]
+    },
+    {
+      "action": "pick(A, red, stock_l1)",
+      "skill": "pick",
+      "title": "抓取",
+      "arms": [
+        "A"
+      ],
+      "start": 0.0,
+      "end": 4.19089023,
+      "state_before": [
+        "arm_at(A, home_A)",
+        "arm_at(B, home_B)",
+        "at(red, stock_l1)",
+        "empty(board_l1)",
+        "empty(board_r1)",
+        "free(A)"
+      ]
+    },
+    {
+      "action": "place(A, red, board_l1)",
+      "skill": "place",
+      "title": "放置",
+      "arms": [
+        "A"
+      ],
+      "start": 4.19089023,
+      "end": 8.077686456,
+      "state_before": [
+        "arm_at(A, stock_l1)",
+        "arm_at(B, stock_r1)",
+        "empty(board_l1)",
+        "empty(board_r1)",
+        "empty(stock_l1)",
+        "empty(stock_r1)",
+        "held(A, red)",
+        "held(B, blue)"
+      ]
+    },
+    {
+      "action": "place(B, blue, board_r1)",
+      "skill": "place",
+      "title": "放置",
+      "arms": [
+        "B"
+      ],
+      "start": 4.19089023,
+      "end": 8.077686456,
+      "state_before": [
+        "arm_at(A, stock_l1)",
+        "arm_at(B, stock_r1)",
+        "empty(board_r1)",
+        "empty(stock_l1)",
+        "empty(stock_r1)",
+        "held(B, blue)"
+      ]
+    }
+  ],
+  "search": {
+    "status": "solved",
+    "expanded": 9,
+    "generated": 17,
+    "rejected": {
+      "capability_invalid": 8,
+      "capability_unknown": 0,
+      "invariant": 0,
+      "cut": 0,
+      "protected": 0
+    },
+    "elapsed": 0.01600000000325963
+  },
+  "unknown": [],
+  "motion": [
+    {
+      "status": "VALID",
+      "detail": "真实运动后端：全部原语通过几何验证",
+      "segments": [
+        "s1_0000_B_r1",
+        "s1_0001_B_r2",
+        "s1_0002_B_r3",
+        "s1_0003_B_r4"
+      ]
+    },
+    {
+      "status": "VALID",
+      "detail": "真实运动后端：全部原语通过几何验证",
+      "segments": [
+        "s2_0004_A_r1",
+        "s2_0005_A_r2",
+        "s2_0006_A_r3",
+        "s2_0007_A_r4"
+      ]
+    },
+    {
+      "status": "VALID",
+      "detail": "真实运动后端：全部原语通过几何验证",
+      "segments": [
+        "s3_0008_A_r1",
+        "s3_0009_A_r2",
+        "s3_0010_A_r3",
+        "s3_0011_A_r4"
+      ]
+    },
+    {
+      "status": "VALID",
+      "detail": "真实运动后端：全部原语通过几何验证",
+      "segments": [
+        "s4_0012_B_r1",
+        "s4_0013_B_r2",
+        "s4_0014_B_r3",
+        "s4_0015_B_r4"
+      ]
+    }
+  ],
+  "feedback": [],
+  "relevance": [
+    {
+      "action": "pick(A, blue, board_l1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(board_l1)",
+        "held(A, blue)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, board_l1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(A, blue)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, blue, board_r1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "INVALID",
+      "reasons": [
+        "empty(board_r1)",
+        "held(A, blue)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, board_r1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        },
+        {
+          "fact": "liftable(A, blue)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, blue, stock_l1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(stock_l1)",
+        "held(A, blue)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, stock_l1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(A, blue)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, blue, stock_r1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "INVALID",
+      "reasons": [
+        "empty(stock_r1)",
+        "held(A, blue)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, stock_r1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        },
+        {
+          "fact": "liftable(A, blue)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, red, board_l1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(board_l1)",
+        "held(A, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, board_l1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(A, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, red, board_r1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "INVALID",
+      "reasons": [
+        "empty(board_r1)",
+        "held(A, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, board_r1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        },
+        {
+          "fact": "liftable(A, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, red, stock_l1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(stock_l1)",
+        "held(A, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, stock_l1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(A, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, red, stock_r1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "INVALID",
+      "reasons": [
+        "empty(stock_r1)",
+        "held(A, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, stock_r1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        },
+        {
+          "fact": "liftable(A, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, blue, board_l1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "INVALID",
+      "reasons": [
+        "empty(board_l1)",
+        "held(B, blue)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, board_l1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        },
+        {
+          "fact": "liftable(B, blue)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, blue, board_r1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(board_r1)",
+        "held(B, blue)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, board_r1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(B, blue)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, blue, stock_l1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "INVALID",
+      "reasons": [
+        "empty(stock_l1)",
+        "held(B, blue)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, stock_l1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        },
+        {
+          "fact": "liftable(B, blue)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, blue, stock_r1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(stock_r1)",
+        "held(B, blue)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, stock_r1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(B, blue)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, red, board_l1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "INVALID",
+      "reasons": [
+        "empty(board_l1)",
+        "held(B, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, board_l1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        },
+        {
+          "fact": "liftable(B, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, red, board_r1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(board_r1)",
+        "held(B, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, board_r1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(B, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, red, stock_l1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "INVALID",
+      "reasons": [
+        "empty(stock_l1)",
+        "held(B, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, stock_l1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        },
+        {
+          "fact": "liftable(B, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, red, stock_r1)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(stock_r1)",
+        "held(B, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, stock_r1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(B, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "place(A, blue, board_l1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(blue, board_l1)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, board_l1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "place(A, blue, board_r1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "INVALID",
+      "reasons": [
+        "at(blue, board_r1)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, board_r1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        }
+      ]
+    },
+    {
+      "action": "place(A, blue, stock_l1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(blue, stock_l1)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, stock_l1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "place(A, blue, stock_r1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "INVALID",
+      "reasons": [
+        "at(blue, stock_r1)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, stock_r1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        }
+      ]
+    },
+    {
+      "action": "place(A, red, board_l1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(red, board_l1)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, board_l1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "place(A, red, board_r1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "INVALID",
+      "reasons": [
+        "at(red, board_r1)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, board_r1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        }
+      ]
+    },
+    {
+      "action": "place(A, red, stock_l1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(red, stock_l1)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, stock_l1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "place(A, red, stock_r1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "INVALID",
+      "reasons": [
+        "at(red, stock_r1)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, stock_r1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        }
+      ]
+    },
+    {
+      "action": "place(B, blue, board_l1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "INVALID",
+      "reasons": [
+        "at(blue, board_l1)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, board_l1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        }
+      ]
+    },
+    {
+      "action": "place(B, blue, board_r1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(blue, board_r1)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, board_r1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "place(B, blue, stock_l1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "INVALID",
+      "reasons": [
+        "at(blue, stock_l1)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, stock_l1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        }
+      ]
+    },
+    {
+      "action": "place(B, blue, stock_r1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(blue, stock_r1)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, stock_r1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "place(B, red, board_l1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "INVALID",
+      "reasons": [
+        "at(red, board_l1)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, board_l1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        }
+      ]
+    },
+    {
+      "action": "place(B, red, board_r1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(red, board_r1)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, board_r1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "place(B, red, stock_l1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "INVALID",
+      "reasons": [
+        "at(red, stock_l1)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, stock_l1)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        }
+      ]
+    },
+    {
+      "action": "place(B, red, stock_r1)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(red, stock_r1)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, stock_r1)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+version,category,count,denominator
+v133,legacy_terminal:ik_collision,13,20
+v133,legacy_terminal:rrt_exhausted,1,20
+v133,execution:tracking_failure,1,20
+v134,timeout:TPG_geometry,2,20
+v134,real_planning:no_plan_after_ik_collision,3,20
+v134,real_planning:budget_after_ik_collision,6,20
+v134,real_planning:unknown_after_ik_collision,1,20

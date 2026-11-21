@@ -1,0 +1,90 @@
+[
+  {
+    "file": "tasks/s1_far_handover.toml",
+    "task": "s1_far_handover",
+    "expected_status": "solved",
+    "v121_makespan": 16.728193782,
+    "reference": "results/llm_v1_2_1/none/s1_far_handover/plan.json",
+    "proposal_variant_semantically_equal": false
+  },
+  {
+    "file": "tasks/s1_nearest_arm.toml",
+    "task": "s1_nearest_arm",
+    "expected_status": "solved",
+    "v121_makespan": 7.947067309,
+    "reference": "results/llm_v1_2_1/none/s1_nearest_arm/plan.json",
+    "proposal_variant_semantically_equal": false
+  },
+  {
+    "file": "tasks/s1_parallel_place.toml",
+    "task": "s1_parallel_place",
+    "expected_status": "solved",
+    "v121_makespan": 8.077686456,
+    "reference": "results/llm_v1_2_1/none/s1_parallel_place/plan.json",
+    "proposal_variant_semantically_equal": false
+  },
+  {
+    "file": "tasks/s1_reach_handover.toml",
+    "task": "s1_reach_handover",
+    "expected_status": "solved",
+    "v121_makespan": 12.421989114,
+    "reference": "results/llm_v1_2_1/none/s1_reach_handover/plan.json",
+    "proposal_variant_semantically_equal": false
+  },
+  {
+    "file": "tasks/s2_tower.toml",
+    "task": "s2_tower",
+    "expected_status": "solved",
+    "v121_makespan": 22.824385777,
+    "reference": "results/llm_v1_2_1/none/s2_tower/plan.json",
+    "proposal_variant_semantically_equal": false
+  },
+  {
+    "file": "tasks/s2_tower_same_type.toml",
+    "task": "s2_tower_same_type",
+    "expected_status": "solved",
+    "v121_makespan": 18.672395321,
+    "reference": "results/llm_v1_2_1/none/s2_tower_same_type/plan.json",
+    "proposal_variant_semantically_equal": false
+  },
+  {
+    "file": "tasks/s3a_cantilever.toml",
+    "task": "s3a_cantilever",
+    "expected_status": "solved",
+    "v121_makespan": 23.83843695,
+    "reference": "results/llm_v1_2_1/none/s3a_cantilever/plan.json",
+    "proposal_variant_semantically_equal": false
+  },
+  {
+    "file": "tasks/s3a_cantilever_with_proposal.toml",
+    "task": "s3a_cantilever_with_proposal",
+    "expected_status": "solved",
+    "v121_makespan": 23.83843695,
+    "reference": "results/llm_v1_2_1/none/s3a_cantilever/plan.json",
+    "proposal_variant_semantically_equal": true
+  },
+  {
+    "file": "tasks/s3a_platform.toml",
+    "task": "s3a_platform",
+    "expected_status": "solved",
+    "v121_makespan": 54.710354258,
+    "reference": "results/llm_v1_2_1/none/s3a_platform/plan.json",
+    "proposal_variant_semantically_equal": false
+  },
+  {
+    "file": "tasks/s3a_platform_demo_needs_support.toml",
+    "task": "s3a_platform_demo_needs_support",
+    "expected_status": "solved",
+    "v121_makespan": 10.20523876,
+    "reference": "results/llm_v1_2_1/none/s3a_platform_demo_needs_support/plan.json",
+    "proposal_variant_semantically_equal": false
+  },
+  {
+    "file": "tasks/s3a_platform_with_proposal.toml",
+    "task": "s3a_platform_with_proposal",
+    "expected_status": "solved",
+    "v121_makespan": 54.710354258,
+    "reference": "results/llm_v1_2_1/none/s3a_platform/plan.json",
+    "proposal_variant_semantically_equal": true
+  }
+]

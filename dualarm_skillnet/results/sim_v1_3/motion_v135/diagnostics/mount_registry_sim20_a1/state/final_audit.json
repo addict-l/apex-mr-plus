@@ -1,0 +1,218 @@
+{
+  "at": "2026-11-18T18:41:27.231360+00:00",
+  "passed": true,
+  "manifest_sha256": "efc6753d665255855174f1b782c0a510293604c9130ba7c7d9d138f273abbf77",
+  "candidate_fingerprint": "81abae5d08e36e7b3e75a9c7b86daebaea4a05523626565bf420b204f5f8a0f7",
+  "candidate_version_files": 119,
+  "verified_cases": [
+    {
+      "id": "mount-sim20-a1-00",
+      "attempt_id": "a1",
+      "task_sha256": "54bdf0fb551a77a3447161b7b66b3940b17ff3d6699196926e6e3d9f729a98b6",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-01",
+      "attempt_id": "a1",
+      "task_sha256": "a97bcdc08e0bbc53140cfaa6ecc825cd435bb61a32fe97fb59d16f27e051797f",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-02",
+      "attempt_id": "a1",
+      "task_sha256": "bdc7f3790defc2c21a1a8538d7fd5d0a1130eebda5ccab3a6649eb54210ccf50",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-03",
+      "attempt_id": "a1",
+      "task_sha256": "4da055c6790595e82e17fb0dfaa08b874b341649b12864f3fd8cc4bfc387d3c2",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-04",
+      "attempt_id": "a1",
+      "task_sha256": "9043f90fe2dd884411de2d0c3d63860ca7ba843147e9958cd15f930721181f61",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-05",
+      "attempt_id": "a1",
+      "task_sha256": "6aed1f1b8c722c56dec9daa1d07be105e78d30743c235ba68f764149ae87e738",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-06",
+      "attempt_id": "a1",
+      "task_sha256": "0a96ab247e074a104891604134704d98846d91c223294711179b458987510293",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-07",
+      "attempt_id": "a1",
+      "task_sha256": "cde22aaca4e95ccef7393c7c5f56d47f0d7b8d052e9ac9cae6fb2f304e20c0cc",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-08",
+      "attempt_id": "a1",
+      "task_sha256": "941de06c1a30217afda2bf2375017a6d516e6ad6a3b7dc54f2640232371fad83",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": false
+    },
+    {
+      "id": "mount-sim20-a1-09",
+      "attempt_id": "a1",
+      "task_sha256": "ade06636b4a367fa6b92a828fca58ec48e281fc0052aecb673031317a64fad56",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-10",
+      "attempt_id": "a1",
+      "task_sha256": "433e549d8edb6c225244d098be6f5ccfca9587b5179d4ac127d2eda672e9d436",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-11",
+      "attempt_id": "a1",
+      "task_sha256": "8abe138d8ddc0855cd87c3a086e3982737e7fdfcd6b0d72d5b4de6bbbf0f6cd0",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-12",
+      "attempt_id": "a1",
+      "task_sha256": "c46509f35eb4bb497060ba913175cadefd8c67cdaedd732e2c41e11cd5afaa9c",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-13",
+      "attempt_id": "a1",
+      "task_sha256": "c2fffc9b418a676043c93b428acb5867e3aa82fbd40ae6efc16b8dca5f0e403d",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": false
+    },
+    {
+      "id": "mount-sim20-a1-14",
+      "attempt_id": "a1",
+      "task_sha256": "ea05eaa37e4cf5475a0206fc0cb721ccccd80698ad3272c0683e463efb114148",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": true
+    },
+    {
+      "id": "mount-sim20-a1-15",
+      "attempt_id": "a1",
+      "task_sha256": "b7fc2b71b0cec6355893dc39989243d5de17d7c2eb2ae8322f7084926e4fb236",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": false
+    },
+    {
+      "id": "mount-sim20-a1-16",
+      "attempt_id": "a1",
+      "task_sha256": "d750d605d6eecdc75c2f1c3f77e6b5275179c69f2b41a260ac667bc8ca6b0f14",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": false
+    },
+    {
+      "id": "mount-sim20-a1-17",
+      "attempt_id": "a1",
+      "task_sha256": "d3451e3ac1207161fcee0954ce8d16491349521e4553d760524cd87355339b19",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": false
+    },
+    {
+      "id": "mount-sim20-a1-18",
+      "attempt_id": "a1",
+      "task_sha256": "02cb07f2548cdad14b5325419fd3ca6a3eaa43f8a9c645692071749065386fab",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": false
+    },
+    {
+      "id": "mount-sim20-a1-19",
+      "attempt_id": "a1",
+      "task_sha256": "19e17f87a69ca84195058f173733b9eee4a785f781425bb14b92e802ea78825a",
+      "candidate_python_modules": 46,
+      "candidate_lua_sources": 4,
+      "verified_no_window": true,
+      "native_independently_passed": false
+    }
+  ],
+  "history_protection": {
+    "at": "2026-11-18T18:41:26.395081+00:00",
+    "passed": true,
+    "full_history_hash": true,
+    "changed": [],
+    "archives": {
+      "passed": true,
+      "changes": [],
+      "checked_at": "2026-11-18T18:41:26.393079+00:00"
+    },
+    "authorized_exceptions": [
+      {
+        "path": "results/apex/geometry/rollout_verification.json",
+        "original_sha256": "b1860c844c677aca51185a371f9cd984ec14516d9e2ab97b984a694e950a56ad",
+        "accepted_sha256": "8a8a1a66e4d98ecef2caefbf7a01d359a5cb737102760138ab86f0cd2335c47c",
+        "not_acceptance_evidence": true,
+        "authorization_id": "user-motion-v135-resume-20261117",
+        "register_sha256": "3f227c258edfed9eda2d455510df41b4688f22a80cdb613da82b6973999f8e1e"
+      }
+    ]
+  },
+  "health": {
+    "time": "2026-11-18T18:41:27.231360+00:00",
+    "c_free_bytes": 31819812864,
+    "c_free_gib": 29.635,
+    "coppelia_processes": [],
+    "port_23210_free": true,
+    "passed": true
+  }
+}

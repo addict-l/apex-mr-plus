@@ -1,0 +1,53 @@
+name = "s1_parallel_place"
+description = "两只臂分别将左右料区的积木放到底板对应位置"
+instruction = "把红色积木放到底板左边，蓝色积木放到底板右边。"
+goal = ["at(red, board_l1)", "at(blue, board_r1)"]
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.30, 0.30, 0.20]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.30, 0.30, 0.20]
+speed = 0.25
+
+[[location]]
+id = "stock_l1"
+kind = "stock"
+pos = [-0.4, -0.2, 0.0]
+
+[[location]]
+id = "stock_r1"
+kind = "stock"
+pos = [0.4, -0.2, 0.0]
+
+[[location]]
+id = "board_l1"
+kind = "board"
+pos = [-0.15, 0.2, 0.0]
+
+[[location]]
+id = "board_r1"
+kind = "board"
+pos = [0.15, 0.2, 0.0]
+
+[[block]]
+id = "red"
+type = "2x4"
+at = "stock_l1"
+
+[[block]]
+id = "blue"
+type = "2x4"
+at = "stock_r1"
+
+[capabilities.reach]
+default = "INVALID"
+valid = { A = ["stock_l1", "board_l1"], B = ["stock_r1", "board_r1"] }
+
+[capabilities.liftable]
+default = "VALID"

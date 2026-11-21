@@ -1,0 +1,70 @@
+name = "s2_tower_sim"
+description = "物理一致的三层塔仿真版本"
+instruction = "把三块积木从分开的料垫装成三层塔，最后两只手都空出来。"
+goal = []
+fill_all_slots = true
+arms = ["A", "B"]
+
+[[arm]]
+id = "A"
+home = [-0.3, 0.3, 0.2]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.3, 0.3, 0.2]
+speed = 0.25
+
+[[location]]
+id = "stock_l1"
+kind = "stock"
+pos = [-0.5, -0.2, 0.0]
+owner = "A"
+
+[[location]]
+id = "stock_l2"
+kind = "stock"
+pos = [-0.5, -0.42, 0.0]
+owner = "A"
+
+[[location]]
+id = "stock_r1"
+kind = "stock"
+pos = [0.5, -0.2, 0.0]
+owner = "B"
+
+[[block]]
+id = "b1"
+type = "tower_base"
+at = "stock_l1"
+
+[[block]]
+id = "b2"
+type = "tower_middle"
+at = "stock_l2"
+
+[[block]]
+id = "b3"
+type = "tower_top"
+at = "stock_r1"
+
+[[slot]]
+id = "t1"
+type = "tower_base"
+pos = [0.0, 0.12, 0.03]
+below = []
+
+[[slot]]
+id = "t2"
+type = "tower_middle"
+pos = [0.0, 0.12, 0.06]
+below = ["t1"]
+
+[[slot]]
+id = "t3"
+type = "tower_top"
+pos = [0.0, 0.12, 0.09]
+below = ["t2"]
+
+[capabilities.liftable]
+default = "VALID"

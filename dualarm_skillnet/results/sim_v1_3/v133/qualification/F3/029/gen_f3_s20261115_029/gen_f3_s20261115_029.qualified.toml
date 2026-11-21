@@ -1,0 +1,12 @@
+name = "gen_f3_s20261115_029"
+description = "把积木装成 3 层、每层 2 块的墙，最后两只手都空出来。"
+instruction = "把积木装成 3 层、每层 2 块的墙，最后两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = []
+fill_all_slots = true
+location = [{id = "stock_a1", kind = "stock", pos = [-0.4446597797510239, -0.2481715067887558, 0.0], owner = "A"}, {id = "stock_b1", kind = "stock", pos = [0.4452550958787854, -0.0429475961880013, 0.0], owner = "B"}, {id = "stock_a2", kind = "stock", pos = [-0.4454315211140675, -0.4598225714014431, 0.0], owner = "A"}, {id = "stock_b2", kind = "stock", pos = [0.6488909927277042, -0.46013935625542585, 0.0], owner = "B"}, {id = "stock_a3", kind = "stock", pos = [-0.4464237173884738, 0.49964166850369107, 0.0], owner = "A"}, {id = "stock_b3", kind = "stock", pos = [0.8562635800277519, -0.24944936046929553, 0.0], owner = "B"}]
+block = [{id = "b1_1", type = "tower_base", at = "stock_a1"}, {id = "b1_2", type = "tower_base", at = "stock_b1"}, {id = "b2_1", type = "tower_middle", at = "stock_a2"}, {id = "b2_2", type = "tower_middle", at = "stock_b2"}, {id = "b3_1", type = "tower_top", at = "stock_a3"}, {id = "b3_2", type = "tower_top", at = "stock_b3"}]
+slot = [{id = "s1_1", type = "tower_base", pos = [-0.023831224320455313, 0.31198237438055604, 0.03], below = []}, {id = "s1_2", type = "tower_base", pos = [0.1787453342680747, 0.31198237438055604, 0.03], below = []}, {id = "s2_1", type = "tower_middle", pos = [-0.023831224320455313, 0.31198237438055604, 0.06], below = ["s1_1"]}, {id = "s2_2", type = "tower_middle", pos = [0.1787453342680747, 0.31198237438055604, 0.06], below = ["s1_2"]}, {id = "s3_1", type = "tower_top", pos = [-0.023831224320455313, 0.31198237438055604, 0.09], below = ["s2_1"]}, {id = "s3_2", type = "tower_top", pos = [0.1787453342680747, 0.31198237438055604, 0.09], below = ["s2_2"]}]
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["stock_a1", "stock_a2", "stock_a3", "s1_1", "s2_1", "s3_1"], B = ["stock_b1", "stock_b2", "stock_b3", "s1_1", "s1_2", "s2_1", "s2_2", "s3_1", "s3_2"]}, invalid = {A = ["stock_b2", "stock_b3"], B = ["stock_a2"]}, unknown = {A = ["stock_b1", "s1_2", "s2_2", "s3_2"], B = ["stock_a1", "stock_a3"]}}}
+capability_source = "ik_qualified"

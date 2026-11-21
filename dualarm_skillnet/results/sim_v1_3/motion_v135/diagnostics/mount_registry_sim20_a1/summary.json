@@ -1,0 +1,1691 @@
+{
+  "at": "2026-11-18T18:37:38.554871+00:00",
+  "candidate_fingerprint": "81abae5d08e36e7b3e75a9c7b86daebaea4a05523626565bf420b204f5f8a0f7",
+  "complete": true,
+  "completed": 20,
+  "denominator": 20,
+  "passed": 13,
+  "pass_rate": 0.65,
+  "target_passed": false,
+  "statuses": {
+    "passed": 13,
+    "budget": 4,
+    "unknown": 2,
+    "timeout": 1
+  },
+  "families": {
+    "F1": {
+      "denominator": 4,
+      "completed": 4,
+      "passed": 4,
+      "baseline_passed": 2,
+      "statuses": {
+        "passed": 4
+      }
+    },
+    "F2": {
+      "denominator": 4,
+      "completed": 4,
+      "passed": 4,
+      "baseline_passed": 2,
+      "statuses": {
+        "passed": 4
+      }
+    },
+    "F3": {
+      "denominator": 4,
+      "completed": 4,
+      "passed": 3,
+      "baseline_passed": 3,
+      "statuses": {
+        "budget": 1,
+        "passed": 3
+      }
+    },
+    "F4": {
+      "denominator": 4,
+      "completed": 4,
+      "passed": 2,
+      "baseline_passed": 1,
+      "statuses": {
+        "passed": 2,
+        "unknown": 2
+      }
+    },
+    "F5": {
+      "denominator": 4,
+      "completed": 4,
+      "passed": 0,
+      "baseline_passed": 0,
+      "statuses": {
+        "budget": 3,
+        "timeout": 1
+      }
+    }
+  },
+  "comparison": {
+    "新增通过": 5,
+    "保持通过": 8,
+    "仍未通过": 7
+  },
+  "cases": [
+    {
+      "id": "mount-sim20-a1-00",
+      "case": "F1_014",
+      "family": "F1",
+      "source_job_id": "sim20-f1-0",
+      "baseline_job_id": "v134-fixed20-00",
+      "input_sha256": "54bdf0fb551a77a3447161b7b66b3940b17ff3d6699196926e6e3d9f729a98b6",
+      "baseline": {
+        "status": "timeout",
+        "passed": false,
+        "failure_category": "timeout:TPG_geometry",
+        "evidence": "",
+        "wall_seconds": 1200.125
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 1044.9529999999795,
+        "runner_wall_seconds": 1044.9529999999795,
+        "actual_seconds": 134.1399999999948,
+        "started_at": "2026-11-18T14:56:11.131682+00:00",
+        "finished_at": "2026-11-18T15:14:21.464169+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.015999999945051968,
+          "environment": 0.0,
+          "planning": 60.17200000002049,
+          "simulator_start": 0.23400000005494803,
+          "simulator_connect": 3.7339999999385327,
+          "workcell": 2.5,
+          "real_planning": 134.46900000004098,
+          "compile": 0.6720000000204891,
+          "execute": 836.5
+        },
+        "stage_seconds": {
+          "requirements": 0.030999999959021807,
+          "geometry_context_enter": 0.0470000000204891,
+          "tpg_structure": 0.125,
+          "tpg_geometry": 708.6870000000345,
+          "parameterize": 2.297000000020489,
+          "rollout": 15.422000000020489,
+          "geometry_context_restore": 0.015999999945051968,
+          "install": 13.734000000054948,
+          "execution": 93.92199999990407,
+          "acceptance": 0.015000000013969839,
+          "complete": 0.0
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\00\\a1\\simulation\\gen_f1_s20261115_014\\executor_progress.json"
+        }
+      },
+      "comparison": "新增通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-01",
+      "case": "F1_028",
+      "family": "F1",
+      "source_job_id": "sim20-f1-1",
+      "baseline_job_id": "v134-fixed20-01",
+      "input_sha256": "a97bcdc08e0bbc53140cfaa6ecc825cd435bb61a32fe97fb59d16f27e051797f",
+      "baseline": {
+        "status": "passed",
+        "passed": true,
+        "failure_category": "passed",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\01\\simulation\\gen_f1_s20261115_028\\summary.json",
+        "wall_seconds": 1047.0779999999795
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 552.3129999999655,
+        "runner_wall_seconds": 552.3129999999655,
+        "actual_seconds": 125.89999999999209,
+        "started_at": "2026-11-18T15:14:34.940423+00:00",
+        "finished_at": "2026-11-18T15:24:04.586841+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.0,
+          "environment": 0.01600000006146729,
+          "planning": 30.530999999959022,
+          "simulator_start": 0.2809999999590218,
+          "simulator_connect": 3.797000000020489,
+          "workcell": 2.562999999965541,
+          "real_planning": 86.625,
+          "compile": 0.43700000003445894,
+          "execute": 421.51600000006147
+        },
+        "stage_seconds": {
+          "requirements": 0.015999999945051968,
+          "geometry_context_enter": 0.10900000005494803,
+          "tpg_structure": 0.1559999999590218,
+          "tpg_geometry": 315.405999999959,
+          "parameterize": 1.1410000000614673,
+          "rollout": 11.875,
+          "geometry_context_restore": 0.015999999945051968,
+          "install": 6.827999999979511,
+          "execution": 84.85900000005495,
+          "acceptance": 0.0470000000204891,
+          "complete": 0.015999999945051968
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\01\\a1\\simulation\\gen_f1_s20261115_028",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\01\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\01\\a1\\simulation\\gen_f1_s20261115_028\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\01\\a1\\simulation\\gen_f1_s20261115_028\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\01\\a1\\simulation\\gen_f1_s20261115_028\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\01\\a1\\simulation\\gen_f1_s20261115_028\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\01\\a1\\simulation\\gen_f1_s20261115_028\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\01\\a1\\simulation\\gen_f1_s20261115_028\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\01\\a1\\simulation\\gen_f1_s20261115_028\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\01\\a1\\simulation\\gen_f1_s20261115_028\\executor_progress.json"
+        }
+      },
+      "comparison": "保持通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-02",
+      "case": "F1_024",
+      "family": "F1",
+      "source_job_id": "sim20-f1-2",
+      "baseline_job_id": "v134-fixed20-02",
+      "input_sha256": "bdc7f3790defc2c21a1a8538d7fd5d0a1130eebda5ccab3a6649eb54210ccf50",
+      "baseline": {
+        "status": "timeout",
+        "passed": false,
+        "failure_category": "timeout:TPG_geometry",
+        "evidence": "",
+        "wall_seconds": 1200.125
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 1086.109999999986,
+        "runner_wall_seconds": 1086.109999999986,
+        "actual_seconds": 171.0600000000137,
+        "started_at": "2026-11-18T15:24:18.248002+00:00",
+        "finished_at": "2026-11-18T15:42:43.312958+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.01600000006146729,
+          "environment": 0.015999999945051968,
+          "planning": 60.82799999997951,
+          "simulator_start": 0.2970000000204891,
+          "simulator_connect": 3.75,
+          "workcell": 2.687000000034459,
+          "real_planning": 223.09400000004098,
+          "compile": 0.75,
+          "execute": 787.75
+        },
+        "stage_seconds": {
+          "requirements": 0.0470000000204891,
+          "geometry_context_enter": 0.10900000005494803,
+          "tpg_structure": 0.18799999996554106,
+          "tpg_geometry": 626.4529999999795,
+          "parameterize": 2.125,
+          "rollout": 19.45299999997951,
+          "geometry_context_restore": 0.015000000013969839,
+          "install": 12.391000000061467,
+          "execution": 126.85899999993853,
+          "acceptance": 0.01600000006146729,
+          "complete": 0.0
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\02\\a1\\simulation\\gen_f1_s20261115_024",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\02\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\02\\a1\\simulation\\gen_f1_s20261115_024\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\02\\a1\\simulation\\gen_f1_s20261115_024\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\02\\a1\\simulation\\gen_f1_s20261115_024\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\02\\a1\\simulation\\gen_f1_s20261115_024\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\02\\a1\\simulation\\gen_f1_s20261115_024\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\02\\a1\\simulation\\gen_f1_s20261115_024\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\02\\a1\\simulation\\gen_f1_s20261115_024\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\02\\a1\\simulation\\gen_f1_s20261115_024\\executor_progress.json"
+        }
+      },
+      "comparison": "新增通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-03",
+      "case": "F1_035",
+      "family": "F1",
+      "source_job_id": "sim20-f1-3",
+      "baseline_job_id": "v134-fixed20-03",
+      "input_sha256": "4da055c6790595e82e17fb0dfaa08b874b341649b12864f3fd8cc4bfc387d3c2",
+      "baseline": {
+        "status": "passed",
+        "passed": true,
+        "failure_category": "passed",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\03\\simulation\\gen_f1_s20261115_035\\summary.json",
+        "wall_seconds": 594.6870000000345
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 336.969000000041,
+        "runner_wall_seconds": 336.969000000041,
+        "actual_seconds": 97.85999999999767,
+        "started_at": "2026-11-18T15:42:58.996498+00:00",
+        "finished_at": "2026-11-18T15:48:54.250113+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.015999999945051968,
+          "environment": 0.0,
+          "planning": 3.01500000001397,
+          "simulator_start": 0.2970000000204891,
+          "simulator_connect": 4.10999999998603,
+          "workcell": 2.452999999979511,
+          "real_planning": 51.51500000001397,
+          "compile": 0.32900000002700835,
+          "execute": 268.9679999999935
+        },
+        "stage_seconds": {
+          "requirements": 0.015999999945051968,
+          "geometry_context_enter": 0.062000000034458935,
+          "tpg_structure": 0.06299999996554106,
+          "tpg_geometry": 195.45300000009593,
+          "parameterize": 0.6559999999590218,
+          "rollout": 7.687999999965541,
+          "geometry_context_restore": 0.015000000013969839,
+          "install": 3.969000000040978,
+          "execution": 60.96899999992456,
+          "acceptance": 0.015000000013969839,
+          "complete": 0.0
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\03\\a1\\simulation\\gen_f1_s20261115_035",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\03\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\03\\a1\\simulation\\gen_f1_s20261115_035\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\03\\a1\\simulation\\gen_f1_s20261115_035\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\03\\a1\\simulation\\gen_f1_s20261115_035\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\03\\a1\\simulation\\gen_f1_s20261115_035\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\03\\a1\\simulation\\gen_f1_s20261115_035\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\03\\a1\\simulation\\gen_f1_s20261115_035\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\03\\a1\\simulation\\gen_f1_s20261115_035\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\03\\a1\\simulation\\gen_f1_s20261115_035\\executor_progress.json"
+        }
+      },
+      "comparison": "保持通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-04",
+      "case": "F2_009",
+      "family": "F2",
+      "source_job_id": "sim20-f2-0",
+      "baseline_job_id": "v134-fixed20-04",
+      "input_sha256": "9043f90fe2dd884411de2d0c3d63860ca7ba843147e9958cd15f930721181f61",
+      "baseline": {
+        "status": "passed",
+        "passed": true,
+        "failure_category": "passed",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\04\\simulation\\gen_f2_s20261115_009\\summary.json",
+        "wall_seconds": 169.40700000000652
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 105.5,
+        "runner_wall_seconds": 105.5,
+        "actual_seconds": 75.72000000000207,
+        "started_at": "2026-11-18T15:49:07.360809+00:00",
+        "finished_at": "2026-11-18T15:51:10.375167+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.015999999945051968,
+          "environment": 0.0,
+          "planning": 0.030999999959021807,
+          "simulator_start": 0.26500000001396984,
+          "simulator_connect": 3.6880000000819564,
+          "workcell": 2.280999999959022,
+          "real_planning": 22.68799999996554,
+          "compile": 0.2029999999795109,
+          "execute": 70.18700000003446
+        },
+        "stage_seconds": {
+          "requirements": 0.0,
+          "geometry_context_enter": 0.0470000000204891,
+          "tpg_structure": 0.03200000000651926,
+          "tpg_geometry": 21.79599999997299,
+          "parameterize": 0.1720000000204891,
+          "rollout": 4.032000000006519,
+          "geometry_context_restore": 0.015000000013969839,
+          "install": 0.9529999999795109,
+          "execution": 42.98499999998603,
+          "acceptance": 0.015000000013969839,
+          "complete": 0.01600000006146729
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\04\\a1\\simulation\\gen_f2_s20261115_009\\executor_progress.json"
+        }
+      },
+      "comparison": "保持通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-05",
+      "case": "F2_001",
+      "family": "F2",
+      "source_job_id": "sim20-f2-1",
+      "baseline_job_id": "v134-fixed20-05",
+      "input_sha256": "6aed1f1b8c722c56dec9daa1d07be105e78d30743c235ba68f764149ae87e738",
+      "baseline": {
+        "status": "passed",
+        "passed": true,
+        "failure_category": "passed",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\05\\simulation\\gen_f2_s20261115_001\\summary.json",
+        "wall_seconds": 176.78200000000652
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 89.09400000004098,
+        "runner_wall_seconds": 89.09400000004098,
+        "actual_seconds": 73.50000000000252,
+        "started_at": "2026-11-18T15:51:23.348599+00:00",
+        "finished_at": "2026-11-18T15:53:09.809878+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.015000000013969839,
+          "environment": 0.0,
+          "planning": 0.03200000000651926,
+          "simulator_start": 0.23400000005494803,
+          "simulator_connect": 3.672000000020489,
+          "workcell": 1.8439999999245629,
+          "real_planning": 19.531000000075437,
+          "compile": 0.21899999992456287,
+          "execute": 57.39000000001397
+        },
+        "stage_seconds": {
+          "requirements": 0.01600000006146729,
+          "geometry_context_enter": 0.14099999994505197,
+          "tpg_structure": 0.030999999959021807,
+          "tpg_geometry": 10.656000000075437,
+          "parameterize": 0.1720000000204891,
+          "rollout": 3.968999999924563,
+          "geometry_context_restore": 0.015000000013969839,
+          "install": 0.7820000000065193,
+          "execution": 41.46799999999348,
+          "acceptance": 0.01600000006146729,
+          "complete": 0.0
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\05\\a1\\simulation\\gen_f2_s20261115_001",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\05\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\05\\a1\\simulation\\gen_f2_s20261115_001\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\05\\a1\\simulation\\gen_f2_s20261115_001\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\05\\a1\\simulation\\gen_f2_s20261115_001\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\05\\a1\\simulation\\gen_f2_s20261115_001\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\05\\a1\\simulation\\gen_f2_s20261115_001\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\05\\a1\\simulation\\gen_f2_s20261115_001\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\05\\a1\\simulation\\gen_f2_s20261115_001\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\05\\a1\\simulation\\gen_f2_s20261115_001\\executor_progress.json"
+        }
+      },
+      "comparison": "保持通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-06",
+      "case": "F2_014",
+      "family": "F2",
+      "source_job_id": "sim20-f2-2",
+      "baseline_job_id": "v134-fixed20-06",
+      "input_sha256": "0a96ab247e074a104891604134704d98846d91c223294711179b458987510293",
+      "baseline": {
+        "status": "failed",
+        "passed": false,
+        "failure_category": "real_planning:no_plan_after_ik_collision",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\06\\simulation\\gen_f2_s20261115_014\\summary.json",
+        "wall_seconds": 83.04699999990407
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 487.5,
+        "runner_wall_seconds": 487.5,
+        "actual_seconds": 211.04000000003415,
+        "started_at": "2026-11-18T15:53:22.673136+00:00",
+        "finished_at": "2026-11-18T16:01:47.724124+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.0,
+          "environment": 0.0,
+          "planning": 0.9530000000959262,
+          "simulator_start": 0.25,
+          "simulator_connect": 3.780999999959022,
+          "workcell": 2.297000000020489,
+          "real_planning": 209.28099999995902,
+          "compile": 0.6720000000204891,
+          "execute": 262.93799999996554
+        },
+        "stage_seconds": {
+          "requirements": 0.0470000000204891,
+          "geometry_context_enter": 0.03200000000651926,
+          "tpg_structure": 0.25,
+          "tpg_geometry": 114.93700000003446,
+          "parameterize": 0.9059999999590218,
+          "rollout": 14.75,
+          "geometry_context_restore": 0.06299999996554106,
+          "install": 3.969000000040978,
+          "execution": 127.81200000003446,
+          "acceptance": 0.015999999945051968,
+          "complete": 0.0
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\06\\a1\\simulation\\gen_f2_s20261115_014",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\06\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\06\\a1\\simulation\\gen_f2_s20261115_014\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\06\\a1\\simulation\\gen_f2_s20261115_014\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\06\\a1\\simulation\\gen_f2_s20261115_014\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\06\\a1\\simulation\\gen_f2_s20261115_014\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\06\\a1\\simulation\\gen_f2_s20261115_014\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\06\\a1\\simulation\\gen_f2_s20261115_014\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\06\\a1\\simulation\\gen_f2_s20261115_014\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\06\\a1\\simulation\\gen_f2_s20261115_014\\executor_progress.json"
+        }
+      },
+      "comparison": "新增通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-07",
+      "case": "F2_012",
+      "family": "F2",
+      "source_job_id": "sim20-f2-3",
+      "baseline_job_id": "v134-fixed20-07",
+      "input_sha256": "cde22aaca4e95ccef7393c7c5f56d47f0d7b8d052e9ac9cae6fb2f304e20c0cc",
+      "baseline": {
+        "status": "failed",
+        "passed": false,
+        "failure_category": "real_planning:no_plan_after_ik_collision",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\07\\simulation\\gen_f2_s20261115_012\\summary.json",
+        "wall_seconds": 67.60899999993853
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 458.43799999996554,
+        "runner_wall_seconds": 458.43799999996554,
+        "actual_seconds": 195.6600000000263,
+        "started_at": "2026-11-18T16:02:01.177288+00:00",
+        "finished_at": "2026-11-18T16:09:56.711117+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.0,
+          "environment": 0.015999999945051968,
+          "planning": 0.9370000000344589,
+          "simulator_start": 0.28200000000651926,
+          "simulator_connect": 3.780999999959022,
+          "workcell": 2.219000000040978,
+          "real_planning": 207.09299999999348,
+          "compile": 0.7190000000409782,
+          "execute": 236.0
+        },
+        "stage_seconds": {
+          "requirements": 0.030999999959021807,
+          "geometry_context_enter": 0.0470000000204891,
+          "tpg_structure": 0.2190000000409782,
+          "tpg_geometry": 98.03099999995902,
+          "parameterize": 0.8599999999860302,
+          "rollout": 13.827999999979511,
+          "geometry_context_restore": 0.0470000000204891,
+          "install": 3.64000000001397,
+          "execution": 118.75,
+          "acceptance": 0.015999999945051968,
+          "complete": 0.015000000013969839
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\07\\a1\\simulation\\gen_f2_s20261115_012",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\07\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\07\\a1\\simulation\\gen_f2_s20261115_012\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\07\\a1\\simulation\\gen_f2_s20261115_012\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\07\\a1\\simulation\\gen_f2_s20261115_012\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\07\\a1\\simulation\\gen_f2_s20261115_012\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\07\\a1\\simulation\\gen_f2_s20261115_012\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\07\\a1\\simulation\\gen_f2_s20261115_012\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\07\\a1\\simulation\\gen_f2_s20261115_012\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\07\\a1\\simulation\\gen_f2_s20261115_012\\executor_progress.json"
+        }
+      },
+      "comparison": "新增通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-08",
+      "case": "F3_021",
+      "family": "F3",
+      "source_job_id": "sim20-f3-0",
+      "baseline_job_id": "v134-fixed20-08",
+      "input_sha256": "941de06c1a30217afda2bf2375017a6d516e6ad6a3b7dc54f2640232371fad83",
+      "baseline": {
+        "status": "failed",
+        "passed": false,
+        "failure_category": "real_planning:budget_after_ik_collision",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\08\\simulation\\gen_f3_s20261115_021\\summary.json",
+        "wall_seconds": 944.0469999999041
+      },
+      "current": {
+        "status": "budget",
+        "original_status": "budget",
+        "passed": false,
+        "wall_seconds": 1095.8910000000615,
+        "runner_wall_seconds": 1095.8910000000615,
+        "actual_seconds": null,
+        "started_at": "2026-11-18T16:10:10.256637+00:00",
+        "finished_at": "2026-11-18T16:28:43.941099+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": false,
+          "normal_entry_pass": false,
+          "execution_pass": false,
+          "independent_validation_pass": false,
+          "sampled_rollout_pass": false
+        },
+        "first_blocker": {
+          "round": 1,
+          "action": "insert(B, b2_1, s1_1)",
+          "segment": null,
+          "class": "ik_collision",
+          "detail": "运动段 r1 的 IK 已耗尽 24 个种子：{'pair': ['/A_UR5/A_joint_4/link', '/B_UR5/B_joint_4/link'], 'reason': 'interarm_collision'}",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN"
+        },
+        "terminal": {
+          "round": null,
+          "action": "insert(B, b2_1, s2_1)",
+          "segment": null,
+          "class": "rrt_exhausted",
+          "detail": "原运动验证未知；空闲臂回位恢复的 retry 阶段未成功：运动段 r1 的 RRT-Connect 失败（ 均未找到解）：No new endpoint within shared RRT budget; None",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN",
+          "phase": "real_planning",
+          "evidence": "motion_backend.json",
+          "budget_basis": "反馈轮数上限"
+        },
+        "dynamics": "no",
+        "phase_seconds": {
+          "load": 0.0,
+          "environment": 0.0,
+          "planning": 60.28200000000652,
+          "simulator_start": 0.26500000001396984,
+          "simulator_connect": 3.437999999965541,
+          "workcell": 2.422000000020489,
+          "real_planning": 1020.5620000000345
+        },
+        "stage_seconds": {},
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\08\\a1\\simulation\\gen_f3_s20261115_021",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\08\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\08\\a1\\simulation\\gen_f3_s20261115_021\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\08\\a1\\simulation\\gen_f3_s20261115_021\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\08\\a1\\simulation\\gen_f3_s20261115_021\\motion_live.jsonl",
+          "motion_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\08\\a1\\simulation\\gen_f3_s20261115_021\\motion_progress.json"
+        }
+      },
+      "comparison": "仍未通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-09",
+      "case": "F3_020",
+      "family": "F3",
+      "source_job_id": "sim20-f3-1",
+      "baseline_job_id": "v134-fixed20-09",
+      "input_sha256": "ade06636b4a367fa6b92a828fca58ec48e281fc0052aecb673031317a64fad56",
+      "baseline": {
+        "status": "passed",
+        "passed": true,
+        "failure_category": "passed",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\09\\simulation\\gen_f3_s20261115_020\\summary.json",
+        "wall_seconds": 146.54699999990407
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 243.73499999998603,
+        "runner_wall_seconds": 243.73499999998603,
+        "actual_seconds": 176.46000000001646,
+        "started_at": "2026-11-18T16:28:59.534937+00:00",
+        "finished_at": "2026-11-18T16:33:22.342468+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.01600000006146729,
+          "environment": 0.0,
+          "planning": 3.843999999924563,
+          "simulator_start": 0.26500000001396984,
+          "simulator_connect": 3.98499999998603,
+          "workcell": 2.437000000034459,
+          "real_planning": 90.60999999998603,
+          "compile": 0.5150000000139698,
+          "execute": 135.40599999995902
+        },
+        "stage_seconds": {
+          "requirements": 0.030999999959021807,
+          "geometry_context_enter": 0.01600000006146729,
+          "tpg_structure": 0.09399999992456287,
+          "tpg_geometry": 0.10900000005494803,
+          "parameterize": 0.3279999999795109,
+          "rollout": 16.04700000002049,
+          "geometry_context_restore": 0.015999999945051968,
+          "install": 0.8280000000959262,
+          "execution": 117.84399999992456,
+          "acceptance": 0.015000000013969839,
+          "complete": 0.0
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\09\\a1\\simulation\\gen_f3_s20261115_020",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\09\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\09\\a1\\simulation\\gen_f3_s20261115_020\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\09\\a1\\simulation\\gen_f3_s20261115_020\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\09\\a1\\simulation\\gen_f3_s20261115_020\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\09\\a1\\simulation\\gen_f3_s20261115_020\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\09\\a1\\simulation\\gen_f3_s20261115_020\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\09\\a1\\simulation\\gen_f3_s20261115_020\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\09\\a1\\simulation\\gen_f3_s20261115_020\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\09\\a1\\simulation\\gen_f3_s20261115_020\\executor_progress.json"
+        }
+      },
+      "comparison": "保持通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-10",
+      "case": "F3_006",
+      "family": "F3",
+      "source_job_id": "sim20-f3-2",
+      "baseline_job_id": "v134-fixed20-10",
+      "input_sha256": "433e549d8edb6c225244d098be6f5ccfca9587b5179d4ac127d2eda672e9d436",
+      "baseline": {
+        "status": "passed",
+        "passed": true,
+        "failure_category": "passed",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\10\\simulation\\gen_f3_s20261115_006\\summary.json",
+        "wall_seconds": 200.98399999993853
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 286.60999999998603,
+        "runner_wall_seconds": 286.60999999998603,
+        "actual_seconds": 238.56000000004823,
+        "started_at": "2026-11-18T16:33:35.584919+00:00",
+        "finished_at": "2026-11-18T16:38:39.245902+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.015999999945051968,
+          "environment": 0.0,
+          "planning": 9.359000000054948,
+          "simulator_start": 0.26599999994505197,
+          "simulator_connect": 3.76500000001397,
+          "workcell": 2.35999999998603,
+          "real_planning": 71.89000000001397,
+          "compile": 0.5940000000409782,
+          "execute": 191.81299999996554
+        },
+        "stage_seconds": {
+          "requirements": 0.03100000007543713,
+          "geometry_context_enter": 0.10899999993853271,
+          "tpg_structure": 0.10999999998603016,
+          "tpg_geometry": 0.14000000001396984,
+          "parameterize": 0.4380000000819564,
+          "rollout": 20.45299999997951,
+          "geometry_context_restore": 0.030999999959021807,
+          "install": 1.1570000000065193,
+          "execution": 169.18700000003446,
+          "acceptance": 0.06299999996554106,
+          "complete": 0.015000000013969839
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\10\\a1\\simulation\\gen_f3_s20261115_006\\executor_progress.json"
+        }
+      },
+      "comparison": "保持通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-11",
+      "case": "F3_000",
+      "family": "F3",
+      "source_job_id": "sim20-f3-3",
+      "baseline_job_id": "v134-fixed20-11",
+      "input_sha256": "8abe138d8ddc0855cd87c3a086e3982737e7fdfcd6b0d72d5b4de6bbbf0f6cd0",
+      "baseline": {
+        "status": "passed",
+        "passed": true,
+        "failure_category": "passed",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\11\\simulation\\gen_f3_s20261115_000\\summary.json",
+        "wall_seconds": 923.234000000055
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 629.1720000000205,
+        "runner_wall_seconds": 629.1720000000205,
+        "actual_seconds": 123.67999999999253,
+        "started_at": "2026-11-18T16:38:53.038460+00:00",
+        "finished_at": "2026-11-18T16:49:39.586937+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.0,
+          "environment": 0.0,
+          "planning": 0.5309999999590218,
+          "simulator_start": 0.23499999998603016,
+          "simulator_connect": 3.406000000075437,
+          "workcell": 2.312999999965541,
+          "real_planning": 60.10900000005495,
+          "compile": 0.4839999999385327,
+          "execute": 555.5629999999655
+        },
+        "stage_seconds": {
+          "requirements": 0.03200000000651926,
+          "geometry_context_enter": 0.030999999959021807,
+          "tpg_structure": 0.15600000007543713,
+          "tpg_geometry": 445.35899999993853,
+          "parameterize": 1.7040000000270084,
+          "rollout": 12.437000000034459,
+          "geometry_context_restore": 0.015999999945051968,
+          "install": 9.734000000054948,
+          "execution": 84.25,
+          "acceptance": 0.0470000000204891,
+          "complete": 0.0
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\11\\a1\\simulation\\gen_f3_s20261115_000",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\11\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\11\\a1\\simulation\\gen_f3_s20261115_000\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\11\\a1\\simulation\\gen_f3_s20261115_000\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\11\\a1\\simulation\\gen_f3_s20261115_000\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\11\\a1\\simulation\\gen_f3_s20261115_000\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\11\\a1\\simulation\\gen_f3_s20261115_000\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\11\\a1\\simulation\\gen_f3_s20261115_000\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\11\\a1\\simulation\\gen_f3_s20261115_000\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\11\\a1\\simulation\\gen_f3_s20261115_000\\executor_progress.json"
+        }
+      },
+      "comparison": "保持通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-12",
+      "case": "F4_030",
+      "family": "F4",
+      "source_job_id": "sim20-f4-0",
+      "baseline_job_id": "v134-fixed20-12",
+      "input_sha256": "c46509f35eb4bb497060ba913175cadefd8c67cdaedd732e2c41e11cd5afaa9c",
+      "baseline": {
+        "status": "failed",
+        "passed": false,
+        "failure_category": "real_planning:budget_after_ik_collision",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\12\\simulation\\gen_f4_s20261115_030\\summary.json",
+        "wall_seconds": 276.23499999998603
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 321.93799999996554,
+        "runner_wall_seconds": 321.93799999996554,
+        "actual_seconds": 185.9400000000213,
+        "started_at": "2026-11-18T16:49:53.468979+00:00",
+        "finished_at": "2026-11-18T16:55:32.342079+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.0,
+          "environment": 0.0,
+          "planning": 6.327999999979511,
+          "simulator_start": 0.2190000000409782,
+          "simulator_connect": 3.7339999999385327,
+          "workcell": 2.577999999979511,
+          "real_planning": 65.54700000002049,
+          "compile": 0.6099999999860302,
+          "execute": 236.375
+        },
+        "stage_seconds": {
+          "requirements": 0.01600000006146729,
+          "geometry_context_enter": 0.030999999959021807,
+          "tpg_structure": 0.0779999999795109,
+          "tpg_geometry": 90.60999999998603,
+          "parameterize": 0.625,
+          "rollout": 16.92200000002049,
+          "geometry_context_restore": 0.015000000013969839,
+          "install": 2.797000000020489,
+          "execution": 125.03099999995902,
+          "acceptance": 0.06299999996554106,
+          "complete": 0.0
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\12\\a1\\simulation\\gen_f4_s20261115_030",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\12\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\12\\a1\\simulation\\gen_f4_s20261115_030\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\12\\a1\\simulation\\gen_f4_s20261115_030\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\12\\a1\\simulation\\gen_f4_s20261115_030\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\12\\a1\\simulation\\gen_f4_s20261115_030\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\12\\a1\\simulation\\gen_f4_s20261115_030\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\12\\a1\\simulation\\gen_f4_s20261115_030\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\12\\a1\\simulation\\gen_f4_s20261115_030\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\12\\a1\\simulation\\gen_f4_s20261115_030\\executor_progress.json"
+        }
+      },
+      "comparison": "新增通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-13",
+      "case": "F4_033",
+      "family": "F4",
+      "source_job_id": "sim20-f4-1",
+      "baseline_job_id": "v134-fixed20-13",
+      "input_sha256": "c2fffc9b418a676043c93b428acb5867e3aa82fbd40ae6efc16b8dca5f0e403d",
+      "baseline": {
+        "status": "failed",
+        "passed": false,
+        "failure_category": "real_planning:no_plan_after_ik_collision",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\13\\simulation\\gen_f4_s20261115_033\\summary.json",
+        "wall_seconds": 511.23399999993853
+      },
+      "current": {
+        "status": "unknown",
+        "original_status": "unknown",
+        "passed": false,
+        "wall_seconds": 684.1570000000065,
+        "runner_wall_seconds": 684.1570000000065,
+        "actual_seconds": null,
+        "started_at": "2026-11-18T16:55:45.894444+00:00",
+        "finished_at": "2026-11-18T17:07:27.434276+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": false,
+          "normal_entry_pass": false,
+          "execution_pass": false,
+          "independent_validation_pass": false,
+          "sampled_rollout_pass": false
+        },
+        "first_blocker": {
+          "round": 1,
+          "action": "insert(B, pillar, p0)",
+          "segment": null,
+          "class": "ik_collision",
+          "detail": "运动段 r1 的 IK 已耗尽 24 个种子：{'pair': ['/A_UR5/A_joint_4/link', '/B_UR5/B_joint_4/link'], 'reason': 'interarm_collision'}",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN"
+        },
+        "terminal": {
+          "phase": "final_reference",
+          "class": "home_path_unknown",
+          "segment": "home_B",
+          "detail": "完整参考验证未通过（home_B）：运动段 home_B 的 RRT-Connect 失败（local_box、global 均未找到解）：No exact collision-free solution within budget; {'pair': ['/B_UR5/B_Finger_pos', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+          "pair": [
+            "/B_UR5/B_Finger_pos",
+            "/counterweight"
+          ],
+          "home_attempts": [
+            {
+              "order": [
+                "A",
+                "B"
+              ],
+              "phase": "path",
+              "status": "UNKNOWN",
+              "detail": "运动段 home_B 的 RRT-Connect 失败（local_box、global 均未找到解）：No exact collision-free solution within budget; {'pair': ['/B_UR5/B_GripperPalm', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+              "pair": [
+                "/B_UR5/B_GripperPalm",
+                "/counterweight"
+              ],
+              "failed_segment": "home_B"
+            },
+            {
+              "order": [
+                "B",
+                "A"
+              ],
+              "phase": "path",
+              "status": "UNKNOWN",
+              "detail": "运动段 home_B 的 RRT-Connect 失败（local_box、global 均未找到解）：No exact collision-free solution within budget; {'pair': ['/B_UR5/B_Finger_pos', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+              "pair": [
+                "/B_UR5/B_Finger_pos",
+                "/counterweight"
+              ],
+              "failed_segment": "home_B"
+            }
+          ],
+          "evidence": "motion_backend.json"
+        },
+        "dynamics": "no",
+        "phase_seconds": {
+          "load": 0.03200000000651926,
+          "environment": 0.0,
+          "planning": 29.64000000001397,
+          "simulator_start": 0.23499999998603016,
+          "simulator_connect": 3.437000000034459,
+          "workcell": 2.547000000020489,
+          "real_planning": 640.530999999959
+        },
+        "stage_seconds": {},
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\13\\a1\\simulation\\gen_f4_s20261115_033",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\13\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\13\\a1\\simulation\\gen_f4_s20261115_033\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\13\\a1\\simulation\\gen_f4_s20261115_033\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\13\\a1\\simulation\\gen_f4_s20261115_033\\motion_live.jsonl",
+          "motion_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\13\\a1\\simulation\\gen_f4_s20261115_033\\motion_progress.json"
+        }
+      },
+      "comparison": "仍未通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-14",
+      "case": "F4_039",
+      "family": "F4",
+      "source_job_id": "sim20-f4-2",
+      "baseline_job_id": "v134-fixed20-14",
+      "input_sha256": "ea05eaa37e4cf5475a0206fc0cb721ccccd80698ad3272c0683e463efb114148",
+      "baseline": {
+        "status": "passed",
+        "passed": true,
+        "failure_category": "passed",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\14\\simulation\\gen_f4_s20261115_039\\summary.json",
+        "wall_seconds": 780.75
+      },
+      "current": {
+        "status": "passed",
+        "original_status": "passed",
+        "passed": true,
+        "wall_seconds": 744.045999999973,
+        "runner_wall_seconds": 744.045999999973,
+        "actual_seconds": 294.78000000002186,
+        "started_at": "2026-11-18T17:07:40.472780+00:00",
+        "finished_at": "2026-11-18T17:20:28.772424+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": true,
+          "normal_entry_pass": true,
+          "execution_pass": true,
+          "independent_validation_pass": true,
+          "sampled_rollout_pass": true
+        },
+        "first_blocker": null,
+        "terminal": null,
+        "dynamics": "yes",
+        "phase_seconds": {
+          "load": 0.015000000013969839,
+          "environment": 0.0,
+          "planning": 29.719000000040978,
+          "simulator_start": 0.2809999999590218,
+          "simulator_connect": 3.35999999998603,
+          "workcell": 2.7179999999934807,
+          "real_planning": 215.89100000006147,
+          "compile": 0.9689999999245629,
+          "execute": 484.3429999999935
+        },
+        "stage_seconds": {
+          "requirements": 0.03200000000651926,
+          "geometry_context_enter": 0.030999999959021807,
+          "tpg_structure": 0.20300000009592623,
+          "tpg_geometry": 235.76599999994505,
+          "parameterize": 1.5,
+          "rollout": 29.984000000054948,
+          "geometry_context_restore": 0.046999999904073775,
+          "install": 5.937000000034459,
+          "execution": 209.48499999998603,
+          "acceptance": 0.15600000007543713,
+          "complete": 0.0
+        },
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\14\\a1\\simulation\\gen_f4_s20261115_039",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\14\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\14\\a1\\simulation\\gen_f4_s20261115_039\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\14\\a1\\simulation\\gen_f4_s20261115_039\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\14\\a1\\simulation\\gen_f4_s20261115_039\\motion_live.jsonl",
+          "execution.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\14\\a1\\simulation\\gen_f4_s20261115_039\\execution.json",
+          "execution_validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\14\\a1\\simulation\\gen_f4_s20261115_039\\execution_validation.json",
+          "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\14\\a1\\simulation\\gen_f4_s20261115_039\\validation.json",
+          "geometry/rollout_verification.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\14\\a1\\simulation\\gen_f4_s20261115_039\\geometry\\rollout_verification.json",
+          "executor_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\14\\a1\\simulation\\gen_f4_s20261115_039\\executor_progress.json"
+        }
+      },
+      "comparison": "保持通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-15",
+      "case": "F4_013",
+      "family": "F4",
+      "source_job_id": "sim20-f4-3",
+      "baseline_job_id": "v134-fixed20-15",
+      "input_sha256": "b7fc2b71b0cec6355893dc39989243d5de17d7c2eb2ae8322f7084926e4fb236",
+      "baseline": {
+        "status": "failed",
+        "passed": false,
+        "failure_category": "real_planning:budget_after_ik_collision",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\15\\simulation\\gen_f4_s20261115_013\\summary.json",
+        "wall_seconds": 177.9220000000205
+      },
+      "current": {
+        "status": "unknown",
+        "original_status": "unknown",
+        "passed": false,
+        "wall_seconds": 98.46900000004098,
+        "runner_wall_seconds": 98.46900000004098,
+        "actual_seconds": null,
+        "started_at": "2026-11-18T17:20:42.546572+00:00",
+        "finished_at": "2026-11-18T17:22:38.389185+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": false,
+          "normal_entry_pass": false,
+          "execution_pass": false,
+          "independent_validation_pass": false,
+          "sampled_rollout_pass": false
+        },
+        "first_blocker": {
+          "round": 1,
+          "action": null,
+          "segment": "home_B",
+          "class": "home_goal_collision",
+          "detail": "完整参考验证未通过（home_B）：运动段 home_B 的轨迹点碰撞或无效：{'pair': ['/B_UR5/B_GripperPalm', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+          "location": "final_reference",
+          "pair": [
+            "/B_UR5/B_GripperPalm",
+            "/counterweight"
+          ],
+          "status": "UNKNOWN"
+        },
+        "terminal": {
+          "phase": "final_reference",
+          "class": "home_goal_collision",
+          "segment": "home_B",
+          "detail": "完整参考验证未通过（home_B）：运动段 home_B 的轨迹点碰撞或无效：{'pair': ['/B_UR5/B_GripperPalm', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+          "pair": [
+            "/B_UR5/B_GripperPalm",
+            "/counterweight"
+          ],
+          "home_attempts": [
+            {
+              "order": [
+                "A",
+                "B"
+              ],
+              "phase": "goal",
+              "status": "UNKNOWN",
+              "detail": "运动段 home_B 的轨迹点碰撞或无效：{'pair': ['/B_UR5/B_GripperPalm', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+              "pair": [
+                "/B_UR5/B_GripperPalm",
+                "/counterweight"
+              ],
+              "failed_segment": "home_B"
+            },
+            {
+              "order": [
+                "B",
+                "A"
+              ],
+              "phase": "goal",
+              "status": "UNKNOWN",
+              "detail": "运动段 home_B 的轨迹点碰撞或无效：{'pair': ['/B_UR5/B_GripperPalm', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+              "pair": [
+                "/B_UR5/B_GripperPalm",
+                "/counterweight"
+              ],
+              "failed_segment": "home_B"
+            }
+          ],
+          "evidence": "motion_backend.json"
+        },
+        "dynamics": "no",
+        "phase_seconds": {
+          "load": 0.015000000013969839,
+          "environment": 0.01600000006146729,
+          "planning": 5.358999999938533,
+          "simulator_start": 0.2660000000614673,
+          "simulator_connect": 3.75,
+          "workcell": 2.593999999924563,
+          "real_planning": 79.98400000005495
+        },
+        "stage_seconds": {},
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\15\\a1\\simulation\\gen_f4_s20261115_013",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\15\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\15\\a1\\simulation\\gen_f4_s20261115_013\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\15\\a1\\simulation\\gen_f4_s20261115_013\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\15\\a1\\simulation\\gen_f4_s20261115_013\\motion_live.jsonl",
+          "motion_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\15\\a1\\simulation\\gen_f4_s20261115_013\\motion_progress.json"
+        }
+      },
+      "comparison": "仍未通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-16",
+      "case": "F5_028",
+      "family": "F5",
+      "source_job_id": "sim20-f5-0",
+      "baseline_job_id": "v134-fixed20-16",
+      "input_sha256": "d750d605d6eecdc75c2f1c3f77e6b5275179c69f2b41a260ac667bc8ca6b0f14",
+      "baseline": {
+        "status": "failed",
+        "passed": false,
+        "failure_category": "real_planning:budget_after_ik_collision",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\16\\simulation\\gen_f5_s20261115_028\\summary.json",
+        "wall_seconds": 433.344000000041
+      },
+      "current": {
+        "status": "budget",
+        "original_status": "budget",
+        "passed": false,
+        "wall_seconds": 1162.186999999918,
+        "runner_wall_seconds": 1162.186999999918,
+        "actual_seconds": null,
+        "started_at": "2026-11-18T17:22:51.310745+00:00",
+        "finished_at": "2026-11-18T17:42:31.025661+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": false,
+          "normal_entry_pass": false,
+          "execution_pass": false,
+          "independent_validation_pass": false,
+          "sampled_rollout_pass": false
+        },
+        "first_blocker": {
+          "round": 1,
+          "action": "insert(A, beam_block, beam)",
+          "segment": null,
+          "class": "ik_collision",
+          "detail": "运动段 r1 的 IK 已耗尽 24 个种子：{'pair': ['/B_UR5/B_Finger_neg', '/beam_block'], 'reason': 'block_robot_collision:beam_block:B'}",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN"
+        },
+        "terminal": {
+          "round": null,
+          "action": "place(A, beam_block, stock_a1)",
+          "segment": null,
+          "class": "rrt_exhausted",
+          "detail": "运动段 r1 的 RRT-Connect 失败（ 均未找到解）：No new endpoint within shared RRT budget; None",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN",
+          "phase": "real_planning",
+          "evidence": "motion_backend.json",
+          "budget_basis": "反馈轮数上限"
+        },
+        "dynamics": "no",
+        "phase_seconds": {
+          "load": 0.015999999945051968,
+          "environment": 0.0,
+          "planning": 44.98400000005495,
+          "simulator_start": 0.3279999999795109,
+          "simulator_connect": 3.390999999945052,
+          "workcell": 2.562000000034459,
+          "real_planning": 1101.1720000000205
+        },
+        "stage_seconds": {},
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\16\\a1\\simulation\\gen_f5_s20261115_028",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\16\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\16\\a1\\simulation\\gen_f5_s20261115_028\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\16\\a1\\simulation\\gen_f5_s20261115_028\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\16\\a1\\simulation\\gen_f5_s20261115_028\\motion_live.jsonl",
+          "motion_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\16\\a1\\simulation\\gen_f5_s20261115_028\\motion_progress.json"
+        }
+      },
+      "comparison": "仍未通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-17",
+      "case": "F5_037",
+      "family": "F5",
+      "source_job_id": "sim20-f5-1",
+      "baseline_job_id": "v134-fixed20-17",
+      "input_sha256": "d3451e3ac1207161fcee0954ce8d16491349521e4553d760524cd87355339b19",
+      "baseline": {
+        "status": "failed",
+        "passed": false,
+        "failure_category": "real_planning:unknown_after_ik_collision",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\17\\simulation\\gen_f5_s20261115_037\\summary.json",
+        "wall_seconds": 209.39100000006147
+      },
+      "current": {
+        "status": "budget",
+        "original_status": "budget",
+        "passed": false,
+        "wall_seconds": 943.030999999959,
+        "runner_wall_seconds": 943.030999999959,
+        "actual_seconds": null,
+        "started_at": "2026-11-18T17:42:44.264979+00:00",
+        "finished_at": "2026-11-18T17:58:45.370797+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": false,
+          "normal_entry_pass": false,
+          "execution_pass": false,
+          "independent_validation_pass": false,
+          "sampled_rollout_pass": false
+        },
+        "first_blocker": {
+          "round": 1,
+          "action": "detach(B, temp_block1, tp1)",
+          "segment": null,
+          "class": "ik_collision",
+          "detail": "原运动验证未知；空闲臂回位恢复的 retry 阶段未成功：运动段 r1 的 IK 已耗尽 24 个种子：{'pair': ['/B_UR5/B_joint_3/link', '/counterweight'], 'reason': 'block_robot_collision:counterweight:B'}",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN"
+        },
+        "terminal": {
+          "round": null,
+          "action": "detach(A, temp_block1, tp1)",
+          "segment": null,
+          "class": "rrt_exhausted",
+          "detail": "运动段 r1 的 RRT-Connect 失败（ 均未找到解）：No new endpoint within shared RRT budget; None",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN",
+          "phase": "real_planning",
+          "evidence": "motion_backend.json",
+          "budget_basis": "反馈轮数上限"
+        },
+        "dynamics": "no",
+        "phase_seconds": {
+          "load": 0.015999999945051968,
+          "environment": 0.0,
+          "planning": 22.969000000040978,
+          "simulator_start": 0.26500000001396984,
+          "simulator_connect": 3.452999999979511,
+          "workcell": 2.437999999965541,
+          "real_planning": 904.390000000014
+        },
+        "stage_seconds": {},
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\17\\a1\\simulation\\gen_f5_s20261115_037",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\17\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\17\\a1\\simulation\\gen_f5_s20261115_037\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\17\\a1\\simulation\\gen_f5_s20261115_037\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\17\\a1\\simulation\\gen_f5_s20261115_037\\motion_live.jsonl",
+          "motion_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\17\\a1\\simulation\\gen_f5_s20261115_037\\motion_progress.json"
+        }
+      },
+      "comparison": "仍未通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-18",
+      "case": "F5_033",
+      "family": "F5",
+      "source_job_id": "sim20-f5-2",
+      "baseline_job_id": "v134-fixed20-18",
+      "input_sha256": "02cb07f2548cdad14b5325419fd3ca6a3eaa43f8a9c645692071749065386fab",
+      "baseline": {
+        "status": "failed",
+        "passed": false,
+        "failure_category": "real_planning:budget_after_ik_collision",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\18\\simulation\\gen_f5_s20261115_033\\summary.json",
+        "wall_seconds": 593.1570000000065
+      },
+      "current": {
+        "status": "timeout",
+        "original_status": "timeout",
+        "passed": false,
+        "wall_seconds": 1200.7970000000205,
+        "runner_wall_seconds": null,
+        "actual_seconds": null,
+        "started_at": "2026-11-18T17:58:58.348516+00:00",
+        "finished_at": "2026-11-18T18:19:13.897552+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": false,
+          "normal_entry_pass": false,
+          "execution_pass": false,
+          "independent_validation_pass": false,
+          "sampled_rollout_pass": false
+        },
+        "first_blocker": {
+          "round": 1,
+          "action": "insert(B, beam_block, beam)",
+          "segment": "r1",
+          "class": "ik_collision",
+          "detail": "运动段 r1 的 IK 已耗尽 24 个种子：{'pair': ['/B_UR5/B_joint_2/link', '/pillar'], 'reason': 'block_robot_collision:pillar:B'}",
+          "location": "validate_escalated",
+          "pair": null,
+          "status": "UNKNOWN"
+        },
+        "terminal": {
+          "phase": "real_planning/symbolic_search:before",
+          "class": "wall_clock_timeout",
+          "detail": "原单任务 1200 秒硬墙钟到限",
+          "budget_basis": "墙钟上限"
+        },
+        "dynamics": "no",
+        "phase_seconds": {},
+        "stage_seconds": {},
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\18\\a1\\simulation\\gen_f5_s20261115_033",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\18\\a1",
+        "evidence": {
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\18\\a1\\simulation\\gen_f5_s20261115_033\\motion_live.jsonl",
+          "motion_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\18\\a1\\simulation\\gen_f5_s20261115_033\\motion_progress.json"
+        }
+      },
+      "comparison": "仍未通过",
+      "regression_review": ""
+    },
+    {
+      "id": "mount-sim20-a1-19",
+      "case": "F5_024",
+      "family": "F5",
+      "source_job_id": "sim20-f5-3",
+      "baseline_job_id": "v134-fixed20-19",
+      "input_sha256": "19e17f87a69ca84195058f173733b9eee4a785f781425bb14b92e802ea78825a",
+      "baseline": {
+        "status": "failed",
+        "passed": false,
+        "failure_category": "real_planning:budget_after_ik_collision",
+        "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\experiments\\c_wall_v134\\runtime_fix2\\sim20\\19\\simulation\\gen_f5_s20261115_024\\summary.json",
+        "wall_seconds": 669.5
+      },
+      "current": {
+        "status": "budget",
+        "original_status": "budget",
+        "passed": false,
+        "wall_seconds": 1051.1720000000205,
+        "runner_wall_seconds": 1051.1720000000205,
+        "actual_seconds": null,
+        "started_at": "2026-11-18T18:19:27.197049+00:00",
+        "finished_at": "2026-11-18T18:37:16.873893+00:00",
+        "attempt_id": "a1",
+        "native_evidence": {
+          "committed_pass": false,
+          "normal_entry_pass": false,
+          "execution_pass": false,
+          "independent_validation_pass": false,
+          "sampled_rollout_pass": false
+        },
+        "first_blocker": {
+          "round": 1,
+          "action": "insert(A, beam_block, beam)",
+          "segment": null,
+          "class": "ik_collision",
+          "detail": "运动段 r1 的 IK 已耗尽 24 个种子：{'pair': ['/B_UR5/B_Finger_neg', '/beam_block'], 'reason': 'block_robot_collision:beam_block:B'}",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN"
+        },
+        "terminal": {
+          "round": null,
+          "action": "place(A, beam_block, stock_a2)",
+          "segment": null,
+          "class": "rrt_exhausted",
+          "detail": "运动段 r1 的 RRT-Connect 失败（local_box、global 均未找到解）：No exact collision-free solution within budget; {'pair': ['/A_UR5/link', '/A_UR5/A_joint_3/link'], 'reason': 'self_collision:A'}",
+          "location": null,
+          "pair": null,
+          "status": "UNKNOWN",
+          "phase": "real_planning",
+          "evidence": "motion_backend.json",
+          "budget_basis": "反馈轮数上限"
+        },
+        "dynamics": "no",
+        "phase_seconds": {
+          "load": 0.0,
+          "environment": 0.0,
+          "planning": 48.28200000000652,
+          "simulator_start": 0.23400000005494803,
+          "simulator_connect": 3.968999999924563,
+          "workcell": 2.9679999999934807,
+          "real_planning": 986.469000000041
+        },
+        "stage_seconds": {},
+        "evidence_directory": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\19\\a1\\simulation\\gen_f5_s20261115_024",
+        "output": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\19\\a1",
+        "evidence": {
+          "summary.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\19\\a1\\simulation\\gen_f5_s20261115_024\\summary.json",
+          "motion_backend.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\19\\a1\\simulation\\gen_f5_s20261115_024\\motion_backend.json",
+          "motion_live.jsonl": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\19\\a1\\simulation\\gen_f5_s20261115_024\\motion_live.jsonl",
+          "motion_progress.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\19\\a1\\simulation\\gen_f5_s20261115_024\\motion_progress.json"
+        }
+      },
+      "comparison": "仍未通过",
+      "regression_review": ""
+    }
+  ],
+  "blocker_groups": {
+    "budget:real_planning": [
+      "F3_021",
+      "F5_028",
+      "F5_037",
+      "F5_024"
+    ],
+    "final_home_path": [
+      "F4_033"
+    ],
+    "final_home_goal": [
+      "F4_013"
+    ],
+    "budget:real_planning/symbolic_search:before": [
+      "F5_033"
+    ]
+  },
+  "final_home_connection_count": 1,
+  "other_budget_count": 5,
+  "interrupted_attempts": [],
+  "wall_seconds_inclusive": 13282.082263,
+  "wall_seconds_committed_sum": 12622.081999999937,
+  "next_direction": "优先研究动作首段到达的 IK 终点能否衔接下一段。F3_021、F5_028、F5_037、F5_024 共确认 20 轮出现 `r1` 接近路径已连通、`r2` 随后失败的情况。动作回滚后选中的替代终点因共享 RRT 预算耗尽，未实际发起路径搜索。用相同关节、持物、障碍和接触上下文对紧接的 `r2` 做有限预检，据此调整 `r1` 候选尝试顺序，保留原回退和完整验证。在同任务、种子和预算下比较实际连接的候选数、后段通过数、反馈轮数、墙钟及独立验收。用本批保持通过的 F4_039 检查取放、支撑和回位回归。",
+  "source": {
+    "manifest": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_sim20_a1\\manifest.json",
+    "journal": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_sim20_a1\\state\\completed.jsonl",
+    "baseline_csv": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\sim20_final_comparison.csv",
+    "baseline_csv_sha256": "008a5d7023445a7987e94eb58c8af0a557e181a0979ceb9a13222ea94892ddc5",
+    "baseline_manifest_sha256": "1f6ae7de9eebc188ab0cb0a2489fe93f0e68939a717ceed9a8047f3711fff3cb",
+    "progress": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_sim20_a1\\state\\progress.json"
+  },
+  "wall_seconds_worker_sum": 12677.907000000123,
+  "wall_seconds_committed_sum_basis": "正常提交采用原生入口墙钟。硬超时采用监督器实际测量值。",
+  "next_direction_evidence": {
+    "F3_021": {
+      "feedback_rounds": [
+        10,
+        11,
+        12
+      ],
+      "motion_backend": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\08\\a1\\simulation\\gen_f3_s20261115_021\\motion_backend.json"
+    },
+    "F5_028": {
+      "feedback_rounds": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12
+      ],
+      "motion_backend": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\16\\a1\\simulation\\gen_f5_s20261115_028\\motion_backend.json"
+    },
+    "F5_037": {
+      "feedback_rounds": [
+        4,
+        5,
+        11,
+        12
+      ],
+      "motion_backend": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\17\\a1\\simulation\\gen_f5_s20261115_037\\motion_backend.json"
+    },
+    "F5_024": {
+      "feedback_rounds": [
+        6,
+        7,
+        8,
+        11
+      ],
+      "motion_backend": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\mount_registry_a1\\candidate\\results\\ms20a1\\19\\a1\\simulation\\gen_f5_s20261115_024\\motion_backend.json"
+    }
+  }
+}

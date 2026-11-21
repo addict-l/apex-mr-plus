@@ -1,0 +1,448 @@
+{
+  "task": "s1_qualify_sim",
+  "description": "资格验收：B 的近距取料能力写为 UNKNOWN，须实际验证后回填并重新规划",
+  "instruction": "把红色积木从右侧料位送到左侧目标垫，最后两只手都空出来。",
+  "status": "solved",
+  "makespan": 15.405128797,
+  "proposal": null,
+  "used_proposal": false,
+  "model_calls": [],
+  "model_goal_comparison": null,
+  "model_error": null,
+  "completion_elapsed": 0.0,
+  "completion": null,
+  "schedule": [
+    {
+      "action": "pick(B, red, stock_b)",
+      "skill": "pick",
+      "title": "抓取",
+      "arms": [
+        "B"
+      ],
+      "start": 0.0,
+      "end": 4.297825059,
+      "state_before": [
+        "arm_at(A, home_A)",
+        "arm_at(B, home_B)",
+        "at(red, stock_b)",
+        "empty(backup_buffer)",
+        "empty(final_buffer)",
+        "free(A)",
+        "free(B)"
+      ]
+    },
+    {
+      "action": "handover(B, A, red, hand_mid)",
+      "skill": "handover",
+      "title": "交接",
+      "arms": [
+        "B",
+        "A"
+      ],
+      "start": 4.297825059,
+      "end": 9.76359066,
+      "state_before": [
+        "arm_at(A, home_A)",
+        "arm_at(B, stock_b)",
+        "empty(backup_buffer)",
+        "empty(final_buffer)",
+        "empty(stock_b)",
+        "free(A)",
+        "held(B, red)"
+      ]
+    },
+    {
+      "action": "place(A, red, final_buffer)",
+      "skill": "place",
+      "title": "放置",
+      "arms": [
+        "A"
+      ],
+      "start": 9.76359066,
+      "end": 15.405128797,
+      "state_before": [
+        "arm_at(A, hand_mid)",
+        "arm_at(B, hand_mid)",
+        "empty(backup_buffer)",
+        "empty(final_buffer)",
+        "empty(stock_b)",
+        "free(B)",
+        "held(A, red)"
+      ]
+    }
+  ],
+  "search": {
+    "status": "solved",
+    "expanded": 8,
+    "generated": 12,
+    "rejected": {
+      "capability_invalid": 3,
+      "capability_unknown": 0,
+      "invariant": 0,
+      "cut": 0,
+      "protected": 0
+    },
+    "elapsed": 0.01600000000325963
+  },
+  "unknown": [],
+  "motion": [
+    {
+      "status": "VALID",
+      "detail": "真实运动后端：全部原语通过几何验证",
+      "segments": [
+        "s1_0000_B_r1",
+        "s1_0001_B_r2",
+        "s1_0002_B_r3",
+        "s1_0003_B_r4"
+      ]
+    },
+    {
+      "status": "VALID",
+      "detail": "真实运动后端：全部原语通过几何验证",
+      "segments": [
+        "s2_0004_B_r1",
+        "s2_0005_A_r2",
+        "s2_0006_A_r3",
+        "s2_0007_B_r4",
+        "s2_0008_B_r5",
+        "s2_0009_A_r6"
+      ]
+    },
+    {
+      "status": "VALID",
+      "detail": "真实运动后端：全部原语通过几何验证",
+      "segments": [
+        "s3_0010_A_r1",
+        "s3_0011_A_r2",
+        "s3_0012_A_r3",
+        "s3_0013_A_r4"
+      ]
+    }
+  ],
+  "feedback": [
+    "相关动作剪枝搜索结论为 unknown，回退到完整搜索。",
+    "运动后端按需验证：reach(B, stock_b) → VALID。"
+  ],
+  "relevance": [
+    {
+      "action": "handover(A, B, red, hand_mid)",
+      "skill": "handover",
+      "title": "交接",
+      "status": "VALID",
+      "reasons": [
+        "free(A)",
+        "held(B, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, hand_mid)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "reach(B, hand_mid)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "handover(B, A, red, hand_mid)",
+      "skill": "handover",
+      "title": "交接",
+      "status": "VALID",
+      "reasons": [
+        "free(B)",
+        "held(A, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, hand_mid)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "reach(A, hand_mid)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, red, backup_buffer)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(backup_buffer)",
+        "held(A, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, backup_buffer)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(A, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, red, final_buffer)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(final_buffer)",
+        "held(A, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, final_buffer)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(A, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, red, hand_mid)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "held(A, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, hand_mid)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(A, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(A, red, stock_b)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "INVALID",
+      "reasons": [
+        "empty(stock_b)",
+        "held(A, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, stock_b)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        },
+        {
+          "fact": "liftable(A, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, red, backup_buffer)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(backup_buffer)",
+        "held(B, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, backup_buffer)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(B, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, red, final_buffer)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "INVALID",
+      "reasons": [
+        "empty(final_buffer)",
+        "held(B, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, final_buffer)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        },
+        {
+          "fact": "liftable(B, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, red, hand_mid)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "held(B, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, hand_mid)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        },
+        {
+          "fact": "liftable(B, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "pick(B, red, stock_b)",
+      "skill": "pick",
+      "title": "抓取",
+      "status": "VALID",
+      "reasons": [
+        "empty(stock_b)",
+        "held(B, red)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, stock_b)",
+          "status": "VALID",
+          "source": "运动后端按需验证"
+        },
+        {
+          "fact": "liftable(B, red)",
+          "status": "VALID",
+          "source": "任务能力表 liftable.default"
+        }
+      ]
+    },
+    {
+      "action": "place(A, red, backup_buffer)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(red, backup_buffer)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, backup_buffer)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "place(A, red, final_buffer)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(red, final_buffer)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, final_buffer)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "place(A, red, stock_b)",
+      "skill": "place",
+      "title": "放置",
+      "status": "INVALID",
+      "reasons": [
+        "at(red, stock_b)",
+        "free(A)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(A, stock_b)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        }
+      ]
+    },
+    {
+      "action": "place(B, red, backup_buffer)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(red, backup_buffer)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, backup_buffer)",
+          "status": "VALID",
+          "source": "任务能力表 reach.valid"
+        }
+      ]
+    },
+    {
+      "action": "place(B, red, final_buffer)",
+      "skill": "place",
+      "title": "放置",
+      "status": "INVALID",
+      "reasons": [
+        "at(red, final_buffer)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, final_buffer)",
+          "status": "INVALID",
+          "source": "任务能力表 reach.default"
+        }
+      ]
+    },
+    {
+      "action": "place(B, red, stock_b)",
+      "skill": "place",
+      "title": "放置",
+      "status": "VALID",
+      "reasons": [
+        "at(red, stock_b)",
+        "free(B)"
+      ],
+      "evidence": [
+        {
+          "fact": "reach(B, stock_b)",
+          "status": "VALID",
+          "source": "运动后端按需验证"
+        }
+      ]
+    }
+  ]
+}

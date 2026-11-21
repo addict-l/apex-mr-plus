@@ -1,0 +1,12 @@
+name = "gen_f5_s20261115_003"
+description = "装好两层柱子、悬臂梁和配重，最后收好临时积木，两只手都空出来。"
+instruction = "装好两层柱子、悬臂梁和配重，最后收好临时积木，两只手都空出来。"
+arms = ["A", "B"]
+arm = [{id = "A", home = [-0.3, 0.3, 0.2], speed = 0.25}, {id = "B", home = [0.3, 0.3, 0.2], speed = 0.25}]
+goal = []
+fill_all_slots = true
+location = [{id = "stock_b1", kind = "stock", pos = [0.8553947943872215, -0.2533013440760948, 0.0], owner = "B"}, {id = "stock_b2", kind = "stock", pos = [0.6511089317485765, -0.46240391617368054, 0.0], owner = "B"}, {id = "stock_b3", kind = "stock", pos = [0.6503530770569539, 0.49673208953162706, 0.0], owner = "B"}, {id = "stock_b4", kind = "stock", pos = [0.856023871067032, -0.46114726073615686, 0.0], owner = "B"}, {id = "stock_a1", kind = "stock", pos = [-0.44615367555152097, 0.49351464568321163, 0.0], owner = "A"}, {id = "stock_a2", kind = "stock", pos = [-0.8548487259829498, -0.24900076658832163, 0.0], owner = "A"}]
+block = [{id = "pillar_base", type = "pillar_type", at = "stock_b1"}, {id = "pillar", type = "pillar_type", at = "stock_b2"}, {id = "beam_block", type = "beam_type", at = "stock_b3"}, {id = "counterweight", type = "counterweight_type", at = "stock_b4"}, {id = "temp_block1", type = "temporary_sim_type1", at = "stock_a1"}, {id = "temp_block2", type = "temporary_sim_type2", at = "stock_a2"}]
+slot = [{id = "p0", type = "pillar_type", pos = [0.16276752251632493, 0.3374540275887659, 0.03], below = []}, {id = "p1", type = "pillar_type", pos = [0.16276752251632493, 0.3374540275887659, 0.06], below = ["p0"]}, {id = "beam", type = "beam_type", pos = [0.0711952646321523, 0.3374540275887659, 0.09], below = ["p1"], overhang = true, anchors = ["cw"], support_point = false}, {id = "cw", type = "counterweight_type", pos = [0.25980011669672537, 0.3374540275887659, 0.12], below = ["beam"]}, {id = "tp1", type = "temporary_sim_type1", pos = [-0.10606272689308004, 0.3374540275887659, 0.03], below = [], temporary = true, platform_for = "beam"}, {id = "tp2", type = "temporary_sim_type2", pos = [-0.10606272689308004, 0.3374540275887659, 0.06], below = ["tp1"], temporary = true, platform_for = "beam"}]
+capabilities = {liftable = {default = "VALID"}, reach = {default = "UNKNOWN", valid = {A = ["stock_a1", "stock_a2", "beam", "tp1", "tp2"], B = ["stock_b1", "stock_b2", "stock_b3", "stock_b4", "p0", "p1", "beam", "cw", "tp1", "tp2"]}, invalid = {A = ["stock_b1", "stock_b2", "stock_b3", "stock_b4"], B = ["stock_a2"]}, unknown = {A = ["p0", "p1", "cw"], B = ["stock_a1"]}}}
+capability_source = "ik_qualified"

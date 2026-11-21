@@ -1,0 +1,58 @@
+name = "gen_f1_s20261115_007"
+description = "把 2 块积木分别放到底板对应目标位，最后两只手都空出来。"
+instruction = "把 2 块积木分别放到底板对应目标位，最后两只手都空出来。"
+goal = ["at(b1, board_1)", "at(b2, board_2)"]
+fill_all_slots = true
+arms = ["A", "B"]
+slot = []
+
+[[arm]]
+id = "A"
+home = [-0.3, 0.3, 0.2]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.3, 0.3, 0.2]
+speed = 0.25
+
+[[location]]
+id = "stock_b1"
+kind = "stock"
+pos = [0.6502639262047829, -0.2502568849765323, 0.0]
+owner = "B"
+
+[[location]]
+id = "board_1"
+kind = "board"
+pos = [0.2219437757770825, 0.3081736811716655, 0.0]
+
+[[location]]
+id = "stock_a1"
+kind = "stock"
+pos = [-0.8541291487394786, -0.46281096360588453, 0.0]
+owner = "A"
+
+[[location]]
+id = "board_2"
+kind = "board"
+pos = [-0.1871462663172454, 0.2276752240831945, 0.0]
+
+[[block]]
+id = "b1"
+type = "2x4"
+at = "stock_b1"
+
+[[block]]
+id = "b2"
+type = "2x4"
+at = "stock_a1"
+
+[capabilities.reach]
+default = "UNKNOWN"
+valid = {"A" = ["stock_a1", "board_2"], "B" = ["stock_b1", "board_1"]}
+unknown = {"A" = [], "B" = []}
+invalid = {"A" = ["stock_b1", "board_1"], "B" = ["stock_a1", "board_2"]}
+
+[capabilities.liftable]
+default = "VALID"

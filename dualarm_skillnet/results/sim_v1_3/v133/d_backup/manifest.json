@@ -1,0 +1,47 @@
+{
+  "purpose": "D前恢复备份；不含E成本文件",
+  "files": {
+    "simbridge/frames.py": {
+      "sha256": "fd598633565ac767bd0c3211d2fdfad28b44e214c95f6eb20a935ea98f6b27fd",
+      "backup": "results/sim_v1_3/v133/d_backup/simbridge/frames.py"
+    },
+    "simbridge/workcell.py": {
+      "sha256": "39f4c692072f1cfc30213db95772e2758eb123e9b34f807d77cb6925cefcd65d",
+      "backup": "results/sim_v1_3/v133/d_backup/simbridge/workcell.py"
+    },
+    "tests/test_support_frames.py": {
+      "sha256": "3666aaa6ff3c59c54899f75d2b0624ff6b604eefa4874128a9b4b6aac57ac785",
+      "backup": "results/sim_v1_3/v133/d_backup/tests/test_support_frames.py"
+    },
+    "tests/test_handover_frames.py": {
+      "sha256": "d285394a6bf711154fc9083413f696c7a64df2861fb655dc99ae8ff8f7c39271",
+      "backup": "results/sim_v1_3/v133/d_backup/tests/test_handover_frames.py"
+    },
+    "tests/test_v13_workcell.py": {
+      "sha256": "0662f239fecb38fd0d8c487ec0a864a611b671fc89adcadfbc14277fb6b8b79a",
+      "backup": "results/sim_v1_3/v133/d_backup/tests/test_v13_workcell.py"
+    }
+  },
+  "new_files": [
+    "tests/test_support_geometry_v133.py",
+    "tools/v133_support_geometry.py"
+  ],
+  "frames_method_ast_sha256": {
+    "__init__": "36838ea6d654028d7b9595d246effade728597c7ac17c15973790f77d2ae0ed6",
+    "slot_pose": "e2f74956be50ebd4643b11b6717e2c7f999038ed8480279a24844e0cf4edb88f",
+    "block_pose": "4e2867a3985fb2e191faa334b1c31d2ba70b2abe55735dde629170a3c5747948",
+    "grasp_pose": "cc617c5886cd585c914b2b735773f0bc74a039ff56e54115cad1f15c8f4cfa1b",
+    "payload": "b6599fd0031c70a05fafe8aa532ffcbf8ea8f6c15f8b1bf249deecba0714911f",
+    "side_payload": "1459f0ff81dbf86c42fe00ae69c0d0eab77e0a15849cabbcd54033f70b70f4dc",
+    "tcp_pose": "0f10187df10b8475663584f0ce8c691aec04b06cb83170b8a580224f35861148",
+    "handover_poses": "1b6f363f9d93b78972d8711261fc33b293561102f2ba655f14b44ae4e5fb0118",
+    "support_point": "e3ddf3ee62bd16e78f368453784bae1831d1c1061765d114561a46e623af2a59",
+    "support_pose": "3f0f90f765d915dc65404d0fcec86fbdcaf597434484ee3eb78c8e6799ff8f0b",
+    "support_approach_pose": "76584dccd6b734adaa8ba8356782b8647d23fa33632fd40e5d43bc686f56070e",
+    "handover_retreat": "cc467a40d865957ac1e3f6305efc61f084d824cb54e9a34ee7a811f5d578b2e1",
+    "support_retreat": "64b55441c9cf2e905554868e2af782d51a2dc8458412d0efd06533932f5058fd",
+    "approach_pose": "dde647c2ddbadd89a8c519e7fa6b87dc22f7e067c4c8e10387574aefa7972246",
+    "home_pose": "3d8c753dfbf6530950062b261198044a0bb641cf2fc3c341880939220536460c"
+  },
+  "only_allowed_method_change": "support_pose"
+}

@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-17T13:52:45.599981+00:00",
+  "passed": true,
+  "checks": {
+    "all_12_registered_sha_match": true,
+    "selection_unchanged": true,
+    "original20_preserved": true,
+    "native_source_audit": true,
+    "archives": true,
+    "health": true,
+    "reporter_returned_zero": true
+  },
+  "candidate_trials_record_only": [
+    {
+      "task": "gen_f3_s20261115_005",
+      "status": "budget",
+      "outer_wall_seconds": 58.433456897735596,
+      "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\scope_trials\\allocation_only_solver_attempt1\\005\\receipt.json",
+      "formal_registered": false
+    },
+    {
+      "task": "gen_f3_s20261115_012",
+      "status": "budget",
+      "outer_wall_seconds": 58.467207193374634,
+      "evidence": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v134\\scope_trials\\allocation_only_solver_attempt1\\012\\receipt.json",
+      "formal_registered": false
+    }
+  ],
+  "execution_complete": true,
+  "unmet_acceptance": [
+    "fixed20 8/20 below 70%",
+    "walls3 1/3 below 2/3"
+  ],
+  "no_new_test_or_planning_run": true,
+  "acceptance_review_completed": true,
+  "overall_acceptance_passed": false
+}

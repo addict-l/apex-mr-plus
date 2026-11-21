@@ -1,0 +1,593 @@
+{
+  "experiment_namespace": "c_wall_v134",
+  "fixes_completed": [
+    "B",
+    "A",
+    "C",
+    "D"
+  ],
+  "planning_code_sha256": {
+    "skillnet/planning/search.py": "568cbdea427be8daabf3497f3e5554bfe36250949203ded838f6b22712600a22",
+    "skillnet/planning/heuristic.py": "d99719627db745e5d7b3a10d9c8ed573b0638e804edd6b1a8e79ec86bc3f4fdb",
+    "skillnet/planning/bounds.py": "d3f1f80af246000dee3747eb60e33aa54016e84b2bc7903089fbe49a74cbeedb",
+    "skillnet/planning/allocation.py": "765a2f7b8edb38875be5ca0ce82efadac78bcd6c1fe1a5abec57b2ca9d3afd73",
+    "skillnet/pipeline.py": "4bebf9cf4f8ccedeea2c3c47af07c0132219c21fbf2aebe49c123c2c208a6633",
+    "simbridge/backend.py": "3ab3de31e32c63a363fbc14a1f10f167b4e485ba346df1cba931ba343d5b1abb",
+    "simbridge/qualifier.py": "0ddf05422f8df6119413d2b7cd40f5d889b733b0206a7e1a4852d9958ad5763b",
+    "simbridge/__main__.py": "0256b7a3e56dbb106592e420c6d6b88cbc5b394e0d64c2b99b6c4e4e92130d8b",
+    "simbridge/taskio.py": "74cbeea81c57762595c6b6668623d53202a0779baab1671201368f437b5f4c44",
+    "skillnet/cost/model.py": "7b2311e41b1442d7850667f374599773c1c4a5625230531994739e96631acdcd",
+    "skills/blocks_v1.toml": "aa0126377dc0f787ee7a61ab1e3c87a2662fb387e44fd030462b92edb431e172",
+    "calibration.json": "ebf2120105f35c84c9f20263a3608c138e5f2c323f3e130b0ce57c24d0317e6b"
+  },
+  "baseline_source": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\v133\\original11_c_scale_retry1.json",
+  "baseline_sha256": "eb4478c15d0fea4f45cf8cb9f650b4e1aeb42d87399f805b117cc9d77baf206d",
+  "rows": [
+    {
+      "task": "s1_far_handover",
+      "file": "tasks/s1_far_handover.toml",
+      "task_sha256": "6465ca77a4a1978d4fbda075564276d9dfba60834a1ca293f11002bfa28d102a",
+      "status": "solved",
+      "makespan": 84.726822503,
+      "bound": 1.0,
+      "baseline_makespan": 84.726822503,
+      "baseline_bound": 1.0,
+      "seconds": 0.030999999959021807,
+      "first_solution_seconds": 0.015999999945051968,
+      "first_solution_expanded": 8,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(B, red, stock_r1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "place(B, red, buffer_mid)",
+          "expected_seconds": 18.838087059083747,
+          "actual_seconds": 18.838087059000003
+        },
+        {
+          "action": "pick(A, red, buffer_mid)",
+          "expected_seconds": 23.92499996052679,
+          "actual_seconds": 23.924999960999997
+        },
+        {
+          "action": "place(A, red, board_l1)",
+          "expected_seconds": 20.369389803615235,
+          "actual_seconds": 20.369389803999994
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task": "s1_nearest_arm",
+      "file": "tasks/s1_nearest_arm.toml",
+      "task_sha256": "7ed97fad896005eab4c1b2e1666b90e50d12b6a0f6817b2ed18d54720bc5ea41",
+      "status": "solved",
+      "makespan": 40.841600557,
+      "bound": 1.0,
+      "baseline_makespan": 40.841600557,
+      "baseline_bound": 1.0,
+      "seconds": 0.0,
+      "first_solution_seconds": 0.0,
+      "first_solution_expanded": 6,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(A, red, stock_c)",
+          "expected_seconds": 22.003513498202203,
+          "actual_seconds": 22.003513498
+        },
+        {
+          "action": "place(A, red, board_c)",
+          "expected_seconds": 18.838087059083747,
+          "actual_seconds": 18.838087059
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task": "s1_parallel_place",
+      "file": "tasks/s1_parallel_place.toml",
+      "task_sha256": "ab461dfff439d3622d592455a476488bcacdef85d21d8eac45ae1c4cbc889558",
+      "status": "solved",
+      "makespan": 41.261400975,
+      "bound": 1.0,
+      "baseline_makespan": 41.261400975,
+      "baseline_bound": 1.0,
+      "seconds": 0.07900000002700835,
+      "first_solution_seconds": 0.01600000006146729,
+      "first_solution_expanded": 8,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(B, blue, stock_r1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "pick(A, red, stock_l1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "place(A, red, board_l1)",
+          "expected_seconds": 19.667055296452176,
+          "actual_seconds": 19.667055296
+        },
+        {
+          "action": "place(B, blue, board_r1)",
+          "expected_seconds": 19.667055296452176,
+          "actual_seconds": 19.667055296
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task": "s1_reach_handover",
+      "file": "tasks/s1_reach_handover.toml",
+      "task_sha256": "6808add35edde6355d1c4b2bac4159c7fd34a9d6955a5681f5f55aab368ed31c",
+      "status": "solved",
+      "makespan": 57.724578033,
+      "bound": 1.0,
+      "baseline_makespan": 57.724578033,
+      "baseline_bound": 1.0,
+      "seconds": 0.0,
+      "first_solution_seconds": 0.0,
+      "first_solution_expanded": 7,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(B, red, stock_r1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "handover(B, A, red, hand_mid)",
+          "expected_seconds": 19.28892654478841,
+          "actual_seconds": 19.288926545000002
+        },
+        {
+          "action": "place(A, red, board_l1)",
+          "expected_seconds": 16.841305808699158,
+          "actual_seconds": 16.841305808999998
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task": "s2_tower",
+      "file": "tasks/s2_tower.toml",
+      "task_sha256": "2b9bef99b441d7ff1afe4195c9e370e928d89e28311bb2284919cc9c6704f47b",
+      "status": "solved",
+      "makespan": 109.713876139,
+      "bound": 1.0,
+      "baseline_makespan": 109.713876139,
+      "baseline_bound": 1.0,
+      "seconds": 2.468999999924563,
+      "first_solution_seconds": 0.015999999945051968,
+      "first_solution_expanded": 14,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(A, b1, stock_l1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "insert(A, b1, t1)",
+          "expected_seconds": 22.890198940184103,
+          "actual_seconds": 22.890198939999998
+        },
+        {
+          "action": "pick(A, b2, stock_l2)",
+          "expected_seconds": 20.071407707783703,
+          "actual_seconds": 20.071407708000002
+        },
+        {
+          "action": "pick(B, b3, stock_r1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679000007
+        },
+        {
+          "action": "insert(A, b2, t2)",
+          "expected_seconds": 22.16330842508559,
+          "actual_seconds": 22.163308424999997
+        },
+        {
+          "action": "insert(B, b3, t3)",
+          "expected_seconds": 22.99461538676013,
+          "actual_seconds": 22.99461538700001
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task": "s2_tower_same_type",
+      "file": "tasks/s2_tower_same_type.toml",
+      "task_sha256": "5f1d6b6a6338b137dc3745d957006345d0abc51152105d2e089bbad6bd729fd7",
+      "status": "solved",
+      "makespan": 88.268585207,
+      "bound": 1.0,
+      "baseline_makespan": 88.268585207,
+      "baseline_bound": 1.0,
+      "seconds": 2.547000000020489,
+      "first_solution_seconds": 0.03200000000651926,
+      "first_solution_expanded": 16,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(A, b2, stock_l2)",
+          "expected_seconds": 20.225055823109127,
+          "actual_seconds": 20.225055823
+        },
+        {
+          "action": "pick(B, b3, stock_r1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "insert(A, b2, t1)",
+          "expected_seconds": 22.1193854892368,
+          "actual_seconds": 22.119385489
+        },
+        {
+          "action": "insert(B, b3, t2)",
+          "expected_seconds": 22.929528508074107,
+          "actual_seconds": 22.929528508000004
+        },
+        {
+          "action": "pick(A, b1, stock_l1)",
+          "expected_seconds": 20.877699295123993,
+          "actual_seconds": 20.877699295
+        },
+        {
+          "action": "insert(A, b1, t3)",
+          "expected_seconds": 22.99461538676013,
+          "actual_seconds": 22.994615386999996
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task": "s3a_cantilever",
+      "file": "tasks/s3a_cantilever.toml",
+      "task_sha256": "70a4b42f9fa9fc6214cd8e48311a40f0a419873928bd2a106ed6891d30707af5",
+      "status": "solved",
+      "makespan": 110.76729646,
+      "bound": 1.0,
+      "baseline_makespan": 110.76729646,
+      "baseline_bound": 1.0,
+      "seconds": 5.062000000034459,
+      "first_solution_seconds": 0.062000000034458935,
+      "first_solution_expanded": 51,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(B, beam_block, stock_r1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "pick(A, pillar, stock_l1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "insert(A, pillar, p1)",
+          "expected_seconds": 22.890198940184103,
+          "actual_seconds": 22.890198939999998
+        },
+        {
+          "action": "insert(B, beam_block, beam)",
+          "expected_seconds": 22.929528508074107,
+          "actual_seconds": 22.929528507999997
+        },
+        {
+          "action": "support_on(A, beam)",
+          "expected_seconds": 2.12,
+          "actual_seconds": 2.1200000000000045
+        },
+        {
+          "action": "pick(B, counterweight, stock_r2)",
+          "expected_seconds": 20.117352279226566,
+          "actual_seconds": 20.117352279000002
+        },
+        {
+          "action": "insert(B, counterweight, cw)",
+          "expected_seconds": 22.235871053789054,
+          "actual_seconds": 22.235871054
+        },
+        {
+          "action": "support_off(A, beam)",
+          "expected_seconds": 1.0,
+          "actual_seconds": 1.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task": "s3a_cantilever_with_proposal",
+      "file": "tasks/s3a_cantilever_with_proposal.toml",
+      "task_sha256": "226c204dcd299256bfc637dd9f6cb2b502531bfa174a356c6dcbf259e318a319",
+      "status": "solved",
+      "makespan": 110.76729646,
+      "bound": 1.0,
+      "baseline_makespan": 110.76729646,
+      "baseline_bound": 1.0,
+      "seconds": 5.577999999979511,
+      "first_solution_seconds": 0.06299999996554106,
+      "first_solution_expanded": 51,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(B, beam_block, stock_r1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "pick(A, pillar, stock_l1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "insert(A, pillar, p1)",
+          "expected_seconds": 22.890198940184103,
+          "actual_seconds": 22.890198939999998
+        },
+        {
+          "action": "insert(B, beam_block, beam)",
+          "expected_seconds": 22.929528508074107,
+          "actual_seconds": 22.929528507999997
+        },
+        {
+          "action": "support_on(A, beam)",
+          "expected_seconds": 2.12,
+          "actual_seconds": 2.1200000000000045
+        },
+        {
+          "action": "pick(B, counterweight, stock_r2)",
+          "expected_seconds": 20.117352279226566,
+          "actual_seconds": 20.117352279000002
+        },
+        {
+          "action": "insert(B, counterweight, cw)",
+          "expected_seconds": 22.235871053789054,
+          "actual_seconds": 22.235871054
+        },
+        {
+          "action": "support_off(A, beam)",
+          "expected_seconds": 1.0,
+          "actual_seconds": 1.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task": "s3a_platform",
+      "file": "tasks/s3a_platform.toml",
+      "task_sha256": "743373b671126ad7213b489e3348357e0fe61506780e71fd30a697f6c41f7179",
+      "status": "solved",
+      "makespan": 238.643875901,
+      "bound": 1.7911572282145118,
+      "baseline_makespan": 238.643875901,
+      "baseline_bound": 1.7911572282145118,
+      "seconds": 30.156000000075437,
+      "first_solution_seconds": 0.1720000000204891,
+      "first_solution_expanded": 523,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(A, temp_block1, stock_l2)",
+          "expected_seconds": 20.225055823109127,
+          "actual_seconds": 20.225055823
+        },
+        {
+          "action": "insert(A, temp_block1, tp1)",
+          "expected_seconds": 22.1193854892368,
+          "actual_seconds": 22.119385489
+        },
+        {
+          "action": "pick(A, temp_block2, stock_l3)",
+          "expected_seconds": 19.53850472026207,
+          "actual_seconds": 19.53850472
+        },
+        {
+          "action": "insert(A, temp_block2, tp2)",
+          "expected_seconds": 21.65752561402971,
+          "actual_seconds": 21.657525614
+        },
+        {
+          "action": "pick(A, pillar, stock_l1)",
+          "expected_seconds": 20.91883908022306,
+          "actual_seconds": 20.918839079999998
+        },
+        {
+          "action": "pick(B, beam_block, stock_r1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "insert(A, pillar, p1)",
+          "expected_seconds": 22.890198940184103,
+          "actual_seconds": 22.890198940000005
+        },
+        {
+          "action": "insert(B, beam_block, beam)",
+          "expected_seconds": 22.929528508074107,
+          "actual_seconds": 22.92952850799999
+        },
+        {
+          "action": "pick(B, counterweight, stock_r2)",
+          "expected_seconds": 20.117352279226566,
+          "actual_seconds": 20.117352279000016
+        },
+        {
+          "action": "insert(B, counterweight, cw)",
+          "expected_seconds": 22.235871053789054,
+          "actual_seconds": 22.235871054
+        },
+        {
+          "action": "detach(A, temp_block2, tp2)",
+          "expected_seconds": 3.12,
+          "actual_seconds": 3.119999999999976
+        },
+        {
+          "action": "place(A, temp_block2, stock_l3)",
+          "expected_seconds": 18.89870517902563,
+          "actual_seconds": 18.898705179000018
+        },
+        {
+          "action": "detach(A, temp_block1, tp1)",
+          "expected_seconds": 4.653602128687551,
+          "actual_seconds": 4.6536021290000065
+        },
+        {
+          "action": "place(A, temp_block1, stock_l2)",
+          "expected_seconds": 19.33930708626796,
+          "actual_seconds": 19.33930708599999
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task": "s3a_platform_demo_needs_support",
+      "file": "tasks/s3a_platform_demo_needs_support.toml",
+      "task_sha256": "d339641891a79738f1b9d4c993830a167fee24097135f48f6d5f052f2a1d6792",
+      "status": "solved",
+      "makespan": 45.523874187,
+      "bound": 1.0,
+      "baseline_makespan": 45.523874187,
+      "baseline_bound": 1.0,
+      "seconds": 0.375,
+      "first_solution_seconds": 0.015999999945051968,
+      "first_solution_expanded": 266,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(B, cap_block, stock_r1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "support_on(A, beam)",
+          "expected_seconds": 3.5944905142395798,
+          "actual_seconds": 3.594490514
+        },
+        {
+          "action": "insert(B, cap_block, cap)",
+          "expected_seconds": 22.929528508074107,
+          "actual_seconds": 22.929528507999997
+        },
+        {
+          "action": "support_off(A, beam)",
+          "expected_seconds": 1.0,
+          "actual_seconds": 1.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task": "s3a_platform_with_proposal",
+      "file": "tasks/s3a_platform_with_proposal.toml",
+      "task_sha256": "02068f06f03d610cb554bed86ea36dc78159b435abc7d17f6fd3b33e55bf3424",
+      "status": "solved",
+      "makespan": 238.643875901,
+      "bound": 1.7911572282145118,
+      "baseline_makespan": 238.643875901,
+      "baseline_bound": 1.7911572282145118,
+      "seconds": 30.31299999996554,
+      "first_solution_seconds": 0.18799999996554106,
+      "first_solution_expanded": 523,
+      "proposal_enabled": false,
+      "witness_loaded": false,
+      "independent_step_costs": [
+        {
+          "action": "pick(A, temp_block1, stock_l2)",
+          "expected_seconds": 20.225055823109127,
+          "actual_seconds": 20.225055823
+        },
+        {
+          "action": "insert(A, temp_block1, tp1)",
+          "expected_seconds": 22.1193854892368,
+          "actual_seconds": 22.119385489
+        },
+        {
+          "action": "pick(A, temp_block2, stock_l3)",
+          "expected_seconds": 19.53850472026207,
+          "actual_seconds": 19.53850472
+        },
+        {
+          "action": "insert(A, temp_block2, tp2)",
+          "expected_seconds": 21.65752561402971,
+          "actual_seconds": 21.657525614
+        },
+        {
+          "action": "pick(A, pillar, stock_l1)",
+          "expected_seconds": 20.91883908022306,
+          "actual_seconds": 20.918839079999998
+        },
+        {
+          "action": "pick(B, beam_block, stock_r1)",
+          "expected_seconds": 21.594345679256858,
+          "actual_seconds": 21.594345679
+        },
+        {
+          "action": "insert(A, pillar, p1)",
+          "expected_seconds": 22.890198940184103,
+          "actual_seconds": 22.890198940000005
+        },
+        {
+          "action": "insert(B, beam_block, beam)",
+          "expected_seconds": 22.929528508074107,
+          "actual_seconds": 22.92952850799999
+        },
+        {
+          "action": "pick(B, counterweight, stock_r2)",
+          "expected_seconds": 20.117352279226566,
+          "actual_seconds": 20.117352279000016
+        },
+        {
+          "action": "insert(B, counterweight, cw)",
+          "expected_seconds": 22.235871053789054,
+          "actual_seconds": 22.235871054
+        },
+        {
+          "action": "detach(A, temp_block2, tp2)",
+          "expected_seconds": 3.12,
+          "actual_seconds": 3.119999999999976
+        },
+        {
+          "action": "place(A, temp_block2, stock_l3)",
+          "expected_seconds": 18.89870517902563,
+          "actual_seconds": 18.898705179000018
+        },
+        {
+          "action": "detach(A, temp_block1, tp1)",
+          "expected_seconds": 4.653602128687551,
+          "actual_seconds": 4.6536021290000065
+        },
+        {
+          "action": "place(A, temp_block1, stock_l2)",
+          "expected_seconds": 19.33930708626796,
+          "actual_seconds": 19.33930708599999
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "label": "four_fixes_runtime_fix2",
+  "seconds": 76.95299999997951
+}
