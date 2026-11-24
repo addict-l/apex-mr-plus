@@ -1,0 +1,1123 @@
+{
+  "schema": "frozen-v135-algorithm-and-ppt-manifest-v1",
+  "frozen_candidate_fingerprint": "87dd723bcee7ae34d95daa3359ac911c0383555a428546bb6f0cd7f5cac99e61",
+  "file_count": 223,
+  "total_bytes": 91123424,
+  "files": [
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/__init__.py",
+      "bytes": 67,
+      "sha256": "9a2f06d0821d425dad0a75f111fc8679fcad231d0dd723347f848816c0ec7c3d"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/controller.lua",
+      "bytes": 36850,
+      "sha256": "81cf1fb99934bfd7be663965f437421be5ec8189dc9162b6932b4bc489230753"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/curve.py",
+      "bytes": 12354,
+      "sha256": "ed669126e5c9948065d26693ec2bf60526d1304eeb0504284dec3ca0f202d69e"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/fast_interarm.lua",
+      "bytes": 16889,
+      "sha256": "f787361afec1bd776b1b3ab178abbd681cb5857f4b054f96a7dbb929b1847563"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/fast_interarm.py",
+      "bytes": 8516,
+      "sha256": "f4c70ce6b357fcc7a0a00f8c0f84a21c4f5e0503ce831fa0540a316ba34d6d03"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/geometry.py",
+      "bytes": 41773,
+      "sha256": "47d9234113a98718e904ab975ddc8b7dbd634d129b70c038e94dc0b06201c9fb"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/motion.py",
+      "bytes": 14514,
+      "sha256": "091ccf2ec75997f5ee4fae489e788098bcc0fd1c17e6d1ad6feeca089b4ca5c0"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/motion_backend.lua",
+      "bytes": 55979,
+      "sha256": "2a1818961a502db2b2a6d9beed2c3f187506060098856a04b40d52883028041b"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/program.py",
+      "bytes": 12326,
+      "sha256": "61264d84aecf98bfa5dbee0dedcdb9ee1aa8aa1dfb7f212ca3b845e40165cfb3"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/PROVENANCE.json",
+      "bytes": 7232,
+      "sha256": "0564bda3154ad83a76f0a6db38acee041137718c8dd555d99eb2f9dd958265bb"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/runtime.py",
+      "bytes": 13213,
+      "sha256": "01df627d2fbb776f67abf7e4bc2f5ae1d50ec81938a5a08b1743554d7f8e42bf"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/scene_helpers.py",
+      "bytes": 5653,
+      "sha256": "0161fcaaabcb28a10e6107ccbab06fd9352f46bfe38d690c8b5156bff52937b8"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/sim_connection.py",
+      "bytes": 15604,
+      "sha256": "5133c19c97655024812e5d549099ed29050218ff3f32e9321b7e0a2a9e3b5d29"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/tpg.py",
+      "bytes": 26813,
+      "sha256": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/apexmr/validation.py",
+      "bytes": 36773,
+      "sha256": "b90aa5b41d7e2b7a82730cec6b3d6891b99fa3273cad14020dd39d51d041743d"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/gen/__init__.py",
+      "bytes": 215,
+      "sha256": "efd4dfe07f71c8f7afdff33321ccf32c4a2e73fac5f640b7109f1e67a4d48bb3"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/gen/__main__.py",
+      "bytes": 1439,
+      "sha256": "9fa846cce9d891ea59fa2e9cf4370f5cbbb09a7f1ac0fd211d543cf90f63ef33"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/gen/families.py",
+      "bytes": 14152,
+      "sha256": "bb55e3fdd83ff11935991d7e1fbc3e04158245fe061d5d9ab111d8e46dd8a8bd"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/gen/generator.py",
+      "bytes": 15241,
+      "sha256": "167d6e0a6cad4d7ac89086517530e09ae90d258e99fb058f49036e8da1f5bc49"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/gen/geometry.py",
+      "bytes": 6036,
+      "sha256": "74ecac7aaa2d289a6e6e890b326611c2f35c053967cb64d4c43cc3a1196d81f3"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/__init__.py",
+      "bytes": 78,
+      "sha256": "b4c27b667e51eacb98eb93cc40f3bb84afd27d25386493c3ae84e3a111216ad5"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/__main__.py",
+      "bytes": 2754,
+      "sha256": "0256b7a3e56dbb106592e420c6d6b88cbc5b394e0d64c2b99b6c4e4e92130d8b"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/backend.py",
+      "bytes": 75214,
+      "sha256": "f06dbd5a88c2448bf9aa9dcd8b04fe3a8f9bc1688fcb7f1be3ee6af67ee3eac0"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/catalog.py",
+      "bytes": 2379,
+      "sha256": "d74ae068587178244a274a1420670bb116f00a40cd5f3edc7abc3e80457212db"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/compiler.py",
+      "bytes": 81815,
+      "sha256": "db11f88491a5f13d48a9f07e3df2b51b08ec0bae4f7ac0f074af3a112c8dc1ae"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/controller_ext.lua",
+      "bytes": 31540,
+      "sha256": "e8dfd17aad1a53c5a5f1716e82469aa7322e7afa82c48020410bbeb4596ee469"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/errors.py",
+      "bytes": 659,
+      "sha256": "6e7ba5f1a96d9f1140f136f964c4287d9fdab07f1036f3ae7d45ece720495558"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/executor.py",
+      "bytes": 24930,
+      "sha256": "35702eb1ac973647670753ce8b7ca11ff5b4c5aa57b4e58855093db5219b28bf"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/frames.py",
+      "bytes": 13999,
+      "sha256": "ed471d9bf61b2663474466cef68ce29f4f8a1396c6bf289c78bebedfbcc264a5"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/layout.py",
+      "bytes": 10414,
+      "sha256": "baffc1ff08e4f991d5b9991f03cefa07403b308d2c0b2d618efe1f54713508ae"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/primitives.py",
+      "bytes": 12032,
+      "sha256": "c83c73e8d190f409e733faf0088c712bccd655ec73b510950c802db8e8915069"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/qualifier.py",
+      "bytes": 25515,
+      "sha256": "0ddf05422f8df6119413d2b7cd40f5d889b733b0206a7e1a4852d9958ad5763b"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/reach_certificate.py",
+      "bytes": 14174,
+      "sha256": "6bf32f5634cacf0ddbe84b6e92da738288f5bb305ed7dbff7d604172453e4867"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/runner.py",
+      "bytes": 17377,
+      "sha256": "1fd27b666619aaa3a5536fd65c1d2e95af8657ca0bf46fa9bb731a42197a4af1"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/taskio.py",
+      "bytes": 2156,
+      "sha256": "74cbeea81c57762595c6b6668623d53202a0779baab1671201368f437b5f4c44"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/simbridge/workcell.py",
+      "bytes": 17840,
+      "sha256": "eab05a7ebb1221f9b89e22246ac80fbe4ecf3a91b703bb89a2e60a8413e6e86d"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/__init__.py",
+      "bytes": 50,
+      "sha256": "c3b3d619ddd7fa973fa934ecd1891b44d47d1638bb096f51923c68f0e646abad"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/__main__.py",
+      "bytes": 7537,
+      "sha256": "3605172f86ac99a7a3d3f091a605995cc713ca7c2f6bc4f77e30f112ac639b14"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/capability/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/capability/oracle.py",
+      "bytes": 4293,
+      "sha256": "bc0b65255c294da5edb760d075deeda23cc024f47be785c02df5ebb306335e4f"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/core/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/core/engine.py",
+      "bytes": 4526,
+      "sha256": "354736ac4b0b0184a80946a036ca01a49f739d3eda2e0c98e059cb5bf40e5503"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/core/hooks.py",
+      "bytes": 783,
+      "sha256": "3f6dba39a604027a0f9c41e5b77d152cd520635630b24e42d109759d3db9ff05"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/core/library.py",
+      "bytes": 6814,
+      "sha256": "056b9acf19a6d12afa92b25c536ad83ae9b1de6079859a972e07fb44c5121885"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/core/logic.py",
+      "bytes": 1987,
+      "sha256": "9a92b98ebf0432a19575364941e61ca36aa904879cb7c020949f432385216fb8"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/core/problem.py",
+      "bytes": 691,
+      "sha256": "72dfbe5523a8e1ab8ee014554c4dc8ded1a07f2a22b1f379d5085292af967892"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/core/skill.py",
+      "bytes": 2532,
+      "sha256": "37fd6d5cfe4a749a68b4f53a08f1b65befc4480dc64ecad5825673cfc616bf9b"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/cost/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/cost/model.py",
+      "bytes": 3196,
+      "sha256": "7b2311e41b1442d7850667f374599773c1c4a5625230531994739e96631acdcd"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/decompose/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/decompose/base.py",
+      "bytes": 613,
+      "sha256": "dd25280fec677bb7db37def0a3d970ce8632d9bee5b65b9d49344ccd73c3db23"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/decompose/goals.py",
+      "bytes": 6310,
+      "sha256": "ad36703ea4db6cf082d4b8111cac15e0c0ffee2f78788b0f935f0a5a574e8e4a"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/decompose/ollama.py",
+      "bytes": 9820,
+      "sha256": "c727f502ac279acb030c061a743ac1b95068db78376a714c30b274a43d74d2c3"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/decompose/prompt.py",
+      "bytes": 6155,
+      "sha256": "58f82853255d78c054a99069411e3c6bed253d68461c7e4eb12c566e385646d2"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/domains/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/domains/blocks.py",
+      "bytes": 19723,
+      "sha256": "161815a414dfb0882b4a8e461b4db8054721214e9bafb03c8d7ae0c3dff7676a"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/experiment.py",
+      "bytes": 19423,
+      "sha256": "52ccbf2f3c2caf3ebc73a31ef66de83f8c57b2f967d95b3960c3a20605e0e17a"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/motion/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/motion/base.py",
+      "bytes": 2013,
+      "sha256": "4cb79db019585a36e72a569eadff5be0465ce1862788fd5d6247b0df3bcebfca"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/pipeline.py",
+      "bytes": 22454,
+      "sha256": "08ffe12f337f639d4259805aa122cd67a1f965e2f7888bd94b879db1506f0f7d"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/planning/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/planning/abstraction.py",
+      "bytes": 20159,
+      "sha256": "53f02db4d137a2cb4902542c31b588c622254b60ba1f372e848be61692f01f5c"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/planning/allocation.py",
+      "bytes": 14134,
+      "sha256": "765a2f7b8edb38875be5ca0ce82efadac78bcd6c1fe1a5abec57b2ca9d3afd73"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/planning/bounds.py",
+      "bytes": 14913,
+      "sha256": "d3f1f80af246000dee3747eb60e33aa54016e84b2bc7903089fbe49a74cbeedb"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/planning/completion.py",
+      "bytes": 8646,
+      "sha256": "53b0bf441ff7849f9158d267c1f360d17bb5b6dab4c0a4b5e8bcb234dbdb3d75"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/planning/heuristic.py",
+      "bytes": 7358,
+      "sha256": "d99719627db745e5d7b3a10d9c8ed573b0638e804edd6b1a8e79ec86bc3f4fdb"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/planning/relevance.py",
+      "bytes": 1948,
+      "sha256": "2d9c006371bbad74ab49117259e8f1dcc3f0e3b1b0ca574e7225bf46f796db5f"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/planning/search.py",
+      "bytes": 24864,
+      "sha256": "62284187c22f42ea928f7fba7265544faf7ab956941902bfbb5fad9cb635e4e0"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/planning/taskgraph.py",
+      "bytes": 5128,
+      "sha256": "9ada44d615d6e6ea577e5a47475c568f94142326404f3563f5a4b7a20845ed9b"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skillnet/report.py",
+      "bytes": 10385,
+      "sha256": "be473b8f522e7fbeec59e36727eb2b7973e8d58b0027efa83f3615e49f3d75b8"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skills/blocks_catalog.toml",
+      "bytes": 3050,
+      "sha256": "e1e23067570521fb2d5aa60784bda2ee230ba0ae5de5ba135862fb56cee40b06"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/skills/blocks_v1.toml",
+      "bytes": 5311,
+      "sha256": "aa0126377dc0f787ee7a61ab1e3c87a2662fb387e44fd030462b92edb431e172"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_adjacent_ik_deadline.py",
+      "bytes": 10107,
+      "sha256": "2f6647c460edb868d2aa6a6f96963a204ab64fa39d5b71911f99ec8201c106b3"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_adjacent_ik_precheck.py",
+      "bytes": 9541,
+      "sha256": "c44a3b45c7aa4a4f5a60a003aaf41d846e3365ecabda8b7c0e19a954531f1d2a"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_coppelia_backend.py",
+      "bytes": 12750,
+      "sha256": "064ef85742965b150d02a24b944731311805546e833be6f83ad0a868cce267f1"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_idle_parking.py",
+      "bytes": 16806,
+      "sha256": "7d1066d273f90059f4d804fe15688fff09e3415e9cfa00ac1630794df71884da"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_abba_chain.py",
+      "bytes": 6724,
+      "sha256": "cf95474e59d2892a77fa2508f737b8db17d60e732aac8facee4ddc61d4a5dcb6"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_action_candidates.py",
+      "bytes": 22023,
+      "sha256": "7cf36545a1c1ee32337a95e7352010493cd1ef0e6cf0f32937de75ebb24ee7a9"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_backend_candidates.py",
+      "bytes": 14521,
+      "sha256": "9eb6c10bc1e359c468690698f7d204f0d94e1d58dc944ed05efe9e44392df375"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_candidate_selection.py",
+      "bytes": 15755,
+      "sha256": "62b4f11926843eaf23aa605e9403bb195883e2fddf83aea85b91331e4ba3c1a1"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_certificate_scope.py",
+      "bytes": 6496,
+      "sha256": "f9a6a69b18a82b83b9751a1e2fbe7b6d9b8e20aec4ec93710d21421187a94db6"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_detached.py",
+      "bytes": 9220,
+      "sha256": "676eaf4961a5a8b1257fcda36eb4f645cf735966deee7471e3667b7ca190ef98"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_diagnostics.py",
+      "bytes": 8027,
+      "sha256": "c57eae57c19f04534c78f9da12beba980a352a0d6f48ce70436a6e6bbc656473"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_executor_progress.py",
+      "bytes": 4533,
+      "sha256": "2608a04e841f5ebce87b34a2a88f7dadcc1269bf787e1a555f7e73509f975fd9"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_fast_idle.py",
+      "bytes": 11877,
+      "sha256": "a53fcfda7618aceadfc76f103e0d18059f100283bc9ad4ce46909747aaf0688b"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_fast_tpg_profile.py",
+      "bytes": 1830,
+      "sha256": "990162569f366e14fa07a296b8f646e6d3af797f09b954bdc953c9e3b86d073b"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_feedback.py",
+      "bytes": 7885,
+      "sha256": "3249782d9f988e1beb79e367ffaa4cb741c415bda3e45ec2ce4c21a25d9b9b27"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_full_m5.py",
+      "bytes": 2278,
+      "sha256": "61c7aaf79109817ac09578eb8a0449425549a2568b0c18e1ab366ca720fccc36"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_geometry_scope.py",
+      "bytes": 10555,
+      "sha256": "c3cda2d61f3462acf7c5f8ca9c5851b5a17dbabaa65be3ba7daa2bd22acde03b"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_m5_proof.py",
+      "bytes": 4646,
+      "sha256": "92eae4906e3ecb62c7666ff757a9e3c0edfa9d3c7033fdd8e0e4c01bfb24f689"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_motion_journal.py",
+      "bytes": 3474,
+      "sha256": "89785dcf9034c663beb05df600c22b9ef78fa2213fbe5b86bf50f952fd0e2606"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_preflight.py",
+      "bytes": 8788,
+      "sha256": "5354d5463e7d275afa769bfd82dc33af3be922d329f71e7821f0d647ed4c4eb2"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_protection_exception.py",
+      "bytes": 5294,
+      "sha256": "dad505d0b332371bb3e7723afe56cba16748614c5227d8c56fdabd42ddc096bb"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_qualification_hints.py",
+      "bytes": 8708,
+      "sha256": "3ff99f8988bbe4ad11f725cc28b349f9b3dc486b2da7c10db6d3460381667c57"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_reference.py",
+      "bytes": 11625,
+      "sha256": "b2a24fe4ed67983be7f55ba54f525ef86b5e55893c56f9746ca3aee6affd67e5"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_regression.py",
+      "bytes": 9406,
+      "sha256": "cf978ef7c4eb56980a97773e9391993193facd0122bdb4e00f26fc517f3ed5d3"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_repairs_chain.py",
+      "bytes": 4057,
+      "sha256": "8c9fe121c41283cd111f1a9290d36f83f4d6f2261e63d9fe7c18de1a950cf8fa"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_report.py",
+      "bytes": 25015,
+      "sha256": "5cd0462e0521e1bd3443430cdaa163fe7d85cf77a140baaebd955adab725c268"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_runner_reference.py",
+      "bytes": 3819,
+      "sha256": "d749c167c681f178f779953673f4ab06ce4f8dc974fc6cc3c809c077b47d7a6c"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_sample_batch.py",
+      "bytes": 13298,
+      "sha256": "6b3b9f4f50c0f21a459823683da46858f57312d5a033eab9e1266f22c46be3a9"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_support_reference.py",
+      "bytes": 12312,
+      "sha256": "3c1757395a9e68318f555ced05786acc8d7ae55fa6ebf2a9cb7f180b82dddb1f"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_targeted_queue.py",
+      "bytes": 1247,
+      "sha256": "d4b997ec19d743d839f2c48dedbd40c83a37fef2e2be30fc3c9408c45268b92e"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_terminal_probe.py",
+      "bytes": 10832,
+      "sha256": "baf2fa265cbec3b20acca695b2e13ae23ae3d87228e8b6be939321eadcad92c7"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_tpg_profile.py",
+      "bytes": 3635,
+      "sha256": "b89f2ccc35c24984bae83d78e53f9d2ac4f4060c5b1b4550b343954e35ef3d2c"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_motion_v135_workflow.py",
+      "bytes": 23984,
+      "sha256": "ae5eadda6078a069e540c38ccc22b0dc411c7f0f04f1c9c9ee840e123153730a"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tests/test_v13_compiler.py",
+      "bytes": 24132,
+      "sha256": "7813748d72170d7dcaaa7510d0327eef780b51d1288757e5de909b4588e55661"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_abba_chain.py",
+      "bytes": 12723,
+      "sha256": "63ceeebb82fc95af5cd7d94c61518fa7e18ce308cd56ed7ea98dcd2a07976dc5"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_baseline_evidence.py",
+      "bytes": 5702,
+      "sha256": "34f2eecd2789558f3dc6878fb7178aef0e2863ff18d6649e285a35f5fc90ebcd"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_classify.py",
+      "bytes": 1998,
+      "sha256": "8f2bd4470c2c212642d1d2abdcfa23fb7089773378efe9c5bc41f2bd5c6e7d4a"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_control.py",
+      "bytes": 9457,
+      "sha256": "e4a17a46b7722fc09159c531b66a350828f6f63b3a82300238838391f16dd0bc"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_detached.py",
+      "bytes": 17273,
+      "sha256": "8b8f6d5eb4343a983f3fa2e74a2016b44e961942ced624cc19ca20cd84c7a39d"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_diagnostics.py",
+      "bytes": 35628,
+      "sha256": "adc26a18a124afee15294b86df388daa267ffeea1c76287ef12588af0e490814"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_fast_idle.py",
+      "bytes": 17390,
+      "sha256": "2f642e5d45509b3a10840bf757e6345198348880accf864206a6b7cbad6e84ba"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_m1_chain.py",
+      "bytes": 3142,
+      "sha256": "bfcfb2bf02e154af32d8eebc344cc0c399073a9713c2d57150825bb08b2bffe6"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_m5_chain.py",
+      "bytes": 22521,
+      "sha256": "2e4f6b424fad7b963cb6f8d6321e67667bed54f8339eb7c24ae0888684dcc1b3"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_preflight.py",
+      "bytes": 28220,
+      "sha256": "39e1e6ab04d7de66a47e75c12a8babcf57d3ac2f36d64c42ee1957dac105e89f"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_probe_chain.py",
+      "bytes": 4420,
+      "sha256": "f74434037232dea668e09b774e1085e5358a392229ce101b62bbb8fe48973f79"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_regression.py",
+      "bytes": 16041,
+      "sha256": "55df8e36b41be59c9933bb32e5140a42da030848b698daaa567a158f51df3f77"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_replay.py",
+      "bytes": 22529,
+      "sha256": "010fc5e5362735a30fda9016fca92c55d83c3f2323fb508068208b11396be488"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_report.py",
+      "bytes": 50332,
+      "sha256": "8fe20f49c6e05f2443ad4802fd0b0b39716f0822293b980f6910d505d1fd4a7c"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_single.py",
+      "bytes": 1996,
+      "sha256": "54a4e5b60b6b6f823b7af17ca5546f4a5302608c39b137afaca5e554a16c73d2"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_terminal_probe.py",
+      "bytes": 21111,
+      "sha256": "7ec787fb8eff3cc7aa2b043fda188bebea078562d1127f04fd03df1dbe599290"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_tpg_profile.py",
+      "bytes": 20722,
+      "sha256": "31bdaa49016c8aced1759d8fab182e73828d4609bc021b41d399f2f72abdec75"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/candidate/tools/motion_v135_workflow.py",
+      "bytes": 29224,
+      "sha256": "9f707e51580b5801f64c3376b0c950a5ac92182bef318cd992fe1e0bd198daa0"
+    },
+    {
+      "path": "algorithm/frozen_candidate_125files/isolation_receipt.json",
+      "bytes": 14093,
+      "sha256": "7bfce9a05b792b3a64b894083d8b15262e6d4aff10c4668a6392f235dbf8aff8"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/assets/scene_manifest.json",
+      "bytes": 108424,
+      "sha256": "7ad0e6d73b924eda32cf5b239580b232f8c46d914f3a3cfa9550d2ea65e16762"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_batch_benchmark.py",
+      "bytes": 10201,
+      "sha256": "c3cff840ae8badf736375d7ae442c4c7409a2f9313155d9fa52ebdc45b285785"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_batch_offline.py",
+      "bytes": 5167,
+      "sha256": "cf82268170d4c8b23839f65ff51168ff8c0cbf7ab6b6854faf9a00f50372e34a"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_export.py",
+      "bytes": 13017,
+      "sha256": "512a302b1b6873df72bb02401eb3f28a989ea825c8f84e7c943e8d9528b43b02"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_fast_parity.py",
+      "bytes": 6025,
+      "sha256": "3d40dd4abead1b2374270eb61a94474c296f0c0463294843bfa902396cb3c815"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_figures.py",
+      "bytes": 7917,
+      "sha256": "793bbeaee6f844ff914a3508de163f35033e1db0004b39c918e715002fe98227"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_geometry.py",
+      "bytes": 32167,
+      "sha256": "8e533954858d9069aaa28396047daa0239b4a699af2ff52c6584da8537ef6387"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_handover.py",
+      "bytes": 2018,
+      "sha256": "96218043b8ef043f916b65ebc703c08fc525f6e33526af482ad885f9bce2a5a6"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_media.py",
+      "bytes": 8789,
+      "sha256": "43df7bb30378ac0df2687bc8deb43de858cf5e183845b536c180521535fc47ad"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_motion.py",
+      "bytes": 10144,
+      "sha256": "45d1630f6ab01864b0e2d4d639d32b120e53cca664c7f0a4186e0313e77c8445"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_native.py",
+      "bytes": 12447,
+      "sha256": "c586d0b55d968d442bbf5e50c7ffacdf00c041af0c4ab6022ff2bab766ff5296"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_outboard_precheck.py",
+      "bytes": 28246,
+      "sha256": "0861357fb7aaf9f194293f7a9f1d1e6bf1768ce739893b8076164e2bf16eac11"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/bridge_runtime.py",
+      "bytes": 7449,
+      "sha256": "cdfba70723a34e05aa0dc1f438dfc702d2b22ebb37aa088ab54b67fa81298d27"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/build_kinematic_scene.py",
+      "bytes": 23553,
+      "sha256": "934706d0d88b685a0c2d0445e28c79bf8309b5a96ee3baab32ed369f9c5f416f"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/collect_p0.py",
+      "bytes": 17292,
+      "sha256": "ebdee79b62ab04a646aeabf54327d541de17840aba0abc0c391e57d8c7936699"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/inspect_original.py",
+      "bytes": 1927,
+      "sha256": "6d2929ba0cedcc70447ee456e62f90cb5f69b8a4324ff76c174e512ddba5ab6b"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/launch_showcase.py",
+      "bytes": 864,
+      "sha256": "9228866a7b860a26e79ab6123724ade1108cda8678ac60971f7ace565ce43742"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/lego_grasp_model.py",
+      "bytes": 7439,
+      "sha256": "bad0a01ae3b5fef7e53e1d00d378767c5f54d0435cb0bc873f95f22989b099e1"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/lego_showcase_runner.py",
+      "bytes": 79413,
+      "sha256": "9b6be8e27fe082805c06905a9c99d52ebe1a690143096119f43274011a20c945"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_a/media_receipt.json",
+      "bytes": 6699,
+      "sha256": "dad43cfa56d8452feb23bdb6ce64ac7dd90d6b25caca98a17a6f952a15b4843b"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_a/motion_import_receipt.json",
+      "bytes": 1047,
+      "sha256": "425310300e9994acce83d74dedbc971cebe57adde5d25ff7283dc15efe03bef7"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_a/plan.json",
+      "bytes": 19083,
+      "sha256": "bd32a3b0738d868e2642c89c93e7285fee9c0c0cdda10e74f752f4b78b522497"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_a/summary.json",
+      "bytes": 5118,
+      "sha256": "afa9af0c117b8bfe19b124f10404024db46e25d2826846263206b87c6c318b15"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_a/task.toml",
+      "bytes": 3815,
+      "sha256": "61c2542b4e935fd9d279727a14733ed3a1bd2eab353130ee7e9778b16b9ffee4"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_a/validation.json",
+      "bytes": 30849,
+      "sha256": "fdb1c5f002493e7a5e2cb327584f63d2c89d95e49e50d0c8cb04bdf972d77bc6"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_b/handover_gate.json",
+      "bytes": 1441072,
+      "sha256": "b39d622d327e92372bad3e1a35afb902f044b0207df17a19722ae0e994cdeb35"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_b/media_receipt.json",
+      "bytes": 9812,
+      "sha256": "328981b07b817ebcd186029a77bdfd701a2481aa464243f340827c2d635b9bb4"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_b/motion_import_receipt.json",
+      "bytes": 1047,
+      "sha256": "d8551718c2e38d9d6f85c25219762828f3adf53de81337aa991a3025b003057f"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_b/plan.json",
+      "bytes": 23335,
+      "sha256": "c6075364e63399a30b44ff98e2728f6c4fb6afa9f0f8b2c20a4b7cc5ef59a686"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_b/summary.json",
+      "bytes": 4497,
+      "sha256": "ee89eb219cd52eaaa51712adad47419415baa83499114bbf6001abc08221c6df"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_b/task.toml",
+      "bytes": 3554,
+      "sha256": "811529b9e27a7400f0b9dff63c3115ae16844d1ddb857cf7a09440fd8d1a93a9"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_b/validation.json",
+      "bytes": 53205,
+      "sha256": "df357ab726e2d967029297fe91daf26f5feeba73fc2f714e9ebaef703aeb5856"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/mode_runner_offline.py",
+      "bytes": 1219,
+      "sha256": "18fa308b0f40cb27a9279fa72bb2c446344c09b55f4b42b0d9953dd5848a506a"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/outboard_park_a1/parking_calibration.json",
+      "bytes": 153375,
+      "sha256": "1106a4b3942418b45281c79a2ba064f0ab254b7011715fae5e5da4c0bd8f006c"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/outboard_park_a1/precheck_a007_a008.json",
+      "bytes": 20714,
+      "sha256": "c58894528ac3778f5009778d61708f7a0cf96b101e7d15028a0bf7768b4bfdad"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/outboard_park_a1/precheck_deck.json",
+      "bytes": 26708,
+      "sha256": "31f104a6dd11c9ca43045a4f9008d7c22e9ef7848d369f3b6632db34c334389f"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/outboard_symbolic_arm_check.py",
+      "bytes": 616,
+      "sha256": "32f3286e7bec35998a5cee7beea9cc7d2c5eb6662f381ebc611a8cc793604e97"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/overnight_handover_gate.py",
+      "bytes": 31127,
+      "sha256": "19148e605d587431419a8e78eba057d804e90589f10e91ce145ab6f5fd9defae"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/overnight_handover_gate_offline_check.py",
+      "bytes": 3437,
+      "sha256": "72d58b34aeb8019ac73261226e4a078dd901e8dc7d2241c82bdeb393b82ed173"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/overnight_offline_check.py",
+      "bytes": 1273,
+      "sha256": "7cd006eef71ea8aec31babb9f53c4ce0932e5ee8eb5db444b2778c156eeae99b"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_1_deck.py",
+      "bytes": 24500,
+      "sha256": "dc78625eff37b5e2152432be0c1f014507bacfdb5fa77434e0387c2497e546e1"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_2_clearance_route.py",
+      "bytes": 16829,
+      "sha256": "e85479558b6a3f6a9b2e9e4f8f57743c7d38a80b04758480ba28dde35c48453b"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_2_clearance_route_offline.py",
+      "bytes": 626,
+      "sha256": "e960bcb7b8044533208a085cb3670f51e8473ddc53aef43a2c167ebe3d3f1215"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_2_handover.py",
+      "bytes": 27373,
+      "sha256": "70bb1388f378dcf5e8ec49047b94586ab74e2d5e2a5180bd5b24e2040f198e77"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_2_height_offline.py",
+      "bytes": 1115,
+      "sha256": "eaec103089f117e5f9d769fe9eb5bd6b845fe825d0cc89adea34ba24c31db58c"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_2_height_taker.py",
+      "bytes": 18846,
+      "sha256": "5474364e7a70ca4d970a9be2ef28651574050f20a14e28a285fb18bc90ab2b69"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_2_neighbor_local.py",
+      "bytes": 5849,
+      "sha256": "2ad106bf9879adf2ddcea9fbecca5b9f08c717e9695707477c8dd0238d8e2b98"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_2_offline_check.py",
+      "bytes": 767,
+      "sha256": "a628a7f4e9259aa36b6ccf53137453f4d639c6f59b657d570c2f51a5447ec201"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_2_reach_probe.py",
+      "bytes": 2152,
+      "sha256": "dec05ef6006c3aa6668835a9bf6c5fae5f163eff6c30f55d9ff69b43bcf13dfe"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_2_tilted_offline.py",
+      "bytes": 812,
+      "sha256": "4c6ad7417e5ecceb127f487738e199dfb1418ad552d5b498712bd99cc51d1b34"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/p0_2_tilted_taker.py",
+      "bytes": 18001,
+      "sha256": "0e757c3a7f563bd74509fd511ddfbd3d2039362a05d33f4090949adaec29db75"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/script_enable_probe.py",
+      "bytes": 746,
+      "sha256": "db5ad26c29ab199857f937a97e0efe2c73eeb1cd67af1b6e703d7af330b76e85"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/showcase_overnight.py",
+      "bytes": 18728,
+      "sha256": "dc670f6104811bf5202addf751055e41b4967342af8a848a1fdcf5c56d872488"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/showcase_report.py",
+      "bytes": 15972,
+      "sha256": "334614f44337ad0125000bf2fda73425aecbba2fbda9e871f7115fc0f20a65a4"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/stage1_codec.py",
+      "bytes": 3547,
+      "sha256": "180211c8c1589b905737f4fde0ce214357d1fef009be6cb0b4ac96ae4a07be34"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/symbolic_modes.py",
+      "bytes": 12271,
+      "sha256": "0f1619812a8c62b4a0b3285f0914dd6c6051bd56f6c488bc12b59e8df12808e4"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/test_outboard_precheck.py",
+      "bytes": 4933,
+      "sha256": "7fe2b04c961ad796286c1c4e335cfe9df7458d8e5b6b73fb46fa5aad83df05ec"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/test_showcase_parking.py",
+      "bytes": 14856,
+      "sha256": "577c12903b11d4eb0f160a10c9ee6462e236e2ec8f2018e45b841702198f321c"
+    },
+    {
+      "path": "algorithm/lego_bridge_showcase/world_preflight.py",
+      "bytes": 958,
+      "sha256": "1469cecc2d9180e634530af412406d4794f7be4eff4685c539ad4b0686a05735"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/benchmark/recovery_benchmark.csv",
+      "bytes": 51438,
+      "sha256": "e4eeb1c0c11b6edf5c3662c4a37a23b33733cb8275b74eb9c7415b39031693e3"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/benchmark/recovery_benchmark_report.md",
+      "bytes": 13924,
+      "sha256": "c350bb1227535894e384c963348d04e802c0af099ecc1bbdf3eadfcd9cdf6653"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/fault_l1.json",
+      "bytes": 670,
+      "sha256": "a2adb058eda408f190cd389267d9c9365fe0153ac3c0ec2944b85083ba0e2d11"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/fault_l2.json",
+      "bytes": 1134,
+      "sha256": "6edb86918345bf84c17f5e576f237e2a4875c1781f8bac58b2f49f51655ea727"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/media_receipt.json",
+      "bytes": 3748,
+      "sha256": "6a174469895224f31baef7178cc2cafc1e20344087f43cb5b0c7b30a23a1e13d"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/offline_gate_receipt.json",
+      "bytes": 32176,
+      "sha256": "88e3b522d7f981d144e86085e8e6d35c8671cd92e98858fd17e1587676570d4c"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/physical_recovery_receipt.json",
+      "bytes": 37747,
+      "sha256": "a67356a0a7b78a456c90cbc977483a13ac75d8d51af7d106871515fda3b6a691"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/plan.json",
+      "bytes": 9444,
+      "sha256": "343553cb1c9d994b966ae940b87556decd538463556fda37cbda533cd8405c32"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/run_offline_gate.py",
+      "bytes": 26450,
+      "sha256": "eba3e174f8c44e5b5a3ddd0dd86fb874d7202cd3c65b1e18dfbba76992478956"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/run_physical_recovery.py",
+      "bytes": 36018,
+      "sha256": "826746a0118986281c960c3bac3db6e86ba0cc59d802e4b0d29b903f347488ce"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/run_recovery_benchmark.py",
+      "bytes": 59165,
+      "sha256": "f53fc0ae5c113c5e13583c65026575bb53986bf861abf36877061c359d0d97f3"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/summary.json",
+      "bytes": 576,
+      "sha256": "369c1ae14f5da269d084246161771a4d281ad101102d3f75c7d0d7d2ab3f417d"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/task_recovery.toml",
+      "bytes": 3947,
+      "sha256": "e3c1436972ccceb71703fdf850d98ddcbc8d5251a9e0eb3686a469c3c6f4ad89"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/validation.json",
+      "bytes": 53119,
+      "sha256": "4aa3385a8927bfb4efd7c86abf6e194957a93bfa6b3d896d7178419f64c89f90"
+    },
+    {
+      "path": "algorithm/recovery_demo_evidence/vendor_unit_test_receipt.json",
+      "bytes": 393,
+      "sha256": "21a39fdfce416e0d6913a4bd9dd779284fa91f672fccfb9680101440e989f84d"
+    },
+    {
+      "path": "ppt_and_media/DualArm_SkillNet_APEX_MR_Presentation.pdf",
+      "bytes": 1891282,
+      "sha256": "abca0d105d7375fb6256eaaca167d0afb585750443cf53c60e2d01645a0bf9aa"
+    },
+    {
+      "path": "ppt_and_media/DualArm_SkillNet_APEX_MR_Presentation.pptx",
+      "bytes": 38579913,
+      "sha256": "8adf7c506d8efb466f389c1d7fb71d5e1317c23e35cd2bde24ff2a64956e6610"
+    },
+    {
+      "path": "ppt_and_media/paper_figures/fig_apex_mr_mode_a.pdf",
+      "bytes": 939160,
+      "sha256": "43c79efeece811c371b31fbb35302dd430c1a39d771201618e520dd44e75073d"
+    },
+    {
+      "path": "ppt_and_media/paper_figures/fig_apex_mr_mode_a.png",
+      "bytes": 1637668,
+      "sha256": "d088017e46d52cb327d7d09e288ffa080d55f8502d4c436086cbe590729d7f13"
+    },
+    {
+      "path": "ppt_and_media/paper_figures/fig_apex_mr_mode_b.pdf",
+      "bytes": 883628,
+      "sha256": "34ccb977e5822aff5ea356b172428329eceabbe95a9792c8493efa54694ab45e"
+    },
+    {
+      "path": "ppt_and_media/paper_figures/fig_apex_mr_mode_b.png",
+      "bytes": 1616267,
+      "sha256": "1daa9acd577b44529ac1825a763fb478eb4bd284dfc2c056cb4faf19703410c5"
+    },
+    {
+      "path": "ppt_and_media/paper_figures/fig_apex_mr_recovery.pdf",
+      "bytes": 796825,
+      "sha256": "ecc733a53892a124808d23503c557a826fe0c1624041d4637b8d26c7b7ca41e0"
+    },
+    {
+      "path": "ppt_and_media/paper_figures/fig_apex_mr_recovery.png",
+      "bytes": 1563230,
+      "sha256": "0437b93359c1c300374db989d86a4d703588fa4ff2595e986067fa55ed8151d0"
+    },
+    {
+      "path": "ppt_and_media/paper_figures/render_apex_mr_arch_figures.py",
+      "bytes": 51325,
+      "sha256": "5d4b84b2821b8df39a71ca0bf5bf4b3897a179ff0ebe9e1753959daa5f6489d2"
+    },
+    {
+      "path": "ppt_and_media/ppt_scripts/build_ppt.py",
+      "bytes": 42488,
+      "sha256": "d5e1b6b0b7d75b8b9118816a56db5a5c5c6ce7fbda5ef513ea6ae42b906869ef"
+    },
+    {
+      "path": "ppt_and_media/ppt_scripts/render_ppt_assets.py",
+      "bytes": 24695,
+      "sha256": "e478cd680c8e173fab7f101e82e0960d46d376694d8e71a2b4dd7398b88535e4"
+    },
+    {
+      "path": "ppt_and_media/technical_diagrams/mode_a_apex_mr_diagram.png",
+      "bytes": 302200,
+      "sha256": "8f3cdf1d59f05f41588b29a5b2d56463dac3fe6c86905a21f2d442ca084447a5"
+    },
+    {
+      "path": "ppt_and_media/technical_diagrams/mode_b_apex_mr_diagram.png",
+      "bytes": 309989,
+      "sha256": "e21916bf6a9713c58c637569a5179943e19342b40664c3e2ff48b256bcc065c1"
+    },
+    {
+      "path": "ppt_and_media/technical_diagrams/recovery_apex_mr_diagram.png",
+      "bytes": 338584,
+      "sha256": "7a7b3bc45c92f064b68cdf827aac440045480aacb83102a6766854afdc37d9b4"
+    },
+    {
+      "path": "ppt_and_media/videos/F1_014_parallel_place.mp4",
+      "bytes": 3917809,
+      "sha256": "ccd203fb466a5f58c823e2f1c43b391e5e93d949ebe533ad3b536bf0ed3de8b1"
+    },
+    {
+      "path": "ppt_and_media/videos/F2_014_handover.mp4",
+      "bytes": 3182438,
+      "sha256": "a5adcaf0aedbc1c6373685fa0ca0df856d180b13cf94fc15c849a4b640b29944"
+    },
+    {
+      "path": "ppt_and_media/videos/F3_021_tower.mp4",
+      "bytes": 6059797,
+      "sha256": "5dccaa32b2af0b51dee98a7aaaf991337464c1e1cf84ba512a3b662895332106"
+    },
+    {
+      "path": "ppt_and_media/videos/F4_033_cantilever_support.mp4",
+      "bytes": 5451743,
+      "sha256": "ea1ac8a9e0f6657f79b7726ab520a88e77734c20bb5655d63495c79d8419f48c"
+    },
+    {
+      "path": "ppt_and_media/videos/mode_a_free_reach.mp4",
+      "bytes": 4899547,
+      "sha256": "5a166ab2d47a67723d95f9c113560df03e99b6de1c806885ffda3ce3b21a7a9f"
+    },
+    {
+      "path": "ppt_and_media/videos/mode_b_handovers_closeup.mp4",
+      "bytes": 1995015,
+      "sha256": "cbcade23a259432e5a0e1786226fb36d895ed85d6ee9b8d539c804b19191443c"
+    },
+    {
+      "path": "ppt_and_media/videos/mode_b_strict_zones_handover.mp4",
+      "bytes": 6470748,
+      "sha256": "7c05fcff46675e713b8acdcf8f5cd8c0c362d2010c411ecb14fa4a12cee4cb2a"
+    },
+    {
+      "path": "ppt_and_media/videos/recovery_mode_a_to_b.mp4",
+      "bytes": 5832587,
+      "sha256": "d4bc523640dc1f0ec76971ca9fe66f0a5be3a3122ad9a784da3fbc7177f7f0e1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4502,
+      "sha256": "9ffabe1edcbd08f981f32a138f9a527d527f9579b63bf474d9aadcd8d000c546"
+    }
+  ]
+}

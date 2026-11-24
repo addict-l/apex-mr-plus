@@ -1,0 +1,123 @@
+# Body sizes in metres, mass in kg. Grasp TCP is 6 mm above the top face.
+[type."2x4"]
+size = [0.12, 0.14, 0.076]
+mass = 0.18
+color = [0.80, 0.24, 0.15]
+grasp_offset = [0, 0, 0.044]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.tower_base]
+size = [0.12, 0.14, 0.076]
+mass = 0.18
+color = [0.85, 0.73, 0.52]
+grasp_offset = [0, 0, 0.044]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.tower_middle]
+size = [0.12, 0.14, 0.076]
+mass = 0.18
+color = [0.74, 0.64, 0.44]
+grasp_offset = [0, 0, 0.044]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.tower_top]
+size = [0.12, 0.14, 0.076]
+mass = 0.18
+color = [0.92, 0.79, 0.55]
+grasp_offset = [0, 0, 0.044]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.tower_block]
+size = [0.12, 0.14, 0.076]
+mass = 0.18
+color = [0.85, 0.73, 0.52]
+grasp_offset = [0, 0, 0.044]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.pillar_type]
+size = [0.12, 0.14, 0.076]
+mass = 0.18
+color = [0.85, 0.73, 0.52]
+grasp_offset = [0, 0, 0.044]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.beam_type]
+size = [0.52, 0.16, 0.04]
+mass = 0.45
+color = [0.12, 0.56, 0.37]
+grasp_offset = [0, 0, 0.026]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.counterweight_type]
+size = [0.12, 0.14, 0.076]
+mass = 0.35
+color = [0.26, 0.33, 0.43]
+grasp_offset = [0, 0, 0.044]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.temporary_type1]
+size = [0.12, 0.14, 0.038]
+mass = 0.20
+color = [1.0, 0.71, 0.08]
+grasp_offset = [0, 0, 0.025]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.temporary_type2]
+size = [0.12, 0.14, 0.038]
+mass = 0.20
+color = [1.0, 0.62, 0.08]
+grasp_offset = [0, 0, 0.025]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.cap_type]
+size = [0.12, 0.14, 0.076]
+mass = 0.18
+color = [0.25, 0.48, 0.64]
+grasp_offset = [0, 0, 0.044]
+grasp_quaternion = [1, 0, 0, 0]
+
+# Simulation support tier: two layers match two 76 mm pillars.
+[type.temporary_sim_type1]
+size = [0.12, 0.14, 0.076]
+mass = 0.20
+color = [1.0, 0.71, 0.08]
+grasp_offset = [0, 0, 0.044]
+grasp_quaternion = [1, 0, 0, 0]
+
+# Simulation support tier: two layers match two 76 mm pillars.
+[type.temporary_sim_type2]
+size = [0.12, 0.14, 0.076]
+mass = 0.20
+color = [1.0, 0.62, 0.08]
+grasp_offset = [0, 0, 0.044]
+grasp_quaternion = [1, 0, 0, 0]
+
+# Generated one-tier platform; total platform height/mass remain 0.152 m/0.4 kg.
+[type.temporary_gen_single]
+size = [0.12, 0.14, 0.152]
+mass = 0.4
+color = [1.0, 0.67, 0.08]
+grasp_offset = [0, 0, 0.082]
+grasp_quaternion = [1, 0, 0, 0]
+
+# Generated three-tier platform; identifiers retain unambiguous tier bindings.
+[type.temporary_gen_third1]
+size = [0.12, 0.14, 0.050666666666666665]
+mass = 0.13333333333333333
+color = [1.0, 0.71, 0.08]
+grasp_offset = [0, 0, 0.03133333333333333]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.temporary_gen_third2]
+size = [0.12, 0.14, 0.050666666666666665]
+mass = 0.13333333333333333
+color = [1.0, 0.67, 0.08]
+grasp_offset = [0, 0, 0.03133333333333333]
+grasp_quaternion = [1, 0, 0, 0]
+
+[type.temporary_gen_third3]
+size = [0.12, 0.14, 0.050666666666666665]
+mass = 0.13333333333333333
+color = [1.0, 0.62, 0.08]
+grasp_offset = [0, 0, 0.03133333333333333]
+grasp_quaternion = [1, 0, 0, 0]

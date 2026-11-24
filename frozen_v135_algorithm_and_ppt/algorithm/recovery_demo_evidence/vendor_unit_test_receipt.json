@@ -1,0 +1,12 @@
+{
+  "command": "python -B -X utf8 -m unittest discover -s tests -p test_backup_graph_recovery.py -v",
+  "cwd": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\recovery_demo\\vendor_db77489\\dualarm_skillnet",
+  "exit_code": 0,
+  "ran": 4,
+  "result": "OK",
+  "stderr_tail": [
+    "Ran 4 tests in 0.327s",
+    "",
+    "OK"
+  ]
+}

@@ -1,0 +1,972 @@
+{
+  "mode": "mode_b",
+  "status": "solved",
+  "task_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_b\\task.toml",
+  "input_sha256": "811529b9e27a7400f0b9dff63c3115ae16844d1ddb857cf7a09440fd8d1a93a9",
+  "parent": {
+    "fingerprint": "87dd723bcee7ae34d95daa3359ac911c0383555a428546bb6f0cd7f5cac99e61",
+    "path0": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\tpg_broadphase_sim20_a1\\candidate",
+    "modules": {
+      "skillnet": {
+        "file": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\tpg_broadphase_sim20_a1\\candidate\\skillnet\\__init__.py",
+        "sha256": "c3b3d619ddd7fa973fa934ecd1891b44d47d1638bb096f51923c68f0e646abad"
+      },
+      "apexmr.tpg": {
+        "file": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\tpg_broadphase_sim20_a1\\candidate\\apexmr\\tpg.py",
+        "sha256": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd"
+      }
+    }
+  },
+  "actions": [
+    {
+      "id": "a001",
+      "skill": "pick",
+      "kind": "pick",
+      "text": "pick(B, Blue_02, stock_Blue_02)",
+      "part": "Blue_02",
+      "start_s": 0.0,
+      "end_s": 15.358882744,
+      "dependencies": [],
+      "arms": [
+        "B"
+      ],
+      "arm": "B",
+      "source": "stock_Blue_02"
+    },
+    {
+      "id": "a002",
+      "skill": "insert",
+      "kind": "place",
+      "text": "insert(B, Blue_02, seat_Blue_02)",
+      "part": "Blue_02",
+      "start_s": 15.358882744,
+      "end_s": 32.490452155,
+      "dependencies": [
+        "a001"
+      ],
+      "arms": [
+        "B"
+      ],
+      "arm": "B",
+      "slot": "seat_Blue_02"
+    },
+    {
+      "id": "a003",
+      "skill": "pick",
+      "kind": "pick",
+      "text": "pick(B, Blue_01, stock_Blue_01)",
+      "part": "Blue_01",
+      "start_s": 32.490452155,
+      "end_s": 46.83059564,
+      "dependencies": [
+        "a002"
+      ],
+      "arms": [
+        "B"
+      ],
+      "arm": "B",
+      "source": "stock_Blue_01"
+    },
+    {
+      "id": "a004",
+      "skill": "insert",
+      "kind": "place",
+      "text": "insert(B, Blue_01, seat_Blue_01)",
+      "part": "Blue_01",
+      "start_s": 46.83059564,
+      "end_s": 63.335435793,
+      "dependencies": [
+        "a003"
+      ],
+      "arms": [
+        "B"
+      ],
+      "arm": "B",
+      "slot": "seat_Blue_01"
+    },
+    {
+      "id": "a005",
+      "skill": "pick",
+      "kind": "pick",
+      "text": "pick(A, Orange_01, stock_Orange_01)",
+      "part": "Orange_01",
+      "start_s": 46.83059564,
+      "end_s": 62.189478384,
+      "dependencies": [],
+      "arms": [
+        "A"
+      ],
+      "arm": "A",
+      "source": "stock_Orange_01"
+    },
+    {
+      "id": "a006",
+      "skill": "handover",
+      "kind": "handover",
+      "text": "handover(A, B, Orange_01, hand_mid)",
+      "part": "Orange_01",
+      "start_s": 63.335435793,
+      "end_s": 78.631398833,
+      "dependencies": [
+        "a004",
+        "a005"
+      ],
+      "arms": [
+        "A",
+        "B"
+      ],
+      "giver": "A",
+      "taker": "B",
+      "location": "hand_mid"
+    },
+    {
+      "id": "a007",
+      "skill": "insert",
+      "kind": "place",
+      "text": "insert(B, Orange_01, seat_Orange_01)",
+      "part": "Orange_01",
+      "start_s": 78.631398833,
+      "end_s": 97.955176396,
+      "dependencies": [
+        "a004",
+        "a006"
+      ],
+      "arms": [
+        "B"
+      ],
+      "arm": "B",
+      "slot": "seat_Orange_01"
+    },
+    {
+      "id": "a008",
+      "skill": "pick",
+      "kind": "pick",
+      "text": "pick(A, Orange_02, stock_Orange_02)",
+      "part": "Orange_02",
+      "start_s": 78.631398833,
+      "end_s": 96.439193216,
+      "dependencies": [
+        "a006"
+      ],
+      "arms": [
+        "A"
+      ],
+      "arm": "A",
+      "source": "stock_Orange_02"
+    },
+    {
+      "id": "a009",
+      "skill": "handover",
+      "kind": "handover",
+      "text": "handover(A, B, Orange_02, hand_mid)",
+      "part": "Orange_02",
+      "start_s": 97.955176396,
+      "end_s": 112.9814157,
+      "dependencies": [
+        "a007",
+        "a008"
+      ],
+      "arms": [
+        "A",
+        "B"
+      ],
+      "giver": "A",
+      "taker": "B",
+      "location": "hand_mid"
+    },
+    {
+      "id": "a010",
+      "skill": "insert",
+      "kind": "place",
+      "text": "insert(B, Orange_02, seat_Orange_02)",
+      "part": "Orange_02",
+      "start_s": 112.9814157,
+      "end_s": 132.195251663,
+      "dependencies": [
+        "a002",
+        "a009"
+      ],
+      "arms": [
+        "B"
+      ],
+      "arm": "B",
+      "slot": "seat_Orange_02"
+    },
+    {
+      "id": "a011",
+      "skill": "pick",
+      "kind": "pick",
+      "text": "pick(A, Red_02, stock_Red_02)",
+      "part": "Red_02",
+      "start_s": 112.9814157,
+      "end_s": 131.216966278,
+      "dependencies": [
+        "a009"
+      ],
+      "arms": [
+        "A"
+      ],
+      "arm": "A",
+      "source": "stock_Red_02"
+    },
+    {
+      "id": "a012",
+      "skill": "insert",
+      "kind": "place",
+      "text": "insert(A, Red_02, seat_Red_02)",
+      "part": "Red_02",
+      "start_s": 132.195251663,
+      "end_s": 149.382543413,
+      "dependencies": [
+        "a011"
+      ],
+      "arms": [
+        "A"
+      ],
+      "arm": "A",
+      "slot": "seat_Red_02"
+    },
+    {
+      "id": "a013",
+      "skill": "pick",
+      "kind": "pick",
+      "text": "pick(A, Red_01, stock_Red_01)",
+      "part": "Red_01",
+      "start_s": 149.382543413,
+      "end_s": 164.671741133,
+      "dependencies": [
+        "a012"
+      ],
+      "arms": [
+        "A"
+      ],
+      "arm": "A",
+      "source": "stock_Red_01"
+    },
+    {
+      "id": "a014",
+      "skill": "insert",
+      "kind": "place",
+      "text": "insert(A, Red_01, seat_Red_01)",
+      "part": "Red_01",
+      "start_s": 164.671741133,
+      "end_s": 182.06131015,
+      "dependencies": [
+        "a013"
+      ],
+      "arms": [
+        "A"
+      ],
+      "arm": "A",
+      "slot": "seat_Red_01"
+    },
+    {
+      "id": "a015",
+      "skill": "pick",
+      "kind": "pick",
+      "text": "pick(B, Green_02, stock_Green_02)",
+      "part": "Green_02",
+      "start_s": 164.671741133,
+      "end_s": 179.975319083,
+      "dependencies": [
+        "a010"
+      ],
+      "arms": [
+        "B"
+      ],
+      "arm": "B",
+      "source": "stock_Green_02"
+    },
+    {
+      "id": "a016",
+      "skill": "handover",
+      "kind": "handover",
+      "text": "handover(B, A, Green_02, hand_mid)",
+      "part": "Green_02",
+      "start_s": 182.06131015,
+      "end_s": 197.835433454,
+      "dependencies": [
+        "a014",
+        "a015"
+      ],
+      "arms": [
+        "B",
+        "A"
+      ],
+      "giver": "B",
+      "taker": "A",
+      "location": "hand_mid"
+    },
+    {
+      "id": "a017",
+      "skill": "insert",
+      "kind": "place",
+      "text": "insert(A, Green_02, seat_Green_02)",
+      "part": "Green_02",
+      "start_s": 197.835433454,
+      "end_s": 217.049269417,
+      "dependencies": [
+        "a012",
+        "a016"
+      ],
+      "arms": [
+        "A"
+      ],
+      "arm": "A",
+      "slot": "seat_Green_02"
+    },
+    {
+      "id": "a018",
+      "skill": "pick",
+      "kind": "pick",
+      "text": "pick(B, Green_01, stock_Green_01)",
+      "part": "Green_01",
+      "start_s": 197.835433454,
+      "end_s": 216.070984032,
+      "dependencies": [
+        "a016"
+      ],
+      "arms": [
+        "B"
+      ],
+      "arm": "B",
+      "source": "stock_Green_01"
+    },
+    {
+      "id": "a019",
+      "skill": "handover",
+      "kind": "handover",
+      "text": "handover(B, A, Green_01, hand_mid)",
+      "part": "Green_01",
+      "start_s": 217.049269417,
+      "end_s": 232.575664025,
+      "dependencies": [
+        "a017",
+        "a018"
+      ],
+      "arms": [
+        "B",
+        "A"
+      ],
+      "giver": "B",
+      "taker": "A",
+      "location": "hand_mid"
+    },
+    {
+      "id": "a020",
+      "skill": "insert",
+      "kind": "place",
+      "text": "insert(A, Green_01, seat_Green_01)",
+      "part": "Green_01",
+      "start_s": 232.575664025,
+      "end_s": 251.899441588,
+      "dependencies": [
+        "a014",
+        "a019"
+      ],
+      "arms": [
+        "A"
+      ],
+      "arm": "A",
+      "slot": "seat_Green_01"
+    },
+    {
+      "id": "a021",
+      "skill": "pick",
+      "kind": "pick",
+      "text": "pick(B, Bridge_deck_12x4, stock_Bridge_deck_12x4)",
+      "part": "Bridge_deck_12x4",
+      "start_s": 232.575664025,
+      "end_s": 250.841336796,
+      "dependencies": [
+        "a019"
+      ],
+      "arms": [
+        "B"
+      ],
+      "arm": "B",
+      "source": "stock_Bridge_deck_12x4"
+    },
+    {
+      "id": "a022",
+      "skill": "insert",
+      "kind": "place",
+      "text": "insert(B, Bridge_deck_12x4, seat_Bridge_deck_12x4)",
+      "part": "Bridge_deck_12x4",
+      "start_s": 251.899441588,
+      "end_s": 269.164899735,
+      "dependencies": [
+        "a007",
+        "a010",
+        "a017",
+        "a020",
+        "a021"
+      ],
+      "arms": [
+        "B"
+      ],
+      "arm": "B",
+      "slot": "seat_Bridge_deck_12x4"
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": 1,
+        "action": "pick(B, Blue_02, stock_Blue_02)",
+        "start": 0.0,
+        "end": 15.358882744,
+        "arms": [
+          "B"
+        ],
+        "title": "抓取",
+        "purposes": [
+          "为第 2 步提供 held(B, Blue_02)"
+        ]
+      },
+      {
+        "id": 2,
+        "action": "insert(B, Blue_02, seat_Blue_02)",
+        "start": 15.358882744,
+        "end": 32.490452155,
+        "arms": [
+          "B"
+        ],
+        "title": "插装",
+        "purposes": [
+          "为第 10 步提供 filled(seat_Blue_02)",
+          "衔接第 3 步的臂 B 操作",
+          "达成目标 filled(seat_Blue_02)"
+        ]
+      },
+      {
+        "id": 3,
+        "action": "pick(B, Blue_01, stock_Blue_01)",
+        "start": 32.490452155,
+        "end": 46.83059564,
+        "arms": [
+          "B"
+        ],
+        "title": "抓取",
+        "purposes": [
+          "为第 4 步提供 held(B, Blue_01)"
+        ]
+      },
+      {
+        "id": 4,
+        "action": "insert(B, Blue_01, seat_Blue_01)",
+        "start": 46.83059564,
+        "end": 63.335435793,
+        "arms": [
+          "B"
+        ],
+        "title": "插装",
+        "purposes": [
+          "为第 7 步提供 filled(seat_Blue_01)",
+          "衔接第 6 步的臂 B 操作",
+          "达成目标 filled(seat_Blue_01)"
+        ]
+      },
+      {
+        "id": 5,
+        "action": "pick(A, Orange_01, stock_Orange_01)",
+        "start": 46.83059564,
+        "end": 62.189478384,
+        "arms": [
+          "A"
+        ],
+        "title": "抓取",
+        "purposes": [
+          "为第 6 步提供 held(A, Orange_01)"
+        ]
+      },
+      {
+        "id": 6,
+        "action": "handover(A, B, Orange_01, hand_mid)",
+        "start": 63.335435793,
+        "end": 78.631398833,
+        "arms": [
+          "A",
+          "B"
+        ],
+        "title": "交接",
+        "purposes": [
+          "为第 7 步提供 held(B, Orange_01)",
+          "衔接第 8 步的臂 A 操作"
+        ]
+      },
+      {
+        "id": 7,
+        "action": "insert(B, Orange_01, seat_Orange_01)",
+        "start": 78.631398833,
+        "end": 97.955176396,
+        "arms": [
+          "B"
+        ],
+        "title": "插装",
+        "purposes": [
+          "为第 22 步提供 filled(seat_Orange_01)",
+          "衔接第 9 步的臂 B 操作",
+          "达成目标 filled(seat_Orange_01)"
+        ]
+      },
+      {
+        "id": 8,
+        "action": "pick(A, Orange_02, stock_Orange_02)",
+        "start": 78.631398833,
+        "end": 96.439193216,
+        "arms": [
+          "A"
+        ],
+        "title": "抓取",
+        "purposes": [
+          "为第 9 步提供 held(A, Orange_02)"
+        ]
+      },
+      {
+        "id": 9,
+        "action": "handover(A, B, Orange_02, hand_mid)",
+        "start": 97.955176396,
+        "end": 112.9814157,
+        "arms": [
+          "A",
+          "B"
+        ],
+        "title": "交接",
+        "purposes": [
+          "为第 10 步提供 held(B, Orange_02)",
+          "衔接第 11 步的臂 A 操作"
+        ]
+      },
+      {
+        "id": 10,
+        "action": "insert(B, Orange_02, seat_Orange_02)",
+        "start": 112.9814157,
+        "end": 132.195251663,
+        "arms": [
+          "B"
+        ],
+        "title": "插装",
+        "purposes": [
+          "为第 22 步提供 filled(seat_Orange_02)",
+          "衔接第 15 步的臂 B 操作",
+          "达成目标 filled(seat_Orange_02)"
+        ]
+      },
+      {
+        "id": 11,
+        "action": "pick(A, Red_02, stock_Red_02)",
+        "start": 112.9814157,
+        "end": 131.216966278,
+        "arms": [
+          "A"
+        ],
+        "title": "抓取",
+        "purposes": [
+          "为第 12 步提供 held(A, Red_02)"
+        ]
+      },
+      {
+        "id": 12,
+        "action": "insert(A, Red_02, seat_Red_02)",
+        "start": 132.195251663,
+        "end": 149.382543413,
+        "arms": [
+          "A"
+        ],
+        "title": "插装",
+        "purposes": [
+          "为第 17 步提供 filled(seat_Red_02)",
+          "衔接第 13 步的臂 A 操作",
+          "达成目标 filled(seat_Red_02)"
+        ]
+      },
+      {
+        "id": 13,
+        "action": "pick(A, Red_01, stock_Red_01)",
+        "start": 149.382543413,
+        "end": 164.671741133,
+        "arms": [
+          "A"
+        ],
+        "title": "抓取",
+        "purposes": [
+          "为第 14 步提供 held(A, Red_01)"
+        ]
+      },
+      {
+        "id": 14,
+        "action": "insert(A, Red_01, seat_Red_01)",
+        "start": 164.671741133,
+        "end": 182.06131015,
+        "arms": [
+          "A"
+        ],
+        "title": "插装",
+        "purposes": [
+          "为第 20 步提供 filled(seat_Red_01)",
+          "衔接第 16 步的臂 A 操作",
+          "达成目标 filled(seat_Red_01)"
+        ]
+      },
+      {
+        "id": 15,
+        "action": "pick(B, Green_02, stock_Green_02)",
+        "start": 164.671741133,
+        "end": 179.975319083,
+        "arms": [
+          "B"
+        ],
+        "title": "抓取",
+        "purposes": [
+          "为第 16 步提供 held(B, Green_02)"
+        ]
+      },
+      {
+        "id": 16,
+        "action": "handover(B, A, Green_02, hand_mid)",
+        "start": 182.06131015,
+        "end": 197.835433454,
+        "arms": [
+          "B",
+          "A"
+        ],
+        "title": "交接",
+        "purposes": [
+          "为第 17 步提供 held(A, Green_02)",
+          "衔接第 18 步的臂 B 操作"
+        ]
+      },
+      {
+        "id": 17,
+        "action": "insert(A, Green_02, seat_Green_02)",
+        "start": 197.835433454,
+        "end": 217.049269417,
+        "arms": [
+          "A"
+        ],
+        "title": "插装",
+        "purposes": [
+          "为第 22 步提供 filled(seat_Green_02)",
+          "衔接第 19 步的臂 A 操作",
+          "达成目标 filled(seat_Green_02)"
+        ]
+      },
+      {
+        "id": 18,
+        "action": "pick(B, Green_01, stock_Green_01)",
+        "start": 197.835433454,
+        "end": 216.070984032,
+        "arms": [
+          "B"
+        ],
+        "title": "抓取",
+        "purposes": [
+          "为第 19 步提供 held(B, Green_01)"
+        ]
+      },
+      {
+        "id": 19,
+        "action": "handover(B, A, Green_01, hand_mid)",
+        "start": 217.049269417,
+        "end": 232.575664025,
+        "arms": [
+          "B",
+          "A"
+        ],
+        "title": "交接",
+        "purposes": [
+          "为第 20 步提供 held(A, Green_01)",
+          "衔接第 21 步的臂 B 操作"
+        ]
+      },
+      {
+        "id": 20,
+        "action": "insert(A, Green_01, seat_Green_01)",
+        "start": 232.575664025,
+        "end": 251.899441588,
+        "arms": [
+          "A"
+        ],
+        "title": "插装",
+        "purposes": [
+          "为第 22 步提供 filled(seat_Green_01)",
+          "达成目标 free(A)",
+          "达成目标 filled(seat_Green_01)"
+        ]
+      },
+      {
+        "id": 21,
+        "action": "pick(B, Bridge_deck_12x4, stock_Bridge_deck_12x4)",
+        "start": 232.575664025,
+        "end": 250.841336796,
+        "arms": [
+          "B"
+        ],
+        "title": "抓取",
+        "purposes": [
+          "为第 22 步提供 held(B, Bridge_deck_12x4)"
+        ]
+      },
+      {
+        "id": 22,
+        "action": "insert(B, Bridge_deck_12x4, seat_Bridge_deck_12x4)",
+        "start": 251.899441588,
+        "end": 269.164899735,
+        "arms": [
+          "B"
+        ],
+        "title": "插装",
+        "purposes": [
+          "达成目标 free(B)",
+          "达成目标 filled(seat_Bridge_deck_12x4)"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 1,
+        "target": 2,
+        "kind": "causal",
+        "label": "held(B, Blue_02)"
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "kind": "causal",
+        "label": "held(B, Blue_01)"
+      },
+      {
+        "source": 5,
+        "target": 6,
+        "kind": "causal",
+        "label": "held(A, Orange_01)"
+      },
+      {
+        "source": 4,
+        "target": 7,
+        "kind": "causal",
+        "label": "filled(seat_Blue_01)"
+      },
+      {
+        "source": 6,
+        "target": 7,
+        "kind": "causal",
+        "label": "held(B, Orange_01)"
+      },
+      {
+        "source": 8,
+        "target": 9,
+        "kind": "causal",
+        "label": "held(A, Orange_02)"
+      },
+      {
+        "source": 2,
+        "target": 10,
+        "kind": "causal",
+        "label": "filled(seat_Blue_02)"
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "kind": "causal",
+        "label": "held(B, Orange_02)"
+      },
+      {
+        "source": 11,
+        "target": 12,
+        "kind": "causal",
+        "label": "held(A, Red_02)"
+      },
+      {
+        "source": 13,
+        "target": 14,
+        "kind": "causal",
+        "label": "held(A, Red_01)"
+      },
+      {
+        "source": 15,
+        "target": 16,
+        "kind": "causal",
+        "label": "held(B, Green_02)"
+      },
+      {
+        "source": 12,
+        "target": 17,
+        "kind": "causal",
+        "label": "filled(seat_Red_02)"
+      },
+      {
+        "source": 16,
+        "target": 17,
+        "kind": "causal",
+        "label": "held(A, Green_02)"
+      },
+      {
+        "source": 18,
+        "target": 19,
+        "kind": "causal",
+        "label": "held(B, Green_01)"
+      },
+      {
+        "source": 14,
+        "target": 20,
+        "kind": "causal",
+        "label": "filled(seat_Red_01)"
+      },
+      {
+        "source": 19,
+        "target": 20,
+        "kind": "causal",
+        "label": "held(A, Green_01)"
+      },
+      {
+        "source": 20,
+        "target": 22,
+        "kind": "causal",
+        "label": "filled(seat_Green_01)"
+      },
+      {
+        "source": 17,
+        "target": 22,
+        "kind": "causal",
+        "label": "filled(seat_Green_02)"
+      },
+      {
+        "source": 7,
+        "target": 22,
+        "kind": "causal",
+        "label": "filled(seat_Orange_01)"
+      },
+      {
+        "source": 10,
+        "target": 22,
+        "kind": "causal",
+        "label": "filled(seat_Orange_02)"
+      },
+      {
+        "source": 21,
+        "target": 22,
+        "kind": "causal",
+        "label": "held(B, Bridge_deck_12x4)"
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "kind": "arm",
+        "label": "同臂顺序 B"
+      },
+      {
+        "source": 4,
+        "target": 6,
+        "kind": "arm",
+        "label": "同臂顺序 B"
+      },
+      {
+        "source": 6,
+        "target": 8,
+        "kind": "arm",
+        "label": "同臂顺序 A"
+      },
+      {
+        "source": 7,
+        "target": 9,
+        "kind": "arm",
+        "label": "同臂顺序 B"
+      },
+      {
+        "source": 9,
+        "target": 11,
+        "kind": "arm",
+        "label": "同臂顺序 A"
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "kind": "arm",
+        "label": "同臂顺序 A"
+      },
+      {
+        "source": 10,
+        "target": 15,
+        "kind": "arm",
+        "label": "同臂顺序 B"
+      },
+      {
+        "source": 14,
+        "target": 16,
+        "kind": "arm",
+        "label": "同臂顺序 A"
+      },
+      {
+        "source": 16,
+        "target": 18,
+        "kind": "arm",
+        "label": "同臂顺序 B"
+      },
+      {
+        "source": 17,
+        "target": 19,
+        "kind": "arm",
+        "label": "同臂顺序 A"
+      },
+      {
+        "source": 19,
+        "target": 21,
+        "kind": "arm",
+        "label": "同臂顺序 B"
+      }
+    ]
+  },
+  "planner": {
+    "status": "solved",
+    "makespan_s": 269.164899735,
+    "expanded": 884,
+    "generated": 1278,
+    "elapsed_s": 2.4219999997876585,
+    "total_wall_s": 2.4262622999958694,
+    "stages": [
+      {
+        "phase": "incumbent",
+        "weight": 3.0,
+        "status": "solved",
+        "makespan": 269.164899735,
+        "expanded": 73,
+        "generated": 139,
+        "elapsed": 0.21899999980814755,
+        "lower_bound": null,
+        "suboptimality_bound": null,
+        "action_scope": "goal_domain",
+        "allowed_actions": 24,
+        "incumbent_only": true,
+        "time_budget": 7.453499999945052,
+        "expansion_budget": 200000,
+        "non_admissible_ordering": true,
+        "first_solution_seconds": 0.42199999978765845,
+        "first_solution_expanded": 73
+      },
+      {
+        "phase": "reference",
+        "weight": 3.0,
+        "status": "budget",
+        "makespan": null,
+        "expanded": 811,
+        "generated": 1139,
+        "elapsed": 1.3119999999180436,
+        "lower_bound": null,
+        "suboptimality_bound": null,
+        "action_scope": "goal_domain",
+        "allowed_actions": 24,
+        "incumbent_only": true,
+        "time_budget": 1.3119999999180436,
+        "expansion_budget": 20000,
+        "non_admissible_ordering": false,
+        "first_solution_seconds": 0.42199999978765845,
+        "first_solution_expanded": 73
+      }
+    ],
+    "unknown": [],
+    "allowed_ground_actions": 24,
+    "bound_on_allowed_graph": 4.493974545389901
+  }
+}

@@ -1,0 +1,1833 @@
+{
+  "passed": true,
+  "collisions": 0,
+  "unapproved_collisions": 0,
+  "part_positions": {
+    "Orange_01": {
+      "position_error_m": 3.262202729591575e-16,
+      "orientation_error_rad": 2.3034069415080626e-16,
+      "target_bottom_m": [
+        0.04,
+        0.008,
+        0.018000000217556954
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          -5.09374653405505e-17,
+          -3.403532621031084e-17,
+          0.04000000000000008
+        ],
+        [
+          5.0937465340550515e-17,
+          1.0,
+          2.2204460492503126e-16,
+          0.007999999999999726
+        ],
+        [
+          3.403532621031083e-17,
+          -2.2204460492503126e-16,
+          1.0,
+          0.018000000217556794
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Orange_02": {
+      "position_error_m": 2.901078442100823e-13,
+      "orientation_error_rad": 3.100320159851734e-15,
+      "target_bottom_m": [
+        0.04,
+        0.024,
+        0.018000000217556954
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          2.0809894129646636e-15,
+          1.4580893442543295e-15,
+          0.0400000000001576
+        ],
+        [
+          -2.080989412964666e-15,
+          1.0,
+          1.7763568394002485e-15,
+          0.024000000000024432
+        ],
+        [
+          -1.458089344254326e-15,
+          -1.7763568394002516e-15,
+          1.0,
+          0.018000000217314613
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Red_01": {
+      "position_error_m": 4.992177321262201e-16,
+      "orientation_error_rad": 4.525818830096094e-16,
+      "target_bottom_m": [
+        -0.04,
+        0.008,
+        0.0020000002175569534
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          3.1918911957973226e-16,
+          2.4416232924373575e-16,
+          -0.04000000000000026
+        ],
+        [
+          -3.1918911957973236e-16,
+          1.0,
+          2.0816681711721665e-16,
+          0.007999999999999702
+        ],
+        [
+          -2.4416232924373565e-16,
+          -2.0816681711721675e-16,
+          1.0,
+          0.0020000002175566464
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Red_02": {
+      "position_error_m": 3.3090313552212197e-13,
+      "orientation_error_rad": 2.7515229891164814e-15,
+      "target_bottom_m": [
+        -0.04,
+        0.024,
+        0.0020000002175569534
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          -3.8857805861885365e-16,
+          2.331468351713031e-15,
+          -0.04000000000016101
+        ],
+        [
+          3.885780586188569e-16,
+          1.0,
+          -1.4085954624934088e-15,
+          0.02399999999971366
+        ],
+        [
+          -2.3314683517130303e-15,
+          1.4085954624934095e-15,
+          1.0,
+          0.0020000002175171814
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Blue_01": {
+      "position_error_m": 1.1663561354702088e-15,
+      "orientation_error_rad": 5.757191532588119e-16,
+      "target_bottom_m": [
+        0.04,
+        0.008,
+        0.0020000002175569534
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          -4.4408920985006257e-16,
+          1.526556658859591e-16,
+          0.04000000000000107
+        ],
+        [
+          4.440892098500626e-16,
+          1.0,
+          -3.330669073875469e-16,
+          0.00800000000000014
+        ],
+        [
+          -1.5265566588595895e-16,
+          3.33066907387547e-16,
+          1.0,
+          0.0020000002175573992
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Blue_02": {
+      "position_error_m": 2.0198171427159004e-16,
+      "orientation_error_rad": 5.147892387644515e-16,
+      "target_bottom_m": [
+        0.04,
+        0.024,
+        0.0020000002175569534
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          -4.996003610813202e-16,
+          1.1102230246251554e-16,
+          0.03999999999999991
+        ],
+        [
+          4.996003610813202e-16,
+          1.0,
+          5.551115123125789e-17,
+          0.024000000000000066
+        ],
+        [
+          -1.1102230246251557e-16,
+          -5.551115123125784e-17,
+          1.0,
+          0.0020000002175571217
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Green_01": {
+      "position_error_m": 1.6697531234460142e-15,
+      "orientation_error_rad": 2.5533120235190974e-16,
+      "target_bottom_m": [
+        -0.04,
+        0.008,
+        0.018000000217556954
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          2.3491752441019383e-16,
+          1.0003889053492078e-16,
+          -0.04000000000000123
+        ],
+        [
+          -2.3491752441019383e-16,
+          1.0,
+          -1.1750444254602981e-32,
+          0.008000000000000127
+        ],
+        [
+          -1.0003889053492078e-16,
+          -1.1750444254602981e-32,
+          1.0,
+          0.018000000217558078
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Green_02": {
+      "position_error_m": 5.383347549449778e-16,
+      "orientation_error_rad": 4.158683961430691e-16,
+      "target_bottom_m": [
+        -0.04,
+        0.024,
+        0.018000000217556954
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          2.1029692992716134e-16,
+          -3.4116824666094535e-16,
+          -0.04000000000000023
+        ],
+        [
+          -2.1029692992716139e-16,
+          1.0,
+          -1.1102230246268346e-16,
+          0.023999999999999536
+        ],
+        [
+          3.4116824666094535e-16,
+          1.110223024626835e-16,
+          1.0,
+          0.0180000002175571
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Bridge_deck_12x4": {
+      "position_error_m": 5.843681395021799e-14,
+      "orientation_error_rad": 1.4010381148703518e-15,
+      "target_bottom_m": [
+        0.0,
+        0.016,
+        0.03400000005587936
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          -6.661338147750938e-16,
+          -1.2168216554799248e-15,
+          1.25030831295166e-14
+        ],
+        [
+          6.66133814775094e-16,
+          1.0,
+          1.962615573354719e-16,
+          0.016000000000055744
+        ],
+        [
+          1.2168216554799248e-15,
+          -1.9626155733547268e-16,
+          1.0,
+          0.03400000005586706
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "maximum_part_position_error_m": 3.3090313552212197e-13,
+  "support_zones": [
+    {
+      "part": "Green_01",
+      "slot": "L2_f",
+      "clearance_m": 2.0000009672276053e-05,
+      "collision": false,
+      "native_pair": [
+        -1,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "part": "Green_02",
+      "slot": "L2_b",
+      "clearance_m": 2.00000096732475e-05,
+      "collision": false,
+      "native_pair": [
+        -1,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "part": "Orange_01",
+      "slot": "R2_f",
+      "clearance_m": 2.0000009673663832e-05,
+      "collision": false,
+      "native_pair": [
+        -1,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "part": "Orange_02",
+      "slot": "R2_b",
+      "clearance_m": 2.000000991583817e-05,
+      "collision": false,
+      "native_pair": [
+        -1,
+        -1
+      ],
+      "passed": true
+    }
+  ],
+  "parking_errors_rad": {
+    "A": 0.0,
+    "B": 0.0
+  },
+  "home_errors_rad": {
+    "A": 0.0,
+    "B": 0.0
+  },
+  "handover_withdrawals": [
+    {
+      "node": "m0040::p0000",
+      "time_s": 13.406022528013905,
+      "part": "Orange_01",
+      "native": {
+        "ok": true,
+        "minimum_distance_m": 0.04100588482545453,
+        "exact": true,
+        "pair": [
+          "Grip_pad",
+          "Rail_cover"
+        ]
+      }
+    },
+    {
+      "node": "m0062::p0000",
+      "time_s": 24.585866881689952,
+      "part": "Orange_02",
+      "native": {
+        "ok": true,
+        "minimum_distance_m": 0.04100588482545427,
+        "exact": true,
+        "pair": [
+          "Grip_pad",
+          "Rail_cover"
+        ]
+      }
+    },
+    {
+      "node": "m0108::p0000",
+      "time_s": 43.26096743536822,
+      "part": "Green_02",
+      "native": {
+        "ok": true,
+        "minimum_distance_m": 0.04100588483061862,
+        "exact": true,
+        "pair": [
+          "Rail_cover",
+          "Grip_pad"
+        ]
+      }
+    },
+    {
+      "node": "m0130::p0000",
+      "time_s": 51.69875359055688,
+      "part": "Green_01",
+      "native": {
+        "ok": true,
+        "minimum_distance_m": 0.04100588482560873,
+        "exact": true,
+        "pair": [
+          "Rail_cover",
+          "Grip_pad"
+        ]
+      }
+    }
+  ],
+  "handover_events": [
+    {
+      "node": "m0037::skill",
+      "time_s": 12.88980016787775,
+      "part": "Orange_01",
+      "giver": "A",
+      "receiver": "B",
+      "position_error_m": 8.794016392694058e-17,
+      "orientation_error_rad": 4.0698978335706895e-31,
+      "kind": "handover_atomic",
+      "hand_mid_error_m": 6.944442800368541e-16
+    },
+    {
+      "node": "m0059::skill",
+      "time_s": 24.069644521553794,
+      "part": "Orange_02",
+      "giver": "A",
+      "receiver": "B",
+      "position_error_m": 3.937870922952184e-17,
+      "orientation_error_rad": 1.665334536937735e-16,
+      "kind": "handover_atomic",
+      "hand_mid_error_m": 4.918300529657455e-16
+    },
+    {
+      "node": "m0105::skill",
+      "time_s": 42.73631931889347,
+      "part": "Green_02",
+      "giver": "B",
+      "receiver": "A",
+      "position_error_m": 1.1170649263323963e-16,
+      "orientation_error_rad": 5.551115123130894e-17,
+      "kind": "handover_atomic",
+      "hand_mid_error_m": 4.1074500989600277e-16
+    },
+    {
+      "node": "m0127::skill",
+      "time_s": 51.17410547408225,
+      "part": "Green_01",
+      "giver": "B",
+      "receiver": "A",
+      "position_error_m": 2.7755575615628914e-17,
+      "orientation_error_rad": 5.551115123125625e-17,
+      "kind": "handover_atomic",
+      "hand_mid_error_m": 3.1959204525032486e-14
+    }
+  ],
+  "all_attachment_events": [
+    {
+      "node": "m0005::skill",
+      "time_s": 0.8178216216667749,
+      "part": "Blue_02",
+      "giver": null,
+      "receiver": "B",
+      "position_error_m": 3.878959614448864e-18,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0009::skill",
+      "time_s": 1.4553442455729675,
+      "part": "Blue_02",
+      "giver": "B",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0029::skill",
+      "time_s": 4.508284069343036,
+      "part": "Orange_01",
+      "giver": null,
+      "receiver": "A",
+      "position_error_m": 1.0432887160956926e-16,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0017::skill",
+      "time_s": 5.768932273549768,
+      "part": "Blue_01",
+      "giver": null,
+      "receiver": "B",
+      "position_error_m": 3.878959614448864e-18,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0021::skill",
+      "time_s": 6.264875702672309,
+      "part": "Blue_01",
+      "giver": "B",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0037::skill",
+      "time_s": 12.88980016787775,
+      "part": "Orange_01",
+      "giver": "A",
+      "receiver": "B",
+      "position_error_m": 8.794016392694058e-17,
+      "orientation_error_rad": 4.0698978335706895e-31,
+      "kind": "handover_atomic",
+      "hand_mid_error_m": 6.944442800368541e-16
+    },
+    {
+      "node": "m0043::skill",
+      "time_s": 14.75307140655918,
+      "part": "Orange_01",
+      "giver": "B",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0051::skill",
+      "time_s": 14.902939461904458,
+      "part": "Orange_02",
+      "giver": null,
+      "receiver": "A",
+      "position_error_m": 5.597004042492165e-17,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0059::skill",
+      "time_s": 24.069644521553794,
+      "part": "Orange_02",
+      "giver": "A",
+      "receiver": "B",
+      "position_error_m": 3.937870922952184e-17,
+      "orientation_error_rad": 1.665334536937735e-16,
+      "kind": "handover_atomic",
+      "hand_mid_error_m": 4.918300529657455e-16
+    },
+    {
+      "node": "m0065::skill",
+      "time_s": 25.882740512970415,
+      "part": "Orange_02",
+      "giver": "B",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0073::skill",
+      "time_s": 27.33939885388471,
+      "part": "Red_02",
+      "giver": null,
+      "receiver": "A",
+      "position_error_m": 1.3985787785349405e-17,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0077::skill",
+      "time_s": 31.043901904894394,
+      "part": "Red_02",
+      "giver": "A",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0085::skill",
+      "time_s": 36.79141762044305,
+      "part": "Red_01",
+      "giver": null,
+      "receiver": "A",
+      "position_error_m": 2.7809732887839817e-17,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0089::skill",
+      "time_s": 37.569279736060416,
+      "part": "Red_01",
+      "giver": "A",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0097::skill",
+      "time_s": 38.33183239311095,
+      "part": "Green_02",
+      "giver": null,
+      "receiver": "B",
+      "position_error_m": 2.326405826652337e-16,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0105::skill",
+      "time_s": 42.73631931889347,
+      "part": "Green_02",
+      "giver": "B",
+      "receiver": "A",
+      "position_error_m": 1.1170649263323963e-16,
+      "orientation_error_rad": 5.551115123130894e-17,
+      "kind": "handover_atomic",
+      "hand_mid_error_m": 4.1074500989600277e-16
+    },
+    {
+      "node": "m0111::skill",
+      "time_s": 44.279930322406216,
+      "part": "Green_02",
+      "giver": "A",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0119::skill",
+      "time_s": 44.49091689053759,
+      "part": "Green_01",
+      "giver": null,
+      "receiver": "B",
+      "position_error_m": 5.1019748043878786e-17,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0127::skill",
+      "time_s": 51.17410547408225,
+      "part": "Green_01",
+      "giver": "B",
+      "receiver": "A",
+      "position_error_m": 2.7755575615628914e-17,
+      "orientation_error_rad": 5.551115123125625e-17,
+      "kind": "handover_atomic",
+      "hand_mid_error_m": 3.1959204525032486e-14
+    },
+    {
+      "node": "m0133::skill",
+      "time_s": 52.41232835342597,
+      "part": "Green_01",
+      "giver": "A",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0141::skill",
+      "time_s": 57.3715014490866,
+      "part": "Bridge_deck_12x4",
+      "giver": null,
+      "receiver": "B",
+      "position_error_m": 1.6884817441961978e-16,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0145::skill",
+      "time_s": 57.884608400620955,
+      "part": "Bridge_deck_12x4",
+      "giver": "B",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    }
+  ],
+  "native_samples": 8155,
+  "sweep_clearance": "not_measured",
+  "key_clearances": [
+    {
+      "kind": "neighbor_final_seat",
+      "node": "m0021::skill",
+      "part": "Blue_01",
+      "time_s": 6.264875702672309,
+      "native": {
+        "unfiltered_minimum_distance_m": 0.00016000045835963886,
+        "aabb_separated": 2037,
+        "allowed_collisions": {},
+        "ok": true,
+        "pair_handles": [
+          123,
+          124
+        ],
+        "timing": {
+          "collision_seconds": 0.055000000000063665,
+          "distance_seconds": 1.3810000000000855,
+          "aabb_seconds": 0.014999999999986358
+        },
+        "unfiltered_pair_handles": [
+          123,
+          124
+        ],
+        "coll_queries": 24,
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 104,
+                "wall_clearance_m": 1.999999720832951e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.0071488000566973,
+                "pad_tip_height_from_bottom_m": 0.008699999810010503,
+                "overlap_area_m2": 4.0928561009094206e-05
+              },
+              {
+                "pad": 109,
+                "wall_clearance_m": 1.9999997202604924e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.007148800056700487,
+                "pad_tip_height_from_bottom_m": 0.00869999981001053,
+                "overlap_area_m2": 4.092856100912075e-05
+              }
+            ],
+            "part": "Blue_01",
+            "axis": 0,
+            "side": "B"
+          },
+          {
+            "pads": [
+              {
+                "pad": 58,
+                "wall_clearance_m": 1.9999997208069303e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.005220053314036314,
+                "pad_tip_height_from_bottom_m": 0.003224177821269429,
+                "overlap_area_m2": 5.1545280458483614e-06
+              },
+              {
+                "pad": 63,
+                "wall_clearance_m": 1.999999720288248e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.00522005337143089,
+                "pad_tip_height_from_bottom_m": 0.0032241778212694916,
+                "overlap_area_m2": 5.154528074988311e-06
+              }
+            ],
+            "part": "Orange_01",
+            "axis": 1,
+            "side": "A"
+          }
+        ],
+        "distance_is_lower_bound": false,
+        "clearance_scope": "external_filtered",
+        "unfiltered_distance_is_lower_bound": false,
+        "minimum_distance_m": 0.00016000045835963886,
+        "dist_queries": 40,
+        "tcp": {
+          "B": [
+            1.0,
+            1.0547118733938985e-15,
+            -4.3021142204224846e-16,
+            0.040000000000000806,
+            1.054711873393899e-15,
+            -1.0,
+            5.551115123125781e-16,
+            0.008000000000000606,
+            -4.3021142204224786e-16,
+            -5.551115123125785e-16,
+            -1.0,
+            0.010700000217557681
+          ],
+          "A": [
+            -4.440892098500626e-16,
+            0.4226182617407004,
+            0.9063077870366498,
+            -0.1429999999999999,
+            1.0000000000000002,
+            3.3306690738754696e-16,
+            -5.551115123125783e-17,
+            -0.02400000000000054,
+            -6.106226635438361e-16,
+            0.9063077870366498,
+            -0.4226182617407006,
+            0.059800000217556576
+          ]
+        },
+        "pair": [
+          "/Blue_01 [#123]",
+          "/Blue_02 [#124]"
+        ],
+        "unfiltered_pair": [
+          "/Blue_01 [#123]",
+          "/Blue_02 [#124]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.5,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "geometry_seconds": 1.467999999999961,
+        "aabb_seconds": 0.014999999999986358,
+        "collision_seconds": 0.055000000000063665,
+        "native_seconds": 1.4880000000000564,
+        "distance_seconds": 1.3810000000000855,
+        "state_fk_seconds": 0.0,
+        "face_seconds": 0.019000000000005457,
+        "restore_seconds": 0.00100000000009004
+      }
+    },
+    {
+      "kind": "handover_handshake",
+      "node": "m0037::skill",
+      "part": "Orange_01",
+      "time_s": 12.88980016787775,
+      "native": {
+        "unfiltered_minimum_distance_m": 0.00016000045835963886,
+        "aabb_separated": 2023,
+        "allowed_collisions": {},
+        "ok": true,
+        "pair_handles": [
+          123,
+          124
+        ],
+        "timing": {
+          "collision_seconds": 0.06200000000001182,
+          "distance_seconds": 1.3050000000001774,
+          "aabb_seconds": 0.019999999999868123
+        },
+        "unfiltered_pair_handles": [
+          123,
+          124
+        ],
+        "coll_queries": 38,
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 104,
+                "wall_clearance_m": 1.9999997202726355e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.0015061707603751286,
+                "pad_tip_height_from_bottom_m": 0.012190327987088842,
+                "overlap_area_m2": 1.1342751797044825e-06
+              },
+              {
+                "pad": 109,
+                "wall_clearance_m": 1.999999720914483e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.0015061707603700354,
+                "pad_tip_height_from_bottom_m": 0.01219032798708887,
+                "overlap_area_m2": 1.1342751796968321e-06
+              }
+            ],
+            "part": "Orange_01",
+            "axis": 0,
+            "side": "B"
+          },
+          {
+            "pads": [
+              {
+                "pad": 58,
+                "wall_clearance_m": 1.9999997208555026e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.005220053314034993,
+                "pad_tip_height_from_bottom_m": 0.0032241778212698663,
+                "overlap_area_m2": 5.154528045845773e-06
+              },
+              {
+                "pad": 63,
+                "wall_clearance_m": 1.999999720231002e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.005220053371431117,
+                "pad_tip_height_from_bottom_m": 0.003224177821269901,
+                "overlap_area_m2": 5.1545280749887e-06
+              }
+            ],
+            "part": "Orange_01",
+            "axis": 1,
+            "side": "A"
+          }
+        ],
+        "distance_is_lower_bound": false,
+        "clearance_scope": "external_filtered",
+        "unfiltered_distance_is_lower_bound": false,
+        "minimum_distance_m": 0.00016000045835963886,
+        "dist_queries": 47,
+        "tcp": {
+          "B": [
+            1.0,
+            -2.4033934848786004e-16,
+            -5.802305146913052e-16,
+            3.924269226130153e-16,
+            -5.802305146913052e-16,
+            -0.7071067811865479,
+            -0.7071067811865475,
+            0.14300000000000024,
+            -2.4033934848786004e-16,
+            0.7071067811865475,
+            -0.7071067811865479,
+            0.25219999999999987
+          ],
+          "A": [
+            2.220446049250313e-16,
+            0.4226182617406993,
+            0.90630778703665,
+            -0.007000000000000339,
+            1.0,
+            7.771561172376096e-16,
+            -6.661338147750939e-16,
+            0.13499999999999918,
+            -9.992007221626409e-16,
+            0.90630778703665,
+            -0.4226182617406993,
+            0.2437999999999998
+          ]
+        },
+        "pair": [
+          "/Blue_01 [#123]",
+          "/Blue_02 [#124]"
+        ],
+        "unfiltered_pair": [
+          "/Blue_01 [#123]",
+          "/Blue_02 [#124]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.4219999997876585,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "geometry_seconds": 1.399000000000001,
+        "aabb_seconds": 0.019999999999868123,
+        "collision_seconds": 0.06200000000001182,
+        "native_seconds": 1.41700000000003,
+        "distance_seconds": 1.3050000000001774,
+        "state_fk_seconds": 0.0,
+        "face_seconds": 0.01700000000005275,
+        "restore_seconds": 0.0009999999999763531
+      }
+    },
+    {
+      "kind": "handover_handshake",
+      "node": "m0059::skill",
+      "part": "Orange_02",
+      "time_s": 24.069644521553794,
+      "native": {
+        "unfiltered_minimum_distance_m": 0.00016000045835963886,
+        "aabb_separated": 2023,
+        "allowed_collisions": {},
+        "ok": true,
+        "pair_handles": [
+          123,
+          124
+        ],
+        "timing": {
+          "collision_seconds": 0.07899999999995089,
+          "distance_seconds": 1.2080000000000837,
+          "aabb_seconds": 0.01800000000014279
+        },
+        "unfiltered_pair_handles": [
+          123,
+          124
+        ],
+        "coll_queries": 38,
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 104,
+                "wall_clearance_m": 1.9999997199413033e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.0015061707603786154,
+                "pad_tip_height_from_bottom_m": 0.012190327987088231,
+                "overlap_area_m2": 1.134275179709741e-06
+              },
+              {
+                "pad": 109,
+                "wall_clearance_m": 1.99999972124755e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.0015061707603682764,
+                "pad_tip_height_from_bottom_m": 0.012190327987088245,
+                "overlap_area_m2": 1.1342751796941758e-06
+              }
+            ],
+            "part": "Orange_02",
+            "axis": 0,
+            "side": "B"
+          },
+          {
+            "pads": [
+              {
+                "pad": 58,
+                "wall_clearance_m": 1.999999720602233e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.00522005331403946,
+                "pad_tip_height_from_bottom_m": 0.0032241778212695263,
+                "overlap_area_m2": 5.1545280458544635e-06
+              },
+              {
+                "pad": 63,
+                "wall_clearance_m": 1.9999997205172315e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.005220053371427801,
+                "pad_tip_height_from_bottom_m": 0.003224177821269575,
+                "overlap_area_m2": 5.154528074982371e-06
+              }
+            ],
+            "part": "Orange_02",
+            "axis": 1,
+            "side": "A"
+          }
+        ],
+        "distance_is_lower_bound": false,
+        "clearance_scope": "external_filtered",
+        "unfiltered_distance_is_lower_bound": false,
+        "minimum_distance_m": 0.00016000045835963886,
+        "dist_queries": 48,
+        "tcp": {
+          "B": [
+            1.0,
+            -2.4033934848786004e-16,
+            -5.802305146913052e-16,
+            3.924269226130153e-16,
+            -5.802305146913052e-16,
+            -0.7071067811865479,
+            -0.7071067811865475,
+            0.14300000000000024,
+            -2.4033934848786004e-16,
+            0.7071067811865475,
+            -0.7071067811865479,
+            0.25219999999999987
+          ],
+          "A": [
+            -2.220446049250313e-16,
+            0.42261826174070005,
+            0.9063077870366498,
+            -0.007000000000000284,
+            1.0,
+            6.661338147750939e-16,
+            -4.440892098500626e-16,
+            0.13499999999999965,
+            -8.881784197001252e-16,
+            0.9063077870366498,
+            -0.42261826174070016,
+            0.24380000000000013
+          ]
+        },
+        "pair": [
+          "/Blue_01 [#123]",
+          "/Blue_02 [#124]"
+        ],
+        "unfiltered_pair": [
+          "/Blue_01 [#123]",
+          "/Blue_02 [#124]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.343000000109896,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "geometry_seconds": 1.322999999999979,
+        "aabb_seconds": 0.01800000000014279,
+        "collision_seconds": 0.07899999999995089,
+        "native_seconds": 1.344000000000051,
+        "distance_seconds": 1.2080000000000837,
+        "state_fk_seconds": 0.00100000000009004,
+        "face_seconds": 0.019000000000005457,
+        "restore_seconds": 0.0009999999999763531
+      }
+    },
+    {
+      "kind": "neighbor_final_seat",
+      "node": "m0065::skill",
+      "part": "Orange_02",
+      "time_s": 25.882740512970415,
+      "native": {
+        "unfiltered_minimum_distance_m": 0.00016000045835963886,
+        "aabb_separated": 2013,
+        "allowed_collisions": {},
+        "ok": true,
+        "pair_handles": [
+          123,
+          124
+        ],
+        "timing": {
+          "collision_seconds": 0.08700000000033015,
+          "distance_seconds": 1.4249999999999545,
+          "aabb_seconds": 0.025999999999953616
+        },
+        "unfiltered_pair_handles": [
+          123,
+          124
+        ],
+        "coll_queries": 48,
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 104,
+                "wall_clearance_m": 1.9999997199413033e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.0015061707603786119,
+                "pad_tip_height_from_bottom_m": 0.012190327987088204,
+                "overlap_area_m2": 1.134275179709741e-06
+              },
+              {
+                "pad": 109,
+                "wall_clearance_m": 1.9999997211452014e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.0015061707603690883,
+                "pad_tip_height_from_bottom_m": 0.012190327987088231,
+                "overlap_area_m2": 1.1342751796954023e-06
+              }
+            ],
+            "part": "Orange_02",
+            "axis": 0,
+            "side": "B"
+          }
+        ],
+        "distance_is_lower_bound": false,
+        "clearance_scope": "external_filtered",
+        "unfiltered_distance_is_lower_bound": false,
+        "minimum_distance_m": 0.00016000045835963886,
+        "dist_queries": 56,
+        "tcp": {
+          "B": [
+            1.0,
+            -6.807962110745053e-16,
+            -2.9257278572057374e-15,
+            0.04000000000015823,
+            -2.550197625193457e-15,
+            -0.707106781186547,
+            -0.7071067811865486,
+            0.03200000000002502,
+            -1.5874063902796699e-15,
+            0.7071067811865486,
+            -0.707106781186547,
+            0.032200000217314256
+          ],
+          "A": [
+            0.18053591790468404,
+            0.571490198716062,
+            0.800503426050001,
+            -0.05169774082724654,
+            0.9773550621670871,
+            -0.19557246806858486,
+            -0.08079908532856,
+            0.10036162354473212,
+            0.11038054539946157,
+            0.7969632127677153,
+            -0.5938566937336645,
+            0.2357290214595823
+          ]
+        },
+        "pair": [
+          "/Blue_01 [#123]",
+          "/Blue_02 [#124]"
+        ],
+        "unfiltered_pair": [
+          "/Blue_01 [#123]",
+          "/Blue_02 [#124]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.5620000001508743,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "geometry_seconds": 1.5510000000000446,
+        "aabb_seconds": 0.025999999999953616,
+        "collision_seconds": 0.08700000000033015,
+        "native_seconds": 1.55600000000004,
+        "distance_seconds": 1.4249999999999545,
+        "state_fk_seconds": 0.0,
+        "face_seconds": 0.004000000000019099,
+        "restore_seconds": 0.0009999999999763531
+      }
+    },
+    {
+      "kind": "neighbor_final_seat",
+      "node": "m0089::skill",
+      "part": "Red_01",
+      "time_s": 37.569279736060416,
+      "native": {
+        "unfiltered_minimum_distance_m": 0.00016000045807364194,
+        "aabb_separated": 2024,
+        "allowed_collisions": {},
+        "ok": true,
+        "pair_handles": [
+          121,
+          122
+        ],
+        "timing": {
+          "collision_seconds": 0.0809999999999036,
+          "distance_seconds": 1.2439999999996871,
+          "aabb_seconds": 0.02099999999973079
+        },
+        "unfiltered_pair_handles": [
+          121,
+          122
+        ],
+        "coll_queries": 37,
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 58,
+                "wall_clearance_m": 1.9999997205935593e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.007148800056699149,
+                "pad_tip_height_from_bottom_m": 0.008699999810010003,
+                "overlap_area_m2": 4.092856100910824e-05
+              },
+              {
+                "pad": 63,
+                "wall_clearance_m": 1.999999720482537e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.007148800056699673,
+                "pad_tip_height_from_bottom_m": 0.0086999998100101,
+                "overlap_area_m2": 4.0928561009112895e-05
+              }
+            ],
+            "part": "Red_01",
+            "axis": 0,
+            "side": "A"
+          }
+        ],
+        "distance_is_lower_bound": false,
+        "clearance_scope": "external_filtered",
+        "unfiltered_distance_is_lower_bound": false,
+        "minimum_distance_m": 0.00016000045807364194,
+        "dist_queries": 49,
+        "tcp": {
+          "B": [
+            0.2871954496666995,
+            0.455181493908025,
+            -0.8428099318911716,
+            0.10872079058634171,
+            0.944046731438958,
+            -0.28345809544984424,
+            0.1686039055993886,
+            0.022682847358434163,
+            -0.16215592049062677,
+            -0.8440742359103293,
+            -0.5111204767197572,
+            0.07758570290549519
+          ],
+          "A": [
+            1.0,
+            -8.187894806610528e-16,
+            1.2576745200831751e-17,
+            -0.040000000000000285,
+            -8.187894806610528e-16,
+            -1.0,
+            -2.359223927328457e-16,
+            0.007999999999999244,
+            1.2576745200831945e-17,
+            2.359223927328457e-16,
+            -1.0,
+            0.010700000217556571
+          ]
+        },
+        "pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ],
+        "unfiltered_pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.3910000000614673,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "geometry_seconds": 1.3639999999998054,
+        "aabb_seconds": 0.02099999999973079,
+        "collision_seconds": 0.0809999999999036,
+        "native_seconds": 1.3819999999998345,
+        "distance_seconds": 1.2439999999996871,
+        "state_fk_seconds": 0.0009999999999763531,
+        "face_seconds": 0.01700000000005275,
+        "restore_seconds": 0.0
+      }
+    },
+    {
+      "kind": "handover_handshake",
+      "node": "m0105::skill",
+      "part": "Green_02",
+      "time_s": 42.73631931889347,
+      "native": {
+        "unfiltered_minimum_distance_m": 0.00016000045807364194,
+        "aabb_separated": 2022,
+        "allowed_collisions": {},
+        "ok": true,
+        "pair_handles": [
+          121,
+          122
+        ],
+        "timing": {
+          "collision_seconds": 0.0809999999999036,
+          "distance_seconds": 1.3290000000001783,
+          "aabb_seconds": 0.030000000000654836
+        },
+        "unfiltered_pair_handles": [
+          121,
+          122
+        ],
+        "coll_queries": 39,
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 104,
+                "wall_clearance_m": 1.9999997205918246e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.005220053371426446,
+                "pad_tip_height_from_bottom_m": 0.0032241778212697553,
+                "overlap_area_m2": 5.1545280749798625e-06
+              },
+              {
+                "pad": 109,
+                "wall_clearance_m": 1.9999997204929454e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.005220053314040683,
+                "pad_tip_height_from_bottom_m": 0.0032241778212697553,
+                "overlap_area_m2": 5.154528045856679e-06
+              }
+            ],
+            "part": "Green_02",
+            "axis": 1,
+            "side": "B"
+          },
+          {
+            "pads": [
+              {
+                "pad": 58,
+                "wall_clearance_m": 2.0000061674123326e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.0015061707156663398,
+                "pad_tip_height_from_bottom_m": 0.012190327986337054,
+                "overlap_area_m2": 1.1342751123669489e-06
+              },
+              {
+                "pad": 63,
+                "wall_clearance_m": 1.999993267314676e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.001506170817753229,
+                "pad_tip_height_from_bottom_m": 0.012190327986347727,
+                "overlap_area_m2": 1.1342752661269695e-06
+              }
+            ],
+            "part": "Green_02",
+            "axis": 0,
+            "side": "A"
+          }
+        ],
+        "distance_is_lower_bound": false,
+        "clearance_scope": "external_filtered",
+        "unfiltered_distance_is_lower_bound": false,
+        "minimum_distance_m": 0.00016000045807364194,
+        "dist_queries": 54,
+        "tcp": {
+          "B": [
+            0.0,
+            0.422618261740699,
+            -0.9063077870366503,
+            0.007000000000000367,
+            1.0,
+            -2.220446049250313e-16,
+            -1.6653345369377348e-16,
+            0.13499999999999993,
+            -2.7755575615628914e-16,
+            -0.9063077870366503,
+            -0.42261826174069905,
+            0.2438000000000003
+          ],
+          "A": [
+            1.0,
+            1.0578577398508209e-14,
+            8.580070712207206e-13,
+            -6.44591560921126e-12,
+            6.141828021796073e-13,
+            -0.7071067811869782,
+            -0.7071067811861167,
+            0.14299999999441193,
+            5.992224345527628e-13,
+            0.7071067811861167,
+            -0.7071067811869782,
+            0.25219999999925313
+          ]
+        },
+        "pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ],
+        "unfiltered_pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.5,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "geometry_seconds": 1.4680000000000746,
+        "aabb_seconds": 0.030000000000654836,
+        "collision_seconds": 0.0809999999999036,
+        "native_seconds": 1.4829999999999472,
+        "distance_seconds": 1.3290000000001783,
+        "state_fk_seconds": 0.0,
+        "face_seconds": 0.01499999999987267,
+        "restore_seconds": 0.0
+      }
+    },
+    {
+      "kind": "handover_handshake",
+      "node": "m0127::skill",
+      "part": "Green_01",
+      "time_s": 51.17410547408225,
+      "native": {
+        "unfiltered_minimum_distance_m": 0.00016000045807364194,
+        "aabb_separated": 2023,
+        "allowed_collisions": {},
+        "ok": true,
+        "pair_handles": [
+          121,
+          122
+        ],
+        "timing": {
+          "collision_seconds": 0.0860000000002401,
+          "distance_seconds": 1.2449999999994361,
+          "aabb_seconds": 0.02200000000016189
+        },
+        "unfiltered_pair_handles": [
+          121,
+          122
+        ],
+        "coll_queries": 38,
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 104,
+                "wall_clearance_m": 1.9999995645014063e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.005220053373463201,
+                "pad_tip_height_from_bottom_m": 0.0032241778216101358,
+                "overlap_area_m2": 5.154528078848103e-06
+              },
+              {
+                "pad": 109,
+                "wall_clearance_m": 1.999999876576425e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.00522005331153383,
+                "pad_tip_height_from_bottom_m": 0.003224177821610122,
+                "overlap_area_m2": 5.154528041046654e-06
+              }
+            ],
+            "part": "Green_01",
+            "axis": 1,
+            "side": "B"
+          },
+          {
+            "pads": [
+              {
+                "pad": 58,
+                "wall_clearance_m": 1.9999996902844708e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.001506170760620925,
+                "pad_tip_height_from_bottom_m": 0.012190327987078878,
+                "overlap_area_m2": 1.1342751800750357e-06
+              },
+              {
+                "pad": 63,
+                "wall_clearance_m": 1.9999997504481504e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.001506170760147094,
+                "pad_tip_height_from_bottom_m": 0.012190327987078253,
+                "overlap_area_m2": 1.1342751793607566e-06
+              }
+            ],
+            "part": "Green_01",
+            "axis": 0,
+            "side": "A"
+          }
+        ],
+        "distance_is_lower_bound": false,
+        "clearance_scope": "external_filtered",
+        "unfiltered_distance_is_lower_bound": false,
+        "minimum_distance_m": 0.00016000045807364194,
+        "dist_queries": 54,
+        "tcp": {
+          "B": [
+            -2.6645352591003757e-15,
+            0.4226182617406576,
+            -0.9063077870366697,
+            0.007000000000120826,
+            1.0000000000000002,
+            1.2878587085651816e-14,
+            3.3306690738754696e-15,
+            0.13500000000015613,
+            1.3322676295501878e-14,
+            -0.9063077870366697,
+            -0.42261826174065775,
+            0.24380000000035001
+          ],
+          "A": [
+            -1.0,
+            -2.0363275820388588e-16,
+            6.366705952720891e-16,
+            1.1102230246251565e-15,
+            3.062039911012815e-16,
+            0.7071067811865479,
+            0.7071067811865471,
+            0.12699999999999984,
+            -5.941841994966585e-16,
+            0.7071067811865471,
+            -0.7071067811865479,
+            0.25219999999999976
+          ]
+        },
+        "pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ],
+        "unfiltered_pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.3910000000614673,
+        "serialization_seconds": 0.015999999828636646,
+        "log_seconds": 0.0,
+        "geometry_seconds": 1.375,
+        "aabb_seconds": 0.02200000000016189,
+        "collision_seconds": 0.0860000000002401,
+        "native_seconds": 1.3899999999998727,
+        "distance_seconds": 1.2449999999994361,
+        "state_fk_seconds": 0.0,
+        "face_seconds": 0.013999999999896318,
+        "restore_seconds": 0.0009999999999763531
+      }
+    },
+    {
+      "kind": "neighbor_final_seat",
+      "node": "m0133::skill",
+      "part": "Green_01",
+      "time_s": 52.41232835342597,
+      "native": {
+        "unfiltered_minimum_distance_m": 0.00016000045807364194,
+        "aabb_separated": 2022,
+        "allowed_collisions": {},
+        "ok": true,
+        "pair_handles": [
+          121,
+          122
+        ],
+        "timing": {
+          "collision_seconds": 0.11099999999987631,
+          "distance_seconds": 1.289000000000442,
+          "aabb_seconds": 0.028999999999996362
+        },
+        "unfiltered_pair_handles": [
+          121,
+          122
+        ],
+        "coll_queries": 39,
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 58,
+                "wall_clearance_m": 1.9999996902723277e-06,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.0015061707606209632,
+                "pad_tip_height_from_bottom_m": 0.01219032798707885,
+                "overlap_area_m2": 1.1342751800750764e-06
+              },
+              {
+                "pad": 63,
+                "wall_clearance_m": 1.9999997504550893e-06,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.0015061707601469777,
+                "pad_tip_height_from_bottom_m": 0.012190327987078226,
+                "overlap_area_m2": 1.1342751793605804e-06
+              }
+            ],
+            "part": "Green_01",
+            "axis": 0,
+            "side": "A"
+          }
+        ],
+        "distance_is_lower_bound": false,
+        "clearance_scope": "external_filtered",
+        "unfiltered_distance_is_lower_bound": false,
+        "minimum_distance_m": 0.00016000045807364194,
+        "dist_queries": 47,
+        "tcp": {
+          "B": [
+            2.7755575615628914e-15,
+            0.4226182617406931,
+            -0.906307787036653,
+            0.06700000000009015,
+            1.0000000000000002,
+            2.9976021664879227e-15,
+            4.6629367034256575e-15,
+            0.13500000000015608,
+            4.884981308350689e-15,
+            -0.906307787036653,
+            -0.4226182617406933,
+            0.2788000000003406
+          ],
+          "A": [
+            -1.0000000000000004,
+            -2.3204151194313968e-14,
+            3.244791185733485e-14,
+            -0.04000000000003126,
+            6.536325848487142e-15,
+            0.7071067811865543,
+            0.7071067811865408,
+            -6.938893903907228e-17,
+            -3.935195117084225e-14,
+            0.7071067811865408,
+            -0.7071067811865548,
+            0.03220000021754808
+          ]
+        },
+        "pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ],
+        "unfiltered_pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.452999999979511,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "geometry_seconds": 1.4480000000000928,
+        "aabb_seconds": 0.028999999999996362,
+        "collision_seconds": 0.11099999999987631,
+        "native_seconds": 1.4539999999999509,
+        "distance_seconds": 1.289000000000442,
+        "state_fk_seconds": 0.0,
+        "face_seconds": 0.004999999999881766,
+        "restore_seconds": 0.0009999999999763531
+      }
+    },
+    {
+      "kind": "deck_final_seat",
+      "node": "m0145::skill",
+      "part": "Bridge_deck_12x4",
+      "time_s": 57.884608400620955,
+      "native": {
+        "unfiltered_minimum_distance_m": 0.00016000045807364194,
+        "aabb_separated": 2037,
+        "allowed_collisions": [
+          [
+            104,
+            127,
+            "declared_contact"
+          ],
+          [
+            109,
+            127,
+            "declared_contact"
+          ]
+        ],
+        "ok": true,
+        "pair_handles": [
+          121,
+          122
+        ],
+        "timing": {
+          "collision_seconds": 0.09100000000012187,
+          "distance_seconds": 0.5750000000000455,
+          "aabb_seconds": 0.013999999999896318
+        },
+        "unfiltered_pair_handles": [
+          121,
+          122
+        ],
+        "coll_queries": 24,
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 104,
+                "wall_clearance_m": -1.5110239101612244e-10,
+                "sign": -1,
+                "valid": true,
+                "contact_height_m": 0.0007600009027528228,
+                "pad_tip_height_from_bottom_m": 0.0022999998100550617,
+                "overlap_area_m2": 4.23707076360174e-06
+              },
+              {
+                "pad": 109,
+                "wall_clearance_m": -1.5105603920484434e-10,
+                "sign": 1,
+                "valid": true,
+                "contact_height_m": 0.0007600009024934778,
+                "pad_tip_height_from_bottom_m": 0.002299999810055048,
+                "overlap_area_m2": 4.237070762147754e-06
+              }
+            ],
+            "part": "Bridge_deck_12x4",
+            "axis": 1,
+            "side": "B"
+          }
+        ],
+        "distance_is_lower_bound": false,
+        "clearance_scope": "external_filtered",
+        "unfiltered_distance_is_lower_bound": false,
+        "minimum_distance_m": 0.00016000045807364194,
+        "dist_queries": 31,
+        "tcp": {
+          "B": [
+            -1.1102230246251565e-15,
+            1.0000000000000002,
+            2.6691571797624202e-15,
+            7.778846625673692e-14,
+            1.0000000000000002,
+            7.771561172376096e-16,
+            -4.8672866219197025e-15,
+            0.01600000000007893,
+            -4.867286621919704e-15,
+            2.669157179762416e-15,
+            -1.0000000000000004,
+            0.03630000005591194
+          ],
+          "A": [
+            0.9848077530121944,
+            8.459157121044136e-15,
+            0.17364817766700788,
+            -0.16200000000345074,
+            3.0985250181393804e-15,
+            -1.0000000000000004,
+            3.114173573792508e-14,
+            0.07299999999710081,
+            0.17364817766700788,
+            -3.013056957411002e-14,
+            -0.9848077530121948,
+            0.09999999999225409
+          ]
+        },
+        "pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ],
+        "unfiltered_pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 0.7029999999795109,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "geometry_seconds": 0.6929999999999836,
+        "aabb_seconds": 0.013999999999896318,
+        "collision_seconds": 0.09100000000012187,
+        "native_seconds": 0.7039999999999509,
+        "distance_seconds": 0.5750000000000455,
+        "state_fk_seconds": 0.0,
+        "face_seconds": 0.010999999999967258,
+        "restore_seconds": 0.0
+      }
+    }
+  ],
+  "maximum_time_step_s": 0.04687582848891125,
+  "reference_plan_sha256": "c6075364e63399a30b44ff98e2728f6c4fb6afa9f0f8b2c20a4b7cc5ef59a686",
+  "replay_wall_s": 1031.78199999989,
+  "waiting_pose_collision_check": "passed on sampled synchronous timeline",
+  "scope": "native sampled stopped-scene synchronous validation"
+}

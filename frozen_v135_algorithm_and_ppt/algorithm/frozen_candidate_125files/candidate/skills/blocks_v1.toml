@@ -1,0 +1,145 @@
+version = "blocks-v1"
+
+[[skill]]
+name = "pick"
+title = "抓取"
+stage = "1"
+description = "单臂从某个位置抓起一块积木"
+params = { arm = "arm", block = "block", loc = "loc" }
+pre = ["free(?arm)", "at(?block, ?loc)", "not two_arm_part(?block)"]
+capability = ["reach(?arm, ?loc)", "liftable(?arm, ?block)"]
+add = ["held(?arm, ?block)", "empty(?loc)"]
+delete = ["free(?arm)", "at(?block, ?loc)"]
+occupies = ["?arm"]
+move_to = { "?arm" = "?loc" }
+op_time = 2.0
+structural = false
+primitives = ["approach(?arm, ?loc)", "grasp(?arm, ?block)", "lift(?arm)"]
+
+[[skill]]
+name = "place"
+title = "放置"
+stage = "1"
+description = "将手中的积木放到空位置"
+params = { arm = "arm", block = "block", loc = "loc" }
+pre = ["held(?arm, ?block)", "empty(?loc)", "placeable(?loc)"]
+capability = ["reach(?arm, ?loc)"]
+add = ["at(?block, ?loc)", "free(?arm)"]
+delete = ["held(?arm, ?block)", "empty(?loc)"]
+occupies = ["?arm"]
+move_to = { "?arm" = "?loc" }
+op_time = 2.0
+structural = false
+primitives = ["approach(?arm, ?loc)", "lower(?arm, ?block)", "release(?arm, ?block)"]
+
+[[skill]]
+name = "handover"
+title = "交接"
+stage = "1"
+description = "两只臂在交接点传递积木"
+params = { giver = "arm", taker = "arm", block = "block", loc = "loc" }
+pre = ["held(?giver, ?block)", "free(?taker)", "handover_point(?loc)"]
+capability = ["reach(?giver, ?loc)", "reach(?taker, ?loc)"]
+add = ["held(?taker, ?block)", "free(?giver)"]
+delete = ["held(?giver, ?block)", "free(?taker)"]
+occupies = ["?giver", "?taker"]
+move_to = { "?giver" = "?loc", "?taker" = "?loc" }
+op_time = 3.0
+structural = false
+primitives = ["approach(?giver, ?loc)", "approach(?taker, ?loc)", "grasp(?taker, ?block)", "release(?giver, ?block)"]
+
+[[skill]]
+name = "insert"
+title = "插装"
+stage = "2"
+description = "把手中积木装入已准备好的槽位"
+params = { arm = "arm", block = "block", slot = "slot" }
+pre = ["held(?arm, ?block)", "fits(?block, ?slot)", "not filled(?slot)", "slot_ready(?slot)", "insert_supported(?slot)"]
+capability = ["reach(?arm, ?slot)"]
+add = ["installed(?block, ?slot)", "filled(?slot)", "free(?arm)"]
+delete = ["held(?arm, ?block)"]
+occupies = ["?arm"]
+move_to = { "?arm" = "?slot" }
+op_time = 3.0
+structural = true
+primitives = ["approach(?arm, ?slot)", "align(?arm, ?block, ?slot)", "insert_part(?arm, ?block, ?slot)", "release(?arm, ?block)"]
+
+[[skill]]
+name = "detach"
+title = "拆下"
+stage = "2"
+description = "从上方已清空的槽位拆下积木"
+params = { arm = "arm", block = "block", slot = "slot" }
+pre = ["free(?arm)", "installed(?block, ?slot)", "slot_clear(?slot)"]
+capability = ["reach(?arm, ?slot)", "liftable(?arm, ?block)"]
+add = ["held(?arm, ?block)"]
+delete = ["free(?arm)", "installed(?block, ?slot)", "filled(?slot)"]
+occupies = ["?arm"]
+move_to = { "?arm" = "?slot" }
+op_time = 3.0
+structural = true
+primitives = ["approach(?arm, ?slot)", "grasp(?arm, ?block)", "detach_part(?arm, ?block, ?slot)"]
+
+[[skill]]
+name = "support_on"
+title = "托住"
+stage = "3a"
+description = "让一只空闲臂持续托住指定槽位"
+params = { arm = "arm", slot = "slot" }
+pre = ["free(?arm)", "support_point(?slot)"]
+capability = ["reach(?arm, ?slot)"]
+add = ["supporting(?arm, ?slot)"]
+delete = ["free(?arm)"]
+occupies = ["?arm"]
+move_to = { "?arm" = "?slot" }
+op_time = 2.0
+structural = false
+primitives = ["approach(?arm, ?slot)", "support(?arm, ?slot)"]
+
+[[skill]]
+name = "support_off"
+title = "松开"
+stage = "3a"
+description = "结束对槽位的持续托举"
+params = { arm = "arm", slot = "slot" }
+pre = ["supporting(?arm, ?slot)"]
+capability = []
+add = ["free(?arm)"]
+delete = ["supporting(?arm, ?slot)"]
+occupies = ["?arm"]
+move_to = {}
+op_time = 1.0
+structural = true
+primitives = ["stop_support(?arm, ?slot)"]
+
+[[skill]]
+name = "co_pick"
+title = "共同抓取"
+stage = "3b"
+description = "两只臂共同抓起需要双臂搬运的积木"
+params = { arm1 = "arm", arm2 = "arm", block = "block", loc = "loc" }
+pre = ["arm_pair(?arm1, ?arm2)", "free(?arm1)", "free(?arm2)", "at(?block, ?loc)", "two_arm_part(?block)"]
+capability = ["reach(?arm1, ?loc)", "reach(?arm2, ?loc)"]
+add = ["coheld(?arm1, ?arm2, ?block)", "empty(?loc)"]
+delete = ["free(?arm1)", "free(?arm2)", "at(?block, ?loc)"]
+occupies = ["?arm1", "?arm2"]
+move_to = { "?arm1" = "?loc", "?arm2" = "?loc" }
+op_time = 3.0
+structural = false
+primitives = ["approach(?arm1, ?loc)", "approach(?arm2, ?loc)", "grasp(?arm1, ?block)", "grasp(?arm2, ?block)", "co_lift(?arm1, ?arm2, ?block)"]
+
+[[skill]]
+name = "co_insert"
+title = "共同插装"
+stage = "3b"
+description = "两只臂共同将积木装入槽位"
+params = { arm1 = "arm", arm2 = "arm", block = "block", slot = "slot" }
+pre = ["coheld(?arm1, ?arm2, ?block)", "fits(?block, ?slot)", "not filled(?slot)", "slot_ready(?slot)", "insert_supported(?slot)"]
+capability = ["reach(?arm1, ?slot)", "reach(?arm2, ?slot)"]
+add = ["installed(?block, ?slot)", "filled(?slot)", "free(?arm1)", "free(?arm2)"]
+delete = ["coheld(?arm1, ?arm2, ?block)"]
+occupies = ["?arm1", "?arm2"]
+move_to = { "?arm1" = "?slot", "?arm2" = "?slot" }
+op_time = 4.0
+structural = true
+primitives = ["approach(?arm1, ?slot)", "approach(?arm2, ?slot)", "co_align(?arm1, ?arm2, ?block, ?slot)", "co_insert_part(?arm1, ?arm2, ?block, ?slot)", "release(?arm1, ?block)", "release(?arm2, ?block)"]

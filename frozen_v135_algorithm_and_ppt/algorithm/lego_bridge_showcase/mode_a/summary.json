@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "mode": "mode_a",
+  "symbolic_steps": 18,
+  "handover_count": 0,
+  "tpg_nodes": 110,
+  "type1": 220,
+  "type2": 31,
+  "serial_reference_s": 44.60490155667037,
+  "parallel_schedule_s": 38.40866022333396,
+  "speedup": 1.1613240685123425,
+  "planning_wall_s": 1233.342999999877,
+  "native_rollout_s": 523.4530000002123,
+  "total_stage_wall_s": 1461.469000000041,
+  "final_position_error_m": 1.1322632128533899e-13,
+  "collisions": 0,
+  "proof_paths": {
+    "plan.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\plan.json",
+    "tpg.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\tpg.json",
+    "reference.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\reference.json",
+    "validation.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\validation.json",
+    "replay.json": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\replay.json"
+  },
+  "scene_sha256": "f79e0e2f407b54dbfc7af4ea92bcc2588562c311c9d17636aca9ba6ab8d56372",
+  "park_policy": {
+    "version": "v1-home-outboard-shared-corridor",
+    "home_q": {
+      "B": [
+        -0.8640760050965275,
+        -0.09365816584586506,
+        -2.1706545384297606,
+        -2.3147755791883755,
+        -1.4577987693185657,
+        0.6991698233169474
+      ],
+      "A": [
+        1.9851510471379274,
+        0.39091472648729786,
+        -2.646914840676229,
+        0.8452292038518716,
+        1.5008286113461704,
+        0.4087421612790094
+      ]
+    },
+    "outboard_park_q": {
+      "A": [
+        0.5888876455424639,
+        0.6527141142864472,
+        -2.646914840676229,
+        0.8452292038518716,
+        1.5008286113461704,
+        0.4087421612790094
+      ],
+      "B": [
+        -2.434872331891424,
+        0.6917399975515832,
+        -2.5197203888286266,
+        -2.3147755791883755,
+        -1.4577987693185657,
+        0.6991698233169474
+      ]
+    },
+    "calibration_sha256": "1106a4b3942418b45281c79a2ba064f0ab254b7011715fae5e5da4c0bd8f006c",
+    "deck_direction": 1,
+    "deck_precheck_sha256": "31f104a6dd11c9ca43045a4f9008d7c22e9ef7848d369f3b6632db34c334389f",
+    "deck_binding": [
+      [
+        2.220446049250313e-16,
+        1.0000000000000002,
+        -1.1775693440128344e-16,
+        -1.5626389071599078e-14
+      ],
+      [
+        1.0000000000000002,
+        -4.440892098500626e-16,
+        -7.457939178747933e-16,
+        -2.1788126858268697e-14
+      ],
+      [
+        -7.457939178747933e-16,
+        -1.177569344012832e-16,
+        -1.0,
+        0.0023000000558584532
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "fixture_context": false
+  },
+  "corridor_dag": {
+    "acyclic": true,
+    "verified_type2": [
+      {
+        "source_primitive": "m0024",
+        "target_primitive": "m0026",
+        "source_arm": "A",
+        "target_arm": "B",
+        "kind": "cross_table"
+      },
+      {
+        "source_primitive": "m0024",
+        "target_primitive": "m0031",
+        "source_arm": "A",
+        "target_arm": "B",
+        "kind": "cross_table"
+      },
+      {
+        "source_primitive": "m0036",
+        "target_primitive": "m0038",
+        "source_arm": "B",
+        "target_arm": "A",
+        "kind": "cross_table"
+      },
+      {
+        "source_primitive": "m0036",
+        "target_primitive": "m0043",
+        "source_arm": "B",
+        "target_arm": "A",
+        "kind": "cross_table"
+      },
+      {
+        "source_primitive": "m0048",
+        "target_primitive": "m0050",
+        "source_arm": "A",
+        "target_arm": "B",
+        "kind": "cross_table"
+      },
+      {
+        "source_primitive": "m0060",
+        "target_primitive": "m0062",
+        "source_arm": "B",
+        "target_arm": "A",
+        "kind": "cross_table"
+      },
+      {
+        "source_primitive": "m0072",
+        "target_primitive": "m0079",
+        "source_arm": "A",
+        "target_arm": "B",
+        "kind": "cross_table"
+      },
+      {
+        "source_primitive": "m0084",
+        "target_primitive": "m0091",
+        "source_arm": "B",
+        "target_arm": "A",
+        "kind": "cross_table"
+      },
+      {
+        "source_primitive": "m0096",
+        "target_primitive": "m0098",
+        "source_arm": "A",
+        "target_arm": "B",
+        "kind": "shared_passage"
+      },
+      {
+        "source_primitive": "m0096",
+        "target_primitive": "m0103",
+        "source_arm": "A",
+        "target_arm": "B",
+        "kind": "shared_passage"
+      }
+    ],
+    "directions": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "A"
+      ]
+    ],
+    "waiting_pose_collision_check": "independent synchronous replay required"
+  }
+}

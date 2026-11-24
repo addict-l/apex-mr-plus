@@ -1,0 +1,988 @@
+{
+  "passed": true,
+  "source": {
+    "plan": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\overnight\\v1_bridge_outboard_a3\\previous_attempt\\mode_a\\plan.json",
+    "reference": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\overnight\\v1_bridge_outboard_a3\\previous_attempt\\mode_a\\reference.json",
+    "plan_sha256": "737a6190e57797f47eed919d2d85b324b3424e74cfee7123a866682f4ac0242d",
+    "reference_sha256": "ac4fee69cc48051ac8502fca857de16a110ba3a0a7e09ebbce739030dbad6644",
+    "scene_sha256": "f79e0e2f407b54dbfc7af4ea92bcc2588562c311c9d17636aca9ba6ab8d56372",
+    "physical_source": "actions_committed[a006].native_state",
+    "command_implicit_parents_checked": [
+      "Blue_02",
+      "Red_01",
+      "Red_02"
+    ],
+    "committed_actions": [
+      "a001",
+      "a002",
+      "a003",
+      "a004",
+      "a005",
+      "a006"
+    ]
+  },
+  "scene_sha256": "f79e0e2f407b54dbfc7af4ea92bcc2588562c311c9d17636aca9ba6ab8d56372",
+  "physical_fixture": {
+    "fixture_only": true,
+    "actual_original_pier_meshes": {
+      "Blue_01": {
+        "position_error_m": 0.0,
+        "rotation_error_rad": 0.0
+      },
+      "Blue_02": {
+        "position_error_m": 0.0,
+        "rotation_error_rad": 0.0
+      },
+      "Green_01": {
+        "position_error_m": 0.0,
+        "rotation_error_rad": 0.0
+      },
+      "Green_02": {
+        "position_error_m": 0.0,
+        "rotation_error_rad": 0.0
+      },
+      "Orange_01": {
+        "position_error_m": 0.0,
+        "rotation_error_rad": 0.0
+      },
+      "Orange_02": {
+        "position_error_m": 0.0,
+        "rotation_error_rad": 0.0
+      },
+      "Red_01": {
+        "position_error_m": 0.0,
+        "rotation_error_rad": 0.0
+      },
+      "Red_02": {
+        "position_error_m": 0.0,
+        "rotation_error_rad": 0.0
+      }
+    },
+    "native_static": {
+      "clearance_scope": "not_measured",
+      "ok": true,
+      "minimum_distance_m": "not_measured",
+      "aabb_separated": 1988,
+      "dist_queries": 0,
+      "timing": {
+        "collision_seconds": 4.619,
+        "distance_seconds": 0,
+        "aabb_seconds": 0.017000000000001236
+      },
+      "faces": {},
+      "coll_queries": 73,
+      "tcp": {
+        "A": [
+          0.12898559425178702,
+          -0.9771881435442212,
+          0.16871884480434401,
+          -0.41066929165542543,
+          -0.906930312685393,
+          -0.18505570397907278,
+          -0.3784597658367208,
+          -0.19852340058364523,
+          0.4010487805839696,
+          -0.10420037687748027,
+          -0.9101110685244429,
+          0.16764772416675983
+        ],
+        "B": [
+          -0.09321769407083935,
+          -0.960495011533813,
+          -0.26222088843335123,
+          0.4723648017154852,
+          -0.8756333466085581,
+          -0.04626732841622849,
+          0.4807552148737668,
+          0.3216263787716287,
+          -0.47389524561786045,
+          0.274424246632628,
+          -0.8367285276843992,
+          0.14080703809537304
+        ]
+      },
+      "distance_is_lower_bound": false,
+      "allowed_collisions": {},
+      "pair": null
+    }
+  },
+  "trials": [
+    {
+      "direction": 1,
+      "passed": true,
+      "actions": [
+        {
+          "passed": true,
+          "action": {
+            "id": "a017",
+            "kind": "pick",
+            "part": "Bridge_deck_12x4",
+            "arm": "B",
+            "giver": null,
+            "taker": null,
+            "dependencies": [],
+            "symbolic": {
+              "id": "a017",
+              "skill": "pick",
+              "kind": "pick",
+              "text": "pick(B, Bridge_deck_12x4, stock_Bridge_deck_12x4)",
+              "part": "Bridge_deck_12x4",
+              "start_s": 137.64191252,
+              "end_s": 152.804604426,
+              "dependencies": [
+                "a014"
+              ],
+              "arms": [
+                "B"
+              ],
+              "arm": "B",
+              "source": "stock_Bridge_deck_12x4"
+            }
+          },
+          "new_primitives": [
+            "prepare_open",
+            "approach_pick_free_join",
+            "approach_pick_vertical",
+            "close_pick",
+            "attach_at_pick",
+            "lift_held"
+          ],
+          "native_state": {
+            "q": {
+              "A": [
+                0.5888876455424639,
+                0.6527141142864472,
+                -2.646914840676229,
+                0.8452292038518716,
+                1.5008286113461704,
+                0.4087421612790094
+              ],
+              "B": [
+                -0.8543488814481658,
+                -0.6766757952405258,
+                -1.4673529089152566,
+                -2.568360276228908,
+                -1.5707963267948966,
+                -0.8543488814481661
+              ]
+            },
+            "follower": {
+              "A": 0.003,
+              "B": 0.012920000000000001
+            },
+            "parts": {
+              "Bridge_deck_12x4": {
+                "owner": "B",
+                "pose": [
+                  [
+                    1.0,
+                    -6.661338147750941e-16,
+                    -1.0990647210786423e-15,
+                    -2.1557872199592626e-14
+                  ],
+                  [
+                    6.661338147750935e-16,
+                    1.0,
+                    -5.495323605393219e-16,
+                    -0.09600000000001556
+                  ],
+                  [
+                    1.0990647210786427e-15,
+                    5.495323605393211e-16,
+                    1.0,
+                    0.05400000000002089
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "binding": [
+                  [
+                    2.220446049250313e-16,
+                    1.0000000000000002,
+                    -1.1775693440128344e-16,
+                    -1.5626389071599078e-14
+                  ],
+                  [
+                    1.0000000000000002,
+                    -4.440892098500626e-16,
+                    -7.457939178747933e-16,
+                    -2.1788126858268697e-14
+                  ],
+                  [
+                    -7.457939178747933e-16,
+                    -1.177569344012832e-16,
+                    -1.0,
+                    0.0023000000558584532
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "parent": 110
+              },
+              "Green_01": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.008
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.018000000000000002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Blue_01": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.008
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Orange_02": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.024
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.018000000000000002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Orange_01": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.008
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.018000000000000002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Red_02": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.024
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Blue_02": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.024
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Green_02": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.024
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.018000000000000002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Red_01": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.008
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              }
+            },
+            "jaw": {
+              "A": 0.003,
+              "B": 0.012920000000000001
+            },
+            "allow": [],
+            "measure_distance": true
+          }
+        },
+        {
+          "passed": true,
+          "action": {
+            "id": "a018",
+            "kind": "place",
+            "part": "Bridge_deck_12x4",
+            "arm": "B",
+            "giver": null,
+            "taker": null,
+            "dependencies": [
+              "a017"
+            ],
+            "symbolic": {
+              "id": "a018",
+              "skill": "insert",
+              "kind": "place",
+              "text": "insert(B, Bridge_deck_12x4, seat_Bridge_deck_12x4)",
+              "part": "Bridge_deck_12x4",
+              "start_s": 155.830901218,
+              "end_s": 173.096359365,
+              "dependencies": [
+                "a010",
+                "a012",
+                "a014",
+                "a016",
+                "a017"
+              ],
+              "arms": [
+                "B"
+              ],
+              "arm": "B",
+              "slot": "seat_Bridge_deck_12x4"
+            }
+          },
+          "new_primitives": [
+            "approach_place_free_join",
+            "approach_place_vertical",
+            "detach_at_place",
+            "open_placed",
+            "retreat_open",
+            "post_place_park"
+          ],
+          "native_state": {
+            "q": {
+              "A": [
+                0.5888876455424639,
+                0.6527141142864472,
+                -2.646914840676229,
+                0.8452292038518716,
+                1.5008286113461704,
+                0.4087421612790094
+              ],
+              "B": [
+                -2.434872331891424,
+                0.6917399975515832,
+                -2.5197203888286266,
+                -2.3147755791883755,
+                -1.4577987693185657,
+                0.6991698233169474
+              ]
+            },
+            "follower": {
+              "A": 0.003,
+              "B": 0.017
+            },
+            "parts": {
+              "Bridge_deck_12x4": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    -2.220446049250312e-16,
+                    -3.925231146709436e-16,
+                    1.200474997768367e-14
+                  ],
+                  [
+                    2.2204460492503136e-16,
+                    1.0,
+                    3.925231146709437e-16,
+                    0.016000000000056018
+                  ],
+                  [
+                    3.925231146709435e-16,
+                    -3.925231146709438e-16,
+                    1.0,
+                    0.03399999999998782
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Green_01": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.008
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.018000000000000002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Blue_01": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.008
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Orange_02": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.024
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.018000000000000002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Orange_01": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.008
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.018000000000000002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Red_02": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.024
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Blue_02": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.024
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Green_02": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.024
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.018000000000000002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              },
+              "Red_01": {
+                "parent": 118,
+                "pose": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    -0.04
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.008
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.002
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "owner": null
+              }
+            },
+            "jaw": {
+              "A": 0.003,
+              "B": 0.017
+            },
+            "allow": [],
+            "measure_distance": true
+          }
+        }
+      ],
+      "reference": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\outboard_park_a1\\deck_dir_pos\\reference.json",
+      "selected_binding": [
+        [
+          2.220446049250313e-16,
+          1.0000000000000002,
+          -1.1775693440128344e-16,
+          -1.5626389071599078e-14
+        ],
+        [
+          1.0000000000000002,
+          -4.440892098500626e-16,
+          -7.457939178747933e-16,
+          -2.1788126858268697e-14
+        ],
+        [
+          -7.457939178747933e-16,
+          -1.177569344012832e-16,
+          -1.0,
+          0.0023000000558584532
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "selected_direction": 1,
+      "constant_binding_passed": true,
+      "deck_seat_position_error_m": 5.85710041519146e-14,
+      "deck_seat_orientation_error_rad": 5.978733960281816e-16,
+      "supports": [
+        {
+          "part": "Green_01",
+          "slot": "L2_f",
+          "clearance_m": 2.000000967355281e-05,
+          "collision": false,
+          "native_pair": [
+            -1,
+            -1
+          ],
+          "passed": true
+        },
+        {
+          "part": "Green_02",
+          "slot": "L2_b",
+          "clearance_m": 2.000000967354587e-05,
+          "collision": false,
+          "native_pair": [
+            -1,
+            -1
+          ],
+          "passed": true
+        },
+        {
+          "part": "Orange_01",
+          "slot": "R2_f",
+          "clearance_m": 2.0000009673587504e-05,
+          "collision": false,
+          "native_pair": [
+            -1,
+            -1
+          ],
+          "passed": true
+        },
+        {
+          "part": "Orange_02",
+          "slot": "R2_b",
+          "clearance_m": 2.0000009673580565e-05,
+          "collision": false,
+          "native_pair": [
+            -1,
+            -1
+          ],
+          "passed": true
+        }
+      ],
+      "home_error_rad": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "final_static": {
+        "clearance_scope": "not_measured",
+        "ok": true,
+        "minimum_distance_m": "not_measured",
+        "aabb_separated": 2038,
+        "dist_queries": 0,
+        "timing": {
+          "collision_seconds": 0.10699999999999932,
+          "distance_seconds": 0,
+          "aabb_seconds": 0.016000000000005343
+        },
+        "faces": {},
+        "coll_queries": 23,
+        "tcp": {
+          "A": [
+            0.9848077530121944,
+            8.459157121044136e-15,
+            0.17364817766700788,
+            -0.16200000000345074,
+            3.0985250181393804e-15,
+            -1.0000000000000004,
+            3.114173573792508e-14,
+            0.07299999999710081,
+            0.17364817766700788,
+            -3.013056957411002e-14,
+            -0.9848077530121948,
+            0.09999999999225409
+          ],
+          "B": [
+            0.984807753012208,
+            5.937847131080156e-16,
+            -0.17364817766693036,
+            0.16200000000000028,
+            6.228134068060427e-16,
+            -1.0,
+            1.1268047184492793e-16,
+            0.07299999999999983,
+            -0.17364817766693036,
+            -2.1911901540436076e-16,
+            -0.9848077530122081,
+            0.0999999999999999
+          ]
+        },
+        "distance_is_lower_bound": false,
+        "allowed_collisions": {},
+        "pair": null
+      },
+      "wall_seconds": 59.57800000021234
+    }
+  ],
+  "selection_rule": "first direction that passes entire same-binding native chain, support and fixed-home return",
+  "selected_direction": 1,
+  "selected_binding": [
+    [
+      2.220446049250313e-16,
+      1.0000000000000002,
+      -1.1775693440128344e-16,
+      -1.5626389071599078e-14
+    ],
+    [
+      1.0000000000000002,
+      -4.440892098500626e-16,
+      -7.457939178747933e-16,
+      -2.1788126858268697e-14
+    ],
+    [
+      -7.457939178747933e-16,
+      -1.177569344012832e-16,
+      -1.0,
+      0.0023000000558584532
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "selected_reference": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\outboard_park_a1\\deck_dir_pos\\reference.json",
+  "selected_arm": "B",
+  "restored": true,
+  "wall_seconds": 89.70299999997951
+}

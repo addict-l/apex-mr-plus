@@ -1,0 +1,17 @@
+{
+  "parent_fingerprint": "87dd723bcee7ae34d95daa3359ac911c0383555a428546bb6f0cd7f5cac99e61",
+  "imports": {
+    "skillnet": {
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\tpg_broadphase_sim20_a1\\candidate\\skillnet\\__init__.py",
+      "sha256": "c3b3d619ddd7fa973fa934ecd1891b44d47d1638bb096f51923c68f0e646abad"
+    },
+    "apexmr.tpg": {
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\tpg_broadphase_sim20_a1\\candidate\\apexmr\\tpg.py",
+      "sha256": "37ad8f4d9526da80346cf46007f2f3763b292f1a9a89668f2cd3179aa213e8dd"
+    }
+  },
+  "path0": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\diagnostics\\tpg_broadphase_sim20_a1\\candidate",
+  "plan_sha256": "c6075364e63399a30b44ff98e2728f6c4fb6afa9f0f8b2c20a4b7cc5ef59a686",
+  "plan_input_sha256": "811529b9e27a7400f0b9dff63c3115ae16844d1ddb857cf7a09440fd8d1a93a9",
+  "runner_sha256": "9b6be8e27fe082805c06905a9c99d52ebe1a690143096119f43274011a20c945"
+}

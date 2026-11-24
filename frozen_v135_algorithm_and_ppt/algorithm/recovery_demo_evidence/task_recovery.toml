@@ -1,0 +1,170 @@
+name = "lego_bridge_recovery"
+description = "LEGO bridge joint reach/backup/graph-repair offline gate"
+arms = ["A", "B"]
+fill_all_slots = true
+
+[[arm]]
+id = "A"
+home = [-0.16200000000345074, 0.07299999999710081, 0.09999999999225409]
+speed = 0.25
+
+[[arm]]
+id = "B"
+home = [0.16200000000000028, 0.07299999999999983, 0.0999999999999999]
+speed = 0.25
+
+[[location]]
+id = "stock_Orange_01"
+kind = "stock"
+pos = [-0.136, -0.024, 0.0020000002175569534]
+
+[[location]]
+id = "stock_Orange_02"
+kind = "stock"
+pos = [-0.096, -0.024, 0.0020000002175569534]
+
+[[location]]
+id = "stock_Red_01"
+kind = "stock"
+pos = [-0.136, -0.072, 0.0020000002175569534]
+
+[[location]]
+id = "stock_Red_02"
+kind = "stock"
+pos = [-0.096, -0.072, 0.0020000002175569534]
+
+[[location]]
+id = "stock_Blue_01"
+kind = "stock"
+pos = [0.096, -0.024, 0.0020000002175569534]
+
+[[location]]
+id = "stock_Blue_02"
+kind = "stock"
+pos = [0.136, -0.024, 0.0020000002175569534]
+
+[[location]]
+id = "stock_Green_01"
+kind = "stock"
+pos = [0.096, -0.072, 0.0020000002175569534]
+
+[[location]]
+id = "stock_Green_02"
+kind = "stock"
+pos = [0.136, -0.072, 0.0020000002175569534]
+
+[[location]]
+id = "stock_Bridge_deck_12x4"
+kind = "stock"
+pos = [0.0, -0.096, 0.0020000000558793546]
+
+[[location]]
+id = "hand_mid"
+kind = "handover"
+pos = [0.0, 0.135, 0.238]
+
+[[block]]
+id = "Orange_01"
+type = "part_Orange_01"
+at = "stock_Orange_01"
+
+[[slot]]
+id = "seat_Orange_01"
+type = "part_Orange_01"
+pos = [0.04, 0.008, 0.018000000217556954]
+below = ["seat_Blue_01"]
+
+[[block]]
+id = "Orange_02"
+type = "part_Orange_02"
+at = "stock_Orange_02"
+
+[[slot]]
+id = "seat_Orange_02"
+type = "part_Orange_02"
+pos = [0.04, 0.024, 0.018000000217556954]
+below = ["seat_Blue_02"]
+
+[[block]]
+id = "Red_01"
+type = "part_Red_01"
+at = "stock_Red_01"
+
+[[slot]]
+id = "seat_Red_01"
+type = "part_Red_01"
+pos = [-0.04, 0.008, 0.0020000002175569534]
+below = []
+
+[[block]]
+id = "Red_02"
+type = "part_Red_02"
+at = "stock_Red_02"
+
+[[slot]]
+id = "seat_Red_02"
+type = "part_Red_02"
+pos = [-0.04, 0.024, 0.0020000002175569534]
+below = []
+
+[[block]]
+id = "Blue_01"
+type = "part_Blue_01"
+at = "stock_Blue_01"
+
+[[slot]]
+id = "seat_Blue_01"
+type = "part_Blue_01"
+pos = [0.04, 0.008, 0.0020000002175569534]
+below = []
+
+[[block]]
+id = "Blue_02"
+type = "part_Blue_02"
+at = "stock_Blue_02"
+
+[[slot]]
+id = "seat_Blue_02"
+type = "part_Blue_02"
+pos = [0.04, 0.024, 0.0020000002175569534]
+below = []
+
+[[block]]
+id = "Green_01"
+type = "part_Green_01"
+at = "stock_Green_01"
+
+[[slot]]
+id = "seat_Green_01"
+type = "part_Green_01"
+pos = [-0.04, 0.008, 0.018000000217556954]
+below = ["seat_Red_01"]
+
+[[block]]
+id = "Green_02"
+type = "part_Green_02"
+at = "stock_Green_02"
+
+[[slot]]
+id = "seat_Green_02"
+type = "part_Green_02"
+pos = [-0.04, 0.024, 0.018000000217556954]
+below = ["seat_Red_02"]
+
+[[block]]
+id = "Bridge_deck_12x4"
+type = "part_Bridge_deck_12x4"
+at = "stock_Bridge_deck_12x4"
+
+[[slot]]
+id = "seat_Bridge_deck_12x4"
+type = "part_Bridge_deck_12x4"
+pos = [0.0, 0.016, 0.03400000005587936]
+below = ["seat_Green_01", "seat_Green_02", "seat_Orange_01", "seat_Orange_02"]
+
+[capabilities.reach]
+default = "INVALID"
+valid = { A = ["stock_Orange_01", "stock_Orange_02", "stock_Red_01", "stock_Red_02", "stock_Blue_01", "stock_Blue_02", "stock_Green_01", "stock_Green_02", "seat_Orange_01", "seat_Orange_02", "seat_Red_01", "seat_Red_02", "seat_Blue_01", "seat_Blue_02", "seat_Green_01", "seat_Green_02", "hand_mid"], B = ["stock_Orange_01", "stock_Orange_02", "stock_Red_01", "stock_Red_02", "stock_Blue_01", "stock_Blue_02", "stock_Green_01", "stock_Green_02", "seat_Orange_01", "seat_Orange_02", "seat_Red_01", "seat_Red_02", "seat_Blue_01", "seat_Blue_02", "seat_Green_01", "seat_Green_02", "hand_mid", "stock_Bridge_deck_12x4", "seat_Bridge_deck_12x4"] }
+
+[capabilities.liftable]
+default = "VALID"

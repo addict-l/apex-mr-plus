@@ -1,0 +1,3428 @@
+{
+  "asset_kind": "8 mm pitch, 16 mm custom pier bricks",
+  "pure_kinematics": true,
+  "simulation_stopped": true,
+  "dynamics_enabled": false,
+  "board_top_m": 0.002,
+  "pitch_m": 0.008,
+  "pier_body_height_m": 0.016,
+  "scene": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\assets\\lego_bridge_kinematic_v1.ttt",
+  "scene_sha256": "f79e0e2f407b54dbfc7af4ea92bcc2588562c311c9d17636aca9ba6ab8d56372",
+  "input_sha256": {
+    "01_-_Initial.ttt": "4ea44fe8a90a93eee93896d8f9556d3081154dbea9f9b0191c46a11833667246",
+    "02_-_Completed_bridge.ttt": "58f92dbf6e35a7eb2dae4427f3b6e8618731a1a1656ab650e5179a1a7fabca91"
+  },
+  "workcell": {
+    "handle": 13,
+    "path": "/LEGO_Workcell"
+  },
+  "board": {
+    "handle": 24,
+    "path": "/LEGO_Workcell/Baseplates/Main_plate_48x32"
+  },
+  "arms": {
+    "A": {
+      "root": {
+        "handle": 26,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_A"
+      },
+      "tool": {
+        "handle": 47,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A"
+      },
+      "tcp": {
+        "handle": 64,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/TCP_between_fingertips"
+      },
+      "flange": {
+        "handle": 46,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection"
+      },
+      "mount": {
+        "handle": 71,
+        "path": "/LEGO_Workcell/Robot_arms/Bench_mount_A"
+      },
+      "tcp_tool_pose": [
+        -2.7755575615628914e-17,
+        0.0,
+        0.08870000000000008,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "initial_q": [
+        1.9851510471379274,
+        0.39091472648729786,
+        -2.646914840676229,
+        0.8452292038518716,
+        1.5008286113461704,
+        0.4087421612790094
+      ],
+      "initial_jaw_q_m": 0.003,
+      "joints": [
+        {
+          "handle": 29,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint"
+        },
+        {
+          "handle": 32,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint"
+        },
+        {
+          "handle": 35,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint"
+        },
+        {
+          "handle": 38,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint"
+        },
+        {
+          "handle": 41,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint"
+        },
+        {
+          "handle": 43,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint"
+        }
+      ],
+      "joint_intervals": [
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ],
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ],
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ],
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ],
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ],
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ]
+      ],
+      "jaw_opening": {
+        "handle": 54,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening"
+      },
+      "jaw_follower": {
+        "handle": 59,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower"
+      },
+      "jaw_driver_mode": "opening_with_dependent_follower",
+      "jaw_interval_m": [
+        0.0,
+        0.017
+      ],
+      "jaw_evidence": {
+        "openings": [
+          {
+            "q_m": 0.0,
+            "expected_m": 0.006,
+            "measured_m": 0.0059999999994411095,
+            "error_m": 5.588906074049937e-13,
+            "passed": true
+          },
+          {
+            "q_m": 0.0049,
+            "expected_m": 0.0158,
+            "measured_m": 0.015799999999441167,
+            "error_m": 5.588342288920245e-13,
+            "passed": true
+          },
+          {
+            "q_m": 0.0129,
+            "expected_m": 0.0318,
+            "measured_m": 0.031799999999441095,
+            "error_m": 5.589070872780155e-13,
+            "passed": true
+          },
+          {
+            "q_m": 0.017,
+            "expected_m": 0.04,
+            "measured_m": 0.03999999999944108,
+            "error_m": 5.589209650658233e-13,
+            "passed": true
+          }
+        ],
+        "configuration_count": 37,
+        "unexpected_collisions": [],
+        "rail_surface_contacts": [],
+        "min_bearing_overlap": {
+          "q_m": 0.017,
+          "jaw": "left",
+          "width_m": 0.0060000000000000955,
+          "depth_m": 0.010999999940395355,
+          "plane_mismatch_m": -1.3411025068243987e-10
+        },
+        "bearing_samples": [
+          {
+            "q_m": 0.0,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411027843801548e-10
+          },
+          {
+            "q_m": 0.0,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0005,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0005,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.001,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.001,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0015,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411027843801548e-10
+          },
+          {
+            "q_m": 0.0015,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.002,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411027843801548e-10
+          },
+          {
+            "q_m": 0.002,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.0025,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0025,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.003,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411022292686425e-10
+          },
+          {
+            "q_m": 0.003,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0035,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0035,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.004,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.004,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0045000000000000005,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.341103061935911e-10
+          },
+          {
+            "q_m": 0.0045000000000000005,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.0049,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411027843801548e-10
+          },
+          {
+            "q_m": 0.0049,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.005,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.005,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0055,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0055,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.006,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.006,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.006500000000000001,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411022292686425e-10
+          },
+          {
+            "q_m": 0.006500000000000001,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.007,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.007,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0075,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0075,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.008,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.008,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0085,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411027843801548e-10
+          },
+          {
+            "q_m": 0.0085,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.009000000000000001,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411022292686425e-10
+          },
+          {
+            "q_m": 0.009000000000000001,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0095,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411027843801548e-10
+          },
+          {
+            "q_m": 0.0095,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.01,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.01,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0105,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0105,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.011,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411022292686425e-10
+          },
+          {
+            "q_m": 0.011,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0115,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411022292686425e-10
+          },
+          {
+            "q_m": 0.0115,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.012,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.012,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0125,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411027843801548e-10
+          },
+          {
+            "q_m": 0.0125,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.0129,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0129,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.013000000000000001,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.013000000000000001,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.0135,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0135,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.014,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411022292686425e-10
+          },
+          {
+            "q_m": 0.014,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0145,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0145,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.015,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.015,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0155,
+            "jaw": "left",
+            "width_m": 0.007500000000000069,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0155,
+            "jaw": "right",
+            "width_m": 0.00750000000000034,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.016,
+            "jaw": "left",
+            "width_m": 0.007000000000000096,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.016,
+            "jaw": "right",
+            "width_m": 0.0070000000000003115,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0165,
+            "jaw": "left",
+            "width_m": 0.006500000000000096,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.0165,
+            "jaw": "right",
+            "width_m": 0.006500000000000339,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.017,
+            "jaw": "left",
+            "width_m": 0.0060000000000000955,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411025068243987e-10
+          },
+          {
+            "q_m": 0.017,
+            "jaw": "right",
+            "width_m": 0.006000000000000366,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          }
+        ],
+        "passed": true,
+        "press_tcp_clearance_m": 0.010000000000000078,
+        "sizes": {
+          "Finger": [
+            {
+              "size_m": [
+                0.0045,
+                0.0065,
+                0.01899999938905239
+              ],
+              "min_m": [
+                -0.007650000000000092,
+                -0.003249999999999986,
+                0.06700000030547396
+              ],
+              "max_m": [
+                -0.003150000000000092,
+                0.0032500000000000137,
+                0.08599999969452635
+              ]
+            },
+            {
+              "size_m": [
+                0.0045000000000000005,
+                0.0065,
+                0.01899999938905239
+              ],
+              "min_m": [
+                0.0031499999999998495,
+                -0.00325,
+                0.06700000030547384
+              ],
+              "max_m": [
+                0.00764999999999985,
+                0.00325,
+                0.08599999969452624
+              ]
+            }
+          ],
+          "Grip_pad": [
+            {
+              "size_m": [
+                0.0018500000005587944,
+                0.006,
+                0.00800000037997961
+              ],
+              "min_m": [
+                -0.004850000000279372,
+                -0.003,
+                0.0806999998100103
+              ],
+              "max_m": [
+                -0.0029999999997205777,
+                0.003,
+                0.08870000018998991
+              ]
+            },
+            {
+              "size_m": [
+                0.0018500000005587935,
+                0.006,
+                0.00800000037997961
+              ],
+              "min_m": [
+                0.0029999999997205318,
+                -0.0029999999999999723,
+                0.08069999981001022
+              ],
+              "max_m": [
+                0.004850000000279325,
+                0.003000000000000028,
+                0.08870000018998983
+              ]
+            }
+          ],
+          "Housing": [
+            {
+              "size_m": [
+                0.055999999999999994,
+                0.028999999999999998,
+                0.03500000014901161
+              ],
+              "min_m": [
+                -0.027999999999999997,
+                -0.014499999999999999,
+                0.018999999925494192
+              ],
+              "max_m": [
+                0.027999999999999997,
+                0.014499999999999999,
+                0.054000000074505804
+              ]
+            }
+          ],
+          "Identification_band": [
+            {
+              "size_m": [
+                0.05680000000000001,
+                0.0298,
+                0.0020000000949949026
+              ],
+              "min_m": [
+                -0.028400000000000005,
+                -0.0149,
+                0.03699999995250255
+              ],
+              "max_m": [
+                0.028400000000000005,
+                0.0149,
+                0.03900000004749745
+              ]
+            }
+          ],
+          "Press_stem": [
+            {
+              "size_m": [
+                0.005400000140070915,
+                0.012000000104308128,
+                0.014699999612569806
+              ],
+              "min_m": [
+                -0.0027000000700354576,
+                -0.006000000052154064,
+                0.0620000003874302
+              ],
+              "max_m": [
+                0.0027000000700354576,
+                0.006000000052154064,
+                0.0767
+              ]
+            }
+          ],
+          "Rail_cover": [
+            {
+              "size_m": [
+                0.052,
+                0.028999999999999998,
+                0.00800000037997961
+              ],
+              "min_m": [
+                -0.026,
+                -0.014499999999999999,
+                0.05399999981001019
+              ],
+              "max_m": [
+                0.026,
+                0.014499999999999999,
+                0.0620000001899898
+              ]
+            }
+          ],
+          "Slide": [
+            {
+              "size_m": [
+                0.008,
+                0.010999999940395355,
+                0.004999999888241291
+              ],
+              "min_m": [
+                -0.010999999999999888,
+                -0.005499999970197664,
+                0.06200000005587952
+              ],
+              "max_m": [
+                -0.002999999999999888,
+                0.0054999999701976915,
+                0.06699999994412081
+              ]
+            },
+            {
+              "size_m": [
+                0.008,
+                0.010999999940395355,
+                0.004999999888241291
+              ],
+              "min_m": [
+                0.002999999999999673,
+                -0.005499999970197678,
+                0.062000000055879384
+              ],
+              "max_m": [
+                0.010999999999999673,
+                0.005499999970197678,
+                0.06699999994412068
+              ]
+            }
+          ],
+          "Stud_press_pad": [
+            {
+              "size_m": [
+                0.005400000140070915,
+                0.012000000104308128,
+                0.0020000000949949026
+              ],
+              "min_m": [
+                -0.0027000000700354576,
+                -0.006000000052154064,
+                0.0766999999050051
+              ],
+              "max_m": [
+                0.0027000000700354576,
+                0.006000000052154064,
+                0.0787
+              ]
+            }
+          ]
+        },
+        "pad_bottom_tcp_error_m": 1.8998982942441955e-10
+      },
+      "shapes": [
+        {
+          "handle": 28,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/link1_visible"
+        },
+        {
+          "handle": 31,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/link2_visible"
+        },
+        {
+          "handle": 34,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/link3_visible"
+        },
+        {
+          "handle": 37,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/link4_visible"
+        },
+        {
+          "handle": 40,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/link5_visible"
+        },
+        {
+          "handle": 70,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/link6_visible"
+        },
+        {
+          "handle": 45,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/link7_visible"
+        },
+        {
+          "handle": 48,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Flange_adapter"
+        },
+        {
+          "handle": 49,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Insulation_ring"
+        },
+        {
+          "handle": 50,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[0]"
+        },
+        {
+          "handle": 51,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[1]"
+        },
+        {
+          "handle": 52,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[2]"
+        },
+        {
+          "handle": 53,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[3]"
+        },
+        {
+          "handle": 65,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Housing"
+        },
+        {
+          "handle": 66,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Identification_band"
+        },
+        {
+          "handle": 67,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Rail_cover"
+        },
+        {
+          "handle": 68,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Press_stem"
+        },
+        {
+          "handle": 69,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Stud_press_pad"
+        },
+        {
+          "handle": 56,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening/Finger_carriage/Slide"
+        },
+        {
+          "handle": 57,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening/Finger_carriage/Finger"
+        },
+        {
+          "handle": 58,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening/Finger_carriage/Grip_pad"
+        },
+        {
+          "handle": 61,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower/Finger_carriage/Slide"
+        },
+        {
+          "handle": 62,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower/Finger_carriage/Finger"
+        },
+        {
+          "handle": 63,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower/Finger_carriage/Grip_pad"
+        }
+      ],
+      "arm_shapes": [
+        {
+          "handle": 28,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/link1_visible"
+        },
+        {
+          "handle": 31,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/link2_visible"
+        },
+        {
+          "handle": 34,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/link3_visible"
+        },
+        {
+          "handle": 37,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/link4_visible"
+        },
+        {
+          "handle": 40,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/link5_visible"
+        },
+        {
+          "handle": 70,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/link6_visible"
+        },
+        {
+          "handle": 45,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/link7_visible"
+        }
+      ],
+      "tool_shapes": [
+        {
+          "handle": 48,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Flange_adapter"
+        },
+        {
+          "handle": 49,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Insulation_ring"
+        },
+        {
+          "handle": 50,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[0]"
+        },
+        {
+          "handle": 51,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[1]"
+        },
+        {
+          "handle": 52,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[2]"
+        },
+        {
+          "handle": 53,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[3]"
+        },
+        {
+          "handle": 65,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Housing"
+        },
+        {
+          "handle": 66,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Identification_band"
+        },
+        {
+          "handle": 67,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Rail_cover"
+        },
+        {
+          "handle": 68,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Press_stem"
+        },
+        {
+          "handle": 69,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Stud_press_pad"
+        },
+        {
+          "handle": 56,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening/Finger_carriage/Slide"
+        },
+        {
+          "handle": 57,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening/Finger_carriage/Finger"
+        },
+        {
+          "handle": 58,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening/Finger_carriage/Grip_pad"
+        },
+        {
+          "handle": 61,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower/Finger_carriage/Slide"
+        },
+        {
+          "handle": 62,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower/Finger_carriage/Finger"
+        },
+        {
+          "handle": 63,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower/Finger_carriage/Grip_pad"
+        }
+      ],
+      "all_arm_meshes": [
+        {
+          "group": 0,
+          "handle": 26,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 0,
+          "handle": 28,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/link1_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 1,
+          "handle": 30,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 1,
+          "handle": 31,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/link2_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 2,
+          "handle": 33,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 2,
+          "handle": 34,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/link3_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 3,
+          "handle": 36,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 3,
+          "handle": 37,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/link4_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 4,
+          "handle": 39,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 4,
+          "handle": 40,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/link5_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 5,
+          "handle": 42,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 5,
+          "handle": 70,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/link6_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 6,
+          "handle": 44,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 6,
+          "handle": 45,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/link7_visible",
+          "collision_mesh": true,
+          "special": 1011
+        }
+      ],
+      "arm_shape_groups": {
+        "26": 0,
+        "28": 0,
+        "30": 1,
+        "31": 1,
+        "33": 2,
+        "34": 2,
+        "36": 3,
+        "37": 3,
+        "39": 4,
+        "40": 4,
+        "42": 5,
+        "70": 5,
+        "44": 6,
+        "45": 6
+      },
+      "shape_roles": {
+        "Flange_adapter": [
+          {
+            "handle": 48,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Flange_adapter"
+          }
+        ],
+        "Insulation_ring": [
+          {
+            "handle": 49,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Insulation_ring"
+          }
+        ],
+        "Cover_bolt": [
+          {
+            "handle": 50,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[0]"
+          },
+          {
+            "handle": 51,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[1]"
+          },
+          {
+            "handle": 52,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[2]"
+          },
+          {
+            "handle": 53,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Cover_bolt[3]"
+          }
+        ],
+        "Housing": [
+          {
+            "handle": 65,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Housing"
+          }
+        ],
+        "Identification_band": [
+          {
+            "handle": 66,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Identification_band"
+          }
+        ],
+        "Rail_cover": [
+          {
+            "handle": 67,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Rail_cover"
+          }
+        ],
+        "Press_stem": [
+          {
+            "handle": 68,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Press_stem"
+          }
+        ],
+        "Stud_press_pad": [
+          {
+            "handle": 69,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Stud_press_pad"
+          }
+        ],
+        "Slide": [
+          {
+            "handle": 56,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening/Finger_carriage/Slide"
+          },
+          {
+            "handle": 61,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower/Finger_carriage/Slide"
+          }
+        ],
+        "Finger": [
+          {
+            "handle": 57,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening/Finger_carriage/Finger"
+          },
+          {
+            "handle": 62,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower/Finger_carriage/Finger"
+          }
+        ],
+        "Grip_pad": [
+          {
+            "handle": 58,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening/Finger_carriage/Grip_pad"
+          },
+          {
+            "handle": 63,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower/Finger_carriage/Grip_pad"
+          }
+        ]
+      },
+      "disabled_scripts": [
+        {
+          "handle": 27,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/Script",
+          "enabled_before": true,
+          "enabled": false
+        }
+      ],
+      "source_part_catalog": "8 mm pitch, 16 mm custom pier bricks"
+    },
+    "B": {
+      "root": {
+        "handle": 72,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_B"
+      },
+      "tool": {
+        "handle": 93,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B"
+      },
+      "tcp": {
+        "handle": 110,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/TCP_between_fingertips"
+      },
+      "flange": {
+        "handle": 92,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection"
+      },
+      "mount": {
+        "handle": 117,
+        "path": "/LEGO_Workcell/Robot_arms/Bench_mount_B"
+      },
+      "tcp_tool_pose": [
+        0.0,
+        2.7755575615628914e-17,
+        0.0887,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "initial_q": [
+        -0.8640760050965275,
+        -0.09365816584586506,
+        -2.1706545384297606,
+        -2.3147755791883755,
+        -1.4577987693185657,
+        0.6991698233169474
+      ],
+      "initial_jaw_q_m": 0.0065,
+      "joints": [
+        {
+          "handle": 75,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint"
+        },
+        {
+          "handle": 78,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint"
+        },
+        {
+          "handle": 81,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint"
+        },
+        {
+          "handle": 84,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint"
+        },
+        {
+          "handle": 87,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint"
+        },
+        {
+          "handle": 89,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint"
+        }
+      ],
+      "joint_intervals": [
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ],
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ],
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ],
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ],
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ],
+        [
+          false,
+          [
+            -6.2831854820251465,
+            12.566370964050293
+          ]
+        ]
+      ],
+      "jaw_opening": {
+        "handle": 100,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening"
+      },
+      "jaw_follower": {
+        "handle": 105,
+        "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower"
+      },
+      "jaw_driver_mode": "opening_with_dependent_follower",
+      "jaw_interval_m": [
+        0.0,
+        0.017
+      ],
+      "jaw_evidence": {
+        "openings": [
+          {
+            "q_m": 0.0,
+            "expected_m": 0.006,
+            "measured_m": 0.005999999999441099,
+            "error_m": 5.589010157458496e-13,
+            "passed": true
+          },
+          {
+            "q_m": 0.0049,
+            "expected_m": 0.0158,
+            "measured_m": 0.015799999999441074,
+            "error_m": 5.589279039597272e-13,
+            "passed": true
+          },
+          {
+            "q_m": 0.0129,
+            "expected_m": 0.0318,
+            "measured_m": 0.03179999999944109,
+            "error_m": 5.589140261719194e-13,
+            "passed": true
+          },
+          {
+            "q_m": 0.017,
+            "expected_m": 0.04,
+            "measured_m": 0.039999999999441045,
+            "error_m": 5.589556595353429e-13,
+            "passed": true
+          }
+        ],
+        "configuration_count": 37,
+        "unexpected_collisions": [],
+        "rail_surface_contacts": [],
+        "min_bearing_overlap": {
+          "q_m": 0.017,
+          "jaw": "left",
+          "width_m": 0.0060000000000001025,
+          "depth_m": 0.010999999940395355,
+          "plane_mismatch_m": -1.3411041721589356e-10
+        },
+        "bearing_samples": [
+          {
+            "q_m": 0.0,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0005,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0005,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.001,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.001,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0015,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0015,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.002,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.002,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0025,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0025,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.003,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.003,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0035,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0035,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.004,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.004,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0045000000000000005,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0045000000000000005,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.0049,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0049,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.005,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.005,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0055,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0055,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.006,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.006,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.006500000000000001,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.006500000000000001,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.007,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.007,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0075,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0075,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.008,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.008,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0085,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0085,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.009000000000000001,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.009000000000000001,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.0095,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0095,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.01,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.01,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0105,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0105,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.011,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.011,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0115,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.0115,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.012,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.012,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0125,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0125,
+            "jaw": "right",
+            "width_m": 0.007999999999999998,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0129,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0129,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.013000000000000001,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.013000000000000001,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0135,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0135,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.014,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.014,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0145,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.0145,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.015,
+            "jaw": "left",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.015,
+            "jaw": "right",
+            "width_m": 0.008,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.0155,
+            "jaw": "left",
+            "width_m": 0.007500000000000076,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411044497146918e-10
+          },
+          {
+            "q_m": 0.0155,
+            "jaw": "right",
+            "width_m": 0.007500000000000371,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.016,
+            "jaw": "left",
+            "width_m": 0.007000000000000103,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.016,
+            "jaw": "right",
+            "width_m": 0.007000000000000343,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411038946031795e-10
+          },
+          {
+            "q_m": 0.0165,
+            "jaw": "left",
+            "width_m": 0.006500000000000075,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.0165,
+            "jaw": "right",
+            "width_m": 0.006500000000000342,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411036170474233e-10
+          },
+          {
+            "q_m": 0.017,
+            "jaw": "left",
+            "width_m": 0.0060000000000001025,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          },
+          {
+            "q_m": 0.017,
+            "jaw": "right",
+            "width_m": 0.006000000000000397,
+            "depth_m": 0.010999999940395355,
+            "plane_mismatch_m": -1.3411041721589356e-10
+          }
+        ],
+        "passed": true,
+        "press_tcp_clearance_m": 0.009999999999999995,
+        "sizes": {
+          "Finger": [
+            {
+              "size_m": [
+                0.0045000000000000005,
+                0.0065,
+                0.01899999938905239
+              ],
+              "min_m": [
+                -0.0076500000000000856,
+                -0.00325,
+                0.06700000030547382
+              ],
+              "max_m": [
+                -0.0031500000000000855,
+                0.00325,
+                0.08599999969452621
+              ]
+            },
+            {
+              "size_m": [
+                0.0045000000000000005,
+                0.0065,
+                0.01899999938905239
+              ],
+              "min_m": [
+                0.003150000000000014,
+                -0.00325,
+                0.06700000030547387
+              ],
+              "max_m": [
+                0.007650000000000014,
+                0.00325,
+                0.08599999969452626
+              ]
+            }
+          ],
+          "Grip_pad": [
+            {
+              "size_m": [
+                0.0018500000005587953,
+                0.006,
+                0.00800000037997961
+              ],
+              "min_m": [
+                -0.004850000000279365,
+                -0.003,
+                0.08069999981001016
+              ],
+              "max_m": [
+                -0.00299999999972057,
+                0.003,
+                0.08870000018998977
+              ]
+            },
+            {
+              "size_m": [
+                0.0018500000005587935,
+                0.006,
+                0.00800000037997961
+              ],
+              "min_m": [
+                0.002999999999720529,
+                -0.003,
+                0.08069999981001014
+              ],
+              "max_m": [
+                0.004850000000279323,
+                0.003,
+                0.08870000018998975
+              ]
+            }
+          ],
+          "Housing": [
+            {
+              "size_m": [
+                0.055999999999999994,
+                0.028999999999999998,
+                0.03500000014901161
+              ],
+              "min_m": [
+                -0.027999999999999997,
+                -0.014499999999999999,
+                0.018999999925494192
+              ],
+              "max_m": [
+                0.027999999999999997,
+                0.014499999999999999,
+                0.054000000074505804
+              ]
+            }
+          ],
+          "Identification_band": [
+            {
+              "size_m": [
+                0.05680000000000001,
+                0.0298,
+                0.0020000000949949026
+              ],
+              "min_m": [
+                -0.028400000000000005,
+                -0.0149,
+                0.03699999995250255
+              ],
+              "max_m": [
+                0.028400000000000005,
+                0.0149,
+                0.03900000004749745
+              ]
+            }
+          ],
+          "Press_stem": [
+            {
+              "size_m": [
+                0.005400000140070915,
+                0.012000000104308128,
+                0.014699999612569806
+              ],
+              "min_m": [
+                -0.0027000000700354576,
+                -0.006000000052154064,
+                0.0620000003874302
+              ],
+              "max_m": [
+                0.0027000000700354576,
+                0.006000000052154064,
+                0.0767
+              ]
+            }
+          ],
+          "Rail_cover": [
+            {
+              "size_m": [
+                0.052,
+                0.028999999999999998,
+                0.00800000037997961
+              ],
+              "min_m": [
+                -0.026,
+                -0.014499999999999999,
+                0.05399999981001019
+              ],
+              "max_m": [
+                0.026,
+                0.014499999999999999,
+                0.0620000001899898
+              ]
+            }
+          ],
+          "Slide": [
+            {
+              "size_m": [
+                0.008,
+                0.010999999940395355,
+                0.004999999888241291
+              ],
+              "min_m": [
+                -0.010999999999999881,
+                -0.005499999970197678,
+                0.062000000055879384
+              ],
+              "max_m": [
+                -0.002999999999999882,
+                0.005499999970197678,
+                0.06699999994412068
+              ]
+            },
+            {
+              "size_m": [
+                0.008,
+                0.010999999940395355,
+                0.004999999888241291
+              ],
+              "min_m": [
+                0.0029999999999996713,
+                -0.005499999970197678,
+                0.06200000005587941
+              ],
+              "max_m": [
+                0.010999999999999671,
+                0.005499999970197678,
+                0.0669999999441207
+              ]
+            }
+          ],
+          "Stud_press_pad": [
+            {
+              "size_m": [
+                0.005400000140070915,
+                0.012000000104308128,
+                0.0020000000949949026
+              ],
+              "min_m": [
+                -0.0027000000700354576,
+                -0.006000000052154064,
+                0.0766999999050051
+              ],
+              "max_m": [
+                0.0027000000700354576,
+                0.006000000052154064,
+                0.0787
+              ]
+            }
+          ]
+        },
+        "pad_bottom_tcp_error_m": 1.8998977391326832e-10
+      },
+      "shapes": [
+        {
+          "handle": 74,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/link1_visible"
+        },
+        {
+          "handle": 77,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/link2_visible"
+        },
+        {
+          "handle": 80,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/link3_visible"
+        },
+        {
+          "handle": 83,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/link4_visible"
+        },
+        {
+          "handle": 86,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/link5_visible"
+        },
+        {
+          "handle": 116,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/link6_visible"
+        },
+        {
+          "handle": 91,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/link7_visible"
+        },
+        {
+          "handle": 94,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Flange_adapter"
+        },
+        {
+          "handle": 95,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Insulation_ring"
+        },
+        {
+          "handle": 96,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[0]"
+        },
+        {
+          "handle": 97,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[1]"
+        },
+        {
+          "handle": 98,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[2]"
+        },
+        {
+          "handle": 99,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[3]"
+        },
+        {
+          "handle": 111,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Housing"
+        },
+        {
+          "handle": 112,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Identification_band"
+        },
+        {
+          "handle": 113,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Rail_cover"
+        },
+        {
+          "handle": 114,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Press_stem"
+        },
+        {
+          "handle": 115,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Stud_press_pad"
+        },
+        {
+          "handle": 102,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening/Finger_carriage/Slide"
+        },
+        {
+          "handle": 103,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening/Finger_carriage/Finger"
+        },
+        {
+          "handle": 104,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening/Finger_carriage/Grip_pad"
+        },
+        {
+          "handle": 107,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower/Finger_carriage/Slide"
+        },
+        {
+          "handle": 108,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower/Finger_carriage/Finger"
+        },
+        {
+          "handle": 109,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower/Finger_carriage/Grip_pad"
+        }
+      ],
+      "arm_shapes": [
+        {
+          "handle": 74,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/link1_visible"
+        },
+        {
+          "handle": 77,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/link2_visible"
+        },
+        {
+          "handle": 80,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/link3_visible"
+        },
+        {
+          "handle": 83,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/link4_visible"
+        },
+        {
+          "handle": 86,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/link5_visible"
+        },
+        {
+          "handle": 116,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/link6_visible"
+        },
+        {
+          "handle": 91,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/link7_visible"
+        }
+      ],
+      "tool_shapes": [
+        {
+          "handle": 94,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Flange_adapter"
+        },
+        {
+          "handle": 95,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Insulation_ring"
+        },
+        {
+          "handle": 96,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[0]"
+        },
+        {
+          "handle": 97,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[1]"
+        },
+        {
+          "handle": 98,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[2]"
+        },
+        {
+          "handle": 99,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[3]"
+        },
+        {
+          "handle": 111,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Housing"
+        },
+        {
+          "handle": 112,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Identification_band"
+        },
+        {
+          "handle": 113,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Rail_cover"
+        },
+        {
+          "handle": 114,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Press_stem"
+        },
+        {
+          "handle": 115,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Stud_press_pad"
+        },
+        {
+          "handle": 102,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening/Finger_carriage/Slide"
+        },
+        {
+          "handle": 103,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening/Finger_carriage/Finger"
+        },
+        {
+          "handle": 104,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening/Finger_carriage/Grip_pad"
+        },
+        {
+          "handle": 107,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower/Finger_carriage/Slide"
+        },
+        {
+          "handle": 108,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower/Finger_carriage/Finger"
+        },
+        {
+          "handle": 109,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower/Finger_carriage/Grip_pad"
+        }
+      ],
+      "all_arm_meshes": [
+        {
+          "group": 0,
+          "handle": 72,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 0,
+          "handle": 74,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/link1_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 1,
+          "handle": 76,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 1,
+          "handle": 77,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/link2_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 2,
+          "handle": 79,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 2,
+          "handle": 80,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/link3_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 3,
+          "handle": 82,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 3,
+          "handle": 83,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/link4_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 4,
+          "handle": 85,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 4,
+          "handle": 86,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/link5_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 5,
+          "handle": 88,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 5,
+          "handle": 116,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/link6_visible",
+          "collision_mesh": true,
+          "special": 1011
+        },
+        {
+          "group": 6,
+          "handle": 90,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link",
+          "collision_mesh": false,
+          "special": 0
+        },
+        {
+          "group": 6,
+          "handle": 91,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/link7_visible",
+          "collision_mesh": true,
+          "special": 1011
+        }
+      ],
+      "arm_shape_groups": {
+        "72": 0,
+        "74": 0,
+        "76": 1,
+        "77": 1,
+        "79": 2,
+        "80": 2,
+        "82": 3,
+        "83": 3,
+        "85": 4,
+        "86": 4,
+        "88": 5,
+        "116": 5,
+        "90": 6,
+        "91": 6
+      },
+      "shape_roles": {
+        "Flange_adapter": [
+          {
+            "handle": 94,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Flange_adapter"
+          }
+        ],
+        "Insulation_ring": [
+          {
+            "handle": 95,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Insulation_ring"
+          }
+        ],
+        "Cover_bolt": [
+          {
+            "handle": 96,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[0]"
+          },
+          {
+            "handle": 97,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[1]"
+          },
+          {
+            "handle": 98,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[2]"
+          },
+          {
+            "handle": 99,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Cover_bolt[3]"
+          }
+        ],
+        "Housing": [
+          {
+            "handle": 111,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Housing"
+          }
+        ],
+        "Identification_band": [
+          {
+            "handle": 112,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Identification_band"
+          }
+        ],
+        "Rail_cover": [
+          {
+            "handle": 113,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Rail_cover"
+          }
+        ],
+        "Press_stem": [
+          {
+            "handle": 114,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Press_stem"
+          }
+        ],
+        "Stud_press_pad": [
+          {
+            "handle": 115,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Stud_press_pad"
+          }
+        ],
+        "Slide": [
+          {
+            "handle": 102,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening/Finger_carriage/Slide"
+          },
+          {
+            "handle": 107,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower/Finger_carriage/Slide"
+          }
+        ],
+        "Finger": [
+          {
+            "handle": 103,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening/Finger_carriage/Finger"
+          },
+          {
+            "handle": 108,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower/Finger_carriage/Finger"
+          }
+        ],
+        "Grip_pad": [
+          {
+            "handle": 104,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening/Finger_carriage/Grip_pad"
+          },
+          {
+            "handle": 109,
+            "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower/Finger_carriage/Grip_pad"
+          }
+        ]
+      },
+      "disabled_scripts": [
+        {
+          "handle": 73,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/Script",
+          "enabled_before": true,
+          "enabled": false
+        }
+      ],
+      "source_part_catalog": "8 mm pitch, 16 mm custom pier bricks"
+    }
+  },
+  "parts": {
+    "Orange_01": {
+      "handle": 119,
+      "path": "/LEGO_Workcell/Bridge_kit/Orange_01",
+      "rel": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "mesh_origin_from_design_bottom": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "design_bottom_from_mesh": [
+        -0.0,
+        -0.0,
+        2.1755695335523573e-10
+      ],
+      "initial_bottom_m": [
+        -0.136,
+        -0.024,
+        0.0020000002175569534
+      ],
+      "target_bottom_m": [
+        0.04,
+        0.008,
+        0.018000000217556954
+      ],
+      "initial_mesh_pose": [
+        -0.136,
+        -0.024,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_mesh_pose": [
+        0.04,
+        0.008,
+        0.018,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mesh_sha256": "ac407fb804a9d463f3a46ac1820fb338e107e423ef4f8b312349ea4d521313ca",
+      "bounds_min_m": [
+        -0.14391999977082015,
+        -0.03191999977082014,
+        0.0020000002175569534
+      ],
+      "bounds_max_m": [
+        -0.12808000022917987,
+        -0.01608000022917986,
+        0.019799999782443047
+      ],
+      "mesh_triangle_count": 1252
+    },
+    "Orange_02": {
+      "handle": 120,
+      "path": "/LEGO_Workcell/Bridge_kit/Orange_02",
+      "rel": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "mesh_origin_from_design_bottom": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "design_bottom_from_mesh": [
+        -0.0,
+        -0.0,
+        2.1755695335523573e-10
+      ],
+      "initial_bottom_m": [
+        -0.096,
+        -0.024,
+        0.0020000002175569534
+      ],
+      "target_bottom_m": [
+        0.04,
+        0.024,
+        0.018000000217556954
+      ],
+      "initial_mesh_pose": [
+        -0.096,
+        -0.024,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_mesh_pose": [
+        0.04,
+        0.024,
+        0.018,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mesh_sha256": "ac407fb804a9d463f3a46ac1820fb338e107e423ef4f8b312349ea4d521313ca",
+      "bounds_min_m": [
+        -0.10391999977082014,
+        -0.03191999977082014,
+        0.0020000002175569534
+      ],
+      "bounds_max_m": [
+        -0.08808000022917986,
+        -0.01608000022917986,
+        0.019799999782443047
+      ],
+      "mesh_triangle_count": 1252
+    },
+    "Red_01": {
+      "handle": 121,
+      "path": "/LEGO_Workcell/Bridge_kit/Red_01",
+      "rel": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "mesh_origin_from_design_bottom": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "design_bottom_from_mesh": [
+        -0.0,
+        -0.0,
+        2.1755695335523573e-10
+      ],
+      "initial_bottom_m": [
+        -0.136,
+        -0.072,
+        0.0020000002175569534
+      ],
+      "target_bottom_m": [
+        -0.04,
+        0.008,
+        0.0020000002175569534
+      ],
+      "initial_mesh_pose": [
+        -0.136,
+        -0.072,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_mesh_pose": [
+        -0.04,
+        0.008,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mesh_sha256": "ac407fb804a9d463f3a46ac1820fb338e107e423ef4f8b312349ea4d521313ca",
+      "bounds_min_m": [
+        -0.14391999977082015,
+        -0.07991999977082014,
+        0.0020000002175569534
+      ],
+      "bounds_max_m": [
+        -0.12808000022917987,
+        -0.06408000022917985,
+        0.019799999782443047
+      ],
+      "mesh_triangle_count": 1252
+    },
+    "Red_02": {
+      "handle": 122,
+      "path": "/LEGO_Workcell/Bridge_kit/Red_02",
+      "rel": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "mesh_origin_from_design_bottom": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "design_bottom_from_mesh": [
+        -0.0,
+        -0.0,
+        2.1755695335523573e-10
+      ],
+      "initial_bottom_m": [
+        -0.096,
+        -0.072,
+        0.0020000002175569534
+      ],
+      "target_bottom_m": [
+        -0.04,
+        0.024,
+        0.0020000002175569534
+      ],
+      "initial_mesh_pose": [
+        -0.096,
+        -0.072,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_mesh_pose": [
+        -0.04,
+        0.024,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mesh_sha256": "ac407fb804a9d463f3a46ac1820fb338e107e423ef4f8b312349ea4d521313ca",
+      "bounds_min_m": [
+        -0.10391999977082014,
+        -0.07991999977082014,
+        0.0020000002175569534
+      ],
+      "bounds_max_m": [
+        -0.08808000022917986,
+        -0.06408000022917985,
+        0.019799999782443047
+      ],
+      "mesh_triangle_count": 1252
+    },
+    "Blue_01": {
+      "handle": 123,
+      "path": "/LEGO_Workcell/Bridge_kit/Blue_01",
+      "rel": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "mesh_origin_from_design_bottom": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "design_bottom_from_mesh": [
+        -0.0,
+        -0.0,
+        2.1755695335523573e-10
+      ],
+      "initial_bottom_m": [
+        0.096,
+        -0.024,
+        0.0020000002175569534
+      ],
+      "target_bottom_m": [
+        0.04,
+        0.008,
+        0.0020000002175569534
+      ],
+      "initial_mesh_pose": [
+        0.096,
+        -0.024,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_mesh_pose": [
+        0.04,
+        0.008,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mesh_sha256": "ac407fb804a9d463f3a46ac1820fb338e107e423ef4f8b312349ea4d521313ca",
+      "bounds_min_m": [
+        0.08808000022917986,
+        -0.03191999977082014,
+        0.0020000002175569534
+      ],
+      "bounds_max_m": [
+        0.10391999977082014,
+        -0.01608000022917986,
+        0.019799999782443047
+      ],
+      "mesh_triangle_count": 1252
+    },
+    "Blue_02": {
+      "handle": 124,
+      "path": "/LEGO_Workcell/Bridge_kit/Blue_02",
+      "rel": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "mesh_origin_from_design_bottom": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "design_bottom_from_mesh": [
+        -0.0,
+        -0.0,
+        2.1755695335523573e-10
+      ],
+      "initial_bottom_m": [
+        0.136,
+        -0.024,
+        0.0020000002175569534
+      ],
+      "target_bottom_m": [
+        0.04,
+        0.024,
+        0.0020000002175569534
+      ],
+      "initial_mesh_pose": [
+        0.136,
+        -0.024,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_mesh_pose": [
+        0.04,
+        0.024,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mesh_sha256": "ac407fb804a9d463f3a46ac1820fb338e107e423ef4f8b312349ea4d521313ca",
+      "bounds_min_m": [
+        0.12808000022917987,
+        -0.03191999977082014,
+        0.0020000002175569534
+      ],
+      "bounds_max_m": [
+        0.14391999977082015,
+        -0.01608000022917986,
+        0.019799999782443047
+      ],
+      "mesh_triangle_count": 1252
+    },
+    "Green_01": {
+      "handle": 125,
+      "path": "/LEGO_Workcell/Bridge_kit/Green_01",
+      "rel": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "mesh_origin_from_design_bottom": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "design_bottom_from_mesh": [
+        -0.0,
+        -0.0,
+        2.1755695335523573e-10
+      ],
+      "initial_bottom_m": [
+        0.096,
+        -0.072,
+        0.0020000002175569534
+      ],
+      "target_bottom_m": [
+        -0.04,
+        0.008,
+        0.018000000217556954
+      ],
+      "initial_mesh_pose": [
+        0.096,
+        -0.072,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_mesh_pose": [
+        -0.04,
+        0.008,
+        0.018,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mesh_sha256": "ac407fb804a9d463f3a46ac1820fb338e107e423ef4f8b312349ea4d521313ca",
+      "bounds_min_m": [
+        0.08808000022917986,
+        -0.07991999977082014,
+        0.0020000002175569534
+      ],
+      "bounds_max_m": [
+        0.10391999977082014,
+        -0.06408000022917985,
+        0.019799999782443047
+      ],
+      "mesh_triangle_count": 1252
+    },
+    "Green_02": {
+      "handle": 126,
+      "path": "/LEGO_Workcell/Bridge_kit/Green_02",
+      "rel": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "mesh_origin_from_design_bottom": [
+        0.0,
+        0.0,
+        -2.1755695335523573e-10
+      ],
+      "design_bottom_from_mesh": [
+        -0.0,
+        -0.0,
+        2.1755695335523573e-10
+      ],
+      "initial_bottom_m": [
+        0.136,
+        -0.072,
+        0.0020000002175569534
+      ],
+      "target_bottom_m": [
+        -0.04,
+        0.024,
+        0.018000000217556954
+      ],
+      "initial_mesh_pose": [
+        0.136,
+        -0.072,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_mesh_pose": [
+        -0.04,
+        0.024,
+        0.018,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mesh_sha256": "ac407fb804a9d463f3a46ac1820fb338e107e423ef4f8b312349ea4d521313ca",
+      "bounds_min_m": [
+        0.12808000022917987,
+        -0.07991999977082014,
+        0.0020000002175569534
+      ],
+      "bounds_max_m": [
+        0.14391999977082015,
+        -0.06408000022917985,
+        0.019799999782443047
+      ],
+      "mesh_triangle_count": 1252
+    },
+    "Bridge_deck_12x4": {
+      "handle": 127,
+      "path": "/LEGO_Workcell/Bridge_kit/Bridge_deck_12x4",
+      "rel": [
+        0.0,
+        0.0,
+        -5.5879354528970415e-11
+      ],
+      "mesh_origin_from_design_bottom": [
+        0.0,
+        0.0,
+        -5.5879354528970415e-11
+      ],
+      "design_bottom_from_mesh": [
+        -0.0,
+        -0.0,
+        5.5879354528970415e-11
+      ],
+      "initial_bottom_m": [
+        0.0,
+        -0.096,
+        0.0020000000558793546
+      ],
+      "target_bottom_m": [
+        0.0,
+        0.016,
+        0.03400000005587936
+      ],
+      "initial_mesh_pose": [
+        0.0,
+        -0.096,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "target_mesh_pose": [
+        0.0,
+        0.016,
+        0.034,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mesh_sha256": "cfb72909fd430c8a537d438565751f1f0a4372fc7e36720599e971d9949b8bb9",
+      "bounds_min_m": [
+        -0.047919999808073044,
+        -0.11192000015079975,
+        0.0020000000558793546
+      ],
+      "bounds_max_m": [
+        0.047919999808073044,
+        -0.08007999984920025,
+        0.006999999944120646
+      ],
+      "mesh_triangle_count": 17468
+    }
+  },
+  "environment_shapes": [
+    {
+      "handle": 15,
+      "path": "/LEGO_Workcell/Workbench/Center_worktop"
+    },
+    {
+      "handle": 16,
+      "path": "/LEGO_Workcell/Workbench/Mounting_strip_left"
+    },
+    {
+      "handle": 17,
+      "path": "/LEGO_Workcell/Workbench/Outer_leaf_left"
+    },
+    {
+      "handle": 18,
+      "path": "/LEGO_Workcell/Workbench/Mounting_strip_right"
+    },
+    {
+      "handle": 19,
+      "path": "/LEGO_Workcell/Workbench/Outer_leaf_right"
+    },
+    {
+      "handle": 20,
+      "path": "/LEGO_Workcell/Workbench/Underframe"
+    },
+    {
+      "handle": 21,
+      "path": "/LEGO_Workcell/Workbench/Studio_ground"
+    },
+    {
+      "handle": 22,
+      "path": "/LEGO_Workcell/Workbench/Rear_wall"
+    },
+    {
+      "handle": 24,
+      "path": "/LEGO_Workcell/Baseplates/Main_plate_48x32"
+    },
+    {
+      "handle": 71,
+      "path": "/LEGO_Workcell/Robot_arms/Bench_mount_A"
+    },
+    {
+      "handle": 117,
+      "path": "/LEGO_Workcell/Robot_arms/Bench_mount_B"
+    }
+  ],
+  "mechanical_contacts": [
+    {
+      "side": "A",
+      "pair": [
+        {
+          "handle": 56,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_opening/Finger_carriage/Slide"
+        },
+        {
+          "handle": 67,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Rail_cover"
+        }
+      ],
+      "reason": "verified coplanar manufactured slide-guide mating face",
+      "verified_joint_range_m": [
+        0.0,
+        0.017
+      ]
+    },
+    {
+      "side": "A",
+      "pair": [
+        {
+          "handle": 61,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Jaw_follower/Finger_carriage/Slide"
+        },
+        {
+          "handle": 67,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_A/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_A/Rail_cover"
+        }
+      ],
+      "reason": "verified coplanar manufactured slide-guide mating face",
+      "verified_joint_range_m": [
+        0.0,
+        0.017
+      ]
+    },
+    {
+      "side": "B",
+      "pair": [
+        {
+          "handle": 102,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_opening/Finger_carriage/Slide"
+        },
+        {
+          "handle": 113,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Rail_cover"
+        }
+      ],
+      "reason": "verified coplanar manufactured slide-guide mating face",
+      "verified_joint_range_m": [
+        0.0,
+        0.017
+      ]
+    },
+    {
+      "side": "B",
+      "pair": [
+        {
+          "handle": 107,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Jaw_follower/Finger_carriage/Slide"
+        },
+        {
+          "handle": 113,
+          "path": "/LEGO_Workcell/Robot_arms/UR5_B/joint/link/joint/link/joint/link/joint/link/joint/link/joint/link/connection/Brick_microgripper_B/Rail_cover"
+        }
+      ],
+      "reason": "verified coplanar manufactured slide-guide mating face",
+      "verified_joint_range_m": [
+        0.0,
+        0.017
+      ]
+    }
+  ],
+  "resolved_object_id_changes": 36,
+  "support_regions": [
+    {
+      "slot": "L2_f",
+      "part": "Green_01",
+      "center_m": [
+        -0.04,
+        0.008,
+        0.034000000217556954
+      ],
+      "bounds_xy_m": [
+        [
+          -0.04791999977082014,
+          8.000022917985933e-05
+        ],
+        [
+          -0.03208000022917986,
+          0.01591999977082014
+        ]
+      ],
+      "area_m2": 0.00025090558547916433
+    },
+    {
+      "slot": "L2_b",
+      "part": "Green_02",
+      "center_m": [
+        -0.04,
+        0.024,
+        0.034000000217556954
+      ],
+      "bounds_xy_m": [
+        [
+          -0.04791999977082014,
+          0.01608000022917986
+        ],
+        [
+          -0.03208000022917986,
+          0.03191999977082014
+        ]
+      ],
+      "area_m2": 0.00025090558547916433
+    },
+    {
+      "slot": "R2_f",
+      "part": "Orange_01",
+      "center_m": [
+        0.04,
+        0.008,
+        0.034000000217556954
+      ],
+      "bounds_xy_m": [
+        [
+          0.03208000022917986,
+          8.000022917985933e-05
+        ],
+        [
+          0.04791999977082014,
+          0.01591999977082014
+        ]
+      ],
+      "area_m2": 0.00025090558547916433
+    },
+    {
+      "slot": "R2_b",
+      "part": "Orange_02",
+      "center_m": [
+        0.04,
+        0.024,
+        0.034000000217556954
+      ],
+      "bounds_xy_m": [
+        [
+          0.03208000022917986,
+          0.01608000022917986
+        ],
+        [
+          0.04791999977082014,
+          0.03191999977082014
+        ]
+      ],
+      "area_m2": 0.00025090558547916433
+    }
+  ],
+  "support_precheck": [
+    {
+      "slot": "L2_f",
+      "part": "Green_01",
+      "collision": false,
+      "lift_m": 2e-05,
+      "distance_m": 2.0000009685758324e-05,
+      "pair": [
+        127,
+        125
+      ],
+      "passed": true
+    },
+    {
+      "slot": "L2_b",
+      "part": "Green_02",
+      "collision": false,
+      "lift_m": 2e-05,
+      "distance_m": 2.0000009685758324e-05,
+      "pair": [
+        127,
+        126
+      ],
+      "passed": true
+    },
+    {
+      "slot": "R2_f",
+      "part": "Orange_01",
+      "collision": false,
+      "lift_m": 2e-05,
+      "distance_m": 2.0000009685758324e-05,
+      "pair": [
+        127,
+        119
+      ],
+      "passed": true
+    },
+    {
+      "slot": "R2_b",
+      "part": "Orange_02",
+      "collision": false,
+      "lift_m": 2e-05,
+      "distance_m": 2.0000009685758324e-05,
+      "pair": [
+        127,
+        120
+      ],
+      "passed": true
+    }
+  ],
+  "build_gate_passed": true
+}

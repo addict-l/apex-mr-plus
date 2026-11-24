@@ -1,0 +1,1126 @@
+{
+  "passed": true,
+  "collisions": 0,
+  "unapproved_collisions": 0,
+  "part_positions": {
+    "Orange_01": {
+      "position_error_m": 4.880989073807062e-16,
+      "orientation_error_rad": 4.296005542460516e-16,
+      "target_bottom_m": [
+        0.04,
+        0.008,
+        0.018000000217556954
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          3.7470027081099023e-16,
+          1.3037531124138178e-16,
+          0.03999999999999963
+        ],
+        [
+          -3.7470027081099023e-16,
+          1.0,
+          1.6479873021779655e-16,
+          0.007999999999999735
+        ],
+        [
+          -1.3037531124138174e-16,
+          -1.647987302177966e-16,
+          1.0,
+          0.018000000217556773
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Orange_02": {
+      "position_error_m": 2.434800425099963e-16,
+      "orientation_error_rad": 6.862141585559709e-16,
+      "target_bottom_m": [
+        0.04,
+        0.024,
+        0.018000000217556954
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          -3.6082248300317573e-16,
+          5.13478148889135e-16,
+          0.03999999999999988
+        ],
+        [
+          3.6082248300317583e-16,
+          1.0,
+          -2.775557561562891e-16,
+          0.023999999999999955
+        ],
+        [
+          -5.134781488891348e-16,
+          2.775557561562893e-16,
+          1.0,
+          0.018000000217556746
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Red_01": {
+      "position_error_m": 4.770868029045157e-16,
+      "orientation_error_rad": 2.6390932974369924e-16,
+      "target_bottom_m": [
+        -0.04,
+        0.008,
+        0.0020000002175569534
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          2.081668171172168e-16,
+          -2.90566182226115e-17,
+          -0.03999999999999969
+        ],
+        [
+          -2.081668171172168e-16,
+          1.0,
+          1.5959455978986623e-16,
+          0.007999999999999768
+        ],
+        [
+          2.905661822261154e-17,
+          -1.5959455978986623e-16,
+          1.0,
+          0.0020000002175566776
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Red_02": {
+      "position_error_m": 1.1322632128533899e-13,
+      "orientation_error_rad": 2.7013248538983232e-15,
+      "target_bottom_m": [
+        -0.04,
+        0.024,
+        0.0020000002175569534
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          -4.440892098500623e-16,
+          1.3877787807815073e-17,
+          -0.03999999999989379
+        ],
+        [
+          4.440892098500623e-16,
+          1.0,
+          -2.6645352591003757e-15,
+          0.023999999999978493
+        ],
+        [
+          -1.387778780781389e-17,
+          2.6645352591003757e-15,
+          1.0,
+          0.0020000002175897605
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Blue_01": {
+      "position_error_m": 3.678309229234832e-16,
+      "orientation_error_rad": 2.5731579161354505e-16,
+      "target_bottom_m": [
+        0.04,
+        0.008,
+        0.0020000002175569534
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          7.71951946809679e-17,
+          -1.994254371015525e-16,
+          0.03999999999999987
+        ],
+        [
+          -7.719519468096788e-17,
+          1.0,
+          1.4311468676808659e-16,
+          0.00799999999999991
+        ],
+        [
+          1.994254371015525e-16,
+          -1.4311468676808659e-16,
+          1.0,
+          0.002000000217556622
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Blue_02": {
+      "position_error_m": 2.0198171427159004e-16,
+      "orientation_error_rad": 5.147892387644515e-16,
+      "target_bottom_m": [
+        0.04,
+        0.024,
+        0.0020000002175569534
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          -4.996003610813202e-16,
+          1.1102230246251554e-16,
+          0.03999999999999991
+        ],
+        [
+          4.996003610813202e-16,
+          1.0,
+          5.551115123125789e-17,
+          0.024000000000000066
+        ],
+        [
+          -1.1102230246251557e-16,
+          -5.551115123125784e-17,
+          1.0,
+          0.0020000002175571217
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Green_01": {
+      "position_error_m": 3.602883265548576e-16,
+      "orientation_error_rad": 2.6789545314971e-16,
+      "target_bottom_m": [
+        -0.04,
+        0.008,
+        0.018000000217556954
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          2.1510571102130078e-16,
+          5.204170427122645e-18,
+          -0.040000000000000015
+        ],
+        [
+          -2.1510571102130078e-16,
+          1.0,
+          1.5959455978972017e-16,
+          0.007999999999999681
+        ],
+        [
+          -5.204170427122611e-18,
+          -1.5959455978972017e-16,
+          1.0,
+          0.018000000217556787
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Green_02": {
+      "position_error_m": 5.297698945257553e-16,
+      "orientation_error_rad": 8.85246233751472e-16,
+      "target_bottom_m": [
+        -0.04,
+        0.024,
+        0.018000000217556954
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          -8.955574241400638e-32,
+          -2.081668171172167e-16,
+          -0.040000000000000285
+        ],
+        [
+          -8.955574241400638e-32,
+          1.0,
+          -8.604228440844961e-16,
+          0.02400000000000036
+        ],
+        [
+          2.081668171172167e-16,
+          8.604228440844961e-16,
+          1.0,
+          0.01800000021755669
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Bridge_deck_12x4": {
+      "position_error_m": 5.85710041519146e-14,
+      "orientation_error_rad": 5.978733960281816e-16,
+      "target_bottom_m": [
+        0.0,
+        0.016,
+        0.03400000005587936
+      ],
+      "observed_bottom": [
+        [
+          1.0,
+          -2.220446049250312e-16,
+          -3.925231146709436e-16,
+          1.2004749977661737e-14
+        ],
+        [
+          2.2204460492503136e-16,
+          1.0,
+          3.925231146709437e-16,
+          0.016000000000056018
+        ],
+        [
+          3.925231146709435e-16,
+          -3.925231146709438e-16,
+          1.0,
+          0.034000000055867174
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "maximum_part_position_error_m": 1.1322632128533899e-13,
+  "support_zones": [
+    {
+      "part": "Green_01",
+      "slot": "L2_f",
+      "clearance_m": 2.0000009673719343e-05,
+      "collision": false,
+      "native_pair": [
+        -1,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "part": "Green_02",
+      "slot": "L2_b",
+      "clearance_m": 2.000000967380261e-05,
+      "collision": false,
+      "native_pair": [
+        -1,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "part": "Orange_01",
+      "slot": "R2_f",
+      "clearance_m": 2.0000009673767916e-05,
+      "collision": false,
+      "native_pair": [
+        -1,
+        -1
+      ],
+      "passed": true
+    },
+    {
+      "part": "Orange_02",
+      "slot": "R2_b",
+      "clearance_m": 2.0000009673781793e-05,
+      "collision": false,
+      "native_pair": [
+        -1,
+        -1
+      ],
+      "passed": true
+    }
+  ],
+  "parking_errors_rad": {
+    "A": 0.0,
+    "B": 0.0
+  },
+  "home_errors_rad": {
+    "A": 0.0,
+    "B": 0.0
+  },
+  "handover_withdrawals": [],
+  "handover_events": [],
+  "all_attachment_events": [
+    {
+      "node": "m0005::skill",
+      "time_s": 0.8178216216667749,
+      "part": "Blue_02",
+      "giver": null,
+      "receiver": "B",
+      "position_error_m": 3.878959614448864e-18,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0009::skill",
+      "time_s": 1.4553442455729675,
+      "part": "Blue_02",
+      "giver": "B",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0017::skill",
+      "time_s": 2.9613203468819673,
+      "part": "Red_01",
+      "giver": null,
+      "receiver": "A",
+      "position_error_m": 1.734723475976807e-18,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0021::skill",
+      "time_s": 3.9931959492501177,
+      "part": "Red_01",
+      "giver": "A",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0029::skill",
+      "time_s": 7.851022151235466,
+      "part": "Red_02",
+      "giver": null,
+      "receiver": "B",
+      "position_error_m": 1.734723475976807e-18,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0033::skill",
+      "time_s": 8.51499286135133,
+      "part": "Red_02",
+      "giver": "B",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0041::skill",
+      "time_s": 12.071659269368352,
+      "part": "Blue_01",
+      "giver": null,
+      "receiver": "A",
+      "position_error_m": 1.734723475976807e-18,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0045::skill",
+      "time_s": 12.63873941063853,
+      "part": "Blue_01",
+      "giver": "A",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0053::skill",
+      "time_s": 16.395131084472222,
+      "part": "Orange_02",
+      "giver": null,
+      "receiver": "B",
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0057::skill",
+      "time_s": 17.286677971892466,
+      "part": "Orange_02",
+      "giver": "B",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0065::skill",
+      "time_s": 20.969971801160273,
+      "part": "Green_01",
+      "giver": null,
+      "receiver": "A",
+      "position_error_m": 1.734723475976807e-18,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0069::skill",
+      "time_s": 21.837747234597206,
+      "part": "Green_01",
+      "giver": "A",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0077::skill",
+      "time_s": 24.071472476617696,
+      "part": "Green_02",
+      "giver": null,
+      "receiver": "B",
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0081::skill",
+      "time_s": 24.89340083829787,
+      "part": "Green_02",
+      "giver": "B",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0089::skill",
+      "time_s": 28.519031006321224,
+      "part": "Orange_01",
+      "giver": null,
+      "receiver": "A",
+      "position_error_m": 3.878959614448864e-18,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0093::skill",
+      "time_s": 29.529670728028798,
+      "part": "Orange_01",
+      "giver": "A",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    },
+    {
+      "node": "m0101::skill",
+      "time_s": 33.52534754271436,
+      "part": "Bridge_deck_12x4",
+      "giver": null,
+      "receiver": "B",
+      "position_error_m": 1.9606993302612157e-16,
+      "orientation_error_rad": 0.0,
+      "kind": "attach_at_pick"
+    },
+    {
+      "node": "m0105::skill",
+      "time_s": 34.03845449424879,
+      "part": "Bridge_deck_12x4",
+      "giver": "B",
+      "receiver": null,
+      "position_error_m": 0.0,
+      "orientation_error_rad": 0.0,
+      "kind": "detach_at_place"
+    }
+  ],
+  "native_samples": 4788,
+  "sweep_clearance": "not_measured",
+  "key_clearances": [
+    {
+      "kind": "neighbor_final_seat",
+      "node": "m0033::skill",
+      "part": "Red_02",
+      "time_s": 8.51499286135133,
+      "native": {
+        "allowed_collisions": {},
+        "tcp": {
+          "A": [
+            0.12898559425178702,
+            -0.9771881435442212,
+            0.16871884480434401,
+            -0.41066929165542543,
+            -0.906930312685393,
+            -0.18505570397907278,
+            -0.3784597658367208,
+            -0.19852340058364523,
+            0.4010487805839696,
+            -0.10420037687748027,
+            -0.9101110685244429,
+            0.16764772416675983
+          ],
+          "B": [
+            1.0,
+            4.9960036108132e-16,
+            -2.359223927328465e-16,
+            -0.03999999999989366,
+            4.996003610813208e-16,
+            -1.0,
+            2.942091015256665e-15,
+            0.02399999999997873,
+            -2.3592239273284503e-16,
+            -2.942091015256665e-15,
+            -1.0,
+            0.010700000217589878
+          ]
+        },
+        "unfiltered_distance_is_lower_bound": false,
+        "dist_queries": 44,
+        "aabb_separated": 2029,
+        "unfiltered_pair_handles": [
+          121,
+          122
+        ],
+        "timing": {
+          "distance_seconds": 1.19600000000014,
+          "aabb_seconds": 0.011999999999716238,
+          "collision_seconds": 0.055000000000063665
+        },
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 104,
+                "pad_tip_height_from_bottom_m": 0.008699999810010337,
+                "contact_height_m": 0.007148800056699564,
+                "valid": true,
+                "sign": -1,
+                "overlap_area_m2": 4.0928561009112665e-05,
+                "wall_clearance_m": 1.999999720456516e-06
+              },
+              {
+                "pad": 109,
+                "pad_tip_height_from_bottom_m": 0.008699999810010364,
+                "contact_height_m": 0.007148800056698535,
+                "valid": true,
+                "sign": 1,
+                "overlap_area_m2": 4.092856100910416e-05,
+                "wall_clearance_m": 1.999999720638662e-06
+              }
+            ],
+            "part": "Red_02",
+            "axis": 0,
+            "side": "B"
+          }
+        ],
+        "minimum_distance_m": 0.00016000045833839543,
+        "ok": true,
+        "unfiltered_minimum_distance_m": 0.00016000045833839543,
+        "coll_queries": 32,
+        "distance_is_lower_bound": false,
+        "pair_handles": [
+          121,
+          122
+        ],
+        "clearance_scope": "external_filtered",
+        "pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ],
+        "unfiltered_pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.2810000001918525,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "collision_seconds": 0.055000000000063665,
+        "restore_seconds": 0.0,
+        "geometry_seconds": 1.2799999999999727,
+        "aabb_seconds": 0.011999999999716238,
+        "distance_seconds": 1.19600000000014,
+        "face_seconds": 0.0039999999999054126,
+        "native_seconds": 1.2839999999998781,
+        "state_fk_seconds": 0.0
+      }
+    },
+    {
+      "kind": "neighbor_final_seat",
+      "node": "m0045::skill",
+      "part": "Blue_01",
+      "time_s": 12.63873941063853,
+      "native": {
+        "allowed_collisions": {},
+        "tcp": {
+          "A": [
+            1.0,
+            -1.942890293094025e-16,
+            4.011548038196366e-16,
+            0.03999999999999982,
+            -1.942890293094023e-16,
+            -1.0,
+            -5.342948306008566e-16,
+            0.007999999999999704,
+            4.011548038196367e-16,
+            5.342948306008566e-16,
+            -1.0,
+            0.010700000217556543
+          ],
+          "B": [
+            -0.09321769407083935,
+            -0.960495011533813,
+            -0.26222088843335123,
+            0.4723648017154852,
+            -0.8756333466085581,
+            -0.04626732841622849,
+            0.4807552148737668,
+            0.3216263787716287,
+            -0.47389524561786045,
+            0.274424246632628,
+            -0.8367285276843992,
+            0.14080703809537304
+          ]
+        },
+        "unfiltered_distance_is_lower_bound": false,
+        "dist_queries": 66,
+        "aabb_separated": 2008,
+        "unfiltered_pair_handles": [
+          121,
+          122
+        ],
+        "timing": {
+          "distance_seconds": 1.2550000000001091,
+          "aabb_seconds": 0.02400000000034197,
+          "collision_seconds": 0.06599999999980355
+        },
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 58,
+                "pad_tip_height_from_bottom_m": 0.008699999810010017,
+                "contact_height_m": 0.007148800056698941,
+                "valid": true,
+                "sign": -1,
+                "overlap_area_m2": 4.092856100910666e-05,
+                "wall_clearance_m": 1.999999720628254e-06
+              },
+              {
+                "pad": 63,
+                "pad_tip_height_from_bottom_m": 0.008699999810010087,
+                "contact_height_m": 0.007148800056699756,
+                "valid": true,
+                "sign": 1,
+                "overlap_area_m2": 4.0928561009113566e-05,
+                "wall_clearance_m": 1.999999720470394e-06
+              }
+            ],
+            "part": "Blue_01",
+            "axis": 0,
+            "side": "A"
+          }
+        ],
+        "minimum_distance_m": 0.00016000045833839543,
+        "ok": true,
+        "unfiltered_minimum_distance_m": 0.00016000045833839543,
+        "coll_queries": 53,
+        "distance_is_lower_bound": false,
+        "pair_handles": [
+          121,
+          122
+        ],
+        "clearance_scope": "external_filtered",
+        "pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ],
+        "unfiltered_pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.375,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "collision_seconds": 0.06599999999980355,
+        "restore_seconds": 0.0009999999999763531,
+        "geometry_seconds": 1.3669999999999618,
+        "aabb_seconds": 0.02400000000034197,
+        "distance_seconds": 1.2550000000001091,
+        "face_seconds": 0.005000000000109139,
+        "native_seconds": 1.3730000000000473,
+        "state_fk_seconds": 0.0
+      }
+    },
+    {
+      "kind": "neighbor_final_seat",
+      "node": "m0081::skill",
+      "part": "Green_02",
+      "time_s": 24.89340083829787,
+      "native": {
+        "allowed_collisions": {},
+        "tcp": {
+          "A": [
+            0.12898559425178702,
+            -0.9771881435442212,
+            0.16871884480434401,
+            -0.41066929165542543,
+            -0.906930312685393,
+            -0.18505570397907278,
+            -0.3784597658367208,
+            -0.19852340058364523,
+            0.4010487805839696,
+            -0.10420037687748027,
+            -0.9101110685244429,
+            0.16764772416675983
+          ],
+          "B": [
+            1.0,
+            2.2204460492503136e-16,
+            2.359223927328456e-16,
+            -0.03999999999996137,
+            2.2204460492503116e-16,
+            -1.0,
+            8.604228440844961e-16,
+            0.024000000000042057,
+            2.359223927328458e-16,
+            -8.604228440844961e-16,
+            -1.0,
+            0.026700000217614206
+          ]
+        },
+        "unfiltered_distance_is_lower_bound": false,
+        "dist_queries": 43,
+        "aabb_separated": 2029,
+        "unfiltered_pair_handles": [
+          121,
+          122
+        ],
+        "timing": {
+          "distance_seconds": 1.2419999999997344,
+          "aabb_seconds": 0.023000000000138243,
+          "collision_seconds": 0.08800000000019281
+        },
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 104,
+                "pad_tip_height_from_bottom_m": 0.008699999810067749,
+                "contact_height_m": 0.007148800056859434,
+                "valid": true,
+                "sign": -1,
+                "overlap_area_m2": 4.0928561010589375e-05,
+                "wall_clearance_m": 1.9999996816594257e-06
+              },
+              {
+                "pad": 109,
+                "pad_tip_height_from_bottom_m": 0.008699999810067777,
+                "contact_height_m": 0.00714880005642385,
+                "valid": true,
+                "sign": 1,
+                "overlap_area_m2": 4.092856100697095e-05,
+                "wall_clearance_m": 1.9999997594374874e-06
+              }
+            ],
+            "part": "Green_02",
+            "axis": 0,
+            "side": "B"
+          }
+        ],
+        "minimum_distance_m": 0.00016000045833839543,
+        "ok": true,
+        "unfiltered_minimum_distance_m": 0.00016000045833839543,
+        "coll_queries": 32,
+        "distance_is_lower_bound": false,
+        "pair_handles": [
+          121,
+          122
+        ],
+        "clearance_scope": "external_filtered",
+        "pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ],
+        "unfiltered_pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.3899999998975545,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "collision_seconds": 0.08800000000019281,
+        "restore_seconds": 0.0009999999999763531,
+        "geometry_seconds": 1.3699999999998909,
+        "aabb_seconds": 0.023000000000138243,
+        "distance_seconds": 1.2419999999997344,
+        "face_seconds": 0.005000000000109139,
+        "native_seconds": 1.377999999999929,
+        "state_fk_seconds": 0.0019999999999527063
+      }
+    },
+    {
+      "kind": "neighbor_final_seat",
+      "node": "m0093::skill",
+      "part": "Orange_01",
+      "time_s": 29.529670728028798,
+      "native": {
+        "allowed_collisions": {},
+        "tcp": {
+          "A": [
+            1.0,
+            -3.2612801348363964e-16,
+            -1.6848501760424741e-16,
+            0.039999999999999494,
+            -3.2612801348363973e-16,
+            -1.0,
+            -4.787836793695987e-16,
+            0.007999999999999457,
+            -1.6848501760424727e-16,
+            4.787836793695987e-16,
+            -1.0,
+            0.02670000021755664
+          ],
+          "B": [
+            -0.09321769407083935,
+            -0.960495011533813,
+            -0.26222088843335123,
+            0.4723648017154852,
+            -0.8756333466085581,
+            -0.04626732841622849,
+            0.4807552148737668,
+            0.3216263787716287,
+            -0.47389524561786045,
+            0.274424246632628,
+            -0.8367285276843992,
+            0.14080703809537304
+          ]
+        },
+        "unfiltered_distance_is_lower_bound": false,
+        "dist_queries": 57,
+        "aabb_separated": 2017,
+        "unfiltered_pair_handles": [
+          121,
+          122
+        ],
+        "timing": {
+          "distance_seconds": 1.2980000000002292,
+          "aabb_seconds": 0.014000000000123691,
+          "collision_seconds": 0.09799999999995634
+        },
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 58,
+                "pad_tip_height_from_bottom_m": 0.008699999810009948,
+                "contact_height_m": 0.007148800056698417,
+                "valid": true,
+                "sign": -1,
+                "overlap_area_m2": 4.092856100910214e-05,
+                "wall_clearance_m": 1.9999997207323372e-06
+              },
+              {
+                "pad": 63,
+                "pad_tip_height_from_bottom_m": 0.008699999810010045,
+                "contact_height_m": 0.0071488000567003895,
+                "valid": true,
+                "sign": 1,
+                "overlap_area_m2": 4.0928561009118736e-05,
+                "wall_clearance_m": 1.999999720364576e-06
+              }
+            ],
+            "part": "Orange_01",
+            "axis": 0,
+            "side": "A"
+          }
+        ],
+        "minimum_distance_m": 0.00016000045833839543,
+        "ok": true,
+        "unfiltered_minimum_distance_m": 0.00016000045833839543,
+        "coll_queries": 44,
+        "distance_is_lower_bound": false,
+        "pair_handles": [
+          121,
+          122
+        ],
+        "clearance_scope": "external_filtered",
+        "pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ],
+        "unfiltered_pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 1.422000000020489,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "collision_seconds": 0.09799999999995634,
+        "restore_seconds": 0.0009999999999763531,
+        "geometry_seconds": 1.4220000000000255,
+        "aabb_seconds": 0.014000000000123691,
+        "distance_seconds": 1.2980000000002292,
+        "face_seconds": 0.005999999999858119,
+        "native_seconds": 1.42899999999986,
+        "state_fk_seconds": 0.0
+      }
+    },
+    {
+      "kind": "deck_final_seat",
+      "node": "m0105::skill",
+      "part": "Bridge_deck_12x4",
+      "time_s": 34.03845449424879,
+      "native": {
+        "allowed_collisions": [
+          [
+            104,
+            127,
+            "declared_contact"
+          ],
+          [
+            109,
+            127,
+            "declared_contact"
+          ]
+        ],
+        "tcp": {
+          "A": [
+            0.9848077530121944,
+            8.459157121044136e-15,
+            0.17364817766700788,
+            -0.16200000000345074,
+            3.0985250181393804e-15,
+            -1.0000000000000004,
+            3.114173573792508e-14,
+            0.07299999999710081,
+            0.17364817766700788,
+            -3.013056957411002e-14,
+            -0.9848077530121948,
+            0.09999999999225409
+          ],
+          "B": [
+            2.220446049250313e-16,
+            1.0000000000000002,
+            -3.532708032038495e-16,
+            3.381277131705522e-14,
+            1.0000000000000002,
+            -4.440892098500626e-16,
+            -5.102800490722269e-16,
+            0.016000000000071672,
+            -5.10280049072227e-16,
+            -3.532708032038493e-16,
+            -1.0,
+            0.036300000055846326
+          ]
+        },
+        "unfiltered_distance_is_lower_bound": false,
+        "dist_queries": 31,
+        "aabb_separated": 2037,
+        "unfiltered_pair_handles": [
+          121,
+          122
+        ],
+        "timing": {
+          "distance_seconds": 0.5070000000000618,
+          "aabb_seconds": 0.02100000000041291,
+          "collision_seconds": 0.08899999999994179
+        },
+        "faces": [
+          {
+            "pads": [
+              {
+                "pad": 104,
+                "pad_tip_height_from_bottom_m": 0.0022999998099894337,
+                "contact_height_m": 0.0007600009027763444,
+                "valid": true,
+                "sign": -1,
+                "overlap_area_m2": 4.237070763744511e-06,
+                "wall_clearance_m": -1.5109483456066108e-10
+              },
+              {
+                "pad": 109,
+                "pad_tip_height_from_bottom_m": 0.0022999998099894614,
+                "contact_height_m": 0.0007600009026012427,
+                "valid": true,
+                "sign": 1,
+                "overlap_area_m2": 4.2370707627629015e-06,
+                "wall_clearance_m": -1.5106357137417703e-10
+              }
+            ],
+            "part": "Bridge_deck_12x4",
+            "axis": 1,
+            "side": "B"
+          }
+        ],
+        "minimum_distance_m": 0.00016000045833839543,
+        "ok": true,
+        "unfiltered_minimum_distance_m": 0.00016000045833839543,
+        "coll_queries": 24,
+        "distance_is_lower_bound": false,
+        "pair_handles": [
+          121,
+          122
+        ],
+        "clearance_scope": "external_filtered",
+        "pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ],
+        "unfiltered_pair": [
+          "/Red_01 [#121]",
+          "/Red_02 [#122]"
+        ]
+      },
+      "timing": {
+        "rpc_seconds": 0.6560000001918525,
+        "serialization_seconds": 0.0,
+        "log_seconds": 0.0,
+        "collision_seconds": 0.08899999999994179,
+        "restore_seconds": 0.0009999999999763531,
+        "geometry_seconds": 0.6380000000001473,
+        "aabb_seconds": 0.02100000000041291,
+        "distance_seconds": 0.5070000000000618,
+        "face_seconds": 0.0039999999999054126,
+        "native_seconds": 0.6440000000000055,
+        "state_fk_seconds": 0.0009999999999763531
+      }
+    }
+  ],
+  "maximum_time_step_s": 0.047863685506282394,
+  "reference_plan_sha256": "bd32a3b0738d868e2642c89c93e7285fee9c0c0cdda10e74f752f4b78b522497",
+  "replay_wall_s": 523.4530000002123,
+  "waiting_pose_collision_check": "passed on sampled synchronous timeline",
+  "scope": "native sampled stopped-scene synchronous validation"
+}

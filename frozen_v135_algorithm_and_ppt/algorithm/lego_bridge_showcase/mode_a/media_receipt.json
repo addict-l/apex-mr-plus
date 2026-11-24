@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "mode": "mode_a",
+  "figure": {
+    "passed": true,
+    "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\figures\\mode_a_apex_mr_diagram.png",
+    "sha256": "8f3cdf1d59f05f41588b29a5b2d56463dac3fe6c86905a21f2d442ca084447a5",
+    "width": 4200,
+    "height": 2310,
+    "dpi": [
+      299.9994,
+      299.9994
+    ],
+    "inputs": {
+      "validation": {
+        "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\validation.json",
+        "sha256": "fdb1c5f002493e7a5e2cb327584f63d2c89d95e49e50d0c8cb04bdf972d77bc6"
+      },
+      "plan": {
+        "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\plan.json",
+        "sha256": "bd32a3b0738d868e2642c89c93e7285fee9c0c0cdda10e74f752f4b78b522497"
+      },
+      "reference": {
+        "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\reference.json",
+        "sha256": "d3f005e07790e33a08b899a03d2a595d246c36027cc768d74b830f93cf04739d"
+      },
+      "tpg": {
+        "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\tpg.json",
+        "sha256": "345f47ccd980175b6215d2ef57667c0f32006181f36227045c2dc277d4c5a986"
+      },
+      "replay": {
+        "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\replay.json",
+        "sha256": "6211f211db5a800ab3652c5c19108fdd94730bb2de51d372b38c904b8fd7b400"
+      }
+    },
+    "symbolic_actions": 18,
+    "serial_reference_segments": 110,
+    "tpg_nodes": 110,
+    "tpg_edges": 251,
+    "replay_timing_nodes": 110,
+    "symbolic_timing_s": 173.096359365,
+    "reference_timing_s": 44.60490155667037,
+    "scheduled_timing_s": 38.40866022333396,
+    "recorded_replay_timing_s": 38.40866022333396
+  },
+  "inputs": {
+    "plan": {
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\plan.json",
+      "sha256": "bd32a3b0738d868e2642c89c93e7285fee9c0c0cdda10e74f752f4b78b522497"
+    },
+    "reference": {
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\reference.json",
+      "sha256": "d3f005e07790e33a08b899a03d2a595d246c36027cc768d74b830f93cf04739d"
+    },
+    "tpg": {
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\tpg.json",
+      "sha256": "345f47ccd980175b6215d2ef57667c0f32006181f36227045c2dc277d4c5a986"
+    },
+    "replay": {
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\replay.json",
+      "sha256": "6211f211db5a800ab3652c5c19108fdd94730bb2de51d372b38c904b8fd7b400"
+    },
+    "validation": {
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\validation.json",
+      "sha256": "fdb1c5f002493e7a5e2cb327584f63d2c89d95e49e50d0c8cb04bdf972d77bc6"
+    },
+    "summary": {
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\summary.json",
+      "sha256": "afa9af0c117b8bfe19b124f10404024db46e25d2826846263206b87c6c318b15"
+    },
+    "scene": {
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\assets\\lego_bridge_kinematic_v1.ttt",
+      "sha256": "f79e0e2f407b54dbfc7af4ea92bcc2588562c311c9d17636aca9ba6ab8d56372"
+    },
+    "scene_manifest": {
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\assets\\scene_manifest.json",
+      "sha256": "7ad0e6d73b924eda32cf5b239580b232f8c46d914f3a3cfa9550d2ea65e16762"
+    }
+  },
+  "videos": {
+    "overview": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "width": 1280,
+      "height": 720,
+      "fps": 24.0,
+      "exact_fps": "24",
+      "frame_count": 1440,
+      "duration_seconds": 60.0,
+      "size_bytes": 4899547,
+      "sha256": "5a166ab2d47a67723d95f9c113560df03e99b6de1c806885ffda3ce3b21a7a9f",
+      "passed": true,
+      "published": true,
+      "path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\videos\\mode_a_free_reach.mp4",
+      "partial_path": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\videos\\mode_a_free_reach.partial.mp4",
+      "ffmpeg_pid": 42476,
+      "ffmpeg_stderr": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\videos\\mode_a_free_reach.ffmpeg.log",
+      "ffmpeg_command": [
+        "C:\\Users\\t1507\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg.Shared_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-9.0.2-full_build-shared\\bin\\ffmpeg.EXE",
+        "-hide_banner",
+        "-loglevel",
+        "warning",
+        "-xerror",
+        "-nostdin",
+        "-n",
+        "-f",
+        "rawvideo",
+        "-pixel_format",
+        "rgb24",
+        "-video_size",
+        "1280x720",
+        "-framerate",
+        "24",
+        "-i",
+        "pipe:0",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "veryfast",
+        "-crf",
+        "18",
+        "-threads",
+        "4",
+        "-pix_fmt",
+        "yuv420p",
+        "-movflags",
+        "+faststart",
+        "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\mode_a\\videos\\mode_a_free_reach.partial.mp4"
+      ],
+      "encode_elapsed_seconds": 111.45299999997951,
+      "write_seconds": 0.7830000007525086,
+      "write_seconds_per_frame": 0.0005437500005225754,
+      "unique_captured_states": 1042
+    }
+  },
+  "capture_mode": "validated native sampled kinematic state trace",
+  "source_kinematic_seconds": 38.40866022333396,
+  "overview_speed_ratio": 0.6401443370555661,
+  "closeup_windows": [],
+  "duration_target_45_75_met": true,
+  "wall_seconds": 133.43800000008196,
+  "source_samples_replayed": 4788,
+  "sensor_count": 1,
+  "mode_media_lifecycle": "D:\\APEX_MR_Plus\\dualarm_skillnet\\results\\sim_v1_3\\motion_v135\\showcases\\lego_bridge_9blocks\\native\\mode_a_media_lifecycle.json"
+}
